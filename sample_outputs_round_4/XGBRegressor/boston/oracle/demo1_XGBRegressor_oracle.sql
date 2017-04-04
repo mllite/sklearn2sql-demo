@@ -2,7 +2,7 @@
 -- Copyright 2017
 
 WITH "DT_node_lookup" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_12" <= 9.725) THEN CASE WHEN ("ADS"."Feature_5" <= 6.941) THEN CASE WHEN ("ADS"."Feature_6" <= 88.65) THEN 7 ELSE 8 END ELSE CASE WHEN ("ADS"."Feature_5" <= 7.437) THEN 9 ELSE 10 END END ELSE CASE WHEN ("ADS"."Feature_12" <= 16.085) THEN 5 ELSE CASE WHEN ("ADS"."Feature_4" <= 0.603) THEN 11 ELSE 12 END END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_12" < 9.725) THEN CASE WHEN ("ADS"."Feature_5" < 6.941) THEN CASE WHEN ("ADS"."Feature_6" < 88.65) THEN 7 ELSE 8 END ELSE CASE WHEN ("ADS"."Feature_5" < 7.437) THEN 9 ELSE 10 END END ELSE CASE WHEN ("ADS"."Feature_12" < 16.085) THEN 5 ELSE CASE WHEN ("ADS"."Feature_4" < 0.603) THEN 11 ELSE 12 END END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Estimator" AS "Estimator" 
@@ -14,7 +14,7 @@ FROM "DT_node_lookup" LEFT OUTER JOIN "DT_node_data" ON "DT_node_lookup".node_id
 (SELECT "DT_Output"."KEY" AS join_key_0, "DT_Output"."Estimator" AS "Estimator_0" 
 FROM "DT_Output"), 
 "DT_node_lookup_1" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_5" <= 6.8375) THEN CASE WHEN ("ADS"."Feature_12" <= 14.4) THEN CASE WHEN ("ADS"."Feature_12" <= 9.545) THEN 7 ELSE 8 END ELSE CASE WHEN ("ADS"."Feature_0" <= 6.99237) THEN 9 ELSE 10 END END ELSE CASE WHEN ("ADS"."Feature_5" <= 7.437) THEN CASE WHEN ("ADS"."Feature_12" <= 9.65) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_5" < 6.8375) THEN CASE WHEN ("ADS"."Feature_12" < 14.4) THEN CASE WHEN ("ADS"."Feature_12" < 9.545) THEN 7 ELSE 8 END ELSE CASE WHEN ("ADS"."Feature_0" < 6.99237) THEN 9 ELSE 10 END END ELSE CASE WHEN ("ADS"."Feature_5" < 7.437) THEN CASE WHEN ("ADS"."Feature_12" < 9.65) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_1" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Estimator" AS "Estimator" 
@@ -26,7 +26,7 @@ FROM "DT_node_lookup_1" LEFT OUTER JOIN "DT_node_data_1" ON "DT_node_lookup_1".n
 (SELECT "DT_Output_1"."KEY" AS join_key_1, "DT_Output_1"."Estimator" AS "Estimator_1" 
 FROM "DT_Output_1"), 
 "DT_node_lookup_2" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_5" <= 6.8375) THEN CASE WHEN ("ADS"."Feature_12" <= 14.4) THEN CASE WHEN ("ADS"."Feature_12" <= 5.41) THEN 7 ELSE 8 END ELSE CASE WHEN ("ADS"."Feature_0" <= 6.99237) THEN 9 ELSE 10 END END ELSE CASE WHEN ("ADS"."Feature_5" <= 7.437) THEN 5 ELSE 6 END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_5" < 6.8375) THEN CASE WHEN ("ADS"."Feature_12" < 14.4) THEN CASE WHEN ("ADS"."Feature_12" < 5.41) THEN 7 ELSE 8 END ELSE CASE WHEN ("ADS"."Feature_0" < 6.99237) THEN 9 ELSE 10 END END ELSE CASE WHEN ("ADS"."Feature_5" < 7.437) THEN 5 ELSE 6 END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_2" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Estimator" AS "Estimator" 
@@ -38,7 +38,7 @@ FROM "DT_node_lookup_2" LEFT OUTER JOIN "DT_node_data_2" ON "DT_node_lookup_2".n
 (SELECT "DT_Output_2"."KEY" AS join_key_2, "DT_Output_2"."Estimator" AS "Estimator_2" 
 FROM "DT_Output_2"), 
 "DT_node_lookup_3" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_12" <= 9.725) THEN CASE WHEN ("ADS"."Feature_5" <= 6.941) THEN CASE WHEN ("ADS"."Feature_6" <= 88.65) THEN 7 ELSE 8 END ELSE CASE WHEN ("ADS"."Feature_5" <= 7.437) THEN 9 ELSE 10 END END ELSE CASE WHEN ("ADS"."Feature_12" <= 19.83) THEN CASE WHEN ("ADS"."Feature_11" <= 116.025) THEN 11 ELSE 12 END ELSE CASE WHEN ("ADS"."Feature_4" <= 0.603) THEN 13 ELSE 14 END END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_12" < 9.725) THEN CASE WHEN ("ADS"."Feature_5" < 6.941) THEN CASE WHEN ("ADS"."Feature_6" < 88.65) THEN 7 ELSE 8 END ELSE CASE WHEN ("ADS"."Feature_5" < 7.437) THEN 9 ELSE 10 END END ELSE CASE WHEN ("ADS"."Feature_12" < 19.83) THEN CASE WHEN ("ADS"."Feature_11" < 116.025) THEN 11 ELSE 12 END ELSE CASE WHEN ("ADS"."Feature_4" < 0.603) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_3" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Estimator" AS "Estimator" 
@@ -50,7 +50,7 @@ FROM "DT_node_lookup_3" LEFT OUTER JOIN "DT_node_data_3" ON "DT_node_lookup_3".n
 (SELECT "DT_Output_3"."KEY" AS join_key_3, "DT_Output_3"."Estimator" AS "Estimator_3" 
 FROM "DT_Output_3"), 
 "DT_node_lookup_4" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_12" <= 5.155) THEN CASE WHEN ("ADS"."Feature_5" <= 7.406) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_12" <= 15) THEN CASE WHEN ("ADS"."Feature_5" <= 6.543) THEN 7 ELSE 8 END ELSE CASE WHEN ("ADS"."Feature_7" <= 2.0037) THEN 9 ELSE 10 END END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_12" < 5.155) THEN CASE WHEN ("ADS"."Feature_5" < 7.406) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_12" < 15) THEN CASE WHEN ("ADS"."Feature_5" < 6.543) THEN 7 ELSE 8 END ELSE CASE WHEN ("ADS"."Feature_7" < 2.0037) THEN 9 ELSE 10 END END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_4" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Estimator" AS "Estimator" 
@@ -62,7 +62,7 @@ FROM "DT_node_lookup_4" LEFT OUTER JOIN "DT_node_data_4" ON "DT_node_lookup_4".n
 (SELECT "DT_Output_4"."KEY" AS join_key_4, "DT_Output_4"."Estimator" AS "Estimator_4" 
 FROM "DT_Output_4"), 
 "DT_node_lookup_5" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_12" <= 5.155) THEN CASE WHEN ("ADS"."Feature_7" <= 3.20745) THEN 3 ELSE CASE WHEN ("ADS"."Feature_5" <= 6.6815) THEN 7 ELSE 8 END END ELSE CASE WHEN ("ADS"."Feature_12" <= 15) THEN CASE WHEN ("ADS"."Feature_5" <= 6.543) THEN 9 ELSE 10 END ELSE CASE WHEN ("ADS"."Feature_4" <= 0.603) THEN 11 ELSE 12 END END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_12" < 5.155) THEN CASE WHEN ("ADS"."Feature_7" < 3.20745) THEN 3 ELSE CASE WHEN ("ADS"."Feature_5" < 6.6815) THEN 7 ELSE 8 END END ELSE CASE WHEN ("ADS"."Feature_12" < 15) THEN CASE WHEN ("ADS"."Feature_5" < 6.543) THEN 9 ELSE 10 END ELSE CASE WHEN ("ADS"."Feature_4" < 0.603) THEN 11 ELSE 12 END END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_5" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Estimator" AS "Estimator" 
@@ -74,7 +74,7 @@ FROM "DT_node_lookup_5" LEFT OUTER JOIN "DT_node_data_5" ON "DT_node_lookup_5".n
 (SELECT "DT_Output_5"."KEY" AS join_key_5, "DT_Output_5"."Estimator" AS "Estimator_5" 
 FROM "DT_Output_5"), 
 "DT_node_lookup_6" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_12" <= 7.685) THEN CASE WHEN ("ADS"."Feature_5" <= 7.141) THEN CASE WHEN ("ADS"."Feature_12" <= 4.64) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_12" <= 19.23) THEN CASE WHEN ("ADS"."Feature_12" <= 11.675) THEN 9 ELSE 10 END ELSE CASE WHEN ("ADS"."Feature_4" <= 0.603) THEN 11 ELSE 12 END END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_12" < 7.685) THEN CASE WHEN ("ADS"."Feature_5" < 7.141) THEN CASE WHEN ("ADS"."Feature_12" < 4.64) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_12" < 19.23) THEN CASE WHEN ("ADS"."Feature_12" < 11.675) THEN 9 ELSE 10 END ELSE CASE WHEN ("ADS"."Feature_4" < 0.603) THEN 11 ELSE 12 END END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_6" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Estimator" AS "Estimator" 
@@ -86,7 +86,7 @@ FROM "DT_node_lookup_6" LEFT OUTER JOIN "DT_node_data_6" ON "DT_node_lookup_6".n
 (SELECT "DT_Output_6"."KEY" AS join_key_6, "DT_Output_6"."Estimator" AS "Estimator_6" 
 FROM "DT_Output_6"), 
 "DT_node_lookup_7" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_12" <= 5.155) THEN CASE WHEN ("ADS"."Feature_7" <= 3.20745) THEN 3 ELSE CASE WHEN ("ADS"."Feature_5" <= 7.406) THEN 7 ELSE 8 END END ELSE CASE WHEN ("ADS"."Feature_12" <= 14.795) THEN CASE WHEN ("ADS"."Feature_5" <= 6.611) THEN 9 ELSE 10 END ELSE CASE WHEN ("ADS"."Feature_10" <= 19.65) THEN 11 ELSE 12 END END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_12" < 5.155) THEN CASE WHEN ("ADS"."Feature_7" < 3.20745) THEN 3 ELSE CASE WHEN ("ADS"."Feature_5" < 7.406) THEN 7 ELSE 8 END END ELSE CASE WHEN ("ADS"."Feature_12" < 14.795) THEN CASE WHEN ("ADS"."Feature_5" < 6.611) THEN 9 ELSE 10 END ELSE CASE WHEN ("ADS"."Feature_10" < 19.65) THEN 11 ELSE 12 END END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_7" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Estimator" AS "Estimator" 
@@ -98,7 +98,7 @@ FROM "DT_node_lookup_7" LEFT OUTER JOIN "DT_node_data_7" ON "DT_node_lookup_7".n
 (SELECT "DT_Output_7"."KEY" AS join_key_7, "DT_Output_7"."Estimator" AS "Estimator_7" 
 FROM "DT_Output_7"), 
 "DT_node_lookup_8" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_5" <= 6.978) THEN CASE WHEN ("ADS"."Feature_12" <= 14.4) THEN CASE WHEN ("ADS"."Feature_12" <= 5.41) THEN 7 ELSE 8 END ELSE CASE WHEN ("ADS"."Feature_4" <= 0.6695) THEN 9 ELSE 10 END END ELSE CASE WHEN ("ADS"."Feature_5" <= 7.437) THEN 5 ELSE 6 END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_5" < 6.978) THEN CASE WHEN ("ADS"."Feature_12" < 14.4) THEN CASE WHEN ("ADS"."Feature_12" < 5.41) THEN 7 ELSE 8 END ELSE CASE WHEN ("ADS"."Feature_4" < 0.6695) THEN 9 ELSE 10 END END ELSE CASE WHEN ("ADS"."Feature_5" < 7.437) THEN 5 ELSE 6 END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_8" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Estimator" AS "Estimator" 
@@ -110,7 +110,7 @@ FROM "DT_node_lookup_8" LEFT OUTER JOIN "DT_node_data_8" ON "DT_node_lookup_8".n
 (SELECT "DT_Output_8"."KEY" AS join_key_8, "DT_Output_8"."Estimator" AS "Estimator_8" 
 FROM "DT_Output_8"), 
 "DT_node_lookup_9" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_12" <= 9.63) THEN CASE WHEN ("ADS"."Feature_5" <= 7.141) THEN CASE WHEN ("ADS"."Feature_7" <= 1.944) THEN 7 ELSE 8 END ELSE CASE WHEN ("ADS"."Feature_10" <= 15.05) THEN 9 ELSE 10 END END ELSE CASE WHEN ("ADS"."Feature_0" <= 5.84803) THEN CASE WHEN ("ADS"."Feature_10" <= 20.95) THEN 11 ELSE 12 END ELSE CASE WHEN ("ADS"."Feature_0" <= 15.718) THEN 13 ELSE 14 END END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_12" < 9.63) THEN CASE WHEN ("ADS"."Feature_5" < 7.141) THEN CASE WHEN ("ADS"."Feature_7" < 1.944) THEN 7 ELSE 8 END ELSE CASE WHEN ("ADS"."Feature_10" < 15.05) THEN 9 ELSE 10 END END ELSE CASE WHEN ("ADS"."Feature_0" < 5.84803) THEN CASE WHEN ("ADS"."Feature_10" < 20.95) THEN 11 ELSE 12 END ELSE CASE WHEN ("ADS"."Feature_0" < 15.718) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_9" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Estimator" AS "Estimator" 
@@ -125,7 +125,7 @@ FROM "DT_Output_9"),
 (SELECT "XGB_Tree_0".join_key_0 AS join_key_0, "XGB_Tree_0"."Estimator_0" AS "Estimator_0", "XGB_Tree_1".join_key_1 AS join_key_1, "XGB_Tree_1"."Estimator_1" AS "Estimator_1", "XGB_Tree_2".join_key_2 AS join_key_2, "XGB_Tree_2"."Estimator_2" AS "Estimator_2", "XGB_Tree_3".join_key_3 AS join_key_3, "XGB_Tree_3"."Estimator_3" AS "Estimator_3", "XGB_Tree_4".join_key_4 AS join_key_4, "XGB_Tree_4"."Estimator_4" AS "Estimator_4", "XGB_Tree_5".join_key_5 AS join_key_5, "XGB_Tree_5"."Estimator_5" AS "Estimator_5", "XGB_Tree_6".join_key_6 AS join_key_6, "XGB_Tree_6"."Estimator_6" AS "Estimator_6", "XGB_Tree_7".join_key_7 AS join_key_7, "XGB_Tree_7"."Estimator_7" AS "Estimator_7", "XGB_Tree_8".join_key_8 AS join_key_8, "XGB_Tree_8"."Estimator_8" AS "Estimator_8", "XGB_Tree_9".join_key_9 AS join_key_9, "XGB_Tree_9"."Estimator_9" AS "Estimator_9" 
 FROM "XGB_Tree_0" LEFT OUTER JOIN "XGB_Tree_1" ON "XGB_Tree_0".join_key_0 = "XGB_Tree_1".join_key_1 LEFT OUTER JOIN "XGB_Tree_2" ON "XGB_Tree_2".join_key_2 = "XGB_Tree_1".join_key_1 LEFT OUTER JOIN "XGB_Tree_3" ON "XGB_Tree_3".join_key_3 = "XGB_Tree_2".join_key_2 LEFT OUTER JOIN "XGB_Tree_4" ON "XGB_Tree_4".join_key_4 = "XGB_Tree_3".join_key_3 LEFT OUTER JOIN "XGB_Tree_5" ON "XGB_Tree_5".join_key_5 = "XGB_Tree_4".join_key_4 LEFT OUTER JOIN "XGB_Tree_6" ON "XGB_Tree_6".join_key_6 = "XGB_Tree_5".join_key_5 LEFT OUTER JOIN "XGB_Tree_7" ON "XGB_Tree_7".join_key_7 = "XGB_Tree_6".join_key_6 LEFT OUTER JOIN "XGB_Tree_8" ON "XGB_Tree_8".join_key_8 = "XGB_Tree_7".join_key_7 LEFT OUTER JOIN "XGB_Tree_9" ON "XGB_Tree_9".join_key_9 = "XGB_Tree_8".join_key_8), 
 "XGB_AVG_Scores" AS 
-(SELECT "XGB_Join_CTE".join_key_0 AS "KEY", "XGB_Join_CTE"."Estimator_0" + "XGB_Join_CTE"."Estimator_1" + "XGB_Join_CTE"."Estimator_2" + "XGB_Join_CTE"."Estimator_3" + "XGB_Join_CTE"."Estimator_4" + "XGB_Join_CTE"."Estimator_5" + "XGB_Join_CTE"."Estimator_6" + "XGB_Join_CTE"."Estimator_7" + "XGB_Join_CTE"."Estimator_8" + "XGB_Join_CTE"."Estimator_9" AS "Estimator" 
+(SELECT "XGB_Join_CTE".join_key_0 AS "KEY", "XGB_Join_CTE"."Estimator_0" + "XGB_Join_CTE"."Estimator_1" + "XGB_Join_CTE"."Estimator_2" + "XGB_Join_CTE"."Estimator_3" + "XGB_Join_CTE"."Estimator_4" + "XGB_Join_CTE"."Estimator_5" + "XGB_Join_CTE"."Estimator_6" + "XGB_Join_CTE"."Estimator_7" + "XGB_Join_CTE"."Estimator_8" + "XGB_Join_CTE"."Estimator_9" + 0.5 AS "Estimator" 
 FROM "XGB_Join_CTE")
- SELECT "XGB_AVG_Scores"."KEY" AS "KEY", "XGB_AVG_Scores"."Estimator" AS "XGB_AVG_Scores_Estimator" 
+ SELECT "XGB_AVG_Scores"."KEY" AS "KEY", "XGB_AVG_Scores"."Estimator" AS "Estimator" 
 FROM "XGB_AVG_Scores"

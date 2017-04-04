@@ -2,7 +2,7 @@
 -- Copyright 2017
 
 WITH linear_model_cte AS 
-(SELECT [ADS].[KEY] AS [KEY], 6.892116970934293 * [ADS].[Feature_0] + 7.402514075795391 * [ADS].[Feature_1] + 0.3250006322988487 * [ADS].[Feature_2] + 8.871829896765522 * [ADS].[Feature_3] + 3.598787866312085 * [ADS].[Feature_4] + 0.8806248276548405 * [ADS].[Feature_5] + 0.2027395902541325 * [ADS].[Feature_6] + -0.6456810132026026 * [ADS].[Feature_7] + 0.39255867943886175 * [ADS].[Feature_8] + -0.6749446256730416 * [ADS].[Feature_9] + 0.720023840418 AS [Estimator] 
+(SELECT [ADS].[KEY] AS [KEY], 7.395460127760444 * [ADS].[Feature_0] + 6.856954561106396 * [ADS].[Feature_1] + 0.35973479921398194 * [ADS].[Feature_2] + 11.45554061426194 * [ADS].[Feature_3] + 6.50844233643609 * [ADS].[Feature_4] + 1.3984838554988164 * [ADS].[Feature_5] + -0.49304708606056785 * [ADS].[Feature_6] + -0.12174594575407671 * [ADS].[Feature_7] + -0.9621037256625325 * [ADS].[Feature_8] + 0.9509076355815514 * [ADS].[Feature_9] + -1.96889816435 AS [Estimator] 
 FROM [INPUT_DATA] AS [ADS])
  SELECT linear_model_cte.[KEY] AS [KEY], linear_model_cte.[Estimator] AS [Estimator] 
 FROM linear_model_cte

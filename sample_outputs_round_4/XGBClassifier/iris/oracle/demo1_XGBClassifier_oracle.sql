@@ -2,7 +2,7 @@
 -- Copyright 2017
 
 WITH "DT_node_lookup" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 2.45) THEN 1 ELSE 2 END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 2.45) THEN 1 ELSE 2 END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -14,7 +14,7 @@ FROM "DT_node_lookup" LEFT OUTER JOIN "DT_node_data" ON "DT_node_lookup".node_id
 (SELECT "DT_Output"."KEY" AS join_key_0_0, "DT_Output"."Score" AS "Score_0_0" 
 FROM "DT_Output"), 
 "DT_node_lookup_1" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 2.45) THEN 1 ELSE 2 END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 2.45) THEN 1 ELSE 2 END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_1" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -26,7 +26,7 @@ FROM "DT_node_lookup_1" LEFT OUTER JOIN "DT_node_data_1" ON "DT_node_lookup_1".n
 (SELECT "DT_Output_1"."KEY" AS join_key_0_1, "DT_Output_1"."Score" AS "Score_0_1" 
 FROM "DT_Output_1"), 
 "DT_node_lookup_2" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 2.45) THEN 1 ELSE 2 END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 2.45) THEN 1 ELSE 2 END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_2" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -38,7 +38,7 @@ FROM "DT_node_lookup_2" LEFT OUTER JOIN "DT_node_data_2" ON "DT_node_lookup_2".n
 (SELECT "DT_Output_2"."KEY" AS join_key_0_2, "DT_Output_2"."Score" AS "Score_0_2" 
 FROM "DT_Output_2"), 
 "DT_node_lookup_3" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 2.45) THEN 1 ELSE 2 END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 2.45) THEN 1 ELSE 2 END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_3" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -50,7 +50,7 @@ FROM "DT_node_lookup_3" LEFT OUTER JOIN "DT_node_data_3" ON "DT_node_lookup_3".n
 (SELECT "DT_Output_3"."KEY" AS join_key_0_3, "DT_Output_3"."Score" AS "Score_0_3" 
 FROM "DT_Output_3"), 
 "DT_node_lookup_4" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 2.45) THEN 1 ELSE 2 END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 2.45) THEN 1 ELSE 2 END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_4" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -62,7 +62,7 @@ FROM "DT_node_lookup_4" LEFT OUTER JOIN "DT_node_data_4" ON "DT_node_lookup_4".n
 (SELECT "DT_Output_4"."KEY" AS join_key_0_4, "DT_Output_4"."Score" AS "Score_0_4" 
 FROM "DT_Output_4"), 
 "DT_node_lookup_5" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 2.45) THEN 1 ELSE 2 END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 2.45) THEN 1 ELSE 2 END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_5" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -74,7 +74,7 @@ FROM "DT_node_lookup_5" LEFT OUTER JOIN "DT_node_data_5" ON "DT_node_lookup_5".n
 (SELECT "DT_Output_5"."KEY" AS join_key_0_5, "DT_Output_5"."Score" AS "Score_0_5" 
 FROM "DT_Output_5"), 
 "DT_node_lookup_6" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 2.45) THEN 1 ELSE 2 END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 2.45) THEN 1 ELSE 2 END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_6" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -86,7 +86,7 @@ FROM "DT_node_lookup_6" LEFT OUTER JOIN "DT_node_data_6" ON "DT_node_lookup_6".n
 (SELECT "DT_Output_6"."KEY" AS join_key_0_6, "DT_Output_6"."Score" AS "Score_0_6" 
 FROM "DT_Output_6"), 
 "DT_node_lookup_7" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 2.45) THEN 1 ELSE 2 END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 2.45) THEN 1 ELSE 2 END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_7" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -98,7 +98,7 @@ FROM "DT_node_lookup_7" LEFT OUTER JOIN "DT_node_data_7" ON "DT_node_lookup_7".n
 (SELECT "DT_Output_7"."KEY" AS join_key_0_7, "DT_Output_7"."Score" AS "Score_0_7" 
 FROM "DT_Output_7"), 
 "DT_node_lookup_8" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 2.45) THEN 1 ELSE 2 END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 2.45) THEN 1 ELSE 2 END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_8" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -110,7 +110,7 @@ FROM "DT_node_lookup_8" LEFT OUTER JOIN "DT_node_data_8" ON "DT_node_lookup_8".n
 (SELECT "DT_Output_8"."KEY" AS join_key_0_8, "DT_Output_8"."Score" AS "Score_0_8" 
 FROM "DT_Output_8"), 
 "DT_node_lookup_9" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 2.45) THEN 1 ELSE 2 END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 2.45) THEN 1 ELSE 2 END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_9" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -122,7 +122,7 @@ FROM "DT_node_lookup_9" LEFT OUTER JOIN "DT_node_data_9" ON "DT_node_lookup_9".n
 (SELECT "DT_Output_9"."KEY" AS join_key_0_9, "DT_Output_9"."Score" AS "Score_0_9" 
 FROM "DT_Output_9"), 
 "DT_node_lookup_10" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 2.45) THEN 1 ELSE CASE WHEN ("ADS"."Feature_3" <= 1.75) THEN 3 ELSE 4 END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 2.45) THEN 1 ELSE CASE WHEN ("ADS"."Feature_3" < 1.75) THEN 3 ELSE 4 END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_10" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -134,7 +134,7 @@ FROM "DT_node_lookup_10" LEFT OUTER JOIN "DT_node_data_10" ON "DT_node_lookup_10
 (SELECT "DT_Output_10"."KEY" AS join_key_1_0, "DT_Output_10"."Score" AS "Score_1_0" 
 FROM "DT_Output_10"), 
 "DT_node_lookup_11" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 2.45) THEN 1 ELSE CASE WHEN ("ADS"."Feature_3" <= 1.75) THEN 3 ELSE 4 END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 2.45) THEN 1 ELSE CASE WHEN ("ADS"."Feature_3" < 1.75) THEN 3 ELSE 4 END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_11" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -146,7 +146,7 @@ FROM "DT_node_lookup_11" LEFT OUTER JOIN "DT_node_data_11" ON "DT_node_lookup_11
 (SELECT "DT_Output_11"."KEY" AS join_key_1_1, "DT_Output_11"."Score" AS "Score_1_1" 
 FROM "DT_Output_11"), 
 "DT_node_lookup_12" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 2.45) THEN 1 ELSE CASE WHEN ("ADS"."Feature_3" <= 1.75) THEN 3 ELSE 4 END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 2.45) THEN 1 ELSE CASE WHEN ("ADS"."Feature_3" < 1.75) THEN 3 ELSE 4 END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_12" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -158,7 +158,7 @@ FROM "DT_node_lookup_12" LEFT OUTER JOIN "DT_node_data_12" ON "DT_node_lookup_12
 (SELECT "DT_Output_12"."KEY" AS join_key_1_2, "DT_Output_12"."Score" AS "Score_1_2" 
 FROM "DT_Output_12"), 
 "DT_node_lookup_13" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 2.45) THEN 1 ELSE CASE WHEN ("ADS"."Feature_3" <= 1.75) THEN CASE WHEN ("ADS"."Feature_2" <= 4.45) THEN 5 ELSE 6 END ELSE 4 END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 2.45) THEN 1 ELSE CASE WHEN ("ADS"."Feature_3" < 1.75) THEN CASE WHEN ("ADS"."Feature_2" < 4.45) THEN 5 ELSE 6 END ELSE 4 END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_13" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -170,7 +170,7 @@ FROM "DT_node_lookup_13" LEFT OUTER JOIN "DT_node_data_13" ON "DT_node_lookup_13
 (SELECT "DT_Output_13"."KEY" AS join_key_1_3, "DT_Output_13"."Score" AS "Score_1_3" 
 FROM "DT_Output_13"), 
 "DT_node_lookup_14" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 2.45) THEN 1 ELSE CASE WHEN ("ADS"."Feature_2" <= 4.85) THEN 3 ELSE 4 END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 2.45) THEN 1 ELSE CASE WHEN ("ADS"."Feature_2" < 4.85) THEN 3 ELSE 4 END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_14" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -182,7 +182,7 @@ FROM "DT_node_lookup_14" LEFT OUTER JOIN "DT_node_data_14" ON "DT_node_lookup_14
 (SELECT "DT_Output_14"."KEY" AS join_key_1_4, "DT_Output_14"."Score" AS "Score_1_4" 
 FROM "DT_Output_14"), 
 "DT_node_lookup_15" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 2.45) THEN 1 ELSE CASE WHEN ("ADS"."Feature_3" <= 1.65) THEN 3 ELSE 4 END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 2.45) THEN 1 ELSE CASE WHEN ("ADS"."Feature_3" < 1.65) THEN 3 ELSE 4 END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_15" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -194,7 +194,7 @@ FROM "DT_node_lookup_15" LEFT OUTER JOIN "DT_node_data_15" ON "DT_node_lookup_15
 (SELECT "DT_Output_15"."KEY" AS join_key_1_5, "DT_Output_15"."Score" AS "Score_1_5" 
 FROM "DT_Output_15"), 
 "DT_node_lookup_16" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 2.45) THEN 1 ELSE CASE WHEN ("ADS"."Feature_2" <= 4.95) THEN 3 ELSE 4 END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 2.45) THEN 1 ELSE CASE WHEN ("ADS"."Feature_2" < 4.95) THEN 3 ELSE 4 END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_16" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -206,7 +206,7 @@ FROM "DT_node_lookup_16" LEFT OUTER JOIN "DT_node_data_16" ON "DT_node_lookup_16
 (SELECT "DT_Output_16"."KEY" AS join_key_1_6, "DT_Output_16"."Score" AS "Score_1_6" 
 FROM "DT_Output_16"), 
 "DT_node_lookup_17" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 2.45) THEN 1 ELSE CASE WHEN ("ADS"."Feature_3" <= 1.75) THEN CASE WHEN ("ADS"."Feature_2" <= 4.45) THEN 5 ELSE 6 END ELSE 4 END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 2.45) THEN 1 ELSE CASE WHEN ("ADS"."Feature_3" < 1.75) THEN CASE WHEN ("ADS"."Feature_2" < 4.45) THEN 5 ELSE 6 END ELSE 4 END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_17" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -218,7 +218,7 @@ FROM "DT_node_lookup_17" LEFT OUTER JOIN "DT_node_data_17" ON "DT_node_lookup_17
 (SELECT "DT_Output_17"."KEY" AS join_key_1_7, "DT_Output_17"."Score" AS "Score_1_7" 
 FROM "DT_Output_17"), 
 "DT_node_lookup_18" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 2.45) THEN 1 ELSE CASE WHEN ("ADS"."Feature_2" <= 4.95) THEN 3 ELSE 4 END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 2.45) THEN 1 ELSE CASE WHEN ("ADS"."Feature_2" < 4.95) THEN 3 ELSE 4 END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_18" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -230,7 +230,7 @@ FROM "DT_node_lookup_18" LEFT OUTER JOIN "DT_node_data_18" ON "DT_node_lookup_18
 (SELECT "DT_Output_18"."KEY" AS join_key_1_8, "DT_Output_18"."Score" AS "Score_1_8" 
 FROM "DT_Output_18"), 
 "DT_node_lookup_19" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 2.45) THEN 1 ELSE CASE WHEN ("ADS"."Feature_3" <= 1.75) THEN CASE WHEN ("ADS"."Feature_2" <= 4.45) THEN 5 ELSE 6 END ELSE 4 END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 2.45) THEN 1 ELSE CASE WHEN ("ADS"."Feature_3" < 1.75) THEN CASE WHEN ("ADS"."Feature_2" < 4.45) THEN 5 ELSE 6 END ELSE 4 END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_19" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -242,7 +242,7 @@ FROM "DT_node_lookup_19" LEFT OUTER JOIN "DT_node_data_19" ON "DT_node_lookup_19
 (SELECT "DT_Output_19"."KEY" AS join_key_1_9, "DT_Output_19"."Score" AS "Score_1_9" 
 FROM "DT_Output_19"), 
 "DT_node_lookup_20" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_3" <= 1.65) THEN CASE WHEN ("ADS"."Feature_2" <= 4.45) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_3" < 1.65) THEN CASE WHEN ("ADS"."Feature_2" < 4.45) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_20" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -254,7 +254,7 @@ FROM "DT_node_lookup_20" LEFT OUTER JOIN "DT_node_data_20" ON "DT_node_lookup_20
 (SELECT "DT_Output_20"."KEY" AS join_key_2_0, "DT_Output_20"."Score" AS "Score_2_0" 
 FROM "DT_Output_20"), 
 "DT_node_lookup_21" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 4.75) THEN 1 ELSE CASE WHEN ("ADS"."Feature_2" <= 5.25) THEN 3 ELSE 4 END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 4.75) THEN 1 ELSE CASE WHEN ("ADS"."Feature_2" < 5.25) THEN 3 ELSE 4 END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_21" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -266,7 +266,7 @@ FROM "DT_node_lookup_21" LEFT OUTER JOIN "DT_node_data_21" ON "DT_node_lookup_21
 (SELECT "DT_Output_21"."KEY" AS join_key_2_1, "DT_Output_21"."Score" AS "Score_2_1" 
 FROM "DT_Output_21"), 
 "DT_node_lookup_22" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 4.75) THEN 1 ELSE CASE WHEN ("ADS"."Feature_2" <= 5.25) THEN 3 ELSE 4 END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 4.75) THEN 1 ELSE CASE WHEN ("ADS"."Feature_2" < 5.25) THEN 3 ELSE 4 END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_22" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -278,7 +278,7 @@ FROM "DT_node_lookup_22" LEFT OUTER JOIN "DT_node_data_22" ON "DT_node_lookup_22
 (SELECT "DT_Output_22"."KEY" AS join_key_2_2, "DT_Output_22"."Score" AS "Score_2_2" 
 FROM "DT_Output_22"), 
 "DT_node_lookup_23" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 4.75) THEN 1 ELSE CASE WHEN ("ADS"."Feature_2" <= 5.15) THEN 3 ELSE 4 END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 4.75) THEN 1 ELSE CASE WHEN ("ADS"."Feature_2" < 5.15) THEN 3 ELSE 4 END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_23" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -290,7 +290,7 @@ FROM "DT_node_lookup_23" LEFT OUTER JOIN "DT_node_data_23" ON "DT_node_lookup_23
 (SELECT "DT_Output_23"."KEY" AS join_key_2_3, "DT_Output_23"."Score" AS "Score_2_3" 
 FROM "DT_Output_23"), 
 "DT_node_lookup_24" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 4.85) THEN CASE WHEN ("ADS"."Feature_2" <= 4.25) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 4.85) THEN CASE WHEN ("ADS"."Feature_2" < 4.25) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_24" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -302,7 +302,7 @@ FROM "DT_node_lookup_24" LEFT OUTER JOIN "DT_node_data_24" ON "DT_node_lookup_24
 (SELECT "DT_Output_24"."KEY" AS join_key_2_4, "DT_Output_24"."Score" AS "Score_2_4" 
 FROM "DT_Output_24"), 
 "DT_node_lookup_25" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_3" <= 1.65) THEN CASE WHEN ("ADS"."Feature_0" <= 5.95) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_3" < 1.65) THEN CASE WHEN ("ADS"."Feature_0" < 5.95) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_25" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -314,7 +314,7 @@ FROM "DT_node_lookup_25" LEFT OUTER JOIN "DT_node_data_25" ON "DT_node_lookup_25
 (SELECT "DT_Output_25"."KEY" AS join_key_2_5, "DT_Output_25"."Score" AS "Score_2_5" 
 FROM "DT_Output_25"), 
 "DT_node_lookup_26" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 4.75) THEN 1 ELSE CASE WHEN ("ADS"."Feature_2" <= 5.15) THEN 3 ELSE 4 END END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 4.75) THEN 1 ELSE CASE WHEN ("ADS"."Feature_2" < 5.15) THEN 3 ELSE 4 END END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_26" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -326,7 +326,7 @@ FROM "DT_node_lookup_26" LEFT OUTER JOIN "DT_node_data_26" ON "DT_node_lookup_26
 (SELECT "DT_Output_26"."KEY" AS join_key_2_6, "DT_Output_26"."Score" AS "Score_2_6" 
 FROM "DT_Output_26"), 
 "DT_node_lookup_27" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_3" <= 1.65) THEN CASE WHEN ("ADS"."Feature_0" <= 5.95) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_3" < 1.65) THEN CASE WHEN ("ADS"."Feature_0" < 5.95) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_27" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -338,7 +338,7 @@ FROM "DT_node_lookup_27" LEFT OUTER JOIN "DT_node_data_27" ON "DT_node_lookup_27
 (SELECT "DT_Output_27"."KEY" AS join_key_2_7, "DT_Output_27"."Score" AS "Score_2_7" 
 FROM "DT_Output_27"), 
 "DT_node_lookup_28" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 4.85) THEN CASE WHEN ("ADS"."Feature_2" <= 4.15) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 4.85) THEN CASE WHEN ("ADS"."Feature_2" < 4.15) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_28" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -350,7 +350,7 @@ FROM "DT_node_lookup_28" LEFT OUTER JOIN "DT_node_data_28" ON "DT_node_lookup_28
 (SELECT "DT_Output_28"."KEY" AS join_key_2_8, "DT_Output_28"."Score" AS "Score_2_8" 
 FROM "DT_Output_28"), 
 "DT_node_lookup_29" AS 
-(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_3" <= 1.65) THEN CASE WHEN ("ADS"."Feature_2" <= 4.25) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
+(SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_3" < 1.65) THEN CASE WHEN ("ADS"."Feature_2" < 4.25) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
 FROM "INPUT_DATA" "ADS"), 
 "DT_node_data_29" AS 
 (SELECT "Values".node_id AS node_id, "Values".feature AS feature, "Values".threshold AS threshold, "Values".depth AS depth, "Values".parent_id AS parent_id, "Values"."Score" AS "Score" 
@@ -408,5 +408,5 @@ WHERE score_soft_max."max_Proba" = score_class_union."Proba" AND score_soft_max.
 FROM score_class_union 
 WHERE score_soft_max."max_Score" = score_class_union."Score" AND score_soft_max."KEY" = score_class_union."KEY") AS "arg_max_Score", score_soft_max."exp_delta_Score_0" / score_soft_max."sum_ExpDeltaScore" AS "SoftProba_0", score_soft_max."exp_delta_Score_1" / score_soft_max."sum_ExpDeltaScore" AS "SoftProba_1", score_soft_max."exp_delta_Score_2" / score_soft_max."sum_ExpDeltaScore" AS "SoftProba_2" 
 FROM score_soft_max)
- SELECT arg_max_cte."KEY" AS "KEY", arg_max_cte."Score_0" AS "Score_0", arg_max_cte."Score_1" AS "Score_1", arg_max_cte."Score_2" AS "Score_2", arg_max_cte."SoftProba_0" AS "Proba_0", arg_max_cte."SoftProba_1" AS "Proba_1", arg_max_cte."SoftProba_2" AS "Proba_2", CASE WHEN (arg_max_cte."SoftProba_0" IS NULL OR arg_max_cte."SoftProba_0" > 0.0) THEN ln(arg_max_cte."SoftProba_0") ELSE -BINARY_FLOAT_INFINITY END AS "LogProba_0", CASE WHEN (arg_max_cte."SoftProba_1" IS NULL OR arg_max_cte."SoftProba_1" > 0.0) THEN ln(arg_max_cte."SoftProba_1") ELSE -BINARY_FLOAT_INFINITY END AS "LogProba_1", CASE WHEN (arg_max_cte."SoftProba_2" IS NULL OR arg_max_cte."SoftProba_2" > 0.0) THEN ln(arg_max_cte."SoftProba_2") ELSE -BINARY_FLOAT_INFINITY END AS "LogProba_2", arg_max_cte."arg_max_Score" AS "Decision" 
+ SELECT arg_max_cte."KEY" AS "KEY", CAST(NULL AS FLOAT) AS "Score_0", CAST(NULL AS FLOAT) AS "Score_1", CAST(NULL AS FLOAT) AS "Score_2", arg_max_cte."SoftProba_0" AS "Proba_0", arg_max_cte."SoftProba_1" AS "Proba_1", arg_max_cte."SoftProba_2" AS "Proba_2", CASE WHEN (arg_max_cte."SoftProba_0" IS NULL OR arg_max_cte."SoftProba_0" > 0.0) THEN ln(arg_max_cte."SoftProba_0") ELSE -BINARY_FLOAT_INFINITY END AS "LogProba_0", CASE WHEN (arg_max_cte."SoftProba_1" IS NULL OR arg_max_cte."SoftProba_1" > 0.0) THEN ln(arg_max_cte."SoftProba_1") ELSE -BINARY_FLOAT_INFINITY END AS "LogProba_1", CASE WHEN (arg_max_cte."SoftProba_2" IS NULL OR arg_max_cte."SoftProba_2" > 0.0) THEN ln(arg_max_cte."SoftProba_2") ELSE -BINARY_FLOAT_INFINITY END AS "LogProba_2", arg_max_cte."arg_max_Score" AS "Decision" 
 FROM arg_max_cte
