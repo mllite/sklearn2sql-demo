@@ -2,7 +2,7 @@
 -- Copyright 2017
 
 WITH linear_model_cte AS 
-(SELECT `ADS`.`KEY` AS `KEY`, -808297167921.4402 * `ADS`.`Feature_0` + -634015970954.684 * `ADS`.`Feature_1` + 147232503402.33084 * `ADS`.`Feature_2` + 7667852869.739894 * `ADS`.`Feature_3` + -2158022545.766962 * `ADS`.`Feature_4` + -50692385371.66679 * `ADS`.`Feature_5` + -49414133194.80807 * `ADS`.`Feature_6` + 80431427887.77673 * `ADS`.`Feature_7` + -128867867316.45996 * `ADS`.`Feature_8` + 230719371113.34622 * `ADS`.`Feature_9` + 176391770102.4424 * `ADS`.`Feature_10` + 369428667699.1467 * `ADS`.`Feature_11` + -534119829614.8543 * `ADS`.`Feature_12` + -3546894512.39 AS `Estimator` 
+(SELECT `ADS`.`KEY` AS `KEY`, 579412303392.962 * `ADS`.`Feature_0` + -363405305020.04193 * `ADS`.`Feature_1` + 361107518711.4211 * `ADS`.`Feature_2` + -1166718516.3773844 * `ADS`.`Feature_3` + 5944234050.41 * `ADS`.`Feature_4` + 40845086539.45812 * `ADS`.`Feature_5` + -370900434572.2203 * `ADS`.`Feature_6` + -175191631541.14127 * `ADS`.`Feature_7` + 232239923758.34036 * `ADS`.`Feature_8` + 84755673181.6752 * `ADS`.`Feature_9` + -364113134576.1915 * `ADS`.`Feature_10` + -572456662022.5312 * `ADS`.`Feature_11` + -1028448453371.8069 * `ADS`.`Feature_12` + -6367822100.72 AS `Estimator` 
 FROM boston AS `ADS`)
  SELECT linear_model_cte.`KEY` AS `KEY`, linear_model_cte.`Estimator` AS `Estimator` 
 FROM linear_model_cte

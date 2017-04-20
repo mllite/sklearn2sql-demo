@@ -2,13 +2,13 @@
 -- Copyright 2017
 
 WITH `ADS_imp_1_OUT` AS 
-(SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_0` IS NULL) THEN 45.808333018 ELSE `ADS`.`Feature_0` END AS imputer_output_2, CASE WHEN (`ADS`.`Feature_1` IS NULL) THEN 994.891228673 ELSE `ADS`.`Feature_1` END AS imputer_output_3, CASE WHEN (`ADS`.`Feature_2` IS NULL) THEN 0.512367631037 ELSE `ADS`.`Feature_2` END AS imputer_output_4, CASE WHEN (`ADS`.`Feature_3` IS NULL) THEN 6.29694679178 ELSE `ADS`.`Feature_3` END AS imputer_output_5 
+(SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_0` IS NULL) THEN 48.7507316252 ELSE `ADS`.`Feature_0` END AS imputer_output_2, CASE WHEN (`ADS`.`Feature_1` IS NULL) THEN 932.397133641 ELSE `ADS`.`Feature_1` END AS imputer_output_3, CASE WHEN (`ADS`.`Feature_2` IS NULL) THEN 0.414749506414 ELSE `ADS`.`Feature_2` END AS imputer_output_4, CASE WHEN (`ADS`.`Feature_3` IS NULL) THEN 6.54855086262 ELSE `ADS`.`Feature_3` END AS imputer_output_5 
 FROM freidman2 AS `ADS`), 
 `ADS_sca_2_OUT` AS 
-(SELECT `ADS_imp_1_OUT`.`KEY` AS `KEY`, (CAST(`ADS_imp_1_OUT`.imputer_output_2 AS DOUBLE) - 45.808333018) / 29.5459475082 AS scaler_output_2, (CAST(`ADS_imp_1_OUT`.imputer_output_3 AS DOUBLE) - 994.891228673) / 460.919945373 AS scaler_output_3, (CAST(`ADS_imp_1_OUT`.imputer_output_4 AS DOUBLE) - 0.512367631037) / 0.261320191134 AS scaler_output_4, (CAST(`ADS_imp_1_OUT`.imputer_output_5 AS DOUBLE) - 6.29694679178) / 2.84004398162 AS scaler_output_5 
+(SELECT `ADS_imp_1_OUT`.`KEY` AS `KEY`, (CAST(`ADS_imp_1_OUT`.imputer_output_2 AS DOUBLE) - 48.7507316252) / 29.908958777 AS scaler_output_2, (CAST(`ADS_imp_1_OUT`.imputer_output_3 AS DOUBLE) - 932.397133641) / 427.999519531 AS scaler_output_3, (CAST(`ADS_imp_1_OUT`.imputer_output_4 AS DOUBLE) - 0.414749506414) / 0.271828055339 AS scaler_output_4, (CAST(`ADS_imp_1_OUT`.imputer_output_5 AS DOUBLE) - 6.54855086262) / 2.57953852612 AS scaler_output_5 
 FROM `ADS_imp_1_OUT`), 
 linear_model_cte AS 
-(SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, 19.920100998628513 * `ADS_sca_2_OUT`.scaler_output_2 + 231.46080248137244 * `ADS_sca_2_OUT`.scaler_output_3 + 250.7901988880974 * `ADS_sca_2_OUT`.scaler_output_4 + -4.93898009105705 * `ADS_sca_2_OUT`.scaler_output_5 + 503.666716303 AS `Estimator` 
+(SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, 20.83689992316038 * `ADS_sca_2_OUT`.scaler_output_2 + 153.18210364388764 * `ADS_sca_2_OUT`.scaler_output_3 + 253.7663232063778 * `ADS_sca_2_OUT`.scaler_output_4 + 3.7331389970292235 * `ADS_sca_2_OUT`.scaler_output_5 + 395.056521845 AS `Estimator` 
 FROM `ADS_sca_2_OUT`)
  SELECT linear_model_cte.`KEY` AS `KEY`, linear_model_cte.`Estimator` AS `Estimator` 
 FROM linear_model_cte

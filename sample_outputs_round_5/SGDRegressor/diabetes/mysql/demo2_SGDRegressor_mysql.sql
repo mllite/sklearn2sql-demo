@@ -2,7 +2,7 @@
 -- Copyright 2017
 
 WITH linear_model_cte AS 
-(SELECT `ADS`.`KEY` AS `KEY`, 1.8903470854490043 * `ADS`.`Feature_0` + 0.22480203862500703 * `ADS`.`Feature_1` + 5.872584001183171 * `ADS`.`Feature_2` + 4.863092057142391 * `ADS`.`Feature_3` + 2.534496436007478 * `ADS`.`Feature_4` + 2.1976511353556356 * `ADS`.`Feature_5` + -4.036545358905617 * `ADS`.`Feature_6` + 4.897803868653542 * `ADS`.`Feature_7` + 5.817126555495135 * `ADS`.`Feature_8` + 4.706023436283024 * `ADS`.`Feature_9` + 143.45842211 AS `Estimator` 
+(SELECT `ADS`.`KEY` AS `KEY`, 2.0941888911721374 * `ADS`.`Feature_0` + 0.3484300664304222 * `ADS`.`Feature_1` + 5.798118117818404 * `ADS`.`Feature_2` + 4.491452896960942 * `ADS`.`Feature_3` + 2.5574450574444074 * `ADS`.`Feature_4` + 2.31790539368536 * `ADS`.`Feature_5` + -4.200487691471117 * `ADS`.`Feature_6` + 4.981512663985685 * `ADS`.`Feature_7` + 5.692351628785108 * `ADS`.`Feature_8` + 4.432509985854344 * `ADS`.`Feature_9` + 143.918360223 AS `Estimator` 
 FROM diabetes AS `ADS`)
  SELECT linear_model_cte.`KEY` AS `KEY`, linear_model_cte.`Estimator` AS `Estimator` 
 FROM linear_model_cte

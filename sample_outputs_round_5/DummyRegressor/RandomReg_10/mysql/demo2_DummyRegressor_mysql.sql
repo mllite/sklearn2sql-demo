@@ -2,7 +2,7 @@
 -- Copyright 2017
 
 WITH dummy_class_reg_cte AS 
-(SELECT `ADS`.`KEY` AS `KEY`, -22.6587584856 AS `Constant` 
+(SELECT `ADS`.`KEY` AS `KEY`, -13.1654864498 AS `Constant` 
 FROM `RandomReg_10` AS `ADS`)
  SELECT dummy_class_reg_cte.`KEY` AS `KEY`, dummy_class_reg_cte.`Constant` AS `Estimator` 
 FROM dummy_class_reg_cte

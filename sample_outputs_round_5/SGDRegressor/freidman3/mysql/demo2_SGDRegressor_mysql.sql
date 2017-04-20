@@ -2,7 +2,7 @@
 -- Copyright 2017
 
 WITH linear_model_cte AS 
-(SELECT `ADS`.`KEY` AS `KEY`, -2177173646413.4587 * `ADS`.`Feature_0` + -421828391588.0559 * `ADS`.`Feature_1` + 26103317271.804527 * `ADS`.`Feature_2` + 24332721006.355125 * `ADS`.`Feature_3` + 4603783935.97 AS `Estimator` 
+(SELECT `ADS`.`KEY` AS `KEY`, 52282708365.07971 * `ADS`.`Feature_0` + 1204256319268.0217 * `ADS`.`Feature_1` + -11282324743.489191 * `ADS`.`Feature_2` + -144941394906.82587 * `ADS`.`Feature_3` + -8375481419.71 AS `Estimator` 
 FROM freidman3 AS `ADS`)
  SELECT linear_model_cte.`KEY` AS `KEY`, linear_model_cte.`Estimator` AS `Estimator` 
 FROM linear_model_cte

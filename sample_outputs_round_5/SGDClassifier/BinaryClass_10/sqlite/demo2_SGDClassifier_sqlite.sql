@@ -2,7 +2,7 @@
 -- Copyright 2017
 
 WITH linear_model_cte AS 
-(SELECT "ADS"."KEY" AS "KEY", -14.146573628833439 * "ADS"."Feature_0" + -1.7252352203942956 * "ADS"."Feature_1" + -19.109912832653865 * "ADS"."Feature_2" + -1.1509952692753918 * "ADS"."Feature_3" + -29.072024272001087 * "ADS"."Feature_4" + -11.934417344822458 * "ADS"."Feature_5" + -22.715828109982564 * "ADS"."Feature_6" + 67.27952783400657 * "ADS"."Feature_7" + 7.795723906429173 * "ADS"."Feature_8" + -3.111368714277521 * "ADS"."Feature_9" + -11.7254416864 AS linear_combination 
+(SELECT "ADS"."KEY" AS "KEY", 73.2020349990147 * "ADS"."Feature_0" + -19.738897689552147 * "ADS"."Feature_1" + -10.064723400161057 * "ADS"."Feature_2" + 4.9603387621480115 * "ADS"."Feature_3" + -44.77214260785363 * "ADS"."Feature_4" + 22.65138856648422 * "ADS"."Feature_5" + 3.6517170812313404 * "ADS"."Feature_6" + 51.48408379059403 * "ADS"."Feature_7" + 27.77192810489338 * "ADS"."Feature_8" + 30.756259329206056 * "ADS"."Feature_9" + 5.4604705988 AS linear_combination 
 FROM "BinaryClass_10" AS "ADS")
  SELECT linear_model_cte."KEY" AS "KEY", -linear_model_cte.linear_combination AS "Score_0", linear_model_cte.linear_combination AS "Score_1", CAST(NULL AS FLOAT) AS "Proba_0", CAST(NULL AS FLOAT) AS "Proba_1", CAST(NULL AS FLOAT) AS "LogProba_0", CAST(NULL AS FLOAT) AS "LogProba_1", CASE WHEN (linear_model_cte.linear_combination >= 0.0) THEN 1 ELSE 0 END AS "Decision" 
 FROM linear_model_cte

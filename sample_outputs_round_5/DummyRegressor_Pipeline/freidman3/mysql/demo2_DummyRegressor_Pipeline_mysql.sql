@@ -2,13 +2,13 @@
 -- Copyright 2017
 
 WITH `ADS_imp_1_OUT` AS 
-(SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_0` IS NULL) THEN 49.3936899756 ELSE `ADS`.`Feature_0` END AS imputer_output_2, CASE WHEN (`ADS`.`Feature_1` IS NULL) THEN 915.667364324 ELSE `ADS`.`Feature_1` END AS imputer_output_3, CASE WHEN (`ADS`.`Feature_2` IS NULL) THEN 0.420800893769 ELSE `ADS`.`Feature_2` END AS imputer_output_4, CASE WHEN (`ADS`.`Feature_3` IS NULL) THEN 6.23105580547 ELSE `ADS`.`Feature_3` END AS imputer_output_5 
+(SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_0` IS NULL) THEN 51.3311096122 ELSE `ADS`.`Feature_0` END AS imputer_output_2, CASE WHEN (`ADS`.`Feature_1` IS NULL) THEN 884.948144589 ELSE `ADS`.`Feature_1` END AS imputer_output_3, CASE WHEN (`ADS`.`Feature_2` IS NULL) THEN 0.432315638565 ELSE `ADS`.`Feature_2` END AS imputer_output_4, CASE WHEN (`ADS`.`Feature_3` IS NULL) THEN 6.08566886369 ELSE `ADS`.`Feature_3` END AS imputer_output_5 
 FROM freidman3 AS `ADS`), 
 `ADS_sca_2_OUT` AS 
-(SELECT `ADS_imp_1_OUT`.`KEY` AS `KEY`, (CAST(`ADS_imp_1_OUT`.imputer_output_2 AS DOUBLE) - 49.3936899756) / 27.9667626395 AS scaler_output_2, (CAST(`ADS_imp_1_OUT`.imputer_output_3 AS DOUBLE) - 915.667364324) / 462.841218726 AS scaler_output_3, (CAST(`ADS_imp_1_OUT`.imputer_output_4 AS DOUBLE) - 0.420800893769) / 0.258714640197 AS scaler_output_4, (CAST(`ADS_imp_1_OUT`.imputer_output_5 AS DOUBLE) - 6.23105580547) / 2.91809882344 AS scaler_output_5 
+(SELECT `ADS_imp_1_OUT`.`KEY` AS `KEY`, (CAST(`ADS_imp_1_OUT`.imputer_output_2 AS DOUBLE) - 51.3311096122) / 27.88600159 AS scaler_output_2, (CAST(`ADS_imp_1_OUT`.imputer_output_3 AS DOUBLE) - 884.948144589) / 434.445039861 AS scaler_output_3, (CAST(`ADS_imp_1_OUT`.imputer_output_4 AS DOUBLE) - 0.432315638565) / 0.299328015144 AS scaler_output_4, (CAST(`ADS_imp_1_OUT`.imputer_output_5 AS DOUBLE) - 6.08566886369) / 2.74201083221 AS scaler_output_5 
 FROM `ADS_imp_1_OUT`), 
 dummy_class_reg_cte AS 
-(SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, 1.24368780458 AS `Constant` 
+(SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, 1.24392327711 AS `Constant` 
 FROM `ADS_sca_2_OUT`)
  SELECT dummy_class_reg_cte.`KEY` AS `KEY`, dummy_class_reg_cte.`Constant` AS `Estimator` 
 FROM dummy_class_reg_cte

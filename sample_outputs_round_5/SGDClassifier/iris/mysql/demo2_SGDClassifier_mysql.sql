@@ -2,7 +2,7 @@
 -- Copyright 2017
 
 WITH linear_model_cte AS 
-(SELECT `ADS`.`KEY` AS `KEY`, 13.342228152101375 * `ADS`.`Feature_0` + 28.68579052701793 * `ADS`.`Feature_1` + -47.36490993995983 * `ADS`.`Feature_2` + -21.34756504336218 * `ADS`.`Feature_3` + 9.84309633982 AS `Score_0`, 20.680453635757278 * `ADS`.`Feature_0` + -96.06404269512993 * `ADS`.`Feature_1` + -10.673782521680922 * `ADS`.`Feature_2` + -98.73248832555011 * `ADS`.`Feature_3` + 39.4741553209 AS `Score_1`, -110.0733822548363 * `ADS`.`Feature_0` + -118.0787191460972 * `ADS`.`Feature_1` + 181.45430286857845 * `ADS`.`Feature_2` + 148.0987324883252 * `ADS`.`Feature_3` + -70.2956163002 AS `Score_2` 
+(SELECT `ADS`.`KEY` AS `KEY`, 6.0040026684455965 * `ADS`.`Feature_0` + 21.34756504336217 * `ADS`.`Feature_1` + -38.692461641093956 * `ADS`.`Feature_2` + -20.013342228152045 * `ADS`.`Feature_3` + 9.89068518652 AS `Score_0`, -19.34623082054712 * `ADS`.`Feature_0` + -158.7725150100065 * `ADS`.`Feature_1` + 7.33822548365577 * `ADS`.`Feature_2` + -76.05070046697787 * `ADS`.`Feature_3` + 16.4517147476 AS `Score_1`, -69.37958639092709 * `ADS`.`Feature_0` + -86.7244829886588 * `ADS`.`Feature_1` + 201.46764509673068 * `ADS`.`Feature_2` + 159.43962641761144 * `ADS`.`Feature_3` + -62.166707243 AS `Score_2` 
 FROM iris AS `ADS`), 
 orig_cte AS 
 (SELECT linear_model_cte.`KEY` AS `KEY`, linear_model_cte.`Score_0` AS `Score_0`, linear_model_cte.`Score_1` AS `Score_1`, linear_model_cte.`Score_2` AS `Score_2`, NULL AS `Proba_0`, NULL AS `Proba_1`, NULL AS `Proba_2`, NULL AS `LogProba_0`, NULL AS `LogProba_1`, NULL AS `LogProba_2`, NULL AS `Decision` 

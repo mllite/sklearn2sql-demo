@@ -2,7 +2,7 @@
 -- Copyright 2017
 
 WITH linear_model_cte AS 
-(SELECT `ADS`.`KEY` AS `KEY`, 19.185275007914782 * `ADS`.`Feature_0` + 46.1146409780196 * `ADS`.`Feature_1` + 43.03303534835556 * `ADS`.`Feature_2` + 1.8768390941854127 * `ADS`.`Feature_3` + -1.579882460836634 * `ADS`.`Feature_4` + 71.5135902222044 * `ADS`.`Feature_5` + 11.69658526327086 * `ADS`.`Feature_6` + 77.11938500498749 * `ADS`.`Feature_7` + 4.479474159794281 * `ADS`.`Feature_8` + 18.712473026256543 * `ADS`.`Feature_9` + 6.04239024274 AS `Estimator` 
+(SELECT `ADS`.`KEY` AS `KEY`, 21.927022803569326 * `ADS`.`Feature_0` + 55.13929284488068 * `ADS`.`Feature_1` + 56.13371949200808 * `ADS`.`Feature_2` + 7.731453943855044 * `ADS`.`Feature_3` + 17.521470383867403 * `ADS`.`Feature_4` + -0.7280931990899561 * `ADS`.`Feature_5` + 27.74722252715344 * `ADS`.`Feature_6` + -4.15852437251415 * `ADS`.`Feature_7` + 18.63643641910791 * `ADS`.`Feature_8` + 29.53964619451122 * `ADS`.`Feature_9` + 10.1397125752 AS `Estimator` 
 FROM `RandomReg_10` AS `ADS`)
  SELECT linear_model_cte.`KEY` AS `KEY`, linear_model_cte.`Estimator` AS `Estimator` 
 FROM linear_model_cte

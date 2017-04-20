@@ -2,28 +2,28 @@
 -- Copyright 2017
 
 WITH `ADS_imp_1_OUT` AS 
-(SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_0` IS NULL) THEN 49.3226950176 ELSE `ADS`.`Feature_0` END AS imputer_output_2, CASE WHEN (`ADS`.`Feature_1` IS NULL) THEN 955.765513813 ELSE `ADS`.`Feature_1` END AS imputer_output_3, CASE WHEN (`ADS`.`Feature_2` IS NULL) THEN 0.455887286408 ELSE `ADS`.`Feature_2` END AS imputer_output_4, CASE WHEN (`ADS`.`Feature_3` IS NULL) THEN 5.86612433687 ELSE `ADS`.`Feature_3` END AS imputer_output_5 
+(SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_0` IS NULL) THEN 43.4382547436 ELSE `ADS`.`Feature_0` END AS imputer_output_2, CASE WHEN (`ADS`.`Feature_1` IS NULL) THEN 1006.2000645 ELSE `ADS`.`Feature_1` END AS imputer_output_3, CASE WHEN (`ADS`.`Feature_2` IS NULL) THEN 0.561738687696 ELSE `ADS`.`Feature_2` END AS imputer_output_4, CASE WHEN (`ADS`.`Feature_3` IS NULL) THEN 6.08796762898 ELSE `ADS`.`Feature_3` END AS imputer_output_5 
 FROM freidman3 AS `ADS`), 
 `ADS_sca_2_OUT` AS 
-(SELECT `ADS_imp_1_OUT`.`KEY` AS `KEY`, (CAST(`ADS_imp_1_OUT`.imputer_output_2 AS DOUBLE) - 49.3226950176) / 30.4853217638 AS scaler_output_2, (CAST(`ADS_imp_1_OUT`.imputer_output_3 AS DOUBLE) - 955.765513813) / 485.522900519 AS scaler_output_3, (CAST(`ADS_imp_1_OUT`.imputer_output_4 AS DOUBLE) - 0.455887286408) / 0.294365092219 AS scaler_output_4, (CAST(`ADS_imp_1_OUT`.imputer_output_5 AS DOUBLE) - 5.86612433687) / 2.8780287704 AS scaler_output_5 
+(SELECT `ADS_imp_1_OUT`.`KEY` AS `KEY`, (CAST(`ADS_imp_1_OUT`.imputer_output_2 AS DOUBLE) - 43.4382547436) / 28.5532332469 AS scaler_output_2, (CAST(`ADS_imp_1_OUT`.imputer_output_3 AS DOUBLE) - 1006.2000645) / 464.943642067 AS scaler_output_3, (CAST(`ADS_imp_1_OUT`.imputer_output_4 AS DOUBLE) - 0.561738687696) / 0.319390899563 AS scaler_output_4, (CAST(`ADS_imp_1_OUT`.imputer_output_5 AS DOUBLE) - 6.08796762898) / 2.69105046211 AS scaler_output_5 
 FROM `ADS_imp_1_OUT`), 
 `IL` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, `ADS_sca_2_OUT`.scaler_output_2 AS scaler_output_2, `ADS_sca_2_OUT`.scaler_output_3 AS scaler_output_3, `ADS_sca_2_OUT`.scaler_output_4 AS scaler_output_4, `ADS_sca_2_OUT`.scaler_output_5 AS scaler_output_5 
 FROM `ADS_sca_2_OUT`), 
 `HL_BA_1` AS 
-(SELECT `IL`.`KEY` AS `KEY`, -0.334175270869 * `IL`.scaler_output_2 + 0.243361766182 * `IL`.scaler_output_3 + 0.401573316182 * `IL`.scaler_output_4 + 0.0164434192502 * `IL`.scaler_output_5 + 1.09365418612 AS `NEUR_1_1`, -0.153585722375 * `IL`.scaler_output_2 + 0.806123074193 * `IL`.scaler_output_3 + 0.801102397019 * `IL`.scaler_output_4 + 0.104471335311 * `IL`.scaler_output_5 + 1.73543663891 AS `NEUR_1_2`, -0.545385923555 * `IL`.scaler_output_2 + 0.372496150726 * `IL`.scaler_output_3 + 0.65535797034 * `IL`.scaler_output_4 + -0.0552450237095 * `IL`.scaler_output_5 + -0.780421662397 AS `NEUR_1_3` 
+(SELECT `IL`.`KEY` AS `KEY`, -0.713709366331 * `IL`.scaler_output_2 + 0.233270534471 * `IL`.scaler_output_3 + -0.208743846459 * `IL`.scaler_output_4 + -0.441405888352 * `IL`.scaler_output_5 + 1.37184544234 AS `NEUR_1_1`, -0.325931232753 * `IL`.scaler_output_2 + 0.223360522126 * `IL`.scaler_output_3 + 0.793502157432 * `IL`.scaler_output_4 + -0.121586771709 * `IL`.scaler_output_5 + 2.4874732098 AS `NEUR_1_2`, -0.956460151868 * `IL`.scaler_output_2 + 0.107555172538 * `IL`.scaler_output_3 + 1.64824884084 * `IL`.scaler_output_4 + -0.758384156896 * `IL`.scaler_output_5 + 0.784551635576 AS `NEUR_1_3` 
 FROM `IL`), 
 `HL_1_relu` AS 
 (SELECT `HL_BA_1`.`KEY` AS `KEY`, CASE WHEN (`HL_BA_1`.`NEUR_1_1` >= 0.0) THEN `HL_BA_1`.`NEUR_1_1` ELSE 0.0 END AS `NEUR_1_1`, CASE WHEN (`HL_BA_1`.`NEUR_1_2` >= 0.0) THEN `HL_BA_1`.`NEUR_1_2` ELSE 0.0 END AS `NEUR_1_2`, CASE WHEN (`HL_BA_1`.`NEUR_1_3` >= 0.0) THEN `HL_BA_1`.`NEUR_1_3` ELSE 0.0 END AS `NEUR_1_3` 
 FROM `HL_BA_1`), 
 `HL_BA_2` AS 
-(SELECT `HL_1_relu`.`KEY` AS `KEY`, -0.0302703491257 * `HL_1_relu`.`NEUR_1_1` + 1.38460306509 * `HL_1_relu`.`NEUR_1_2` + 0.298544877196 * `HL_1_relu`.`NEUR_1_3` + -0.580232979223 AS `NEUR_2_1`, -1.17832725565 * `HL_1_relu`.`NEUR_1_1` + 0.580772062098 * `HL_1_relu`.`NEUR_1_2` + -0.347233483416 * `HL_1_relu`.`NEUR_1_3` + 0.319740764847 AS `NEUR_2_2`, 0.578972651311 * `HL_1_relu`.`NEUR_1_1` + 0.0332568464686 * `HL_1_relu`.`NEUR_1_2` + 0.673039170858 * `HL_1_relu`.`NEUR_1_3` + 0.0673195134048 AS `NEUR_2_3`, 0.724221946185 * `HL_1_relu`.`NEUR_1_1` + 0.795536747436 * `HL_1_relu`.`NEUR_1_2` + -0.109643840168 * `HL_1_relu`.`NEUR_1_3` + 0.305477664184 AS `NEUR_2_4`, 0.605598325498 * `HL_1_relu`.`NEUR_1_1` + -0.661060528049 * `HL_1_relu`.`NEUR_1_2` + -0.147785809586 * `HL_1_relu`.`NEUR_1_3` + -0.857374225757 AS `NEUR_2_5` 
+(SELECT `HL_1_relu`.`KEY` AS `KEY`, -0.52743782515 * `HL_1_relu`.`NEUR_1_1` + 1.28169369663 * `HL_1_relu`.`NEUR_1_2` + -0.0911911344755 * `HL_1_relu`.`NEUR_1_3` + -1.09550450976 AS `NEUR_2_1`, -1.20259880684 * `HL_1_relu`.`NEUR_1_1` + 1.39737552368 * `HL_1_relu`.`NEUR_1_2` + -0.235894579498 * `HL_1_relu`.`NEUR_1_3` + 0.453033212269 AS `NEUR_2_2`, 0.536446513962 * `HL_1_relu`.`NEUR_1_1` + -0.14481610265 * `HL_1_relu`.`NEUR_1_2` + 0.565697057849 * `HL_1_relu`.`NEUR_1_3` + -0.300358801182 AS `NEUR_2_3`, 0.773161164412 * `HL_1_relu`.`NEUR_1_1` + 1.59580195194 * `HL_1_relu`.`NEUR_1_2` + 0.125519497973 * `HL_1_relu`.`NEUR_1_3` + -0.647610105955 AS `NEUR_2_4`, 0.509349915696 * `HL_1_relu`.`NEUR_1_1` + -0.682299529136 * `HL_1_relu`.`NEUR_1_2` + -0.147788629532 * `HL_1_relu`.`NEUR_1_3` + -0.95137455199 AS `NEUR_2_5` 
 FROM `HL_1_relu`), 
 `HL_2_relu` AS 
 (SELECT `HL_BA_2`.`KEY` AS `KEY`, CASE WHEN (`HL_BA_2`.`NEUR_2_1` >= 0.0) THEN `HL_BA_2`.`NEUR_2_1` ELSE 0.0 END AS `NEUR_2_1`, CASE WHEN (`HL_BA_2`.`NEUR_2_2` >= 0.0) THEN `HL_BA_2`.`NEUR_2_2` ELSE 0.0 END AS `NEUR_2_2`, CASE WHEN (`HL_BA_2`.`NEUR_2_3` >= 0.0) THEN `HL_BA_2`.`NEUR_2_3` ELSE 0.0 END AS `NEUR_2_3`, CASE WHEN (`HL_BA_2`.`NEUR_2_4` >= 0.0) THEN `HL_BA_2`.`NEUR_2_4` ELSE 0.0 END AS `NEUR_2_4`, CASE WHEN (`HL_BA_2`.`NEUR_2_5` >= 0.0) THEN `HL_BA_2`.`NEUR_2_5` ELSE 0.0 END AS `NEUR_2_5` 
 FROM `HL_BA_2`), 
 `OL_BA` AS 
-(SELECT `HL_2_relu`.`KEY` AS `KEY`, -0.780216043929 * `HL_2_relu`.`NEUR_2_1` + 0.709581261112 * `HL_2_relu`.`NEUR_2_2` + 0.157092247153 * `HL_2_relu`.`NEUR_2_3` + 1.04367915277 * `HL_2_relu`.`NEUR_2_4` + 0.355829568276 * `HL_2_relu`.`NEUR_2_5` + -0.0240969362843 AS `NEUR_3_1` 
+(SELECT `HL_2_relu`.`KEY` AS `KEY`, -1.78795111919 * `HL_2_relu`.`NEUR_2_1` + 1.06619873469 * `HL_2_relu`.`NEUR_2_2` + -0.134583957959 * `HL_2_relu`.`NEUR_2_3` + 0.621657922226 * `HL_2_relu`.`NEUR_2_4` + 0.384373756016 * `HL_2_relu`.`NEUR_2_5` + -1.13690976138 AS `NEUR_3_1` 
 FROM `HL_2_relu`), 
 `OL_identity` AS 
 (SELECT `OL_BA`.`KEY` AS `KEY`, `OL_BA`.`NEUR_3_1` AS `NEUR_3_1` 
