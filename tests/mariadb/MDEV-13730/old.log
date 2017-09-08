@@ -1,0 +1,12 @@
+]0;IPython: packages/sklearn2sqlFINISHED_TEST_FOR ('iris', 'GradientBoostingClassifier', 'pgsql')
+TEST_STATUS  ('iris', 'GradientBoostingClassifier', 'pgsql') 'Success' '2' 'None'
+FINISHED_TEST_FOR ('iris', 'GradientBoostingClassifier', 'mysql')
+TEST_STATUS  ('iris', 'GradientBoostingClassifier', 'mysql') 'Failure' '2' '(_mysql_exceptions.OperationalError) (4003, 'Too many WITH elements in WITH clause') [SQL: 'WITH `DT_node_lookup` AS \n(SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_3` <= 0.800000011920929) '
+FINISHED_TEST_FOR ('iris', 'GradientBoostingClassifier', 'sqlite')
+TEST_STATUS  ('iris', 'GradientBoostingClassifier', 'sqlite') 'Success' '4' 'None'
+FINISHED_TEST_FOR ('iris', 'GradientBoostingClassifier', 'db2')
+TEST_STATUS  ('iris', 'GradientBoostingClassifier', 'db2') 'Success' '7' 'None'
+FINISHED_TEST_FOR ('iris', 'GradientBoostingClassifier', 'oracle')
+TEST_STATUS  ('iris', 'GradientBoostingClassifier', 'oracle') 'Success' '12' 'None'
+FINISHED_TEST_FOR ('iris', 'GradientBoostingClassifier', 'mssql')
+TEST_STATUS  ('iris', 'GradientBoostingClassifier', 'mssql') 'Failure' '81' '(pymssql.OperationalError) (8623, b'The query processor ran out of internal resources and could not produce a query plan. This is a rare event and only expected for extremely complex queries or querie'
