@@ -6,7 +6,7 @@ sklearn2sql is an ongoing development tool for generating deployment SQL code fr
 
 Using sklearn2sql, it is possible to predict values from an already-fitted classifier or a regressor simply by executing some SQL code. It can be seen as an alternative to PMML-based methods to perform [In-database processing](https://en.wikipedia.org/wiki/In-database_processing).
 
-(**NEW**) sklearn2sql is available as a **RESTful web service** on Heroku. A [sample python client](https://github.com/antoinecarme/sklearn2sql_heroku/blob/master/test_client.py) allows you to generate SQL from your own models. Your feedback is welcome.
+<span style="color:red">(**NEW**) sklearn2sql is available as a [**RESTful web service**](https://github.com/antoinecarme/sklearn2sql_heroku) on Heroku. A [sample python client](https://github.com/antoinecarme/sklearn2sql_heroku/blob/master/test_client.py) allows you to generate SQL from your own models. Your feedback is welcome.</span>
 
 The SQL code is produced in an agnostic way (the mechansim used does not depend on the database) and supports most widely used relational databases. 
 
