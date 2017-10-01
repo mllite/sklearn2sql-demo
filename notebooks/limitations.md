@@ -1,6 +1,6 @@
 ## SAS 
 
-SAS 9.4 In-Database  Products UserESC-F<A2>s GuideESC-A
+SAS 9.4 In-Database  Products Users Guide
         see page 41 of http://support.sas.com/documentation/cdl/en/indbug/68442/PDF/default/indbug.pdf
 
 ## SPSS
