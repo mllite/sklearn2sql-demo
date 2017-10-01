@@ -9,3 +9,12 @@ From https://www.ibm.com/support/knowledgecenter/SS3RA7_15.0.0/com.ibm.spss.mode
 
 ## Zementis PMML (Py2PMML)
 From https://support.zementis.com/hc/en-us/articles/231588567-Introducing-Py2PMML
+
+## PMML2SQL
+
+see http://www.pmml2sql.com/
+
+## Dymatrix
+PMML2SQL Converter http://www.dymatrix.de/en/products/advanced-analytics/knime/pmml2sql-converter
+
+
