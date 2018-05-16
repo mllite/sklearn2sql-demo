@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180508185559_CODEGEN_8CCV part 1. Create 
+-- Code For temporary table TMP_20180516_CODEGEN_U1MAPV_ADS part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508185559_CODEGEN_8CCV" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_U1MAPV_ADS" (
 	"KEY" BIGINT NOT NULL, 
 	imputer_output_2 DOUBLE PRECISION, 
 	imputer_output_3 DOUBLE PRECISION, 
@@ -24,21 +24,21 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180508185559_CODEGEN_8CCV" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508185559_CODEGEN_8CCV part 2. Populate
+-- Code For temporary table TMP_20180516_CODEGEN_U1MAPV_ADS part 2. Populate
 
-INSERT INTO "TMP_20180508185559_CODEGEN_8CCV" ("KEY", imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT "U"."KEY", "U".imputer_output_2, "U".imputer_output_3, "U".imputer_output_4, "U".imputer_output_5 
+INSERT INTO "TMP_20180516_CODEGEN_U1MAPV_ADS" ("KEY", imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT "U"."KEY", "U".imputer_output_2, "U".imputer_output_3, "U".imputer_output_4, "U".imputer_output_5 
 FROM (SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".imputer_output_2, "ADS_imp_1_OUT".imputer_output_3, "ADS_imp_1_OUT".imputer_output_4, "ADS_imp_1_OUT".imputer_output_5 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN 5.8474999999999975 ELSE "ADS"."Feature_0" END AS imputer_output_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 3.0366666666666657 ELSE "ADS"."Feature_1" END AS imputer_output_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 3.8450000000000006 ELSE "ADS"."Feature_2" END AS imputer_output_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 1.245 ELSE "ADS"."Feature_3" END AS imputer_output_5 
 FROM iris AS "ADS") AS "ADS_imp_1_OUT") AS "U"
 
--- Code For temporary table TMP_20180508185559_CODEGEN_8CCV part 3. Create Index 
+-- Code For temporary table TMP_20180516_CODEGEN_U1MAPV_ADS part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508185559_C_2e71" ON "TMP_20180508185559_CODEGEN_8CCV" ("KEY")
+CREATE INDEX "ix_TMP_20180516_CODEGEN_b536" ON "TMP_20180516_CODEGEN_U1MAPV_ADS" ("KEY")
 
--- Code For temporary table TMP_20180508185559_CODEGEN_TUBZ part 1. Create 
+-- Code For temporary table TMP_20180516_CODEGEN_D93P2I_ADS part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508185559_CODEGEN_TUBZ" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_D93P2I_ADS" (
 	"KEY" BIGINT NOT NULL, 
 	scaler_output_2 DOUBLE PRECISION, 
 	scaler_output_3 DOUBLE PRECISION, 
@@ -49,27 +49,27 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180508185559_CODEGEN_TUBZ" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508185559_CODEGEN_TUBZ part 2. Populate
+-- Code For temporary table TMP_20180516_CODEGEN_D93P2I_ADS part 2. Populate
 
-INSERT INTO "TMP_20180508185559_CODEGEN_TUBZ" ("KEY", scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT "U"."KEY", "U".scaler_output_2, "U".scaler_output_3, "U".scaler_output_4, "U".scaler_output_5 
+INSERT INTO "TMP_20180516_CODEGEN_D93P2I_ADS" ("KEY", scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT "U"."KEY", "U".scaler_output_2, "U".scaler_output_3, "U".scaler_output_4, "U".scaler_output_5 
 FROM (SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_output_2, "ADS_sca_2_OUT".scaler_output_3, "ADS_sca_2_OUT".scaler_output_4, "ADS_sca_2_OUT".scaler_output_5 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".imputer_output_2 AS DOUBLE PRECISION) - 5.8474999999999975) / 0.827039146594646 AS scaler_output_2, (CAST("ADS_imp_1_OUT".imputer_output_3 AS DOUBLE PRECISION) - 3.0366666666666657) / 0.43625935201691934 AS scaler_output_3, (CAST("ADS_imp_1_OUT".imputer_output_4 AS DOUBLE PRECISION) - 3.8450000000000006) / 1.709817241695732 AS scaler_output_4, (CAST("ADS_imp_1_OUT".imputer_output_5 AS DOUBLE PRECISION) - 1.245) / 0.7498722113355939 AS scaler_output_5 
-FROM "TMP_20180508185559_CODEGEN_8CCV" AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
+FROM "TMP_20180516_CODEGEN_U1MAPV_ADS" AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
 
--- Code For temporary table TMP_20180508185559_CODEGEN_TUBZ part 3. Create Index 
+-- Code For temporary table TMP_20180516_CODEGEN_D93P2I_ADS part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508185559_C_8626" ON "TMP_20180508185559_CODEGEN_TUBZ" ("KEY")
+CREATE INDEX "ix_TMP_20180516_CODEGEN_4364" ON "TMP_20180516_CODEGEN_D93P2I_ADS" ("KEY")
 
 -- Model deployment code
 
 WITH random_number_cte AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", rand AS uniform 
-FROM "TMP_20180508185559_CODEGEN_TUBZ" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180516_CODEGEN_D93P2I_ADS" AS "ADS_sca_2_OUT"), 
 multinomial_cte AS 
 (SELECT random_number_cte."KEY" AS "KEY", CASE WHEN (random_number_cte.uniform <= 0.30833333333333335) THEN 0 ELSE CASE WHEN (random_number_cte.uniform <= 0.6416666666666666) THEN 1 ELSE CASE WHEN (random_number_cte.uniform <= 1.0) THEN 2 END END END AS multinomial_expr 
 FROM random_number_cte), 
 dummy_class_reg_cte AS 
-(SELECT multinomial_cte."KEY" AS "KEY", 0.30833333333333335 AS "Proba_0", CASE WHEN (0.30833333333333335 IS NULL OR 0.30833333333333335 > 0.0) THEN ln(0.30833333333333335) ELSE -1e+20 END AS "LogProba_0", 0.3333333333333333 AS "Proba_1", CASE WHEN (0.3333333333333333 IS NULL OR 0.3333333333333333 > 0.0) THEN ln(0.3333333333333333) ELSE -1e+20 END AS "LogProba_1", 0.35833333333333334 AS "Proba_2", CASE WHEN (0.35833333333333334 IS NULL OR 0.35833333333333334 > 0.0) THEN ln(0.35833333333333334) ELSE -1e+20 END AS "LogProba_2", multinomial_cte.multinomial_expr AS "Decision" 
+(SELECT multinomial_cte."KEY" AS "KEY", 0.30833333333333335 AS "Proba_0", CASE WHEN (0.30833333333333335 IS NULL OR 0.30833333333333335 > 0.0) THEN ln(0.30833333333333335) ELSE -1.79769313486231e+308 END AS "LogProba_0", 0.3333333333333333 AS "Proba_1", CASE WHEN (0.3333333333333333 IS NULL OR 0.3333333333333333 > 0.0) THEN ln(0.3333333333333333) ELSE -1.79769313486231e+308 END AS "LogProba_1", 0.35833333333333334 AS "Proba_2", CASE WHEN (0.35833333333333334 IS NULL OR 0.35833333333333334 > 0.0) THEN ln(0.35833333333333334) ELSE -1.79769313486231e+308 END AS "LogProba_2", multinomial_cte.multinomial_expr AS "Decision" 
 FROM multinomial_cte)
  SELECT dummy_class_reg_cte."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_1", CAST(NULL AS DOUBLE PRECISION) AS "Score_2", dummy_class_reg_cte."Proba_0" AS "Proba_0", dummy_class_reg_cte."Proba_1" AS "Proba_1", dummy_class_reg_cte."Proba_2" AS "Proba_2", dummy_class_reg_cte."LogProba_0" AS "LogProba_0", dummy_class_reg_cte."LogProba_1" AS "LogProba_1", dummy_class_reg_cte."LogProba_2" AS "LogProba_2", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba" 
 FROM dummy_class_reg_cte

@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180508181233_CODEGEN_P7AKZW_ADS_imp_1_OUT part 1. Create 
+-- Code For temporary table TMP_20180516112322_CODEGEN_T0NQBX_ADS_imp_1_OUT part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180508181233_CODEGEN_P7AKZW_ADS_imp_1_OUT` (
+CREATE TEMPORARY TABLE `TMP_20180516112322_CODEGEN_T0NQBX_ADS_imp_1_OUT` (
 	`KEY` BIGINT NOT NULL, 
 	impter_2 DOUBLE, 
 	impter_3 DOUBLE, 
@@ -30,21 +30,21 @@ CREATE TEMPORARY TABLE `TMP_20180508181233_CODEGEN_P7AKZW_ADS_imp_1_OUT` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180508181233_CODEGEN_P7AKZW_ADS_imp_1_OUT part 2. Populate
+-- Code For temporary table TMP_20180516112322_CODEGEN_T0NQBX_ADS_imp_1_OUT part 2. Populate
 
-INSERT INTO `TMP_20180508181233_CODEGEN_P7AKZW_ADS_imp_1_OUT` (`KEY`, impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT `U`.`KEY`, `U`.impter_2, `U`.impter_3, `U`.impter_4, `U`.impter_5, `U`.impter_6, `U`.impter_7, `U`.impter_8, `U`.impter_9, `U`.impter_10, `U`.impter_11 
+INSERT INTO `TMP_20180516112322_CODEGEN_T0NQBX_ADS_imp_1_OUT` (`KEY`, impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT `U`.`KEY`, `U`.impter_2, `U`.impter_3, `U`.impter_4, `U`.impter_5, `U`.impter_6, `U`.impter_7, `U`.impter_8, `U`.impter_9, `U`.impter_10, `U`.impter_11 
 FROM (SELECT `ADS_imp_1_OUT`.`KEY`, `ADS_imp_1_OUT`.impter_2, `ADS_imp_1_OUT`.impter_3, `ADS_imp_1_OUT`.impter_4, `ADS_imp_1_OUT`.impter_5, `ADS_imp_1_OUT`.impter_6, `ADS_imp_1_OUT`.impter_7, `ADS_imp_1_OUT`.impter_8, `ADS_imp_1_OUT`.impter_9, `ADS_imp_1_OUT`.impter_10, `ADS_imp_1_OUT`.impter_11 
 FROM (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_0` IS NULL) THEN -0.003903374463034205 ELSE `ADS`.`Feature_0` END AS impter_2, CASE WHEN (`ADS`.`Feature_1` IS NULL) THEN 0.6152232215702322 ELSE `ADS`.`Feature_1` END AS impter_3, CASE WHEN (`ADS`.`Feature_2` IS NULL) THEN 0.042796236914291665 ELSE `ADS`.`Feature_2` END AS impter_4, CASE WHEN (`ADS`.`Feature_3` IS NULL) THEN 0.7709819558904074 ELSE `ADS`.`Feature_3` END AS impter_5, CASE WHEN (`ADS`.`Feature_4` IS NULL) THEN -0.43300733624893334 ELSE `ADS`.`Feature_4` END AS impter_6, CASE WHEN (`ADS`.`Feature_5` IS NULL) THEN -0.0424956965794036 ELSE `ADS`.`Feature_5` END AS impter_7, CASE WHEN (`ADS`.`Feature_6` IS NULL) THEN -0.29809080119845455 ELSE `ADS`.`Feature_6` END AS impter_8, CASE WHEN (`ADS`.`Feature_7` IS NULL) THEN 0.14672241507251663 ELSE `ADS`.`Feature_7` END AS impter_9, CASE WHEN (`ADS`.`Feature_8` IS NULL) THEN 0.01746942384662034 ELSE `ADS`.`Feature_8` END AS impter_10, CASE WHEN (`ADS`.`Feature_9` IS NULL) THEN 0.11507331415602866 ELSE `ADS`.`Feature_9` END AS impter_11 
 FROM `FourClass_10` AS `ADS`) AS `ADS_imp_1_OUT`) AS `U`
 
--- Code For temporary table TMP_20180508181233_CODEGEN_P7AKZW_ADS_imp_1_OUT part 3. Create Index 
+-- Code For temporary table TMP_20180516112322_CODEGEN_T0NQBX_ADS_imp_1_OUT part 3. Create Index 
 
-CREATE INDEX `ix_TMP_20180508181233_CODEGEN_P7AKZW_ADS_imp_1_OUT_KEY` ON `TMP_20180508181233_CODEGEN_P7AKZW_ADS_imp_1_OUT` (`KEY`)
+CREATE INDEX `ix_TMP_20180516112322_CODEGEN_T0NQBX_ADS_imp_1_OUT_KEY` ON `TMP_20180516112322_CODEGEN_T0NQBX_ADS_imp_1_OUT` (`KEY`)
 
--- Code For temporary table TMP_20180508181233_CODEGEN_22E0V2_ADS_sca_2_OUT part 1. Create 
+-- Code For temporary table TMP_20180516112322_CODEGEN_OQ8ECA_ADS_sca_2_OUT part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180508181233_CODEGEN_22E0V2_ADS_sca_2_OUT` (
+CREATE TEMPORARY TABLE `TMP_20180516112322_CODEGEN_OQ8ECA_ADS_sca_2_OUT` (
 	`KEY` BIGINT NOT NULL, 
 	scaler_2 DOUBLE, 
 	scaler_3 DOUBLE, 
@@ -61,24 +61,39 @@ CREATE TEMPORARY TABLE `TMP_20180508181233_CODEGEN_22E0V2_ADS_sca_2_OUT` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180508181233_CODEGEN_22E0V2_ADS_sca_2_OUT part 2. Populate
+-- Code For temporary table TMP_20180516112322_CODEGEN_OQ8ECA_ADS_sca_2_OUT part 2. Populate
 
-INSERT INTO `TMP_20180508181233_CODEGEN_22E0V2_ADS_sca_2_OUT` (`KEY`, scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT `U`.`KEY`, `U`.scaler_2, `U`.scaler_3, `U`.scaler_4, `U`.scaler_5, `U`.scaler_6, `U`.scaler_7, `U`.scaler_8, `U`.scaler_9, `U`.scaler_10, `U`.scaler_11 
+INSERT INTO `TMP_20180516112322_CODEGEN_OQ8ECA_ADS_sca_2_OUT` (`KEY`, scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT `U`.`KEY`, `U`.scaler_2, `U`.scaler_3, `U`.scaler_4, `U`.scaler_5, `U`.scaler_6, `U`.scaler_7, `U`.scaler_8, `U`.scaler_9, `U`.scaler_10, `U`.scaler_11 
 FROM (SELECT `ADS_sca_2_OUT`.`KEY`, `ADS_sca_2_OUT`.scaler_2, `ADS_sca_2_OUT`.scaler_3, `ADS_sca_2_OUT`.scaler_4, `ADS_sca_2_OUT`.scaler_5, `ADS_sca_2_OUT`.scaler_6, `ADS_sca_2_OUT`.scaler_7, `ADS_sca_2_OUT`.scaler_8, `ADS_sca_2_OUT`.scaler_9, `ADS_sca_2_OUT`.scaler_10, `ADS_sca_2_OUT`.scaler_11 
-FROM (SELECT `ADS_imp_1_OUT`.`KEY` AS `KEY`, (`ADS_imp_1_OUT`.impter_2 - -0.003903374463034205) / 0.9795060640183997 AS scaler_2, (`ADS_imp_1_OUT`.impter_3 - 0.6152232215702322) / 1.3900807236205235 AS scaler_3, (`ADS_imp_1_OUT`.impter_4 - 0.042796236914291665) / 1.4962685135870766 AS scaler_4, (`ADS_imp_1_OUT`.impter_5 - 0.7709819558904074) / 2.3333561060111743 AS scaler_5, (`ADS_imp_1_OUT`.impter_6 - -0.43300733624893334) / 1.4029757772648748 AS scaler_6, (`ADS_imp_1_OUT`.impter_7 - -0.0424956965794036) / 0.9558091076873229 AS scaler_7, (`ADS_imp_1_OUT`.impter_8 - -0.29809080119845455) / 1.017013180721433 AS scaler_8, (`ADS_imp_1_OUT`.impter_9 - 0.14672241507251663) / 1.600798539929603 AS scaler_9, (`ADS_imp_1_OUT`.impter_10 - 0.01746942384662034) / 1.1487296361671415 AS scaler_10, (`ADS_imp_1_OUT`.impter_11 - 0.11507331415602866) / 0.9690911857336224 AS scaler_11 
-FROM `TMP_20180508181233_CODEGEN_P7AKZW_ADS_imp_1_OUT` AS `ADS_imp_1_OUT`) AS `ADS_sca_2_OUT`) AS `U`
+FROM (SELECT `ADS_imp_1_OUT`.`KEY` AS `KEY`, (CAST(`ADS_imp_1_OUT`.impter_2 AS DOUBLE) - -0.003903374463034205) / 0.9795060640183997 AS scaler_2, (CAST(`ADS_imp_1_OUT`.impter_3 AS DOUBLE) - 0.6152232215702322) / 1.3900807236205235 AS scaler_3, (CAST(`ADS_imp_1_OUT`.impter_4 AS DOUBLE) - 0.042796236914291665) / 1.4962685135870766 AS scaler_4, (CAST(`ADS_imp_1_OUT`.impter_5 AS DOUBLE) - 0.7709819558904074) / 2.3333561060111743 AS scaler_5, (CAST(`ADS_imp_1_OUT`.impter_6 AS DOUBLE) - -0.43300733624893334) / 1.4029757772648748 AS scaler_6, (CAST(`ADS_imp_1_OUT`.impter_7 AS DOUBLE) - -0.0424956965794036) / 0.9558091076873229 AS scaler_7, (CAST(`ADS_imp_1_OUT`.impter_8 AS DOUBLE) - -0.29809080119845455) / 1.017013180721433 AS scaler_8, (CAST(`ADS_imp_1_OUT`.impter_9 AS DOUBLE) - 0.14672241507251663) / 1.600798539929603 AS scaler_9, (CAST(`ADS_imp_1_OUT`.impter_10 AS DOUBLE) - 0.01746942384662034) / 1.1487296361671415 AS scaler_10, (CAST(`ADS_imp_1_OUT`.impter_11 AS DOUBLE) - 0.11507331415602866) / 0.9690911857336224 AS scaler_11 
+FROM `TMP_20180516112322_CODEGEN_T0NQBX_ADS_imp_1_OUT` AS `ADS_imp_1_OUT`) AS `ADS_sca_2_OUT`) AS `U`
 
--- Code For temporary table TMP_20180508181233_CODEGEN_22E0V2_ADS_sca_2_OUT part 3. Create Index 
+-- Code For temporary table TMP_20180516112322_CODEGEN_OQ8ECA_ADS_sca_2_OUT part 3. Create Index 
 
-CREATE INDEX `ix_TMP_20180508181233_CODEGEN_22E0V2_ADS_sca_2_OUT_KEY` ON `TMP_20180508181233_CODEGEN_22E0V2_ADS_sca_2_OUT` (`KEY`)
+CREATE INDEX `ix_TMP_20180516112322_CODEGEN_OQ8ECA_ADS_sca_2_OUT_KEY` ON `TMP_20180516112322_CODEGEN_OQ8ECA_ADS_sca_2_OUT` (`KEY`)
 
--- Model deployment code
+-- Code For temporary table TMP_20180516112322_CODEGEN_UQ37NN_NaiveBayes_Scores part 1. Create 
 
-WITH centered_data AS 
-(SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, `ADS_sca_2_OUT`.scaler_2 - 0.12850936110338088 AS scaler_2_0, `ADS_sca_2_OUT`.scaler_3 - -0.5894853959123594 AS scaler_3_0, `ADS_sca_2_OUT`.scaler_4 - -0.14801104071178056 AS scaler_4_0, `ADS_sca_2_OUT`.scaler_5 - -0.4754829817195303 AS scaler_5_0, `ADS_sca_2_OUT`.scaler_6 - 0.801905341367292 AS scaler_6_0, `ADS_sca_2_OUT`.scaler_7 - -0.1991965192220112 AS scaler_7_0, `ADS_sca_2_OUT`.scaler_8 - 0.4395182129547359 AS scaler_8_0, `ADS_sca_2_OUT`.scaler_9 - 0.12340031909076317 AS scaler_9_0, `ADS_sca_2_OUT`.scaler_10 - 0.40357025839170735 AS scaler_10_0, `ADS_sca_2_OUT`.scaler_11 - 0.09870320795085713 AS scaler_11_0, `ADS_sca_2_OUT`.scaler_2 - -0.05298699472844735 AS scaler_2_1, `ADS_sca_2_OUT`.scaler_3 - 0.3605552729844554 AS scaler_3_1, `ADS_sca_2_OUT`.scaler_4 - 0.7948406445641478 AS scaler_4_1, `ADS_sca_2_OUT`.scaler_5 - 0.8936566583844016 AS scaler_5_1, `ADS_sca_2_OUT`.scaler_6 - 0.16987435186219468 AS scaler_6_1, `ADS_sca_2_OUT`.scaler_7 - -0.2786791750117442 AS scaler_7_1, `ADS_sca_2_OUT`.scaler_8 - -0.8956718805550314 AS scaler_8_1, `ADS_sca_2_OUT`.scaler_9 - 0.6738582822512323 AS scaler_9_1, `ADS_sca_2_OUT`.scaler_10 - -0.20401263319909058 AS scaler_10_1, `ADS_sca_2_OUT`.scaler_11 - -0.07083266262274268 AS scaler_11_1, `ADS_sca_2_OUT`.scaler_2 - 0.045360401938138714 AS scaler_2_2, `ADS_sca_2_OUT`.scaler_3 - -0.5876778050212879 AS scaler_3_2, `ADS_sca_2_OUT`.scaler_4 - -0.7408138640905517 AS scaler_4_2, `ADS_sca_2_OUT`.scaler_5 - -0.7306788392442229 AS scaler_5_2, `ADS_sca_2_OUT`.scaler_6 - -0.35237818545821553 AS scaler_6_2, `ADS_sca_2_OUT`.scaler_7 - 0.23356813470531584 AS scaler_7_2, `ADS_sca_2_OUT`.scaler_8 - 0.6242019441344613 AS scaler_8_2, `ADS_sca_2_OUT`.scaler_9 - -0.11725491493740212 AS scaler_9_2, `ADS_sca_2_OUT`.scaler_10 - 0.2195369339288828 AS scaler_10_2, `ADS_sca_2_OUT`.scaler_11 - 0.02765649597706878 AS scaler_11_2, `ADS_sca_2_OUT`.scaler_2 - -0.09821075654794037 AS scaler_2_3, `ADS_sca_2_OUT`.scaler_3 - 0.688781262143597 AS scaler_3_3, `ADS_sca_2_OUT`.scaler_4 - 0.07198468742455133 AS scaler_4_3, `ADS_sca_2_OUT`.scaler_5 - 0.24086987673399848 AS scaler_5_3, `ADS_sca_2_OUT`.scaler_6 - -0.49019179421321984 AS scaler_6_3, `ADS_sca_2_OUT`.scaler_7 - 0.20398900691476224 AS scaler_7_3, `ADS_sca_2_OUT`.scaler_8 - -0.1128149593079018 AS scaler_8_3, `ADS_sca_2_OUT`.scaler_9 - -0.6069669586322881 AS scaler_9_3, `ADS_sca_2_OUT`.scaler_10 - -0.3443068484384806 AS scaler_10_3, `ADS_sca_2_OUT`.scaler_11 - -0.04150610955463384 AS scaler_11_3 
-FROM `TMP_20180508181233_CODEGEN_22E0V2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+
+CREATE TEMPORARY TABLE `TMP_20180516112322_CODEGEN_UQ37NN_NaiveBayes_Scores` (
+	`KEY` BIGINT NOT NULL, 
+	`Score_0` DOUBLE, 
+	`Score_1` DOUBLE, 
+	`Score_2` DOUBLE, 
+	`Score_3` DOUBLE, 
+	PRIMARY KEY (`KEY`)
+)
+
+ ENGINE=MEMORY
+
+-- Code For temporary table TMP_20180516112322_CODEGEN_UQ37NN_NaiveBayes_Scores part 2. Populate
+
+INSERT INTO `TMP_20180516112322_CODEGEN_UQ37NN_NaiveBayes_Scores` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
+FROM (WITH centered_data AS 
+(SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CAST(`ADS_sca_2_OUT`.scaler_2 AS DOUBLE) - 0.12850936110338088 AS scaler_2_0, CAST(`ADS_sca_2_OUT`.scaler_3 AS DOUBLE) - -0.5894853959123594 AS scaler_3_0, CAST(`ADS_sca_2_OUT`.scaler_4 AS DOUBLE) - -0.14801104071178056 AS scaler_4_0, CAST(`ADS_sca_2_OUT`.scaler_5 AS DOUBLE) - -0.4754829817195303 AS scaler_5_0, CAST(`ADS_sca_2_OUT`.scaler_6 AS DOUBLE) - 0.801905341367292 AS scaler_6_0, CAST(`ADS_sca_2_OUT`.scaler_7 AS DOUBLE) - -0.1991965192220112 AS scaler_7_0, CAST(`ADS_sca_2_OUT`.scaler_8 AS DOUBLE) - 0.4395182129547359 AS scaler_8_0, CAST(`ADS_sca_2_OUT`.scaler_9 AS DOUBLE) - 0.12340031909076317 AS scaler_9_0, CAST(`ADS_sca_2_OUT`.scaler_10 AS DOUBLE) - 0.40357025839170735 AS scaler_10_0, CAST(`ADS_sca_2_OUT`.scaler_11 AS DOUBLE) - 0.09870320795085713 AS scaler_11_0, CAST(`ADS_sca_2_OUT`.scaler_2 AS DOUBLE) - -0.05298699472844735 AS scaler_2_1, CAST(`ADS_sca_2_OUT`.scaler_3 AS DOUBLE) - 0.3605552729844554 AS scaler_3_1, CAST(`ADS_sca_2_OUT`.scaler_4 AS DOUBLE) - 0.7948406445641478 AS scaler_4_1, CAST(`ADS_sca_2_OUT`.scaler_5 AS DOUBLE) - 0.8936566583844016 AS scaler_5_1, CAST(`ADS_sca_2_OUT`.scaler_6 AS DOUBLE) - 0.16987435186219468 AS scaler_6_1, CAST(`ADS_sca_2_OUT`.scaler_7 AS DOUBLE) - -0.2786791750117442 AS scaler_7_1, CAST(`ADS_sca_2_OUT`.scaler_8 AS DOUBLE) - -0.8956718805550314 AS scaler_8_1, CAST(`ADS_sca_2_OUT`.scaler_9 AS DOUBLE) - 0.6738582822512323 AS scaler_9_1, CAST(`ADS_sca_2_OUT`.scaler_10 AS DOUBLE) - -0.20401263319909058 AS scaler_10_1, CAST(`ADS_sca_2_OUT`.scaler_11 AS DOUBLE) - -0.07083266262274268 AS scaler_11_1, CAST(`ADS_sca_2_OUT`.scaler_2 AS DOUBLE) - 0.045360401938138714 AS scaler_2_2, CAST(`ADS_sca_2_OUT`.scaler_3 AS DOUBLE) - -0.5876778050212879 AS scaler_3_2, CAST(`ADS_sca_2_OUT`.scaler_4 AS DOUBLE) - -0.7408138640905517 AS scaler_4_2, CAST(`ADS_sca_2_OUT`.scaler_5 AS DOUBLE) - -0.7306788392442229 AS scaler_5_2, CAST(`ADS_sca_2_OUT`.scaler_6 AS DOUBLE) - -0.35237818545821553 AS scaler_6_2, CAST(`ADS_sca_2_OUT`.scaler_7 AS DOUBLE) - 0.23356813470531584 AS scaler_7_2, CAST(`ADS_sca_2_OUT`.scaler_8 AS DOUBLE) - 0.6242019441344613 AS scaler_8_2, CAST(`ADS_sca_2_OUT`.scaler_9 AS DOUBLE) - -0.11725491493740212 AS scaler_9_2, CAST(`ADS_sca_2_OUT`.scaler_10 AS DOUBLE) - 0.2195369339288828 AS scaler_10_2, CAST(`ADS_sca_2_OUT`.scaler_11 AS DOUBLE) - 0.02765649597706878 AS scaler_11_2, CAST(`ADS_sca_2_OUT`.scaler_2 AS DOUBLE) - -0.09821075654794037 AS scaler_2_3, CAST(`ADS_sca_2_OUT`.scaler_3 AS DOUBLE) - 0.688781262143597 AS scaler_3_3, CAST(`ADS_sca_2_OUT`.scaler_4 AS DOUBLE) - 0.07198468742455133 AS scaler_4_3, CAST(`ADS_sca_2_OUT`.scaler_5 AS DOUBLE) - 0.24086987673399848 AS scaler_5_3, CAST(`ADS_sca_2_OUT`.scaler_6 AS DOUBLE) - -0.49019179421321984 AS scaler_6_3, CAST(`ADS_sca_2_OUT`.scaler_7 AS DOUBLE) - 0.20398900691476224 AS scaler_7_3, CAST(`ADS_sca_2_OUT`.scaler_8 AS DOUBLE) - -0.1128149593079018 AS scaler_8_3, CAST(`ADS_sca_2_OUT`.scaler_9 AS DOUBLE) - -0.6069669586322881 AS scaler_9_3, CAST(`ADS_sca_2_OUT`.scaler_10 AS DOUBLE) - -0.3443068484384806 AS scaler_10_3, CAST(`ADS_sca_2_OUT`.scaler_11 AS DOUBLE) - -0.04150610955463384 AS scaler_11_3 
+FROM `TMP_20180516112322_CODEGEN_OQ8ECA_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `NaiveBayes_data` AS 
-(SELECT `Values`.`KEY` AS `KEY`, `Values`.`Feature` AS `Feature`, `Values`.log_proba_0 AS log_proba_0, `Values`.log_proba_1 AS log_proba_1, `Values`.log_proba_2 AS log_proba_2, `Values`.log_proba_3 AS log_proba_3 
+(SELECT `Values`.`KEY` AS `KEY`, CAST(`Values`.`Feature` AS DOUBLE) AS `Feature`, CAST(`Values`.log_proba_0 AS DOUBLE) AS log_proba_0, CAST(`Values`.log_proba_1 AS DOUBLE) AS log_proba_1, CAST(`Values`.log_proba_2 AS DOUBLE) AS log_proba_2, CAST(`Values`.log_proba_3 AS DOUBLE) AS log_proba_3 
 FROM (SELECT centered_data.`KEY` AS `KEY`, 0 AS `Feature`, -0.5 * 2.320981933042071 - (0.5 * centered_data.scaler_2_0 * centered_data.scaler_2_0) / 1.6210998953860998 AS log_proba_0, -0.5 * 1.583775445349261 - (0.5 * centered_data.scaler_2_1 * centered_data.scaler_2_1) / 0.7756129794283401 AS log_proba_1, -0.5 * 1.7728809988072827 - (0.5 * centered_data.scaler_2_2 * centered_data.scaler_2_2) / 0.9370711483068086 AS log_proba_2, -0.5 * 1.5169047970204672 - (0.5 * centered_data.scaler_2_3 * centered_data.scaler_2_3) / 0.7254433676991361 AS log_proba_3 
 FROM centered_data UNION ALL SELECT centered_data.`KEY` AS `KEY`, 1 AS `Feature`, -0.5 * 1.4400031723287259 - (0.5 * centered_data.scaler_3_0 * centered_data.scaler_3_0) / 0.6717467335603663 AS log_proba_0, -0.5 * 1.2460613703100036 - (0.5 * centered_data.scaler_3_1 * centered_data.scaler_3_1) / 0.5533217080329645 AS log_proba_1, -0.5 * 1.9586758868943013 - (0.5 * centered_data.scaler_3_2 * centered_data.scaler_3_2) / 1.1283978789928049 AS log_proba_2, -0.5 * 0.835577093575847 - (0.5 * centered_data.scaler_3_3 * centered_data.scaler_3_3) / 0.3670343007233382 AS log_proba_3 
 FROM centered_data UNION ALL SELECT centered_data.`KEY` AS `KEY`, 2 AS `Feature`, -0.5 * 1.144841499168878 - (0.5 * centered_data.scaler_4_0 * centered_data.scaler_4_0) / 0.5000558097742381 AS log_proba_0, -0.5 * 1.7926388246744738 - (0.5 * centered_data.scaler_4_1 * centered_data.scaler_4_1) / 0.9557697504631304 AS log_proba_1, -0.5 * 1.2947933688415423 - (0.5 * centered_data.scaler_4_2 * centered_data.scaler_4_2) / 0.5809540008917913 AS log_proba_2, -0.5 * 1.5284235568477087 - (0.5 * centered_data.scaler_4_3 * centered_data.scaler_4_3) / 0.7338478875154928 AS log_proba_3 
@@ -89,14 +104,21 @@ FROM centered_data UNION ALL SELECT centered_data.`KEY` AS `KEY`, 6 AS `Feature`
 FROM centered_data UNION ALL SELECT centered_data.`KEY` AS `KEY`, 7 AS `Feature`, -0.5 * 1.571230670406848 - (0.5 * centered_data.scaler_9_0 * centered_data.scaler_9_0) / 0.7659438643981343 AS log_proba_0, -0.5 * 1.021812872599277 - (0.5 * centered_data.scaler_9_1 * centered_data.scaler_9_1) / 0.4421685238865845 AS log_proba_1, -0.5 * 2.259233248602523 - (0.5 * centered_data.scaler_9_2 * centered_data.scaler_9_2) / 1.5240270130307754 AS log_proba_2, -0.5 * 0.9609526595816625 - (0.5 * centered_data.scaler_9_3 * centered_data.scaler_9_3) / 0.4160605789579687 AS log_proba_3 
 FROM centered_data UNION ALL SELECT centered_data.`KEY` AS `KEY`, 8 AS `Feature`, -0.5 * 1.7010912450320743 - (0.5 * centered_data.scaler_10_0 * centered_data.scaler_10_0) / 0.8721570035153503 AS log_proba_0, -0.5 * 1.6749102364939883 - (0.5 * centered_data.scaler_10_1 * centered_data.scaler_10_1) / 0.8496193698936102 AS log_proba_1, -0.5 * 0.8383748853155641 - (0.5 * centered_data.scaler_10_2 * centered_data.scaler_10_2) / 0.36806262410464724 AS log_proba_2, -0.5 * 2.231499662749405 - (0.5 * centered_data.scaler_10_3 * centered_data.scaler_10_3) / 1.4823410021744456 AS log_proba_3 
 FROM centered_data UNION ALL SELECT centered_data.`KEY` AS `KEY`, 9 AS `Feature`, -0.5 * 2.0734625739978174 - (0.5 * centered_data.scaler_11_0 * centered_data.scaler_11_0) / 1.2656495992754975 AS log_proba_0, -0.5 * 1.6946738383040485 - (0.5 * centered_data.scaler_11_1 * centered_data.scaler_11_1) / 0.8665779380062887 AS log_proba_1, -0.5 * 1.840283489875267 - (0.5 * centered_data.scaler_11_2 * centered_data.scaler_11_2) / 1.002409321226817 AS log_proba_2, -0.5 * 1.7177441701737377 - (0.5 * centered_data.scaler_11_3 * centered_data.scaler_11_3) / 0.8868025761616198 AS log_proba_3 
-FROM centered_data) AS `Values`), 
-`NaiveBayes_Scores` AS 
-(SELECT nb_sums.`KEY` AS `KEY`, nb_sums.`Score_0` AS `Score_0`, nb_sums.`Score_1` AS `Score_1`, nb_sums.`Score_2` AS `Score_2`, nb_sums.`Score_3` AS `Score_3` 
+FROM centered_data) AS `Values`)
+ SELECT `NaiveBayes_Scores`.`KEY`, `NaiveBayes_Scores`.`Score_0`, `NaiveBayes_Scores`.`Score_1`, `NaiveBayes_Scores`.`Score_2`, `NaiveBayes_Scores`.`Score_3` 
+FROM (SELECT nb_sums.`KEY` AS `KEY`, nb_sums.`Score_0` AS `Score_0`, nb_sums.`Score_1` AS `Score_1`, nb_sums.`Score_2` AS `Score_2`, nb_sums.`Score_3` AS `Score_3` 
 FROM (SELECT `NaiveBayes_data`.`KEY` AS `KEY`, -1.491654876777717 + sum(`NaiveBayes_data`.log_proba_0) AS `Score_0`, -1.3862943611198906 + sum(`NaiveBayes_data`.log_proba_1) AS `Score_1`, -1.3862943611198906 + sum(`NaiveBayes_data`.log_proba_2) AS `Score_2`, -1.2909841813155656 + sum(`NaiveBayes_data`.log_proba_3) AS `Score_3` 
-FROM `NaiveBayes_data` GROUP BY `NaiveBayes_data`.`KEY`) AS nb_sums), 
-orig_cte AS 
+FROM `NaiveBayes_data` GROUP BY `NaiveBayes_data`.`KEY`) AS nb_sums) AS `NaiveBayes_Scores`) AS `U`
+
+-- Code For temporary table TMP_20180516112322_CODEGEN_UQ37NN_NaiveBayes_Scores part 3. Create Index 
+
+CREATE INDEX `ix_TMP_20180516112322_CODEGEN_UQ37NN_NaiveBayes_Scores_KEY` ON `TMP_20180516112322_CODEGEN_UQ37NN_NaiveBayes_Scores` (`KEY`)
+
+-- Model deployment code
+
+WITH orig_cte AS 
 (SELECT `NaiveBayes_Scores`.`KEY` AS `KEY`, `NaiveBayes_Scores`.`Score_0` AS `Score_0`, `NaiveBayes_Scores`.`Score_1` AS `Score_1`, `NaiveBayes_Scores`.`Score_2` AS `Score_2`, `NaiveBayes_Scores`.`Score_3` AS `Score_3`, NULL AS `Proba_0`, NULL AS `Proba_1`, NULL AS `Proba_2`, NULL AS `Proba_3`, NULL AS `LogProba_0`, NULL AS `LogProba_1`, NULL AS `LogProba_2`, NULL AS `LogProba_3`, CAST(NULL AS SIGNED INTEGER) AS `Decision`, NULL AS `DecisionProba` 
-FROM `NaiveBayes_Scores`), 
+FROM `TMP_20180516112322_CODEGEN_UQ37NN_NaiveBayes_Scores` AS `NaiveBayes_Scores`), 
 score_class_union AS 
 (SELECT scu.`KEY_u` AS `KEY_u`, scu.class AS class, scu.`LogProba` AS `LogProba`, scu.`Proba` AS `Proba`, scu.`Score` AS `Score` 
 FROM (SELECT orig_cte.`KEY` AS `KEY_u`, 0 AS class, orig_cte.`LogProba_0` AS `LogProba`, orig_cte.`Proba_0` AS `Proba`, orig_cte.`Score_0` AS `Score` 
@@ -109,7 +131,7 @@ score_max AS
 FROM orig_cte LEFT OUTER JOIN (SELECT score_class_union.`KEY_u` AS `KEY_m`, max(score_class_union.`Score`) AS `max_Score` 
 FROM score_class_union GROUP BY score_class_union.`KEY_u`) AS max_select ON orig_cte.`KEY` = max_select.`KEY_m`), 
 score_soft_max_deltas AS 
-(SELECT score_max.`KEY` AS `KEY`, score_max.`Score_0` AS `Score_0`, score_max.`Score_1` AS `Score_1`, score_max.`Score_2` AS `Score_2`, score_max.`Score_3` AS `Score_3`, score_max.`Proba_0` AS `Proba_0`, score_max.`Proba_1` AS `Proba_1`, score_max.`Proba_2` AS `Proba_2`, score_max.`Proba_3` AS `Proba_3`, score_max.`LogProba_0` AS `LogProba_0`, score_max.`LogProba_1` AS `LogProba_1`, score_max.`LogProba_2` AS `LogProba_2`, score_max.`LogProba_3` AS `LogProba_3`, score_max.`Decision` AS `Decision`, score_max.`DecisionProba` AS `DecisionProba`, score_max.`KEY_m` AS `KEY_m`, score_max.`max_Score` AS `max_Score`, exp(score_max.`Score_0` - score_max.`max_Score`) AS `exp_delta_Score_0`, exp(score_max.`Score_1` - score_max.`max_Score`) AS `exp_delta_Score_1`, exp(score_max.`Score_2` - score_max.`max_Score`) AS `exp_delta_Score_2`, exp(score_max.`Score_3` - score_max.`max_Score`) AS `exp_delta_Score_3` 
+(SELECT score_max.`KEY` AS `KEY`, score_max.`Score_0` AS `Score_0`, score_max.`Score_1` AS `Score_1`, score_max.`Score_2` AS `Score_2`, score_max.`Score_3` AS `Score_3`, score_max.`Proba_0` AS `Proba_0`, score_max.`Proba_1` AS `Proba_1`, score_max.`Proba_2` AS `Proba_2`, score_max.`Proba_3` AS `Proba_3`, score_max.`LogProba_0` AS `LogProba_0`, score_max.`LogProba_1` AS `LogProba_1`, score_max.`LogProba_2` AS `LogProba_2`, score_max.`LogProba_3` AS `LogProba_3`, score_max.`Decision` AS `Decision`, score_max.`DecisionProba` AS `DecisionProba`, score_max.`KEY_m` AS `KEY_m`, score_max.`max_Score` AS `max_Score`, exp(greatest(-100.0, score_max.`Score_0` - score_max.`max_Score`)) AS `exp_delta_Score_0`, exp(greatest(-100.0, score_max.`Score_1` - score_max.`max_Score`)) AS `exp_delta_Score_1`, exp(greatest(-100.0, score_max.`Score_2` - score_max.`max_Score`)) AS `exp_delta_Score_2`, exp(greatest(-100.0, score_max.`Score_3` - score_max.`max_Score`)) AS `exp_delta_Score_3` 
 FROM score_max), 
 score_class_union_soft AS 
 (SELECT soft_scu.`KEY` AS `KEY`, soft_scu.class AS class, soft_scu.`exp_delta_Score` AS `exp_delta_Score` 
@@ -129,7 +151,7 @@ arg_max_cte AS
 (SELECT score_soft_max.`KEY` AS `KEY`, score_soft_max.`Score_0` AS `Score_0`, score_soft_max.`Score_1` AS `Score_1`, score_soft_max.`Score_2` AS `Score_2`, score_soft_max.`Score_3` AS `Score_3`, score_soft_max.`Proba_0` AS `Proba_0`, score_soft_max.`Proba_1` AS `Proba_1`, score_soft_max.`Proba_2` AS `Proba_2`, score_soft_max.`Proba_3` AS `Proba_3`, score_soft_max.`LogProba_0` AS `LogProba_0`, score_soft_max.`LogProba_1` AS `LogProba_1`, score_soft_max.`LogProba_2` AS `LogProba_2`, score_soft_max.`LogProba_3` AS `LogProba_3`, score_soft_max.`Decision` AS `Decision`, score_soft_max.`DecisionProba` AS `DecisionProba`, score_soft_max.`KEY_m` AS `KEY_m`, score_soft_max.`max_Score` AS `max_Score`, score_soft_max.`exp_delta_Score_0` AS `exp_delta_Score_0`, score_soft_max.`exp_delta_Score_1` AS `exp_delta_Score_1`, score_soft_max.`exp_delta_Score_2` AS `exp_delta_Score_2`, score_soft_max.`exp_delta_Score_3` AS `exp_delta_Score_3`, score_soft_max.`KEY_sum` AS `KEY_sum`, score_soft_max.`sum_ExpDeltaScore` AS `sum_ExpDeltaScore`, `arg_max_t_Score`.`KEY_Score` AS `KEY_Score`, `arg_max_t_Score`.`arg_max_Score` AS `arg_max_Score`, soft_max_comp.`KEY_softmax` AS `KEY_softmax`, soft_max_comp.`SoftProba_0` AS `SoftProba_0`, soft_max_comp.`SoftProba_1` AS `SoftProba_1`, soft_max_comp.`SoftProba_2` AS `SoftProba_2`, soft_max_comp.`SoftProba_3` AS `SoftProba_3` 
 FROM score_soft_max LEFT OUTER JOIN (SELECT union_with_max.`KEY` AS `KEY_Score`, min(union_with_max.class) AS `arg_max_Score` 
 FROM union_with_max 
-WHERE union_with_max.`max_Score` <= union_with_max.`Score` GROUP BY union_with_max.`KEY`) AS `arg_max_t_Score` ON score_soft_max.`KEY` = `arg_max_t_Score`.`KEY_Score` LEFT OUTER JOIN (SELECT score_soft_max.`KEY` AS `KEY_softmax`, score_soft_max.`exp_delta_Score_0` / score_soft_max.`sum_ExpDeltaScore` AS `SoftProba_0`, score_soft_max.`exp_delta_Score_1` / score_soft_max.`sum_ExpDeltaScore` AS `SoftProba_1`, score_soft_max.`exp_delta_Score_2` / score_soft_max.`sum_ExpDeltaScore` AS `SoftProba_2`, score_soft_max.`exp_delta_Score_3` / score_soft_max.`sum_ExpDeltaScore` AS `SoftProba_3` 
+WHERE union_with_max.`Score` >= union_with_max.`max_Score` GROUP BY union_with_max.`KEY`) AS `arg_max_t_Score` ON score_soft_max.`KEY` = `arg_max_t_Score`.`KEY_Score` LEFT OUTER JOIN (SELECT score_soft_max.`KEY` AS `KEY_softmax`, score_soft_max.`exp_delta_Score_0` / score_soft_max.`sum_ExpDeltaScore` AS `SoftProba_0`, score_soft_max.`exp_delta_Score_1` / score_soft_max.`sum_ExpDeltaScore` AS `SoftProba_1`, score_soft_max.`exp_delta_Score_2` / score_soft_max.`sum_ExpDeltaScore` AS `SoftProba_2`, score_soft_max.`exp_delta_Score_3` / score_soft_max.`sum_ExpDeltaScore` AS `SoftProba_3` 
 FROM score_soft_max) AS soft_max_comp ON soft_max_comp.`KEY_softmax` = `arg_max_t_Score`.`KEY_Score`)
  SELECT arg_max_cte.`KEY` AS `KEY`, NULL AS `Score_0`, NULL AS `Score_1`, NULL AS `Score_2`, NULL AS `Score_3`, arg_max_cte.`SoftProba_0` AS `Proba_0`, arg_max_cte.`SoftProba_1` AS `Proba_1`, arg_max_cte.`SoftProba_2` AS `Proba_2`, arg_max_cte.`SoftProba_3` AS `Proba_3`, CASE WHEN (arg_max_cte.`SoftProba_0` IS NULL OR arg_max_cte.`SoftProba_0` > 0.0) THEN ln(arg_max_cte.`SoftProba_0`) ELSE -1.79769313486231e+308 END AS `LogProba_0`, CASE WHEN (arg_max_cte.`SoftProba_1` IS NULL OR arg_max_cte.`SoftProba_1` > 0.0) THEN ln(arg_max_cte.`SoftProba_1`) ELSE -1.79769313486231e+308 END AS `LogProba_1`, CASE WHEN (arg_max_cte.`SoftProba_2` IS NULL OR arg_max_cte.`SoftProba_2` > 0.0) THEN ln(arg_max_cte.`SoftProba_2`) ELSE -1.79769313486231e+308 END AS `LogProba_2`, CASE WHEN (arg_max_cte.`SoftProba_3` IS NULL OR arg_max_cte.`SoftProba_3` > 0.0) THEN ln(arg_max_cte.`SoftProba_3`) ELSE -1.79769313486231e+308 END AS `LogProba_3`, arg_max_cte.`arg_max_Score` AS `Decision`, greatest(arg_max_cte.`SoftProba_0`, arg_max_cte.`SoftProba_1`, arg_max_cte.`SoftProba_2`, arg_max_cte.`SoftProba_3`) AS `DecisionProba` 
 FROM arg_max_cte

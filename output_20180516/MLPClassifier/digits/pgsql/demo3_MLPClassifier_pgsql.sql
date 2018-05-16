@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180508183950_CODEGEN_HRBEP3_HL_1_relu_1 part 1. Create 
+-- Code For temporary table TMP_20180516120109_CODEGEN_OI063E_HL_1_relu_1 part 1. Create 
 
 
-CREATE TEMPORARY TABLE "TMP_20180508183950_CODEGEN_HRBEP3_HL_1_relu_1" (
+CREATE TEMPORARY TABLE "TMP_20180516120109_CODEGEN_OI063E_HL_1_relu_1" (
 	"KEY" BIGINT NOT NULL, 
 	"NEUR_1_1" FLOAT, 
 	"NEUR_1_2" FLOAT, 
@@ -23,7 +23,7 @@ CREATE TEMPORARY TABLE "TMP_20180508183950_CODEGEN_HRBEP3_HL_1_relu_1" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508183950_CODEGEN_HRBEP3_HL_1_relu_1 part 2. Populate
+-- Code For temporary table TMP_20180516120109_CODEGEN_OI063E_HL_1_relu_1 part 2. Populate
 
 WITH "IL" AS 
 (SELECT "ADS"."KEY" AS "KEY", CAST("ADS"."Feature_0" AS FLOAT) AS "Feature_0", CAST("ADS"."Feature_1" AS FLOAT) AS "Feature_1", CAST("ADS"."Feature_2" AS FLOAT) AS "Feature_2", CAST("ADS"."Feature_3" AS FLOAT) AS "Feature_3", CAST("ADS"."Feature_4" AS FLOAT) AS "Feature_4", CAST("ADS"."Feature_5" AS FLOAT) AS "Feature_5", CAST("ADS"."Feature_6" AS FLOAT) AS "Feature_6", CAST("ADS"."Feature_7" AS FLOAT) AS "Feature_7", CAST("ADS"."Feature_8" AS FLOAT) AS "Feature_8", CAST("ADS"."Feature_9" AS FLOAT) AS "Feature_9", CAST("ADS"."Feature_10" AS FLOAT) AS "Feature_10", CAST("ADS"."Feature_11" AS FLOAT) AS "Feature_11", CAST("ADS"."Feature_12" AS FLOAT) AS "Feature_12", CAST("ADS"."Feature_13" AS FLOAT) AS "Feature_13", CAST("ADS"."Feature_14" AS FLOAT) AS "Feature_14", CAST("ADS"."Feature_15" AS FLOAT) AS "Feature_15", CAST("ADS"."Feature_16" AS FLOAT) AS "Feature_16", CAST("ADS"."Feature_17" AS FLOAT) AS "Feature_17", CAST("ADS"."Feature_18" AS FLOAT) AS "Feature_18", CAST("ADS"."Feature_19" AS FLOAT) AS "Feature_19", CAST("ADS"."Feature_20" AS FLOAT) AS "Feature_20", CAST("ADS"."Feature_21" AS FLOAT) AS "Feature_21", CAST("ADS"."Feature_22" AS FLOAT) AS "Feature_22", CAST("ADS"."Feature_23" AS FLOAT) AS "Feature_23", CAST("ADS"."Feature_24" AS FLOAT) AS "Feature_24", CAST("ADS"."Feature_25" AS FLOAT) AS "Feature_25", CAST("ADS"."Feature_26" AS FLOAT) AS "Feature_26", CAST("ADS"."Feature_27" AS FLOAT) AS "Feature_27", CAST("ADS"."Feature_28" AS FLOAT) AS "Feature_28", CAST("ADS"."Feature_29" AS FLOAT) AS "Feature_29", CAST("ADS"."Feature_30" AS FLOAT) AS "Feature_30", CAST("ADS"."Feature_31" AS FLOAT) AS "Feature_31", CAST("ADS"."Feature_32" AS FLOAT) AS "Feature_32", CAST("ADS"."Feature_33" AS FLOAT) AS "Feature_33", CAST("ADS"."Feature_34" AS FLOAT) AS "Feature_34", CAST("ADS"."Feature_35" AS FLOAT) AS "Feature_35", CAST("ADS"."Feature_36" AS FLOAT) AS "Feature_36", CAST("ADS"."Feature_37" AS FLOAT) AS "Feature_37", CAST("ADS"."Feature_38" AS FLOAT) AS "Feature_38", CAST("ADS"."Feature_39" AS FLOAT) AS "Feature_39", CAST("ADS"."Feature_40" AS FLOAT) AS "Feature_40", CAST("ADS"."Feature_41" AS FLOAT) AS "Feature_41", CAST("ADS"."Feature_42" AS FLOAT) AS "Feature_42", CAST("ADS"."Feature_43" AS FLOAT) AS "Feature_43", CAST("ADS"."Feature_44" AS FLOAT) AS "Feature_44", CAST("ADS"."Feature_45" AS FLOAT) AS "Feature_45", CAST("ADS"."Feature_46" AS FLOAT) AS "Feature_46", CAST("ADS"."Feature_47" AS FLOAT) AS "Feature_47", CAST("ADS"."Feature_48" AS FLOAT) AS "Feature_48", CAST("ADS"."Feature_49" AS FLOAT) AS "Feature_49", CAST("ADS"."Feature_50" AS FLOAT) AS "Feature_50", CAST("ADS"."Feature_51" AS FLOAT) AS "Feature_51", CAST("ADS"."Feature_52" AS FLOAT) AS "Feature_52", CAST("ADS"."Feature_53" AS FLOAT) AS "Feature_53", CAST("ADS"."Feature_54" AS FLOAT) AS "Feature_54", CAST("ADS"."Feature_55" AS FLOAT) AS "Feature_55", CAST("ADS"."Feature_56" AS FLOAT) AS "Feature_56", CAST("ADS"."Feature_57" AS FLOAT) AS "Feature_57", CAST("ADS"."Feature_58" AS FLOAT) AS "Feature_58", CAST("ADS"."Feature_59" AS FLOAT) AS "Feature_59", CAST("ADS"."Feature_60" AS FLOAT) AS "Feature_60", CAST("ADS"."Feature_61" AS FLOAT) AS "Feature_61", CAST("ADS"."Feature_62" AS FLOAT) AS "Feature_62", CAST("ADS"."Feature_63" AS FLOAT) AS "Feature_63" 
@@ -34,18 +34,18 @@ FROM "IL"),
 "HL_1_relu" AS 
 (SELECT "HL_BA_1"."KEY" AS "KEY", greatest("HL_BA_1"."NEUR_1_1", 0) AS "NEUR_1_1", greatest("HL_BA_1"."NEUR_1_2", 0) AS "NEUR_1_2", greatest("HL_BA_1"."NEUR_1_3", 0) AS "NEUR_1_3" 
 FROM "HL_BA_1")
- INSERT INTO "TMP_20180508183950_CODEGEN_HRBEP3_HL_1_relu_1" ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "HL_1_relu_1"."KEY", "HL_1_relu_1"."NEUR_1_1", "HL_1_relu_1"."NEUR_1_2", "HL_1_relu_1"."NEUR_1_3" 
+ INSERT INTO "TMP_20180516120109_CODEGEN_OI063E_HL_1_relu_1" ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "HL_1_relu_1"."KEY", "HL_1_relu_1"."NEUR_1_1", "HL_1_relu_1"."NEUR_1_2", "HL_1_relu_1"."NEUR_1_3" 
 FROM (SELECT "HL_1_relu"."KEY" AS "KEY", "HL_1_relu"."NEUR_1_1" AS "NEUR_1_1", "HL_1_relu"."NEUR_1_2" AS "NEUR_1_2", "HL_1_relu"."NEUR_1_3" AS "NEUR_1_3" 
 FROM "HL_1_relu") AS "HL_1_relu_1"
 
--- Code For temporary table TMP_20180508183950_CODEGEN_HRBEP3_HL_1_relu_1 part 3. Create Index 
+-- Code For temporary table TMP_20180516120109_CODEGEN_OI063E_HL_1_relu_1 part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508183950_CODEGEN_HRBEP3_HL_1_relu_1_KEY" ON "TMP_20180508183950_CODEGEN_HRBEP3_HL_1_relu_1" ("KEY")
+CREATE INDEX "ix_TMP_20180516120109_CODEGEN_OI063E_HL_1_relu_1_KEY" ON "TMP_20180516120109_CODEGEN_OI063E_HL_1_relu_1" ("KEY")
 
--- Code For temporary table TMP_20180508183950_CODEGEN_5WDETQ_OL_softmax_1 part 1. Create 
+-- Code For temporary table TMP_20180516120109_CODEGEN_I2KAVI_OL_softmax_1 part 1. Create 
 
 
-CREATE TEMPORARY TABLE "TMP_20180508183950_CODEGEN_5WDETQ_OL_softmax_1" (
+CREATE TEMPORARY TABLE "TMP_20180516120109_CODEGEN_I2KAVI_OL_softmax_1" (
 	"KEY" BIGINT NOT NULL, 
 	"NEUR_3_1" FLOAT, 
 	"NEUR_3_2" FLOAT, 
@@ -62,11 +62,11 @@ CREATE TEMPORARY TABLE "TMP_20180508183950_CODEGEN_5WDETQ_OL_softmax_1" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508183950_CODEGEN_5WDETQ_OL_softmax_1 part 2. Populate
+-- Code For temporary table TMP_20180516120109_CODEGEN_I2KAVI_OL_softmax_1 part 2. Populate
 
 WITH "HL_BA_2" AS 
 (SELECT "HL_1_relu_1"."KEY" AS "KEY", -0.5573364901029748 * "HL_1_relu_1"."NEUR_1_1" + -0.8641534243965675 * "HL_1_relu_1"."NEUR_1_2" + -0.2766604780895476 * "HL_1_relu_1"."NEUR_1_3" + 2.295386642805444 AS "NEUR_2_1", 0.011735522860248504 * "HL_1_relu_1"."NEUR_1_1" + -0.40341198658333843 * "HL_1_relu_1"."NEUR_1_2" + 0.18612367383081677 * "HL_1_relu_1"."NEUR_1_3" + -0.508232954910367 AS "NEUR_2_2", -0.05092130493601808 * "HL_1_relu_1"."NEUR_1_1" + 0.8491721010509943 * "HL_1_relu_1"."NEUR_1_2" + 0.8245555740350957 * "HL_1_relu_1"."NEUR_1_3" + -0.28455923399573535 AS "NEUR_2_3", -0.0038478434623372155 * "HL_1_relu_1"."NEUR_1_1" + 0.4002369724982778 * "HL_1_relu_1"."NEUR_1_2" + -0.2831833471670811 * "HL_1_relu_1"."NEUR_1_3" + -0.6915591457579999 AS "NEUR_2_4", 0.06290543230562325 * "HL_1_relu_1"."NEUR_1_1" + -0.26240803178662425 * "HL_1_relu_1"."NEUR_1_2" + 0.10991972529064754 * "HL_1_relu_1"."NEUR_1_3" + -3.8002843904832266 AS "NEUR_2_5" 
-FROM "TMP_20180508183950_CODEGEN_HRBEP3_HL_1_relu_1" AS "HL_1_relu_1"), 
+FROM "TMP_20180516120109_CODEGEN_OI063E_HL_1_relu_1" AS "HL_1_relu_1"), 
 "HL_2_relu" AS 
 (SELECT "HL_BA_2"."KEY" AS "KEY", greatest("HL_BA_2"."NEUR_2_1", 0) AS "NEUR_2_1", greatest("HL_BA_2"."NEUR_2_2", 0) AS "NEUR_2_2", greatest("HL_BA_2"."NEUR_2_3", 0) AS "NEUR_2_3", greatest("HL_BA_2"."NEUR_2_4", 0) AS "NEUR_2_4", greatest("HL_BA_2"."NEUR_2_5", 0) AS "NEUR_2_5" 
 FROM "HL_BA_2"), 
@@ -76,19 +76,19 @@ FROM "HL_2_relu"),
 "OL_softmax" AS 
 (SELECT "OL_BA"."KEY" AS "KEY", "OL_BA"."NEUR_3_1" AS "NEUR_3_1", "OL_BA"."NEUR_3_2" AS "NEUR_3_2", "OL_BA"."NEUR_3_3" AS "NEUR_3_3", "OL_BA"."NEUR_3_4" AS "NEUR_3_4", "OL_BA"."NEUR_3_5" AS "NEUR_3_5", "OL_BA"."NEUR_3_6" AS "NEUR_3_6", "OL_BA"."NEUR_3_7" AS "NEUR_3_7", "OL_BA"."NEUR_3_8" AS "NEUR_3_8", "OL_BA"."NEUR_3_9" AS "NEUR_3_9", "OL_BA"."NEUR_3_10" AS "NEUR_3_10" 
 FROM "OL_BA")
- INSERT INTO "TMP_20180508183950_CODEGEN_5WDETQ_OL_softmax_1" ("KEY", "NEUR_3_1", "NEUR_3_2", "NEUR_3_3", "NEUR_3_4", "NEUR_3_5", "NEUR_3_6", "NEUR_3_7", "NEUR_3_8", "NEUR_3_9", "NEUR_3_10") SELECT "OL_softmax_1"."KEY", "OL_softmax_1"."NEUR_3_1", "OL_softmax_1"."NEUR_3_2", "OL_softmax_1"."NEUR_3_3", "OL_softmax_1"."NEUR_3_4", "OL_softmax_1"."NEUR_3_5", "OL_softmax_1"."NEUR_3_6", "OL_softmax_1"."NEUR_3_7", "OL_softmax_1"."NEUR_3_8", "OL_softmax_1"."NEUR_3_9", "OL_softmax_1"."NEUR_3_10" 
+ INSERT INTO "TMP_20180516120109_CODEGEN_I2KAVI_OL_softmax_1" ("KEY", "NEUR_3_1", "NEUR_3_2", "NEUR_3_3", "NEUR_3_4", "NEUR_3_5", "NEUR_3_6", "NEUR_3_7", "NEUR_3_8", "NEUR_3_9", "NEUR_3_10") SELECT "OL_softmax_1"."KEY", "OL_softmax_1"."NEUR_3_1", "OL_softmax_1"."NEUR_3_2", "OL_softmax_1"."NEUR_3_3", "OL_softmax_1"."NEUR_3_4", "OL_softmax_1"."NEUR_3_5", "OL_softmax_1"."NEUR_3_6", "OL_softmax_1"."NEUR_3_7", "OL_softmax_1"."NEUR_3_8", "OL_softmax_1"."NEUR_3_9", "OL_softmax_1"."NEUR_3_10" 
 FROM (SELECT "OL_softmax"."KEY" AS "KEY", "OL_softmax"."NEUR_3_1" AS "NEUR_3_1", "OL_softmax"."NEUR_3_2" AS "NEUR_3_2", "OL_softmax"."NEUR_3_3" AS "NEUR_3_3", "OL_softmax"."NEUR_3_4" AS "NEUR_3_4", "OL_softmax"."NEUR_3_5" AS "NEUR_3_5", "OL_softmax"."NEUR_3_6" AS "NEUR_3_6", "OL_softmax"."NEUR_3_7" AS "NEUR_3_7", "OL_softmax"."NEUR_3_8" AS "NEUR_3_8", "OL_softmax"."NEUR_3_9" AS "NEUR_3_9", "OL_softmax"."NEUR_3_10" AS "NEUR_3_10" 
 FROM "OL_softmax") AS "OL_softmax_1"
 
--- Code For temporary table TMP_20180508183950_CODEGEN_5WDETQ_OL_softmax_1 part 3. Create Index 
+-- Code For temporary table TMP_20180516120109_CODEGEN_I2KAVI_OL_softmax_1 part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508183950_CODEGEN_5WDETQ_OL_softmax_1_KEY" ON "TMP_20180508183950_CODEGEN_5WDETQ_OL_softmax_1" ("KEY")
+CREATE INDEX "ix_TMP_20180516120109_CODEGEN_I2KAVI_OL_softmax_1_KEY" ON "TMP_20180516120109_CODEGEN_I2KAVI_OL_softmax_1" ("KEY")
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT "OL_softmax_1"."KEY" AS "KEY", "OL_softmax_1"."NEUR_3_1" AS "Score_0", "OL_softmax_1"."NEUR_3_2" AS "Score_1", "OL_softmax_1"."NEUR_3_3" AS "Score_2", "OL_softmax_1"."NEUR_3_4" AS "Score_3", "OL_softmax_1"."NEUR_3_5" AS "Score_4", "OL_softmax_1"."NEUR_3_6" AS "Score_5", "OL_softmax_1"."NEUR_3_7" AS "Score_6", "OL_softmax_1"."NEUR_3_8" AS "Score_7", "OL_softmax_1"."NEUR_3_9" AS "Score_8", "OL_softmax_1"."NEUR_3_10" AS "Score_9", CAST(NULL AS FLOAT) AS "Proba_0", CAST(NULL AS FLOAT) AS "Proba_1", CAST(NULL AS FLOAT) AS "Proba_2", CAST(NULL AS FLOAT) AS "Proba_3", CAST(NULL AS FLOAT) AS "Proba_4", CAST(NULL AS FLOAT) AS "Proba_5", CAST(NULL AS FLOAT) AS "Proba_6", CAST(NULL AS FLOAT) AS "Proba_7", CAST(NULL AS FLOAT) AS "Proba_8", CAST(NULL AS FLOAT) AS "Proba_9", CAST(NULL AS FLOAT) AS "LogProba_0", CAST(NULL AS FLOAT) AS "LogProba_1", CAST(NULL AS FLOAT) AS "LogProba_2", CAST(NULL AS FLOAT) AS "LogProba_3", CAST(NULL AS FLOAT) AS "LogProba_4", CAST(NULL AS FLOAT) AS "LogProba_5", CAST(NULL AS FLOAT) AS "LogProba_6", CAST(NULL AS FLOAT) AS "LogProba_7", CAST(NULL AS FLOAT) AS "LogProba_8", CAST(NULL AS FLOAT) AS "LogProba_9", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS FLOAT) AS "DecisionProba" 
-FROM "TMP_20180508183950_CODEGEN_5WDETQ_OL_softmax_1" AS "OL_softmax_1"), 
+FROM "TMP_20180516120109_CODEGEN_I2KAVI_OL_softmax_1" AS "OL_softmax_1"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 
@@ -107,7 +107,7 @@ score_max AS
 FROM orig_cte LEFT OUTER JOIN (SELECT score_class_union."KEY_u" AS "KEY_m", max(score_class_union."Score") AS "max_Score" 
 FROM score_class_union GROUP BY score_class_union."KEY_u") AS max_select ON orig_cte."KEY" = max_select."KEY_m"), 
 score_soft_max_deltas AS 
-(SELECT score_max."KEY" AS "KEY", score_max."Score_0" AS "Score_0", score_max."Score_1" AS "Score_1", score_max."Score_2" AS "Score_2", score_max."Score_3" AS "Score_3", score_max."Score_4" AS "Score_4", score_max."Score_5" AS "Score_5", score_max."Score_6" AS "Score_6", score_max."Score_7" AS "Score_7", score_max."Score_8" AS "Score_8", score_max."Score_9" AS "Score_9", score_max."Proba_0" AS "Proba_0", score_max."Proba_1" AS "Proba_1", score_max."Proba_2" AS "Proba_2", score_max."Proba_3" AS "Proba_3", score_max."Proba_4" AS "Proba_4", score_max."Proba_5" AS "Proba_5", score_max."Proba_6" AS "Proba_6", score_max."Proba_7" AS "Proba_7", score_max."Proba_8" AS "Proba_8", score_max."Proba_9" AS "Proba_9", score_max."LogProba_0" AS "LogProba_0", score_max."LogProba_1" AS "LogProba_1", score_max."LogProba_2" AS "LogProba_2", score_max."LogProba_3" AS "LogProba_3", score_max."LogProba_4" AS "LogProba_4", score_max."LogProba_5" AS "LogProba_5", score_max."LogProba_6" AS "LogProba_6", score_max."LogProba_7" AS "LogProba_7", score_max."LogProba_8" AS "LogProba_8", score_max."LogProba_9" AS "LogProba_9", score_max."Decision" AS "Decision", score_max."DecisionProba" AS "DecisionProba", score_max."KEY_m" AS "KEY_m", score_max."max_Score" AS "max_Score", exp(score_max."Score_0" - score_max."max_Score") AS "exp_delta_Score_0", exp(score_max."Score_1" - score_max."max_Score") AS "exp_delta_Score_1", exp(score_max."Score_2" - score_max."max_Score") AS "exp_delta_Score_2", exp(score_max."Score_3" - score_max."max_Score") AS "exp_delta_Score_3", exp(score_max."Score_4" - score_max."max_Score") AS "exp_delta_Score_4", exp(score_max."Score_5" - score_max."max_Score") AS "exp_delta_Score_5", exp(score_max."Score_6" - score_max."max_Score") AS "exp_delta_Score_6", exp(score_max."Score_7" - score_max."max_Score") AS "exp_delta_Score_7", exp(score_max."Score_8" - score_max."max_Score") AS "exp_delta_Score_8", exp(score_max."Score_9" - score_max."max_Score") AS "exp_delta_Score_9" 
+(SELECT score_max."KEY" AS "KEY", score_max."Score_0" AS "Score_0", score_max."Score_1" AS "Score_1", score_max."Score_2" AS "Score_2", score_max."Score_3" AS "Score_3", score_max."Score_4" AS "Score_4", score_max."Score_5" AS "Score_5", score_max."Score_6" AS "Score_6", score_max."Score_7" AS "Score_7", score_max."Score_8" AS "Score_8", score_max."Score_9" AS "Score_9", score_max."Proba_0" AS "Proba_0", score_max."Proba_1" AS "Proba_1", score_max."Proba_2" AS "Proba_2", score_max."Proba_3" AS "Proba_3", score_max."Proba_4" AS "Proba_4", score_max."Proba_5" AS "Proba_5", score_max."Proba_6" AS "Proba_6", score_max."Proba_7" AS "Proba_7", score_max."Proba_8" AS "Proba_8", score_max."Proba_9" AS "Proba_9", score_max."LogProba_0" AS "LogProba_0", score_max."LogProba_1" AS "LogProba_1", score_max."LogProba_2" AS "LogProba_2", score_max."LogProba_3" AS "LogProba_3", score_max."LogProba_4" AS "LogProba_4", score_max."LogProba_5" AS "LogProba_5", score_max."LogProba_6" AS "LogProba_6", score_max."LogProba_7" AS "LogProba_7", score_max."LogProba_8" AS "LogProba_8", score_max."LogProba_9" AS "LogProba_9", score_max."Decision" AS "Decision", score_max."DecisionProba" AS "DecisionProba", score_max."KEY_m" AS "KEY_m", score_max."max_Score" AS "max_Score", exp(greatest(-100.0, score_max."Score_0" - score_max."max_Score")) AS "exp_delta_Score_0", exp(greatest(-100.0, score_max."Score_1" - score_max."max_Score")) AS "exp_delta_Score_1", exp(greatest(-100.0, score_max."Score_2" - score_max."max_Score")) AS "exp_delta_Score_2", exp(greatest(-100.0, score_max."Score_3" - score_max."max_Score")) AS "exp_delta_Score_3", exp(greatest(-100.0, score_max."Score_4" - score_max."max_Score")) AS "exp_delta_Score_4", exp(greatest(-100.0, score_max."Score_5" - score_max."max_Score")) AS "exp_delta_Score_5", exp(greatest(-100.0, score_max."Score_6" - score_max."max_Score")) AS "exp_delta_Score_6", exp(greatest(-100.0, score_max."Score_7" - score_max."max_Score")) AS "exp_delta_Score_7", exp(greatest(-100.0, score_max."Score_8" - score_max."max_Score")) AS "exp_delta_Score_8", exp(greatest(-100.0, score_max."Score_9" - score_max."max_Score")) AS "exp_delta_Score_9" 
 FROM score_max), 
 score_class_union_soft AS 
 (SELECT soft_scu."KEY" AS "KEY", soft_scu.class AS class, soft_scu."exp_delta_Score" AS "exp_delta_Score" 

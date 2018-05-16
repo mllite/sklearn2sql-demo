@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table ##TMP_20180508175753_CODEGEN_1MENNE_ADS_imp_1_OUT part 1. Create 
+-- Code For temporary table ##TMP_20180516110247_CODEGEN_OFFN25_ADS_imp_1_OUT part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508175753_CODEGEN_1MENNE_ADS_imp_1_OUT (
+CREATE TABLE ##TMP_20180516110247_CODEGEN_OFFN25_ADS_imp_1_OUT (
 	[KEY] BIGINT NULL, 
 	impter_2 FLOAT(53) NULL, 
 	impter_3 FLOAT(53) NULL, 
@@ -29,16 +29,16 @@ CREATE TABLE ##TMP_20180508175753_CODEGEN_1MENNE_ADS_imp_1_OUT (
 
 
 
--- Code For temporary table ##TMP_20180508175753_CODEGEN_1MENNE_ADS_imp_1_OUT part 2. Populate
+-- Code For temporary table ##TMP_20180516110247_CODEGEN_OFFN25_ADS_imp_1_OUT part 2. Populate
 
-INSERT INTO ##TMP_20180508175753_CODEGEN_1MENNE_ADS_imp_1_OUT ([KEY], impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT [ADS_imp_1_OUT].[KEY], [ADS_imp_1_OUT].impter_2, [ADS_imp_1_OUT].impter_3, [ADS_imp_1_OUT].impter_4, [ADS_imp_1_OUT].impter_5, [ADS_imp_1_OUT].impter_6, [ADS_imp_1_OUT].impter_7, [ADS_imp_1_OUT].impter_8, [ADS_imp_1_OUT].impter_9, [ADS_imp_1_OUT].impter_10, [ADS_imp_1_OUT].impter_11 
+INSERT INTO ##TMP_20180516110247_CODEGEN_OFFN25_ADS_imp_1_OUT ([KEY], impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT [ADS_imp_1_OUT].[KEY], [ADS_imp_1_OUT].impter_2, [ADS_imp_1_OUT].impter_3, [ADS_imp_1_OUT].impter_4, [ADS_imp_1_OUT].impter_5, [ADS_imp_1_OUT].impter_6, [ADS_imp_1_OUT].impter_7, [ADS_imp_1_OUT].impter_8, [ADS_imp_1_OUT].impter_9, [ADS_imp_1_OUT].impter_10, [ADS_imp_1_OUT].impter_11 
 FROM (SELECT [ADS].[KEY] AS [KEY], CASE WHEN ([ADS].[Feature_0] IS NULL) THEN 0.061829205238134496 ELSE [ADS].[Feature_0] END AS impter_2, CASE WHEN ([ADS].[Feature_1] IS NULL) THEN 0.17702463767183324 ELSE [ADS].[Feature_1] END AS impter_3, CASE WHEN ([ADS].[Feature_2] IS NULL) THEN 0.04138385004903454 ELSE [ADS].[Feature_2] END AS impter_4, CASE WHEN ([ADS].[Feature_3] IS NULL) THEN 0.13060646805847148 ELSE [ADS].[Feature_3] END AS impter_5, CASE WHEN ([ADS].[Feature_4] IS NULL) THEN -0.05955810471983082 ELSE [ADS].[Feature_4] END AS impter_6, CASE WHEN ([ADS].[Feature_5] IS NULL) THEN -0.04892908987010584 ELSE [ADS].[Feature_5] END AS impter_7, CASE WHEN ([ADS].[Feature_6] IS NULL) THEN 0.19101797861713127 ELSE [ADS].[Feature_6] END AS impter_8, CASE WHEN ([ADS].[Feature_7] IS NULL) THEN 0.02204959673267471 ELSE [ADS].[Feature_7] END AS impter_9, CASE WHEN ([ADS].[Feature_8] IS NULL) THEN -0.057729814034140035 ELSE [ADS].[Feature_8] END AS impter_10, CASE WHEN ([ADS].[Feature_9] IS NULL) THEN -0.05254959205203237 ELSE [ADS].[Feature_9] END AS impter_11 
 FROM [BinaryClass_10] AS [ADS]) AS [ADS_imp_1_OUT]
 
--- Code For temporary table ##TMP_20180508175753_CODEGEN_82F7GG_ADS_sca_2_OUT part 1. Create 
+-- Code For temporary table ##TMP_20180516110247_CODEGEN_R76BIH_ADS_sca_2_OUT part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508175753_CODEGEN_82F7GG_ADS_sca_2_OUT (
+CREATE TABLE ##TMP_20180516110247_CODEGEN_R76BIH_ADS_sca_2_OUT (
 	[KEY] BIGINT NULL, 
 	scaler_2 FLOAT NULL, 
 	scaler_3 FLOAT NULL, 
@@ -54,17 +54,17 @@ CREATE TABLE ##TMP_20180508175753_CODEGEN_82F7GG_ADS_sca_2_OUT (
 
 
 
--- Code For temporary table ##TMP_20180508175753_CODEGEN_82F7GG_ADS_sca_2_OUT part 2. Populate
+-- Code For temporary table ##TMP_20180516110247_CODEGEN_R76BIH_ADS_sca_2_OUT part 2. Populate
 
-INSERT INTO ##TMP_20180508175753_CODEGEN_82F7GG_ADS_sca_2_OUT ([KEY], scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT [ADS_sca_2_OUT].[KEY], [ADS_sca_2_OUT].scaler_2, [ADS_sca_2_OUT].scaler_3, [ADS_sca_2_OUT].scaler_4, [ADS_sca_2_OUT].scaler_5, [ADS_sca_2_OUT].scaler_6, [ADS_sca_2_OUT].scaler_7, [ADS_sca_2_OUT].scaler_8, [ADS_sca_2_OUT].scaler_9, [ADS_sca_2_OUT].scaler_10, [ADS_sca_2_OUT].scaler_11 
+INSERT INTO ##TMP_20180516110247_CODEGEN_R76BIH_ADS_sca_2_OUT ([KEY], scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT [ADS_sca_2_OUT].[KEY], [ADS_sca_2_OUT].scaler_2, [ADS_sca_2_OUT].scaler_3, [ADS_sca_2_OUT].scaler_4, [ADS_sca_2_OUT].scaler_5, [ADS_sca_2_OUT].scaler_6, [ADS_sca_2_OUT].scaler_7, [ADS_sca_2_OUT].scaler_8, [ADS_sca_2_OUT].scaler_9, [ADS_sca_2_OUT].scaler_10, [ADS_sca_2_OUT].scaler_11 
 FROM (SELECT [ADS_imp_1_OUT].[KEY] AS [KEY], (CAST([ADS_imp_1_OUT].impter_2 AS FLOAT(53)) - 0.061829205238134496) / 1.2283839562090673 AS scaler_2, (CAST([ADS_imp_1_OUT].impter_3 AS FLOAT(53)) - 0.17702463767183324) / 0.940821656314017 AS scaler_3, (CAST([ADS_imp_1_OUT].impter_4 AS FLOAT(53)) - 0.04138385004903454) / 1.0741824888811282 AS scaler_4, (CAST([ADS_imp_1_OUT].impter_5 AS FLOAT(53)) - 0.13060646805847148) / 1.0792244559733761 AS scaler_5, (CAST([ADS_imp_1_OUT].impter_6 AS FLOAT(53)) - -0.05955810471983082) / 1.1095891190508123 AS scaler_6, (CAST([ADS_imp_1_OUT].impter_7 AS FLOAT(53)) - -0.04892908987010584) / 1.3781871812029047 AS scaler_7, (CAST([ADS_imp_1_OUT].impter_8 AS FLOAT(53)) - 0.19101797861713127) / 0.9735285246303208 AS scaler_8, (CAST([ADS_imp_1_OUT].impter_9 AS FLOAT(53)) - 0.02204959673267471) / 0.47460301203797095 AS scaler_9, (CAST([ADS_imp_1_OUT].impter_10 AS FLOAT(53)) - -0.057729814034140035) / 1.064607524840552 AS scaler_10, (CAST([ADS_imp_1_OUT].impter_11 AS FLOAT(53)) - -0.05254959205203237) / 1.2245328896554564 AS scaler_11 
-FROM ##TMP_20180508175753_CODEGEN_1MENNE_ADS_imp_1_OUT AS [ADS_imp_1_OUT]) AS [ADS_sca_2_OUT]
+FROM ##TMP_20180516110247_CODEGEN_OFFN25_ADS_imp_1_OUT AS [ADS_imp_1_OUT]) AS [ADS_sca_2_OUT]
 
 -- Model deployment code
 
 WITH [DT_node_lookup] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_11 <= 0.07101128250360489) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 <= 1.7556507587432861) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 <= -0.8114416599273682) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_2 <= 0.8498867750167847) THEN 4 ELSE 5 END ELSE 6 END ELSE 7 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_8 <= 1.7904822826385498) THEN 9 ELSE 10 END END AS node_id_2 
-FROM ##TMP_20180508175753_CODEGEN_82F7GG_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516110247_CODEGEN_R76BIH_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[P_0] AS FLOAT(53)) AS [P_0], CAST([Values].[P_1] AS FLOAT(53)) AS [P_1], CAST([Values].[D] AS FLOAT(53)) AS [D], CAST([Values].[DP] AS FLOAT(53)) AS [DP] 
 FROM (SELECT 4 AS nid, 0.0 AS [P_0], 1.0 AS [P_1], 1 AS [D], 1.0 AS [DP] UNION ALL SELECT 5 AS nid, 1.0 AS [P_0], 0.0 AS [P_1], 0 AS [D], 1.0 AS [DP] UNION ALL SELECT 6 AS nid, 1.0 AS [P_0], 0.0 AS [P_1], 0 AS [D], 1.0 AS [DP] UNION ALL SELECT 7 AS nid, 0.0 AS [P_0], 1.0 AS [P_1], 1 AS [D], 1.0 AS [DP] UNION ALL SELECT 9 AS nid, 0.0 AS [P_0], 1.0 AS [P_1], 1 AS [D], 1.0 AS [DP] UNION ALL SELECT 10 AS nid, 1.0 AS [P_0], 0.0 AS [P_1], 0 AS [D], 1.0 AS [DP]) AS [Values]), 

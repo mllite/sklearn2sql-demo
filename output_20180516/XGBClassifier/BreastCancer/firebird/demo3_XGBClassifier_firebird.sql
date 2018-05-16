@@ -10,19 +10,19 @@
 
 
 
--- Code For temporary table TMP_20180508181034_CODEGEN_MUFL part 1. Create 
+-- Code For temporary table TMP_20180516_CODEGEN_MB2KUB_XGB part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508181034_CODEGEN_MUFL" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_MB2KUB_XGB" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508181034_CODEGEN_MUFL part 2. Populate
+-- Code For temporary table TMP_20180516_CODEGEN_MB2KUB_XGB part 2. Populate
 
-INSERT INTO "TMP_20180508181034_CODEGEN_MUFL" ("KEY", "Score_0") SELECT "U"."KEY", "U"."Score_0" 
+INSERT INTO "TMP_20180516_CODEGEN_MB2KUB_XGB" ("KEY", "Score_0") SELECT "U"."KEY", "U"."Score_0" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_27" < 0.14544999599456787) THEN CASE WHEN ("ADS"."Feature_22" < 105.85000610351562) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_0" < 15.260000228881836) THEN 5 ELSE 6 END END AS node_id_2 
 FROM "BreastCancer" AS "ADS"), 
@@ -157,19 +157,19 @@ FROM "XGB_Model_0_7" UNION ALL SELECT "XGB_Model_0_8"."KEY" AS "KEY", "XGB_Model
 FROM "XGB_Model_0_8" UNION ALL SELECT "XGB_Model_0_9"."KEY" AS "KEY", "XGB_Model_0_9"."Score_0" AS "Score_0" 
 FROM "XGB_Model_0_9") AS "XGB_esu_0") AS "XGB_B0") AS "U"
 
--- Code For temporary table TMP_20180508181034_CODEGEN_7I6E part 1. Create 
+-- Code For temporary table TMP_20180516_CODEGEN_9RO41O_XGB part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508181034_CODEGEN_7I6E" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_9RO41O_XGB" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508181034_CODEGEN_7I6E part 2. Populate
+-- Code For temporary table TMP_20180516_CODEGEN_9RO41O_XGB part 2. Populate
 
-INSERT INTO "TMP_20180508181034_CODEGEN_7I6E" ("KEY", "Score_0") SELECT "U"."KEY", "U"."Score_0" 
+INSERT INTO "TMP_20180516_CODEGEN_9RO41O_XGB" ("KEY", "Score_0") SELECT "U"."KEY", "U"."Score_0" 
 FROM (WITH "DT_node_lookup_10" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_27" < 0.14544999599456787) THEN CASE WHEN ("ADS"."Feature_13" < 31.084999084472656) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_21" < 26.420000076293945) THEN 5 ELSE 6 END END AS node_id_2 
 FROM "BreastCancer" AS "ADS"), 
@@ -252,29 +252,10 @@ FROM "XGB_Model_0_13" UNION ALL SELECT "XGB_Model_0_14"."KEY" AS "KEY", "XGB_Mod
 FROM "XGB_Model_0_14" UNION ALL SELECT "XGB_Model_0_15"."KEY" AS "KEY", "XGB_Model_0_15"."Score_0" AS "Score_0" 
 FROM "XGB_Model_0_15") AS "XGB_esu_1") AS "XGB_B1") AS "U"
 
--- Code For temporary table TMP_20180508181034_CODEGEN_RMVK part 1. Create 
+-- Code For temporary table TMP_20180516_CODEGEN_ZOLRFE_XGB part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508181034_CODEGEN_RMVK" (
-	"KEY" BIGINT, 
-	"Score_0" DOUBLE PRECISION
-)
-
- ON COMMIT PRESERVE ROWS
-
--- Code For temporary table TMP_20180508181034_CODEGEN_RMVK part 2. Populate
-
-INSERT INTO "TMP_20180508181034_CODEGEN_RMVK" ("KEY", "Score_0") SELECT "U"."KEY", "U"."Score_0" 
-FROM (SELECT "XGB_Union"."KEY", "XGB_Union"."Score_0" 
-FROM (SELECT "XGB_EnsembleUnion"."KEY" AS "KEY", "XGB_EnsembleUnion"."Score_0" AS "Score_0" 
-FROM (SELECT "XGB_B0"."KEY" AS "KEY", "XGB_B0"."Score_0" AS "Score_0" 
-FROM "TMP_20180508181034_CODEGEN_MUFL" AS "XGB_B0" UNION ALL SELECT "XGB_B1"."KEY" AS "KEY", "XGB_B1"."Score_0" AS "Score_0" 
-FROM "TMP_20180508181034_CODEGEN_7I6E" AS "XGB_B1") AS "XGB_EnsembleUnion") AS "XGB_Union") AS "U"
-
--- Code For temporary table TMP_20180508181034_CODEGEN_CQD8 part 1. Create 
-
-
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508181034_CODEGEN_CQD8" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_ZOLRFE_XGB" (
 	"KEY" BIGINT NOT NULL, 
 	"Score_0" DOUBLE PRECISION, 
 	PRIMARY KEY ("KEY")
@@ -282,23 +263,28 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180508181034_CODEGEN_CQD8" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508181034_CODEGEN_CQD8 part 2. Populate
+-- Code For temporary table TMP_20180516_CODEGEN_ZOLRFE_XGB part 2. Populate
 
-INSERT INTO "TMP_20180508181034_CODEGEN_CQD8" ("KEY", "Score_0") SELECT "U"."KEY", "U"."Score_0" 
-FROM (SELECT "XGB_sum"."KEY", "XGB_sum"."Score_0" 
+INSERT INTO "TMP_20180516_CODEGEN_ZOLRFE_XGB" ("KEY", "Score_0") SELECT "U"."KEY", "U"."Score_0" 
+FROM (WITH "XGB_Union" AS 
+(SELECT "XGB_EnsembleUnion"."KEY" AS "KEY", "XGB_EnsembleUnion"."Score_0" AS "Score_0" 
+FROM (SELECT "XGB_B0"."KEY" AS "KEY", "XGB_B0"."Score_0" AS "Score_0" 
+FROM "TMP_20180516_CODEGEN_MB2KUB_XGB" AS "XGB_B0" UNION ALL SELECT "XGB_B1"."KEY" AS "KEY", "XGB_B1"."Score_0" AS "Score_0" 
+FROM "TMP_20180516_CODEGEN_9RO41O_XGB" AS "XGB_B1") AS "XGB_EnsembleUnion")
+ SELECT "XGB_sum"."KEY", "XGB_sum"."Score_0" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Score_0" AS DOUBLE PRECISION) AS "Score_0" 
 FROM (SELECT "XGB_Union"."KEY" AS "KEY", sum("XGB_Union"."Score_0") AS "Score_0" 
-FROM "TMP_20180508181034_CODEGEN_RMVK" AS "XGB_Union" GROUP BY "XGB_Union"."KEY") AS "T") AS "XGB_sum") AS "U"
+FROM "XGB_Union" GROUP BY "XGB_Union"."KEY") AS "T") AS "XGB_sum") AS "U"
 
--- Code For temporary table TMP_20180508181034_CODEGEN_CQD8 part 3. Create Index 
+-- Code For temporary table TMP_20180516_CODEGEN_ZOLRFE_XGB part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508181034_C_35f1" ON "TMP_20180508181034_CODEGEN_CQD8" ("KEY")
+CREATE INDEX "ix_TMP_20180516_CODEGEN_3282" ON "TMP_20180516_CODEGEN_ZOLRFE_XGB" ("KEY")
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT "XGB_sum"."KEY" AS "KEY", "XGB_sum"."Score_0" AS "Score_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_1", 1.0 - 1.0 / (1.0 + exp(CASE WHEN (minvalue(maxvalue(-100.0, -"XGB_sum"."Score_0"), 100.0) >= -709.782712893384) THEN minvalue(maxvalue(-100.0, -"XGB_sum"."Score_0"), 100.0) ELSE -709.782712893384 END)) AS "Proba_0", 1.0 / (1.0 + exp(CASE WHEN (minvalue(maxvalue(-100.0, -"XGB_sum"."Score_0"), 100.0) >= -709.782712893384) THEN minvalue(maxvalue(-100.0, -"XGB_sum"."Score_0"), 100.0) ELSE -709.782712893384 END)) AS "Proba_1", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_0", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_1", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba" 
-FROM "TMP_20180508181034_CODEGEN_CQD8" AS "XGB_sum"), 
+FROM "TMP_20180516_CODEGEN_ZOLRFE_XGB" AS "XGB_sum"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 
@@ -316,5 +302,5 @@ arg_max_cte AS
 FROM score_max LEFT OUTER JOIN (SELECT union_with_max."KEY" AS "KEY_Proba", min(union_with_max.class) AS "arg_max_Proba" 
 FROM union_with_max 
 WHERE union_with_max."max_Proba" <= union_with_max."Proba" GROUP BY union_with_max."KEY") AS "arg_max_t_Proba" ON score_max."KEY" = "arg_max_t_Proba"."KEY_Proba")
- SELECT arg_max_cte."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_1", arg_max_cte."Proba_0" AS "Proba_0", arg_max_cte."Proba_1" AS "Proba_1", CASE WHEN (arg_max_cte."Proba_0" IS NULL OR arg_max_cte."Proba_0" > 0.0) THEN ln(arg_max_cte."Proba_0") ELSE -1e+20 END AS "LogProba_0", CASE WHEN (arg_max_cte."Proba_1" IS NULL OR arg_max_cte."Proba_1" > 0.0) THEN ln(arg_max_cte."Proba_1") ELSE -1e+20 END AS "LogProba_1", arg_max_cte."arg_max_Proba" AS "Decision", arg_max_cte."max_Proba" AS "DecisionProba" 
+ SELECT arg_max_cte."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_1", arg_max_cte."Proba_0" AS "Proba_0", arg_max_cte."Proba_1" AS "Proba_1", CASE WHEN (arg_max_cte."Proba_0" IS NULL OR arg_max_cte."Proba_0" > 0.0) THEN ln(arg_max_cte."Proba_0") ELSE -1.79769313486231e+308 END AS "LogProba_0", CASE WHEN (arg_max_cte."Proba_1" IS NULL OR arg_max_cte."Proba_1" > 0.0) THEN ln(arg_max_cte."Proba_1") ELSE -1.79769313486231e+308 END AS "LogProba_1", arg_max_cte."arg_max_Proba" AS "Decision", arg_max_cte."max_Proba" AS "DecisionProba" 
 FROM arg_max_cte

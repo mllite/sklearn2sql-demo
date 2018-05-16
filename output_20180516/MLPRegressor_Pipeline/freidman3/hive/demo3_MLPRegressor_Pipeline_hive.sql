@@ -10,31 +10,31 @@
 
 
 
--- Code For temporary table tmp_20180509004329_codegen_2zq71u_ads_imp_1_out part 1. Create 
+-- Code For temporary table tmp_20180516121901_codegen_05fju9_ads_imp_1_out part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180509004329_codegen_2zq71u_ads_imp_1_out` STORED AS ORC AS SELECT `ADS_imp_1_OUT`.`KEY`, `ADS_imp_1_OUT`.`imputer_output_2`, `ADS_imp_1_OUT`.`imputer_output_3`, `ADS_imp_1_OUT`.`imputer_output_4`, `ADS_imp_1_OUT`.`imputer_output_5` 
+CREATE TEMPORARY TABLE `tmp_20180516121901_codegen_05fju9_ads_imp_1_out` STORED AS ORC AS SELECT `ADS_imp_1_OUT`.`KEY`, `ADS_imp_1_OUT`.`imputer_output_2`, `ADS_imp_1_OUT`.`imputer_output_3`, `ADS_imp_1_OUT`.`imputer_output_4`, `ADS_imp_1_OUT`.`imputer_output_5` 
 FROM (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_0` IS NULL) THEN 43.79128122207401 ELSE `ADS`.`Feature_0` END AS `imputer_output_2`, CASE WHEN (`ADS`.`Feature_1` IS NULL) THEN 945.9672833084396 ELSE `ADS`.`Feature_1` END AS `imputer_output_3`, CASE WHEN (`ADS`.`Feature_2` IS NULL) THEN 0.5310009099975209 ELSE `ADS`.`Feature_2` END AS `imputer_output_4`, CASE WHEN (`ADS`.`Feature_3` IS NULL) THEN 6.139967152050499 ELSE `ADS`.`Feature_3` END AS `imputer_output_5` 
 FROM `freidman3` AS `ADS`) AS `ADS_imp_1_OUT`
 
--- Code For temporary table tmp_20180509004329_codegen_2zq71u_ads_imp_1_out part 2. Populate
+-- Code For temporary table tmp_20180516121901_codegen_05fju9_ads_imp_1_out part 2. Populate
 
-SELECT * FROM `tmp_20180509004329_codegen_2zq71u_ads_imp_1_out`
+SELECT * FROM `tmp_20180516121901_codegen_05fju9_ads_imp_1_out`
 
--- Code For temporary table tmp_20180509004329_codegen_b7wgl6_ads_sca_2_out part 1. Create 
+-- Code For temporary table tmp_20180516121901_codegen_vymm74_ads_sca_2_out part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180509004329_codegen_b7wgl6_ads_sca_2_out` STORED AS ORC AS SELECT `ADS_sca_2_OUT`.`KEY`, `ADS_sca_2_OUT`.`scaler_output_2`, `ADS_sca_2_OUT`.`scaler_output_3`, `ADS_sca_2_OUT`.`scaler_output_4`, `ADS_sca_2_OUT`.`scaler_output_5` 
+CREATE TEMPORARY TABLE `tmp_20180516121901_codegen_vymm74_ads_sca_2_out` STORED AS ORC AS SELECT `ADS_sca_2_OUT`.`KEY`, `ADS_sca_2_OUT`.`scaler_output_2`, `ADS_sca_2_OUT`.`scaler_output_3`, `ADS_sca_2_OUT`.`scaler_output_4`, `ADS_sca_2_OUT`.`scaler_output_5` 
 FROM (SELECT `ADS_imp_1_OUT`.`KEY` AS `KEY`, (CAST(`ADS_imp_1_OUT`.`imputer_output_2` AS DOUBLE) - 43.79128122207401) / 26.03562357622511 AS `scaler_output_2`, (CAST(`ADS_imp_1_OUT`.`imputer_output_3` AS DOUBLE) - 945.9672833084396) / 461.4552766146446 AS `scaler_output_3`, (CAST(`ADS_imp_1_OUT`.`imputer_output_4` AS DOUBLE) - 0.5310009099975209) / 0.2901863282144786 AS `scaler_output_4`, (CAST(`ADS_imp_1_OUT`.`imputer_output_5` AS DOUBLE) - 6.139967152050499) / 3.072917242564058 AS `scaler_output_5` 
-FROM `tmp_20180509004329_codegen_2zq71u_ads_imp_1_out` AS `ADS_imp_1_OUT`) AS `ADS_sca_2_OUT`
+FROM `tmp_20180516121901_codegen_05fju9_ads_imp_1_out` AS `ADS_imp_1_OUT`) AS `ADS_sca_2_OUT`
 
--- Code For temporary table tmp_20180509004329_codegen_b7wgl6_ads_sca_2_out part 2. Populate
+-- Code For temporary table tmp_20180516121901_codegen_vymm74_ads_sca_2_out part 2. Populate
 
-SELECT * FROM `tmp_20180509004329_codegen_b7wgl6_ads_sca_2_out`
+SELECT * FROM `tmp_20180516121901_codegen_vymm74_ads_sca_2_out`
 
--- Code For temporary table tmp_20180509004329_codegen_by0s7s_hl_1_relu_1 part 1. Create 
+-- Code For temporary table tmp_20180516121901_codegen_6ajfcw_hl_1_relu_1 part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180509004329_codegen_by0s7s_hl_1_relu_1` STORED AS ORC AS WITH `IL` AS 
+CREATE TEMPORARY TABLE `tmp_20180516121901_codegen_6ajfcw_hl_1_relu_1` STORED AS ORC AS WITH `IL` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CAST(`ADS_sca_2_OUT`.`scaler_output_2` AS DOUBLE) AS `scaler_output_2`, CAST(`ADS_sca_2_OUT`.`scaler_output_3` AS DOUBLE) AS `scaler_output_3`, CAST(`ADS_sca_2_OUT`.`scaler_output_4` AS DOUBLE) AS `scaler_output_4`, CAST(`ADS_sca_2_OUT`.`scaler_output_5` AS DOUBLE) AS `scaler_output_5` 
-FROM `tmp_20180509004329_codegen_b7wgl6_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
+FROM `tmp_20180516121901_codegen_vymm74_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
 `HL_BA_1` AS 
 (SELECT `IL`.`KEY` AS `KEY`, 0.7354225804663967 * `IL`.`scaler_output_2` + -1.0717872290831125 * `IL`.`scaler_output_3` + -1.2199651489515457 * `IL`.`scaler_output_4` + -0.3939547215443926 * `IL`.`scaler_output_5` + -0.05707316363912278 AS `NEUR_1_1`, -0.012935746985150948 * `IL`.`scaler_output_2` + 0.3383384532774338 * `IL`.`scaler_output_3` + -1.675771034250372 * `IL`.`scaler_output_4` + 0.09460633851264162 * `IL`.`scaler_output_5` + -1.568217107580389 AS `NEUR_1_2`, -0.014045652622483081 * `IL`.`scaler_output_2` + -0.9345228492721701 * `IL`.`scaler_output_3` + 0.9542731717969175 * `IL`.`scaler_output_4` + 0.5401900735586265 * `IL`.`scaler_output_5` + -0.6652512469255111 AS `NEUR_1_3` 
 FROM `IL`), 
@@ -45,15 +45,15 @@ FROM `HL_BA_1`)
 FROM (SELECT `HL_1_relu`.`KEY` AS `KEY`, `HL_1_relu`.`NEUR_1_1` AS `NEUR_1_1`, `HL_1_relu`.`NEUR_1_2` AS `NEUR_1_2`, `HL_1_relu`.`NEUR_1_3` AS `NEUR_1_3` 
 FROM `HL_1_relu`) AS `HL_1_relu_1`
 
--- Code For temporary table tmp_20180509004329_codegen_by0s7s_hl_1_relu_1 part 2. Populate
+-- Code For temporary table tmp_20180516121901_codegen_6ajfcw_hl_1_relu_1 part 2. Populate
 
-SELECT * FROM `tmp_20180509004329_codegen_by0s7s_hl_1_relu_1`
+SELECT * FROM `tmp_20180516121901_codegen_6ajfcw_hl_1_relu_1`
 
--- Code For temporary table tmp_20180509004329_codegen_st0kqj_ol_identity_1 part 1. Create 
+-- Code For temporary table tmp_20180516121901_codegen_paj29t_ol_identity_1 part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180509004329_codegen_st0kqj_ol_identity_1` STORED AS ORC AS WITH `HL_BA_2` AS 
+CREATE TEMPORARY TABLE `tmp_20180516121901_codegen_paj29t_ol_identity_1` STORED AS ORC AS WITH `HL_BA_2` AS 
 (SELECT `HL_1_relu_1`.`KEY` AS `KEY`, 0.41282073786843115 * `HL_1_relu_1`.`NEUR_1_1` + 1.1796598351106002 * `HL_1_relu_1`.`NEUR_1_2` + 0.8548732972026325 * `HL_1_relu_1`.`NEUR_1_3` + -1.7624619054718624 AS `NEUR_2_1`, 1.0369597790607004 * `HL_1_relu_1`.`NEUR_1_1` + 0.5110700159940192 * `HL_1_relu_1`.`NEUR_1_2` + -0.23776588945185728 * `HL_1_relu_1`.`NEUR_1_3` + -0.2821036543378194 AS `NEUR_2_2`, -0.30064798951688704 * `HL_1_relu_1`.`NEUR_1_1` + -0.8271477144718902 * `HL_1_relu_1`.`NEUR_1_2` + -0.3009743810527 * `HL_1_relu_1`.`NEUR_1_3` + -0.010394282503777497 AS `NEUR_2_3`, -0.3412499292043877 * `HL_1_relu_1`.`NEUR_1_1` + -0.5187758749794728 * `HL_1_relu_1`.`NEUR_1_2` + -0.12230053088772282 * `HL_1_relu_1`.`NEUR_1_3` + -0.7406283496068888 AS `NEUR_2_4`, -0.2796655286609097 * `HL_1_relu_1`.`NEUR_1_1` + 0.08424479598655256 * `HL_1_relu_1`.`NEUR_1_2` + 0.0003500686022732635 * `HL_1_relu_1`.`NEUR_1_3` + -0.6513285138753321 AS `NEUR_2_5` 
-FROM `tmp_20180509004329_codegen_by0s7s_hl_1_relu_1` AS `HL_1_relu_1`), 
+FROM `tmp_20180516121901_codegen_6ajfcw_hl_1_relu_1` AS `HL_1_relu_1`), 
 `HL_2_relu` AS 
 (SELECT `HL_BA_2`.`KEY` AS `KEY`, CASE WHEN (`HL_BA_2`.`NEUR_2_1` <= 0) THEN 0 ELSE `HL_BA_2`.`NEUR_2_1` END AS `NEUR_2_1`, CASE WHEN (`HL_BA_2`.`NEUR_2_2` <= 0) THEN 0 ELSE `HL_BA_2`.`NEUR_2_2` END AS `NEUR_2_2`, CASE WHEN (`HL_BA_2`.`NEUR_2_3` <= 0) THEN 0 ELSE `HL_BA_2`.`NEUR_2_3` END AS `NEUR_2_3`, CASE WHEN (`HL_BA_2`.`NEUR_2_4` <= 0) THEN 0 ELSE `HL_BA_2`.`NEUR_2_4` END AS `NEUR_2_4`, CASE WHEN (`HL_BA_2`.`NEUR_2_5` <= 0) THEN 0 ELSE `HL_BA_2`.`NEUR_2_5` END AS `NEUR_2_5` 
 FROM `HL_BA_2`), 
@@ -67,11 +67,11 @@ FROM `OL_BA`)
 FROM (SELECT `OL_identity`.`KEY` AS `KEY`, `OL_identity`.`NEUR_3_1` AS `NEUR_3_1` 
 FROM `OL_identity`) AS `OL_identity_1`
 
--- Code For temporary table tmp_20180509004329_codegen_st0kqj_ol_identity_1 part 2. Populate
+-- Code For temporary table tmp_20180516121901_codegen_paj29t_ol_identity_1 part 2. Populate
 
-SELECT * FROM `tmp_20180509004329_codegen_st0kqj_ol_identity_1`
+SELECT * FROM `tmp_20180516121901_codegen_paj29t_ol_identity_1`
 
 -- Model deployment code
 
 SELECT `OL_identity_1`.`KEY` AS `KEY`, `OL_identity_1`.`NEUR_3_1` AS `Estimator` 
-FROM `tmp_20180509004329_codegen_st0kqj_ol_identity_1` AS `OL_identity_1`
+FROM `tmp_20180516121901_codegen_paj29t_ol_identity_1` AS `OL_identity_1`

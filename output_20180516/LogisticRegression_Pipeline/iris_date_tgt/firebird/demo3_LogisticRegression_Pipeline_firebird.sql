@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180508190145_CODEGEN_7AM2 part 1. Create 
+-- Code For temporary table TMP_20180516_CODEGEN_XX27Y4_ADS part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508190145_CODEGEN_7AM2" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_XX27Y4_ADS" (
 	"KEY" BIGINT NOT NULL, 
 	imputer_output_2 DOUBLE PRECISION, 
 	imputer_output_3 DOUBLE PRECISION, 
@@ -24,21 +24,21 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180508190145_CODEGEN_7AM2" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508190145_CODEGEN_7AM2 part 2. Populate
+-- Code For temporary table TMP_20180516_CODEGEN_XX27Y4_ADS part 2. Populate
 
-INSERT INTO "TMP_20180508190145_CODEGEN_7AM2" ("KEY", imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT "U"."KEY", "U".imputer_output_2, "U".imputer_output_3, "U".imputer_output_4, "U".imputer_output_5 
+INSERT INTO "TMP_20180516_CODEGEN_XX27Y4_ADS" ("KEY", imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT "U"."KEY", "U".imputer_output_2, "U".imputer_output_3, "U".imputer_output_4, "U".imputer_output_5 
 FROM (SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".imputer_output_2, "ADS_imp_1_OUT".imputer_output_3, "ADS_imp_1_OUT".imputer_output_4, "ADS_imp_1_OUT".imputer_output_5 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN 5.8474999999999975 ELSE "ADS"."Feature_0" END AS imputer_output_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 3.0366666666666657 ELSE "ADS"."Feature_1" END AS imputer_output_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 3.8450000000000006 ELSE "ADS"."Feature_2" END AS imputer_output_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 1.245 ELSE "ADS"."Feature_3" END AS imputer_output_5 
 FROM iris_date_tgt AS "ADS") AS "ADS_imp_1_OUT") AS "U"
 
--- Code For temporary table TMP_20180508190145_CODEGEN_7AM2 part 3. Create Index 
+-- Code For temporary table TMP_20180516_CODEGEN_XX27Y4_ADS part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508190145_C_04a2" ON "TMP_20180508190145_CODEGEN_7AM2" ("KEY")
+CREATE INDEX "ix_TMP_20180516_CODEGEN_bf99" ON "TMP_20180516_CODEGEN_XX27Y4_ADS" ("KEY")
 
--- Code For temporary table TMP_20180508190145_CODEGEN_Q3RA part 1. Create 
+-- Code For temporary table TMP_20180516_CODEGEN_S3UOPH_ADS part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508190145_CODEGEN_Q3RA" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_S3UOPH_ADS" (
 	"KEY" BIGINT NOT NULL, 
 	scaler_output_2 DOUBLE PRECISION, 
 	scaler_output_3 DOUBLE PRECISION, 
@@ -49,22 +49,22 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180508190145_CODEGEN_Q3RA" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508190145_CODEGEN_Q3RA part 2. Populate
+-- Code For temporary table TMP_20180516_CODEGEN_S3UOPH_ADS part 2. Populate
 
-INSERT INTO "TMP_20180508190145_CODEGEN_Q3RA" ("KEY", scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT "U"."KEY", "U".scaler_output_2, "U".scaler_output_3, "U".scaler_output_4, "U".scaler_output_5 
+INSERT INTO "TMP_20180516_CODEGEN_S3UOPH_ADS" ("KEY", scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT "U"."KEY", "U".scaler_output_2, "U".scaler_output_3, "U".scaler_output_4, "U".scaler_output_5 
 FROM (SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_output_2, "ADS_sca_2_OUT".scaler_output_3, "ADS_sca_2_OUT".scaler_output_4, "ADS_sca_2_OUT".scaler_output_5 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".imputer_output_2 AS DOUBLE PRECISION) - 5.8474999999999975) / 0.827039146594646 AS scaler_output_2, (CAST("ADS_imp_1_OUT".imputer_output_3 AS DOUBLE PRECISION) - 3.0366666666666657) / 0.43625935201691934 AS scaler_output_3, (CAST("ADS_imp_1_OUT".imputer_output_4 AS DOUBLE PRECISION) - 3.8450000000000006) / 1.709817241695732 AS scaler_output_4, (CAST("ADS_imp_1_OUT".imputer_output_5 AS DOUBLE PRECISION) - 1.245) / 0.7498722113355939 AS scaler_output_5 
-FROM "TMP_20180508190145_CODEGEN_7AM2" AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
+FROM "TMP_20180516_CODEGEN_XX27Y4_ADS" AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
 
--- Code For temporary table TMP_20180508190145_CODEGEN_Q3RA part 3. Create Index 
+-- Code For temporary table TMP_20180516_CODEGEN_S3UOPH_ADS part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508190145_C_8379" ON "TMP_20180508190145_CODEGEN_Q3RA" ("KEY")
+CREATE INDEX "ix_TMP_20180516_CODEGEN_87b6" ON "TMP_20180516_CODEGEN_S3UOPH_ADS" ("KEY")
 
 -- Model deployment code
 
 WITH linear_input AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CAST("ADS_sca_2_OUT".scaler_output_2 AS DOUBLE PRECISION) AS scaler_output_2, CAST("ADS_sca_2_OUT".scaler_output_3 AS DOUBLE PRECISION) AS scaler_output_3, CAST("ADS_sca_2_OUT".scaler_output_4 AS DOUBLE PRECISION) AS scaler_output_4, CAST("ADS_sca_2_OUT".scaler_output_5 AS DOUBLE PRECISION) AS scaler_output_5 
-FROM "TMP_20180508190145_CODEGEN_Q3RA" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180516_CODEGEN_S3UOPH_ADS" AS "ADS_sca_2_OUT"), 
 linear_model_cte AS 
 (SELECT linear_input."KEY" AS "KEY", -0.7667782391215096 * linear_input.scaler_output_2 + 1.3448861681776636 * linear_input.scaler_output_3 + -1.580922603723415 * linear_input.scaler_output_4 + -1.3558479456697266 * linear_input.scaler_output_5 + -1.6828122705601158 AS "Score_1789-07-14T00:00:00.000000000", 0.25942149562528954 * linear_input.scaler_output_2 + -1.1816960057816397 * linear_input.scaler_output_3 + 0.5915514647222258 * linear_input.scaler_output_4 + -0.8653085151586484 * linear_input.scaler_output_5 + -0.8574940233658017 AS "Score_1789-08-14T00:00:00.000000000", -0.0016242729026995305 * linear_input.scaler_output_2 + -0.20888723156912375 * linear_input.scaler_output_3 + 1.8774175353437146 * linear_input.scaler_output_4 + 2.521926697400801 * linear_input.scaler_output_5 + -2.3504810039846715 AS "Score_1789-09-14T00:00:00.000000000" 
 FROM linear_input), 
@@ -92,5 +92,5 @@ arg_max_cte AS
 FROM score_max LEFT OUTER JOIN (SELECT union_with_max."KEY" AS "KEY_Proba", min(union_with_max.class) AS "arg_max_Proba" 
 FROM union_with_max 
 WHERE union_with_max."max_Proba" <= union_with_max."Proba" GROUP BY union_with_max."KEY") AS "arg_max_t_Proba" ON score_max."KEY" = "arg_max_t_Proba"."KEY_Proba")
- SELECT arg_max_cte."KEY" AS "KEY", arg_max_cte."Score_1789-07-14T00:00:00_1" AS "Score_1789-07-14T00:00:00.000000000", arg_max_cte."Score_1789-08-14T00:00:00_2" AS "Score_1789-08-14T00:00:00.000000000", arg_max_cte."Score_1789-09-14T00:00:00_3" AS "Score_1789-09-14T00:00:00.000000000", arg_max_cte."Proba_1789-07-14T00:00:00_4" AS "Proba_1789-07-14T00:00:00.000000000", arg_max_cte."Proba_1789-08-14T00:00:00_5" AS "Proba_1789-08-14T00:00:00.000000000", arg_max_cte."Proba_1789-09-14T00:00:00_6" AS "Proba_1789-09-14T00:00:00.000000000", CASE WHEN (arg_max_cte."Proba_1789-07-14T00:00:00_4" IS NULL OR arg_max_cte."Proba_1789-07-14T00:00:00_4" > 0.0) THEN ln(arg_max_cte."Proba_1789-07-14T00:00:00_4") ELSE -1e+20 END AS "LogProba_1789-07-14T00:00:00.000000000", CASE WHEN (arg_max_cte."Proba_1789-08-14T00:00:00_5" IS NULL OR arg_max_cte."Proba_1789-08-14T00:00:00_5" > 0.0) THEN ln(arg_max_cte."Proba_1789-08-14T00:00:00_5") ELSE -1e+20 END AS "LogProba_1789-08-14T00:00:00.000000000", CASE WHEN (arg_max_cte."Proba_1789-09-14T00:00:00_6" IS NULL OR arg_max_cte."Proba_1789-09-14T00:00:00_6" > 0.0) THEN ln(arg_max_cte."Proba_1789-09-14T00:00:00_6") ELSE -1e+20 END AS "LogProba_1789-09-14T00:00:00.000000000", arg_max_cte."arg_max_Proba" AS "Decision", arg_max_cte."max_Proba" AS "DecisionProba" 
+ SELECT arg_max_cte."KEY" AS "KEY", arg_max_cte."Score_1789-07-14T00:00:00_1" AS "Score_1789-07-14T00:00:00.000000000", arg_max_cte."Score_1789-08-14T00:00:00_2" AS "Score_1789-08-14T00:00:00.000000000", arg_max_cte."Score_1789-09-14T00:00:00_3" AS "Score_1789-09-14T00:00:00.000000000", arg_max_cte."Proba_1789-07-14T00:00:00_4" AS "Proba_1789-07-14T00:00:00.000000000", arg_max_cte."Proba_1789-08-14T00:00:00_5" AS "Proba_1789-08-14T00:00:00.000000000", arg_max_cte."Proba_1789-09-14T00:00:00_6" AS "Proba_1789-09-14T00:00:00.000000000", CASE WHEN (arg_max_cte."Proba_1789-07-14T00:00:00_4" IS NULL OR arg_max_cte."Proba_1789-07-14T00:00:00_4" > 0.0) THEN ln(arg_max_cte."Proba_1789-07-14T00:00:00_4") ELSE -1.79769313486231e+308 END AS "LogProba_1789-07-14T00:00:00.000000000", CASE WHEN (arg_max_cte."Proba_1789-08-14T00:00:00_5" IS NULL OR arg_max_cte."Proba_1789-08-14T00:00:00_5" > 0.0) THEN ln(arg_max_cte."Proba_1789-08-14T00:00:00_5") ELSE -1.79769313486231e+308 END AS "LogProba_1789-08-14T00:00:00.000000000", CASE WHEN (arg_max_cte."Proba_1789-09-14T00:00:00_6" IS NULL OR arg_max_cte."Proba_1789-09-14T00:00:00_6" > 0.0) THEN ln(arg_max_cte."Proba_1789-09-14T00:00:00_6") ELSE -1.79769313486231e+308 END AS "LogProba_1789-09-14T00:00:00.000000000", arg_max_cte."arg_max_Proba" AS "Decision", arg_max_cte."max_Proba" AS "DecisionProba" 
 FROM arg_max_cte

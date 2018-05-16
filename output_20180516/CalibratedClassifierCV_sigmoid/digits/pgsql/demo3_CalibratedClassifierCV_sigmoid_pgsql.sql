@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180508183712_CODEGEN_CLH7YS_CalProb_B0 part 1. Create 
+-- Code For temporary table TMP_20180516115739_CODEGEN_6W9GXV_CalProb_B0 part 1. Create 
 
 
-CREATE TEMPORARY TABLE "TMP_20180508183712_CODEGEN_CLH7YS_CalProb_B0" (
+CREATE TEMPORARY TABLE "TMP_20180516115739_CODEGEN_6W9GXV_CalProb_B0" (
 	"KEY" BIGINT, 
 	"Proba_0" FLOAT, 
 	"Proba_1" FLOAT, 
@@ -29,7 +29,7 @@ CREATE TEMPORARY TABLE "TMP_20180508183712_CODEGEN_CLH7YS_CalProb_B0" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508183712_CODEGEN_CLH7YS_CalProb_B0 part 2. Populate
+-- Code For temporary table TMP_20180516115739_CODEGEN_6W9GXV_CalProb_B0 part 2. Populate
 
 WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_36" <= 0.5) THEN CASE WHEN ("ADS"."Feature_28" <= 2.5) THEN CASE WHEN ("ADS"."Feature_21" <= 0.5) THEN CASE WHEN ("ADS"."Feature_5" <= 10.0) THEN CASE WHEN ("ADS"."Feature_41" <= 5.5) THEN 5 ELSE 6 END ELSE 7 END ELSE CASE WHEN ("ADS"."Feature_62" <= 7.5) THEN CASE WHEN ("ADS"."Feature_50" <= 2.5) THEN 10 ELSE 11 END ELSE 12 END END ELSE CASE WHEN ("ADS"."Feature_21" <= 9.5) THEN CASE WHEN ("ADS"."Feature_5" <= 2.5) THEN CASE WHEN ("ADS"."Feature_42" <= 5.5) THEN 16 ELSE 17 END ELSE CASE WHEN ("ADS"."Feature_28" <= 6.5) THEN 19 ELSE 20 END END ELSE CASE WHEN ("ADS"."Feature_33" <= 1.5) THEN 22 ELSE CASE WHEN ("ADS"."Feature_59" <= 13.5) THEN 24 ELSE 25 END END END END ELSE CASE WHEN ("ADS"."Feature_21" <= 0.5) THEN CASE WHEN ("ADS"."Feature_42" <= 8.5) THEN CASE WHEN ("ADS"."Feature_5" <= 2.5) THEN CASE WHEN ("ADS"."Feature_9" <= 0.5) THEN 30 ELSE 31 END ELSE CASE WHEN ("ADS"."Feature_2" <= 0.5) THEN 33 ELSE 34 END END ELSE CASE WHEN ("ADS"."Feature_54" <= 0.5) THEN CASE WHEN ("ADS"."Feature_59" <= 11.5) THEN 37 ELSE 38 END ELSE CASE WHEN ("ADS"."Feature_9" <= 3.0) THEN 40 ELSE 41 END END END ELSE CASE WHEN ("ADS"."Feature_33" <= 5.5) THEN CASE WHEN ("ADS"."Feature_60" <= 7.5) THEN CASE WHEN ("ADS"."Feature_53" <= 4.5) THEN 45 ELSE 46 END ELSE CASE WHEN ("ADS"."Feature_43" <= 1.5) THEN 48 ELSE 49 END END ELSE CASE WHEN ("ADS"."Feature_26" <= 9.0) THEN 51 ELSE CASE WHEN ("ADS"."Feature_13" <= 13.5) THEN 53 ELSE 54 END END END END END AS node_id_2 
@@ -103,7 +103,7 @@ FROM "Calibrated_Model_3"),
 "Normalized_Probas_3" AS 
 (SELECT sigmoid_calibration_3."KEY" AS "KEY", sigmoid_calibration_3."Proba_0" / (sigmoid_calibration_3."Proba_0" + sigmoid_calibration_3."Proba_1" + sigmoid_calibration_3."Proba_2" + sigmoid_calibration_3."Proba_3" + sigmoid_calibration_3."Proba_4" + sigmoid_calibration_3."Proba_5" + sigmoid_calibration_3."Proba_6" + sigmoid_calibration_3."Proba_7" + sigmoid_calibration_3."Proba_8" + sigmoid_calibration_3."Proba_9") AS "Proba_0", sigmoid_calibration_3."Proba_1" / (sigmoid_calibration_3."Proba_0" + sigmoid_calibration_3."Proba_1" + sigmoid_calibration_3."Proba_2" + sigmoid_calibration_3."Proba_3" + sigmoid_calibration_3."Proba_4" + sigmoid_calibration_3."Proba_5" + sigmoid_calibration_3."Proba_6" + sigmoid_calibration_3."Proba_7" + sigmoid_calibration_3."Proba_8" + sigmoid_calibration_3."Proba_9") AS "Proba_1", sigmoid_calibration_3."Proba_2" / (sigmoid_calibration_3."Proba_0" + sigmoid_calibration_3."Proba_1" + sigmoid_calibration_3."Proba_2" + sigmoid_calibration_3."Proba_3" + sigmoid_calibration_3."Proba_4" + sigmoid_calibration_3."Proba_5" + sigmoid_calibration_3."Proba_6" + sigmoid_calibration_3."Proba_7" + sigmoid_calibration_3."Proba_8" + sigmoid_calibration_3."Proba_9") AS "Proba_2", sigmoid_calibration_3."Proba_3" / (sigmoid_calibration_3."Proba_0" + sigmoid_calibration_3."Proba_1" + sigmoid_calibration_3."Proba_2" + sigmoid_calibration_3."Proba_3" + sigmoid_calibration_3."Proba_4" + sigmoid_calibration_3."Proba_5" + sigmoid_calibration_3."Proba_6" + sigmoid_calibration_3."Proba_7" + sigmoid_calibration_3."Proba_8" + sigmoid_calibration_3."Proba_9") AS "Proba_3", sigmoid_calibration_3."Proba_4" / (sigmoid_calibration_3."Proba_0" + sigmoid_calibration_3."Proba_1" + sigmoid_calibration_3."Proba_2" + sigmoid_calibration_3."Proba_3" + sigmoid_calibration_3."Proba_4" + sigmoid_calibration_3."Proba_5" + sigmoid_calibration_3."Proba_6" + sigmoid_calibration_3."Proba_7" + sigmoid_calibration_3."Proba_8" + sigmoid_calibration_3."Proba_9") AS "Proba_4", sigmoid_calibration_3."Proba_5" / (sigmoid_calibration_3."Proba_0" + sigmoid_calibration_3."Proba_1" + sigmoid_calibration_3."Proba_2" + sigmoid_calibration_3."Proba_3" + sigmoid_calibration_3."Proba_4" + sigmoid_calibration_3."Proba_5" + sigmoid_calibration_3."Proba_6" + sigmoid_calibration_3."Proba_7" + sigmoid_calibration_3."Proba_8" + sigmoid_calibration_3."Proba_9") AS "Proba_5", sigmoid_calibration_3."Proba_6" / (sigmoid_calibration_3."Proba_0" + sigmoid_calibration_3."Proba_1" + sigmoid_calibration_3."Proba_2" + sigmoid_calibration_3."Proba_3" + sigmoid_calibration_3."Proba_4" + sigmoid_calibration_3."Proba_5" + sigmoid_calibration_3."Proba_6" + sigmoid_calibration_3."Proba_7" + sigmoid_calibration_3."Proba_8" + sigmoid_calibration_3."Proba_9") AS "Proba_6", sigmoid_calibration_3."Proba_7" / (sigmoid_calibration_3."Proba_0" + sigmoid_calibration_3."Proba_1" + sigmoid_calibration_3."Proba_2" + sigmoid_calibration_3."Proba_3" + sigmoid_calibration_3."Proba_4" + sigmoid_calibration_3."Proba_5" + sigmoid_calibration_3."Proba_6" + sigmoid_calibration_3."Proba_7" + sigmoid_calibration_3."Proba_8" + sigmoid_calibration_3."Proba_9") AS "Proba_7", sigmoid_calibration_3."Proba_8" / (sigmoid_calibration_3."Proba_0" + sigmoid_calibration_3."Proba_1" + sigmoid_calibration_3."Proba_2" + sigmoid_calibration_3."Proba_3" + sigmoid_calibration_3."Proba_4" + sigmoid_calibration_3."Proba_5" + sigmoid_calibration_3."Proba_6" + sigmoid_calibration_3."Proba_7" + sigmoid_calibration_3."Proba_8" + sigmoid_calibration_3."Proba_9") AS "Proba_8", sigmoid_calibration_3."Proba_9" / (sigmoid_calibration_3."Proba_0" + sigmoid_calibration_3."Proba_1" + sigmoid_calibration_3."Proba_2" + sigmoid_calibration_3."Proba_3" + sigmoid_calibration_3."Proba_4" + sigmoid_calibration_3."Proba_5" + sigmoid_calibration_3."Proba_6" + sigmoid_calibration_3."Proba_7" + sigmoid_calibration_3."Proba_8" + sigmoid_calibration_3."Proba_9") AS "Proba_9" 
 FROM sigmoid_calibration_3)
- INSERT INTO "TMP_20180508183712_CODEGEN_CLH7YS_CalProb_B0" ("KEY", "Proba_0", "Proba_1", "Proba_2", "Proba_3", "Proba_4", "Proba_5", "Proba_6", "Proba_7", "Proba_8", "Proba_9") SELECT "CalProb_B0"."KEY", "CalProb_B0"."Proba_0", "CalProb_B0"."Proba_1", "CalProb_B0"."Proba_2", "CalProb_B0"."Proba_3", "CalProb_B0"."Proba_4", "CalProb_B0"."Proba_5", "CalProb_B0"."Proba_6", "CalProb_B0"."Proba_7", "CalProb_B0"."Proba_8", "CalProb_B0"."Proba_9" 
+ INSERT INTO "TMP_20180516115739_CODEGEN_6W9GXV_CalProb_B0" ("KEY", "Proba_0", "Proba_1", "Proba_2", "Proba_3", "Proba_4", "Proba_5", "Proba_6", "Proba_7", "Proba_8", "Proba_9") SELECT "CalProb_B0"."KEY", "CalProb_B0"."Proba_0", "CalProb_B0"."Proba_1", "CalProb_B0"."Proba_2", "CalProb_B0"."Proba_3", "CalProb_B0"."Proba_4", "CalProb_B0"."Proba_5", "CalProb_B0"."Proba_6", "CalProb_B0"."Proba_7", "CalProb_B0"."Proba_8", "CalProb_B0"."Proba_9" 
 FROM (SELECT "CalProb_esu_0"."KEY" AS "KEY", "CalProb_esu_0"."Proba_0" AS "Proba_0", "CalProb_esu_0"."Proba_1" AS "Proba_1", "CalProb_esu_0"."Proba_2" AS "Proba_2", "CalProb_esu_0"."Proba_3" AS "Proba_3", "CalProb_esu_0"."Proba_4" AS "Proba_4", "CalProb_esu_0"."Proba_5" AS "Proba_5", "CalProb_esu_0"."Proba_6" AS "Proba_6", "CalProb_esu_0"."Proba_7" AS "Proba_7", "CalProb_esu_0"."Proba_8" AS "Proba_8", "CalProb_esu_0"."Proba_9" AS "Proba_9" 
 FROM (SELECT "Normalized_Probas"."KEY" AS "KEY", "Normalized_Probas"."Proba_0" AS "Proba_0", "Normalized_Probas"."Proba_1" AS "Proba_1", "Normalized_Probas"."Proba_2" AS "Proba_2", "Normalized_Probas"."Proba_3" AS "Proba_3", "Normalized_Probas"."Proba_4" AS "Proba_4", "Normalized_Probas"."Proba_5" AS "Proba_5", "Normalized_Probas"."Proba_6" AS "Proba_6", "Normalized_Probas"."Proba_7" AS "Proba_7", "Normalized_Probas"."Proba_8" AS "Proba_8", "Normalized_Probas"."Proba_9" AS "Proba_9" 
 FROM "Normalized_Probas" UNION ALL SELECT "Normalized_Probas_1"."KEY" AS "KEY", "Normalized_Probas_1"."Proba_0" AS "Proba_0", "Normalized_Probas_1"."Proba_1" AS "Proba_1", "Normalized_Probas_1"."Proba_2" AS "Proba_2", "Normalized_Probas_1"."Proba_3" AS "Proba_3", "Normalized_Probas_1"."Proba_4" AS "Proba_4", "Normalized_Probas_1"."Proba_5" AS "Proba_5", "Normalized_Probas_1"."Proba_6" AS "Proba_6", "Normalized_Probas_1"."Proba_7" AS "Proba_7", "Normalized_Probas_1"."Proba_8" AS "Proba_8", "Normalized_Probas_1"."Proba_9" AS "Proba_9" 
@@ -111,36 +111,10 @@ FROM "Normalized_Probas_1" UNION ALL SELECT "Normalized_Probas_2"."KEY" AS "KEY"
 FROM "Normalized_Probas_2" UNION ALL SELECT "Normalized_Probas_3"."KEY" AS "KEY", "Normalized_Probas_3"."Proba_0" AS "Proba_0", "Normalized_Probas_3"."Proba_1" AS "Proba_1", "Normalized_Probas_3"."Proba_2" AS "Proba_2", "Normalized_Probas_3"."Proba_3" AS "Proba_3", "Normalized_Probas_3"."Proba_4" AS "Proba_4", "Normalized_Probas_3"."Proba_5" AS "Proba_5", "Normalized_Probas_3"."Proba_6" AS "Proba_6", "Normalized_Probas_3"."Proba_7" AS "Proba_7", "Normalized_Probas_3"."Proba_8" AS "Proba_8", "Normalized_Probas_3"."Proba_9" AS "Proba_9" 
 FROM "Normalized_Probas_3") AS "CalProb_esu_0") AS "CalProb_B0"
 
--- Code For temporary table TMP_20180508183712_CODEGEN_YR20S0_CalProb_Union part 1. Create 
+-- Code For temporary table TMP_20180516115739_CODEGEN_WHKN2C_CalProb_avg part 1. Create 
 
 
-CREATE TEMPORARY TABLE "TMP_20180508183712_CODEGEN_YR20S0_CalProb_Union" (
-	"KEY" BIGINT, 
-	"Proba_0" FLOAT, 
-	"Proba_1" FLOAT, 
-	"Proba_2" FLOAT, 
-	"Proba_3" FLOAT, 
-	"Proba_4" FLOAT, 
-	"Proba_5" FLOAT, 
-	"Proba_6" FLOAT, 
-	"Proba_7" FLOAT, 
-	"Proba_8" FLOAT, 
-	"Proba_9" FLOAT
-)
-
- ON COMMIT PRESERVE ROWS
-
--- Code For temporary table TMP_20180508183712_CODEGEN_YR20S0_CalProb_Union part 2. Populate
-
-INSERT INTO "TMP_20180508183712_CODEGEN_YR20S0_CalProb_Union" ("KEY", "Proba_0", "Proba_1", "Proba_2", "Proba_3", "Proba_4", "Proba_5", "Proba_6", "Proba_7", "Proba_8", "Proba_9") SELECT "CalProb_Union"."KEY", "CalProb_Union"."Proba_0", "CalProb_Union"."Proba_1", "CalProb_Union"."Proba_2", "CalProb_Union"."Proba_3", "CalProb_Union"."Proba_4", "CalProb_Union"."Proba_5", "CalProb_Union"."Proba_6", "CalProb_Union"."Proba_7", "CalProb_Union"."Proba_8", "CalProb_Union"."Proba_9" 
-FROM (SELECT "CalProb_EnsembleUnion"."KEY" AS "KEY", "CalProb_EnsembleUnion"."Proba_0" AS "Proba_0", "CalProb_EnsembleUnion"."Proba_1" AS "Proba_1", "CalProb_EnsembleUnion"."Proba_2" AS "Proba_2", "CalProb_EnsembleUnion"."Proba_3" AS "Proba_3", "CalProb_EnsembleUnion"."Proba_4" AS "Proba_4", "CalProb_EnsembleUnion"."Proba_5" AS "Proba_5", "CalProb_EnsembleUnion"."Proba_6" AS "Proba_6", "CalProb_EnsembleUnion"."Proba_7" AS "Proba_7", "CalProb_EnsembleUnion"."Proba_8" AS "Proba_8", "CalProb_EnsembleUnion"."Proba_9" AS "Proba_9" 
-FROM (SELECT "CalProb_B0"."KEY" AS "KEY", "CalProb_B0"."Proba_0" AS "Proba_0", "CalProb_B0"."Proba_1" AS "Proba_1", "CalProb_B0"."Proba_2" AS "Proba_2", "CalProb_B0"."Proba_3" AS "Proba_3", "CalProb_B0"."Proba_4" AS "Proba_4", "CalProb_B0"."Proba_5" AS "Proba_5", "CalProb_B0"."Proba_6" AS "Proba_6", "CalProb_B0"."Proba_7" AS "Proba_7", "CalProb_B0"."Proba_8" AS "Proba_8", "CalProb_B0"."Proba_9" AS "Proba_9" 
-FROM "TMP_20180508183712_CODEGEN_CLH7YS_CalProb_B0" AS "CalProb_B0") AS "CalProb_EnsembleUnion") AS "CalProb_Union"
-
--- Code For temporary table TMP_20180508183712_CODEGEN_TUF6X0_CalProb_avg part 1. Create 
-
-
-CREATE TEMPORARY TABLE "TMP_20180508183712_CODEGEN_TUF6X0_CalProb_avg" (
+CREATE TEMPORARY TABLE "TMP_20180516115739_CODEGEN_WHKN2C_CalProb_avg" (
 	"KEY" BIGINT NOT NULL, 
 	"Proba_0" FLOAT, 
 	"Proba_1" FLOAT, 
@@ -157,22 +131,26 @@ CREATE TEMPORARY TABLE "TMP_20180508183712_CODEGEN_TUF6X0_CalProb_avg" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508183712_CODEGEN_TUF6X0_CalProb_avg part 2. Populate
+-- Code For temporary table TMP_20180516115739_CODEGEN_WHKN2C_CalProb_avg part 2. Populate
 
-INSERT INTO "TMP_20180508183712_CODEGEN_TUF6X0_CalProb_avg" ("KEY", "Proba_0", "Proba_1", "Proba_2", "Proba_3", "Proba_4", "Proba_5", "Proba_6", "Proba_7", "Proba_8", "Proba_9") SELECT "CalProb_avg"."KEY", "CalProb_avg"."Proba_0", "CalProb_avg"."Proba_1", "CalProb_avg"."Proba_2", "CalProb_avg"."Proba_3", "CalProb_avg"."Proba_4", "CalProb_avg"."Proba_5", "CalProb_avg"."Proba_6", "CalProb_avg"."Proba_7", "CalProb_avg"."Proba_8", "CalProb_avg"."Proba_9" 
+WITH "CalProb_Union" AS 
+(SELECT "CalProb_EnsembleUnion"."KEY" AS "KEY", "CalProb_EnsembleUnion"."Proba_0" AS "Proba_0", "CalProb_EnsembleUnion"."Proba_1" AS "Proba_1", "CalProb_EnsembleUnion"."Proba_2" AS "Proba_2", "CalProb_EnsembleUnion"."Proba_3" AS "Proba_3", "CalProb_EnsembleUnion"."Proba_4" AS "Proba_4", "CalProb_EnsembleUnion"."Proba_5" AS "Proba_5", "CalProb_EnsembleUnion"."Proba_6" AS "Proba_6", "CalProb_EnsembleUnion"."Proba_7" AS "Proba_7", "CalProb_EnsembleUnion"."Proba_8" AS "Proba_8", "CalProb_EnsembleUnion"."Proba_9" AS "Proba_9" 
+FROM (SELECT "CalProb_B0"."KEY" AS "KEY", "CalProb_B0"."Proba_0" AS "Proba_0", "CalProb_B0"."Proba_1" AS "Proba_1", "CalProb_B0"."Proba_2" AS "Proba_2", "CalProb_B0"."Proba_3" AS "Proba_3", "CalProb_B0"."Proba_4" AS "Proba_4", "CalProb_B0"."Proba_5" AS "Proba_5", "CalProb_B0"."Proba_6" AS "Proba_6", "CalProb_B0"."Proba_7" AS "Proba_7", "CalProb_B0"."Proba_8" AS "Proba_8", "CalProb_B0"."Proba_9" AS "Proba_9" 
+FROM "TMP_20180516115739_CODEGEN_6W9GXV_CalProb_B0" AS "CalProb_B0") AS "CalProb_EnsembleUnion")
+ INSERT INTO "TMP_20180516115739_CODEGEN_WHKN2C_CalProb_avg" ("KEY", "Proba_0", "Proba_1", "Proba_2", "Proba_3", "Proba_4", "Proba_5", "Proba_6", "Proba_7", "Proba_8", "Proba_9") SELECT "CalProb_avg"."KEY", "CalProb_avg"."Proba_0", "CalProb_avg"."Proba_1", "CalProb_avg"."Proba_2", "CalProb_avg"."Proba_3", "CalProb_avg"."Proba_4", "CalProb_avg"."Proba_5", "CalProb_avg"."Proba_6", "CalProb_avg"."Proba_7", "CalProb_avg"."Proba_8", "CalProb_avg"."Proba_9" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Proba_0" AS FLOAT) AS "Proba_0", CAST("T"."Proba_1" AS FLOAT) AS "Proba_1", CAST("T"."Proba_2" AS FLOAT) AS "Proba_2", CAST("T"."Proba_3" AS FLOAT) AS "Proba_3", CAST("T"."Proba_4" AS FLOAT) AS "Proba_4", CAST("T"."Proba_5" AS FLOAT) AS "Proba_5", CAST("T"."Proba_6" AS FLOAT) AS "Proba_6", CAST("T"."Proba_7" AS FLOAT) AS "Proba_7", CAST("T"."Proba_8" AS FLOAT) AS "Proba_8", CAST("T"."Proba_9" AS FLOAT) AS "Proba_9" 
 FROM (SELECT "CalProb_Union"."KEY" AS "KEY", avg(CAST("CalProb_Union"."Proba_0" AS FLOAT)) AS "Proba_0", avg(CAST("CalProb_Union"."Proba_1" AS FLOAT)) AS "Proba_1", avg(CAST("CalProb_Union"."Proba_2" AS FLOAT)) AS "Proba_2", avg(CAST("CalProb_Union"."Proba_3" AS FLOAT)) AS "Proba_3", avg(CAST("CalProb_Union"."Proba_4" AS FLOAT)) AS "Proba_4", avg(CAST("CalProb_Union"."Proba_5" AS FLOAT)) AS "Proba_5", avg(CAST("CalProb_Union"."Proba_6" AS FLOAT)) AS "Proba_6", avg(CAST("CalProb_Union"."Proba_7" AS FLOAT)) AS "Proba_7", avg(CAST("CalProb_Union"."Proba_8" AS FLOAT)) AS "Proba_8", avg(CAST("CalProb_Union"."Proba_9" AS FLOAT)) AS "Proba_9" 
-FROM "TMP_20180508183712_CODEGEN_YR20S0_CalProb_Union" AS "CalProb_Union" GROUP BY "CalProb_Union"."KEY") AS "T") AS "CalProb_avg"
+FROM "CalProb_Union" GROUP BY "CalProb_Union"."KEY") AS "T") AS "CalProb_avg"
 
--- Code For temporary table TMP_20180508183712_CODEGEN_TUF6X0_CalProb_avg part 3. Create Index 
+-- Code For temporary table TMP_20180516115739_CODEGEN_WHKN2C_CalProb_avg part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508183712_CODEGEN_TUF6X0_CalProb_avg_KEY" ON "TMP_20180508183712_CODEGEN_TUF6X0_CalProb_avg" ("KEY")
+CREATE INDEX "ix_TMP_20180516115739_CODEGEN_WHKN2C_CalProb_avg_KEY" ON "TMP_20180516115739_CODEGEN_WHKN2C_CalProb_avg" ("KEY")
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT "CalProb_avg"."KEY" AS "KEY", CAST(NULL AS FLOAT) AS "Score_0", CAST(NULL AS FLOAT) AS "Score_1", CAST(NULL AS FLOAT) AS "Score_2", CAST(NULL AS FLOAT) AS "Score_3", CAST(NULL AS FLOAT) AS "Score_4", CAST(NULL AS FLOAT) AS "Score_5", CAST(NULL AS FLOAT) AS "Score_6", CAST(NULL AS FLOAT) AS "Score_7", CAST(NULL AS FLOAT) AS "Score_8", CAST(NULL AS FLOAT) AS "Score_9", "CalProb_avg"."Proba_0" AS "Proba_0", "CalProb_avg"."Proba_1" AS "Proba_1", "CalProb_avg"."Proba_2" AS "Proba_2", "CalProb_avg"."Proba_3" AS "Proba_3", "CalProb_avg"."Proba_4" AS "Proba_4", "CalProb_avg"."Proba_5" AS "Proba_5", "CalProb_avg"."Proba_6" AS "Proba_6", "CalProb_avg"."Proba_7" AS "Proba_7", "CalProb_avg"."Proba_8" AS "Proba_8", "CalProb_avg"."Proba_9" AS "Proba_9", CAST(NULL AS FLOAT) AS "LogProba_0", CAST(NULL AS FLOAT) AS "LogProba_1", CAST(NULL AS FLOAT) AS "LogProba_2", CAST(NULL AS FLOAT) AS "LogProba_3", CAST(NULL AS FLOAT) AS "LogProba_4", CAST(NULL AS FLOAT) AS "LogProba_5", CAST(NULL AS FLOAT) AS "LogProba_6", CAST(NULL AS FLOAT) AS "LogProba_7", CAST(NULL AS FLOAT) AS "LogProba_8", CAST(NULL AS FLOAT) AS "LogProba_9", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS FLOAT) AS "DecisionProba" 
-FROM "TMP_20180508183712_CODEGEN_TUF6X0_CalProb_avg" AS "CalProb_avg"), 
+FROM "TMP_20180516115739_CODEGEN_WHKN2C_CalProb_avg" AS "CalProb_avg"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180508181512_codegen_5bs3tz_ads_imp_1_out part 1. Create 
+-- Code For temporary table tmp_20180516112706_codegen_7x3s7j_ads_imp_1_out part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508181512_codegen_5bs3tz_ads_imp_1_out  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516112706_codegen_7x3s7j_ads_imp_1_out  (
 	"KEY" BIGINT, 
 	impter_2 DOUBLE PRECISION, 
 	impter_3 DOUBLE PRECISION, 
@@ -29,17 +29,17 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508181512_codegen_5bs3tz_ads_imp_1_out  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508181512_codegen_5bs3tz_ads_imp_1_out part 2. Populate
+-- Code For temporary table tmp_20180516112706_codegen_7x3s7j_ads_imp_1_out part 2. Populate
 
-INSERT INTO tmp_20180508181512_codegen_5bs3tz_ads_imp_1_out ("KEY", impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT "U"."KEY", "U".impter_2, "U".impter_3, "U".impter_4, "U".impter_5, "U".impter_6, "U".impter_7, "U".impter_8, "U".impter_9, "U".impter_10, "U".impter_11 
+INSERT INTO tmp_20180516112706_codegen_7x3s7j_ads_imp_1_out ("KEY", impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT "U"."KEY", "U".impter_2, "U".impter_3, "U".impter_4, "U".impter_5, "U".impter_6, "U".impter_7, "U".impter_8, "U".impter_9, "U".impter_10, "U".impter_11 
 FROM (SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".impter_2, "ADS_imp_1_OUT".impter_3, "ADS_imp_1_OUT".impter_4, "ADS_imp_1_OUT".impter_5, "ADS_imp_1_OUT".impter_6, "ADS_imp_1_OUT".impter_7, "ADS_imp_1_OUT".impter_8, "ADS_imp_1_OUT".impter_9, "ADS_imp_1_OUT".impter_10, "ADS_imp_1_OUT".impter_11 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN -0.003903374463034205 ELSE "ADS"."Feature_0" END AS impter_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 0.6152232215702322 ELSE "ADS"."Feature_1" END AS impter_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 0.042796236914291665 ELSE "ADS"."Feature_2" END AS impter_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 0.7709819558904074 ELSE "ADS"."Feature_3" END AS impter_5, CASE WHEN ("ADS"."Feature_4" IS NULL) THEN -0.43300733624893334 ELSE "ADS"."Feature_4" END AS impter_6, CASE WHEN ("ADS"."Feature_5" IS NULL) THEN -0.0424956965794036 ELSE "ADS"."Feature_5" END AS impter_7, CASE WHEN ("ADS"."Feature_6" IS NULL) THEN -0.29809080119845455 ELSE "ADS"."Feature_6" END AS impter_8, CASE WHEN ("ADS"."Feature_7" IS NULL) THEN 0.14672241507251663 ELSE "ADS"."Feature_7" END AS impter_9, CASE WHEN ("ADS"."Feature_8" IS NULL) THEN 0.01746942384662034 ELSE "ADS"."Feature_8" END AS impter_10, CASE WHEN ("ADS"."Feature_9" IS NULL) THEN 0.11507331415602866 ELSE "ADS"."Feature_9" END AS impter_11 
 FROM "FourClass_10" AS "ADS") AS "ADS_imp_1_OUT") AS "U"
 
--- Code For temporary table tmp_20180508181512_codegen_zdkp2j_ads_sca_2_out part 1. Create 
+-- Code For temporary table tmp_20180516112706_codegen_9wamcc_ads_sca_2_out part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508181512_codegen_zdkp2j_ads_sca_2_out  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516112706_codegen_9wamcc_ads_sca_2_out  (
 	"KEY" BIGINT, 
 	scaler_2 DOUBLE PRECISION, 
 	scaler_3 DOUBLE PRECISION, 
@@ -55,17 +55,17 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508181512_codegen_zdkp2j_ads_sca_2_out  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508181512_codegen_zdkp2j_ads_sca_2_out part 2. Populate
+-- Code For temporary table tmp_20180516112706_codegen_9wamcc_ads_sca_2_out part 2. Populate
 
-INSERT INTO tmp_20180508181512_codegen_zdkp2j_ads_sca_2_out ("KEY", scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT "U"."KEY", "U".scaler_2, "U".scaler_3, "U".scaler_4, "U".scaler_5, "U".scaler_6, "U".scaler_7, "U".scaler_8, "U".scaler_9, "U".scaler_10, "U".scaler_11 
+INSERT INTO tmp_20180516112706_codegen_9wamcc_ads_sca_2_out ("KEY", scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT "U"."KEY", "U".scaler_2, "U".scaler_3, "U".scaler_4, "U".scaler_5, "U".scaler_6, "U".scaler_7, "U".scaler_8, "U".scaler_9, "U".scaler_10, "U".scaler_11 
 FROM (SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_2, "ADS_sca_2_OUT".scaler_3, "ADS_sca_2_OUT".scaler_4, "ADS_sca_2_OUT".scaler_5, "ADS_sca_2_OUT".scaler_6, "ADS_sca_2_OUT".scaler_7, "ADS_sca_2_OUT".scaler_8, "ADS_sca_2_OUT".scaler_9, "ADS_sca_2_OUT".scaler_10, "ADS_sca_2_OUT".scaler_11 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".impter_2 AS DOUBLE PRECISION) - CAST(-0.003903374463034 AS DOUBLE PRECISION)) / CAST(0.9795060640184 AS DOUBLE PRECISION) AS scaler_2, (CAST("ADS_imp_1_OUT".impter_3 AS DOUBLE PRECISION) - CAST(0.615223221570232 AS DOUBLE PRECISION)) / CAST(1.390080723620524 AS DOUBLE PRECISION) AS scaler_3, (CAST("ADS_imp_1_OUT".impter_4 AS DOUBLE PRECISION) - CAST(0.042796236914292 AS DOUBLE PRECISION)) / CAST(1.496268513587076 AS DOUBLE PRECISION) AS scaler_4, (CAST("ADS_imp_1_OUT".impter_5 AS DOUBLE PRECISION) - CAST(0.770981955890407 AS DOUBLE PRECISION)) / CAST(2.333356106011174 AS DOUBLE PRECISION) AS scaler_5, (CAST("ADS_imp_1_OUT".impter_6 AS DOUBLE PRECISION) - CAST(-0.433007336248933 AS DOUBLE PRECISION)) / CAST(1.402975777264875 AS DOUBLE PRECISION) AS scaler_6, (CAST("ADS_imp_1_OUT".impter_7 AS DOUBLE PRECISION) - CAST(-0.042495696579404 AS DOUBLE PRECISION)) / CAST(0.955809107687323 AS DOUBLE PRECISION) AS scaler_7, (CAST("ADS_imp_1_OUT".impter_8 AS DOUBLE PRECISION) - CAST(-0.298090801198455 AS DOUBLE PRECISION)) / CAST(1.017013180721433 AS DOUBLE PRECISION) AS scaler_8, (CAST("ADS_imp_1_OUT".impter_9 AS DOUBLE PRECISION) - CAST(0.146722415072517 AS DOUBLE PRECISION)) / CAST(1.600798539929603 AS DOUBLE PRECISION) AS scaler_9, (CAST("ADS_imp_1_OUT".impter_10 AS DOUBLE PRECISION) - CAST(0.01746942384662 AS DOUBLE PRECISION)) / CAST(1.148729636167142 AS DOUBLE PRECISION) AS scaler_10, (CAST("ADS_imp_1_OUT".impter_11 AS DOUBLE PRECISION) - CAST(0.115073314156029 AS DOUBLE PRECISION)) / CAST(0.969091185733622 AS DOUBLE PRECISION) AS scaler_11 
-FROM tmp_20180508181512_codegen_5bs3tz_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
+FROM tmp_20180516112706_codegen_7x3s7j_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
 
--- Code For temporary table tmp_20180508181513_codegen_gazuh0_kernagg_b0 part 1. Create 
+-- Code For temporary table tmp_20180516112706_codegen_dtbz01_kernagg_b0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508181513_codegen_gazuh0_kernagg_b0  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516112706_codegen_dtbz01_kernagg_b0  (
 	"KEY" BIGINT, 
 	"OVO_Class1" BIGINT, 
 	"OVO_Class2" BIGINT, 
@@ -75,12 +75,12 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508181513_codegen_gazuh0_kernagg_b0  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508181513_codegen_gazuh0_kernagg_b0 part 2. Populate
+-- Code For temporary table tmp_20180516112706_codegen_dtbz01_kernagg_b0 part 2. Populate
 
-INSERT INTO tmp_20180508181513_codegen_gazuh0_kernagg_b0 ("KEY", "OVO_Class1", "OVO_Class2", "OVO_Decision", "OVO_Confidence") SELECT "U"."KEY", "U"."OVO_Class1", "U"."OVO_Class2", "U"."OVO_Decision", "U"."OVO_Confidence" 
+INSERT INTO tmp_20180516112706_codegen_dtbz01_kernagg_b0 ("KEY", "OVO_Class1", "OVO_Class2", "OVO_Decision", "OVO_Confidence") SELECT "U"."KEY", "U"."OVO_Class1", "U"."OVO_Class2", "U"."OVO_Decision", "U"."OVO_Confidence" 
 FROM (WITH kernel_input AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CAST("ADS_sca_2_OUT".scaler_2 AS DOUBLE PRECISION) AS scaler_2, CAST("ADS_sca_2_OUT".scaler_3 AS DOUBLE PRECISION) AS scaler_3, CAST("ADS_sca_2_OUT".scaler_4 AS DOUBLE PRECISION) AS scaler_4, CAST("ADS_sca_2_OUT".scaler_5 AS DOUBLE PRECISION) AS scaler_5, CAST("ADS_sca_2_OUT".scaler_6 AS DOUBLE PRECISION) AS scaler_6, CAST("ADS_sca_2_OUT".scaler_7 AS DOUBLE PRECISION) AS scaler_7, CAST("ADS_sca_2_OUT".scaler_8 AS DOUBLE PRECISION) AS scaler_8, CAST("ADS_sca_2_OUT".scaler_9 AS DOUBLE PRECISION) AS scaler_9, CAST("ADS_sca_2_OUT".scaler_10 AS DOUBLE PRECISION) AS scaler_10, CAST("ADS_sca_2_OUT".scaler_11 AS DOUBLE PRECISION) AS scaler_11 
-FROM tmp_20180508181512_codegen_zdkp2j_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516112706_codegen_9wamcc_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 dummy_cte AS 
 (SELECT CAST(0.0 AS DOUBLE PRECISION) AS "X"), 
 "SV_data_0_1" AS 
@@ -128,8 +128,34 @@ FROM (SELECT full_join_data_sv."KEY" AS "KEY", sum(CAST(full_join_data_sv.dot_pr
 FROM (SELECT kernel_input."KEY" AS "KEY", "SV_data_0_1".dual_coeff * power(CAST(0.1 AS DOUBLE PRECISION) * (kernel_input.scaler_2 * "SV_data_0_1".sv_0 + kernel_input.scaler_3 * "SV_data_0_1".sv_1 + kernel_input.scaler_4 * "SV_data_0_1".sv_2 + kernel_input.scaler_5 * "SV_data_0_1".sv_3 + kernel_input.scaler_6 * "SV_data_0_1".sv_4 + kernel_input.scaler_7 * "SV_data_0_1".sv_5 + kernel_input.scaler_8 * "SV_data_0_1".sv_6 + kernel_input.scaler_9 * "SV_data_0_1".sv_7 + kernel_input.scaler_10 * "SV_data_0_1".sv_8 + kernel_input.scaler_11 * "SV_data_0_1".sv_9) + CAST(0.0 AS DOUBLE PRECISION), 3) AS dot_prod1 
 FROM kernel_input, "SV_data_0_1") AS full_join_data_sv GROUP BY full_join_data_sv."KEY") AS t), 
 kernel_cte_0_1 AS 
-(SELECT kernel_dp_0_1."KEY" AS "KEY", 0 AS "OVO_Class1", 1 AS "OVO_Class2", CASE WHEN (-kernel_dp_0_1.dot_product >= CAST(0.0 AS DOUBLE PRECISION)) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-kernel_dp_0_1.dot_product, CAST(1.0 AS DOUBLE PRECISION) / (CAST(1.0 AS DOUBLE PRECISION) + exp(least(greatest(-CAST(100.0 AS DOUBLE PRECISION), -(-((-kernel_dp_0_1.dot_product) * CAST(-2.311229805452594 AS DOUBLE PRECISION) + CAST(0.309282029807799 AS DOUBLE PRECISION)))), CAST(100.0 AS DOUBLE PRECISION))))) AS "OVO_Confidence" 
-FROM kernel_dp_0_1), 
+(SELECT kernel_dp_0_1."KEY" AS "KEY", 0 AS "OVO_Class1", 1 AS "OVO_Class2", CASE WHEN (-kernel_dp_0_1.dot_product >= CAST(0.0 AS DOUBLE PRECISION)) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-kernel_dp_0_1.dot_product, CAST(1.0 AS DOUBLE PRECISION) / (CAST(1.0 AS DOUBLE PRECISION) + exp(least(greatest(-CAST(100.0 AS DOUBLE PRECISION), -(-((-kernel_dp_0_1.dot_product) * CAST(-2.635688457713188 AS DOUBLE PRECISION) + CAST(0.173332058749477 AS DOUBLE PRECISION)))), CAST(100.0 AS DOUBLE PRECISION))))) AS "OVO_Confidence" 
+FROM kernel_dp_0_1)
+ SELECT "KernAgg_B0"."KEY", "KernAgg_B0"."OVO_Class1", "KernAgg_B0"."OVO_Class2", "KernAgg_B0"."OVO_Decision", "KernAgg_B0"."OVO_Confidence" 
+FROM (SELECT "KernAgg_esu_0"."KEY" AS "KEY", "KernAgg_esu_0"."OVO_Class1" AS "OVO_Class1", "KernAgg_esu_0"."OVO_Class2" AS "OVO_Class2", "KernAgg_esu_0"."OVO_Decision" AS "OVO_Decision", "KernAgg_esu_0"."OVO_Confidence" AS "OVO_Confidence" 
+FROM (SELECT kernel_cte_0_1."KEY" AS "KEY", kernel_cte_0_1."OVO_Class1" AS "OVO_Class1", kernel_cte_0_1."OVO_Class2" AS "OVO_Class2", kernel_cte_0_1."OVO_Decision" AS "OVO_Decision", kernel_cte_0_1."OVO_Confidence" AS "OVO_Confidence" 
+FROM kernel_cte_0_1) AS "KernAgg_esu_0") AS "KernAgg_B0") AS "U"
+
+-- Code For temporary table tmp_20180516112706_codegen_4mddwq_kernagg_b1 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516112706_codegen_4mddwq_kernagg_b1  (
+	"KEY" BIGINT, 
+	"OVO_Class1" BIGINT, 
+	"OVO_Class2" BIGINT, 
+	"OVO_Decision" BIGINT, 
+	"OVO_Confidence" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table tmp_20180516112706_codegen_4mddwq_kernagg_b1 part 2. Populate
+
+INSERT INTO tmp_20180516112706_codegen_4mddwq_kernagg_b1 ("KEY", "OVO_Class1", "OVO_Class2", "OVO_Decision", "OVO_Confidence") SELECT "U"."KEY", "U"."OVO_Class1", "U"."OVO_Class2", "U"."OVO_Decision", "U"."OVO_Confidence" 
+FROM (WITH kernel_input AS 
+(SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CAST("ADS_sca_2_OUT".scaler_2 AS DOUBLE PRECISION) AS scaler_2, CAST("ADS_sca_2_OUT".scaler_3 AS DOUBLE PRECISION) AS scaler_3, CAST("ADS_sca_2_OUT".scaler_4 AS DOUBLE PRECISION) AS scaler_4, CAST("ADS_sca_2_OUT".scaler_5 AS DOUBLE PRECISION) AS scaler_5, CAST("ADS_sca_2_OUT".scaler_6 AS DOUBLE PRECISION) AS scaler_6, CAST("ADS_sca_2_OUT".scaler_7 AS DOUBLE PRECISION) AS scaler_7, CAST("ADS_sca_2_OUT".scaler_8 AS DOUBLE PRECISION) AS scaler_8, CAST("ADS_sca_2_OUT".scaler_9 AS DOUBLE PRECISION) AS scaler_9, CAST("ADS_sca_2_OUT".scaler_10 AS DOUBLE PRECISION) AS scaler_10, CAST("ADS_sca_2_OUT".scaler_11 AS DOUBLE PRECISION) AS scaler_11 
+FROM tmp_20180516112706_codegen_9wamcc_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+dummy_cte AS 
+(SELECT CAST(0.0 AS DOUBLE PRECISION) AS "X"), 
 "SV_data_0_2" AS 
 (SELECT "Values".sv_idx AS sv_idx, CAST("Values".dual_coeff AS DOUBLE PRECISION) AS dual_coeff, CAST("Values".sv_0 AS DOUBLE PRECISION) AS sv_0, CAST("Values".sv_1 AS DOUBLE PRECISION) AS sv_1, CAST("Values".sv_2 AS DOUBLE PRECISION) AS sv_2, CAST("Values".sv_3 AS DOUBLE PRECISION) AS sv_3, CAST("Values".sv_4 AS DOUBLE PRECISION) AS sv_4, CAST("Values".sv_5 AS DOUBLE PRECISION) AS sv_5, CAST("Values".sv_6 AS DOUBLE PRECISION) AS sv_6, CAST("Values".sv_7 AS DOUBLE PRECISION) AS sv_7, CAST("Values".sv_8 AS DOUBLE PRECISION) AS sv_8, CAST("Values".sv_9 AS DOUBLE PRECISION) AS sv_9 
 FROM (SELECT 0 AS sv_idx, CAST(0.0 AS DOUBLE PRECISION) AS dual_coeff, CAST(0.97140938881123 AS DOUBLE PRECISION) AS sv_0, CAST(-1.13628627095916 AS DOUBLE PRECISION) AS sv_1, CAST(1.41216468108391 AS DOUBLE PRECISION) AS sv_2, CAST(0.167486945822557 AS DOUBLE PRECISION) AS sv_3, CAST(1.919129112546945 AS DOUBLE PRECISION) AS sv_4, CAST(-1.381684332421676 AS DOUBLE PRECISION) AS sv_5, CAST(-0.264450213574542 AS DOUBLE PRECISION) AS sv_6, CAST(0.573489343601952 AS DOUBLE PRECISION) AS sv_7, CAST(-0.800182457064854 AS DOUBLE PRECISION) AS sv_8, CAST(0.531258898628207 AS DOUBLE PRECISION) AS sv_9 
@@ -177,8 +203,34 @@ FROM (SELECT full_join_data_sv_1."KEY" AS "KEY", sum(CAST(full_join_data_sv_1.do
 FROM (SELECT kernel_input."KEY" AS "KEY", "SV_data_0_2".dual_coeff * power(CAST(0.1 AS DOUBLE PRECISION) * (kernel_input.scaler_2 * "SV_data_0_2".sv_0 + kernel_input.scaler_3 * "SV_data_0_2".sv_1 + kernel_input.scaler_4 * "SV_data_0_2".sv_2 + kernel_input.scaler_5 * "SV_data_0_2".sv_3 + kernel_input.scaler_6 * "SV_data_0_2".sv_4 + kernel_input.scaler_7 * "SV_data_0_2".sv_5 + kernel_input.scaler_8 * "SV_data_0_2".sv_6 + kernel_input.scaler_9 * "SV_data_0_2".sv_7 + kernel_input.scaler_10 * "SV_data_0_2".sv_8 + kernel_input.scaler_11 * "SV_data_0_2".sv_9) + CAST(0.0 AS DOUBLE PRECISION), 3) AS dot_prod1 
 FROM kernel_input, "SV_data_0_2") AS full_join_data_sv_1 GROUP BY full_join_data_sv_1."KEY") AS t_1), 
 kernel_cte_0_2 AS 
-(SELECT kernel_dp_0_2."KEY" AS "KEY", 0 AS "OVO_Class1", 2 AS "OVO_Class2", CASE WHEN (-kernel_dp_0_2.dot_product >= CAST(0.0 AS DOUBLE PRECISION)) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-kernel_dp_0_2.dot_product, CAST(1.0 AS DOUBLE PRECISION) / (CAST(1.0 AS DOUBLE PRECISION) + exp(least(greatest(-CAST(100.0 AS DOUBLE PRECISION), -(-((-kernel_dp_0_2.dot_product) * CAST(-0.824505428794478 AS DOUBLE PRECISION) + CAST(0.278956892932967 AS DOUBLE PRECISION)))), CAST(100.0 AS DOUBLE PRECISION))))) AS "OVO_Confidence" 
-FROM kernel_dp_0_2), 
+(SELECT kernel_dp_0_2."KEY" AS "KEY", 0 AS "OVO_Class1", 2 AS "OVO_Class2", CASE WHEN (-kernel_dp_0_2.dot_product >= CAST(0.0 AS DOUBLE PRECISION)) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-kernel_dp_0_2.dot_product, CAST(1.0 AS DOUBLE PRECISION) / (CAST(1.0 AS DOUBLE PRECISION) + exp(least(greatest(-CAST(100.0 AS DOUBLE PRECISION), -(-((-kernel_dp_0_2.dot_product) * CAST(-0.723150866054926 AS DOUBLE PRECISION) + CAST(0.17522320476907 AS DOUBLE PRECISION)))), CAST(100.0 AS DOUBLE PRECISION))))) AS "OVO_Confidence" 
+FROM kernel_dp_0_2)
+ SELECT "KernAgg_B1"."KEY", "KernAgg_B1"."OVO_Class1", "KernAgg_B1"."OVO_Class2", "KernAgg_B1"."OVO_Decision", "KernAgg_B1"."OVO_Confidence" 
+FROM (SELECT "KernAgg_esu_1"."KEY" AS "KEY", "KernAgg_esu_1"."OVO_Class1" AS "OVO_Class1", "KernAgg_esu_1"."OVO_Class2" AS "OVO_Class2", "KernAgg_esu_1"."OVO_Decision" AS "OVO_Decision", "KernAgg_esu_1"."OVO_Confidence" AS "OVO_Confidence" 
+FROM (SELECT kernel_cte_0_2."KEY" AS "KEY", kernel_cte_0_2."OVO_Class1" AS "OVO_Class1", kernel_cte_0_2."OVO_Class2" AS "OVO_Class2", kernel_cte_0_2."OVO_Decision" AS "OVO_Decision", kernel_cte_0_2."OVO_Confidence" AS "OVO_Confidence" 
+FROM kernel_cte_0_2) AS "KernAgg_esu_1") AS "KernAgg_B1") AS "U"
+
+-- Code For temporary table tmp_20180516112706_codegen_lferze_kernagg_b2 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516112706_codegen_lferze_kernagg_b2  (
+	"KEY" BIGINT, 
+	"OVO_Class1" BIGINT, 
+	"OVO_Class2" BIGINT, 
+	"OVO_Decision" BIGINT, 
+	"OVO_Confidence" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table tmp_20180516112706_codegen_lferze_kernagg_b2 part 2. Populate
+
+INSERT INTO tmp_20180516112706_codegen_lferze_kernagg_b2 ("KEY", "OVO_Class1", "OVO_Class2", "OVO_Decision", "OVO_Confidence") SELECT "U"."KEY", "U"."OVO_Class1", "U"."OVO_Class2", "U"."OVO_Decision", "U"."OVO_Confidence" 
+FROM (WITH kernel_input AS 
+(SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CAST("ADS_sca_2_OUT".scaler_2 AS DOUBLE PRECISION) AS scaler_2, CAST("ADS_sca_2_OUT".scaler_3 AS DOUBLE PRECISION) AS scaler_3, CAST("ADS_sca_2_OUT".scaler_4 AS DOUBLE PRECISION) AS scaler_4, CAST("ADS_sca_2_OUT".scaler_5 AS DOUBLE PRECISION) AS scaler_5, CAST("ADS_sca_2_OUT".scaler_6 AS DOUBLE PRECISION) AS scaler_6, CAST("ADS_sca_2_OUT".scaler_7 AS DOUBLE PRECISION) AS scaler_7, CAST("ADS_sca_2_OUT".scaler_8 AS DOUBLE PRECISION) AS scaler_8, CAST("ADS_sca_2_OUT".scaler_9 AS DOUBLE PRECISION) AS scaler_9, CAST("ADS_sca_2_OUT".scaler_10 AS DOUBLE PRECISION) AS scaler_10, CAST("ADS_sca_2_OUT".scaler_11 AS DOUBLE PRECISION) AS scaler_11 
+FROM tmp_20180516112706_codegen_9wamcc_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+dummy_cte AS 
+(SELECT CAST(0.0 AS DOUBLE PRECISION) AS "X"), 
 "SV_data_0_3" AS 
 (SELECT "Values".sv_idx AS sv_idx, CAST("Values".dual_coeff AS DOUBLE PRECISION) AS dual_coeff, CAST("Values".sv_0 AS DOUBLE PRECISION) AS sv_0, CAST("Values".sv_1 AS DOUBLE PRECISION) AS sv_1, CAST("Values".sv_2 AS DOUBLE PRECISION) AS sv_2, CAST("Values".sv_3 AS DOUBLE PRECISION) AS sv_3, CAST("Values".sv_4 AS DOUBLE PRECISION) AS sv_4, CAST("Values".sv_5 AS DOUBLE PRECISION) AS sv_5, CAST("Values".sv_6 AS DOUBLE PRECISION) AS sv_6, CAST("Values".sv_7 AS DOUBLE PRECISION) AS sv_7, CAST("Values".sv_8 AS DOUBLE PRECISION) AS sv_8, CAST("Values".sv_9 AS DOUBLE PRECISION) AS sv_9 
 FROM (SELECT 0 AS sv_idx, CAST(0.387252615086049 AS DOUBLE PRECISION) AS dual_coeff, CAST(0.97140938881123 AS DOUBLE PRECISION) AS sv_0, CAST(-1.13628627095916 AS DOUBLE PRECISION) AS sv_1, CAST(1.41216468108391 AS DOUBLE PRECISION) AS sv_2, CAST(0.167486945822557 AS DOUBLE PRECISION) AS sv_3, CAST(1.919129112546945 AS DOUBLE PRECISION) AS sv_4, CAST(-1.381684332421676 AS DOUBLE PRECISION) AS sv_5, CAST(-0.264450213574542 AS DOUBLE PRECISION) AS sv_6, CAST(0.573489343601952 AS DOUBLE PRECISION) AS sv_7, CAST(-0.800182457064854 AS DOUBLE PRECISION) AS sv_8, CAST(0.531258898628207 AS DOUBLE PRECISION) AS sv_9 
@@ -226,8 +278,34 @@ FROM (SELECT full_join_data_sv_2."KEY" AS "KEY", sum(CAST(full_join_data_sv_2.do
 FROM (SELECT kernel_input."KEY" AS "KEY", "SV_data_0_3".dual_coeff * power(CAST(0.1 AS DOUBLE PRECISION) * (kernel_input.scaler_2 * "SV_data_0_3".sv_0 + kernel_input.scaler_3 * "SV_data_0_3".sv_1 + kernel_input.scaler_4 * "SV_data_0_3".sv_2 + kernel_input.scaler_5 * "SV_data_0_3".sv_3 + kernel_input.scaler_6 * "SV_data_0_3".sv_4 + kernel_input.scaler_7 * "SV_data_0_3".sv_5 + kernel_input.scaler_8 * "SV_data_0_3".sv_6 + kernel_input.scaler_9 * "SV_data_0_3".sv_7 + kernel_input.scaler_10 * "SV_data_0_3".sv_8 + kernel_input.scaler_11 * "SV_data_0_3".sv_9) + CAST(0.0 AS DOUBLE PRECISION), 3) AS dot_prod1 
 FROM kernel_input, "SV_data_0_3") AS full_join_data_sv_2 GROUP BY full_join_data_sv_2."KEY") AS t_2), 
 kernel_cte_0_3 AS 
-(SELECT kernel_dp_0_3."KEY" AS "KEY", 0 AS "OVO_Class1", 3 AS "OVO_Class2", CASE WHEN (-kernel_dp_0_3.dot_product >= CAST(0.0 AS DOUBLE PRECISION)) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-kernel_dp_0_3.dot_product, CAST(1.0 AS DOUBLE PRECISION) / (CAST(1.0 AS DOUBLE PRECISION) + exp(least(greatest(-CAST(100.0 AS DOUBLE PRECISION), -(-((-kernel_dp_0_3.dot_product) * CAST(-3.179262506894787 AS DOUBLE PRECISION) + CAST(-0.765407461314214 AS DOUBLE PRECISION)))), CAST(100.0 AS DOUBLE PRECISION))))) AS "OVO_Confidence" 
-FROM kernel_dp_0_3), 
+(SELECT kernel_dp_0_3."KEY" AS "KEY", 0 AS "OVO_Class1", 3 AS "OVO_Class2", CASE WHEN (-kernel_dp_0_3.dot_product >= CAST(0.0 AS DOUBLE PRECISION)) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-kernel_dp_0_3.dot_product, CAST(1.0 AS DOUBLE PRECISION) / (CAST(1.0 AS DOUBLE PRECISION) + exp(least(greatest(-CAST(100.0 AS DOUBLE PRECISION), -(-((-kernel_dp_0_3.dot_product) * CAST(-3.905998216699804 AS DOUBLE PRECISION) + CAST(-0.805195825150008 AS DOUBLE PRECISION)))), CAST(100.0 AS DOUBLE PRECISION))))) AS "OVO_Confidence" 
+FROM kernel_dp_0_3)
+ SELECT "KernAgg_B2"."KEY", "KernAgg_B2"."OVO_Class1", "KernAgg_B2"."OVO_Class2", "KernAgg_B2"."OVO_Decision", "KernAgg_B2"."OVO_Confidence" 
+FROM (SELECT "KernAgg_esu_2"."KEY" AS "KEY", "KernAgg_esu_2"."OVO_Class1" AS "OVO_Class1", "KernAgg_esu_2"."OVO_Class2" AS "OVO_Class2", "KernAgg_esu_2"."OVO_Decision" AS "OVO_Decision", "KernAgg_esu_2"."OVO_Confidence" AS "OVO_Confidence" 
+FROM (SELECT kernel_cte_0_3."KEY" AS "KEY", kernel_cte_0_3."OVO_Class1" AS "OVO_Class1", kernel_cte_0_3."OVO_Class2" AS "OVO_Class2", kernel_cte_0_3."OVO_Decision" AS "OVO_Decision", kernel_cte_0_3."OVO_Confidence" AS "OVO_Confidence" 
+FROM kernel_cte_0_3) AS "KernAgg_esu_2") AS "KernAgg_B2") AS "U"
+
+-- Code For temporary table tmp_20180516112706_codegen_smhxhj_kernagg_b3 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516112706_codegen_smhxhj_kernagg_b3  (
+	"KEY" BIGINT, 
+	"OVO_Class1" BIGINT, 
+	"OVO_Class2" BIGINT, 
+	"OVO_Decision" BIGINT, 
+	"OVO_Confidence" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table tmp_20180516112706_codegen_smhxhj_kernagg_b3 part 2. Populate
+
+INSERT INTO tmp_20180516112706_codegen_smhxhj_kernagg_b3 ("KEY", "OVO_Class1", "OVO_Class2", "OVO_Decision", "OVO_Confidence") SELECT "U"."KEY", "U"."OVO_Class1", "U"."OVO_Class2", "U"."OVO_Decision", "U"."OVO_Confidence" 
+FROM (WITH kernel_input AS 
+(SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CAST("ADS_sca_2_OUT".scaler_2 AS DOUBLE PRECISION) AS scaler_2, CAST("ADS_sca_2_OUT".scaler_3 AS DOUBLE PRECISION) AS scaler_3, CAST("ADS_sca_2_OUT".scaler_4 AS DOUBLE PRECISION) AS scaler_4, CAST("ADS_sca_2_OUT".scaler_5 AS DOUBLE PRECISION) AS scaler_5, CAST("ADS_sca_2_OUT".scaler_6 AS DOUBLE PRECISION) AS scaler_6, CAST("ADS_sca_2_OUT".scaler_7 AS DOUBLE PRECISION) AS scaler_7, CAST("ADS_sca_2_OUT".scaler_8 AS DOUBLE PRECISION) AS scaler_8, CAST("ADS_sca_2_OUT".scaler_9 AS DOUBLE PRECISION) AS scaler_9, CAST("ADS_sca_2_OUT".scaler_10 AS DOUBLE PRECISION) AS scaler_10, CAST("ADS_sca_2_OUT".scaler_11 AS DOUBLE PRECISION) AS scaler_11 
+FROM tmp_20180516112706_codegen_9wamcc_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+dummy_cte AS 
+(SELECT CAST(0.0 AS DOUBLE PRECISION) AS "X"), 
 "SV_data_1_2" AS 
 (SELECT "Values".sv_idx AS sv_idx, CAST("Values".dual_coeff AS DOUBLE PRECISION) AS dual_coeff, CAST("Values".sv_0 AS DOUBLE PRECISION) AS sv_0, CAST("Values".sv_1 AS DOUBLE PRECISION) AS sv_1, CAST("Values".sv_2 AS DOUBLE PRECISION) AS sv_2, CAST("Values".sv_3 AS DOUBLE PRECISION) AS sv_3, CAST("Values".sv_4 AS DOUBLE PRECISION) AS sv_4, CAST("Values".sv_5 AS DOUBLE PRECISION) AS sv_5, CAST("Values".sv_6 AS DOUBLE PRECISION) AS sv_6, CAST("Values".sv_7 AS DOUBLE PRECISION) AS sv_7, CAST("Values".sv_8 AS DOUBLE PRECISION) AS sv_8, CAST("Values".sv_9 AS DOUBLE PRECISION) AS sv_9 
 FROM (SELECT 18 AS sv_idx, CAST(1.0 AS DOUBLE PRECISION) AS dual_coeff, CAST(-0.537437998111959 AS DOUBLE PRECISION) AS sv_0, CAST(-0.729630992818877 AS DOUBLE PRECISION) AS sv_1, CAST(1.477984593541852 AS DOUBLE PRECISION) AS sv_2, CAST(0.506301942296614 AS DOUBLE PRECISION) AS sv_3, CAST(0.696590067293525 AS DOUBLE PRECISION) AS sv_4, CAST(-0.33782239229926 AS DOUBLE PRECISION) AS sv_5, CAST(-0.618795190312201 AS DOUBLE PRECISION) AS sv_6, CAST(0.285397306909334 AS DOUBLE PRECISION) AS sv_7, CAST(-0.774969877171272 AS DOUBLE PRECISION) AS sv_8, CAST(-0.138444821145626 AS DOUBLE PRECISION) AS sv_9 
@@ -275,8 +353,34 @@ FROM (SELECT full_join_data_sv_3."KEY" AS "KEY", sum(CAST(full_join_data_sv_3.do
 FROM (SELECT kernel_input."KEY" AS "KEY", "SV_data_1_2".dual_coeff * power(CAST(0.1 AS DOUBLE PRECISION) * (kernel_input.scaler_2 * "SV_data_1_2".sv_0 + kernel_input.scaler_3 * "SV_data_1_2".sv_1 + kernel_input.scaler_4 * "SV_data_1_2".sv_2 + kernel_input.scaler_5 * "SV_data_1_2".sv_3 + kernel_input.scaler_6 * "SV_data_1_2".sv_4 + kernel_input.scaler_7 * "SV_data_1_2".sv_5 + kernel_input.scaler_8 * "SV_data_1_2".sv_6 + kernel_input.scaler_9 * "SV_data_1_2".sv_7 + kernel_input.scaler_10 * "SV_data_1_2".sv_8 + kernel_input.scaler_11 * "SV_data_1_2".sv_9) + CAST(0.0 AS DOUBLE PRECISION), 3) AS dot_prod1 
 FROM kernel_input, "SV_data_1_2") AS full_join_data_sv_3 GROUP BY full_join_data_sv_3."KEY") AS t_3), 
 kernel_cte_1_2 AS 
-(SELECT kernel_dp_1_2."KEY" AS "KEY", 1 AS "OVO_Class1", 2 AS "OVO_Class2", CASE WHEN (-kernel_dp_1_2.dot_product >= CAST(0.0 AS DOUBLE PRECISION)) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-kernel_dp_1_2.dot_product, CAST(1.0 AS DOUBLE PRECISION) / (CAST(1.0 AS DOUBLE PRECISION) + exp(least(greatest(-CAST(100.0 AS DOUBLE PRECISION), -(-((-kernel_dp_1_2.dot_product) * CAST(-1.125721028961696 AS DOUBLE PRECISION) + CAST(0.458340574500596 AS DOUBLE PRECISION)))), CAST(100.0 AS DOUBLE PRECISION))))) AS "OVO_Confidence" 
-FROM kernel_dp_1_2), 
+(SELECT kernel_dp_1_2."KEY" AS "KEY", 1 AS "OVO_Class1", 2 AS "OVO_Class2", CASE WHEN (-kernel_dp_1_2.dot_product >= CAST(0.0 AS DOUBLE PRECISION)) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-kernel_dp_1_2.dot_product, CAST(1.0 AS DOUBLE PRECISION) / (CAST(1.0 AS DOUBLE PRECISION) + exp(least(greatest(-CAST(100.0 AS DOUBLE PRECISION), -(-((-kernel_dp_1_2.dot_product) * CAST(-1.222161373399869 AS DOUBLE PRECISION) + CAST(0.357601467436698 AS DOUBLE PRECISION)))), CAST(100.0 AS DOUBLE PRECISION))))) AS "OVO_Confidence" 
+FROM kernel_dp_1_2)
+ SELECT "KernAgg_B3"."KEY", "KernAgg_B3"."OVO_Class1", "KernAgg_B3"."OVO_Class2", "KernAgg_B3"."OVO_Decision", "KernAgg_B3"."OVO_Confidence" 
+FROM (SELECT "KernAgg_esu_3"."KEY" AS "KEY", "KernAgg_esu_3"."OVO_Class1" AS "OVO_Class1", "KernAgg_esu_3"."OVO_Class2" AS "OVO_Class2", "KernAgg_esu_3"."OVO_Decision" AS "OVO_Decision", "KernAgg_esu_3"."OVO_Confidence" AS "OVO_Confidence" 
+FROM (SELECT kernel_cte_1_2."KEY" AS "KEY", kernel_cte_1_2."OVO_Class1" AS "OVO_Class1", kernel_cte_1_2."OVO_Class2" AS "OVO_Class2", kernel_cte_1_2."OVO_Decision" AS "OVO_Decision", kernel_cte_1_2."OVO_Confidence" AS "OVO_Confidence" 
+FROM kernel_cte_1_2) AS "KernAgg_esu_3") AS "KernAgg_B3") AS "U"
+
+-- Code For temporary table tmp_20180516112706_codegen_eemb95_kernagg_b4 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516112706_codegen_eemb95_kernagg_b4  (
+	"KEY" BIGINT, 
+	"OVO_Class1" BIGINT, 
+	"OVO_Class2" BIGINT, 
+	"OVO_Decision" BIGINT, 
+	"OVO_Confidence" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table tmp_20180516112706_codegen_eemb95_kernagg_b4 part 2. Populate
+
+INSERT INTO tmp_20180516112706_codegen_eemb95_kernagg_b4 ("KEY", "OVO_Class1", "OVO_Class2", "OVO_Decision", "OVO_Confidence") SELECT "U"."KEY", "U"."OVO_Class1", "U"."OVO_Class2", "U"."OVO_Decision", "U"."OVO_Confidence" 
+FROM (WITH kernel_input AS 
+(SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CAST("ADS_sca_2_OUT".scaler_2 AS DOUBLE PRECISION) AS scaler_2, CAST("ADS_sca_2_OUT".scaler_3 AS DOUBLE PRECISION) AS scaler_3, CAST("ADS_sca_2_OUT".scaler_4 AS DOUBLE PRECISION) AS scaler_4, CAST("ADS_sca_2_OUT".scaler_5 AS DOUBLE PRECISION) AS scaler_5, CAST("ADS_sca_2_OUT".scaler_6 AS DOUBLE PRECISION) AS scaler_6, CAST("ADS_sca_2_OUT".scaler_7 AS DOUBLE PRECISION) AS scaler_7, CAST("ADS_sca_2_OUT".scaler_8 AS DOUBLE PRECISION) AS scaler_8, CAST("ADS_sca_2_OUT".scaler_9 AS DOUBLE PRECISION) AS scaler_9, CAST("ADS_sca_2_OUT".scaler_10 AS DOUBLE PRECISION) AS scaler_10, CAST("ADS_sca_2_OUT".scaler_11 AS DOUBLE PRECISION) AS scaler_11 
+FROM tmp_20180516112706_codegen_9wamcc_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+dummy_cte AS 
+(SELECT CAST(0.0 AS DOUBLE PRECISION) AS "X"), 
 "SV_data_1_3" AS 
 (SELECT "Values".sv_idx AS sv_idx, CAST("Values".dual_coeff AS DOUBLE PRECISION) AS dual_coeff, CAST("Values".sv_0 AS DOUBLE PRECISION) AS sv_0, CAST("Values".sv_1 AS DOUBLE PRECISION) AS sv_1, CAST("Values".sv_2 AS DOUBLE PRECISION) AS sv_2, CAST("Values".sv_3 AS DOUBLE PRECISION) AS sv_3, CAST("Values".sv_4 AS DOUBLE PRECISION) AS sv_4, CAST("Values".sv_5 AS DOUBLE PRECISION) AS sv_5, CAST("Values".sv_6 AS DOUBLE PRECISION) AS sv_6, CAST("Values".sv_7 AS DOUBLE PRECISION) AS sv_7, CAST("Values".sv_8 AS DOUBLE PRECISION) AS sv_8, CAST("Values".sv_9 AS DOUBLE PRECISION) AS sv_9 
 FROM (SELECT 18 AS sv_idx, CAST(1.0 AS DOUBLE PRECISION) AS dual_coeff, CAST(-0.537437998111959 AS DOUBLE PRECISION) AS sv_0, CAST(-0.729630992818877 AS DOUBLE PRECISION) AS sv_1, CAST(1.477984593541852 AS DOUBLE PRECISION) AS sv_2, CAST(0.506301942296614 AS DOUBLE PRECISION) AS sv_3, CAST(0.696590067293525 AS DOUBLE PRECISION) AS sv_4, CAST(-0.33782239229926 AS DOUBLE PRECISION) AS sv_5, CAST(-0.618795190312201 AS DOUBLE PRECISION) AS sv_6, CAST(0.285397306909334 AS DOUBLE PRECISION) AS sv_7, CAST(-0.774969877171272 AS DOUBLE PRECISION) AS sv_8, CAST(-0.138444821145626 AS DOUBLE PRECISION) AS sv_9 
@@ -324,8 +428,34 @@ FROM (SELECT full_join_data_sv_4."KEY" AS "KEY", sum(CAST(full_join_data_sv_4.do
 FROM (SELECT kernel_input."KEY" AS "KEY", "SV_data_1_3".dual_coeff * power(CAST(0.1 AS DOUBLE PRECISION) * (kernel_input.scaler_2 * "SV_data_1_3".sv_0 + kernel_input.scaler_3 * "SV_data_1_3".sv_1 + kernel_input.scaler_4 * "SV_data_1_3".sv_2 + kernel_input.scaler_5 * "SV_data_1_3".sv_3 + kernel_input.scaler_6 * "SV_data_1_3".sv_4 + kernel_input.scaler_7 * "SV_data_1_3".sv_5 + kernel_input.scaler_8 * "SV_data_1_3".sv_6 + kernel_input.scaler_9 * "SV_data_1_3".sv_7 + kernel_input.scaler_10 * "SV_data_1_3".sv_8 + kernel_input.scaler_11 * "SV_data_1_3".sv_9) + CAST(0.0 AS DOUBLE PRECISION), 3) AS dot_prod1 
 FROM kernel_input, "SV_data_1_3") AS full_join_data_sv_4 GROUP BY full_join_data_sv_4."KEY") AS t_4), 
 kernel_cte_1_3 AS 
-(SELECT kernel_dp_1_3."KEY" AS "KEY", 1 AS "OVO_Class1", 3 AS "OVO_Class2", CASE WHEN (-kernel_dp_1_3.dot_product >= CAST(0.0 AS DOUBLE PRECISION)) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-kernel_dp_1_3.dot_product, CAST(1.0 AS DOUBLE PRECISION) / (CAST(1.0 AS DOUBLE PRECISION) + exp(least(greatest(-CAST(100.0 AS DOUBLE PRECISION), -(-((-kernel_dp_1_3.dot_product) * CAST(-1.393572475571686 AS DOUBLE PRECISION) + CAST(-0.340303569618924 AS DOUBLE PRECISION)))), CAST(100.0 AS DOUBLE PRECISION))))) AS "OVO_Confidence" 
-FROM kernel_dp_1_3), 
+(SELECT kernel_dp_1_3."KEY" AS "KEY", 1 AS "OVO_Class1", 3 AS "OVO_Class2", CASE WHEN (-kernel_dp_1_3.dot_product >= CAST(0.0 AS DOUBLE PRECISION)) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-kernel_dp_1_3.dot_product, CAST(1.0 AS DOUBLE PRECISION) / (CAST(1.0 AS DOUBLE PRECISION) + exp(least(greatest(-CAST(100.0 AS DOUBLE PRECISION), -(-((-kernel_dp_1_3.dot_product) * CAST(-1.937302801239306 AS DOUBLE PRECISION) + CAST(-0.552330530399928 AS DOUBLE PRECISION)))), CAST(100.0 AS DOUBLE PRECISION))))) AS "OVO_Confidence" 
+FROM kernel_dp_1_3)
+ SELECT "KernAgg_B4"."KEY", "KernAgg_B4"."OVO_Class1", "KernAgg_B4"."OVO_Class2", "KernAgg_B4"."OVO_Decision", "KernAgg_B4"."OVO_Confidence" 
+FROM (SELECT "KernAgg_esu_4"."KEY" AS "KEY", "KernAgg_esu_4"."OVO_Class1" AS "OVO_Class1", "KernAgg_esu_4"."OVO_Class2" AS "OVO_Class2", "KernAgg_esu_4"."OVO_Decision" AS "OVO_Decision", "KernAgg_esu_4"."OVO_Confidence" AS "OVO_Confidence" 
+FROM (SELECT kernel_cte_1_3."KEY" AS "KEY", kernel_cte_1_3."OVO_Class1" AS "OVO_Class1", kernel_cte_1_3."OVO_Class2" AS "OVO_Class2", kernel_cte_1_3."OVO_Decision" AS "OVO_Decision", kernel_cte_1_3."OVO_Confidence" AS "OVO_Confidence" 
+FROM kernel_cte_1_3) AS "KernAgg_esu_4") AS "KernAgg_B4") AS "U"
+
+-- Code For temporary table tmp_20180516112706_codegen_k7o211_kernagg_b5 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516112706_codegen_k7o211_kernagg_b5  (
+	"KEY" BIGINT, 
+	"OVO_Class1" BIGINT, 
+	"OVO_Class2" BIGINT, 
+	"OVO_Decision" BIGINT, 
+	"OVO_Confidence" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table tmp_20180516112706_codegen_k7o211_kernagg_b5 part 2. Populate
+
+INSERT INTO tmp_20180516112706_codegen_k7o211_kernagg_b5 ("KEY", "OVO_Class1", "OVO_Class2", "OVO_Decision", "OVO_Confidence") SELECT "U"."KEY", "U"."OVO_Class1", "U"."OVO_Class2", "U"."OVO_Decision", "U"."OVO_Confidence" 
+FROM (WITH kernel_input AS 
+(SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CAST("ADS_sca_2_OUT".scaler_2 AS DOUBLE PRECISION) AS scaler_2, CAST("ADS_sca_2_OUT".scaler_3 AS DOUBLE PRECISION) AS scaler_3, CAST("ADS_sca_2_OUT".scaler_4 AS DOUBLE PRECISION) AS scaler_4, CAST("ADS_sca_2_OUT".scaler_5 AS DOUBLE PRECISION) AS scaler_5, CAST("ADS_sca_2_OUT".scaler_6 AS DOUBLE PRECISION) AS scaler_6, CAST("ADS_sca_2_OUT".scaler_7 AS DOUBLE PRECISION) AS scaler_7, CAST("ADS_sca_2_OUT".scaler_8 AS DOUBLE PRECISION) AS scaler_8, CAST("ADS_sca_2_OUT".scaler_9 AS DOUBLE PRECISION) AS scaler_9, CAST("ADS_sca_2_OUT".scaler_10 AS DOUBLE PRECISION) AS scaler_10, CAST("ADS_sca_2_OUT".scaler_11 AS DOUBLE PRECISION) AS scaler_11 
+FROM tmp_20180516112706_codegen_9wamcc_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+dummy_cte AS 
+(SELECT CAST(0.0 AS DOUBLE PRECISION) AS "X"), 
 "SV_data_2_3" AS 
 (SELECT "Values".sv_idx AS sv_idx, CAST("Values".dual_coeff AS DOUBLE PRECISION) AS dual_coeff, CAST("Values".sv_0 AS DOUBLE PRECISION) AS sv_0, CAST("Values".sv_1 AS DOUBLE PRECISION) AS sv_1, CAST("Values".sv_2 AS DOUBLE PRECISION) AS sv_2, CAST("Values".sv_3 AS DOUBLE PRECISION) AS sv_3, CAST("Values".sv_4 AS DOUBLE PRECISION) AS sv_4, CAST("Values".sv_5 AS DOUBLE PRECISION) AS sv_5, CAST("Values".sv_6 AS DOUBLE PRECISION) AS sv_6, CAST("Values".sv_7 AS DOUBLE PRECISION) AS sv_7, CAST("Values".sv_8 AS DOUBLE PRECISION) AS sv_8, CAST("Values".sv_9 AS DOUBLE PRECISION) AS sv_9 
 FROM (SELECT 36 AS sv_idx, CAST(1.0 AS DOUBLE PRECISION) AS dual_coeff, CAST(0.372847795673298 AS DOUBLE PRECISION) AS sv_0, CAST(0.215061067983453 AS DOUBLE PRECISION) AS sv_1, CAST(0.083936703620345 AS DOUBLE PRECISION) AS sv_2, CAST(0.702947910761048 AS DOUBLE PRECISION) AS sv_3, CAST(-0.877813419468842 AS DOUBLE PRECISION) AS sv_4, CAST(0.605647743390105 AS DOUBLE PRECISION) AS sv_5, CAST(-0.844443589473496 AS DOUBLE PRECISION) AS sv_6, CAST(1.020201059563818 AS DOUBLE PRECISION) AS sv_7, CAST(0.907357106011495 AS DOUBLE PRECISION) AS sv_8, CAST(0.59491876330815 AS DOUBLE PRECISION) AS sv_9 
@@ -375,43 +505,17 @@ FROM (SELECT full_join_data_sv_5."KEY" AS "KEY", sum(CAST(full_join_data_sv_5.do
 FROM (SELECT kernel_input."KEY" AS "KEY", "SV_data_2_3".dual_coeff * power(CAST(0.1 AS DOUBLE PRECISION) * (kernel_input.scaler_2 * "SV_data_2_3".sv_0 + kernel_input.scaler_3 * "SV_data_2_3".sv_1 + kernel_input.scaler_4 * "SV_data_2_3".sv_2 + kernel_input.scaler_5 * "SV_data_2_3".sv_3 + kernel_input.scaler_6 * "SV_data_2_3".sv_4 + kernel_input.scaler_7 * "SV_data_2_3".sv_5 + kernel_input.scaler_8 * "SV_data_2_3".sv_6 + kernel_input.scaler_9 * "SV_data_2_3".sv_7 + kernel_input.scaler_10 * "SV_data_2_3".sv_8 + kernel_input.scaler_11 * "SV_data_2_3".sv_9) + CAST(0.0 AS DOUBLE PRECISION), 3) AS dot_prod1 
 FROM kernel_input, "SV_data_2_3") AS full_join_data_sv_5 GROUP BY full_join_data_sv_5."KEY") AS t_5), 
 kernel_cte_2_3 AS 
-(SELECT kernel_dp_2_3."KEY" AS "KEY", 2 AS "OVO_Class1", 3 AS "OVO_Class2", CASE WHEN (-kernel_dp_2_3.dot_product >= CAST(0.0 AS DOUBLE PRECISION)) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-kernel_dp_2_3.dot_product, CAST(1.0 AS DOUBLE PRECISION) / (CAST(1.0 AS DOUBLE PRECISION) + exp(least(greatest(-CAST(100.0 AS DOUBLE PRECISION), -(-((-kernel_dp_2_3.dot_product) * CAST(-1.166190533675125 AS DOUBLE PRECISION) + CAST(-0.367069015826464 AS DOUBLE PRECISION)))), CAST(100.0 AS DOUBLE PRECISION))))) AS "OVO_Confidence" 
+(SELECT kernel_dp_2_3."KEY" AS "KEY", 2 AS "OVO_Class1", 3 AS "OVO_Class2", CASE WHEN (-kernel_dp_2_3.dot_product >= CAST(0.0 AS DOUBLE PRECISION)) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-kernel_dp_2_3.dot_product, CAST(1.0 AS DOUBLE PRECISION) / (CAST(1.0 AS DOUBLE PRECISION) + exp(least(greatest(-CAST(100.0 AS DOUBLE PRECISION), -(-((-kernel_dp_2_3.dot_product) * CAST(-0.810382021121432 AS DOUBLE PRECISION) + CAST(-0.27292685539264 AS DOUBLE PRECISION)))), CAST(100.0 AS DOUBLE PRECISION))))) AS "OVO_Confidence" 
 FROM kernel_dp_2_3)
- SELECT "KernAgg_B0"."KEY", "KernAgg_B0"."OVO_Class1", "KernAgg_B0"."OVO_Class2", "KernAgg_B0"."OVO_Decision", "KernAgg_B0"."OVO_Confidence" 
-FROM (SELECT "KernAgg_esu_0"."KEY" AS "KEY", "KernAgg_esu_0"."OVO_Class1" AS "OVO_Class1", "KernAgg_esu_0"."OVO_Class2" AS "OVO_Class2", "KernAgg_esu_0"."OVO_Decision" AS "OVO_Decision", "KernAgg_esu_0"."OVO_Confidence" AS "OVO_Confidence" 
-FROM (SELECT kernel_cte_0_1."KEY" AS "KEY", kernel_cte_0_1."OVO_Class1" AS "OVO_Class1", kernel_cte_0_1."OVO_Class2" AS "OVO_Class2", kernel_cte_0_1."OVO_Decision" AS "OVO_Decision", kernel_cte_0_1."OVO_Confidence" AS "OVO_Confidence" 
-FROM kernel_cte_0_1 UNION ALL SELECT kernel_cte_0_2."KEY" AS "KEY", kernel_cte_0_2."OVO_Class1" AS "OVO_Class1", kernel_cte_0_2."OVO_Class2" AS "OVO_Class2", kernel_cte_0_2."OVO_Decision" AS "OVO_Decision", kernel_cte_0_2."OVO_Confidence" AS "OVO_Confidence" 
-FROM kernel_cte_0_2 UNION ALL SELECT kernel_cte_0_3."KEY" AS "KEY", kernel_cte_0_3."OVO_Class1" AS "OVO_Class1", kernel_cte_0_3."OVO_Class2" AS "OVO_Class2", kernel_cte_0_3."OVO_Decision" AS "OVO_Decision", kernel_cte_0_3."OVO_Confidence" AS "OVO_Confidence" 
-FROM kernel_cte_0_3 UNION ALL SELECT kernel_cte_1_2."KEY" AS "KEY", kernel_cte_1_2."OVO_Class1" AS "OVO_Class1", kernel_cte_1_2."OVO_Class2" AS "OVO_Class2", kernel_cte_1_2."OVO_Decision" AS "OVO_Decision", kernel_cte_1_2."OVO_Confidence" AS "OVO_Confidence" 
-FROM kernel_cte_1_2 UNION ALL SELECT kernel_cte_1_3."KEY" AS "KEY", kernel_cte_1_3."OVO_Class1" AS "OVO_Class1", kernel_cte_1_3."OVO_Class2" AS "OVO_Class2", kernel_cte_1_3."OVO_Decision" AS "OVO_Decision", kernel_cte_1_3."OVO_Confidence" AS "OVO_Confidence" 
-FROM kernel_cte_1_3 UNION ALL SELECT kernel_cte_2_3."KEY" AS "KEY", kernel_cte_2_3."OVO_Class1" AS "OVO_Class1", kernel_cte_2_3."OVO_Class2" AS "OVO_Class2", kernel_cte_2_3."OVO_Decision" AS "OVO_Decision", kernel_cte_2_3."OVO_Confidence" AS "OVO_Confidence" 
-FROM kernel_cte_2_3) AS "KernAgg_esu_0") AS "KernAgg_B0") AS "U"
+ SELECT "KernAgg_B5"."KEY", "KernAgg_B5"."OVO_Class1", "KernAgg_B5"."OVO_Class2", "KernAgg_B5"."OVO_Decision", "KernAgg_B5"."OVO_Confidence" 
+FROM (SELECT "KernAgg_esu_5"."KEY" AS "KEY", "KernAgg_esu_5"."OVO_Class1" AS "OVO_Class1", "KernAgg_esu_5"."OVO_Class2" AS "OVO_Class2", "KernAgg_esu_5"."OVO_Decision" AS "OVO_Decision", "KernAgg_esu_5"."OVO_Confidence" AS "OVO_Confidence" 
+FROM (SELECT kernel_cte_2_3."KEY" AS "KEY", kernel_cte_2_3."OVO_Class1" AS "OVO_Class1", kernel_cte_2_3."OVO_Class2" AS "OVO_Class2", kernel_cte_2_3."OVO_Decision" AS "OVO_Decision", kernel_cte_2_3."OVO_Confidence" AS "OVO_Confidence" 
+FROM kernel_cte_2_3) AS "KernAgg_esu_5") AS "KernAgg_B5") AS "U"
 
--- Code For temporary table tmp_20180508181513_codegen_cmv9pr_kernagg_union part 1. Create 
+-- Code For temporary table tmp_20180516112706_codegen_a1ommq_kernagg part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508181513_codegen_cmv9pr_kernagg_union  (
-	"KEY" BIGINT, 
-	"OVO_Class1" BIGINT, 
-	"OVO_Class2" BIGINT, 
-	"OVO_Decision" BIGINT, 
-	"OVO_Confidence" DOUBLE PRECISION
-)
-
- ON COMMIT PRESERVE ROWS
-
--- Code For temporary table tmp_20180508181513_codegen_cmv9pr_kernagg_union part 2. Populate
-
-INSERT INTO tmp_20180508181513_codegen_cmv9pr_kernagg_union ("KEY", "OVO_Class1", "OVO_Class2", "OVO_Decision", "OVO_Confidence") SELECT "U"."KEY", "U"."OVO_Class1", "U"."OVO_Class2", "U"."OVO_Decision", "U"."OVO_Confidence" 
-FROM (SELECT "KernAgg_Union"."KEY", "KernAgg_Union"."OVO_Class1", "KernAgg_Union"."OVO_Class2", "KernAgg_Union"."OVO_Decision", "KernAgg_Union"."OVO_Confidence" 
-FROM (SELECT "KernAgg_EnsembleUnion"."KEY" AS "KEY", "KernAgg_EnsembleUnion"."OVO_Class1" AS "OVO_Class1", "KernAgg_EnsembleUnion"."OVO_Class2" AS "OVO_Class2", "KernAgg_EnsembleUnion"."OVO_Decision" AS "OVO_Decision", "KernAgg_EnsembleUnion"."OVO_Confidence" AS "OVO_Confidence" 
-FROM (SELECT "KernAgg_B0"."KEY" AS "KEY", "KernAgg_B0"."OVO_Class1" AS "OVO_Class1", "KernAgg_B0"."OVO_Class2" AS "OVO_Class2", "KernAgg_B0"."OVO_Decision" AS "OVO_Decision", "KernAgg_B0"."OVO_Confidence" AS "OVO_Confidence" 
-FROM tmp_20180508181513_codegen_gazuh0_kernagg_b0 AS "KernAgg_B0") AS "KernAgg_EnsembleUnion") AS "KernAgg_Union") AS "U"
-
--- Code For temporary table tmp_20180508181513_codegen_sl4811_kernagg part 1. Create 
-
-
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508181513_codegen_sl4811_kernagg  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516112706_codegen_a1ommq_kernagg  (
 	"KEY" BIGINT, 
 	"OVO_Vote_0" BIGINT, 
 	"OVO_SumConfidence_0" DOUBLE PRECISION, 
@@ -431,13 +535,22 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508181513_codegen_sl4811_kernagg  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508181513_codegen_sl4811_kernagg part 2. Populate
+-- Code For temporary table tmp_20180516112706_codegen_a1ommq_kernagg part 2. Populate
 
-INSERT INTO tmp_20180508181513_codegen_sl4811_kernagg ("KEY", "OVO_Vote_0", "OVO_SumConfidence_0", "OVO_Vote_1", "OVO_SumConfidence_1", "OVO_Vote_2", "OVO_SumConfidence_2", "OVO_Vote_3", "OVO_SumConfidence_3", max_abs_confidence, "OVO_Scale", "Score_0", "Score_1", "Score_2", "Score_3") SELECT "U"."KEY", "U"."OVO_Vote_0", "U"."OVO_SumConfidence_0", "U"."OVO_Vote_1", "U"."OVO_SumConfidence_1", "U"."OVO_Vote_2", "U"."OVO_SumConfidence_2", "U"."OVO_Vote_3", "U"."OVO_SumConfidence_3", "U".max_abs_confidence, "U"."OVO_Scale", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3" 
-FROM (WITH "OVO_Votes" AS 
+INSERT INTO tmp_20180516112706_codegen_a1ommq_kernagg ("KEY", "OVO_Vote_0", "OVO_SumConfidence_0", "OVO_Vote_1", "OVO_SumConfidence_1", "OVO_Vote_2", "OVO_SumConfidence_2", "OVO_Vote_3", "OVO_SumConfidence_3", max_abs_confidence, "OVO_Scale", "Score_0", "Score_1", "Score_2", "Score_3") SELECT "U"."KEY", "U"."OVO_Vote_0", "U"."OVO_SumConfidence_0", "U"."OVO_Vote_1", "U"."OVO_SumConfidence_1", "U"."OVO_Vote_2", "U"."OVO_SumConfidence_2", "U"."OVO_Vote_3", "U"."OVO_SumConfidence_3", "U".max_abs_confidence, "U"."OVO_Scale", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3" 
+FROM (WITH "KernAgg_Union" AS 
+(SELECT "KernAgg_EnsembleUnion"."KEY" AS "KEY", "KernAgg_EnsembleUnion"."OVO_Class1" AS "OVO_Class1", "KernAgg_EnsembleUnion"."OVO_Class2" AS "OVO_Class2", "KernAgg_EnsembleUnion"."OVO_Decision" AS "OVO_Decision", "KernAgg_EnsembleUnion"."OVO_Confidence" AS "OVO_Confidence" 
+FROM (SELECT "KernAgg_B0"."KEY" AS "KEY", "KernAgg_B0"."OVO_Class1" AS "OVO_Class1", "KernAgg_B0"."OVO_Class2" AS "OVO_Class2", "KernAgg_B0"."OVO_Decision" AS "OVO_Decision", "KernAgg_B0"."OVO_Confidence" AS "OVO_Confidence" 
+FROM tmp_20180516112706_codegen_dtbz01_kernagg_b0 AS "KernAgg_B0" UNION ALL SELECT "KernAgg_B1"."KEY" AS "KEY", "KernAgg_B1"."OVO_Class1" AS "OVO_Class1", "KernAgg_B1"."OVO_Class2" AS "OVO_Class2", "KernAgg_B1"."OVO_Decision" AS "OVO_Decision", "KernAgg_B1"."OVO_Confidence" AS "OVO_Confidence" 
+FROM tmp_20180516112706_codegen_4mddwq_kernagg_b1 AS "KernAgg_B1" UNION ALL SELECT "KernAgg_B2"."KEY" AS "KEY", "KernAgg_B2"."OVO_Class1" AS "OVO_Class1", "KernAgg_B2"."OVO_Class2" AS "OVO_Class2", "KernAgg_B2"."OVO_Decision" AS "OVO_Decision", "KernAgg_B2"."OVO_Confidence" AS "OVO_Confidence" 
+FROM tmp_20180516112706_codegen_lferze_kernagg_b2 AS "KernAgg_B2" UNION ALL SELECT "KernAgg_B3"."KEY" AS "KEY", "KernAgg_B3"."OVO_Class1" AS "OVO_Class1", "KernAgg_B3"."OVO_Class2" AS "OVO_Class2", "KernAgg_B3"."OVO_Decision" AS "OVO_Decision", "KernAgg_B3"."OVO_Confidence" AS "OVO_Confidence" 
+FROM tmp_20180516112706_codegen_smhxhj_kernagg_b3 AS "KernAgg_B3" UNION ALL SELECT "KernAgg_B4"."KEY" AS "KEY", "KernAgg_B4"."OVO_Class1" AS "OVO_Class1", "KernAgg_B4"."OVO_Class2" AS "OVO_Class2", "KernAgg_B4"."OVO_Decision" AS "OVO_Decision", "KernAgg_B4"."OVO_Confidence" AS "OVO_Confidence" 
+FROM tmp_20180516112706_codegen_eemb95_kernagg_b4 AS "KernAgg_B4" UNION ALL SELECT "KernAgg_B5"."KEY" AS "KEY", "KernAgg_B5"."OVO_Class1" AS "OVO_Class1", "KernAgg_B5"."OVO_Class2" AS "OVO_Class2", "KernAgg_B5"."OVO_Decision" AS "OVO_Decision", "KernAgg_B5"."OVO_Confidence" AS "OVO_Confidence" 
+FROM tmp_20180516112706_codegen_k7o211_kernagg_b5 AS "KernAgg_B5") AS "KernAgg_EnsembleUnion"), 
+"OVO_Votes" AS 
 (SELECT "Votes_Sel"."KEY" AS "KEY", "Votes_Sel"."OVO_Vote_0" AS "OVO_Vote_0", "Votes_Sel"."OVO_SumConfidence_0" AS "OVO_SumConfidence_0", "Votes_Sel"."OVO_Vote_1" AS "OVO_Vote_1", "Votes_Sel"."OVO_SumConfidence_1" AS "OVO_SumConfidence_1", "Votes_Sel"."OVO_Vote_2" AS "OVO_Vote_2", "Votes_Sel"."OVO_SumConfidence_2" AS "OVO_SumConfidence_2", "Votes_Sel"."OVO_Vote_3" AS "OVO_Vote_3", "Votes_Sel"."OVO_SumConfidence_3" AS "OVO_SumConfidence_3" 
 FROM (SELECT "KernAgg_Union"."KEY" AS "KEY", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = 0 OR "KernAgg_Union"."OVO_Class2" = 0) THEN 1 ELSE 0 END * (CASE WHEN ("KernAgg_Union"."OVO_Decision" = 0 AND "KernAgg_Union"."OVO_Class1" = 0) THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Decision" = 1 AND "KernAgg_Union"."OVO_Class2" = 0) THEN 1 ELSE 0 END)) AS "OVO_Vote_0", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = 0 OR "KernAgg_Union"."OVO_Class2" = 0) THEN 1 ELSE 0 END * "KernAgg_Union"."OVO_Confidence" * (-CASE WHEN ("KernAgg_Union"."OVO_Class1" = 0) THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Class2" = 0) THEN 1 ELSE 0 END)) AS "OVO_SumConfidence_0", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = 1 OR "KernAgg_Union"."OVO_Class2" = 1) THEN 1 ELSE 0 END * (CASE WHEN ("KernAgg_Union"."OVO_Decision" = 0 AND "KernAgg_Union"."OVO_Class1" = 1) THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Decision" = 1 AND "KernAgg_Union"."OVO_Class2" = 1) THEN 1 ELSE 0 END)) AS "OVO_Vote_1", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = 1 OR "KernAgg_Union"."OVO_Class2" = 1) THEN 1 ELSE 0 END * "KernAgg_Union"."OVO_Confidence" * (-CASE WHEN ("KernAgg_Union"."OVO_Class1" = 1) THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Class2" = 1) THEN 1 ELSE 0 END)) AS "OVO_SumConfidence_1", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = 2 OR "KernAgg_Union"."OVO_Class2" = 2) THEN 1 ELSE 0 END * (CASE WHEN ("KernAgg_Union"."OVO_Decision" = 0 AND "KernAgg_Union"."OVO_Class1" = 2) THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Decision" = 1 AND "KernAgg_Union"."OVO_Class2" = 2) THEN 1 ELSE 0 END)) AS "OVO_Vote_2", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = 2 OR "KernAgg_Union"."OVO_Class2" = 2) THEN 1 ELSE 0 END * "KernAgg_Union"."OVO_Confidence" * (-CASE WHEN ("KernAgg_Union"."OVO_Class1" = 2) THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Class2" = 2) THEN 1 ELSE 0 END)) AS "OVO_SumConfidence_2", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = 3 OR "KernAgg_Union"."OVO_Class2" = 3) THEN 1 ELSE 0 END * (CASE WHEN ("KernAgg_Union"."OVO_Decision" = 0 AND "KernAgg_Union"."OVO_Class1" = 3) THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Decision" = 1 AND "KernAgg_Union"."OVO_Class2" = 3) THEN 1 ELSE 0 END)) AS "OVO_Vote_3", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = 3 OR "KernAgg_Union"."OVO_Class2" = 3) THEN 1 ELSE 0 END * "KernAgg_Union"."OVO_Confidence" * (-CASE WHEN ("KernAgg_Union"."OVO_Class1" = 3) THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Class2" = 3) THEN 1 ELSE 0 END)) AS "OVO_SumConfidence_3" 
-FROM tmp_20180508181513_codegen_cmv9pr_kernagg_union AS "KernAgg_Union" GROUP BY "KernAgg_Union"."KEY") AS "Votes_Sel"), 
+FROM "KernAgg_Union" GROUP BY "KernAgg_Union"."KEY") AS "Votes_Sel"), 
 dummy_cte AS 
 (SELECT CAST(0.0 AS DOUBLE PRECISION) AS "X"), 
 "OVO_SumConf_CTE" AS 
@@ -461,7 +574,7 @@ FROM "OVO_Votes_WithScale") AS "KernAgg") AS "U"
 
 WITH orig_cte AS 
 (SELECT "KernAgg"."KEY" AS "KEY", "KernAgg"."Score_0" AS "Score_0", "KernAgg"."Score_1" AS "Score_1", "KernAgg"."Score_2" AS "Score_2", "KernAgg"."Score_3" AS "Score_3", CAST(NULL AS DOUBLE PRECISION) AS "Proba_0", CAST(NULL AS DOUBLE PRECISION) AS "Proba_1", CAST(NULL AS DOUBLE PRECISION) AS "Proba_2", CAST(NULL AS DOUBLE PRECISION) AS "Proba_3", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_0", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_1", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_2", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_3", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba" 
-FROM tmp_20180508181513_codegen_sl4811_kernagg AS "KernAgg"), 
+FROM tmp_20180516112706_codegen_a1ommq_kernagg AS "KernAgg"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu."class" AS "class", scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS "class", orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

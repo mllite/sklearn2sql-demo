@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180508180200_CODEGEN_YZGE part 1. Create 
+-- Code For temporary table TMP_20180516_CODEGEN_XSDVGI_CAL part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508180200_CODEGEN_YZGE" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_XSDVGI_CAL" (
 	"KEY" BIGINT, 
 	"Proba_1" DOUBLE PRECISION, 
 	"Proba_0" DOUBLE PRECISION
@@ -21,9 +21,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180508180200_CODEGEN_YZGE" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508180200_CODEGEN_YZGE part 2. Populate
+-- Code For temporary table TMP_20180516_CODEGEN_XSDVGI_CAL part 2. Populate
 
-INSERT INTO "TMP_20180508180200_CODEGEN_YZGE" ("KEY", "Proba_1", "Proba_0") SELECT "U"."KEY", "U"."Proba_1", "U"."Proba_0" 
+INSERT INTO "TMP_20180516_CODEGEN_XSDVGI_CAL" ("KEY", "Proba_1", "Proba_0") SELECT "U"."KEY", "U"."Proba_1", "U"."Proba_0" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_57" <= 0.03440605849027634) THEN CASE WHEN ("ADS"."Feature_18" <= -1.1672475337982178) THEN CASE WHEN ("ADS"."Feature_77" <= 0.3908604085445404) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_88" <= 1.8314564228057861) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_18" <= 1.5096360445022583) THEN 9 ELSE CASE WHEN ("ADS"."Feature_32" <= 0.10546842217445374) THEN 11 ELSE 12 END END END AS node_id_2 
 FROM "BinaryClass_100" AS "ADS"), 
@@ -34,7 +34,7 @@ FROM (SELECT 3 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 1 AS "D", 1.0 AS "DP" FROM rd
 (SELECT "DT_node_lookup"."KEY" AS "KEY", "DT_node_lookup".node_id_2 AS node_id_2, "DT_node_data".nid AS nid, "DT_node_data"."P_0" AS "P_0", "DT_node_data"."P_1" AS "P_1", "DT_node_data"."D" AS "D", "DT_node_data"."DP" AS "DP" 
 FROM "DT_node_lookup" LEFT OUTER JOIN "DT_node_data" ON "DT_node_lookup".node_id_2 = "DT_node_data".nid), 
 "Calibrated_Model_0" AS 
-(SELECT "DT_Output"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_1", "DT_Output"."P_0" AS "Proba_0", "DT_Output"."P_1" AS "Proba_1", CASE WHEN ("DT_Output"."P_0" IS NULL OR "DT_Output"."P_0" > 0.0) THEN ln("DT_Output"."P_0") ELSE -1e+20 END AS "LogProba_0", CASE WHEN ("DT_Output"."P_1" IS NULL OR "DT_Output"."P_1" > 0.0) THEN ln("DT_Output"."P_1") ELSE -1e+20 END AS "LogProba_1", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba", coalesce(CAST(NULL AS DOUBLE PRECISION), "DT_Output"."P_0") AS "ScoreOrProba_0", coalesce(CAST(NULL AS DOUBLE PRECISION), "DT_Output"."P_1") AS "ScoreOrProba_1" 
+(SELECT "DT_Output"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_1", "DT_Output"."P_0" AS "Proba_0", "DT_Output"."P_1" AS "Proba_1", CASE WHEN ("DT_Output"."P_0" IS NULL OR "DT_Output"."P_0" > 0.0) THEN ln("DT_Output"."P_0") ELSE -1.79769313486231e+308 END AS "LogProba_0", CASE WHEN ("DT_Output"."P_1" IS NULL OR "DT_Output"."P_1" > 0.0) THEN ln("DT_Output"."P_1") ELSE -1.79769313486231e+308 END AS "LogProba_1", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba", coalesce(CAST(NULL AS DOUBLE PRECISION), "DT_Output"."P_0") AS "ScoreOrProba_0", coalesce(CAST(NULL AS DOUBLE PRECISION), "DT_Output"."P_1") AS "ScoreOrProba_1" 
 FROM "DT_Output"), 
 isotonic_cte_0 AS 
 (SELECT "Calibrated_Model_0"."KEY" AS "KEY", CASE WHEN ("Calibrated_Model_0"."ScoreOrProba_1" < 0.0) THEN 0.18181818181818182 WHEN ("Calibrated_Model_0"."ScoreOrProba_1" < 1.0) THEN ("Calibrated_Model_0"."ScoreOrProba_1" - 0.0) * 0.6181818181818182 + 0.18181818181818182 ELSE 0.8 END AS "Proba_1", 1.0 - CASE WHEN ("Calibrated_Model_0"."ScoreOrProba_1" < 0.0) THEN 0.18181818181818182 WHEN ("Calibrated_Model_0"."ScoreOrProba_1" < 1.0) THEN ("Calibrated_Model_0"."ScoreOrProba_1" - 0.0) * 0.6181818181818182 + 0.18181818181818182 ELSE 0.8 END AS "Proba_0" 
@@ -52,7 +52,7 @@ FROM (SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 1 AS "D", 1.0 AS "DP" FROM rd
 (SELECT "DT_node_lookup_1"."KEY" AS "KEY", "DT_node_lookup_1".node_id_2 AS node_id_2, "DT_node_data_1".nid AS nid, "DT_node_data_1"."P_0" AS "P_0", "DT_node_data_1"."P_1" AS "P_1", "DT_node_data_1"."D" AS "D", "DT_node_data_1"."DP" AS "DP" 
 FROM "DT_node_lookup_1" LEFT OUTER JOIN "DT_node_data_1" ON "DT_node_lookup_1".node_id_2 = "DT_node_data_1".nid), 
 "Calibrated_Model_1" AS 
-(SELECT "DT_Output_1"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_1", "DT_Output_1"."P_0" AS "Proba_0", "DT_Output_1"."P_1" AS "Proba_1", CASE WHEN ("DT_Output_1"."P_0" IS NULL OR "DT_Output_1"."P_0" > 0.0) THEN ln("DT_Output_1"."P_0") ELSE -1e+20 END AS "LogProba_0", CASE WHEN ("DT_Output_1"."P_1" IS NULL OR "DT_Output_1"."P_1" > 0.0) THEN ln("DT_Output_1"."P_1") ELSE -1e+20 END AS "LogProba_1", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba", coalesce(CAST(NULL AS DOUBLE PRECISION), "DT_Output_1"."P_0") AS "ScoreOrProba_0", coalesce(CAST(NULL AS DOUBLE PRECISION), "DT_Output_1"."P_1") AS "ScoreOrProba_1" 
+(SELECT "DT_Output_1"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_1", "DT_Output_1"."P_0" AS "Proba_0", "DT_Output_1"."P_1" AS "Proba_1", CASE WHEN ("DT_Output_1"."P_0" IS NULL OR "DT_Output_1"."P_0" > 0.0) THEN ln("DT_Output_1"."P_0") ELSE -1.79769313486231e+308 END AS "LogProba_0", CASE WHEN ("DT_Output_1"."P_1" IS NULL OR "DT_Output_1"."P_1" > 0.0) THEN ln("DT_Output_1"."P_1") ELSE -1.79769313486231e+308 END AS "LogProba_1", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba", coalesce(CAST(NULL AS DOUBLE PRECISION), "DT_Output_1"."P_0") AS "ScoreOrProba_0", coalesce(CAST(NULL AS DOUBLE PRECISION), "DT_Output_1"."P_1") AS "ScoreOrProba_1" 
 FROM "DT_Output_1"), 
 isotonic_cte_1 AS 
 (SELECT "Calibrated_Model_1"."KEY" AS "KEY", CASE WHEN ("Calibrated_Model_1"."ScoreOrProba_1" < 0.0) THEN 0.09090909090909091 WHEN ("Calibrated_Model_1"."ScoreOrProba_1" < 1.0) THEN ("Calibrated_Model_1"."ScoreOrProba_1" - 0.0) * 0.8090909090909091 + 0.09090909090909091 ELSE 0.9 END AS "Proba_1", 1.0 - CASE WHEN ("Calibrated_Model_1"."ScoreOrProba_1" < 0.0) THEN 0.09090909090909091 WHEN ("Calibrated_Model_1"."ScoreOrProba_1" < 1.0) THEN ("Calibrated_Model_1"."ScoreOrProba_1" - 0.0) * 0.8090909090909091 + 0.09090909090909091 ELSE 0.9 END AS "Proba_0" 
@@ -70,7 +70,7 @@ FROM (SELECT 3 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 1 AS "D", 1.0 AS "DP" FROM rd
 (SELECT "DT_node_lookup_2"."KEY" AS "KEY", "DT_node_lookup_2".node_id_2 AS node_id_2, "DT_node_data_2".nid AS nid, "DT_node_data_2"."P_0" AS "P_0", "DT_node_data_2"."P_1" AS "P_1", "DT_node_data_2"."D" AS "D", "DT_node_data_2"."DP" AS "DP" 
 FROM "DT_node_lookup_2" LEFT OUTER JOIN "DT_node_data_2" ON "DT_node_lookup_2".node_id_2 = "DT_node_data_2".nid), 
 "Calibrated_Model_2" AS 
-(SELECT "DT_Output_2"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_1", "DT_Output_2"."P_0" AS "Proba_0", "DT_Output_2"."P_1" AS "Proba_1", CASE WHEN ("DT_Output_2"."P_0" IS NULL OR "DT_Output_2"."P_0" > 0.0) THEN ln("DT_Output_2"."P_0") ELSE -1e+20 END AS "LogProba_0", CASE WHEN ("DT_Output_2"."P_1" IS NULL OR "DT_Output_2"."P_1" > 0.0) THEN ln("DT_Output_2"."P_1") ELSE -1e+20 END AS "LogProba_1", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba", coalesce(CAST(NULL AS DOUBLE PRECISION), "DT_Output_2"."P_0") AS "ScoreOrProba_0", coalesce(CAST(NULL AS DOUBLE PRECISION), "DT_Output_2"."P_1") AS "ScoreOrProba_1" 
+(SELECT "DT_Output_2"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_1", "DT_Output_2"."P_0" AS "Proba_0", "DT_Output_2"."P_1" AS "Proba_1", CASE WHEN ("DT_Output_2"."P_0" IS NULL OR "DT_Output_2"."P_0" > 0.0) THEN ln("DT_Output_2"."P_0") ELSE -1.79769313486231e+308 END AS "LogProba_0", CASE WHEN ("DT_Output_2"."P_1" IS NULL OR "DT_Output_2"."P_1" > 0.0) THEN ln("DT_Output_2"."P_1") ELSE -1.79769313486231e+308 END AS "LogProba_1", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba", coalesce(CAST(NULL AS DOUBLE PRECISION), "DT_Output_2"."P_0") AS "ScoreOrProba_0", coalesce(CAST(NULL AS DOUBLE PRECISION), "DT_Output_2"."P_1") AS "ScoreOrProba_1" 
 FROM "DT_Output_2"), 
 isotonic_cte_2 AS 
 (SELECT "Calibrated_Model_2"."KEY" AS "KEY", CASE WHEN ("Calibrated_Model_2"."ScoreOrProba_1" < 0.0) THEN 0.2 WHEN ("Calibrated_Model_2"."ScoreOrProba_1" < 1.0) THEN ("Calibrated_Model_2"."ScoreOrProba_1" - 0.0) * 0.5777777777777777 + 0.2 ELSE 0.7777777777777778 END AS "Proba_1", 1.0 - CASE WHEN ("Calibrated_Model_2"."ScoreOrProba_1" < 0.0) THEN 0.2 WHEN ("Calibrated_Model_2"."ScoreOrProba_1" < 1.0) THEN ("Calibrated_Model_2"."ScoreOrProba_1" - 0.0) * 0.5777777777777777 + 0.2 ELSE 0.7777777777777778 END AS "Proba_0" 
@@ -88,7 +88,7 @@ FROM (SELECT 3 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0 AS "D", 1.0 AS "DP" FROM rd
 (SELECT "DT_node_lookup_3"."KEY" AS "KEY", "DT_node_lookup_3".node_id_2 AS node_id_2, "DT_node_data_3".nid AS nid, "DT_node_data_3"."P_0" AS "P_0", "DT_node_data_3"."P_1" AS "P_1", "DT_node_data_3"."D" AS "D", "DT_node_data_3"."DP" AS "DP" 
 FROM "DT_node_lookup_3" LEFT OUTER JOIN "DT_node_data_3" ON "DT_node_lookup_3".node_id_2 = "DT_node_data_3".nid), 
 "Calibrated_Model_3" AS 
-(SELECT "DT_Output_3"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_1", "DT_Output_3"."P_0" AS "Proba_0", "DT_Output_3"."P_1" AS "Proba_1", CASE WHEN ("DT_Output_3"."P_0" IS NULL OR "DT_Output_3"."P_0" > 0.0) THEN ln("DT_Output_3"."P_0") ELSE -1e+20 END AS "LogProba_0", CASE WHEN ("DT_Output_3"."P_1" IS NULL OR "DT_Output_3"."P_1" > 0.0) THEN ln("DT_Output_3"."P_1") ELSE -1e+20 END AS "LogProba_1", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba", coalesce(CAST(NULL AS DOUBLE PRECISION), "DT_Output_3"."P_0") AS "ScoreOrProba_0", coalesce(CAST(NULL AS DOUBLE PRECISION), "DT_Output_3"."P_1") AS "ScoreOrProba_1" 
+(SELECT "DT_Output_3"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_1", "DT_Output_3"."P_0" AS "Proba_0", "DT_Output_3"."P_1" AS "Proba_1", CASE WHEN ("DT_Output_3"."P_0" IS NULL OR "DT_Output_3"."P_0" > 0.0) THEN ln("DT_Output_3"."P_0") ELSE -1.79769313486231e+308 END AS "LogProba_0", CASE WHEN ("DT_Output_3"."P_1" IS NULL OR "DT_Output_3"."P_1" > 0.0) THEN ln("DT_Output_3"."P_1") ELSE -1.79769313486231e+308 END AS "LogProba_1", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba", coalesce(CAST(NULL AS DOUBLE PRECISION), "DT_Output_3"."P_0") AS "ScoreOrProba_0", coalesce(CAST(NULL AS DOUBLE PRECISION), "DT_Output_3"."P_1") AS "ScoreOrProba_1" 
 FROM "DT_Output_3"), 
 isotonic_cte_3 AS 
 (SELECT "Calibrated_Model_3"."KEY" AS "KEY", CASE WHEN ("Calibrated_Model_3"."ScoreOrProba_1" < 0.0) THEN 0.125 WHEN ("Calibrated_Model_3"."ScoreOrProba_1" < 1.0) THEN ("Calibrated_Model_3"."ScoreOrProba_1" - 0.0) * 0.6022727272727273 + 0.125 ELSE 0.7272727272727273 END AS "Proba_1", 1.0 - CASE WHEN ("Calibrated_Model_3"."ScoreOrProba_1" < 0.0) THEN 0.125 WHEN ("Calibrated_Model_3"."ScoreOrProba_1" < 1.0) THEN ("Calibrated_Model_3"."ScoreOrProba_1" - 0.0) * 0.6022727272727273 + 0.125 ELSE 0.7272727272727273 END AS "Proba_0" 
@@ -104,29 +104,10 @@ FROM "Normalized_Probas_1" UNION ALL SELECT "Normalized_Probas_2"."KEY" AS "KEY"
 FROM "Normalized_Probas_2" UNION ALL SELECT "Normalized_Probas_3"."KEY" AS "KEY", "Normalized_Probas_3"."Proba_1" AS "Proba_1", "Normalized_Probas_3"."Proba_0" AS "Proba_0" 
 FROM "Normalized_Probas_3") AS "CalProb_esu_0") AS "CalProb_B0") AS "U"
 
--- Code For temporary table TMP_20180508180200_CODEGEN_ZWNO part 1. Create 
+-- Code For temporary table TMP_20180516_CODEGEN_1IEM23_CAL part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508180200_CODEGEN_ZWNO" (
-	"KEY" BIGINT, 
-	"Proba_1" DOUBLE PRECISION, 
-	"Proba_0" DOUBLE PRECISION
-)
-
- ON COMMIT PRESERVE ROWS
-
--- Code For temporary table TMP_20180508180200_CODEGEN_ZWNO part 2. Populate
-
-INSERT INTO "TMP_20180508180200_CODEGEN_ZWNO" ("KEY", "Proba_1", "Proba_0") SELECT "U"."KEY", "U"."Proba_1", "U"."Proba_0" 
-FROM (SELECT "CalProb_Union"."KEY", "CalProb_Union"."Proba_1", "CalProb_Union"."Proba_0" 
-FROM (SELECT "CalProb_EnsembleUnion"."KEY" AS "KEY", "CalProb_EnsembleUnion"."Proba_1" AS "Proba_1", "CalProb_EnsembleUnion"."Proba_0" AS "Proba_0" 
-FROM (SELECT "CalProb_B0"."KEY" AS "KEY", "CalProb_B0"."Proba_1" AS "Proba_1", "CalProb_B0"."Proba_0" AS "Proba_0" 
-FROM "TMP_20180508180200_CODEGEN_YZGE" AS "CalProb_B0") AS "CalProb_EnsembleUnion") AS "CalProb_Union") AS "U"
-
--- Code For temporary table TMP_20180508180200_CODEGEN_MDYP part 1. Create 
-
-
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508180200_CODEGEN_MDYP" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_1IEM23_CAL" (
 	"KEY" BIGINT NOT NULL, 
 	"Proba_1" DOUBLE PRECISION, 
 	"Proba_0" DOUBLE PRECISION, 
@@ -135,23 +116,27 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180508180200_CODEGEN_MDYP" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508180200_CODEGEN_MDYP part 2. Populate
+-- Code For temporary table TMP_20180516_CODEGEN_1IEM23_CAL part 2. Populate
 
-INSERT INTO "TMP_20180508180200_CODEGEN_MDYP" ("KEY", "Proba_1", "Proba_0") SELECT "U"."KEY", "U"."Proba_1", "U"."Proba_0" 
-FROM (SELECT "CalProb_avg"."KEY", "CalProb_avg"."Proba_1", "CalProb_avg"."Proba_0" 
+INSERT INTO "TMP_20180516_CODEGEN_1IEM23_CAL" ("KEY", "Proba_1", "Proba_0") SELECT "U"."KEY", "U"."Proba_1", "U"."Proba_0" 
+FROM (WITH "CalProb_Union" AS 
+(SELECT "CalProb_EnsembleUnion"."KEY" AS "KEY", "CalProb_EnsembleUnion"."Proba_1" AS "Proba_1", "CalProb_EnsembleUnion"."Proba_0" AS "Proba_0" 
+FROM (SELECT "CalProb_B0"."KEY" AS "KEY", "CalProb_B0"."Proba_1" AS "Proba_1", "CalProb_B0"."Proba_0" AS "Proba_0" 
+FROM "TMP_20180516_CODEGEN_XSDVGI_CAL" AS "CalProb_B0") AS "CalProb_EnsembleUnion")
+ SELECT "CalProb_avg"."KEY", "CalProb_avg"."Proba_1", "CalProb_avg"."Proba_0" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Proba_1" AS DOUBLE PRECISION) AS "Proba_1", CAST("T"."Proba_0" AS DOUBLE PRECISION) AS "Proba_0" 
 FROM (SELECT "CalProb_Union"."KEY" AS "KEY", avg(CAST("CalProb_Union"."Proba_1" AS DOUBLE PRECISION)) AS "Proba_1", avg(CAST("CalProb_Union"."Proba_0" AS DOUBLE PRECISION)) AS "Proba_0" 
-FROM "TMP_20180508180200_CODEGEN_ZWNO" AS "CalProb_Union" GROUP BY "CalProb_Union"."KEY") AS "T") AS "CalProb_avg") AS "U"
+FROM "CalProb_Union" GROUP BY "CalProb_Union"."KEY") AS "T") AS "CalProb_avg") AS "U"
 
--- Code For temporary table TMP_20180508180200_CODEGEN_MDYP part 3. Create Index 
+-- Code For temporary table TMP_20180516_CODEGEN_1IEM23_CAL part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508180200_C_7f2e" ON "TMP_20180508180200_CODEGEN_MDYP" ("KEY")
+CREATE INDEX "ix_TMP_20180516_CODEGEN_553e" ON "TMP_20180516_CODEGEN_1IEM23_CAL" ("KEY")
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT "CalProb_avg"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_1", "CalProb_avg"."Proba_0" AS "Proba_0", "CalProb_avg"."Proba_1" AS "Proba_1", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_0", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_1", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba" 
-FROM "TMP_20180508180200_CODEGEN_MDYP" AS "CalProb_avg"), 
+FROM "TMP_20180516_CODEGEN_1IEM23_CAL" AS "CalProb_avg"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 
@@ -169,5 +154,5 @@ arg_max_cte AS
 FROM score_max LEFT OUTER JOIN (SELECT union_with_max."KEY" AS "KEY_Proba", min(union_with_max.class) AS "arg_max_Proba" 
 FROM union_with_max 
 WHERE union_with_max."Proba" >= union_with_max."max_Proba" GROUP BY union_with_max."KEY") AS "arg_max_t_Proba" ON score_max."KEY" = "arg_max_t_Proba"."KEY_Proba")
- SELECT arg_max_cte."KEY" AS "KEY", arg_max_cte."Score_0" AS "Score_0", arg_max_cte."Score_1" AS "Score_1", arg_max_cte."Proba_0" AS "Proba_0", arg_max_cte."Proba_1" AS "Proba_1", CASE WHEN (arg_max_cte."Proba_0" IS NULL OR arg_max_cte."Proba_0" > 0.0) THEN ln(arg_max_cte."Proba_0") ELSE -1e+20 END AS "LogProba_0", CASE WHEN (arg_max_cte."Proba_1" IS NULL OR arg_max_cte."Proba_1" > 0.0) THEN ln(arg_max_cte."Proba_1") ELSE -1e+20 END AS "LogProba_1", arg_max_cte."arg_max_Proba" AS "Decision", arg_max_cte."max_Proba" AS "DecisionProba" 
+ SELECT arg_max_cte."KEY" AS "KEY", arg_max_cte."Score_0" AS "Score_0", arg_max_cte."Score_1" AS "Score_1", arg_max_cte."Proba_0" AS "Proba_0", arg_max_cte."Proba_1" AS "Proba_1", CASE WHEN (arg_max_cte."Proba_0" IS NULL OR arg_max_cte."Proba_0" > 0.0) THEN ln(arg_max_cte."Proba_0") ELSE -1.79769313486231e+308 END AS "LogProba_0", CASE WHEN (arg_max_cte."Proba_1" IS NULL OR arg_max_cte."Proba_1" > 0.0) THEN ln(arg_max_cte."Proba_1") ELSE -1.79769313486231e+308 END AS "LogProba_1", arg_max_cte."arg_max_Proba" AS "Decision", arg_max_cte."max_Proba" AS "DecisionProba" 
 FROM arg_max_cte

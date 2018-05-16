@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table CODEGEN_JNJXVM_HL_1_RELU_1 part 1. Create 
+-- Code For temporary table CODEGEN_5LQR66_HL_1_RELU_1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "CODEGEN_JNJXVM_HL_1_RELU_1" (
+CREATE GLOBAL TEMPORARY TABLE "CODEGEN_5LQR66_HL_1_RELU_1" (
 	"KEY" NUMBER(19), 
 	"NEUR_1_1" BINARY_DOUBLE, 
 	"NEUR_1_2" BINARY_DOUBLE, 
@@ -22,9 +22,9 @@ CREATE GLOBAL TEMPORARY TABLE "CODEGEN_JNJXVM_HL_1_RELU_1" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table CODEGEN_JNJXVM_HL_1_RELU_1 part 2. Populate
+-- Code For temporary table CODEGEN_5LQR66_HL_1_RELU_1 part 2. Populate
 
-INSERT INTO "CODEGEN_JNJXVM_HL_1_RELU_1" ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "U"."KEY", "U"."NEUR_1_1", "U"."NEUR_1_2", "U"."NEUR_1_3" 
+INSERT INTO "CODEGEN_5LQR66_HL_1_RELU_1" ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "U"."KEY", "U"."NEUR_1_1", "U"."NEUR_1_2", "U"."NEUR_1_3" 
 FROM (WITH "IL" AS 
 (SELECT "ADS"."KEY" AS "KEY", CAST("ADS"."Feature_0" AS BINARY_DOUBLE) AS "Feature_0", CAST("ADS"."Feature_1" AS BINARY_DOUBLE) AS "Feature_1", CAST("ADS"."Feature_2" AS BINARY_DOUBLE) AS "Feature_2", CAST("ADS"."Feature_3" AS BINARY_DOUBLE) AS "Feature_3", CAST("ADS"."Feature_4" AS BINARY_DOUBLE) AS "Feature_4", CAST("ADS"."Feature_5" AS BINARY_DOUBLE) AS "Feature_5", CAST("ADS"."Feature_6" AS BINARY_DOUBLE) AS "Feature_6", CAST("ADS"."Feature_7" AS BINARY_DOUBLE) AS "Feature_7", CAST("ADS"."Feature_8" AS BINARY_DOUBLE) AS "Feature_8", CAST("ADS"."Feature_9" AS BINARY_DOUBLE) AS "Feature_9", CAST("ADS"."Feature_10" AS BINARY_DOUBLE) AS "Feature_10", CAST("ADS"."Feature_11" AS BINARY_DOUBLE) AS "Feature_11", CAST("ADS"."Feature_12" AS BINARY_DOUBLE) AS "Feature_12", CAST("ADS"."Feature_13" AS BINARY_DOUBLE) AS "Feature_13", CAST("ADS"."Feature_14" AS BINARY_DOUBLE) AS "Feature_14", CAST("ADS"."Feature_15" AS BINARY_DOUBLE) AS "Feature_15", CAST("ADS"."Feature_16" AS BINARY_DOUBLE) AS "Feature_16", CAST("ADS"."Feature_17" AS BINARY_DOUBLE) AS "Feature_17", CAST("ADS"."Feature_18" AS BINARY_DOUBLE) AS "Feature_18", CAST("ADS"."Feature_19" AS BINARY_DOUBLE) AS "Feature_19", CAST("ADS"."Feature_20" AS BINARY_DOUBLE) AS "Feature_20", CAST("ADS"."Feature_21" AS BINARY_DOUBLE) AS "Feature_21", CAST("ADS"."Feature_22" AS BINARY_DOUBLE) AS "Feature_22", CAST("ADS"."Feature_23" AS BINARY_DOUBLE) AS "Feature_23", CAST("ADS"."Feature_24" AS BINARY_DOUBLE) AS "Feature_24", CAST("ADS"."Feature_25" AS BINARY_DOUBLE) AS "Feature_25", CAST("ADS"."Feature_26" AS BINARY_DOUBLE) AS "Feature_26", CAST("ADS"."Feature_27" AS BINARY_DOUBLE) AS "Feature_27", CAST("ADS"."Feature_28" AS BINARY_DOUBLE) AS "Feature_28", CAST("ADS"."Feature_29" AS BINARY_DOUBLE) AS "Feature_29", CAST("ADS"."Feature_30" AS BINARY_DOUBLE) AS "Feature_30", CAST("ADS"."Feature_31" AS BINARY_DOUBLE) AS "Feature_31", CAST("ADS"."Feature_32" AS BINARY_DOUBLE) AS "Feature_32", CAST("ADS"."Feature_33" AS BINARY_DOUBLE) AS "Feature_33", CAST("ADS"."Feature_34" AS BINARY_DOUBLE) AS "Feature_34", CAST("ADS"."Feature_35" AS BINARY_DOUBLE) AS "Feature_35", CAST("ADS"."Feature_36" AS BINARY_DOUBLE) AS "Feature_36", CAST("ADS"."Feature_37" AS BINARY_DOUBLE) AS "Feature_37", CAST("ADS"."Feature_38" AS BINARY_DOUBLE) AS "Feature_38", CAST("ADS"."Feature_39" AS BINARY_DOUBLE) AS "Feature_39", CAST("ADS"."Feature_40" AS BINARY_DOUBLE) AS "Feature_40", CAST("ADS"."Feature_41" AS BINARY_DOUBLE) AS "Feature_41", CAST("ADS"."Feature_42" AS BINARY_DOUBLE) AS "Feature_42", CAST("ADS"."Feature_43" AS BINARY_DOUBLE) AS "Feature_43", CAST("ADS"."Feature_44" AS BINARY_DOUBLE) AS "Feature_44", CAST("ADS"."Feature_45" AS BINARY_DOUBLE) AS "Feature_45", CAST("ADS"."Feature_46" AS BINARY_DOUBLE) AS "Feature_46", CAST("ADS"."Feature_47" AS BINARY_DOUBLE) AS "Feature_47", CAST("ADS"."Feature_48" AS BINARY_DOUBLE) AS "Feature_48", CAST("ADS"."Feature_49" AS BINARY_DOUBLE) AS "Feature_49", CAST("ADS"."Feature_50" AS BINARY_DOUBLE) AS "Feature_50", CAST("ADS"."Feature_51" AS BINARY_DOUBLE) AS "Feature_51", CAST("ADS"."Feature_52" AS BINARY_DOUBLE) AS "Feature_52", CAST("ADS"."Feature_53" AS BINARY_DOUBLE) AS "Feature_53", CAST("ADS"."Feature_54" AS BINARY_DOUBLE) AS "Feature_54", CAST("ADS"."Feature_55" AS BINARY_DOUBLE) AS "Feature_55", CAST("ADS"."Feature_56" AS BINARY_DOUBLE) AS "Feature_56", CAST("ADS"."Feature_57" AS BINARY_DOUBLE) AS "Feature_57", CAST("ADS"."Feature_58" AS BINARY_DOUBLE) AS "Feature_58", CAST("ADS"."Feature_59" AS BINARY_DOUBLE) AS "Feature_59", CAST("ADS"."Feature_60" AS BINARY_DOUBLE) AS "Feature_60", CAST("ADS"."Feature_61" AS BINARY_DOUBLE) AS "Feature_61", CAST("ADS"."Feature_62" AS BINARY_DOUBLE) AS "Feature_62", CAST("ADS"."Feature_63" AS BINARY_DOUBLE) AS "Feature_63", CAST("ADS"."Feature_64" AS BINARY_DOUBLE) AS "Feature_64", CAST("ADS"."Feature_65" AS BINARY_DOUBLE) AS "Feature_65", CAST("ADS"."Feature_66" AS BINARY_DOUBLE) AS "Feature_66", CAST("ADS"."Feature_67" AS BINARY_DOUBLE) AS "Feature_67", CAST("ADS"."Feature_68" AS BINARY_DOUBLE) AS "Feature_68", CAST("ADS"."Feature_69" AS BINARY_DOUBLE) AS "Feature_69", CAST("ADS"."Feature_70" AS BINARY_DOUBLE) AS "Feature_70", CAST("ADS"."Feature_71" AS BINARY_DOUBLE) AS "Feature_71", CAST("ADS"."Feature_72" AS BINARY_DOUBLE) AS "Feature_72", CAST("ADS"."Feature_73" AS BINARY_DOUBLE) AS "Feature_73", CAST("ADS"."Feature_74" AS BINARY_DOUBLE) AS "Feature_74", CAST("ADS"."Feature_75" AS BINARY_DOUBLE) AS "Feature_75", CAST("ADS"."Feature_76" AS BINARY_DOUBLE) AS "Feature_76", CAST("ADS"."Feature_77" AS BINARY_DOUBLE) AS "Feature_77", CAST("ADS"."Feature_78" AS BINARY_DOUBLE) AS "Feature_78", CAST("ADS"."Feature_79" AS BINARY_DOUBLE) AS "Feature_79", CAST("ADS"."Feature_80" AS BINARY_DOUBLE) AS "Feature_80", CAST("ADS"."Feature_81" AS BINARY_DOUBLE) AS "Feature_81", CAST("ADS"."Feature_82" AS BINARY_DOUBLE) AS "Feature_82", CAST("ADS"."Feature_83" AS BINARY_DOUBLE) AS "Feature_83", CAST("ADS"."Feature_84" AS BINARY_DOUBLE) AS "Feature_84", CAST("ADS"."Feature_85" AS BINARY_DOUBLE) AS "Feature_85", CAST("ADS"."Feature_86" AS BINARY_DOUBLE) AS "Feature_86", CAST("ADS"."Feature_87" AS BINARY_DOUBLE) AS "Feature_87", CAST("ADS"."Feature_88" AS BINARY_DOUBLE) AS "Feature_88", CAST("ADS"."Feature_89" AS BINARY_DOUBLE) AS "Feature_89", CAST("ADS"."Feature_90" AS BINARY_DOUBLE) AS "Feature_90", CAST("ADS"."Feature_91" AS BINARY_DOUBLE) AS "Feature_91", CAST("ADS"."Feature_92" AS BINARY_DOUBLE) AS "Feature_92", CAST("ADS"."Feature_93" AS BINARY_DOUBLE) AS "Feature_93", CAST("ADS"."Feature_94" AS BINARY_DOUBLE) AS "Feature_94", CAST("ADS"."Feature_95" AS BINARY_DOUBLE) AS "Feature_95", CAST("ADS"."Feature_96" AS BINARY_DOUBLE) AS "Feature_96", CAST("ADS"."Feature_97" AS BINARY_DOUBLE) AS "Feature_97", CAST("ADS"."Feature_98" AS BINARY_DOUBLE) AS "Feature_98", CAST("ADS"."Feature_99" AS BINARY_DOUBLE) AS "Feature_99" 
 FROM "BINARYCLASS_100" "ADS"), 
@@ -38,22 +38,22 @@ FROM "HL_BA_1")
 FROM (SELECT "HL_1_relu"."KEY" AS "KEY", "HL_1_relu"."NEUR_1_1" AS "NEUR_1_1", "HL_1_relu"."NEUR_1_2" AS "NEUR_1_2", "HL_1_relu"."NEUR_1_3" AS "NEUR_1_3" 
 FROM "HL_1_relu") "HL_1_relu_1") "U"
 
--- Code For temporary table DEGEN_O98J8G_OL_LOGISTIC_1 part 1. Create 
+-- Code For temporary table DEGEN_8NPVOZ_OL_LOGISTIC_1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "DEGEN_O98J8G_OL_LOGISTIC_1" (
+CREATE GLOBAL TEMPORARY TABLE "DEGEN_8NPVOZ_OL_LOGISTIC_1" (
 	"KEY" NUMBER(19), 
 	"NEUR_3_1" BINARY_DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table DEGEN_O98J8G_OL_LOGISTIC_1 part 2. Populate
+-- Code For temporary table DEGEN_8NPVOZ_OL_LOGISTIC_1 part 2. Populate
 
-INSERT INTO "DEGEN_O98J8G_OL_LOGISTIC_1" ("KEY", "NEUR_3_1") SELECT "U"."KEY", "U"."NEUR_3_1" 
+INSERT INTO "DEGEN_8NPVOZ_OL_LOGISTIC_1" ("KEY", "NEUR_3_1") SELECT "U"."KEY", "U"."NEUR_3_1" 
 FROM (WITH "HL_BA_2" AS 
 (SELECT "HL_1_relu_1"."KEY" AS "KEY", 0.5147985458726192 * "HL_1_relu_1"."NEUR_1_1" + 0.7209459805988819 * "HL_1_relu_1"."NEUR_1_2" + 1.3969064762974124 * "HL_1_relu_1"."NEUR_1_3" + -0.41953234908823284 AS "NEUR_2_1", -0.19388281061373336 * "HL_1_relu_1"."NEUR_1_1" + -0.09655262728288522 * "HL_1_relu_1"."NEUR_1_2" + 0.1925939492527063 * "HL_1_relu_1"."NEUR_1_3" + 2.7845930644168537 AS "NEUR_2_2", -0.37977845315855363 * "HL_1_relu_1"."NEUR_1_1" + 1.3296838800598012 * "HL_1_relu_1"."NEUR_1_2" + 1.0662425817806298 * "HL_1_relu_1"."NEUR_1_3" + -0.20900266243930857 AS "NEUR_2_3", -0.46740821640123237 * "HL_1_relu_1"."NEUR_1_1" + 0.2261203603024419 * "HL_1_relu_1"."NEUR_1_2" + -0.601925421214221 * "HL_1_relu_1"."NEUR_1_3" + 0.8639085215796434 AS "NEUR_2_4", -0.6091649727400567 * "HL_1_relu_1"."NEUR_1_1" + -0.3775557947571933 * "HL_1_relu_1"."NEUR_1_2" + -0.6728008453871377 * "HL_1_relu_1"."NEUR_1_3" + -0.01807831622698608 AS "NEUR_2_5" 
-FROM "CODEGEN_JNJXVM_HL_1_RELU_1" "HL_1_relu_1"), 
+FROM "CODEGEN_5LQR66_HL_1_RELU_1" "HL_1_relu_1"), 
 "HL_2_relu" AS 
 (SELECT "HL_BA_2"."KEY" AS "KEY", greatest("HL_BA_2"."NEUR_2_1", 0) AS "NEUR_2_1", greatest("HL_BA_2"."NEUR_2_2", 0) AS "NEUR_2_2", greatest("HL_BA_2"."NEUR_2_3", 0) AS "NEUR_2_3", greatest("HL_BA_2"."NEUR_2_4", 0) AS "NEUR_2_4", greatest("HL_BA_2"."NEUR_2_5", 0) AS "NEUR_2_5" 
 FROM "HL_BA_2"), 
@@ -71,7 +71,7 @@ FROM "OL_logistic") "OL_logistic_1") "U"
 
 WITH orig_cte AS 
 (SELECT "OL_logistic_1"."KEY" AS "KEY", CAST(NULL AS BINARY_DOUBLE) AS "Score_0", CAST(NULL AS BINARY_DOUBLE) AS "Score_1", 1.0 - "OL_logistic_1"."NEUR_3_1" AS "Proba_0", "OL_logistic_1"."NEUR_3_1" AS "Proba_1", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_0", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_1", CAST(NULL AS NUMBER(19)) AS "Decision", CAST(NULL AS BINARY_DOUBLE) AS "DecisionProba" 
-FROM "DEGEN_O98J8G_OL_LOGISTIC_1" "OL_logistic_1"), 
+FROM "DEGEN_8NPVOZ_OL_LOGISTIC_1" "OL_logistic_1"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

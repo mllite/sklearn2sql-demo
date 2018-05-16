@@ -13,7 +13,7 @@
 -- Model deployment code
 
 WITH linear_input AS 
-(SELECT `ADS`.`KEY` AS `KEY`, `ADS`.`Feature_0` AS `Feature_0`, `ADS`.`Feature_1` AS `Feature_1`, `ADS`.`Feature_2` AS `Feature_2`, `ADS`.`Feature_3` AS `Feature_3` 
+(SELECT `ADS`.`KEY` AS `KEY`, CAST(`ADS`.`Feature_0` AS DOUBLE) AS `Feature_0`, CAST(`ADS`.`Feature_1` AS DOUBLE) AS `Feature_1`, CAST(`ADS`.`Feature_2` AS DOUBLE) AS `Feature_2`, CAST(`ADS`.`Feature_3` AS DOUBLE) AS `Feature_3` 
 FROM iris AS `ADS`), 
 linear_model_cte AS 
 (SELECT linear_input.`KEY` AS `KEY`, 0.11193795454574956 * linear_input.`Feature_0` + 0.4681271348524167 * linear_input.`Feature_1` + -0.4568847949929502 * linear_input.`Feature_2` + -0.09326200207646736 * linear_input.`Feature_3` + -0.5866033593750128 AS `Score_0`, 0.056699806292053734 * linear_input.`Feature_0` + -0.8734626886418957 * linear_input.`Feature_1` + 0.3081230894583017 * linear_input.`Feature_2` + -0.7824141881079334 * linear_input.`Feature_3` + 1.7769019657769787 AS `Score_1`, -0.1686377608378014 * linear_input.`Feature_0` + 0.40533555378947705 * linear_input.`Feature_1` + 0.14876170553464124 * linear_input.`Feature_2` + 0.8756761901844151 * linear_input.`Feature_3` + -2.190298606401961 AS `Score_2` 

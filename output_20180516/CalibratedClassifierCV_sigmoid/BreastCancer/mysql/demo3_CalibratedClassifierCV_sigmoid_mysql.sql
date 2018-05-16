@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180508180635_CODEGEN_BSESLF_CalProb_B0 part 1. Create 
+-- Code For temporary table TMP_20180516111448_CODEGEN_IJIIEZ_CalProb_B0 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180508180635_CODEGEN_BSESLF_CalProb_B0` (
+CREATE TEMPORARY TABLE `TMP_20180516111448_CODEGEN_IJIIEZ_CalProb_B0` (
 	`KEY` BIGINT, 
 	`Proba_1` DOUBLE, 
 	`Proba_0` DOUBLE
@@ -21,14 +21,14 @@ CREATE TEMPORARY TABLE `TMP_20180508180635_CODEGEN_BSESLF_CalProb_B0` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180508180635_CODEGEN_BSESLF_CalProb_B0 part 2. Populate
+-- Code For temporary table TMP_20180516111448_CODEGEN_IJIIEZ_CalProb_B0 part 2. Populate
 
-INSERT INTO `TMP_20180508180635_CODEGEN_BSESLF_CalProb_B0` (`KEY`, `Proba_1`, `Proba_0`) SELECT `U`.`KEY`, `U`.`Proba_1`, `U`.`Proba_0` 
+INSERT INTO `TMP_20180516111448_CODEGEN_IJIIEZ_CalProb_B0` (`KEY`, `Proba_1`, `Proba_0`) SELECT `U`.`KEY`, `U`.`Proba_1`, `U`.`Proba_0` 
 FROM (WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_27` <= 0.14695000648498535) THEN CASE WHEN (`ADS`.`Feature_23` <= 953.9500122070312) THEN CASE WHEN (`ADS`.`Feature_27` <= 0.12229999899864197) THEN CASE WHEN (`ADS`.`Feature_10` <= 0.6431000232696533) THEN 4 ELSE CASE WHEN (`ADS`.`Feature_1` <= 18.934999465942383) THEN 6 ELSE 7 END END ELSE CASE WHEN (`ADS`.`Feature_10` <= 0.40389999747276306) THEN CASE WHEN (`ADS`.`Feature_21` <= 33.915000915527344) THEN 10 ELSE 11 END ELSE CASE WHEN (`ADS`.`Feature_7` <= 0.06902500241994858) THEN 13 ELSE 14 END END END ELSE CASE WHEN (`ADS`.`Feature_26` <= 0.1906999945640564) THEN CASE WHEN (`ADS`.`Feature_22` <= 122.05000305175781) THEN 17 ELSE 18 END ELSE 19 END END ELSE CASE WHEN (`ADS`.`Feature_0` <= 10.405500411987305) THEN 21 ELSE CASE WHEN (`ADS`.`Feature_26` <= 0.20340000092983246) THEN 23 ELSE CASE WHEN (`ADS`.`Feature_7` <= 0.05634000152349472) THEN CASE WHEN (`ADS`.`Feature_7` <= 0.054854996502399445) THEN 26 ELSE 27 END ELSE 28 END END END END AS node_id_2 
 FROM `BreastCancer` AS `ADS`), 
 `DT_node_data` AS 
-(SELECT `Values`.nid AS nid, `Values`.`P_0` AS `P_0`, `Values`.`P_1` AS `P_1`, `Values`.`D` AS `D`, `Values`.`DP` AS `DP` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`P_0` AS DOUBLE) AS `P_0`, CAST(`Values`.`P_1` AS DOUBLE) AS `P_1`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 4 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 11 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 13 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 14 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 17 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 18 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 19 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 21 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 23 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 26 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 27 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 28 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP`) AS `Values`), 
 `DT_Output` AS 
 (SELECT `DT_node_lookup`.`KEY` AS `KEY`, `DT_node_lookup`.node_id_2 AS node_id_2, `DT_node_data`.nid AS nid, `DT_node_data`.`P_0` AS `P_0`, `DT_node_data`.`P_1` AS `P_1`, `DT_node_data`.`D` AS `D`, `DT_node_data`.`DP` AS `DP` 
@@ -46,7 +46,7 @@ FROM sigmoid_calibration_0),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_27` <= 0.1436000019311905) THEN CASE WHEN (`ADS`.`Feature_23` <= 961.550048828125) THEN CASE WHEN (`ADS`.`Feature_18` <= 0.008710499852895737) THEN 3 ELSE CASE WHEN (`ADS`.`Feature_27` <= 0.131850004196167) THEN 5 ELSE CASE WHEN (`ADS`.`Feature_23` <= 779.75) THEN 7 ELSE 8 END END END ELSE 9 END ELSE CASE WHEN (`ADS`.`Feature_16` <= 0.13565000891685486) THEN CASE WHEN (`ADS`.`Feature_6` <= 0.08810999989509583) THEN CASE WHEN (`ADS`.`Feature_28` <= 0.3084000051021576) THEN CASE WHEN (`ADS`.`Feature_20` <= 18.149999618530273) THEN 14 ELSE 15 END ELSE 16 END ELSE 17 END ELSE 18 END END AS node_id_2 
 FROM `BreastCancer` AS `ADS`), 
 `DT_node_data_1` AS 
-(SELECT `Values`.nid AS nid, `Values`.`P_0` AS `P_0`, `Values`.`P_1` AS `P_1`, `Values`.`D` AS `D`, `Values`.`DP` AS `DP` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`P_0` AS DOUBLE) AS `P_0`, CAST(`Values`.`P_1` AS DOUBLE) AS `P_1`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 3 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 5 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 8 AS nid, 0.6666666666666666 AS `P_0`, 0.3333333333333333 AS `P_1`, 0 AS `D`, 0.6666666666666666 AS `DP` UNION ALL SELECT 9 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 14 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 15 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 16 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 17 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 18 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP`) AS `Values`), 
 `DT_Output_1` AS 
 (SELECT `DT_node_lookup_1`.`KEY` AS `KEY`, `DT_node_lookup_1`.node_id_2 AS node_id_2, `DT_node_data_1`.nid AS nid, `DT_node_data_1`.`P_0` AS `P_0`, `DT_node_data_1`.`P_1` AS `P_1`, `DT_node_data_1`.`D` AS `D`, `DT_node_data_1`.`DP` AS `DP` 
@@ -64,7 +64,7 @@ FROM sigmoid_calibration_1),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_27` <= 0.14239999651908875) THEN CASE WHEN (`ADS`.`Feature_23` <= 1058.0) THEN CASE WHEN (`ADS`.`Feature_13` <= 48.70000076293945) THEN CASE WHEN (`ADS`.`Feature_27` <= 0.1221500039100647) THEN 4 ELSE CASE WHEN (`ADS`.`Feature_10` <= 0.41290000081062317) THEN 6 ELSE 7 END END ELSE CASE WHEN (`ADS`.`Feature_4` <= 0.09071999788284302) THEN 9 ELSE CASE WHEN (`ADS`.`Feature_21` <= 20.864999771118164) THEN 11 ELSE 12 END END END ELSE 13 END ELSE CASE WHEN (`ADS`.`Feature_16` <= 0.12630000710487366) THEN CASE WHEN (`ADS`.`Feature_12` <= 1.2384999990463257) THEN 16 ELSE CASE WHEN (`ADS`.`Feature_1` <= 15.345000267028809) THEN CASE WHEN (`ADS`.`Feature_7` <= 0.06742499768733978) THEN 19 ELSE 20 END ELSE 21 END END ELSE 22 END END AS node_id_2 
 FROM `BreastCancer` AS `ADS`), 
 `DT_node_data_2` AS 
-(SELECT `Values`.nid AS nid, `Values`.`P_0` AS `P_0`, `Values`.`P_1` AS `P_1`, `Values`.`D` AS `D`, `Values`.`DP` AS `DP` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`P_0` AS DOUBLE) AS `P_0`, CAST(`Values`.`P_1` AS DOUBLE) AS `P_1`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 4 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS nid, 0.06666666666666667 AS `P_0`, 0.9333333333333333 AS `P_1`, 1 AS `D`, 0.9333333333333333 AS `DP` UNION ALL SELECT 7 AS nid, 0.75 AS `P_0`, 0.25 AS `P_1`, 0 AS `D`, 0.75 AS `DP` UNION ALL SELECT 9 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 11 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 12 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 13 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 16 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 19 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 20 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 21 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 22 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP`) AS `Values`), 
 `DT_Output_2` AS 
 (SELECT `DT_node_lookup_2`.`KEY` AS `KEY`, `DT_node_lookup_2`.node_id_2 AS node_id_2, `DT_node_data_2`.nid AS nid, `DT_node_data_2`.`P_0` AS `P_0`, `DT_node_data_2`.`P_1` AS `P_1`, `DT_node_data_2`.`D` AS `D`, `DT_node_data_2`.`DP` AS `DP` 
@@ -82,7 +82,7 @@ FROM sigmoid_calibration_2),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_27` <= 0.14559999108314514) THEN CASE WHEN (`ADS`.`Feature_23` <= 1058.0) THEN CASE WHEN (`ADS`.`Feature_18` <= 0.010339999571442604) THEN CASE WHEN (`ADS`.`Feature_7` <= 0.03027999959886074) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS`.`Feature_13` <= 32.98500061035156) THEN 7 ELSE CASE WHEN (`ADS`.`Feature_21` <= 29.18000030517578) THEN 9 ELSE 10 END END END ELSE 11 END ELSE CASE WHEN (`ADS`.`Feature_16` <= 0.13565000891685486) THEN CASE WHEN (`ADS`.`Feature_26` <= 0.20340000092983246) THEN 14 ELSE 15 END ELSE 16 END END AS node_id_2 
 FROM `BreastCancer` AS `ADS`), 
 `DT_node_data_3` AS 
-(SELECT `Values`.nid AS nid, `Values`.`P_0` AS `P_0`, `Values`.`P_1` AS `P_1`, `Values`.`D` AS `D`, `Values`.`DP` AS `DP` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`P_0` AS DOUBLE) AS `P_0`, CAST(`Values`.`P_1` AS DOUBLE) AS `P_1`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 4 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 5 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 9 AS nid, 0.047619047619047616 AS `P_0`, 0.9523809523809523 AS `P_1`, 1 AS `D`, 0.9523809523809523 AS `DP` UNION ALL SELECT 10 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 11 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 14 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 15 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 16 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP`) AS `Values`), 
 `DT_Output_3` AS 
 (SELECT `DT_node_lookup_3`.`KEY` AS `KEY`, `DT_node_lookup_3`.node_id_2 AS node_id_2, `DT_node_data_3`.nid AS nid, `DT_node_data_3`.`P_0` AS `P_0`, `DT_node_data_3`.`P_1` AS `P_1`, `DT_node_data_3`.`D` AS `D`, `DT_node_data_3`.`DP` AS `DP` 
@@ -104,29 +104,10 @@ FROM `Normalized_Probas_1` UNION ALL SELECT `Normalized_Probas_2`.`KEY` AS `KEY`
 FROM `Normalized_Probas_2` UNION ALL SELECT `Normalized_Probas_3`.`KEY` AS `KEY`, `Normalized_Probas_3`.`Proba_1` AS `Proba_1`, `Normalized_Probas_3`.`Proba_0` AS `Proba_0` 
 FROM `Normalized_Probas_3`) AS `CalProb_esu_0`) AS `CalProb_B0`) AS `U`
 
--- Code For temporary table TMP_20180508180635_CODEGEN_OT0Q3F_CalProb_Union part 1. Create 
+-- Code For temporary table TMP_20180516111448_CODEGEN_NPU9R4_CalProb_avg part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180508180635_CODEGEN_OT0Q3F_CalProb_Union` (
-	`KEY` BIGINT, 
-	`Proba_1` DOUBLE, 
-	`Proba_0` DOUBLE
-)
-
- ENGINE=MEMORY
-
--- Code For temporary table TMP_20180508180635_CODEGEN_OT0Q3F_CalProb_Union part 2. Populate
-
-INSERT INTO `TMP_20180508180635_CODEGEN_OT0Q3F_CalProb_Union` (`KEY`, `Proba_1`, `Proba_0`) SELECT `U`.`KEY`, `U`.`Proba_1`, `U`.`Proba_0` 
-FROM (SELECT `CalProb_Union`.`KEY`, `CalProb_Union`.`Proba_1`, `CalProb_Union`.`Proba_0` 
-FROM (SELECT `CalProb_EnsembleUnion`.`KEY` AS `KEY`, `CalProb_EnsembleUnion`.`Proba_1` AS `Proba_1`, `CalProb_EnsembleUnion`.`Proba_0` AS `Proba_0` 
-FROM (SELECT `CalProb_B0`.`KEY` AS `KEY`, `CalProb_B0`.`Proba_1` AS `Proba_1`, `CalProb_B0`.`Proba_0` AS `Proba_0` 
-FROM `TMP_20180508180635_CODEGEN_BSESLF_CalProb_B0` AS `CalProb_B0`) AS `CalProb_EnsembleUnion`) AS `CalProb_Union`) AS `U`
-
--- Code For temporary table TMP_20180508180635_CODEGEN_73ZT46_CalProb_avg part 1. Create 
-
-
-CREATE TEMPORARY TABLE `TMP_20180508180635_CODEGEN_73ZT46_CalProb_avg` (
+CREATE TEMPORARY TABLE `TMP_20180516111448_CODEGEN_NPU9R4_CalProb_avg` (
 	`KEY` BIGINT NOT NULL, 
 	`Proba_1` DOUBLE, 
 	`Proba_0` DOUBLE, 
@@ -135,23 +116,27 @@ CREATE TEMPORARY TABLE `TMP_20180508180635_CODEGEN_73ZT46_CalProb_avg` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180508180635_CODEGEN_73ZT46_CalProb_avg part 2. Populate
+-- Code For temporary table TMP_20180516111448_CODEGEN_NPU9R4_CalProb_avg part 2. Populate
 
-INSERT INTO `TMP_20180508180635_CODEGEN_73ZT46_CalProb_avg` (`KEY`, `Proba_1`, `Proba_0`) SELECT `U`.`KEY`, `U`.`Proba_1`, `U`.`Proba_0` 
-FROM (SELECT `CalProb_avg`.`KEY`, `CalProb_avg`.`Proba_1`, `CalProb_avg`.`Proba_0` 
-FROM (SELECT `T`.`KEY` AS `KEY`, `T`.`Proba_1` AS `Proba_1`, `T`.`Proba_0` AS `Proba_0` 
-FROM (SELECT `CalProb_Union`.`KEY` AS `KEY`, avg(`CalProb_Union`.`Proba_1`) AS `Proba_1`, avg(`CalProb_Union`.`Proba_0`) AS `Proba_0` 
-FROM `TMP_20180508180635_CODEGEN_OT0Q3F_CalProb_Union` AS `CalProb_Union` GROUP BY `CalProb_Union`.`KEY`) AS `T`) AS `CalProb_avg`) AS `U`
+INSERT INTO `TMP_20180516111448_CODEGEN_NPU9R4_CalProb_avg` (`KEY`, `Proba_1`, `Proba_0`) SELECT `U`.`KEY`, `U`.`Proba_1`, `U`.`Proba_0` 
+FROM (WITH `CalProb_Union` AS 
+(SELECT `CalProb_EnsembleUnion`.`KEY` AS `KEY`, `CalProb_EnsembleUnion`.`Proba_1` AS `Proba_1`, `CalProb_EnsembleUnion`.`Proba_0` AS `Proba_0` 
+FROM (SELECT `CalProb_B0`.`KEY` AS `KEY`, `CalProb_B0`.`Proba_1` AS `Proba_1`, `CalProb_B0`.`Proba_0` AS `Proba_0` 
+FROM `TMP_20180516111448_CODEGEN_IJIIEZ_CalProb_B0` AS `CalProb_B0`) AS `CalProb_EnsembleUnion`)
+ SELECT `CalProb_avg`.`KEY`, `CalProb_avg`.`Proba_1`, `CalProb_avg`.`Proba_0` 
+FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Proba_1` AS DOUBLE) AS `Proba_1`, CAST(`T`.`Proba_0` AS DOUBLE) AS `Proba_0` 
+FROM (SELECT `CalProb_Union`.`KEY` AS `KEY`, avg(CAST(`CalProb_Union`.`Proba_1` AS DOUBLE)) AS `Proba_1`, avg(CAST(`CalProb_Union`.`Proba_0` AS DOUBLE)) AS `Proba_0` 
+FROM `CalProb_Union` GROUP BY `CalProb_Union`.`KEY`) AS `T`) AS `CalProb_avg`) AS `U`
 
--- Code For temporary table TMP_20180508180635_CODEGEN_73ZT46_CalProb_avg part 3. Create Index 
+-- Code For temporary table TMP_20180516111448_CODEGEN_NPU9R4_CalProb_avg part 3. Create Index 
 
-CREATE INDEX `ix_TMP_20180508180635_CODEGEN_73ZT46_CalProb_avg_KEY` ON `TMP_20180508180635_CODEGEN_73ZT46_CalProb_avg` (`KEY`)
+CREATE INDEX `ix_TMP_20180516111448_CODEGEN_NPU9R4_CalProb_avg_KEY` ON `TMP_20180516111448_CODEGEN_NPU9R4_CalProb_avg` (`KEY`)
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT `CalProb_avg`.`KEY` AS `KEY`, NULL AS `Score_0`, NULL AS `Score_1`, `CalProb_avg`.`Proba_0` AS `Proba_0`, `CalProb_avg`.`Proba_1` AS `Proba_1`, NULL AS `LogProba_0`, NULL AS `LogProba_1`, CAST(NULL AS SIGNED INTEGER) AS `Decision`, NULL AS `DecisionProba` 
-FROM `TMP_20180508180635_CODEGEN_73ZT46_CalProb_avg` AS `CalProb_avg`), 
+FROM `TMP_20180516111448_CODEGEN_NPU9R4_CalProb_avg` AS `CalProb_avg`), 
 score_class_union AS 
 (SELECT scu.`KEY_u` AS `KEY_u`, scu.class AS class, scu.`LogProba` AS `LogProba`, scu.`Proba` AS `Proba`, scu.`Score` AS `Score` 
 FROM (SELECT orig_cte.`KEY` AS `KEY_u`, 0 AS class, orig_cte.`LogProba_0` AS `LogProba`, orig_cte.`Proba_0` AS `Proba`, orig_cte.`Score_0` AS `Score` 

@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180508181223_codegen_auguxt_ads_imp_1_out part 1. Create 
+-- Code For temporary table tmp_20180516112308_codegen_7tdxcy_ads_imp_1_out part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508181223_codegen_auguxt_ads_imp_1_out (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516112308_codegen_7tdxcy_ads_imp_1_out (
 	"KEY" BIGINT, 
 	impter_2 DOUBLE, 
 	impter_3 DOUBLE, 
@@ -29,16 +29,16 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508181223_codegen_auguxt_ads_imp_1_out (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508181223_codegen_auguxt_ads_imp_1_out part 2. Populate
+-- Code For temporary table tmp_20180516112308_codegen_7tdxcy_ads_imp_1_out part 2. Populate
 
-INSERT INTO tmp_20180508181223_codegen_auguxt_ads_imp_1_out SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".impter_2, "ADS_imp_1_OUT".impter_3, "ADS_imp_1_OUT".impter_4, "ADS_imp_1_OUT".impter_5, "ADS_imp_1_OUT".impter_6, "ADS_imp_1_OUT".impter_7, "ADS_imp_1_OUT".impter_8, "ADS_imp_1_OUT".impter_9, "ADS_imp_1_OUT".impter_10, "ADS_imp_1_OUT".impter_11 
+INSERT INTO tmp_20180516112308_codegen_7tdxcy_ads_imp_1_out SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".impter_2, "ADS_imp_1_OUT".impter_3, "ADS_imp_1_OUT".impter_4, "ADS_imp_1_OUT".impter_5, "ADS_imp_1_OUT".impter_6, "ADS_imp_1_OUT".impter_7, "ADS_imp_1_OUT".impter_8, "ADS_imp_1_OUT".impter_9, "ADS_imp_1_OUT".impter_10, "ADS_imp_1_OUT".impter_11 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN -0.003903374463034205 ELSE "ADS"."Feature_0" END AS impter_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 0.6152232215702322 ELSE "ADS"."Feature_1" END AS impter_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 0.042796236914291665 ELSE "ADS"."Feature_2" END AS impter_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 0.7709819558904074 ELSE "ADS"."Feature_3" END AS impter_5, CASE WHEN ("ADS"."Feature_4" IS NULL) THEN -0.43300733624893334 ELSE "ADS"."Feature_4" END AS impter_6, CASE WHEN ("ADS"."Feature_5" IS NULL) THEN -0.0424956965794036 ELSE "ADS"."Feature_5" END AS impter_7, CASE WHEN ("ADS"."Feature_6" IS NULL) THEN -0.29809080119845455 ELSE "ADS"."Feature_6" END AS impter_8, CASE WHEN ("ADS"."Feature_7" IS NULL) THEN 0.14672241507251663 ELSE "ADS"."Feature_7" END AS impter_9, CASE WHEN ("ADS"."Feature_8" IS NULL) THEN 0.01746942384662034 ELSE "ADS"."Feature_8" END AS impter_10, CASE WHEN ("ADS"."Feature_9" IS NULL) THEN 0.11507331415602866 ELSE "ADS"."Feature_9" END AS impter_11 
 FROM "FOURCLASS_10" AS "ADS") AS "ADS_imp_1_OUT"
 
--- Code For temporary table tmp_20180508181223_codegen_7h5zej_ads_sca_2_out part 1. Create 
+-- Code For temporary table tmp_20180516112308_codegen_2wme9t_ads_sca_2_out part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508181223_codegen_7h5zej_ads_sca_2_out (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516112308_codegen_2wme9t_ads_sca_2_out (
 	"KEY" BIGINT, 
 	scaler_2 DOUBLE, 
 	scaler_3 DOUBLE, 
@@ -54,17 +54,17 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508181223_codegen_7h5zej_ads_sca_2_out (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508181223_codegen_7h5zej_ads_sca_2_out part 2. Populate
+-- Code For temporary table tmp_20180516112308_codegen_2wme9t_ads_sca_2_out part 2. Populate
 
-INSERT INTO tmp_20180508181223_codegen_7h5zej_ads_sca_2_out SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_2, "ADS_sca_2_OUT".scaler_3, "ADS_sca_2_OUT".scaler_4, "ADS_sca_2_OUT".scaler_5, "ADS_sca_2_OUT".scaler_6, "ADS_sca_2_OUT".scaler_7, "ADS_sca_2_OUT".scaler_8, "ADS_sca_2_OUT".scaler_9, "ADS_sca_2_OUT".scaler_10, "ADS_sca_2_OUT".scaler_11 
+INSERT INTO tmp_20180516112308_codegen_2wme9t_ads_sca_2_out SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_2, "ADS_sca_2_OUT".scaler_3, "ADS_sca_2_OUT".scaler_4, "ADS_sca_2_OUT".scaler_5, "ADS_sca_2_OUT".scaler_6, "ADS_sca_2_OUT".scaler_7, "ADS_sca_2_OUT".scaler_8, "ADS_sca_2_OUT".scaler_9, "ADS_sca_2_OUT".scaler_10, "ADS_sca_2_OUT".scaler_11 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".impter_2 AS DOUBLE) - -0.003903374463034205) / 0.9795060640183997 AS scaler_2, (CAST("ADS_imp_1_OUT".impter_3 AS DOUBLE) - 0.6152232215702322) / 1.3900807236205235 AS scaler_3, (CAST("ADS_imp_1_OUT".impter_4 AS DOUBLE) - 0.042796236914291665) / 1.4962685135870766 AS scaler_4, (CAST("ADS_imp_1_OUT".impter_5 AS DOUBLE) - 0.7709819558904074) / 2.3333561060111743 AS scaler_5, (CAST("ADS_imp_1_OUT".impter_6 AS DOUBLE) - -0.43300733624893334) / 1.4029757772648748 AS scaler_6, (CAST("ADS_imp_1_OUT".impter_7 AS DOUBLE) - -0.0424956965794036) / 0.9558091076873229 AS scaler_7, (CAST("ADS_imp_1_OUT".impter_8 AS DOUBLE) - -0.29809080119845455) / 1.017013180721433 AS scaler_8, (CAST("ADS_imp_1_OUT".impter_9 AS DOUBLE) - 0.14672241507251663) / 1.600798539929603 AS scaler_9, (CAST("ADS_imp_1_OUT".impter_10 AS DOUBLE) - 0.01746942384662034) / 1.1487296361671415 AS scaler_10, (CAST("ADS_imp_1_OUT".impter_11 AS DOUBLE) - 0.11507331415602866) / 0.9690911857336224 AS scaler_11 
-FROM tmp_20180508181223_codegen_auguxt_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT"
+FROM tmp_20180516112308_codegen_7tdxcy_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT"
 
 -- Model deployment code
 
 WITH random_number_cte AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", random() AS uniform 
-FROM tmp_20180508181223_codegen_7h5zej_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516112308_codegen_2wme9t_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 multinomial_cte AS 
 (SELECT random_number_cte."KEY" AS "KEY", CASE WHEN (random_number_cte.uniform <= 0.225) THEN 0 ELSE CASE WHEN (random_number_cte.uniform <= 0.475) THEN 1 ELSE CASE WHEN (random_number_cte.uniform <= 0.725) THEN 2 ELSE CASE WHEN (random_number_cte.uniform <= 1.0) THEN 3 END END END END AS multinomial_expr 
 FROM random_number_cte), 

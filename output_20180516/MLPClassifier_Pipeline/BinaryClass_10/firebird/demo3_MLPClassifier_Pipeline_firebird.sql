@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180508175918_CODEGEN_0FJA part 1. Create 
+-- Code For temporary table TMP_20180516_CODEGEN_FYH2LK_ADS part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508175918_CODEGEN_0FJA" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_FYH2LK_ADS" (
 	"KEY" BIGINT NOT NULL, 
 	impter_2 DOUBLE PRECISION, 
 	impter_3 DOUBLE PRECISION, 
@@ -30,21 +30,21 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180508175918_CODEGEN_0FJA" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508175918_CODEGEN_0FJA part 2. Populate
+-- Code For temporary table TMP_20180516_CODEGEN_FYH2LK_ADS part 2. Populate
 
-INSERT INTO "TMP_20180508175918_CODEGEN_0FJA" ("KEY", impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT "U"."KEY", "U".impter_2, "U".impter_3, "U".impter_4, "U".impter_5, "U".impter_6, "U".impter_7, "U".impter_8, "U".impter_9, "U".impter_10, "U".impter_11 
+INSERT INTO "TMP_20180516_CODEGEN_FYH2LK_ADS" ("KEY", impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT "U"."KEY", "U".impter_2, "U".impter_3, "U".impter_4, "U".impter_5, "U".impter_6, "U".impter_7, "U".impter_8, "U".impter_9, "U".impter_10, "U".impter_11 
 FROM (SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".impter_2, "ADS_imp_1_OUT".impter_3, "ADS_imp_1_OUT".impter_4, "ADS_imp_1_OUT".impter_5, "ADS_imp_1_OUT".impter_6, "ADS_imp_1_OUT".impter_7, "ADS_imp_1_OUT".impter_8, "ADS_imp_1_OUT".impter_9, "ADS_imp_1_OUT".impter_10, "ADS_imp_1_OUT".impter_11 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN 0.061829205238134496 ELSE "ADS"."Feature_0" END AS impter_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 0.17702463767183324 ELSE "ADS"."Feature_1" END AS impter_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 0.04138385004903454 ELSE "ADS"."Feature_2" END AS impter_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 0.13060646805847148 ELSE "ADS"."Feature_3" END AS impter_5, CASE WHEN ("ADS"."Feature_4" IS NULL) THEN -0.05955810471983082 ELSE "ADS"."Feature_4" END AS impter_6, CASE WHEN ("ADS"."Feature_5" IS NULL) THEN -0.04892908987010584 ELSE "ADS"."Feature_5" END AS impter_7, CASE WHEN ("ADS"."Feature_6" IS NULL) THEN 0.19101797861713127 ELSE "ADS"."Feature_6" END AS impter_8, CASE WHEN ("ADS"."Feature_7" IS NULL) THEN 0.02204959673267471 ELSE "ADS"."Feature_7" END AS impter_9, CASE WHEN ("ADS"."Feature_8" IS NULL) THEN -0.057729814034140035 ELSE "ADS"."Feature_8" END AS impter_10, CASE WHEN ("ADS"."Feature_9" IS NULL) THEN -0.05254959205203237 ELSE "ADS"."Feature_9" END AS impter_11 
 FROM "BinaryClass_10" AS "ADS") AS "ADS_imp_1_OUT") AS "U"
 
--- Code For temporary table TMP_20180508175918_CODEGEN_0FJA part 3. Create Index 
+-- Code For temporary table TMP_20180516_CODEGEN_FYH2LK_ADS part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508175918_C_283d" ON "TMP_20180508175918_CODEGEN_0FJA" ("KEY")
+CREATE INDEX "ix_TMP_20180516_CODEGEN_85af" ON "TMP_20180516_CODEGEN_FYH2LK_ADS" ("KEY")
 
--- Code For temporary table TMP_20180508175918_CODEGEN_IMLN part 1. Create 
+-- Code For temporary table TMP_20180516_CODEGEN_T8AWHT_ADS part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508175918_CODEGEN_IMLN" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_T8AWHT_ADS" (
 	"KEY" BIGINT NOT NULL, 
 	scaler_2 DOUBLE PRECISION, 
 	scaler_3 DOUBLE PRECISION, 
@@ -61,21 +61,21 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180508175918_CODEGEN_IMLN" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508175918_CODEGEN_IMLN part 2. Populate
+-- Code For temporary table TMP_20180516_CODEGEN_T8AWHT_ADS part 2. Populate
 
-INSERT INTO "TMP_20180508175918_CODEGEN_IMLN" ("KEY", scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT "U"."KEY", "U".scaler_2, "U".scaler_3, "U".scaler_4, "U".scaler_5, "U".scaler_6, "U".scaler_7, "U".scaler_8, "U".scaler_9, "U".scaler_10, "U".scaler_11 
+INSERT INTO "TMP_20180516_CODEGEN_T8AWHT_ADS" ("KEY", scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT "U"."KEY", "U".scaler_2, "U".scaler_3, "U".scaler_4, "U".scaler_5, "U".scaler_6, "U".scaler_7, "U".scaler_8, "U".scaler_9, "U".scaler_10, "U".scaler_11 
 FROM (SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_2, "ADS_sca_2_OUT".scaler_3, "ADS_sca_2_OUT".scaler_4, "ADS_sca_2_OUT".scaler_5, "ADS_sca_2_OUT".scaler_6, "ADS_sca_2_OUT".scaler_7, "ADS_sca_2_OUT".scaler_8, "ADS_sca_2_OUT".scaler_9, "ADS_sca_2_OUT".scaler_10, "ADS_sca_2_OUT".scaler_11 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".impter_2 AS DOUBLE PRECISION) - 0.061829205238134496) / 1.2283839562090673 AS scaler_2, (CAST("ADS_imp_1_OUT".impter_3 AS DOUBLE PRECISION) - 0.17702463767183324) / 0.940821656314017 AS scaler_3, (CAST("ADS_imp_1_OUT".impter_4 AS DOUBLE PRECISION) - 0.04138385004903454) / 1.0741824888811282 AS scaler_4, (CAST("ADS_imp_1_OUT".impter_5 AS DOUBLE PRECISION) - 0.13060646805847148) / 1.0792244559733761 AS scaler_5, (CAST("ADS_imp_1_OUT".impter_6 AS DOUBLE PRECISION) - -0.05955810471983082) / 1.1095891190508123 AS scaler_6, (CAST("ADS_imp_1_OUT".impter_7 AS DOUBLE PRECISION) - -0.04892908987010584) / 1.3781871812029047 AS scaler_7, (CAST("ADS_imp_1_OUT".impter_8 AS DOUBLE PRECISION) - 0.19101797861713127) / 0.9735285246303208 AS scaler_8, (CAST("ADS_imp_1_OUT".impter_9 AS DOUBLE PRECISION) - 0.02204959673267471) / 0.47460301203797095 AS scaler_9, (CAST("ADS_imp_1_OUT".impter_10 AS DOUBLE PRECISION) - -0.057729814034140035) / 1.064607524840552 AS scaler_10, (CAST("ADS_imp_1_OUT".impter_11 AS DOUBLE PRECISION) - -0.05254959205203237) / 1.2245328896554564 AS scaler_11 
-FROM "TMP_20180508175918_CODEGEN_0FJA" AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
+FROM "TMP_20180516_CODEGEN_FYH2LK_ADS" AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
 
--- Code For temporary table TMP_20180508175918_CODEGEN_IMLN part 3. Create Index 
+-- Code For temporary table TMP_20180516_CODEGEN_T8AWHT_ADS part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508175918_C_b648" ON "TMP_20180508175918_CODEGEN_IMLN" ("KEY")
+CREATE INDEX "ix_TMP_20180516_CODEGEN_2910" ON "TMP_20180516_CODEGEN_T8AWHT_ADS" ("KEY")
 
--- Code For temporary table TMP_20180508175918_CODEGEN_LX64 part 1. Create 
+-- Code For temporary table TMP_20180516_CODEGEN_G3WS8O_HL_ part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508175918_CODEGEN_LX64" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_G3WS8O_HL_" (
 	"KEY" BIGINT NOT NULL, 
 	"NEUR_1_1" DOUBLE PRECISION, 
 	"NEUR_1_2" DOUBLE PRECISION, 
@@ -85,12 +85,12 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180508175918_CODEGEN_LX64" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508175918_CODEGEN_LX64 part 2. Populate
+-- Code For temporary table TMP_20180516_CODEGEN_G3WS8O_HL_ part 2. Populate
 
-INSERT INTO "TMP_20180508175918_CODEGEN_LX64" ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "U"."KEY", "U"."NEUR_1_1", "U"."NEUR_1_2", "U"."NEUR_1_3" 
+INSERT INTO "TMP_20180516_CODEGEN_G3WS8O_HL_" ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "U"."KEY", "U"."NEUR_1_1", "U"."NEUR_1_2", "U"."NEUR_1_3" 
 FROM (WITH "IL" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CAST("ADS_sca_2_OUT".scaler_2 AS DOUBLE PRECISION) AS scaler_2, CAST("ADS_sca_2_OUT".scaler_3 AS DOUBLE PRECISION) AS scaler_3, CAST("ADS_sca_2_OUT".scaler_4 AS DOUBLE PRECISION) AS scaler_4, CAST("ADS_sca_2_OUT".scaler_5 AS DOUBLE PRECISION) AS scaler_5, CAST("ADS_sca_2_OUT".scaler_6 AS DOUBLE PRECISION) AS scaler_6, CAST("ADS_sca_2_OUT".scaler_7 AS DOUBLE PRECISION) AS scaler_7, CAST("ADS_sca_2_OUT".scaler_8 AS DOUBLE PRECISION) AS scaler_8, CAST("ADS_sca_2_OUT".scaler_9 AS DOUBLE PRECISION) AS scaler_9, CAST("ADS_sca_2_OUT".scaler_10 AS DOUBLE PRECISION) AS scaler_10, CAST("ADS_sca_2_OUT".scaler_11 AS DOUBLE PRECISION) AS scaler_11 
-FROM "TMP_20180508175918_CODEGEN_IMLN" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180516_CODEGEN_T8AWHT_ADS" AS "ADS_sca_2_OUT"), 
 "HL_BA_1" AS 
 (SELECT "IL"."KEY" AS "KEY", -1.2291738206465406 * "IL".scaler_2 + -0.44317169637691983 * "IL".scaler_3 + -6.22006154247899 * "IL".scaler_4 + 4.736890804741012 * "IL".scaler_5 + -4.518618649149406 * "IL".scaler_6 + 1.8384251561794194 * "IL".scaler_7 + -4.958425781258579 * "IL".scaler_8 + -1.0217164285564015 * "IL".scaler_9 + 3.991183151986695 * "IL".scaler_10 + 0.5953588139039006 * "IL".scaler_11 + -11.514274132947653 AS "NEUR_1_1", 4.849740316809067 * "IL".scaler_2 + -1.957909966616575 * "IL".scaler_3 + 1.7419475068931456 * "IL".scaler_4 + 2.6883553785798506 * "IL".scaler_5 + 2.7210066239357973 * "IL".scaler_6 + 0.4430083738540236 * "IL".scaler_7 + -2.5350937161342135 * "IL".scaler_8 + 4.189809604990259 * "IL".scaler_9 + 1.5829640938909209 * "IL".scaler_10 + -4.959454448260075 * "IL".scaler_11 + -5.617857660142282 AS "NEUR_1_2", -9.879395022080123 * "IL".scaler_2 + 0.6027222826312422 * "IL".scaler_3 + -1.9837041650791942 * "IL".scaler_4 + 2.1799080389519636 * "IL".scaler_5 + 0.9655321494734407 * "IL".scaler_6 + -5.646786773738612 * "IL".scaler_7 + -6.9569479081569146 * "IL".scaler_8 + -12.022815223121043 * "IL".scaler_9 + -1.751672293400061 * "IL".scaler_10 + 12.848545488308751 * "IL".scaler_11 + -1.2707210199262382 AS "NEUR_1_3" 
 FROM "IL"), 
@@ -101,14 +101,14 @@ FROM "HL_BA_1")
 FROM (SELECT "HL_1_relu"."KEY" AS "KEY", "HL_1_relu"."NEUR_1_1" AS "NEUR_1_1", "HL_1_relu"."NEUR_1_2" AS "NEUR_1_2", "HL_1_relu"."NEUR_1_3" AS "NEUR_1_3" 
 FROM "HL_1_relu") AS "HL_1_relu_1") AS "U"
 
--- Code For temporary table TMP_20180508175918_CODEGEN_LX64 part 3. Create Index 
+-- Code For temporary table TMP_20180516_CODEGEN_G3WS8O_HL_ part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508175918_C_99ad" ON "TMP_20180508175918_CODEGEN_LX64" ("KEY")
+CREATE INDEX "ix_TMP_20180516_CODEGEN_d457" ON "TMP_20180516_CODEGEN_G3WS8O_HL_" ("KEY")
 
--- Code For temporary table TMP_20180508175918_CODEGEN_DEY6 part 1. Create 
+-- Code For temporary table TMP_20180516_CODEGEN_7C6YLX_OL_ part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508175918_CODEGEN_DEY6" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_7C6YLX_OL_" (
 	"KEY" BIGINT NOT NULL, 
 	"NEUR_3_1" DOUBLE PRECISION, 
 	PRIMARY KEY ("KEY")
@@ -116,12 +116,12 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180508175918_CODEGEN_DEY6" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508175918_CODEGEN_DEY6 part 2. Populate
+-- Code For temporary table TMP_20180516_CODEGEN_7C6YLX_OL_ part 2. Populate
 
-INSERT INTO "TMP_20180508175918_CODEGEN_DEY6" ("KEY", "NEUR_3_1") SELECT "U"."KEY", "U"."NEUR_3_1" 
+INSERT INTO "TMP_20180516_CODEGEN_7C6YLX_OL_" ("KEY", "NEUR_3_1") SELECT "U"."KEY", "U"."NEUR_3_1" 
 FROM (WITH "HL_BA_2" AS 
 (SELECT "HL_1_relu_1"."KEY" AS "KEY", -0.8520497139894875 * "HL_1_relu_1"."NEUR_1_1" + 1.7867868070308317 * "HL_1_relu_1"."NEUR_1_2" + -0.46628369321020363 * "HL_1_relu_1"."NEUR_1_3" + -4.635185927964297 AS "NEUR_2_1", -7.055592272867236 * "HL_1_relu_1"."NEUR_1_1" + -3.4000386062708663 * "HL_1_relu_1"."NEUR_1_2" + -3.3411671041483966 * "HL_1_relu_1"."NEUR_1_3" + 11.460390990477046 AS "NEUR_2_2", 9.857210563102226 * "HL_1_relu_1"."NEUR_1_1" + 0.073248443543515 * "HL_1_relu_1"."NEUR_1_2" + 10.042939813588413 * "HL_1_relu_1"."NEUR_1_3" + 1.9130265980497863 AS "NEUR_2_3", 0.11106294924142092 * "HL_1_relu_1"."NEUR_1_1" + -0.5046181300489267 * "HL_1_relu_1"."NEUR_1_2" + -0.4065313614075041 * "HL_1_relu_1"."NEUR_1_3" + -0.7964330424336139 AS "NEUR_2_4", -0.5675058168522041 * "HL_1_relu_1"."NEUR_1_1" + 3.045018623131223 * "HL_1_relu_1"."NEUR_1_2" + -0.5289175218731604 * "HL_1_relu_1"."NEUR_1_3" + -8.406420164162995 AS "NEUR_2_5" 
-FROM "TMP_20180508175918_CODEGEN_LX64" AS "HL_1_relu_1"), 
+FROM "TMP_20180516_CODEGEN_G3WS8O_HL_" AS "HL_1_relu_1"), 
 "HL_2_relu" AS 
 (SELECT "HL_BA_2"."KEY" AS "KEY", maxvalue("HL_BA_2"."NEUR_2_1", 0) AS "NEUR_2_1", maxvalue("HL_BA_2"."NEUR_2_2", 0) AS "NEUR_2_2", maxvalue("HL_BA_2"."NEUR_2_3", 0) AS "NEUR_2_3", maxvalue("HL_BA_2"."NEUR_2_4", 0) AS "NEUR_2_4", maxvalue("HL_BA_2"."NEUR_2_5", 0) AS "NEUR_2_5" 
 FROM "HL_BA_2"), 
@@ -135,15 +135,15 @@ FROM "OL_BA")
 FROM (SELECT "OL_logistic"."KEY" AS "KEY", "OL_logistic"."NEUR_3_1" AS "NEUR_3_1" 
 FROM "OL_logistic") AS "OL_logistic_1") AS "U"
 
--- Code For temporary table TMP_20180508175918_CODEGEN_DEY6 part 3. Create Index 
+-- Code For temporary table TMP_20180516_CODEGEN_7C6YLX_OL_ part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508175918_C_2e6d" ON "TMP_20180508175918_CODEGEN_DEY6" ("KEY")
+CREATE INDEX "ix_TMP_20180516_CODEGEN_e9fc" ON "TMP_20180516_CODEGEN_7C6YLX_OL_" ("KEY")
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT "OL_logistic_1"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_1", 1.0 - "OL_logistic_1"."NEUR_3_1" AS "Proba_0", "OL_logistic_1"."NEUR_3_1" AS "Proba_1", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_0", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_1", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba" 
-FROM "TMP_20180508175918_CODEGEN_DEY6" AS "OL_logistic_1"), 
+FROM "TMP_20180516_CODEGEN_7C6YLX_OL_" AS "OL_logistic_1"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 
@@ -161,5 +161,5 @@ arg_max_cte AS
 FROM score_max LEFT OUTER JOIN (SELECT union_with_max."KEY" AS "KEY_Proba", min(union_with_max.class) AS "arg_max_Proba" 
 FROM union_with_max 
 WHERE union_with_max."max_Proba" <= union_with_max."Proba" GROUP BY union_with_max."KEY") AS "arg_max_t_Proba" ON score_max."KEY" = "arg_max_t_Proba"."KEY_Proba")
- SELECT arg_max_cte."KEY" AS "KEY", arg_max_cte."Score_0" AS "Score_0", arg_max_cte."Score_1" AS "Score_1", arg_max_cte."Proba_0" AS "Proba_0", arg_max_cte."Proba_1" AS "Proba_1", CASE WHEN (arg_max_cte."Proba_0" IS NULL OR arg_max_cte."Proba_0" > 0.0) THEN ln(arg_max_cte."Proba_0") ELSE -1e+20 END AS "LogProba_0", CASE WHEN (arg_max_cte."Proba_1" IS NULL OR arg_max_cte."Proba_1" > 0.0) THEN ln(arg_max_cte."Proba_1") ELSE -1e+20 END AS "LogProba_1", arg_max_cte."arg_max_Proba" AS "Decision", arg_max_cte."max_Proba" AS "DecisionProba" 
+ SELECT arg_max_cte."KEY" AS "KEY", arg_max_cte."Score_0" AS "Score_0", arg_max_cte."Score_1" AS "Score_1", arg_max_cte."Proba_0" AS "Proba_0", arg_max_cte."Proba_1" AS "Proba_1", CASE WHEN (arg_max_cte."Proba_0" IS NULL OR arg_max_cte."Proba_0" > 0.0) THEN ln(arg_max_cte."Proba_0") ELSE -1.79769313486231e+308 END AS "LogProba_0", CASE WHEN (arg_max_cte."Proba_1" IS NULL OR arg_max_cte."Proba_1" > 0.0) THEN ln(arg_max_cte."Proba_1") ELSE -1.79769313486231e+308 END AS "LogProba_1", arg_max_cte."arg_max_Proba" AS "Decision", arg_max_cte."max_Proba" AS "DecisionProba" 
 FROM arg_max_cte

@@ -10,24 +10,24 @@
 
 
 
--- Code For temporary table TMP_20180508182227_CODEGEN_AJB0R9_LGBM_B0 part 1. Create 
+-- Code For temporary table TMP_20180516113712_CODEGEN_8LVRTK_LGBM_B0 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180508182227_CODEGEN_AJB0R9_LGBM_B0` (
+CREATE TEMPORARY TABLE `TMP_20180516113712_CODEGEN_8LVRTK_LGBM_B0` (
 	`KEY` BIGINT, 
 	`Estimator` DOUBLE
 )
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180508182227_CODEGEN_AJB0R9_LGBM_B0 part 2. Populate
+-- Code For temporary table TMP_20180516113712_CODEGEN_8LVRTK_LGBM_B0 part 2. Populate
 
-INSERT INTO `TMP_20180508182227_CODEGEN_AJB0R9_LGBM_B0` (`KEY`, `Estimator`) SELECT `U`.`KEY`, `U`.`Estimator` 
+INSERT INTO `TMP_20180516113712_CODEGEN_8LVRTK_LGBM_B0` (`KEY`, `Estimator`) SELECT `U`.`KEY`, `U`.`Estimator` 
 FROM (WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` <= 0.4633442915635686) THEN CASE WHEN (`ADS`.`Feature_6` <= -0.19785263541739564) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `RandomReg_10` AS `ADS`), 
 `DT_node_data` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 3 AS nid, 32.746200772783446 AS `Estimator` UNION ALL SELECT 4 AS nid, 16.35685888558626 AS `Estimator` UNION ALL SELECT 5 AS nid, 26.55858030807355 AS `Estimator`) AS `Values`), 
 `DT_Output` AS 
 (SELECT `DT_node_lookup`.`KEY` AS `KEY`, `DT_node_lookup`.node_id_2 AS node_id_2, `DT_node_data`.nid AS nid, `DT_node_data`.`Estimator` AS `Estimator` 
@@ -39,7 +39,7 @@ FROM `DT_Output`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` <= 0.4633442915635686) THEN CASE WHEN (`ADS`.`Feature_6` <= -0.19785263541739564) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `RandomReg_10` AS `ADS`), 
 `DT_node_data_1` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 3 AS nid, 6.023330282395886 AS `Estimator` UNION ALL SELECT 4 AS nid, -9.546544489860535 AS `Estimator` UNION ALL SELECT 5 AS nid, 0.14509103724668768 AS `Estimator`) AS `Values`), 
 `DT_Output_1` AS 
 (SELECT `DT_node_lookup_1`.`KEY` AS `KEY`, `DT_node_lookup_1`.node_id_2 AS node_id_2, `DT_node_data_1`.nid AS nid, `DT_node_data_1`.`Estimator` AS `Estimator` 
@@ -51,7 +51,7 @@ FROM `DT_Output_1`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` <= 0.4633442915635686) THEN CASE WHEN (`ADS`.`Feature_5` <= 0.45500511241557645) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `RandomReg_10` AS `ADS`), 
 `DT_node_data_2` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 3 AS nid, 5.722164007084024 AS `Estimator` UNION ALL SELECT 4 AS nid, -7.8801029828878555 AS `Estimator` UNION ALL SELECT 5 AS nid, 1.1954605499039526 AS `Estimator`) AS `Values`), 
 `DT_Output_2` AS 
 (SELECT `DT_node_lookup_2`.`KEY` AS `KEY`, `DT_node_lookup_2`.node_id_2 AS node_id_2, `DT_node_data_2`.nid AS nid, `DT_node_data_2`.`Estimator` AS `Estimator` 
@@ -63,7 +63,7 @@ FROM `DT_Output_2`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_1` <= -0.6104019941272986) THEN 2 ELSE CASE WHEN (`ADS`.`Feature_2` <= 0.4633442915635686) THEN 6 ELSE 7 END END AS node_id_2 
 FROM `RandomReg_10` AS `ADS`), 
 `DT_node_data_3` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 2 AS nid, -6.086806035262567 AS `Estimator` UNION ALL SELECT 6 AS nid, -0.8521560813441422 AS `Estimator` UNION ALL SELECT 7 AS nid, 9.623245660066605 AS `Estimator`) AS `Values`), 
 `DT_Output_3` AS 
 (SELECT `DT_node_lookup_3`.`KEY` AS `KEY`, `DT_node_lookup_3`.node_id_2 AS node_id_2, `DT_node_data_3`.nid AS nid, `DT_node_data_3`.`Estimator` AS `Estimator` 
@@ -75,7 +75,7 @@ FROM `DT_Output_3`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_8` <= -0.15789261826699202) THEN 2 ELSE CASE WHEN (`ADS`.`Feature_2` <= 0.18410375978829144) THEN 6 ELSE 7 END END AS node_id_2 
 FROM `RandomReg_10` AS `ADS`), 
 `DT_node_data_4` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 2 AS nid, -4.65805237342914 AS `Estimator` UNION ALL SELECT 6 AS nid, -1.8667952474951743 AS `Estimator` UNION ALL SELECT 7 AS nid, 8.542741489410401 AS `Estimator`) AS `Values`), 
 `DT_Output_4` AS 
 (SELECT `DT_node_lookup_4`.`KEY` AS `KEY`, `DT_node_lookup_4`.node_id_2 AS node_id_2, `DT_node_data_4`.nid AS nid, `DT_node_data_4`.`Estimator` AS `Estimator` 
@@ -87,7 +87,7 @@ FROM `DT_Output_4`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_1` <= -0.19500725638808467) THEN 2 ELSE CASE WHEN (`ADS`.`Feature_8` <= -0.08420545265254369) THEN 6 ELSE 7 END END AS node_id_2 
 FROM `RandomReg_10` AS `ADS`), 
 `DT_node_data_5` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 2 AS nid, -4.193964002723209 AS `Estimator` UNION ALL SELECT 6 AS nid, 0.2966920852661133 AS `Estimator` UNION ALL SELECT 7 AS nid, 7.866703109741211 AS `Estimator`) AS `Values`), 
 `DT_Output_5` AS 
 (SELECT `DT_node_lookup_5`.`KEY` AS `KEY`, `DT_node_lookup_5`.node_id_2 AS node_id_2, `DT_node_data_5`.nid AS nid, `DT_node_data_5`.`Estimator` AS `Estimator` 
@@ -99,7 +99,7 @@ FROM `DT_Output_5`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` <= 0.5585674071555415) THEN CASE WHEN (`ADS`.`Feature_7` <= 0.16329535342121068) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `RandomReg_10` AS `ADS`), 
 `DT_node_data_6` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 3 AS nid, 5.493027937412262 AS `Estimator` UNION ALL SELECT 4 AS nid, -6.561676018238067 AS `Estimator` UNION ALL SELECT 5 AS nid, 1.9566135623238303 AS `Estimator`) AS `Values`), 
 `DT_Output_6` AS 
 (SELECT `DT_node_lookup_6`.`KEY` AS `KEY`, `DT_node_lookup_6`.node_id_2 AS node_id_2, `DT_node_data_6`.nid AS nid, `DT_node_data_6`.`Estimator` AS `Estimator` 
@@ -111,7 +111,7 @@ FROM `DT_Output_6`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_1` <= -0.6104019941272986) THEN 2 ELSE CASE WHEN (`ADS`.`Feature_8` <= -0.15789261826699202) THEN 6 ELSE 7 END END AS node_id_2 
 FROM `RandomReg_10` AS `ADS`), 
 `DT_node_data_7` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 2 AS nid, -5.50080465608173 AS `Estimator` UNION ALL SELECT 6 AS nid, -2.7341144788832894 AS `Estimator` UNION ALL SELECT 7 AS nid, 6.435566604137421 AS `Estimator`) AS `Values`), 
 `DT_Output_7` AS 
 (SELECT `DT_node_lookup_7`.`KEY` AS `KEY`, `DT_node_lookup_7`.node_id_2 AS node_id_2, `DT_node_data_7`.nid AS nid, `DT_node_data_7`.`Estimator` AS `Estimator` 
@@ -123,7 +123,7 @@ FROM `DT_Output_7`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_4` <= -0.5162992655484951) THEN 2 ELSE CASE WHEN (`ADS`.`Feature_2` <= 0.4633442915635686) THEN 6 ELSE 7 END END AS node_id_2 
 FROM `RandomReg_10` AS `ADS`), 
 `DT_node_data_8` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 2 AS nid, -4.967426937421163 AS `Estimator` UNION ALL SELECT 6 AS nid, -0.6187176295689175 AS `Estimator` UNION ALL SELECT 7 AS nid, 7.561222980239176 AS `Estimator`) AS `Values`), 
 `DT_Output_8` AS 
 (SELECT `DT_node_lookup_8`.`KEY` AS `KEY`, `DT_node_lookup_8`.node_id_2 AS node_id_2, `DT_node_data_8`.nid AS nid, `DT_node_data_8`.`Estimator` AS `Estimator` 
@@ -135,7 +135,7 @@ FROM `DT_Output_8`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_5` <= -0.4875688158672278) THEN 2 ELSE CASE WHEN (`ADS`.`Feature_8` <= -0.15789261826699202) THEN 6 ELSE 7 END END AS node_id_2 
 FROM `RandomReg_10` AS `ADS`), 
 `DT_node_data_9` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 2 AS nid, -6.317852896735783 AS `Estimator` UNION ALL SELECT 6 AS nid, -2.838640162785506 AS `Estimator` UNION ALL SELECT 7 AS nid, 7.166515947977702 AS `Estimator`) AS `Values`), 
 `DT_Output_9` AS 
 (SELECT `DT_node_lookup_9`.`KEY` AS `KEY`, `DT_node_lookup_9`.node_id_2 AS node_id_2, `DT_node_data_9`.nid AS nid, `DT_node_data_9`.`Estimator` AS `Estimator` 
@@ -157,24 +157,24 @@ FROM `LGBM_Model_7` UNION ALL SELECT `LGBM_Model_8`.`KEY` AS `KEY`, `LGBM_Model_
 FROM `LGBM_Model_8` UNION ALL SELECT `LGBM_Model_9`.`KEY` AS `KEY`, `LGBM_Model_9`.`Estimator` AS `Estimator` 
 FROM `LGBM_Model_9`) AS `LGBM_esu_0`) AS `LGBM_B0`) AS `U`
 
--- Code For temporary table TMP_20180508182227_CODEGEN_2ZXZ5E_LGBM_B1 part 1. Create 
+-- Code For temporary table TMP_20180516113712_CODEGEN_18WNAK_LGBM_B1 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180508182227_CODEGEN_2ZXZ5E_LGBM_B1` (
+CREATE TEMPORARY TABLE `TMP_20180516113712_CODEGEN_18WNAK_LGBM_B1` (
 	`KEY` BIGINT, 
 	`Estimator` DOUBLE
 )
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180508182227_CODEGEN_2ZXZ5E_LGBM_B1 part 2. Populate
+-- Code For temporary table TMP_20180516113712_CODEGEN_18WNAK_LGBM_B1 part 2. Populate
 
-INSERT INTO `TMP_20180508182227_CODEGEN_2ZXZ5E_LGBM_B1` (`KEY`, `Estimator`) SELECT `U`.`KEY`, `U`.`Estimator` 
+INSERT INTO `TMP_20180516113712_CODEGEN_18WNAK_LGBM_B1` (`KEY`, `Estimator`) SELECT `U`.`KEY`, `U`.`Estimator` 
 FROM (WITH `DT_node_lookup_10` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_1` <= -0.19500725638808467) THEN 2 ELSE CASE WHEN (`ADS`.`Feature_8` <= -0.08420545265254369) THEN 6 ELSE 7 END END AS node_id_2 
 FROM `RandomReg_10` AS `ADS`), 
 `DT_node_data_10` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 2 AS nid, -3.7725048169111597 AS `Estimator` UNION ALL SELECT 6 AS nid, 0.43184781528654553 AS `Estimator` UNION ALL SELECT 7 AS nid, 6.902944211959839 AS `Estimator`) AS `Values`), 
 `DT_Output_10` AS 
 (SELECT `DT_node_lookup_10`.`KEY` AS `KEY`, `DT_node_lookup_10`.node_id_2 AS node_id_2, `DT_node_data_10`.nid AS nid, `DT_node_data_10`.`Estimator` AS `Estimator` 
@@ -186,7 +186,7 @@ FROM `DT_Output_10`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` <= 0.4633442915635686) THEN CASE WHEN (`ADS`.`Feature_5` <= 0.637277131244996) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `RandomReg_10` AS `ADS`), 
 `DT_node_data_11` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 3 AS nid, 4.561142703794665 AS `Estimator` UNION ALL SELECT 4 AS nid, -6.227999674862829 AS `Estimator` UNION ALL SELECT 5 AS nid, 1.9608283829689026 AS `Estimator`) AS `Values`), 
 `DT_Output_11` AS 
 (SELECT `DT_node_lookup_11`.`KEY` AS `KEY`, `DT_node_lookup_11`.node_id_2 AS node_id_2, `DT_node_data_11`.nid AS nid, `DT_node_data_11`.`Estimator` AS `Estimator` 
@@ -198,7 +198,7 @@ FROM `DT_Output_11`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_4` <= -0.5162992655484951) THEN 2 ELSE CASE WHEN (`ADS`.`Feature_2` <= 0.4633442915635686) THEN 6 ELSE 7 END END AS node_id_2 
 FROM `RandomReg_10` AS `ADS`), 
 `DT_node_data_12` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 2 AS nid, -4.607918028235436 AS `Estimator` UNION ALL SELECT 6 AS nid, -0.47535212093165946 AS `Estimator` UNION ALL SELECT 7 AS nid, 6.888518155162984 AS `Estimator`) AS `Values`), 
 `DT_Output_12` AS 
 (SELECT `DT_node_lookup_12`.`KEY` AS `KEY`, `DT_node_lookup_12`.node_id_2 AS node_id_2, `DT_node_data_12`.nid AS nid, `DT_node_data_12`.`Estimator` AS `Estimator` 
@@ -210,7 +210,7 @@ FROM `DT_Output_12`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_1` <= -0.19500725638808467) THEN 2 ELSE CASE WHEN (`ADS`.`Feature_8` <= -0.08420545265254369) THEN 6 ELSE 7 END END AS node_id_2 
 FROM `RandomReg_10` AS `ADS`), 
 `DT_node_data_13` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 2 AS nid, -3.5869268933931986 AS `Estimator` UNION ALL SELECT 6 AS nid, 0.42814759643515576 AS `Estimator` UNION ALL SELECT 7 AS nid, 6.544952235221863 AS `Estimator`) AS `Values`), 
 `DT_Output_13` AS 
 (SELECT `DT_node_lookup_13`.`KEY` AS `KEY`, `DT_node_lookup_13`.node_id_2 AS node_id_2, `DT_node_data_13`.nid AS nid, `DT_node_data_13`.`Estimator` AS `Estimator` 
@@ -222,7 +222,7 @@ FROM `DT_Output_13`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_5` <= -0.4875688158672278) THEN 2 ELSE CASE WHEN (`ADS`.`Feature_8` <= -0.15789261826699202) THEN 6 ELSE 7 END END AS node_id_2 
 FROM `RandomReg_10` AS `ADS`), 
 `DT_node_data_14` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 2 AS nid, -5.782482641722475 AS `Estimator` UNION ALL SELECT 6 AS nid, -2.475708982245676 AS `Estimator` UNION ALL SELECT 7 AS nid, 6.440923217137655 AS `Estimator`) AS `Values`), 
 `DT_Output_14` AS 
 (SELECT `DT_node_lookup_14`.`KEY` AS `KEY`, `DT_node_lookup_14`.node_id_2 AS node_id_2, `DT_node_data_14`.nid AS nid, `DT_node_data_14`.`Estimator` AS `Estimator` 
@@ -234,7 +234,7 @@ FROM `DT_Output_14`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_4` <= -0.5162992655484951) THEN 2 ELSE CASE WHEN (`ADS`.`Feature_2` <= 0.4633442915635686) THEN 6 ELSE 7 END END AS node_id_2 
 FROM `RandomReg_10` AS `ADS`), 
 `DT_node_data_15` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 2 AS nid, -4.313408274650574 AS `Estimator` UNION ALL SELECT 6 AS nid, -0.4734426932675498 AS `Estimator` UNION ALL SELECT 7 AS nid, 6.484483802047643 AS `Estimator`) AS `Values`), 
 `DT_Output_15` AS 
 (SELECT `DT_node_lookup_15`.`KEY` AS `KEY`, `DT_node_lookup_15`.node_id_2 AS node_id_2, `DT_node_data_15`.nid AS nid, `DT_node_data_15`.`Estimator` AS `Estimator` 
@@ -252,29 +252,10 @@ FROM `LGBM_Model_13` UNION ALL SELECT `LGBM_Model_14`.`KEY` AS `KEY`, `LGBM_Mode
 FROM `LGBM_Model_14` UNION ALL SELECT `LGBM_Model_15`.`KEY` AS `KEY`, `LGBM_Model_15`.`Estimator` AS `Estimator` 
 FROM `LGBM_Model_15`) AS `LGBM_esu_1`) AS `LGBM_B1`) AS `U`
 
--- Code For temporary table TMP_20180508182227_CODEGEN_MLTP7O_LGBM_Union part 1. Create 
+-- Code For temporary table TMP_20180516113712_CODEGEN_JRT9JB_LGBM_sum part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180508182227_CODEGEN_MLTP7O_LGBM_Union` (
-	`KEY` BIGINT, 
-	`Estimator` DOUBLE
-)
-
- ENGINE=MEMORY
-
--- Code For temporary table TMP_20180508182227_CODEGEN_MLTP7O_LGBM_Union part 2. Populate
-
-INSERT INTO `TMP_20180508182227_CODEGEN_MLTP7O_LGBM_Union` (`KEY`, `Estimator`) SELECT `U`.`KEY`, `U`.`Estimator` 
-FROM (SELECT `LGBM_Union`.`KEY`, `LGBM_Union`.`Estimator` 
-FROM (SELECT `LGBM_EnsembleUnion`.`KEY` AS `KEY`, `LGBM_EnsembleUnion`.`Estimator` AS `Estimator` 
-FROM (SELECT `LGBM_B0`.`KEY` AS `KEY`, `LGBM_B0`.`Estimator` AS `Estimator` 
-FROM `TMP_20180508182227_CODEGEN_AJB0R9_LGBM_B0` AS `LGBM_B0` UNION ALL SELECT `LGBM_B1`.`KEY` AS `KEY`, `LGBM_B1`.`Estimator` AS `Estimator` 
-FROM `TMP_20180508182227_CODEGEN_2ZXZ5E_LGBM_B1` AS `LGBM_B1`) AS `LGBM_EnsembleUnion`) AS `LGBM_Union`) AS `U`
-
--- Code For temporary table TMP_20180508182227_CODEGEN_DMJ421_LGBM_sum part 1. Create 
-
-
-CREATE TEMPORARY TABLE `TMP_20180508182227_CODEGEN_DMJ421_LGBM_sum` (
+CREATE TEMPORARY TABLE `TMP_20180516113712_CODEGEN_JRT9JB_LGBM_sum` (
 	`KEY` BIGINT NOT NULL, 
 	`Estimator` DOUBLE, 
 	PRIMARY KEY (`KEY`)
@@ -282,19 +263,24 @@ CREATE TEMPORARY TABLE `TMP_20180508182227_CODEGEN_DMJ421_LGBM_sum` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180508182227_CODEGEN_DMJ421_LGBM_sum part 2. Populate
+-- Code For temporary table TMP_20180516113712_CODEGEN_JRT9JB_LGBM_sum part 2. Populate
 
-INSERT INTO `TMP_20180508182227_CODEGEN_DMJ421_LGBM_sum` (`KEY`, `Estimator`) SELECT `U`.`KEY`, `U`.`Estimator` 
-FROM (SELECT `LGBM_sum`.`KEY`, `LGBM_sum`.`Estimator` 
-FROM (SELECT `T`.`KEY` AS `KEY`, `T`.`Estimator` AS `Estimator` 
+INSERT INTO `TMP_20180516113712_CODEGEN_JRT9JB_LGBM_sum` (`KEY`, `Estimator`) SELECT `U`.`KEY`, `U`.`Estimator` 
+FROM (WITH `LGBM_Union` AS 
+(SELECT `LGBM_EnsembleUnion`.`KEY` AS `KEY`, `LGBM_EnsembleUnion`.`Estimator` AS `Estimator` 
+FROM (SELECT `LGBM_B0`.`KEY` AS `KEY`, `LGBM_B0`.`Estimator` AS `Estimator` 
+FROM `TMP_20180516113712_CODEGEN_8LVRTK_LGBM_B0` AS `LGBM_B0` UNION ALL SELECT `LGBM_B1`.`KEY` AS `KEY`, `LGBM_B1`.`Estimator` AS `Estimator` 
+FROM `TMP_20180516113712_CODEGEN_18WNAK_LGBM_B1` AS `LGBM_B1`) AS `LGBM_EnsembleUnion`)
+ SELECT `LGBM_sum`.`KEY`, `LGBM_sum`.`Estimator` 
+FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT `LGBM_Union`.`KEY` AS `KEY`, sum(`LGBM_Union`.`Estimator`) AS `Estimator` 
-FROM `TMP_20180508182227_CODEGEN_MLTP7O_LGBM_Union` AS `LGBM_Union` GROUP BY `LGBM_Union`.`KEY`) AS `T`) AS `LGBM_sum`) AS `U`
+FROM `LGBM_Union` GROUP BY `LGBM_Union`.`KEY`) AS `T`) AS `LGBM_sum`) AS `U`
 
--- Code For temporary table TMP_20180508182227_CODEGEN_DMJ421_LGBM_sum part 3. Create Index 
+-- Code For temporary table TMP_20180516113712_CODEGEN_JRT9JB_LGBM_sum part 3. Create Index 
 
-CREATE INDEX `ix_TMP_20180508182227_CODEGEN_DMJ421_LGBM_sum_KEY` ON `TMP_20180508182227_CODEGEN_DMJ421_LGBM_sum` (`KEY`)
+CREATE INDEX `ix_TMP_20180516113712_CODEGEN_JRT9JB_LGBM_sum_KEY` ON `TMP_20180516113712_CODEGEN_JRT9JB_LGBM_sum` (`KEY`)
 
 -- Model deployment code
 
 SELECT `LGBM_sum`.`KEY` AS `KEY`, `LGBM_sum`.`Estimator` AS `Estimator` 
-FROM `TMP_20180508182227_CODEGEN_DMJ421_LGBM_sum` AS `LGBM_sum`
+FROM `TMP_20180516113712_CODEGEN_JRT9JB_LGBM_sum` AS `LGBM_sum`

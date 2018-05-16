@@ -10,9 +10,9 @@
 
 
 
--- Code For temporary table tmp_20180509004007_codegen_xiahax_lgbm_b0 part 1. Create 
+-- Code For temporary table tmp_20180516120750_codegen_xspxco_lgbm_b0 part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180509004007_codegen_xiahax_lgbm_b0` STORED AS ORC AS WITH `DT_node_lookup` AS 
+CREATE TEMPORARY TABLE `tmp_20180516120750_codegen_xspxco_lgbm_b0` STORED AS ORC AS WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_1` <= 0.4457722655336853) THEN 2 ELSE CASE WHEN (`ADS`.`Feature_3` <= 0.5994100664801979) THEN 6 ELSE 7 END END AS `node_id_2` 
 FROM `freidman1` AS `ADS`), 
 `DT_node_data` AS 
@@ -146,13 +146,13 @@ FROM `LGBM_Model_7` UNION ALL SELECT `LGBM_Model_8`.`KEY` AS `KEY`, `LGBM_Model_
 FROM `LGBM_Model_8` UNION ALL SELECT `LGBM_Model_9`.`KEY` AS `KEY`, `LGBM_Model_9`.`Estimator` AS `Estimator` 
 FROM `LGBM_Model_9`) AS `LGBM_esu_0`) AS `LGBM_B0`
 
--- Code For temporary table tmp_20180509004007_codegen_xiahax_lgbm_b0 part 2. Populate
+-- Code For temporary table tmp_20180516120750_codegen_xspxco_lgbm_b0 part 2. Populate
 
-SELECT * FROM `tmp_20180509004007_codegen_xiahax_lgbm_b0`
+SELECT * FROM `tmp_20180516120750_codegen_xspxco_lgbm_b0`
 
--- Code For temporary table tmp_20180509004007_codegen_mzittp_lgbm_b1 part 1. Create 
+-- Code For temporary table tmp_20180516120750_codegen_3sbwjy_lgbm_b1 part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180509004007_codegen_mzittp_lgbm_b1` STORED AS ORC AS WITH `DT_node_lookup_10` AS 
+CREATE TEMPORARY TABLE `tmp_20180516120750_codegen_3sbwjy_lgbm_b1` STORED AS ORC AS WITH `DT_node_lookup_10` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_1` <= 0.2495012051802635) THEN 2 ELSE CASE WHEN (`ADS`.`Feature_0` <= 0.43468972473570455) THEN 6 ELSE 7 END END AS `node_id_2` 
 FROM `freidman1` AS `ADS`), 
 `DT_node_data_10` AS 
@@ -234,34 +234,27 @@ FROM `LGBM_Model_13` UNION ALL SELECT `LGBM_Model_14`.`KEY` AS `KEY`, `LGBM_Mode
 FROM `LGBM_Model_14` UNION ALL SELECT `LGBM_Model_15`.`KEY` AS `KEY`, `LGBM_Model_15`.`Estimator` AS `Estimator` 
 FROM `LGBM_Model_15`) AS `LGBM_esu_1`) AS `LGBM_B1`
 
--- Code For temporary table tmp_20180509004007_codegen_mzittp_lgbm_b1 part 2. Populate
+-- Code For temporary table tmp_20180516120750_codegen_3sbwjy_lgbm_b1 part 2. Populate
 
-SELECT * FROM `tmp_20180509004007_codegen_mzittp_lgbm_b1`
+SELECT * FROM `tmp_20180516120750_codegen_3sbwjy_lgbm_b1`
 
--- Code For temporary table tmp_20180509004007_codegen_68np0a_lgbm_union part 1. Create 
+-- Code For temporary table tmp_20180516120750_codegen_0mju85_lgbm_sum part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180509004007_codegen_68np0a_lgbm_union` STORED AS ORC AS SELECT `LGBM_Union`.`KEY`, `LGBM_Union`.`Estimator` 
-FROM (SELECT `LGBM_EnsembleUnion`.`KEY` AS `KEY`, `LGBM_EnsembleUnion`.`Estimator` AS `Estimator` 
+CREATE TEMPORARY TABLE `tmp_20180516120750_codegen_0mju85_lgbm_sum` STORED AS ORC AS WITH `LGBM_Union` AS 
+(SELECT `LGBM_EnsembleUnion`.`KEY` AS `KEY`, `LGBM_EnsembleUnion`.`Estimator` AS `Estimator` 
 FROM (SELECT `LGBM_B0`.`KEY` AS `KEY`, `LGBM_B0`.`Estimator` AS `Estimator` 
-FROM `tmp_20180509004007_codegen_xiahax_lgbm_b0` AS `LGBM_B0` UNION ALL SELECT `LGBM_B1`.`KEY` AS `KEY`, `LGBM_B1`.`Estimator` AS `Estimator` 
-FROM `tmp_20180509004007_codegen_mzittp_lgbm_b1` AS `LGBM_B1`) AS `LGBM_EnsembleUnion`) AS `LGBM_Union`
-
--- Code For temporary table tmp_20180509004007_codegen_68np0a_lgbm_union part 2. Populate
-
-SELECT * FROM `tmp_20180509004007_codegen_68np0a_lgbm_union`
-
--- Code For temporary table tmp_20180509004007_codegen_25i4yr_lgbm_sum part 1. Create 
-
-CREATE TEMPORARY TABLE `tmp_20180509004007_codegen_25i4yr_lgbm_sum` STORED AS ORC AS SELECT `LGBM_sum`.`KEY`, `LGBM_sum`.`Estimator` 
+FROM `tmp_20180516120750_codegen_xspxco_lgbm_b0` AS `LGBM_B0` UNION ALL SELECT `LGBM_B1`.`KEY` AS `KEY`, `LGBM_B1`.`Estimator` AS `Estimator` 
+FROM `tmp_20180516120750_codegen_3sbwjy_lgbm_b1` AS `LGBM_B1`) AS `LGBM_EnsembleUnion`)
+ SELECT `LGBM_sum`.`KEY`, `LGBM_sum`.`Estimator` 
 FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT `LGBM_Union`.`KEY` AS `KEY`, sum(`LGBM_Union`.`Estimator`) AS `Estimator` 
-FROM `tmp_20180509004007_codegen_68np0a_lgbm_union` AS `LGBM_Union` GROUP BY `LGBM_Union`.`KEY`) AS `T`) AS `LGBM_sum`
+FROM `LGBM_Union` GROUP BY `LGBM_Union`.`KEY`) AS `T`) AS `LGBM_sum`
 
--- Code For temporary table tmp_20180509004007_codegen_25i4yr_lgbm_sum part 2. Populate
+-- Code For temporary table tmp_20180516120750_codegen_0mju85_lgbm_sum part 2. Populate
 
-SELECT * FROM `tmp_20180509004007_codegen_25i4yr_lgbm_sum`
+SELECT * FROM `tmp_20180516120750_codegen_0mju85_lgbm_sum`
 
 -- Model deployment code
 
 SELECT `LGBM_sum`.`KEY` AS `KEY`, `LGBM_sum`.`Estimator` AS `Estimator` 
-FROM `tmp_20180509004007_codegen_25i4yr_lgbm_sum` AS `LGBM_sum`
+FROM `tmp_20180516120750_codegen_0mju85_lgbm_sum` AS `LGBM_sum`

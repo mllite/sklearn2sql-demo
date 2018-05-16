@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table ##TMP_20180508184809_CODEGEN_3NXJ3P_ADS_imp_1_OUT part 1. Create 
+-- Code For temporary table ##TMP_20180516121241_CODEGEN_88WN8N_ADS_imp_1_OUT part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508184809_CODEGEN_3NXJ3P_ADS_imp_1_OUT (
+CREATE TABLE ##TMP_20180516121241_CODEGEN_88WN8N_ADS_imp_1_OUT (
 	[KEY] BIGINT NULL, 
 	imputer_output_2 FLOAT(53) NULL, 
 	imputer_output_3 FLOAT(53) NULL, 
@@ -23,16 +23,16 @@ CREATE TABLE ##TMP_20180508184809_CODEGEN_3NXJ3P_ADS_imp_1_OUT (
 
 
 
--- Code For temporary table ##TMP_20180508184809_CODEGEN_3NXJ3P_ADS_imp_1_OUT part 2. Populate
+-- Code For temporary table ##TMP_20180516121241_CODEGEN_88WN8N_ADS_imp_1_OUT part 2. Populate
 
-INSERT INTO ##TMP_20180508184809_CODEGEN_3NXJ3P_ADS_imp_1_OUT ([KEY], imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT [ADS_imp_1_OUT].[KEY], [ADS_imp_1_OUT].imputer_output_2, [ADS_imp_1_OUT].imputer_output_3, [ADS_imp_1_OUT].imputer_output_4, [ADS_imp_1_OUT].imputer_output_5 
+INSERT INTO ##TMP_20180516121241_CODEGEN_88WN8N_ADS_imp_1_OUT ([KEY], imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT [ADS_imp_1_OUT].[KEY], [ADS_imp_1_OUT].imputer_output_2, [ADS_imp_1_OUT].imputer_output_3, [ADS_imp_1_OUT].imputer_output_4, [ADS_imp_1_OUT].imputer_output_5 
 FROM (SELECT [ADS].[KEY] AS [KEY], CASE WHEN ([ADS].[Feature_0] IS NULL) THEN 43.79128122207401 ELSE [ADS].[Feature_0] END AS imputer_output_2, CASE WHEN ([ADS].[Feature_1] IS NULL) THEN 945.9672833084396 ELSE [ADS].[Feature_1] END AS imputer_output_3, CASE WHEN ([ADS].[Feature_2] IS NULL) THEN 0.5310009099975209 ELSE [ADS].[Feature_2] END AS imputer_output_4, CASE WHEN ([ADS].[Feature_3] IS NULL) THEN 6.139967152050499 ELSE [ADS].[Feature_3] END AS imputer_output_5 
 FROM freidman2 AS [ADS]) AS [ADS_imp_1_OUT]
 
--- Code For temporary table ##TMP_20180508184809_CODEGEN_N6T1WP_ADS_sca_2_OUT part 1. Create 
+-- Code For temporary table ##TMP_20180516121241_CODEGEN_LE4VGR_ADS_sca_2_OUT part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508184809_CODEGEN_N6T1WP_ADS_sca_2_OUT (
+CREATE TABLE ##TMP_20180516121241_CODEGEN_LE4VGR_ADS_sca_2_OUT (
 	[KEY] BIGINT NULL, 
 	scaler_output_2 FLOAT NULL, 
 	scaler_output_3 FLOAT NULL, 
@@ -42,16 +42,16 @@ CREATE TABLE ##TMP_20180508184809_CODEGEN_N6T1WP_ADS_sca_2_OUT (
 
 
 
--- Code For temporary table ##TMP_20180508184809_CODEGEN_N6T1WP_ADS_sca_2_OUT part 2. Populate
+-- Code For temporary table ##TMP_20180516121241_CODEGEN_LE4VGR_ADS_sca_2_OUT part 2. Populate
 
-INSERT INTO ##TMP_20180508184809_CODEGEN_N6T1WP_ADS_sca_2_OUT ([KEY], scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT [ADS_sca_2_OUT].[KEY], [ADS_sca_2_OUT].scaler_output_2, [ADS_sca_2_OUT].scaler_output_3, [ADS_sca_2_OUT].scaler_output_4, [ADS_sca_2_OUT].scaler_output_5 
+INSERT INTO ##TMP_20180516121241_CODEGEN_LE4VGR_ADS_sca_2_OUT ([KEY], scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT [ADS_sca_2_OUT].[KEY], [ADS_sca_2_OUT].scaler_output_2, [ADS_sca_2_OUT].scaler_output_3, [ADS_sca_2_OUT].scaler_output_4, [ADS_sca_2_OUT].scaler_output_5 
 FROM (SELECT [ADS_imp_1_OUT].[KEY] AS [KEY], (CAST([ADS_imp_1_OUT].imputer_output_2 AS FLOAT(53)) - 43.79128122207401) / 26.03562357622511 AS scaler_output_2, (CAST([ADS_imp_1_OUT].imputer_output_3 AS FLOAT(53)) - 945.9672833084396) / 461.4552766146446 AS scaler_output_3, (CAST([ADS_imp_1_OUT].imputer_output_4 AS FLOAT(53)) - 0.5310009099975209) / 0.2901863282144786 AS scaler_output_4, (CAST([ADS_imp_1_OUT].imputer_output_5 AS FLOAT(53)) - 6.139967152050499) / 3.072917242564058 AS scaler_output_5 
-FROM ##TMP_20180508184809_CODEGEN_3NXJ3P_ADS_imp_1_OUT AS [ADS_imp_1_OUT]) AS [ADS_sca_2_OUT]
+FROM ##TMP_20180516121241_CODEGEN_88WN8N_ADS_imp_1_OUT AS [ADS_imp_1_OUT]) AS [ADS_sca_2_OUT]
 
 -- Model deployment code
 
 WITH dummy_class_reg_cte AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], 499.09288446517394 AS [Constant] 
-FROM ##TMP_20180508184809_CODEGEN_N6T1WP_ADS_sca_2_OUT AS [ADS_sca_2_OUT])
+FROM ##TMP_20180516121241_CODEGEN_LE4VGR_ADS_sca_2_OUT AS [ADS_sca_2_OUT])
  SELECT dummy_class_reg_cte.[KEY] AS [KEY], dummy_class_reg_cte.[Constant] AS [Estimator] 
 FROM dummy_class_reg_cte

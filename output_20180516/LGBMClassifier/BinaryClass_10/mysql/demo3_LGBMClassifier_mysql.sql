@@ -10,24 +10,24 @@
 
 
 
--- Code For temporary table TMP_20180508175842_CODEGEN_6OIJV7_LGBM_B0 part 1. Create 
+-- Code For temporary table TMP_20180516110352_CODEGEN_KUNVZC_LGBM_B0 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180508175842_CODEGEN_6OIJV7_LGBM_B0` (
+CREATE TEMPORARY TABLE `TMP_20180516110352_CODEGEN_KUNVZC_LGBM_B0` (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE
 )
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180508175842_CODEGEN_6OIJV7_LGBM_B0 part 2. Populate
+-- Code For temporary table TMP_20180516110352_CODEGEN_KUNVZC_LGBM_B0 part 2. Populate
 
-INSERT INTO `TMP_20180508175842_CODEGEN_6OIJV7_LGBM_B0` (`KEY`, `Score_0`) SELECT `U`.`KEY`, `U`.`Score_0` 
+INSERT INTO `TMP_20180516110352_CODEGEN_KUNVZC_LGBM_B0` (`KEY`, `Score_0`) SELECT `U`.`KEY`, `U`.`Score_0` 
 FROM (WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_9` <= 1.0000000180025095e-35) THEN CASE WHEN (`ADS`.`Feature_7` <= 0.349151056608212) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `BinaryClass_10` AS `ADS`), 
 `DT_node_data` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Score` AS `Score` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.08235294117647059 AS `Score` UNION ALL SELECT 4 AS nid, -0.02499999999999999 AS `Score` UNION ALL SELECT 5 AS nid, -0.09999999999999999 AS `Score`) AS `Values`), 
 `DT_Output` AS 
 (SELECT `DT_node_lookup`.`KEY` AS `KEY`, `DT_node_lookup`.node_id_2 AS node_id_2, `DT_node_data`.nid AS nid, `DT_node_data`.`Score` AS `Score` 
@@ -39,7 +39,7 @@ FROM `DT_Output`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_9` <= 1.0000000180025095e-35) THEN CASE WHEN (`ADS`.`Feature_7` <= 0.349151056608212) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `BinaryClass_10` AS `ADS`), 
 `DT_node_data_1` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Score` AS `Score` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.07837035044971821 AS `Score` UNION ALL SELECT 4 AS nid, -0.023753777661994213 AS `Score` UNION ALL SELECT 5 AS nid, -0.09524187224606032 AS `Score`) AS `Values`), 
 `DT_Output_1` AS 
 (SELECT `DT_node_lookup_1`.`KEY` AS `KEY`, `DT_node_lookup_1`.node_id_2 AS node_id_2, `DT_node_data_1`.nid AS nid, `DT_node_data_1`.`Score` AS `Score` 
@@ -51,7 +51,7 @@ FROM `DT_Output_1`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_9` <= 1.0000000180025095e-35) THEN CASE WHEN (`ADS`.`Feature_7` <= 0.349151056608212) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `BinaryClass_10` AS `ADS`), 
 `DT_node_data_2` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Score` AS `Score` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.0748151115307271 AS `Score` UNION ALL SELECT 4 AS nid, -0.022576204356707263 AS `Score` UNION ALL SELECT 5 AS nid, -0.09113178077572359 AS `Score`) AS `Values`), 
 `DT_Output_2` AS 
 (SELECT `DT_node_lookup_2`.`KEY` AS `KEY`, `DT_node_lookup_2`.node_id_2 AS node_id_2, `DT_node_data_2`.nid AS nid, `DT_node_data_2`.`Score` AS `Score` 
@@ -63,7 +63,7 @@ FROM `DT_Output_2`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_9` <= 1.0000000180025095e-35) THEN CASE WHEN (`ADS`.`Feature_7` <= 0.349151056608212) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `BinaryClass_10` AS `ADS`), 
 `DT_node_data_3` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Score` AS `Score` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.071614314717172 AS `Score` UNION ALL SELECT 4 AS nid, -0.021462286643732637 AS `Score` UNION ALL SELECT 5 AS nid, -0.08754910073915208 AS `Score`) AS `Values`), 
 `DT_Output_3` AS 
 (SELECT `DT_node_lookup_3`.`KEY` AS `KEY`, `DT_node_lookup_3`.node_id_2 AS node_id_2, `DT_node_data_3`.nid AS nid, `DT_node_data_3`.`Score` AS `Score` 
@@ -75,7 +75,7 @@ FROM `DT_Output_3`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_9` <= 1.0000000180025095e-35) THEN CASE WHEN (`ADS`.`Feature_7` <= 0.349151056608212) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `BinaryClass_10` AS `ADS`), 
 `DT_node_data_4` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Score` AS `Score` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.06871035665405786 AS `Score` UNION ALL SELECT 4 AS nid, -0.020407578856725093 AS `Score` UNION ALL SELECT 5 AS nid, -0.08440150242752237 AS `Score`) AS `Values`), 
 `DT_Output_4` AS 
 (SELECT `DT_node_lookup_4`.`KEY` AS `KEY`, `DT_node_lookup_4`.node_id_2 AS node_id_2, `DT_node_data_4`.nid AS nid, `DT_node_data_4`.`Score` AS `Score` 
@@ -87,7 +87,7 @@ FROM `DT_Output_4`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_9` <= 1.0000000180025095e-35) THEN CASE WHEN (`ADS`.`Feature_7` <= 0.349151056608212) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `BinaryClass_10` AS `ADS`), 
 `DT_node_data_5` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Score` AS `Score` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.06605712410806144 AS `Score` UNION ALL SELECT 4 AS nid, -0.01940808860110368 AS `Score` UNION ALL SELECT 5 AS nid, -0.08161712202378635 AS `Score`) AS `Values`), 
 `DT_Output_5` AS 
 (SELECT `DT_node_lookup_5`.`KEY` AS `KEY`, `DT_node_lookup_5`.node_id_2 AS node_id_2, `DT_node_data_5`.nid AS nid, `DT_node_data_5`.`Score` AS `Score` 
@@ -99,7 +99,7 @@ FROM `DT_Output_5`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_9` <= 0.38701399443858975) THEN CASE WHEN (`ADS`.`Feature_5` <= -0.8408280660430251) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `BinaryClass_10` AS `ADS`), 
 `DT_node_data_6` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Score` AS `Score` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.07464273688896028 AS `Score` UNION ALL SELECT 4 AS nid, 0.002336974660619012 AS `Score` UNION ALL SELECT 5 AS nid, -0.06579551039608848 AS `Score`) AS `Values`), 
 `DT_Output_6` AS 
 (SELECT `DT_node_lookup_6`.`KEY` AS `KEY`, `DT_node_lookup_6`.node_id_2 AS node_id_2, `DT_node_data_6`.nid AS nid, `DT_node_data_6`.`Score` AS `Score` 
@@ -111,7 +111,7 @@ FROM `DT_Output_6`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_9` <= -0.2729103521811215) THEN CASE WHEN (`ADS`.`Feature_7` <= 0.349151056608212) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `BinaryClass_10` AS `ADS`), 
 `DT_node_data_7` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Score` AS `Score` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.055762038239036874 AS `Score` UNION ALL SELECT 4 AS nid, -0.021135422753326406 AS `Score` UNION ALL SELECT 5 AS nid, -0.07816706577026666 AS `Score`) AS `Values`), 
 `DT_Output_7` AS 
 (SELECT `DT_node_lookup_7`.`KEY` AS `KEY`, `DT_node_lookup_7`.node_id_2 AS node_id_2, `DT_node_data_7`.nid AS nid, `DT_node_data_7`.`Score` AS `Score` 
@@ -123,7 +123,7 @@ FROM `DT_Output_7`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_9` <= 0.38701399443858975) THEN CASE WHEN (`ADS`.`Feature_5` <= -0.8408280660430251) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `BinaryClass_10` AS `ADS`), 
 `DT_node_data_8` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Score` AS `Score` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.07046668826031098 AS `Score` UNION ALL SELECT 4 AS nid, 0.0037179851920858503 AS `Score` UNION ALL SELECT 5 AS nid, -0.06224000989678222 AS `Score`) AS `Values`), 
 `DT_Output_8` AS 
 (SELECT `DT_node_lookup_8`.`KEY` AS `KEY`, `DT_node_lookup_8`.node_id_2 AS node_id_2, `DT_node_data_8`.nid AS nid, `DT_node_data_8`.`Score` AS `Score` 
@@ -135,7 +135,7 @@ FROM `DT_Output_8`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_9` <= -0.2729103521811215) THEN CASE WHEN (`ADS`.`Feature_7` <= 0.349151056608212) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `BinaryClass_10` AS `ADS`), 
 `DT_node_data_9` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Score` AS `Score` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.05225856214567331 AS `Score` UNION ALL SELECT 4 AS nid, -0.017947979204960444 AS `Score` UNION ALL SELECT 5 AS nid, -0.07529309848355589 AS `Score`) AS `Values`), 
 `DT_Output_9` AS 
 (SELECT `DT_node_lookup_9`.`KEY` AS `KEY`, `DT_node_lookup_9`.node_id_2 AS node_id_2, `DT_node_data_9`.nid AS nid, `DT_node_data_9`.`Score` AS `Score` 
@@ -157,24 +157,24 @@ FROM `LGBM_Model_0_7` UNION ALL SELECT `LGBM_Model_0_8`.`KEY` AS `KEY`, `LGBM_Mo
 FROM `LGBM_Model_0_8` UNION ALL SELECT `LGBM_Model_0_9`.`KEY` AS `KEY`, `LGBM_Model_0_9`.`Score_0` AS `Score_0` 
 FROM `LGBM_Model_0_9`) AS `LGBM_esu_0`) AS `LGBM_B0`) AS `U`
 
--- Code For temporary table TMP_20180508175842_CODEGEN_RKWRR1_LGBM_B1 part 1. Create 
+-- Code For temporary table TMP_20180516110352_CODEGEN_I5GDGB_LGBM_B1 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180508175842_CODEGEN_RKWRR1_LGBM_B1` (
+CREATE TEMPORARY TABLE `TMP_20180516110352_CODEGEN_I5GDGB_LGBM_B1` (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE
 )
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180508175842_CODEGEN_RKWRR1_LGBM_B1 part 2. Populate
+-- Code For temporary table TMP_20180516110352_CODEGEN_I5GDGB_LGBM_B1 part 2. Populate
 
-INSERT INTO `TMP_20180508175842_CODEGEN_RKWRR1_LGBM_B1` (`KEY`, `Score_0`) SELECT `U`.`KEY`, `U`.`Score_0` 
+INSERT INTO `TMP_20180516110352_CODEGEN_I5GDGB_LGBM_B1` (`KEY`, `Score_0`) SELECT `U`.`KEY`, `U`.`Score_0` 
 FROM (WITH `DT_node_lookup_10` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_9` <= 0.38701399443858975) THEN CASE WHEN (`ADS`.`Feature_7` <= 0.349151056608212) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `BinaryClass_10` AS `ADS`), 
 `DT_node_data_10` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Score` AS `Score` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.0669116484264735 AS `Score` UNION ALL SELECT 4 AS nid, -0.008955647153941326 AS `Score` UNION ALL SELECT 5 AS nid, -0.0734621236510897 AS `Score`) AS `Values`), 
 `DT_Output_10` AS 
 (SELECT `DT_node_lookup_10`.`KEY` AS `KEY`, `DT_node_lookup_10`.node_id_2 AS node_id_2, `DT_node_data_10`.nid AS nid, `DT_node_data_10`.`Score` AS `Score` 
@@ -186,7 +186,7 @@ FROM `DT_Output_10`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_9` <= 0.38701399443858975) THEN CASE WHEN (`ADS`.`Feature_5` <= -0.8408280660430251) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `BinaryClass_10` AS `ADS`), 
 `DT_node_data_11` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Score` AS `Score` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.06510673215356676 AS `Score` UNION ALL SELECT 4 AS nid, 0.007014447647000527 AS `Score` UNION ALL SELECT 5 AS nid, -0.05822200704334515 AS `Score`) AS `Values`), 
 `DT_Output_11` AS 
 (SELECT `DT_node_lookup_11`.`KEY` AS `KEY`, `DT_node_lookup_11`.node_id_2 AS node_id_2, `DT_node_data_11`.nid AS nid, `DT_node_data_11`.`Score` AS `Score` 
@@ -198,7 +198,7 @@ FROM `DT_Output_11`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_9` <= -0.2729103521811215) THEN CASE WHEN (`ADS`.`Feature_7` <= 0.349151056608212) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `BinaryClass_10` AS `ADS`), 
 `DT_node_data_12` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Score` AS `Score` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.04776607813205158 AS `Score` UNION ALL SELECT 4 AS nid, -0.01469189189222282 AS `Score` UNION ALL SELECT 5 AS nid, -0.07129435941255928 AS `Score`) AS `Values`), 
 `DT_Output_12` AS 
 (SELECT `DT_node_lookup_12`.`KEY` AS `KEY`, `DT_node_lookup_12`.node_id_2 AS node_id_2, `DT_node_data_12`.nid AS nid, `DT_node_data_12`.`Score` AS `Score` 
@@ -210,7 +210,7 @@ FROM `DT_Output_12`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_9` <= 0.38701399443858975) THEN CASE WHEN (`ADS`.`Feature_5` <= -0.8408280660430251) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `BinaryClass_10` AS `ADS`), 
 `DT_node_data_13` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Score` AS `Score` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.06224759968875057 AS `Score` UNION ALL SELECT 4 AS nid, 0.008015897613299294 AS `Score` UNION ALL SELECT 5 AS nid, -0.0555966796526903 AS `Score`) AS `Values`), 
 `DT_Output_13` AS 
 (SELECT `DT_node_lookup_13`.`KEY` AS `KEY`, `DT_node_lookup_13`.node_id_2 AS node_id_2, `DT_node_data_13`.nid AS nid, `DT_node_data_13`.`Score` AS `Score` 
@@ -222,7 +222,7 @@ FROM `DT_Output_13`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_9` <= 0.38701399443858975) THEN CASE WHEN (`ADS`.`Feature_7` <= 0.349151056608212) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `BinaryClass_10` AS `ADS`), 
 `DT_node_data_14` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Score` AS `Score` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.060759369714525314 AS `Score` UNION ALL SELECT 4 AS nid, -0.00536173404487928 AS `Score` UNION ALL SELECT 5 AS nid, -0.06944820622308939 AS `Score`) AS `Values`), 
 `DT_Output_14` AS 
 (SELECT `DT_node_lookup_14`.`KEY` AS `KEY`, `DT_node_lookup_14`.node_id_2 AS node_id_2, `DT_node_data_14`.nid AS nid, `DT_node_data_14`.`Score` AS `Score` 
@@ -234,7 +234,7 @@ FROM `DT_Output_14`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_9` <= 0.38701399443858975) THEN CASE WHEN (`ADS`.`Feature_7` <= 0.349151056608212) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `BinaryClass_10` AS `ADS`), 
 `DT_node_data_15` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Score` AS `Score` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.05936033287044541 AS `Score` UNION ALL SELECT 4 AS nid, -0.005095999879607681 AS `Score` UNION ALL SELECT 5 AS nid, -0.0681519981382104 AS `Score`) AS `Values`), 
 `DT_Output_15` AS 
 (SELECT `DT_node_lookup_15`.`KEY` AS `KEY`, `DT_node_lookup_15`.node_id_2 AS node_id_2, `DT_node_data_15`.nid AS nid, `DT_node_data_15`.`Score` AS `Score` 
@@ -252,29 +252,10 @@ FROM `LGBM_Model_0_13` UNION ALL SELECT `LGBM_Model_0_14`.`KEY` AS `KEY`, `LGBM_
 FROM `LGBM_Model_0_14` UNION ALL SELECT `LGBM_Model_0_15`.`KEY` AS `KEY`, `LGBM_Model_0_15`.`Score_0` AS `Score_0` 
 FROM `LGBM_Model_0_15`) AS `LGBM_esu_1`) AS `LGBM_B1`) AS `U`
 
--- Code For temporary table TMP_20180508175842_CODEGEN_O5E4QB_LGBM_Union part 1. Create 
+-- Code For temporary table TMP_20180516110352_CODEGEN_Y97QFQ_LGBM_sum part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180508175842_CODEGEN_O5E4QB_LGBM_Union` (
-	`KEY` BIGINT, 
-	`Score_0` DOUBLE
-)
-
- ENGINE=MEMORY
-
--- Code For temporary table TMP_20180508175842_CODEGEN_O5E4QB_LGBM_Union part 2. Populate
-
-INSERT INTO `TMP_20180508175842_CODEGEN_O5E4QB_LGBM_Union` (`KEY`, `Score_0`) SELECT `U`.`KEY`, `U`.`Score_0` 
-FROM (SELECT `LGBM_Union`.`KEY`, `LGBM_Union`.`Score_0` 
-FROM (SELECT `LGBM_EnsembleUnion`.`KEY` AS `KEY`, `LGBM_EnsembleUnion`.`Score_0` AS `Score_0` 
-FROM (SELECT `LGBM_B0`.`KEY` AS `KEY`, `LGBM_B0`.`Score_0` AS `Score_0` 
-FROM `TMP_20180508175842_CODEGEN_6OIJV7_LGBM_B0` AS `LGBM_B0` UNION ALL SELECT `LGBM_B1`.`KEY` AS `KEY`, `LGBM_B1`.`Score_0` AS `Score_0` 
-FROM `TMP_20180508175842_CODEGEN_RKWRR1_LGBM_B1` AS `LGBM_B1`) AS `LGBM_EnsembleUnion`) AS `LGBM_Union`) AS `U`
-
--- Code For temporary table TMP_20180508175842_CODEGEN_85L3L0_LGBM_sum part 1. Create 
-
-
-CREATE TEMPORARY TABLE `TMP_20180508175842_CODEGEN_85L3L0_LGBM_sum` (
+CREATE TEMPORARY TABLE `TMP_20180516110352_CODEGEN_Y97QFQ_LGBM_sum` (
 	`KEY` BIGINT NOT NULL, 
 	`Score_0` DOUBLE, 
 	PRIMARY KEY (`KEY`)
@@ -282,23 +263,28 @@ CREATE TEMPORARY TABLE `TMP_20180508175842_CODEGEN_85L3L0_LGBM_sum` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180508175842_CODEGEN_85L3L0_LGBM_sum part 2. Populate
+-- Code For temporary table TMP_20180516110352_CODEGEN_Y97QFQ_LGBM_sum part 2. Populate
 
-INSERT INTO `TMP_20180508175842_CODEGEN_85L3L0_LGBM_sum` (`KEY`, `Score_0`) SELECT `U`.`KEY`, `U`.`Score_0` 
-FROM (SELECT `LGBM_sum`.`KEY`, `LGBM_sum`.`Score_0` 
-FROM (SELECT `T`.`KEY` AS `KEY`, `T`.`Score_0` AS `Score_0` 
+INSERT INTO `TMP_20180516110352_CODEGEN_Y97QFQ_LGBM_sum` (`KEY`, `Score_0`) SELECT `U`.`KEY`, `U`.`Score_0` 
+FROM (WITH `LGBM_Union` AS 
+(SELECT `LGBM_EnsembleUnion`.`KEY` AS `KEY`, `LGBM_EnsembleUnion`.`Score_0` AS `Score_0` 
+FROM (SELECT `LGBM_B0`.`KEY` AS `KEY`, `LGBM_B0`.`Score_0` AS `Score_0` 
+FROM `TMP_20180516110352_CODEGEN_KUNVZC_LGBM_B0` AS `LGBM_B0` UNION ALL SELECT `LGBM_B1`.`KEY` AS `KEY`, `LGBM_B1`.`Score_0` AS `Score_0` 
+FROM `TMP_20180516110352_CODEGEN_I5GDGB_LGBM_B1` AS `LGBM_B1`) AS `LGBM_EnsembleUnion`)
+ SELECT `LGBM_sum`.`KEY`, `LGBM_sum`.`Score_0` 
+FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Score_0` AS DOUBLE) AS `Score_0` 
 FROM (SELECT `LGBM_Union`.`KEY` AS `KEY`, sum(`LGBM_Union`.`Score_0`) AS `Score_0` 
-FROM `TMP_20180508175842_CODEGEN_O5E4QB_LGBM_Union` AS `LGBM_Union` GROUP BY `LGBM_Union`.`KEY`) AS `T`) AS `LGBM_sum`) AS `U`
+FROM `LGBM_Union` GROUP BY `LGBM_Union`.`KEY`) AS `T`) AS `LGBM_sum`) AS `U`
 
--- Code For temporary table TMP_20180508175842_CODEGEN_85L3L0_LGBM_sum part 3. Create Index 
+-- Code For temporary table TMP_20180516110352_CODEGEN_Y97QFQ_LGBM_sum part 3. Create Index 
 
-CREATE INDEX `ix_TMP_20180508175842_CODEGEN_85L3L0_LGBM_sum_KEY` ON `TMP_20180508175842_CODEGEN_85L3L0_LGBM_sum` (`KEY`)
+CREATE INDEX `ix_TMP_20180516110352_CODEGEN_Y97QFQ_LGBM_sum_KEY` ON `TMP_20180516110352_CODEGEN_Y97QFQ_LGBM_sum` (`KEY`)
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT `LGBM_sum`.`KEY` AS `KEY`, `LGBM_sum`.`Score_0` AS `Score_0`, NULL AS `Score_1`, 1.0 - 1.0 / (1.0 + exp(least(greatest(-100.0, -`LGBM_sum`.`Score_0`), 100.0))) AS `Proba_0`, 1.0 / (1.0 + exp(least(greatest(-100.0, -`LGBM_sum`.`Score_0`), 100.0))) AS `Proba_1`, NULL AS `LogProba_0`, NULL AS `LogProba_1`, CAST(NULL AS SIGNED INTEGER) AS `Decision`, NULL AS `DecisionProba` 
-FROM `TMP_20180508175842_CODEGEN_85L3L0_LGBM_sum` AS `LGBM_sum`), 
+FROM `TMP_20180516110352_CODEGEN_Y97QFQ_LGBM_sum` AS `LGBM_sum`), 
 score_class_union AS 
 (SELECT scu.`KEY_u` AS `KEY_u`, scu.class AS class, scu.`LogProba` AS `LogProba`, scu.`Proba` AS `Proba`, scu.`Score` AS `Score` 
 FROM (SELECT orig_cte.`KEY` AS `KEY_u`, 0 AS class, orig_cte.`LogProba_0` AS `LogProba`, orig_cte.`Proba_0` AS `Proba`, orig_cte.`Score_0` AS `Score` 

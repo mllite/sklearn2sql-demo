@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180508185744_CODEGEN_G50IFO_ADS_imp_1_OUT part 1. Create 
+-- Code For temporary table TMP_20180516122626_CODEGEN_I6XNYA_ADS_imp_1_OUT part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180508185744_CODEGEN_G50IFO_ADS_imp_1_OUT` (
+CREATE TEMPORARY TABLE `TMP_20180516122626_CODEGEN_I6XNYA_ADS_imp_1_OUT` (
 	`KEY` BIGINT NOT NULL, 
 	imputer_output_2 DOUBLE, 
 	imputer_output_3 DOUBLE, 
@@ -24,21 +24,21 @@ CREATE TEMPORARY TABLE `TMP_20180508185744_CODEGEN_G50IFO_ADS_imp_1_OUT` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180508185744_CODEGEN_G50IFO_ADS_imp_1_OUT part 2. Populate
+-- Code For temporary table TMP_20180516122626_CODEGEN_I6XNYA_ADS_imp_1_OUT part 2. Populate
 
-INSERT INTO `TMP_20180508185744_CODEGEN_G50IFO_ADS_imp_1_OUT` (`KEY`, imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT `U`.`KEY`, `U`.imputer_output_2, `U`.imputer_output_3, `U`.imputer_output_4, `U`.imputer_output_5 
+INSERT INTO `TMP_20180516122626_CODEGEN_I6XNYA_ADS_imp_1_OUT` (`KEY`, imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT `U`.`KEY`, `U`.imputer_output_2, `U`.imputer_output_3, `U`.imputer_output_4, `U`.imputer_output_5 
 FROM (SELECT `ADS_imp_1_OUT`.`KEY`, `ADS_imp_1_OUT`.imputer_output_2, `ADS_imp_1_OUT`.imputer_output_3, `ADS_imp_1_OUT`.imputer_output_4, `ADS_imp_1_OUT`.imputer_output_5 
 FROM (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_0` IS NULL) THEN 5.8474999999999975 ELSE `ADS`.`Feature_0` END AS imputer_output_2, CASE WHEN (`ADS`.`Feature_1` IS NULL) THEN 3.0366666666666657 ELSE `ADS`.`Feature_1` END AS imputer_output_3, CASE WHEN (`ADS`.`Feature_2` IS NULL) THEN 3.8450000000000006 ELSE `ADS`.`Feature_2` END AS imputer_output_4, CASE WHEN (`ADS`.`Feature_3` IS NULL) THEN 1.245 ELSE `ADS`.`Feature_3` END AS imputer_output_5 
 FROM iris AS `ADS`) AS `ADS_imp_1_OUT`) AS `U`
 
--- Code For temporary table TMP_20180508185744_CODEGEN_G50IFO_ADS_imp_1_OUT part 3. Create Index 
+-- Code For temporary table TMP_20180516122626_CODEGEN_I6XNYA_ADS_imp_1_OUT part 3. Create Index 
 
-CREATE INDEX `ix_TMP_20180508185744_CODEGEN_G50IFO_ADS_imp_1_OUT_KEY` ON `TMP_20180508185744_CODEGEN_G50IFO_ADS_imp_1_OUT` (`KEY`)
+CREATE INDEX `ix_TMP_20180516122626_CODEGEN_I6XNYA_ADS_imp_1_OUT_KEY` ON `TMP_20180516122626_CODEGEN_I6XNYA_ADS_imp_1_OUT` (`KEY`)
 
--- Code For temporary table TMP_20180508185744_CODEGEN_AHMQOB_ADS_sca_2_OUT part 1. Create 
+-- Code For temporary table TMP_20180516122626_CODEGEN_5EHRRN_ADS_sca_2_OUT part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180508185744_CODEGEN_AHMQOB_ADS_sca_2_OUT` (
+CREATE TEMPORARY TABLE `TMP_20180516122626_CODEGEN_5EHRRN_ADS_sca_2_OUT` (
 	`KEY` BIGINT NOT NULL, 
 	scaler_output_2 DOUBLE, 
 	scaler_output_3 DOUBLE, 
@@ -49,22 +49,22 @@ CREATE TEMPORARY TABLE `TMP_20180508185744_CODEGEN_AHMQOB_ADS_sca_2_OUT` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180508185744_CODEGEN_AHMQOB_ADS_sca_2_OUT part 2. Populate
+-- Code For temporary table TMP_20180516122626_CODEGEN_5EHRRN_ADS_sca_2_OUT part 2. Populate
 
-INSERT INTO `TMP_20180508185744_CODEGEN_AHMQOB_ADS_sca_2_OUT` (`KEY`, scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT `U`.`KEY`, `U`.scaler_output_2, `U`.scaler_output_3, `U`.scaler_output_4, `U`.scaler_output_5 
+INSERT INTO `TMP_20180516122626_CODEGEN_5EHRRN_ADS_sca_2_OUT` (`KEY`, scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT `U`.`KEY`, `U`.scaler_output_2, `U`.scaler_output_3, `U`.scaler_output_4, `U`.scaler_output_5 
 FROM (SELECT `ADS_sca_2_OUT`.`KEY`, `ADS_sca_2_OUT`.scaler_output_2, `ADS_sca_2_OUT`.scaler_output_3, `ADS_sca_2_OUT`.scaler_output_4, `ADS_sca_2_OUT`.scaler_output_5 
-FROM (SELECT `ADS_imp_1_OUT`.`KEY` AS `KEY`, (`ADS_imp_1_OUT`.imputer_output_2 - 5.8474999999999975) / 0.827039146594646 AS scaler_output_2, (`ADS_imp_1_OUT`.imputer_output_3 - 3.0366666666666657) / 0.43625935201691934 AS scaler_output_3, (`ADS_imp_1_OUT`.imputer_output_4 - 3.8450000000000006) / 1.709817241695732 AS scaler_output_4, (`ADS_imp_1_OUT`.imputer_output_5 - 1.245) / 0.7498722113355939 AS scaler_output_5 
-FROM `TMP_20180508185744_CODEGEN_G50IFO_ADS_imp_1_OUT` AS `ADS_imp_1_OUT`) AS `ADS_sca_2_OUT`) AS `U`
+FROM (SELECT `ADS_imp_1_OUT`.`KEY` AS `KEY`, (CAST(`ADS_imp_1_OUT`.imputer_output_2 AS DOUBLE) - 5.8474999999999975) / 0.827039146594646 AS scaler_output_2, (CAST(`ADS_imp_1_OUT`.imputer_output_3 AS DOUBLE) - 3.0366666666666657) / 0.43625935201691934 AS scaler_output_3, (CAST(`ADS_imp_1_OUT`.imputer_output_4 AS DOUBLE) - 3.8450000000000006) / 1.709817241695732 AS scaler_output_4, (CAST(`ADS_imp_1_OUT`.imputer_output_5 AS DOUBLE) - 1.245) / 0.7498722113355939 AS scaler_output_5 
+FROM `TMP_20180516122626_CODEGEN_I6XNYA_ADS_imp_1_OUT` AS `ADS_imp_1_OUT`) AS `ADS_sca_2_OUT`) AS `U`
 
--- Code For temporary table TMP_20180508185744_CODEGEN_AHMQOB_ADS_sca_2_OUT part 3. Create Index 
+-- Code For temporary table TMP_20180516122626_CODEGEN_5EHRRN_ADS_sca_2_OUT part 3. Create Index 
 
-CREATE INDEX `ix_TMP_20180508185744_CODEGEN_AHMQOB_ADS_sca_2_OUT_KEY` ON `TMP_20180508185744_CODEGEN_AHMQOB_ADS_sca_2_OUT` (`KEY`)
+CREATE INDEX `ix_TMP_20180516122626_CODEGEN_5EHRRN_ADS_sca_2_OUT_KEY` ON `TMP_20180516122626_CODEGEN_5EHRRN_ADS_sca_2_OUT` (`KEY`)
 
 -- Model deployment code
 
 WITH linear_input AS 
-(SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, `ADS_sca_2_OUT`.scaler_output_2 AS scaler_output_2, `ADS_sca_2_OUT`.scaler_output_3 AS scaler_output_3, `ADS_sca_2_OUT`.scaler_output_4 AS scaler_output_4, `ADS_sca_2_OUT`.scaler_output_5 AS scaler_output_5 
-FROM `TMP_20180508185744_CODEGEN_AHMQOB_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+(SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CAST(`ADS_sca_2_OUT`.scaler_output_2 AS DOUBLE) AS scaler_output_2, CAST(`ADS_sca_2_OUT`.scaler_output_3 AS DOUBLE) AS scaler_output_3, CAST(`ADS_sca_2_OUT`.scaler_output_4 AS DOUBLE) AS scaler_output_4, CAST(`ADS_sca_2_OUT`.scaler_output_5 AS DOUBLE) AS scaler_output_5 
+FROM `TMP_20180516122626_CODEGEN_5EHRRN_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 linear_model_cte AS 
 (SELECT linear_input.`KEY` AS `KEY`, 0.04902526586186135 * linear_input.scaler_output_2 + 0.23258226657287756 * linear_input.scaler_output_3 + -0.6617920365460979 * linear_input.scaler_output_4 + -0.13957440677755487 * linear_input.scaler_output_5 + -0.38333333333333425 AS `Score_0`, 0.0886306707385939 * linear_input.scaler_output_2 + -0.4115503870698435 * linear_input.scaler_output_3 + 0.4660812728575237 * linear_input.scaler_output_4 + -0.5763815228752289 * linear_input.scaler_output_5 + -0.33333333333333265 AS `Score_1`, -0.13765593660045333 * linear_input.scaler_output_2 + 0.17896812049696517 * linear_input.scaler_output_3 + 0.19571076368857368 * linear_input.scaler_output_4 + 0.7159559296527818 * linear_input.scaler_output_5 + -0.28333333333333305 AS `Score_2` 
 FROM linear_input), 

@@ -13,7 +13,7 @@
 -- Model deployment code
 
 WITH linear_input AS 
-(SELECT `ADS`.`KEY` AS `KEY`, `ADS`.`Feature_0` AS `Feature_0`, `ADS`.`Feature_1` AS `Feature_1`, `ADS`.`Feature_2` AS `Feature_2`, `ADS`.`Feature_3` AS `Feature_3`, `ADS`.`Feature_4` AS `Feature_4`, `ADS`.`Feature_5` AS `Feature_5`, `ADS`.`Feature_6` AS `Feature_6`, `ADS`.`Feature_7` AS `Feature_7`, `ADS`.`Feature_8` AS `Feature_8`, `ADS`.`Feature_9` AS `Feature_9` 
+(SELECT `ADS`.`KEY` AS `KEY`, CAST(`ADS`.`Feature_0` AS DOUBLE) AS `Feature_0`, CAST(`ADS`.`Feature_1` AS DOUBLE) AS `Feature_1`, CAST(`ADS`.`Feature_2` AS DOUBLE) AS `Feature_2`, CAST(`ADS`.`Feature_3` AS DOUBLE) AS `Feature_3`, CAST(`ADS`.`Feature_4` AS DOUBLE) AS `Feature_4`, CAST(`ADS`.`Feature_5` AS DOUBLE) AS `Feature_5`, CAST(`ADS`.`Feature_6` AS DOUBLE) AS `Feature_6`, CAST(`ADS`.`Feature_7` AS DOUBLE) AS `Feature_7`, CAST(`ADS`.`Feature_8` AS DOUBLE) AS `Feature_8`, CAST(`ADS`.`Feature_9` AS DOUBLE) AS `Feature_9` 
 FROM `BinaryClass_10` AS `ADS`), 
 linear_model_cte AS 
 (SELECT linear_input.`KEY` AS `KEY`, -25.971450518046673 * linear_input.`Feature_0` + -14.729866455516772 * linear_input.`Feature_1` + -10.421155313252003 * linear_input.`Feature_2` + 13.086122027282586 * linear_input.`Feature_3` + -16.98129387147207 * linear_input.`Feature_4` + -17.919133798810424 * linear_input.`Feature_5` + -11.21454438900714 * linear_input.`Feature_6` + -11.22643872003544 * linear_input.`Feature_7` + 7.555182221516402 * linear_input.`Feature_8` + 30.884508192456227 * linear_input.`Feature_9` + 25.044214060410596 AS lincomb 

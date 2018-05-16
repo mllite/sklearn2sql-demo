@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table ##TMP_20180508180841_CODEGEN_VR0634_HL_1_relu_1 part 1. Create 
+-- Code For temporary table ##TMP_20180516111750_CODEGEN_B5PLSV_HL_1_relu_1 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508180841_CODEGEN_VR0634_HL_1_relu_1 (
+CREATE TABLE ##TMP_20180516111750_CODEGEN_B5PLSV_HL_1_relu_1 (
 	[KEY] BIGINT NULL, 
 	[NEUR_1_1] FLOAT NULL, 
 	[NEUR_1_2] FLOAT NULL, 
@@ -22,7 +22,7 @@ CREATE TABLE ##TMP_20180508180841_CODEGEN_VR0634_HL_1_relu_1 (
 
 
 
--- Code For temporary table ##TMP_20180508180841_CODEGEN_VR0634_HL_1_relu_1 part 2. Populate
+-- Code For temporary table ##TMP_20180516111750_CODEGEN_B5PLSV_HL_1_relu_1 part 2. Populate
 
 WITH [IL] AS 
 (SELECT [ADS].[KEY] AS [KEY], CAST([ADS].[Feature_0] AS FLOAT(53)) AS [Feature_0], CAST([ADS].[Feature_1] AS FLOAT(53)) AS [Feature_1], CAST([ADS].[Feature_2] AS FLOAT(53)) AS [Feature_2], CAST([ADS].[Feature_3] AS FLOAT(53)) AS [Feature_3], CAST([ADS].[Feature_4] AS FLOAT(53)) AS [Feature_4], CAST([ADS].[Feature_5] AS FLOAT(53)) AS [Feature_5], CAST([ADS].[Feature_6] AS FLOAT(53)) AS [Feature_6], CAST([ADS].[Feature_7] AS FLOAT(53)) AS [Feature_7], CAST([ADS].[Feature_8] AS FLOAT(53)) AS [Feature_8], CAST([ADS].[Feature_9] AS FLOAT(53)) AS [Feature_9], CAST([ADS].[Feature_10] AS FLOAT(53)) AS [Feature_10], CAST([ADS].[Feature_11] AS FLOAT(53)) AS [Feature_11], CAST([ADS].[Feature_12] AS FLOAT(53)) AS [Feature_12], CAST([ADS].[Feature_13] AS FLOAT(53)) AS [Feature_13], CAST([ADS].[Feature_14] AS FLOAT(53)) AS [Feature_14], CAST([ADS].[Feature_15] AS FLOAT(53)) AS [Feature_15], CAST([ADS].[Feature_16] AS FLOAT(53)) AS [Feature_16], CAST([ADS].[Feature_17] AS FLOAT(53)) AS [Feature_17], CAST([ADS].[Feature_18] AS FLOAT(53)) AS [Feature_18], CAST([ADS].[Feature_19] AS FLOAT(53)) AS [Feature_19], CAST([ADS].[Feature_20] AS FLOAT(53)) AS [Feature_20], CAST([ADS].[Feature_21] AS FLOAT(53)) AS [Feature_21], CAST([ADS].[Feature_22] AS FLOAT(53)) AS [Feature_22], CAST([ADS].[Feature_23] AS FLOAT(53)) AS [Feature_23], CAST([ADS].[Feature_24] AS FLOAT(53)) AS [Feature_24], CAST([ADS].[Feature_25] AS FLOAT(53)) AS [Feature_25], CAST([ADS].[Feature_26] AS FLOAT(53)) AS [Feature_26], CAST([ADS].[Feature_27] AS FLOAT(53)) AS [Feature_27], CAST([ADS].[Feature_28] AS FLOAT(53)) AS [Feature_28], CAST([ADS].[Feature_29] AS FLOAT(53)) AS [Feature_29] 
@@ -33,25 +33,25 @@ FROM [IL]),
 [HL_1_relu] AS 
 (SELECT [HL_BA_1].[KEY] AS [KEY], CASE WHEN ([HL_BA_1].[NEUR_1_1] <= 0) THEN 0 ELSE [HL_BA_1].[NEUR_1_1] END AS [NEUR_1_1], CASE WHEN ([HL_BA_1].[NEUR_1_2] <= 0) THEN 0 ELSE [HL_BA_1].[NEUR_1_2] END AS [NEUR_1_2], CASE WHEN ([HL_BA_1].[NEUR_1_3] <= 0) THEN 0 ELSE [HL_BA_1].[NEUR_1_3] END AS [NEUR_1_3] 
 FROM [HL_BA_1])
- INSERT INTO ##TMP_20180508180841_CODEGEN_VR0634_HL_1_relu_1 ([KEY], [NEUR_1_1], [NEUR_1_2], [NEUR_1_3]) SELECT [HL_1_relu_1].[KEY], [HL_1_relu_1].[NEUR_1_1], [HL_1_relu_1].[NEUR_1_2], [HL_1_relu_1].[NEUR_1_3] 
+ INSERT INTO ##TMP_20180516111750_CODEGEN_B5PLSV_HL_1_relu_1 ([KEY], [NEUR_1_1], [NEUR_1_2], [NEUR_1_3]) SELECT [HL_1_relu_1].[KEY], [HL_1_relu_1].[NEUR_1_1], [HL_1_relu_1].[NEUR_1_2], [HL_1_relu_1].[NEUR_1_3] 
 FROM (SELECT [HL_1_relu].[KEY] AS [KEY], [HL_1_relu].[NEUR_1_1] AS [NEUR_1_1], [HL_1_relu].[NEUR_1_2] AS [NEUR_1_2], [HL_1_relu].[NEUR_1_3] AS [NEUR_1_3] 
 FROM [HL_1_relu]) AS [HL_1_relu_1]
 
--- Code For temporary table ##TMP_20180508180841_CODEGEN_7BKT5L_OL_logistic_1 part 1. Create 
+-- Code For temporary table ##TMP_20180516111750_CODEGEN_O2VQBT_OL_logistic_1 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508180841_CODEGEN_7BKT5L_OL_logistic_1 (
+CREATE TABLE ##TMP_20180516111750_CODEGEN_O2VQBT_OL_logistic_1 (
 	[KEY] BIGINT NULL, 
 	[NEUR_3_1] FLOAT NULL
 )
 
 
 
--- Code For temporary table ##TMP_20180508180841_CODEGEN_7BKT5L_OL_logistic_1 part 2. Populate
+-- Code For temporary table ##TMP_20180516111750_CODEGEN_O2VQBT_OL_logistic_1 part 2. Populate
 
 WITH [HL_BA_2] AS 
 (SELECT [HL_1_relu_1].[KEY] AS [KEY], 0.5570017972174299 * [HL_1_relu_1].[NEUR_1_1] + -0.631851209981196 * [HL_1_relu_1].[NEUR_1_2] + -0.6027942163503318 * [HL_1_relu_1].[NEUR_1_3] + -0.0885848948970186 AS [NEUR_2_1], -0.6117147512993999 * [HL_1_relu_1].[NEUR_1_1] + -0.7801455649376947 * [HL_1_relu_1].[NEUR_1_2] + -0.20352821274128455 * [HL_1_relu_1].[NEUR_1_3] + 0.7261678101839508 AS [NEUR_2_2], 0.31816655643253156 * [HL_1_relu_1].[NEUR_1_1] + 0.24520744599204347 * [HL_1_relu_1].[NEUR_1_2] + -0.8551662101039045 * [HL_1_relu_1].[NEUR_1_3] + 0.5639237733304812 AS [NEUR_2_3], -0.8421902246487252 * [HL_1_relu_1].[NEUR_1_1] + -0.42238220997569226 * [HL_1_relu_1].[NEUR_1_2] + 0.19867215305070107 * [HL_1_relu_1].[NEUR_1_3] + 0.7033294322747231 AS [NEUR_2_4], -0.6948083780237723 * [HL_1_relu_1].[NEUR_1_1] + -0.2695316480522733 * [HL_1_relu_1].[NEUR_1_2] + -0.6617365100151862 * [HL_1_relu_1].[NEUR_1_3] + -0.815750113657602 AS [NEUR_2_5] 
-FROM ##TMP_20180508180841_CODEGEN_VR0634_HL_1_relu_1 AS [HL_1_relu_1]), 
+FROM ##TMP_20180516111750_CODEGEN_B5PLSV_HL_1_relu_1 AS [HL_1_relu_1]), 
 [HL_2_relu] AS 
 (SELECT [HL_BA_2].[KEY] AS [KEY], CASE WHEN ([HL_BA_2].[NEUR_2_1] <= 0) THEN 0 ELSE [HL_BA_2].[NEUR_2_1] END AS [NEUR_2_1], CASE WHEN ([HL_BA_2].[NEUR_2_2] <= 0) THEN 0 ELSE [HL_BA_2].[NEUR_2_2] END AS [NEUR_2_2], CASE WHEN ([HL_BA_2].[NEUR_2_3] <= 0) THEN 0 ELSE [HL_BA_2].[NEUR_2_3] END AS [NEUR_2_3], CASE WHEN ([HL_BA_2].[NEUR_2_4] <= 0) THEN 0 ELSE [HL_BA_2].[NEUR_2_4] END AS [NEUR_2_4], CASE WHEN ([HL_BA_2].[NEUR_2_5] <= 0) THEN 0 ELSE [HL_BA_2].[NEUR_2_5] END AS [NEUR_2_5] 
 FROM [HL_BA_2]), 
@@ -61,7 +61,7 @@ FROM [HL_2_relu]),
 [OL_logistic] AS 
 (SELECT [OL_BA].[KEY] AS [KEY], 1.0 / (1.0 + exp(CASE WHEN (CASE WHEN (-100.0 <= -[OL_BA].[NEUR_3_1]) THEN -[OL_BA].[NEUR_3_1] ELSE -100.0 END <= 100.0) THEN CASE WHEN (-100.0 <= -[OL_BA].[NEUR_3_1]) THEN -[OL_BA].[NEUR_3_1] ELSE -100.0 END ELSE 100.0 END)) AS [NEUR_3_1] 
 FROM [OL_BA])
- INSERT INTO ##TMP_20180508180841_CODEGEN_7BKT5L_OL_logistic_1 ([KEY], [NEUR_3_1]) SELECT [OL_logistic_1].[KEY], [OL_logistic_1].[NEUR_3_1] 
+ INSERT INTO ##TMP_20180516111750_CODEGEN_O2VQBT_OL_logistic_1 ([KEY], [NEUR_3_1]) SELECT [OL_logistic_1].[KEY], [OL_logistic_1].[NEUR_3_1] 
 FROM (SELECT [OL_logistic].[KEY] AS [KEY], [OL_logistic].[NEUR_3_1] AS [NEUR_3_1] 
 FROM [OL_logistic]) AS [OL_logistic_1]
 
@@ -69,7 +69,7 @@ FROM [OL_logistic]) AS [OL_logistic_1]
 
 WITH orig_cte AS 
 (SELECT [OL_logistic_1].[KEY] AS [KEY], CAST(NULL AS FLOAT(53)) AS [Score_0], CAST(NULL AS FLOAT(53)) AS [Score_1], 1.0 - [OL_logistic_1].[NEUR_3_1] AS [Proba_0], [OL_logistic_1].[NEUR_3_1] AS [Proba_1], CAST(NULL AS FLOAT(53)) AS [LogProba_0], CAST(NULL AS FLOAT(53)) AS [LogProba_1], CAST(NULL AS BIGINT) AS [Decision], CAST(NULL AS FLOAT(53)) AS [DecisionProba] 
-FROM ##TMP_20180508180841_CODEGEN_7BKT5L_OL_logistic_1 AS [OL_logistic_1]), 
+FROM ##TMP_20180516111750_CODEGEN_O2VQBT_OL_logistic_1 AS [OL_logistic_1]), 
 score_class_union AS 
 (SELECT scu.[KEY_u] AS [KEY_u], scu.class AS class, scu.[LogProba] AS [LogProba], scu.[Proba] AS [Proba], scu.[Score] AS [Score] 
 FROM (SELECT orig_cte.[KEY] AS [KEY_u], 0 AS class, orig_cte.[LogProba_0] AS [LogProba], orig_cte.[Proba_0] AS [Proba], orig_cte.[Score_0] AS [Score] 

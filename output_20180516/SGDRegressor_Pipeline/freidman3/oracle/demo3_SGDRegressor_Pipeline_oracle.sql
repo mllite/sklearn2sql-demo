@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table DEGEN_PETLCD_ADS_IMP_1_OUT part 1. Create 
+-- Code For temporary table DEGEN_VOYDPG_ADS_IMP_1_OUT part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "DEGEN_PETLCD_ADS_IMP_1_OUT" (
+CREATE GLOBAL TEMPORARY TABLE "DEGEN_VOYDPG_ADS_IMP_1_OUT" (
 	"KEY" NUMBER(19), 
 	imputer_output_2 BINARY_DOUBLE, 
 	imputer_output_3 BINARY_DOUBLE, 
@@ -23,17 +23,17 @@ CREATE GLOBAL TEMPORARY TABLE "DEGEN_PETLCD_ADS_IMP_1_OUT" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table DEGEN_PETLCD_ADS_IMP_1_OUT part 2. Populate
+-- Code For temporary table DEGEN_VOYDPG_ADS_IMP_1_OUT part 2. Populate
 
-INSERT INTO "DEGEN_PETLCD_ADS_IMP_1_OUT" ("KEY", imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT "U"."KEY", "U".imputer_output_2, "U".imputer_output_3, "U".imputer_output_4, "U".imputer_output_5 
+INSERT INTO "DEGEN_VOYDPG_ADS_IMP_1_OUT" ("KEY", imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT "U"."KEY", "U".imputer_output_2, "U".imputer_output_3, "U".imputer_output_4, "U".imputer_output_5 
 FROM (SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".imputer_output_2, "ADS_imp_1_OUT".imputer_output_3, "ADS_imp_1_OUT".imputer_output_4, "ADS_imp_1_OUT".imputer_output_5 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN 43.79128122207401 ELSE "ADS"."Feature_0" END AS imputer_output_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 945.9672833084396 ELSE "ADS"."Feature_1" END AS imputer_output_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 0.5310009099975209 ELSE "ADS"."Feature_2" END AS imputer_output_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 6.139967152050499 ELSE "ADS"."Feature_3" END AS imputer_output_5 
 FROM "FREIDMAN3" "ADS") "ADS_imp_1_OUT") "U"
 
--- Code For temporary table DEGEN_53535I_ADS_SCA_2_OUT part 1. Create 
+-- Code For temporary table DEGEN_R4SKOA_ADS_SCA_2_OUT part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "DEGEN_53535I_ADS_SCA_2_OUT" (
+CREATE GLOBAL TEMPORARY TABLE "DEGEN_R4SKOA_ADS_SCA_2_OUT" (
 	"KEY" NUMBER(19), 
 	scaler_output_2 BINARY_DOUBLE, 
 	scaler_output_3 BINARY_DOUBLE, 
@@ -43,18 +43,18 @@ CREATE GLOBAL TEMPORARY TABLE "DEGEN_53535I_ADS_SCA_2_OUT" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table DEGEN_53535I_ADS_SCA_2_OUT part 2. Populate
+-- Code For temporary table DEGEN_R4SKOA_ADS_SCA_2_OUT part 2. Populate
 
-INSERT INTO "DEGEN_53535I_ADS_SCA_2_OUT" ("KEY", scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT "U"."KEY", "U".scaler_output_2, "U".scaler_output_3, "U".scaler_output_4, "U".scaler_output_5 
+INSERT INTO "DEGEN_R4SKOA_ADS_SCA_2_OUT" ("KEY", scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT "U"."KEY", "U".scaler_output_2, "U".scaler_output_3, "U".scaler_output_4, "U".scaler_output_5 
 FROM (SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_output_2, "ADS_sca_2_OUT".scaler_output_3, "ADS_sca_2_OUT".scaler_output_4, "ADS_sca_2_OUT".scaler_output_5 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".imputer_output_2 AS BINARY_DOUBLE) - 43.79128122207401) / 26.03562357622511 AS scaler_output_2, (CAST("ADS_imp_1_OUT".imputer_output_3 AS BINARY_DOUBLE) - 945.9672833084396) / 461.4552766146446 AS scaler_output_3, (CAST("ADS_imp_1_OUT".imputer_output_4 AS BINARY_DOUBLE) - 0.5310009099975209) / 0.2901863282144786 AS scaler_output_4, (CAST("ADS_imp_1_OUT".imputer_output_5 AS BINARY_DOUBLE) - 6.139967152050499) / 3.072917242564058 AS scaler_output_5 
-FROM "DEGEN_PETLCD_ADS_IMP_1_OUT" "ADS_imp_1_OUT") "ADS_sca_2_OUT") "U"
+FROM "DEGEN_VOYDPG_ADS_IMP_1_OUT" "ADS_imp_1_OUT") "ADS_sca_2_OUT") "U"
 
 -- Model deployment code
 
 WITH linear_input AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CAST("ADS_sca_2_OUT".scaler_output_2 AS BINARY_DOUBLE) AS scaler_output_2, CAST("ADS_sca_2_OUT".scaler_output_3 AS BINARY_DOUBLE) AS scaler_output_3, CAST("ADS_sca_2_OUT".scaler_output_4 AS BINARY_DOUBLE) AS scaler_output_4, CAST("ADS_sca_2_OUT".scaler_output_5 AS BINARY_DOUBLE) AS scaler_output_5 
-FROM "DEGEN_53535I_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
+FROM "DEGEN_R4SKOA_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
 linear_model_cte AS 
 (SELECT linear_input."KEY" AS "KEY", -0.05650113408120648 * linear_input.scaler_output_2 + 0.0552564964561722 * linear_input.scaler_output_3 + 0.108477543222794 * linear_input.scaler_output_4 + 0.01847829922800209 * linear_input.scaler_output_5 + 0.9494192236627949 AS "Estimator" 
 FROM linear_input)

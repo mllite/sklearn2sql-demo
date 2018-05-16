@@ -10,24 +10,24 @@
 
 
 
--- Code For temporary table TMP_20180508185412_CODEGEN_IR5RBV_XGB_B0 part 1. Create 
+-- Code For temporary table TMP_20180516122129_CODEGEN_PILJMY_XGB_B0 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180508185412_CODEGEN_IR5RBV_XGB_B0` (
+CREATE TEMPORARY TABLE `TMP_20180516122129_CODEGEN_PILJMY_XGB_B0` (
 	`KEY` BIGINT, 
 	`Estimator` DOUBLE
 )
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180508185412_CODEGEN_IR5RBV_XGB_B0 part 2. Populate
+-- Code For temporary table TMP_20180516122129_CODEGEN_PILJMY_XGB_B0 part 2. Populate
 
-INSERT INTO `TMP_20180508185412_CODEGEN_IR5RBV_XGB_B0` (`KEY`, `Estimator`) SELECT `U`.`KEY`, `U`.`Estimator` 
+INSERT INTO `TMP_20180516122129_CODEGEN_PILJMY_XGB_B0` (`KEY`, `Estimator`) SELECT `U`.`KEY`, `U`.`Estimator` 
 FROM (WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` < 0.1157732754945755) THEN 1 ELSE 2 END AS node_id_2 
 FROM freidman3 AS `ADS`), 
 `DT_node_data` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 1 AS nid, 0.03304983675479889 AS `Estimator` UNION ALL SELECT 2 AS nid, 0.09192007780075073 AS `Estimator`) AS `Values`), 
 `DT_Output` AS 
 (SELECT `DT_node_lookup`.`KEY` AS `KEY`, `DT_node_lookup`.node_id_2 AS node_id_2, `DT_node_data`.nid AS nid, `DT_node_data`.`Estimator` AS `Estimator` 
@@ -39,7 +39,7 @@ FROM `DT_Output`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` < 0.1157732754945755) THEN 1 ELSE 2 END AS node_id_2 
 FROM freidman3 AS `ADS`), 
 `DT_node_data_1` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 1 AS nid, 0.03004531003534794 AS `Estimator` UNION ALL SELECT 2 AS nid, 0.08285753428936005 AS `Estimator`) AS `Values`), 
 `DT_Output_1` AS 
 (SELECT `DT_node_lookup_1`.`KEY` AS `KEY`, `DT_node_lookup_1`.node_id_2 AS node_id_2, `DT_node_data_1`.nid AS nid, `DT_node_data_1`.`Estimator` AS `Estimator` 
@@ -51,7 +51,7 @@ FROM `DT_Output_1`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` < 0.1157732754945755) THEN 1 ELSE CASE WHEN (`ADS`.`Feature_0` < 72.4854736328125) THEN 3 ELSE 4 END END AS node_id_2 
 FROM freidman3 AS `ADS`), 
 `DT_node_data_2` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 1 AS nid, 0.027313916012644768 AS `Estimator` UNION ALL SELECT 3 AS nid, 0.0781811997294426 AS `Estimator` UNION ALL SELECT 4 AS nid, 0.05488375946879387 AS `Estimator`) AS `Values`), 
 `DT_Output_2` AS 
 (SELECT `DT_node_lookup_2`.`KEY` AS `KEY`, `DT_node_lookup_2`.node_id_2 AS node_id_2, `DT_node_data_2`.nid AS nid, `DT_node_data_2`.`Estimator` AS `Estimator` 
@@ -63,7 +63,7 @@ FROM `DT_Output_2`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` < 0.1157732754945755) THEN 1 ELSE CASE WHEN (`ADS`.`Feature_0` < 61.53804397583008) THEN 3 ELSE CASE WHEN (`ADS`.`Feature_1` < 851.9430541992188) THEN 5 ELSE 6 END END END AS node_id_2 
 FROM freidman3 AS `ADS`), 
 `DT_node_data_3` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 1 AS nid, 0.024830834940075874 AS `Estimator` UNION ALL SELECT 3 AS nid, 0.07208586484193802 AS `Estimator` UNION ALL SELECT 5 AS nid, 0.03887651488184929 AS `Estimator` UNION ALL SELECT 6 AS nid, 0.06283045560121536 AS `Estimator`) AS `Values`), 
 `DT_Output_3` AS 
 (SELECT `DT_node_lookup_3`.`KEY` AS `KEY`, `DT_node_lookup_3`.node_id_2 AS node_id_2, `DT_node_data_3`.nid AS nid, `DT_node_data_3`.`Estimator` AS `Estimator` 
@@ -75,7 +75,7 @@ FROM `DT_Output_3`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` < 0.2454954981803894) THEN 1 ELSE CASE WHEN (`ADS`.`Feature_1` < 329.4079284667969) THEN 3 ELSE 4 END END AS node_id_2 
 FROM freidman3 AS `ADS`), 
 `DT_node_data_4` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 1 AS nid, 0.030827684327960014 AS `Estimator` UNION ALL SELECT 3 AS nid, 0.042946554720401764 AS `Estimator` UNION ALL SELECT 4 AS nid, 0.06566087901592255 AS `Estimator`) AS `Values`), 
 `DT_Output_4` AS 
 (SELECT `DT_node_lookup_4`.`KEY` AS `KEY`, `DT_node_lookup_4`.node_id_2 AS node_id_2, `DT_node_data_4`.nid AS nid, `DT_node_data_4`.`Estimator` AS `Estimator` 
@@ -87,7 +87,7 @@ FROM `DT_Output_4`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` < 0.1157732754945755) THEN 1 ELSE CASE WHEN (`ADS`.`Feature_0` < 61.53804397583008) THEN 3 ELSE CASE WHEN (`ADS`.`Feature_1` < 851.9430541992188) THEN 5 ELSE 6 END END END AS node_id_2 
 FROM freidman3 AS `ADS`), 
 `DT_node_data_5` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 1 AS nid, 0.019770970568060875 AS `Estimator` UNION ALL SELECT 3 AS nid, 0.05906825140118599 AS `Estimator` UNION ALL SELECT 5 AS nid, 0.031149083748459816 AS `Estimator` UNION ALL SELECT 6 AS nid, 0.05134235695004463 AS `Estimator`) AS `Values`), 
 `DT_Output_5` AS 
 (SELECT `DT_node_lookup_5`.`KEY` AS `KEY`, `DT_node_lookup_5`.node_id_2 AS node_id_2, `DT_node_data_5`.nid AS nid, `DT_node_data_5`.`Estimator` AS `Estimator` 
@@ -99,7 +99,7 @@ FROM `DT_Output_5`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` < 0.20348544418811798) THEN 1 ELSE CASE WHEN (`ADS`.`Feature_1` < 784.8369140625) THEN CASE WHEN (`ADS`.`Feature_0` < 48.77195739746094) THEN 5 ELSE 6 END ELSE 4 END END AS node_id_2 
 FROM freidman3 AS `ADS`), 
 `DT_node_data_6` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 1 AS nid, 0.02235419861972332 AS `Estimator` UNION ALL SELECT 4 AS nid, 0.05528220534324646 AS `Estimator` UNION ALL SELECT 5 AS nid, 0.048120249062776566 AS `Estimator` UNION ALL SELECT 6 AS nid, 0.028293082490563393 AS `Estimator`) AS `Values`), 
 `DT_Output_6` AS 
 (SELECT `DT_node_lookup_6`.`KEY` AS `KEY`, `DT_node_lookup_6`.node_id_2 AS node_id_2, `DT_node_data_6`.nid AS nid, `DT_node_data_6`.`Estimator` AS `Estimator` 
@@ -111,7 +111,7 @@ FROM `DT_Output_6`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` < 0.1157732754945755) THEN 1 ELSE CASE WHEN (`ADS`.`Feature_0` < 49.2326774597168) THEN 3 ELSE CASE WHEN (`ADS`.`Feature_1` < 759.8154907226562) THEN 5 ELSE 6 END END END AS node_id_2 
 FROM freidman3 AS `ADS`), 
 `DT_node_data_7` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 1 AS nid, 0.015941409394145012 AS `Estimator` UNION ALL SELECT 3 AS nid, 0.04950718954205513 AS `Estimator` UNION ALL SELECT 5 AS nid, 0.025699550285935402 AS `Estimator` UNION ALL SELECT 6 AS nid, 0.04306947439908981 AS `Estimator`) AS `Values`), 
 `DT_Output_7` AS 
 (SELECT `DT_node_lookup_7`.`KEY` AS `KEY`, `DT_node_lookup_7`.node_id_2 AS node_id_2, `DT_node_data_7`.nid AS nid, `DT_node_data_7`.`Estimator` AS `Estimator` 
@@ -123,7 +123,7 @@ FROM `DT_Output_7`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` < 0.20348544418811798) THEN 1 ELSE CASE WHEN (`ADS`.`Feature_1` < 784.8369140625) THEN CASE WHEN (`ADS`.`Feature_0` < 48.77195739746094) THEN 5 ELSE 6 END ELSE 4 END END AS node_id_2 
 FROM freidman3 AS `ADS`), 
 `DT_node_data_8` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 1 AS nid, 0.018013611435890198 AS `Estimator` UNION ALL SELECT 4 AS nid, 0.045275527983903885 AS `Estimator` UNION ALL SELECT 5 AS nid, 0.039108484983444214 AS `Estimator` UNION ALL SELECT 6 AS nid, 0.023343760520219803 AS `Estimator`) AS `Values`), 
 `DT_Output_8` AS 
 (SELECT `DT_node_lookup_8`.`KEY` AS `KEY`, `DT_node_lookup_8`.node_id_2 AS node_id_2, `DT_node_data_8`.nid AS nid, `DT_node_data_8`.`Estimator` AS `Estimator` 
@@ -135,7 +135,7 @@ FROM `DT_Output_8`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` < 0.20348544418811798) THEN 1 ELSE CASE WHEN (`ADS`.`Feature_1` < 329.4079284667969) THEN 3 ELSE 4 END END AS node_id_2 
 FROM freidman3 AS `ADS`), 
 `DT_node_data_9` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 1 AS nid, 0.016332341358065605 AS `Estimator` UNION ALL SELECT 3 AS nid, 0.024957163259387016 AS `Estimator` UNION ALL SELECT 4 AS nid, 0.039277832955121994 AS `Estimator`) AS `Values`), 
 `DT_Output_9` AS 
 (SELECT `DT_node_lookup_9`.`KEY` AS `KEY`, `DT_node_lookup_9`.node_id_2 AS node_id_2, `DT_node_data_9`.nid AS nid, `DT_node_data_9`.`Estimator` AS `Estimator` 
@@ -157,24 +157,24 @@ FROM `XGB_Model_7` UNION ALL SELECT `XGB_Model_8`.`KEY` AS `KEY`, `XGB_Model_8`.
 FROM `XGB_Model_8` UNION ALL SELECT `XGB_Model_9`.`KEY` AS `KEY`, `XGB_Model_9`.`Estimator` AS `Estimator` 
 FROM `XGB_Model_9`) AS `XGB_esu_0`) AS `XGB_B0`) AS `U`
 
--- Code For temporary table TMP_20180508185412_CODEGEN_ZA7OB0_XGB_B1 part 1. Create 
+-- Code For temporary table TMP_20180516122129_CODEGEN_FP5BXG_XGB_B1 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180508185412_CODEGEN_ZA7OB0_XGB_B1` (
+CREATE TEMPORARY TABLE `TMP_20180516122129_CODEGEN_FP5BXG_XGB_B1` (
 	`KEY` BIGINT, 
 	`Estimator` DOUBLE
 )
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180508185412_CODEGEN_ZA7OB0_XGB_B1 part 2. Populate
+-- Code For temporary table TMP_20180516122129_CODEGEN_FP5BXG_XGB_B1 part 2. Populate
 
-INSERT INTO `TMP_20180508185412_CODEGEN_ZA7OB0_XGB_B1` (`KEY`, `Estimator`) SELECT `U`.`KEY`, `U`.`Estimator` 
+INSERT INTO `TMP_20180516122129_CODEGEN_FP5BXG_XGB_B1` (`KEY`, `Estimator`) SELECT `U`.`KEY`, `U`.`Estimator` 
 FROM (WITH `DT_node_lookup_10` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` < 0.25638625025749207) THEN 1 ELSE CASE WHEN (`ADS`.`Feature_1` < 329.4079284667969) THEN 3 ELSE 4 END END AS node_id_2 
 FROM freidman3 AS `ADS`), 
 `DT_node_data_10` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 1 AS nid, 0.01674405112862587 AS `Estimator` UNION ALL SELECT 3 AS nid, 0.022688327357172966 AS `Estimator` UNION ALL SELECT 4 AS nid, 0.036280449479818344 AS `Estimator`) AS `Values`), 
 `DT_Output_10` AS 
 (SELECT `DT_node_lookup_10`.`KEY` AS `KEY`, `DT_node_lookup_10`.node_id_2 AS node_id_2, `DT_node_data_10`.nid AS nid, `DT_node_data_10`.`Estimator` AS `Estimator` 
@@ -186,7 +186,7 @@ FROM `DT_Output_10`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_0` < 36.726707458496094) THEN 1 ELSE CASE WHEN (`ADS`.`Feature_2` < 0.2454954981803894) THEN 3 ELSE CASE WHEN (`ADS`.`Feature_1` < 784.8369140625) THEN 5 ELSE 6 END END END AS node_id_2 
 FROM freidman3 AS `ADS`), 
 `DT_node_data_11` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 1 AS nid, 0.03643549606204033 AS `Estimator` UNION ALL SELECT 3 AS nid, 0.001228771056048572 AS `Estimator` UNION ALL SELECT 5 AS nid, 0.016789136454463005 AS `Estimator` UNION ALL SELECT 6 AS nid, 0.031296584755182266 AS `Estimator`) AS `Values`), 
 `DT_Output_11` AS 
 (SELECT `DT_node_lookup_11`.`KEY` AS `KEY`, `DT_node_lookup_11`.node_id_2 AS node_id_2, `DT_node_data_11`.nid AS nid, `DT_node_data_11`.`Estimator` AS `Estimator` 
@@ -198,7 +198,7 @@ FROM `DT_Output_11`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_0` < 36.726707458496094) THEN 1 ELSE CASE WHEN (`ADS`.`Feature_2` < 0.2454954981803894) THEN 3 ELSE CASE WHEN (`ADS`.`Feature_1` < 784.8369140625) THEN 5 ELSE 6 END END END AS node_id_2 
 FROM freidman3 AS `ADS`), 
 `DT_node_data_12` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 1 AS nid, 0.03290235996246338 AS `Estimator` UNION ALL SELECT 3 AS nid, 0.0011161346919834614 AS `Estimator` UNION ALL SELECT 5 AS nid, 0.015239374712109566 AS `Estimator` UNION ALL SELECT 6 AS nid, 0.028287295252084732 AS `Estimator`) AS `Values`), 
 `DT_Output_12` AS 
 (SELECT `DT_node_lookup_12`.`KEY` AS `KEY`, `DT_node_lookup_12`.node_id_2 AS node_id_2, `DT_node_data_12`.nid AS nid, `DT_node_data_12`.`Estimator` AS `Estimator` 
@@ -210,7 +210,7 @@ FROM `DT_Output_12`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` < 0.1157732754945755) THEN 1 ELSE CASE WHEN (`ADS`.`Feature_0` < 74.12876892089844) THEN 3 ELSE 4 END END AS node_id_2 
 FROM freidman3 AS `ADS`), 
 `DT_node_data_13` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 1 AS nid, 0.006589339580386877 AS `Estimator` UNION ALL SELECT 3 AS nid, 0.026202401146292686 AS `Estimator` UNION ALL SELECT 4 AS nid, 0.01683136634528637 AS `Estimator`) AS `Values`), 
 `DT_Output_13` AS 
 (SELECT `DT_node_lookup_13`.`KEY` AS `KEY`, `DT_node_lookup_13`.node_id_2 AS node_id_2, `DT_node_data_13`.nid AS nid, `DT_node_data_13`.`Estimator` AS `Estimator` 
@@ -222,7 +222,7 @@ FROM `DT_Output_13`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_0` < 36.726707458496094) THEN 1 ELSE CASE WHEN (`ADS`.`Feature_2` < 0.2454954981803894) THEN 3 ELSE CASE WHEN (`ADS`.`Feature_1` < 784.8369140625) THEN 5 ELSE 6 END END END AS node_id_2 
 FROM freidman3 AS `ADS`), 
 `DT_node_data_14` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 1 AS nid, 0.027468154206871986 AS `Estimator` UNION ALL SELECT 3 AS nid, -0.0004146725113969296 AS `Estimator` UNION ALL SELECT 5 AS nid, 0.011774403974413872 AS `Estimator` UNION ALL SELECT 6 AS nid, 0.023228108882904053 AS `Estimator`) AS `Values`), 
 `DT_Output_14` AS 
 (SELECT `DT_node_lookup_14`.`KEY` AS `KEY`, `DT_node_lookup_14`.node_id_2 AS node_id_2, `DT_node_data_14`.nid AS nid, `DT_node_data_14`.`Estimator` AS `Estimator` 
@@ -234,7 +234,7 @@ FROM `DT_Output_14`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_0` < 36.726707458496094) THEN 1 ELSE CASE WHEN (`ADS`.`Feature_2` < 0.22980211675167084) THEN 3 ELSE CASE WHEN (`ADS`.`Feature_1` < 784.8369140625) THEN 5 ELSE 6 END END END AS node_id_2 
 FROM freidman3 AS `ADS`), 
 `DT_node_data_15` AS 
-(SELECT `Values`.nid AS nid, `Values`.`Estimator` AS `Estimator` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT 1 AS nid, 0.024804571643471718 AS `Estimator` UNION ALL SELECT 3 AS nid, -0.0012562409974634647 AS `Estimator` UNION ALL SELECT 5 AS nid, 0.010588334873318672 AS `Estimator` UNION ALL SELECT 6 AS nid, 0.0209946371614933 AS `Estimator`) AS `Values`), 
 `DT_Output_15` AS 
 (SELECT `DT_node_lookup_15`.`KEY` AS `KEY`, `DT_node_lookup_15`.node_id_2 AS node_id_2, `DT_node_data_15`.nid AS nid, `DT_node_data_15`.`Estimator` AS `Estimator` 
@@ -252,29 +252,10 @@ FROM `XGB_Model_13` UNION ALL SELECT `XGB_Model_14`.`KEY` AS `KEY`, `XGB_Model_1
 FROM `XGB_Model_14` UNION ALL SELECT `XGB_Model_15`.`KEY` AS `KEY`, `XGB_Model_15`.`Estimator` AS `Estimator` 
 FROM `XGB_Model_15`) AS `XGB_esu_1`) AS `XGB_B1`) AS `U`
 
--- Code For temporary table TMP_20180508185412_CODEGEN_ZJNDYO_XGB_Union part 1. Create 
+-- Code For temporary table TMP_20180516122129_CODEGEN_9U0SVA_XGB_sum part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180508185412_CODEGEN_ZJNDYO_XGB_Union` (
-	`KEY` BIGINT, 
-	`Estimator` DOUBLE
-)
-
- ENGINE=MEMORY
-
--- Code For temporary table TMP_20180508185412_CODEGEN_ZJNDYO_XGB_Union part 2. Populate
-
-INSERT INTO `TMP_20180508185412_CODEGEN_ZJNDYO_XGB_Union` (`KEY`, `Estimator`) SELECT `U`.`KEY`, `U`.`Estimator` 
-FROM (SELECT `XGB_Union`.`KEY`, `XGB_Union`.`Estimator` 
-FROM (SELECT `XGB_EnsembleUnion`.`KEY` AS `KEY`, `XGB_EnsembleUnion`.`Estimator` AS `Estimator` 
-FROM (SELECT `XGB_B0`.`KEY` AS `KEY`, `XGB_B0`.`Estimator` AS `Estimator` 
-FROM `TMP_20180508185412_CODEGEN_IR5RBV_XGB_B0` AS `XGB_B0` UNION ALL SELECT `XGB_B1`.`KEY` AS `KEY`, `XGB_B1`.`Estimator` AS `Estimator` 
-FROM `TMP_20180508185412_CODEGEN_ZA7OB0_XGB_B1` AS `XGB_B1`) AS `XGB_EnsembleUnion`) AS `XGB_Union`) AS `U`
-
--- Code For temporary table TMP_20180508185412_CODEGEN_GCVE7E_XGB_sum part 1. Create 
-
-
-CREATE TEMPORARY TABLE `TMP_20180508185412_CODEGEN_GCVE7E_XGB_sum` (
+CREATE TEMPORARY TABLE `TMP_20180516122129_CODEGEN_9U0SVA_XGB_sum` (
 	`KEY` BIGINT NOT NULL, 
 	`Estimator` DOUBLE, 
 	PRIMARY KEY (`KEY`)
@@ -282,19 +263,24 @@ CREATE TEMPORARY TABLE `TMP_20180508185412_CODEGEN_GCVE7E_XGB_sum` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180508185412_CODEGEN_GCVE7E_XGB_sum part 2. Populate
+-- Code For temporary table TMP_20180516122129_CODEGEN_9U0SVA_XGB_sum part 2. Populate
 
-INSERT INTO `TMP_20180508185412_CODEGEN_GCVE7E_XGB_sum` (`KEY`, `Estimator`) SELECT `U`.`KEY`, `U`.`Estimator` 
-FROM (SELECT `XGB_sum`.`KEY`, `XGB_sum`.`Estimator` 
-FROM (SELECT `T`.`KEY` AS `KEY`, `T`.`Estimator` AS `Estimator` 
+INSERT INTO `TMP_20180516122129_CODEGEN_9U0SVA_XGB_sum` (`KEY`, `Estimator`) SELECT `U`.`KEY`, `U`.`Estimator` 
+FROM (WITH `XGB_Union` AS 
+(SELECT `XGB_EnsembleUnion`.`KEY` AS `KEY`, `XGB_EnsembleUnion`.`Estimator` AS `Estimator` 
+FROM (SELECT `XGB_B0`.`KEY` AS `KEY`, `XGB_B0`.`Estimator` AS `Estimator` 
+FROM `TMP_20180516122129_CODEGEN_PILJMY_XGB_B0` AS `XGB_B0` UNION ALL SELECT `XGB_B1`.`KEY` AS `KEY`, `XGB_B1`.`Estimator` AS `Estimator` 
+FROM `TMP_20180516122129_CODEGEN_FP5BXG_XGB_B1` AS `XGB_B1`) AS `XGB_EnsembleUnion`)
+ SELECT `XGB_sum`.`KEY`, `XGB_sum`.`Estimator` 
+FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT `XGB_Union`.`KEY` AS `KEY`, sum(`XGB_Union`.`Estimator`) AS `Estimator` 
-FROM `TMP_20180508185412_CODEGEN_ZJNDYO_XGB_Union` AS `XGB_Union` GROUP BY `XGB_Union`.`KEY`) AS `T`) AS `XGB_sum`) AS `U`
+FROM `XGB_Union` GROUP BY `XGB_Union`.`KEY`) AS `T`) AS `XGB_sum`) AS `U`
 
--- Code For temporary table TMP_20180508185412_CODEGEN_GCVE7E_XGB_sum part 3. Create Index 
+-- Code For temporary table TMP_20180516122129_CODEGEN_9U0SVA_XGB_sum part 3. Create Index 
 
-CREATE INDEX `ix_TMP_20180508185412_CODEGEN_GCVE7E_XGB_sum_KEY` ON `TMP_20180508185412_CODEGEN_GCVE7E_XGB_sum` (`KEY`)
+CREATE INDEX `ix_TMP_20180516122129_CODEGEN_9U0SVA_XGB_sum_KEY` ON `TMP_20180516122129_CODEGEN_9U0SVA_XGB_sum` (`KEY`)
 
 -- Model deployment code
 
 SELECT `XGB_sum`.`KEY` AS `KEY`, `XGB_sum`.`Estimator` + 0.5 AS `Estimator` 
-FROM `TMP_20180508185412_CODEGEN_GCVE7E_XGB_sum` AS `XGB_sum`
+FROM `TMP_20180516122129_CODEGEN_9U0SVA_XGB_sum` AS `XGB_sum`

@@ -10,19 +10,19 @@
 
 
 
--- Code For temporary table tmp_20180508182105_codegen_pd2jm0_quantiles part 1. Create 
+-- Code For temporary table tmp_20180516113512_codegen_co9fv1_quantiles part 1. Create 
 
 
-CREATE TEMPORARY TABLE tmp_20180508182105_codegen_pd2jm0_quantiles (
+CREATE TEMPORARY TABLE tmp_20180516113512_codegen_co9fv1_quantiles (
 	"KEY" BIGINT, 
 	"Quantile" DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508182105_codegen_pd2jm0_quantiles part 2. Populate
+-- Code For temporary table tmp_20180516113512_codegen_co9fv1_quantiles part 2. Populate
 
-INSERT INTO tmp_20180508182105_codegen_pd2jm0_quantiles ("KEY", "Quantile") SELECT "U"."KEY", "U"."Quantile" 
+INSERT INTO tmp_20180516113512_codegen_co9fv1_quantiles ("KEY", "Quantile") SELECT "U"."KEY", "U"."Quantile" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_4" <= -1.0891695022583008) THEN CASE WHEN ("ADS"."Feature_2" <= 1.115322470664978) THEN CASE WHEN ("ADS"."Feature_4" <= -1.2480316162109375) THEN 3 ELSE 4 END ELSE 5 END ELSE CASE WHEN ("ADS"."Feature_2" <= 0.26210087537765503) THEN CASE WHEN ("ADS"."Feature_7" <= 0.7516303062438965) THEN 8 ELSE 9 END ELSE CASE WHEN ("ADS"."Feature_5" <= -0.8153923749923706) THEN 11 ELSE 12 END END END AS node_id_2 
 FROM "RandomReg_10" AS "ADS"), 
@@ -248,4 +248,4 @@ WHERE "Cumulative_Frequencies".cum_weight >= 0.5 GROUP BY "Cumulative_Frequencie
 -- Model deployment code
 
 SELECT "Quantiles"."KEY" AS "KEY", "Quantiles"."Quantile" AS "Estimator" 
-FROM tmp_20180508182105_codegen_pd2jm0_quantiles AS "Quantiles"
+FROM tmp_20180516113512_codegen_co9fv1_quantiles AS "Quantiles"

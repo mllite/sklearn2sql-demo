@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180508183420_codegen_97ckgu_hl_1_relu_1 part 1. Create 
+-- Code For temporary table tmp_20180516115348_codegen_giqww5_hl_1_relu_1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508183420_codegen_97ckgu_hl_1_relu_1  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516115348_codegen_giqww5_hl_1_relu_1  (
 	"KEY" BIGINT, 
 	"NEUR_1_1" DOUBLE PRECISION, 
 	"NEUR_1_2" DOUBLE PRECISION, 
@@ -22,9 +22,9 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508183420_codegen_97ckgu_hl_1_relu_1  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508183420_codegen_97ckgu_hl_1_relu_1 part 2. Populate
+-- Code For temporary table tmp_20180516115348_codegen_giqww5_hl_1_relu_1 part 2. Populate
 
-INSERT INTO tmp_20180508183420_codegen_97ckgu_hl_1_relu_1 ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "U"."KEY", "U"."NEUR_1_1", "U"."NEUR_1_2", "U"."NEUR_1_3" 
+INSERT INTO tmp_20180516115348_codegen_giqww5_hl_1_relu_1 ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "U"."KEY", "U"."NEUR_1_1", "U"."NEUR_1_2", "U"."NEUR_1_3" 
 FROM (WITH "IL" AS 
 (SELECT "ADS"."KEY" AS "KEY", CAST("ADS"."Feature_0" AS DOUBLE PRECISION) AS "Feature_0", CAST("ADS"."Feature_1" AS DOUBLE PRECISION) AS "Feature_1", CAST("ADS"."Feature_2" AS DOUBLE PRECISION) AS "Feature_2", CAST("ADS"."Feature_3" AS DOUBLE PRECISION) AS "Feature_3", CAST("ADS"."Feature_4" AS DOUBLE PRECISION) AS "Feature_4", CAST("ADS"."Feature_5" AS DOUBLE PRECISION) AS "Feature_5", CAST("ADS"."Feature_6" AS DOUBLE PRECISION) AS "Feature_6", CAST("ADS"."Feature_7" AS DOUBLE PRECISION) AS "Feature_7", CAST("ADS"."Feature_8" AS DOUBLE PRECISION) AS "Feature_8", CAST("ADS"."Feature_9" AS DOUBLE PRECISION) AS "Feature_9" 
 FROM diabetes AS "ADS"), 
@@ -38,22 +38,22 @@ FROM "HL_BA_1")
 FROM (SELECT "HL_1_relu"."KEY" AS "KEY", "HL_1_relu"."NEUR_1_1" AS "NEUR_1_1", "HL_1_relu"."NEUR_1_2" AS "NEUR_1_2", "HL_1_relu"."NEUR_1_3" AS "NEUR_1_3" 
 FROM "HL_1_relu") AS "HL_1_relu_1") AS "U"
 
--- Code For temporary table tmp_20180508183420_codegen_cdx96n_ol_identity_1 part 1. Create 
+-- Code For temporary table tmp_20180516115348_codegen_iv4qkb_ol_identity_1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508183420_codegen_cdx96n_ol_identity_1  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516115348_codegen_iv4qkb_ol_identity_1  (
 	"KEY" BIGINT, 
 	"NEUR_3_1" DOUBLE PRECISION
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508183420_codegen_cdx96n_ol_identity_1 part 2. Populate
+-- Code For temporary table tmp_20180516115348_codegen_iv4qkb_ol_identity_1 part 2. Populate
 
-INSERT INTO tmp_20180508183420_codegen_cdx96n_ol_identity_1 ("KEY", "NEUR_3_1") SELECT "U"."KEY", "U"."NEUR_3_1" 
+INSERT INTO tmp_20180516115348_codegen_iv4qkb_ol_identity_1 ("KEY", "NEUR_3_1") SELECT "U"."KEY", "U"."NEUR_3_1" 
 FROM (WITH "HL_BA_2" AS 
 (SELECT "HL_1_relu_1"."KEY" AS "KEY", CAST(-0.740626631427496 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_1" + CAST(0.591462462845888 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_2" + CAST(-0.07609467427374 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_3" + CAST(-0.270338792322754 AS DOUBLE PRECISION) AS "NEUR_2_1", CAST(-0.149392879988479 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_1" + CAST(0.665179821803564 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_2" + CAST(-1.015305038739965 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_3" + CAST(-11.793370461844614 AS DOUBLE PRECISION) AS "NEUR_2_2", CAST(0.003345117795658 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_1" + CAST(0.457768057869189 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_2" + CAST(7.680687163269137 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_3" + CAST(10.939461717287147 AS DOUBLE PRECISION) AS "NEUR_2_3", CAST(0.111089559244585 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_1" + CAST(-0.504739033465646 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_2" + CAST(-0.406628763834538 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_3" + CAST(-0.796433042433614 AS DOUBLE PRECISION) AS "NEUR_2_4", CAST(-0.622150825055244 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_1" + CAST(0.433211722379406 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_2" + CAST(-0.658874686629282 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_3" + CAST(-0.553791628092022 AS DOUBLE PRECISION) AS "NEUR_2_5" 
-FROM tmp_20180508183420_codegen_97ckgu_hl_1_relu_1 AS "HL_1_relu_1"), 
+FROM tmp_20180516115348_codegen_giqww5_hl_1_relu_1 AS "HL_1_relu_1"), 
 "HL_2_relu" AS 
 (SELECT "HL_BA_2"."KEY" AS "KEY", greatest("HL_BA_2"."NEUR_2_1", CAST(0 AS DOUBLE PRECISION)) AS "NEUR_2_1", greatest("HL_BA_2"."NEUR_2_2", CAST(0 AS DOUBLE PRECISION)) AS "NEUR_2_2", greatest("HL_BA_2"."NEUR_2_3", CAST(0 AS DOUBLE PRECISION)) AS "NEUR_2_3", greatest("HL_BA_2"."NEUR_2_4", CAST(0 AS DOUBLE PRECISION)) AS "NEUR_2_4", greatest("HL_BA_2"."NEUR_2_5", CAST(0 AS DOUBLE PRECISION)) AS "NEUR_2_5" 
 FROM "HL_BA_2"), 
@@ -70,4 +70,4 @@ FROM "OL_identity") AS "OL_identity_1") AS "U"
 -- Model deployment code
 
 SELECT "OL_identity_1"."KEY" AS "KEY", "OL_identity_1"."NEUR_3_1" AS "Estimator" 
-FROM tmp_20180508183420_codegen_cdx96n_ol_identity_1 AS "OL_identity_1"
+FROM tmp_20180516115348_codegen_iv4qkb_ol_identity_1 AS "OL_identity_1"

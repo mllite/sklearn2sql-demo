@@ -10,9 +10,9 @@
 
 
 
--- Code For temporary table tmp_20180509003108_codegen_81wrsh_gb_b0 part 1. Create 
+-- Code For temporary table tmp_20180516114217_codegen_vg01qi_gb_b0 part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180509003108_codegen_81wrsh_gb_b0` STORED AS ORC AS WITH `DT_node_lookup` AS 
+CREATE TEMPORARY TABLE `tmp_20180516114217_codegen_vg01qi_gb_b0` STORED AS ORC AS WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_80` <= -0.20716172456741333) THEN CASE WHEN (`ADS`.`Feature_41` <= -0.5217077136039734) THEN CASE WHEN (`ADS`.`Feature_55` <= 0.8011568188667297) THEN 3 ELSE 4 END ELSE CASE WHEN (`ADS`.`Feature_63` <= 0.025700129568576813) THEN 6 ELSE 7 END END ELSE CASE WHEN (`ADS`.`Feature_39` <= 0.45573797821998596) THEN CASE WHEN (`ADS`.`Feature_57` <= 0.7340818643569946) THEN 10 ELSE 11 END ELSE CASE WHEN (`ADS`.`Feature_1` <= 1.2074711322784424) THEN 13 ELSE 14 END END END AS `node_id_2` 
 FROM `RandomReg_100` AS `ADS`), 
 `DT_node_data` AS 
@@ -146,13 +146,13 @@ FROM `GB_Model_7_0` UNION ALL SELECT `GB_Model_8_0`.`KEY` AS `KEY`, `GB_Model_8_
 FROM `GB_Model_8_0` UNION ALL SELECT `GB_Model_9_0`.`KEY` AS `KEY`, `GB_Model_9_0`.`Estimator` AS `Estimator` 
 FROM `GB_Model_9_0`) AS `GB_esu_0`) AS `GB_B0`
 
--- Code For temporary table tmp_20180509003108_codegen_81wrsh_gb_b0 part 2. Populate
+-- Code For temporary table tmp_20180516114217_codegen_vg01qi_gb_b0 part 2. Populate
 
-SELECT * FROM `tmp_20180509003108_codegen_81wrsh_gb_b0`
+SELECT * FROM `tmp_20180516114217_codegen_vg01qi_gb_b0`
 
--- Code For temporary table tmp_20180509003108_codegen_6bbaom_gb_b1 part 1. Create 
+-- Code For temporary table tmp_20180516114217_codegen_kqqlzn_gb_b1 part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180509003108_codegen_6bbaom_gb_b1` STORED AS ORC AS WITH `DT_node_lookup_10` AS 
+CREATE TEMPORARY TABLE `tmp_20180516114217_codegen_kqqlzn_gb_b1` STORED AS ORC AS WITH `DT_node_lookup_10` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_41` <= -0.5153412222862244) THEN CASE WHEN (`ADS`.`Feature_88` <= 1.8550121784210205) THEN CASE WHEN (`ADS`.`Feature_81` <= 0.9404175281524658) THEN 3 ELSE 4 END ELSE CASE WHEN (`ADS`.`Feature_56` <= 0.07086198031902313) THEN 6 ELSE 7 END END ELSE CASE WHEN (`ADS`.`Feature_92` <= -1.1308966875076294) THEN CASE WHEN (`ADS`.`Feature_46` <= 0.5898699164390564) THEN 10 ELSE 11 END ELSE CASE WHEN (`ADS`.`Feature_41` <= 1.2777845859527588) THEN 13 ELSE 14 END END END AS `node_id_2` 
 FROM `RandomReg_100` AS `ADS`), 
 `DT_node_data_10` AS 
@@ -234,34 +234,27 @@ FROM `GB_Model_13_0` UNION ALL SELECT `GB_Model_14_0`.`KEY` AS `KEY`, `GB_Model_
 FROM `GB_Model_14_0` UNION ALL SELECT `GB_Model_15_0`.`KEY` AS `KEY`, `GB_Model_15_0`.`Estimator` AS `Estimator` 
 FROM `GB_Model_15_0`) AS `GB_esu_1`) AS `GB_B1`
 
--- Code For temporary table tmp_20180509003108_codegen_6bbaom_gb_b1 part 2. Populate
+-- Code For temporary table tmp_20180516114217_codegen_kqqlzn_gb_b1 part 2. Populate
 
-SELECT * FROM `tmp_20180509003108_codegen_6bbaom_gb_b1`
+SELECT * FROM `tmp_20180516114217_codegen_kqqlzn_gb_b1`
 
--- Code For temporary table tmp_20180509003108_codegen_pio3nd_gb_union part 1. Create 
+-- Code For temporary table tmp_20180516114217_codegen_ef881l_gb_sum part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180509003108_codegen_pio3nd_gb_union` STORED AS ORC AS SELECT `GB_Union`.`KEY`, `GB_Union`.`Estimator` 
-FROM (SELECT `GB_EnsembleUnion`.`KEY` AS `KEY`, `GB_EnsembleUnion`.`Estimator` AS `Estimator` 
+CREATE TEMPORARY TABLE `tmp_20180516114217_codegen_ef881l_gb_sum` STORED AS ORC AS WITH `GB_Union` AS 
+(SELECT `GB_EnsembleUnion`.`KEY` AS `KEY`, `GB_EnsembleUnion`.`Estimator` AS `Estimator` 
 FROM (SELECT `GB_B0`.`KEY` AS `KEY`, `GB_B0`.`Estimator` AS `Estimator` 
-FROM `tmp_20180509003108_codegen_81wrsh_gb_b0` AS `GB_B0` UNION ALL SELECT `GB_B1`.`KEY` AS `KEY`, `GB_B1`.`Estimator` AS `Estimator` 
-FROM `tmp_20180509003108_codegen_6bbaom_gb_b1` AS `GB_B1`) AS `GB_EnsembleUnion`) AS `GB_Union`
-
--- Code For temporary table tmp_20180509003108_codegen_pio3nd_gb_union part 2. Populate
-
-SELECT * FROM `tmp_20180509003108_codegen_pio3nd_gb_union`
-
--- Code For temporary table tmp_20180509003108_codegen_njsuds_gb_sum part 1. Create 
-
-CREATE TEMPORARY TABLE `tmp_20180509003108_codegen_njsuds_gb_sum` STORED AS ORC AS SELECT `GB_sum`.`KEY`, `GB_sum`.`Estimator` 
+FROM `tmp_20180516114217_codegen_vg01qi_gb_b0` AS `GB_B0` UNION ALL SELECT `GB_B1`.`KEY` AS `KEY`, `GB_B1`.`Estimator` AS `Estimator` 
+FROM `tmp_20180516114217_codegen_kqqlzn_gb_b1` AS `GB_B1`) AS `GB_EnsembleUnion`)
+ SELECT `GB_sum`.`KEY`, `GB_sum`.`Estimator` 
 FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT `GB_Union`.`KEY` AS `KEY`, sum(`GB_Union`.`Estimator`) AS `Estimator` 
-FROM `tmp_20180509003108_codegen_pio3nd_gb_union` AS `GB_Union` GROUP BY `GB_Union`.`KEY`) AS `T`) AS `GB_sum`
+FROM `GB_Union` GROUP BY `GB_Union`.`KEY`) AS `T`) AS `GB_sum`
 
--- Code For temporary table tmp_20180509003108_codegen_njsuds_gb_sum part 2. Populate
+-- Code For temporary table tmp_20180516114217_codegen_ef881l_gb_sum part 2. Populate
 
-SELECT * FROM `tmp_20180509003108_codegen_njsuds_gb_sum`
+SELECT * FROM `tmp_20180516114217_codegen_ef881l_gb_sum`
 
 -- Model deployment code
 
 SELECT `GB_sum`.`KEY` AS `KEY`, -11.471614782695335 + 0.1 * `GB_sum`.`Estimator` AS `Estimator` 
-FROM `tmp_20180509003108_codegen_njsuds_gb_sum` AS `GB_sum`
+FROM `tmp_20180516114217_codegen_ef881l_gb_sum` AS `GB_sum`

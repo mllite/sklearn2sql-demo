@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180508180351_CODEGEN_X9ARK4_HL_1_relu_1 part 1. Create 
+-- Code For temporary table TMP_20180516111100_CODEGEN_PU75O8_HL_1_relu_1 part 1. Create 
 
 
-CREATE TEMPORARY TABLE "TMP_20180508180351_CODEGEN_X9ARK4_HL_1_relu_1" (
+CREATE TEMPORARY TABLE "TMP_20180516111100_CODEGEN_PU75O8_HL_1_relu_1" (
 	"KEY" BIGINT NOT NULL, 
 	"NEUR_1_1" FLOAT, 
 	"NEUR_1_2" FLOAT, 
@@ -23,7 +23,7 @@ CREATE TEMPORARY TABLE "TMP_20180508180351_CODEGEN_X9ARK4_HL_1_relu_1" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508180351_CODEGEN_X9ARK4_HL_1_relu_1 part 2. Populate
+-- Code For temporary table TMP_20180516111100_CODEGEN_PU75O8_HL_1_relu_1 part 2. Populate
 
 WITH "IL" AS 
 (SELECT "ADS"."KEY" AS "KEY", CAST("ADS"."Feature_0" AS FLOAT) AS "Feature_0", CAST("ADS"."Feature_1" AS FLOAT) AS "Feature_1", CAST("ADS"."Feature_2" AS FLOAT) AS "Feature_2", CAST("ADS"."Feature_3" AS FLOAT) AS "Feature_3", CAST("ADS"."Feature_4" AS FLOAT) AS "Feature_4", CAST("ADS"."Feature_5" AS FLOAT) AS "Feature_5", CAST("ADS"."Feature_6" AS FLOAT) AS "Feature_6", CAST("ADS"."Feature_7" AS FLOAT) AS "Feature_7", CAST("ADS"."Feature_8" AS FLOAT) AS "Feature_8", CAST("ADS"."Feature_9" AS FLOAT) AS "Feature_9", CAST("ADS"."Feature_10" AS FLOAT) AS "Feature_10", CAST("ADS"."Feature_11" AS FLOAT) AS "Feature_11", CAST("ADS"."Feature_12" AS FLOAT) AS "Feature_12", CAST("ADS"."Feature_13" AS FLOAT) AS "Feature_13", CAST("ADS"."Feature_14" AS FLOAT) AS "Feature_14", CAST("ADS"."Feature_15" AS FLOAT) AS "Feature_15", CAST("ADS"."Feature_16" AS FLOAT) AS "Feature_16", CAST("ADS"."Feature_17" AS FLOAT) AS "Feature_17", CAST("ADS"."Feature_18" AS FLOAT) AS "Feature_18", CAST("ADS"."Feature_19" AS FLOAT) AS "Feature_19", CAST("ADS"."Feature_20" AS FLOAT) AS "Feature_20", CAST("ADS"."Feature_21" AS FLOAT) AS "Feature_21", CAST("ADS"."Feature_22" AS FLOAT) AS "Feature_22", CAST("ADS"."Feature_23" AS FLOAT) AS "Feature_23", CAST("ADS"."Feature_24" AS FLOAT) AS "Feature_24", CAST("ADS"."Feature_25" AS FLOAT) AS "Feature_25", CAST("ADS"."Feature_26" AS FLOAT) AS "Feature_26", CAST("ADS"."Feature_27" AS FLOAT) AS "Feature_27", CAST("ADS"."Feature_28" AS FLOAT) AS "Feature_28", CAST("ADS"."Feature_29" AS FLOAT) AS "Feature_29", CAST("ADS"."Feature_30" AS FLOAT) AS "Feature_30", CAST("ADS"."Feature_31" AS FLOAT) AS "Feature_31", CAST("ADS"."Feature_32" AS FLOAT) AS "Feature_32", CAST("ADS"."Feature_33" AS FLOAT) AS "Feature_33", CAST("ADS"."Feature_34" AS FLOAT) AS "Feature_34", CAST("ADS"."Feature_35" AS FLOAT) AS "Feature_35", CAST("ADS"."Feature_36" AS FLOAT) AS "Feature_36", CAST("ADS"."Feature_37" AS FLOAT) AS "Feature_37", CAST("ADS"."Feature_38" AS FLOAT) AS "Feature_38", CAST("ADS"."Feature_39" AS FLOAT) AS "Feature_39", CAST("ADS"."Feature_40" AS FLOAT) AS "Feature_40", CAST("ADS"."Feature_41" AS FLOAT) AS "Feature_41", CAST("ADS"."Feature_42" AS FLOAT) AS "Feature_42", CAST("ADS"."Feature_43" AS FLOAT) AS "Feature_43", CAST("ADS"."Feature_44" AS FLOAT) AS "Feature_44", CAST("ADS"."Feature_45" AS FLOAT) AS "Feature_45", CAST("ADS"."Feature_46" AS FLOAT) AS "Feature_46", CAST("ADS"."Feature_47" AS FLOAT) AS "Feature_47", CAST("ADS"."Feature_48" AS FLOAT) AS "Feature_48", CAST("ADS"."Feature_49" AS FLOAT) AS "Feature_49", CAST("ADS"."Feature_50" AS FLOAT) AS "Feature_50", CAST("ADS"."Feature_51" AS FLOAT) AS "Feature_51", CAST("ADS"."Feature_52" AS FLOAT) AS "Feature_52", CAST("ADS"."Feature_53" AS FLOAT) AS "Feature_53", CAST("ADS"."Feature_54" AS FLOAT) AS "Feature_54", CAST("ADS"."Feature_55" AS FLOAT) AS "Feature_55", CAST("ADS"."Feature_56" AS FLOAT) AS "Feature_56", CAST("ADS"."Feature_57" AS FLOAT) AS "Feature_57", CAST("ADS"."Feature_58" AS FLOAT) AS "Feature_58", CAST("ADS"."Feature_59" AS FLOAT) AS "Feature_59", CAST("ADS"."Feature_60" AS FLOAT) AS "Feature_60", CAST("ADS"."Feature_61" AS FLOAT) AS "Feature_61", CAST("ADS"."Feature_62" AS FLOAT) AS "Feature_62", CAST("ADS"."Feature_63" AS FLOAT) AS "Feature_63", CAST("ADS"."Feature_64" AS FLOAT) AS "Feature_64", CAST("ADS"."Feature_65" AS FLOAT) AS "Feature_65", CAST("ADS"."Feature_66" AS FLOAT) AS "Feature_66", CAST("ADS"."Feature_67" AS FLOAT) AS "Feature_67", CAST("ADS"."Feature_68" AS FLOAT) AS "Feature_68", CAST("ADS"."Feature_69" AS FLOAT) AS "Feature_69", CAST("ADS"."Feature_70" AS FLOAT) AS "Feature_70", CAST("ADS"."Feature_71" AS FLOAT) AS "Feature_71", CAST("ADS"."Feature_72" AS FLOAT) AS "Feature_72", CAST("ADS"."Feature_73" AS FLOAT) AS "Feature_73", CAST("ADS"."Feature_74" AS FLOAT) AS "Feature_74", CAST("ADS"."Feature_75" AS FLOAT) AS "Feature_75", CAST("ADS"."Feature_76" AS FLOAT) AS "Feature_76", CAST("ADS"."Feature_77" AS FLOAT) AS "Feature_77", CAST("ADS"."Feature_78" AS FLOAT) AS "Feature_78", CAST("ADS"."Feature_79" AS FLOAT) AS "Feature_79", CAST("ADS"."Feature_80" AS FLOAT) AS "Feature_80", CAST("ADS"."Feature_81" AS FLOAT) AS "Feature_81", CAST("ADS"."Feature_82" AS FLOAT) AS "Feature_82", CAST("ADS"."Feature_83" AS FLOAT) AS "Feature_83", CAST("ADS"."Feature_84" AS FLOAT) AS "Feature_84", CAST("ADS"."Feature_85" AS FLOAT) AS "Feature_85", CAST("ADS"."Feature_86" AS FLOAT) AS "Feature_86", CAST("ADS"."Feature_87" AS FLOAT) AS "Feature_87", CAST("ADS"."Feature_88" AS FLOAT) AS "Feature_88", CAST("ADS"."Feature_89" AS FLOAT) AS "Feature_89", CAST("ADS"."Feature_90" AS FLOAT) AS "Feature_90", CAST("ADS"."Feature_91" AS FLOAT) AS "Feature_91", CAST("ADS"."Feature_92" AS FLOAT) AS "Feature_92", CAST("ADS"."Feature_93" AS FLOAT) AS "Feature_93", CAST("ADS"."Feature_94" AS FLOAT) AS "Feature_94", CAST("ADS"."Feature_95" AS FLOAT) AS "Feature_95", CAST("ADS"."Feature_96" AS FLOAT) AS "Feature_96", CAST("ADS"."Feature_97" AS FLOAT) AS "Feature_97", CAST("ADS"."Feature_98" AS FLOAT) AS "Feature_98", CAST("ADS"."Feature_99" AS FLOAT) AS "Feature_99" 
@@ -34,18 +34,18 @@ FROM "IL"),
 "HL_1_relu" AS 
 (SELECT "HL_BA_1"."KEY" AS "KEY", greatest("HL_BA_1"."NEUR_1_1", 0) AS "NEUR_1_1", greatest("HL_BA_1"."NEUR_1_2", 0) AS "NEUR_1_2", greatest("HL_BA_1"."NEUR_1_3", 0) AS "NEUR_1_3" 
 FROM "HL_BA_1")
- INSERT INTO "TMP_20180508180351_CODEGEN_X9ARK4_HL_1_relu_1" ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "HL_1_relu_1"."KEY", "HL_1_relu_1"."NEUR_1_1", "HL_1_relu_1"."NEUR_1_2", "HL_1_relu_1"."NEUR_1_3" 
+ INSERT INTO "TMP_20180516111100_CODEGEN_PU75O8_HL_1_relu_1" ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "HL_1_relu_1"."KEY", "HL_1_relu_1"."NEUR_1_1", "HL_1_relu_1"."NEUR_1_2", "HL_1_relu_1"."NEUR_1_3" 
 FROM (SELECT "HL_1_relu"."KEY" AS "KEY", "HL_1_relu"."NEUR_1_1" AS "NEUR_1_1", "HL_1_relu"."NEUR_1_2" AS "NEUR_1_2", "HL_1_relu"."NEUR_1_3" AS "NEUR_1_3" 
 FROM "HL_1_relu") AS "HL_1_relu_1"
 
--- Code For temporary table TMP_20180508180351_CODEGEN_X9ARK4_HL_1_relu_1 part 3. Create Index 
+-- Code For temporary table TMP_20180516111100_CODEGEN_PU75O8_HL_1_relu_1 part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508180351_CODEGEN_X9ARK4_HL_1_relu_1_KEY" ON "TMP_20180508180351_CODEGEN_X9ARK4_HL_1_relu_1" ("KEY")
+CREATE INDEX "ix_TMP_20180516111100_CODEGEN_PU75O8_HL_1_relu_1_KEY" ON "TMP_20180516111100_CODEGEN_PU75O8_HL_1_relu_1" ("KEY")
 
--- Code For temporary table TMP_20180508180351_CODEGEN_B5CFXX_OL_logistic_1 part 1. Create 
+-- Code For temporary table TMP_20180516111100_CODEGEN_S7SX9J_OL_logistic_1 part 1. Create 
 
 
-CREATE TEMPORARY TABLE "TMP_20180508180351_CODEGEN_B5CFXX_OL_logistic_1" (
+CREATE TEMPORARY TABLE "TMP_20180516111100_CODEGEN_S7SX9J_OL_logistic_1" (
 	"KEY" BIGINT NOT NULL, 
 	"NEUR_3_1" FLOAT, 
 	PRIMARY KEY ("KEY")
@@ -53,11 +53,11 @@ CREATE TEMPORARY TABLE "TMP_20180508180351_CODEGEN_B5CFXX_OL_logistic_1" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508180351_CODEGEN_B5CFXX_OL_logistic_1 part 2. Populate
+-- Code For temporary table TMP_20180516111100_CODEGEN_S7SX9J_OL_logistic_1 part 2. Populate
 
 WITH "HL_BA_2" AS 
 (SELECT "HL_1_relu_1"."KEY" AS "KEY", 0.5147985458726192 * "HL_1_relu_1"."NEUR_1_1" + 0.7209459805988819 * "HL_1_relu_1"."NEUR_1_2" + 1.3969064762974124 * "HL_1_relu_1"."NEUR_1_3" + -0.41953234908823284 AS "NEUR_2_1", -0.19388281061373336 * "HL_1_relu_1"."NEUR_1_1" + -0.09655262728288522 * "HL_1_relu_1"."NEUR_1_2" + 0.1925939492527063 * "HL_1_relu_1"."NEUR_1_3" + 2.7845930644168537 AS "NEUR_2_2", -0.37977845315855363 * "HL_1_relu_1"."NEUR_1_1" + 1.3296838800598012 * "HL_1_relu_1"."NEUR_1_2" + 1.0662425817806298 * "HL_1_relu_1"."NEUR_1_3" + -0.20900266243930857 AS "NEUR_2_3", -0.46740821640123237 * "HL_1_relu_1"."NEUR_1_1" + 0.2261203603024419 * "HL_1_relu_1"."NEUR_1_2" + -0.601925421214221 * "HL_1_relu_1"."NEUR_1_3" + 0.8639085215796434 AS "NEUR_2_4", -0.6091649727400567 * "HL_1_relu_1"."NEUR_1_1" + -0.3775557947571933 * "HL_1_relu_1"."NEUR_1_2" + -0.6728008453871377 * "HL_1_relu_1"."NEUR_1_3" + -0.01807831622698608 AS "NEUR_2_5" 
-FROM "TMP_20180508180351_CODEGEN_X9ARK4_HL_1_relu_1" AS "HL_1_relu_1"), 
+FROM "TMP_20180516111100_CODEGEN_PU75O8_HL_1_relu_1" AS "HL_1_relu_1"), 
 "HL_2_relu" AS 
 (SELECT "HL_BA_2"."KEY" AS "KEY", greatest("HL_BA_2"."NEUR_2_1", 0) AS "NEUR_2_1", greatest("HL_BA_2"."NEUR_2_2", 0) AS "NEUR_2_2", greatest("HL_BA_2"."NEUR_2_3", 0) AS "NEUR_2_3", greatest("HL_BA_2"."NEUR_2_4", 0) AS "NEUR_2_4", greatest("HL_BA_2"."NEUR_2_5", 0) AS "NEUR_2_5" 
 FROM "HL_BA_2"), 
@@ -67,19 +67,19 @@ FROM "HL_2_relu"),
 "OL_logistic" AS 
 (SELECT "OL_BA"."KEY" AS "KEY", 1.0 / (1.0 + exp(least(greatest(-100.0, -"OL_BA"."NEUR_3_1"), 100.0))) AS "NEUR_3_1" 
 FROM "OL_BA")
- INSERT INTO "TMP_20180508180351_CODEGEN_B5CFXX_OL_logistic_1" ("KEY", "NEUR_3_1") SELECT "OL_logistic_1"."KEY", "OL_logistic_1"."NEUR_3_1" 
+ INSERT INTO "TMP_20180516111100_CODEGEN_S7SX9J_OL_logistic_1" ("KEY", "NEUR_3_1") SELECT "OL_logistic_1"."KEY", "OL_logistic_1"."NEUR_3_1" 
 FROM (SELECT "OL_logistic"."KEY" AS "KEY", "OL_logistic"."NEUR_3_1" AS "NEUR_3_1" 
 FROM "OL_logistic") AS "OL_logistic_1"
 
--- Code For temporary table TMP_20180508180351_CODEGEN_B5CFXX_OL_logistic_1 part 3. Create Index 
+-- Code For temporary table TMP_20180516111100_CODEGEN_S7SX9J_OL_logistic_1 part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508180351_CODEGEN_B5CFXX_OL_logistic_1_KEY" ON "TMP_20180508180351_CODEGEN_B5CFXX_OL_logistic_1" ("KEY")
+CREATE INDEX "ix_TMP_20180516111100_CODEGEN_S7SX9J_OL_logistic_1_KEY" ON "TMP_20180516111100_CODEGEN_S7SX9J_OL_logistic_1" ("KEY")
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT "OL_logistic_1"."KEY" AS "KEY", CAST(NULL AS FLOAT) AS "Score_0", CAST(NULL AS FLOAT) AS "Score_1", 1.0 - "OL_logistic_1"."NEUR_3_1" AS "Proba_0", "OL_logistic_1"."NEUR_3_1" AS "Proba_1", CAST(NULL AS FLOAT) AS "LogProba_0", CAST(NULL AS FLOAT) AS "LogProba_1", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS FLOAT) AS "DecisionProba" 
-FROM "TMP_20180508180351_CODEGEN_B5CFXX_OL_logistic_1" AS "OL_logistic_1"), 
+FROM "TMP_20180516111100_CODEGEN_S7SX9J_OL_logistic_1" AS "OL_logistic_1"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

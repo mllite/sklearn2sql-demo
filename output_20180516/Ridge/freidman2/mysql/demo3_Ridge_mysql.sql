@@ -13,7 +13,7 @@
 -- Model deployment code
 
 WITH linear_input AS 
-(SELECT `ADS`.`KEY` AS `KEY`, `ADS`.`Feature_0` AS `Feature_0`, `ADS`.`Feature_1` AS `Feature_1`, `ADS`.`Feature_2` AS `Feature_2`, `ADS`.`Feature_3` AS `Feature_3` 
+(SELECT `ADS`.`KEY` AS `KEY`, CAST(`ADS`.`Feature_0` AS DOUBLE) AS `Feature_0`, CAST(`ADS`.`Feature_1` AS DOUBLE) AS `Feature_1`, CAST(`ADS`.`Feature_2` AS DOUBLE) AS `Feature_2`, CAST(`ADS`.`Feature_3` AS DOUBLE) AS `Feature_3` 
 FROM freidman2 AS `ADS`), 
 linear_model_cte AS 
 (SELECT linear_input.`KEY` AS `KEY`, 0.946971914345613 * linear_input.`Feature_0` + 0.508725859002448 * linear_input.`Feature_1` + 812.7667142899859 * linear_input.`Feature_2` + 9.07512322642097 * linear_input.`Feature_3` + -510.91507114935155 AS `Estimator` 

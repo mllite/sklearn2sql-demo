@@ -10,17 +10,17 @@
 
 
 
--- Code For temporary table ##TMP_20180508184327_CODEGEN_6ZCEKT_Quantiles part 1. Create 
+-- Code For temporary table ##TMP_20180516120544_CODEGEN_ZN0LNI_Quantiles part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508184327_CODEGEN_6ZCEKT_Quantiles (
+CREATE TABLE ##TMP_20180516120544_CODEGEN_ZN0LNI_Quantiles (
 	[KEY] BIGINT NULL, 
 	[Quantile] FLOAT(53) NULL
 )
 
 
 
--- Code For temporary table ##TMP_20180508184327_CODEGEN_6ZCEKT_Quantiles part 2. Populate
+-- Code For temporary table ##TMP_20180516120544_CODEGEN_ZN0LNI_Quantiles part 2. Populate
 
 WITH [DT_node_lookup] AS 
 (SELECT [ADS].[KEY] AS [KEY], CASE WHEN ([ADS].[Feature_1] <= 0.28362607955932617) THEN CASE WHEN ([ADS].[Feature_4] <= 0.6014193892478943) THEN CASE WHEN ([ADS].[Feature_3] <= 0.3159424662590027) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS].[Feature_6] <= 0.6361697912216187) THEN 6 ELSE 7 END END ELSE CASE WHEN ([ADS].[Feature_3] <= 0.8160629272460938) THEN CASE WHEN ([ADS].[Feature_5] <= 0.02199404314160347) THEN 10 ELSE 11 END ELSE CASE WHEN ([ADS].[Feature_9] <= 0.09068352729082108) THEN 13 ELSE 14 END END END AS node_id_2 
@@ -238,7 +238,7 @@ FROM [ADB_Model_15]) AS ensemble_score_union),
 FROM (SELECT u1.[KEY] AS [KEY], u1.[Estimator] AS [Estimator], u1.[Weight] AS [Weight], u1.est_index AS est_index, sum(u2.[Weight]) AS cum_weight 
 FROM [WE] AS u1, [WE] AS u2 
 WHERE u1.[Estimator] >= u2.[Estimator] AND u1.[KEY] = u2.[KEY] GROUP BY u1.[KEY], u1.est_index, u1.[Estimator], u1.[Weight]) AS [CW])
- INSERT INTO ##TMP_20180508184327_CODEGEN_6ZCEKT_Quantiles ([KEY], [Quantile]) SELECT [Quantiles].[KEY], [Quantiles].[Quantile] 
+ INSERT INTO ##TMP_20180516120544_CODEGEN_ZN0LNI_Quantiles ([KEY], [Quantile]) SELECT [Quantiles].[KEY], [Quantiles].[Quantile] 
 FROM (SELECT [CW2].[KEY] AS [KEY], [CW2].[Quantile] AS [Quantile] 
 FROM (SELECT [Cumulative_Frequencies].[KEY] AS [KEY], min([Cumulative_Frequencies].[Estimator]) AS [Quantile] 
 FROM [Cumulative_Frequencies] 
@@ -247,4 +247,4 @@ WHERE [Cumulative_Frequencies].cum_weight >= 0.5 GROUP BY [Cumulative_Frequencie
 -- Model deployment code
 
 SELECT [Quantiles].[KEY] AS [KEY], [Quantiles].[Quantile] AS [Estimator] 
-FROM ##TMP_20180508184327_CODEGEN_6ZCEKT_Quantiles AS [Quantiles]
+FROM ##TMP_20180516120544_CODEGEN_ZN0LNI_Quantiles AS [Quantiles]

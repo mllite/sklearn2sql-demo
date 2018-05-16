@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table CODEGEN_JOOGIU_HL_1_RELU_1 part 1. Create 
+-- Code For temporary table CODEGEN_S1RT2Y_HL_1_RELU_1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "CODEGEN_JOOGIU_HL_1_RELU_1" (
+CREATE GLOBAL TEMPORARY TABLE "CODEGEN_S1RT2Y_HL_1_RELU_1" (
 	"KEY" NUMBER(19), 
 	"NEUR_1_1" BINARY_DOUBLE, 
 	"NEUR_1_2" BINARY_DOUBLE, 
@@ -22,9 +22,9 @@ CREATE GLOBAL TEMPORARY TABLE "CODEGEN_JOOGIU_HL_1_RELU_1" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table CODEGEN_JOOGIU_HL_1_RELU_1 part 2. Populate
+-- Code For temporary table CODEGEN_S1RT2Y_HL_1_RELU_1 part 2. Populate
 
-INSERT INTO "CODEGEN_JOOGIU_HL_1_RELU_1" ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "U"."KEY", "U"."NEUR_1_1", "U"."NEUR_1_2", "U"."NEUR_1_3" 
+INSERT INTO "CODEGEN_S1RT2Y_HL_1_RELU_1" ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "U"."KEY", "U"."NEUR_1_1", "U"."NEUR_1_2", "U"."NEUR_1_3" 
 FROM (WITH "IL" AS 
 (SELECT "ADS"."KEY" AS "KEY", CAST("ADS"."Feature_0" AS BINARY_DOUBLE) AS "Feature_0", CAST("ADS"."Feature_1" AS BINARY_DOUBLE) AS "Feature_1", CAST("ADS"."Feature_2" AS BINARY_DOUBLE) AS "Feature_2", CAST("ADS"."Feature_3" AS BINARY_DOUBLE) AS "Feature_3", CAST("ADS"."Feature_4" AS BINARY_DOUBLE) AS "Feature_4", CAST("ADS"."Feature_5" AS BINARY_DOUBLE) AS "Feature_5", CAST("ADS"."Feature_6" AS BINARY_DOUBLE) AS "Feature_6", CAST("ADS"."Feature_7" AS BINARY_DOUBLE) AS "Feature_7", CAST("ADS"."Feature_8" AS BINARY_DOUBLE) AS "Feature_8", CAST("ADS"."Feature_9" AS BINARY_DOUBLE) AS "Feature_9", CAST("ADS"."Feature_10" AS BINARY_DOUBLE) AS "Feature_10", CAST("ADS"."Feature_11" AS BINARY_DOUBLE) AS "Feature_11", CAST("ADS"."Feature_12" AS BINARY_DOUBLE) AS "Feature_12", CAST("ADS"."Feature_13" AS BINARY_DOUBLE) AS "Feature_13", CAST("ADS"."Feature_14" AS BINARY_DOUBLE) AS "Feature_14", CAST("ADS"."Feature_15" AS BINARY_DOUBLE) AS "Feature_15", CAST("ADS"."Feature_16" AS BINARY_DOUBLE) AS "Feature_16", CAST("ADS"."Feature_17" AS BINARY_DOUBLE) AS "Feature_17", CAST("ADS"."Feature_18" AS BINARY_DOUBLE) AS "Feature_18", CAST("ADS"."Feature_19" AS BINARY_DOUBLE) AS "Feature_19", CAST("ADS"."Feature_20" AS BINARY_DOUBLE) AS "Feature_20", CAST("ADS"."Feature_21" AS BINARY_DOUBLE) AS "Feature_21", CAST("ADS"."Feature_22" AS BINARY_DOUBLE) AS "Feature_22", CAST("ADS"."Feature_23" AS BINARY_DOUBLE) AS "Feature_23", CAST("ADS"."Feature_24" AS BINARY_DOUBLE) AS "Feature_24", CAST("ADS"."Feature_25" AS BINARY_DOUBLE) AS "Feature_25", CAST("ADS"."Feature_26" AS BINARY_DOUBLE) AS "Feature_26", CAST("ADS"."Feature_27" AS BINARY_DOUBLE) AS "Feature_27", CAST("ADS"."Feature_28" AS BINARY_DOUBLE) AS "Feature_28", CAST("ADS"."Feature_29" AS BINARY_DOUBLE) AS "Feature_29" 
 FROM "BREASTCANCER" "ADS"), 
@@ -38,22 +38,22 @@ FROM "HL_BA_1")
 FROM (SELECT "HL_1_relu"."KEY" AS "KEY", "HL_1_relu"."NEUR_1_1" AS "NEUR_1_1", "HL_1_relu"."NEUR_1_2" AS "NEUR_1_2", "HL_1_relu"."NEUR_1_3" AS "NEUR_1_3" 
 FROM "HL_1_relu") "HL_1_relu_1") "U"
 
--- Code For temporary table DEGEN_0D6N7F_OL_LOGISTIC_1 part 1. Create 
+-- Code For temporary table DEGEN_3UG6UE_OL_LOGISTIC_1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "DEGEN_0D6N7F_OL_LOGISTIC_1" (
+CREATE GLOBAL TEMPORARY TABLE "DEGEN_3UG6UE_OL_LOGISTIC_1" (
 	"KEY" NUMBER(19), 
 	"NEUR_3_1" BINARY_DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table DEGEN_0D6N7F_OL_LOGISTIC_1 part 2. Populate
+-- Code For temporary table DEGEN_3UG6UE_OL_LOGISTIC_1 part 2. Populate
 
-INSERT INTO "DEGEN_0D6N7F_OL_LOGISTIC_1" ("KEY", "NEUR_3_1") SELECT "U"."KEY", "U"."NEUR_3_1" 
+INSERT INTO "DEGEN_3UG6UE_OL_LOGISTIC_1" ("KEY", "NEUR_3_1") SELECT "U"."KEY", "U"."NEUR_3_1" 
 FROM (WITH "HL_BA_2" AS 
 (SELECT "HL_1_relu_1"."KEY" AS "KEY", 0.5570017972174299 * "HL_1_relu_1"."NEUR_1_1" + -0.631851209981196 * "HL_1_relu_1"."NEUR_1_2" + -0.6027942163503318 * "HL_1_relu_1"."NEUR_1_3" + -0.0885848948970186 AS "NEUR_2_1", -0.6117147512993999 * "HL_1_relu_1"."NEUR_1_1" + -0.7801455649376947 * "HL_1_relu_1"."NEUR_1_2" + -0.20352821274128455 * "HL_1_relu_1"."NEUR_1_3" + 0.7261678101839508 AS "NEUR_2_2", 0.31816655643253156 * "HL_1_relu_1"."NEUR_1_1" + 0.24520744599204347 * "HL_1_relu_1"."NEUR_1_2" + -0.8551662101039045 * "HL_1_relu_1"."NEUR_1_3" + 0.5639237733304812 AS "NEUR_2_3", -0.8421902246487252 * "HL_1_relu_1"."NEUR_1_1" + -0.42238220997569226 * "HL_1_relu_1"."NEUR_1_2" + 0.19867215305070107 * "HL_1_relu_1"."NEUR_1_3" + 0.7033294322747231 AS "NEUR_2_4", -0.6948083780237723 * "HL_1_relu_1"."NEUR_1_1" + -0.2695316480522733 * "HL_1_relu_1"."NEUR_1_2" + -0.6617365100151862 * "HL_1_relu_1"."NEUR_1_3" + -0.815750113657602 AS "NEUR_2_5" 
-FROM "CODEGEN_JOOGIU_HL_1_RELU_1" "HL_1_relu_1"), 
+FROM "CODEGEN_S1RT2Y_HL_1_RELU_1" "HL_1_relu_1"), 
 "HL_2_relu" AS 
 (SELECT "HL_BA_2"."KEY" AS "KEY", greatest("HL_BA_2"."NEUR_2_1", 0) AS "NEUR_2_1", greatest("HL_BA_2"."NEUR_2_2", 0) AS "NEUR_2_2", greatest("HL_BA_2"."NEUR_2_3", 0) AS "NEUR_2_3", greatest("HL_BA_2"."NEUR_2_4", 0) AS "NEUR_2_4", greatest("HL_BA_2"."NEUR_2_5", 0) AS "NEUR_2_5" 
 FROM "HL_BA_2"), 
@@ -71,7 +71,7 @@ FROM "OL_logistic") "OL_logistic_1") "U"
 
 WITH orig_cte AS 
 (SELECT "OL_logistic_1"."KEY" AS "KEY", CAST(NULL AS BINARY_DOUBLE) AS "Score_0", CAST(NULL AS BINARY_DOUBLE) AS "Score_1", 1.0 - "OL_logistic_1"."NEUR_3_1" AS "Proba_0", "OL_logistic_1"."NEUR_3_1" AS "Proba_1", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_0", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_1", CAST(NULL AS NUMBER(19)) AS "Decision", CAST(NULL AS BINARY_DOUBLE) AS "DecisionProba" 
-FROM "DEGEN_0D6N7F_OL_LOGISTIC_1" "OL_logistic_1"), 
+FROM "DEGEN_3UG6UE_OL_LOGISTIC_1" "OL_logistic_1"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

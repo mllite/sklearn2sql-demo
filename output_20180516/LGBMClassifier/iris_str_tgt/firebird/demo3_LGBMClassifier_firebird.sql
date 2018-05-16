@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180508190612_CODEGEN_1WCU part 1. Create 
+-- Code For temporary table TMP_20180516_CODEGEN_7Z1IY2_LGB part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508190612_CODEGEN_1WCU" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_7Z1IY2_LGB" (
 	"KEY" BIGINT, 
 	"Score_CLASS_0" DOUBLE PRECISION, 
 	"Score_CLASS_1" DOUBLE PRECISION, 
@@ -22,9 +22,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180508190612_CODEGEN_1WCU" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508190612_CODEGEN_1WCU part 2. Populate
+-- Code For temporary table TMP_20180516_CODEGEN_7Z1IY2_LGB part 2. Populate
 
-INSERT INTO "TMP_20180508190612_CODEGEN_1WCU" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
+INSERT INTO "TMP_20180516_CODEGEN_7Z1IY2_LGB" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 3.1500000000000004) THEN 2 ELSE 3 END AS node_id_2 
 FROM iris_str_tgt AS "ADS"), 
@@ -159,10 +159,10 @@ FROM "LGBM_Model_1_2" UNION ALL SELECT "LGBM_Model_2_2"."KEY" AS "KEY", "LGBM_Mo
 FROM "LGBM_Model_2_2" UNION ALL SELECT "LGBM_Model_0_3"."KEY" AS "KEY", "LGBM_Model_0_3"."Score_CLASS_0" AS "Score_CLASS_0", "LGBM_Model_0_3"."Score_CLASS_1" AS "Score_CLASS_1", "LGBM_Model_0_3"."Score_CLASS_2" AS "Score_CLASS_2" 
 FROM "LGBM_Model_0_3") AS "LGBM_esu_0") AS "LGBM_B0") AS "U"
 
--- Code For temporary table TMP_20180508190612_CODEGEN_22LJ part 1. Create 
+-- Code For temporary table TMP_20180516_CODEGEN_JADTXK_LGB part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508190612_CODEGEN_22LJ" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_JADTXK_LGB" (
 	"KEY" BIGINT, 
 	"Score_CLASS_0" DOUBLE PRECISION, 
 	"Score_CLASS_1" DOUBLE PRECISION, 
@@ -171,9 +171,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180508190612_CODEGEN_22LJ" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508190612_CODEGEN_22LJ part 2. Populate
+-- Code For temporary table TMP_20180516_CODEGEN_JADTXK_LGB part 2. Populate
 
-INSERT INTO "TMP_20180508190612_CODEGEN_22LJ" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
+INSERT INTO "TMP_20180516_CODEGEN_JADTXK_LGB" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
 FROM (WITH "DT_node_lookup_10" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_3" <= 0.45000000000000007) THEN 2 ELSE CASE WHEN ("ADS"."Feature_2" <= 4.8500000000000005) THEN CASE WHEN ("ADS"."Feature_0" <= 5.750000000000001) THEN 12 ELSE 13 END ELSE CASE WHEN ("ADS"."Feature_3" <= 1.9500000000000002) THEN 14 ELSE 15 END END END AS node_id_2 
 FROM iris_str_tgt AS "ADS"), 
@@ -308,10 +308,10 @@ FROM "LGBM_Model_2_5" UNION ALL SELECT "LGBM_Model_0_6"."KEY" AS "KEY", "LGBM_Mo
 FROM "LGBM_Model_0_6" UNION ALL SELECT "LGBM_Model_1_6"."KEY" AS "KEY", "LGBM_Model_1_6"."Score_CLASS_0" AS "Score_CLASS_0", "LGBM_Model_1_6"."Score_CLASS_1" AS "Score_CLASS_1", "LGBM_Model_1_6"."Score_CLASS_2" AS "Score_CLASS_2" 
 FROM "LGBM_Model_1_6") AS "LGBM_esu_1") AS "LGBM_B1") AS "U"
 
--- Code For temporary table TMP_20180508190612_CODEGEN_H3ZX part 1. Create 
+-- Code For temporary table TMP_20180516_CODEGEN_3NWXR9_LGB part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508190612_CODEGEN_H3ZX" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_3NWXR9_LGB" (
 	"KEY" BIGINT, 
 	"Score_CLASS_0" DOUBLE PRECISION, 
 	"Score_CLASS_1" DOUBLE PRECISION, 
@@ -320,9 +320,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180508190612_CODEGEN_H3ZX" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508190612_CODEGEN_H3ZX part 2. Populate
+-- Code For temporary table TMP_20180516_CODEGEN_3NWXR9_LGB part 2. Populate
 
-INSERT INTO "TMP_20180508190612_CODEGEN_H3ZX" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
+INSERT INTO "TMP_20180516_CODEGEN_3NWXR9_LGB" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
 FROM (WITH "DT_node_lookup_20" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_3" <= 1.6500000000000001) THEN CASE WHEN ("ADS"."Feature_0" <= 5.950000000000001) THEN CASE WHEN ("ADS"."Feature_2" <= 3.1500000000000004) THEN 8 ELSE 9 END ELSE 5 END ELSE 3 END AS node_id_2 
 FROM iris_str_tgt AS "ADS"), 
@@ -457,10 +457,10 @@ FROM "LGBM_Model_0_9" UNION ALL SELECT "LGBM_Model_1_9"."KEY" AS "KEY", "LGBM_Mo
 FROM "LGBM_Model_1_9" UNION ALL SELECT "LGBM_Model_2_9"."KEY" AS "KEY", "LGBM_Model_2_9"."Score_CLASS_0" AS "Score_CLASS_0", "LGBM_Model_2_9"."Score_CLASS_1" AS "Score_CLASS_1", "LGBM_Model_2_9"."Score_CLASS_2" AS "Score_CLASS_2" 
 FROM "LGBM_Model_2_9") AS "LGBM_esu_2") AS "LGBM_B2") AS "U"
 
--- Code For temporary table TMP_20180508190612_CODEGEN_7DGU part 1. Create 
+-- Code For temporary table TMP_20180516_CODEGEN_JFPPVB_LGB part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508190612_CODEGEN_7DGU" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_JFPPVB_LGB" (
 	"KEY" BIGINT, 
 	"Score_CLASS_0" DOUBLE PRECISION, 
 	"Score_CLASS_1" DOUBLE PRECISION, 
@@ -469,9 +469,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180508190612_CODEGEN_7DGU" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508190612_CODEGEN_7DGU part 2. Populate
+-- Code For temporary table TMP_20180516_CODEGEN_JFPPVB_LGB part 2. Populate
 
-INSERT INTO "TMP_20180508190612_CODEGEN_7DGU" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
+INSERT INTO "TMP_20180516_CODEGEN_JFPPVB_LGB" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
 FROM (WITH "DT_node_lookup_30" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 3.1500000000000004) THEN 2 ELSE CASE WHEN ("ADS"."Feature_3" <= 1.6500000000000001) THEN CASE WHEN ("ADS"."Feature_3" <= 1.3500000000000003) THEN 12 ELSE 13 END ELSE 7 END END AS node_id_2 
 FROM iris_str_tgt AS "ADS"), 
@@ -606,10 +606,10 @@ FROM "LGBM_Model_1_12" UNION ALL SELECT "LGBM_Model_2_12"."KEY" AS "KEY", "LGBM_
 FROM "LGBM_Model_2_12" UNION ALL SELECT "LGBM_Model_0_13"."KEY" AS "KEY", "LGBM_Model_0_13"."Score_CLASS_0" AS "Score_CLASS_0", "LGBM_Model_0_13"."Score_CLASS_1" AS "Score_CLASS_1", "LGBM_Model_0_13"."Score_CLASS_2" AS "Score_CLASS_2" 
 FROM "LGBM_Model_0_13") AS "LGBM_esu_3") AS "LGBM_B3") AS "U"
 
--- Code For temporary table TMP_20180508190612_CODEGEN_SIM7 part 1. Create 
+-- Code For temporary table TMP_20180516_CODEGEN_FAB1PW_LGB part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508190612_CODEGEN_SIM7" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_FAB1PW_LGB" (
 	"KEY" BIGINT, 
 	"Score_CLASS_0" DOUBLE PRECISION, 
 	"Score_CLASS_1" DOUBLE PRECISION, 
@@ -618,9 +618,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180508190612_CODEGEN_SIM7" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508190612_CODEGEN_SIM7 part 2. Populate
+-- Code For temporary table TMP_20180516_CODEGEN_FAB1PW_LGB part 2. Populate
 
-INSERT INTO "TMP_20180508190612_CODEGEN_SIM7" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
+INSERT INTO "TMP_20180516_CODEGEN_FAB1PW_LGB" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
 FROM (WITH "DT_node_lookup_40" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_3" <= 1.6500000000000001) THEN CASE WHEN ("ADS"."Feature_3" <= 0.45000000000000007) THEN 4 ELSE CASE WHEN ("ADS"."Feature_0" <= 5.950000000000001) THEN 10 ELSE 11 END END ELSE 3 END AS node_id_2 
 FROM iris_str_tgt AS "ADS"), 
@@ -729,34 +729,10 @@ FROM "LGBM_Model_0_15" UNION ALL SELECT "LGBM_Model_1_15"."KEY" AS "KEY", "LGBM_
 FROM "LGBM_Model_1_15" UNION ALL SELECT "LGBM_Model_2_15"."KEY" AS "KEY", "LGBM_Model_2_15"."Score_CLASS_0" AS "Score_CLASS_0", "LGBM_Model_2_15"."Score_CLASS_1" AS "Score_CLASS_1", "LGBM_Model_2_15"."Score_CLASS_2" AS "Score_CLASS_2" 
 FROM "LGBM_Model_2_15") AS "LGBM_esu_4") AS "LGBM_B4") AS "U"
 
--- Code For temporary table TMP_20180508190612_CODEGEN_GC8X part 1. Create 
+-- Code For temporary table TMP_20180516_CODEGEN_F3I2P1_LGB part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508190612_CODEGEN_GC8X" (
-	"KEY" BIGINT, 
-	"Score_CLASS_0" DOUBLE PRECISION, 
-	"Score_CLASS_1" DOUBLE PRECISION, 
-	"Score_CLASS_2" DOUBLE PRECISION
-)
-
- ON COMMIT PRESERVE ROWS
-
--- Code For temporary table TMP_20180508190612_CODEGEN_GC8X part 2. Populate
-
-INSERT INTO "TMP_20180508190612_CODEGEN_GC8X" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
-FROM (SELECT "LGBM_Union"."KEY", "LGBM_Union"."Score_CLASS_0", "LGBM_Union"."Score_CLASS_1", "LGBM_Union"."Score_CLASS_2" 
-FROM (SELECT "LGBM_EnsembleUnion"."KEY" AS "KEY", "LGBM_EnsembleUnion"."Score_CLASS_0" AS "Score_CLASS_0", "LGBM_EnsembleUnion"."Score_CLASS_1" AS "Score_CLASS_1", "LGBM_EnsembleUnion"."Score_CLASS_2" AS "Score_CLASS_2" 
-FROM (SELECT "LGBM_B0"."KEY" AS "KEY", "LGBM_B0"."Score_CLASS_0" AS "Score_CLASS_0", "LGBM_B0"."Score_CLASS_1" AS "Score_CLASS_1", "LGBM_B0"."Score_CLASS_2" AS "Score_CLASS_2" 
-FROM "TMP_20180508190612_CODEGEN_1WCU" AS "LGBM_B0" UNION ALL SELECT "LGBM_B1"."KEY" AS "KEY", "LGBM_B1"."Score_CLASS_0" AS "Score_CLASS_0", "LGBM_B1"."Score_CLASS_1" AS "Score_CLASS_1", "LGBM_B1"."Score_CLASS_2" AS "Score_CLASS_2" 
-FROM "TMP_20180508190612_CODEGEN_22LJ" AS "LGBM_B1" UNION ALL SELECT "LGBM_B2"."KEY" AS "KEY", "LGBM_B2"."Score_CLASS_0" AS "Score_CLASS_0", "LGBM_B2"."Score_CLASS_1" AS "Score_CLASS_1", "LGBM_B2"."Score_CLASS_2" AS "Score_CLASS_2" 
-FROM "TMP_20180508190612_CODEGEN_H3ZX" AS "LGBM_B2" UNION ALL SELECT "LGBM_B3"."KEY" AS "KEY", "LGBM_B3"."Score_CLASS_0" AS "Score_CLASS_0", "LGBM_B3"."Score_CLASS_1" AS "Score_CLASS_1", "LGBM_B3"."Score_CLASS_2" AS "Score_CLASS_2" 
-FROM "TMP_20180508190612_CODEGEN_7DGU" AS "LGBM_B3" UNION ALL SELECT "LGBM_B4"."KEY" AS "KEY", "LGBM_B4"."Score_CLASS_0" AS "Score_CLASS_0", "LGBM_B4"."Score_CLASS_1" AS "Score_CLASS_1", "LGBM_B4"."Score_CLASS_2" AS "Score_CLASS_2" 
-FROM "TMP_20180508190612_CODEGEN_SIM7" AS "LGBM_B4") AS "LGBM_EnsembleUnion") AS "LGBM_Union") AS "U"
-
--- Code For temporary table TMP_20180508190612_CODEGEN_QN60 part 1. Create 
-
-
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508190612_CODEGEN_QN60" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_F3I2P1_LGB" (
 	"KEY" BIGINT NOT NULL, 
 	"Score_CLASS_0" DOUBLE PRECISION, 
 	"Score_CLASS_1" DOUBLE PRECISION, 
@@ -766,23 +742,31 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180508190612_CODEGEN_QN60" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508190612_CODEGEN_QN60 part 2. Populate
+-- Code For temporary table TMP_20180516_CODEGEN_F3I2P1_LGB part 2. Populate
 
-INSERT INTO "TMP_20180508190612_CODEGEN_QN60" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
-FROM (SELECT "LGBM_sum"."KEY", "LGBM_sum"."Score_CLASS_0", "LGBM_sum"."Score_CLASS_1", "LGBM_sum"."Score_CLASS_2" 
+INSERT INTO "TMP_20180516_CODEGEN_F3I2P1_LGB" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
+FROM (WITH "LGBM_Union" AS 
+(SELECT "LGBM_EnsembleUnion"."KEY" AS "KEY", "LGBM_EnsembleUnion"."Score_CLASS_0" AS "Score_CLASS_0", "LGBM_EnsembleUnion"."Score_CLASS_1" AS "Score_CLASS_1", "LGBM_EnsembleUnion"."Score_CLASS_2" AS "Score_CLASS_2" 
+FROM (SELECT "LGBM_B0"."KEY" AS "KEY", "LGBM_B0"."Score_CLASS_0" AS "Score_CLASS_0", "LGBM_B0"."Score_CLASS_1" AS "Score_CLASS_1", "LGBM_B0"."Score_CLASS_2" AS "Score_CLASS_2" 
+FROM "TMP_20180516_CODEGEN_7Z1IY2_LGB" AS "LGBM_B0" UNION ALL SELECT "LGBM_B1"."KEY" AS "KEY", "LGBM_B1"."Score_CLASS_0" AS "Score_CLASS_0", "LGBM_B1"."Score_CLASS_1" AS "Score_CLASS_1", "LGBM_B1"."Score_CLASS_2" AS "Score_CLASS_2" 
+FROM "TMP_20180516_CODEGEN_JADTXK_LGB" AS "LGBM_B1" UNION ALL SELECT "LGBM_B2"."KEY" AS "KEY", "LGBM_B2"."Score_CLASS_0" AS "Score_CLASS_0", "LGBM_B2"."Score_CLASS_1" AS "Score_CLASS_1", "LGBM_B2"."Score_CLASS_2" AS "Score_CLASS_2" 
+FROM "TMP_20180516_CODEGEN_3NWXR9_LGB" AS "LGBM_B2" UNION ALL SELECT "LGBM_B3"."KEY" AS "KEY", "LGBM_B3"."Score_CLASS_0" AS "Score_CLASS_0", "LGBM_B3"."Score_CLASS_1" AS "Score_CLASS_1", "LGBM_B3"."Score_CLASS_2" AS "Score_CLASS_2" 
+FROM "TMP_20180516_CODEGEN_JFPPVB_LGB" AS "LGBM_B3" UNION ALL SELECT "LGBM_B4"."KEY" AS "KEY", "LGBM_B4"."Score_CLASS_0" AS "Score_CLASS_0", "LGBM_B4"."Score_CLASS_1" AS "Score_CLASS_1", "LGBM_B4"."Score_CLASS_2" AS "Score_CLASS_2" 
+FROM "TMP_20180516_CODEGEN_FAB1PW_LGB" AS "LGBM_B4") AS "LGBM_EnsembleUnion")
+ SELECT "LGBM_sum"."KEY", "LGBM_sum"."Score_CLASS_0", "LGBM_sum"."Score_CLASS_1", "LGBM_sum"."Score_CLASS_2" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Score_CLASS_0" AS DOUBLE PRECISION) AS "Score_CLASS_0", CAST("T"."Score_CLASS_1" AS DOUBLE PRECISION) AS "Score_CLASS_1", CAST("T"."Score_CLASS_2" AS DOUBLE PRECISION) AS "Score_CLASS_2" 
 FROM (SELECT "LGBM_Union"."KEY" AS "KEY", sum("LGBM_Union"."Score_CLASS_0") AS "Score_CLASS_0", sum("LGBM_Union"."Score_CLASS_1") AS "Score_CLASS_1", sum("LGBM_Union"."Score_CLASS_2") AS "Score_CLASS_2" 
-FROM "TMP_20180508190612_CODEGEN_GC8X" AS "LGBM_Union" GROUP BY "LGBM_Union"."KEY") AS "T") AS "LGBM_sum") AS "U"
+FROM "LGBM_Union" GROUP BY "LGBM_Union"."KEY") AS "T") AS "LGBM_sum") AS "U"
 
--- Code For temporary table TMP_20180508190612_CODEGEN_QN60 part 3. Create Index 
+-- Code For temporary table TMP_20180516_CODEGEN_F3I2P1_LGB part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508190612_C_b99b" ON "TMP_20180508190612_CODEGEN_QN60" ("KEY")
+CREATE INDEX "ix_TMP_20180516_CODEGEN_9f15" ON "TMP_20180516_CODEGEN_F3I2P1_LGB" ("KEY")
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT "LGBM_sum"."KEY" AS "KEY", "LGBM_sum"."Score_CLASS_0" AS "Score_CLASS_0", "LGBM_sum"."Score_CLASS_1" AS "Score_CLASS_1", "LGBM_sum"."Score_CLASS_2" AS "Score_CLASS_2", CAST(NULL AS DOUBLE PRECISION) AS "Proba_CLASS_0", CAST(NULL AS DOUBLE PRECISION) AS "Proba_CLASS_1", CAST(NULL AS DOUBLE PRECISION) AS "Proba_CLASS_2", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_CLASS_0", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_CLASS_1", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_CLASS_2", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba" 
-FROM "TMP_20180508190612_CODEGEN_QN60" AS "LGBM_sum"), 
+FROM "TMP_20180516_CODEGEN_F3I2P1_LGB" AS "LGBM_sum"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 'CLASS_0' AS class, orig_cte."LogProba_CLASS_0" AS "LogProba", orig_cte."Proba_CLASS_0" AS "Proba", orig_cte."Score_CLASS_0" AS "Score" 
@@ -794,7 +778,7 @@ score_max AS
 FROM orig_cte LEFT OUTER JOIN (SELECT score_class_union."KEY_u" AS "KEY_m", max(score_class_union."Score") AS "max_Score" 
 FROM score_class_union GROUP BY score_class_union."KEY_u") AS max_select ON orig_cte."KEY" = max_select."KEY_m"), 
 score_soft_max_deltas AS 
-(SELECT score_max."KEY" AS "KEY", score_max."Score_CLASS_0" AS "Score_CLASS_0", score_max."Score_CLASS_1" AS "Score_CLASS_1", score_max."Score_CLASS_2" AS "Score_CLASS_2", score_max."Proba_CLASS_0" AS "Proba_CLASS_0", score_max."Proba_CLASS_1" AS "Proba_CLASS_1", score_max."Proba_CLASS_2" AS "Proba_CLASS_2", score_max."LogProba_CLASS_0" AS "LogProba_CLASS_0", score_max."LogProba_CLASS_1" AS "LogProba_CLASS_1", score_max."LogProba_CLASS_2" AS "LogProba_CLASS_2", score_max."Decision" AS "Decision", score_max."DecisionProba" AS "DecisionProba", score_max."KEY_m" AS "KEY_m", score_max."max_Score" AS "max_Score", exp(CASE WHEN (score_max."Score_CLASS_0" - score_max."max_Score" >= -709.782712893384) THEN score_max."Score_CLASS_0" - score_max."max_Score" ELSE -709.782712893384 END) AS "exp_delta_Score_CLASS_0", exp(CASE WHEN (score_max."Score_CLASS_1" - score_max."max_Score" >= -709.782712893384) THEN score_max."Score_CLASS_1" - score_max."max_Score" ELSE -709.782712893384 END) AS "exp_delta_Score_CLASS_1", exp(CASE WHEN (score_max."Score_CLASS_2" - score_max."max_Score" >= -709.782712893384) THEN score_max."Score_CLASS_2" - score_max."max_Score" ELSE -709.782712893384 END) AS "exp_delta_Score_CLASS_2" 
+(SELECT score_max."KEY" AS "KEY", score_max."Score_CLASS_0" AS "Score_CLASS_0", score_max."Score_CLASS_1" AS "Score_CLASS_1", score_max."Score_CLASS_2" AS "Score_CLASS_2", score_max."Proba_CLASS_0" AS "Proba_CLASS_0", score_max."Proba_CLASS_1" AS "Proba_CLASS_1", score_max."Proba_CLASS_2" AS "Proba_CLASS_2", score_max."LogProba_CLASS_0" AS "LogProba_CLASS_0", score_max."LogProba_CLASS_1" AS "LogProba_CLASS_1", score_max."LogProba_CLASS_2" AS "LogProba_CLASS_2", score_max."Decision" AS "Decision", score_max."DecisionProba" AS "DecisionProba", score_max."KEY_m" AS "KEY_m", score_max."max_Score" AS "max_Score", exp(CASE WHEN (maxvalue(-100.0, score_max."Score_CLASS_0" - score_max."max_Score") >= -709.782712893384) THEN maxvalue(-100.0, score_max."Score_CLASS_0" - score_max."max_Score") ELSE -709.782712893384 END) AS "exp_delta_Score_CLASS_0", exp(CASE WHEN (maxvalue(-100.0, score_max."Score_CLASS_1" - score_max."max_Score") >= -709.782712893384) THEN maxvalue(-100.0, score_max."Score_CLASS_1" - score_max."max_Score") ELSE -709.782712893384 END) AS "exp_delta_Score_CLASS_1", exp(CASE WHEN (maxvalue(-100.0, score_max."Score_CLASS_2" - score_max."max_Score") >= -709.782712893384) THEN maxvalue(-100.0, score_max."Score_CLASS_2" - score_max."max_Score") ELSE -709.782712893384 END) AS "exp_delta_Score_CLASS_2" 
 FROM score_max), 
 score_class_union_soft AS 
 (SELECT soft_scu."KEY" AS "KEY", soft_scu.class AS class, soft_scu."exp_delta_Score" AS "exp_delta_Score" 
@@ -815,5 +799,5 @@ FROM score_soft_max LEFT OUTER JOIN (SELECT union_with_max."KEY" AS "KEY_Score",
 FROM union_with_max 
 WHERE union_with_max."Score" >= union_with_max."max_Score" GROUP BY union_with_max."KEY") AS "arg_max_t_Score" ON score_soft_max."KEY" = "arg_max_t_Score"."KEY_Score" LEFT OUTER JOIN (SELECT score_soft_max."KEY" AS "KEY_softmax", score_soft_max."exp_delta_Score_CLASS_0" / score_soft_max."sum_ExpDeltaScore" AS "SoftProba_CLASS_0", score_soft_max."exp_delta_Score_CLASS_1" / score_soft_max."sum_ExpDeltaScore" AS "SoftProba_CLASS_1", score_soft_max."exp_delta_Score_CLASS_2" / score_soft_max."sum_ExpDeltaScore" AS "SoftProba_CLASS_2" 
 FROM score_soft_max) AS soft_max_comp ON soft_max_comp."KEY_softmax" = "arg_max_t_Score"."KEY_Score")
- SELECT arg_max_cte."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_1", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_2", arg_max_cte."SoftProba_CLASS_0" AS "Proba_CLASS_0", arg_max_cte."SoftProba_CLASS_1" AS "Proba_CLASS_1", arg_max_cte."SoftProba_CLASS_2" AS "Proba_CLASS_2", CASE WHEN (arg_max_cte."SoftProba_CLASS_0" IS NULL OR arg_max_cte."SoftProba_CLASS_0" > 0.0) THEN ln(arg_max_cte."SoftProba_CLASS_0") ELSE -1e+20 END AS "LogProba_CLASS_0", CASE WHEN (arg_max_cte."SoftProba_CLASS_1" IS NULL OR arg_max_cte."SoftProba_CLASS_1" > 0.0) THEN ln(arg_max_cte."SoftProba_CLASS_1") ELSE -1e+20 END AS "LogProba_CLASS_1", CASE WHEN (arg_max_cte."SoftProba_CLASS_2" IS NULL OR arg_max_cte."SoftProba_CLASS_2" > 0.0) THEN ln(arg_max_cte."SoftProba_CLASS_2") ELSE -1e+20 END AS "LogProba_CLASS_2", arg_max_cte."arg_max_Score" AS "Decision", maxvalue(arg_max_cte."SoftProba_CLASS_0", arg_max_cte."SoftProba_CLASS_1", arg_max_cte."SoftProba_CLASS_2") AS "DecisionProba" 
+ SELECT arg_max_cte."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_1", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_2", arg_max_cte."SoftProba_CLASS_0" AS "Proba_CLASS_0", arg_max_cte."SoftProba_CLASS_1" AS "Proba_CLASS_1", arg_max_cte."SoftProba_CLASS_2" AS "Proba_CLASS_2", CASE WHEN (arg_max_cte."SoftProba_CLASS_0" IS NULL OR arg_max_cte."SoftProba_CLASS_0" > 0.0) THEN ln(arg_max_cte."SoftProba_CLASS_0") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_0", CASE WHEN (arg_max_cte."SoftProba_CLASS_1" IS NULL OR arg_max_cte."SoftProba_CLASS_1" > 0.0) THEN ln(arg_max_cte."SoftProba_CLASS_1") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_1", CASE WHEN (arg_max_cte."SoftProba_CLASS_2" IS NULL OR arg_max_cte."SoftProba_CLASS_2" > 0.0) THEN ln(arg_max_cte."SoftProba_CLASS_2") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_2", arg_max_cte."arg_max_Score" AS "Decision", maxvalue(arg_max_cte."SoftProba_CLASS_0", arg_max_cte."SoftProba_CLASS_1", arg_max_cte."SoftProba_CLASS_2") AS "DecisionProba" 
 FROM arg_max_cte

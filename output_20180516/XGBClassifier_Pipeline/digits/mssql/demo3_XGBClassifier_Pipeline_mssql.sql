@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table ##TMP_20180508184317_CODEGEN_N618AR_ADS_imp_1_OUT part 1. Create 
+-- Code For temporary table ##TMP_20180516120530_CODEGEN_ELZTGF_ADS_imp_1_OUT part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508184317_CODEGEN_N618AR_ADS_imp_1_OUT (
+CREATE TABLE ##TMP_20180516120530_CODEGEN_ELZTGF_ADS_imp_1_OUT (
 	[KEY] BIGINT NULL, 
 	impter_2 FLOAT(53) NULL, 
 	impter_3 FLOAT(53) NULL, 
@@ -83,16 +83,16 @@ CREATE TABLE ##TMP_20180508184317_CODEGEN_N618AR_ADS_imp_1_OUT (
 
 
 
--- Code For temporary table ##TMP_20180508184317_CODEGEN_N618AR_ADS_imp_1_OUT part 2. Populate
+-- Code For temporary table ##TMP_20180516120530_CODEGEN_ELZTGF_ADS_imp_1_OUT part 2. Populate
 
-INSERT INTO ##TMP_20180508184317_CODEGEN_N618AR_ADS_imp_1_OUT ([KEY], impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11, impter_12, impter_13, impter_14, impter_15, impter_16, impter_17, impter_18, impter_19, impter_20, impter_21, impter_22, impter_23, impter_24, impter_25, impter_26, impter_27, impter_28, impter_29, impter_30, impter_31, impter_32, impter_33, impter_34, impter_35, impter_36, impter_37, impter_38, impter_39, impter_40, impter_41, impter_42, impter_43, impter_44, impter_45, impter_46, impter_47, impter_48, impter_49, impter_50, impter_51, impter_52, impter_53, impter_54, impter_55, impter_56, impter_57, impter_58, impter_59, impter_60, impter_61, impter_62, impter_63, impter_64, impter_65) SELECT [ADS_imp_1_OUT].[KEY], [ADS_imp_1_OUT].impter_2, [ADS_imp_1_OUT].impter_3, [ADS_imp_1_OUT].impter_4, [ADS_imp_1_OUT].impter_5, [ADS_imp_1_OUT].impter_6, [ADS_imp_1_OUT].impter_7, [ADS_imp_1_OUT].impter_8, [ADS_imp_1_OUT].impter_9, [ADS_imp_1_OUT].impter_10, [ADS_imp_1_OUT].impter_11, [ADS_imp_1_OUT].impter_12, [ADS_imp_1_OUT].impter_13, [ADS_imp_1_OUT].impter_14, [ADS_imp_1_OUT].impter_15, [ADS_imp_1_OUT].impter_16, [ADS_imp_1_OUT].impter_17, [ADS_imp_1_OUT].impter_18, [ADS_imp_1_OUT].impter_19, [ADS_imp_1_OUT].impter_20, [ADS_imp_1_OUT].impter_21, [ADS_imp_1_OUT].impter_22, [ADS_imp_1_OUT].impter_23, [ADS_imp_1_OUT].impter_24, [ADS_imp_1_OUT].impter_25, [ADS_imp_1_OUT].impter_26, [ADS_imp_1_OUT].impter_27, [ADS_imp_1_OUT].impter_28, [ADS_imp_1_OUT].impter_29, [ADS_imp_1_OUT].impter_30, [ADS_imp_1_OUT].impter_31, [ADS_imp_1_OUT].impter_32, [ADS_imp_1_OUT].impter_33, [ADS_imp_1_OUT].impter_34, [ADS_imp_1_OUT].impter_35, [ADS_imp_1_OUT].impter_36, [ADS_imp_1_OUT].impter_37, [ADS_imp_1_OUT].impter_38, [ADS_imp_1_OUT].impter_39, [ADS_imp_1_OUT].impter_40, [ADS_imp_1_OUT].impter_41, [ADS_imp_1_OUT].impter_42, [ADS_imp_1_OUT].impter_43, [ADS_imp_1_OUT].impter_44, [ADS_imp_1_OUT].impter_45, [ADS_imp_1_OUT].impter_46, [ADS_imp_1_OUT].impter_47, [ADS_imp_1_OUT].impter_48, [ADS_imp_1_OUT].impter_49, [ADS_imp_1_OUT].impter_50, [ADS_imp_1_OUT].impter_51, [ADS_imp_1_OUT].impter_52, [ADS_imp_1_OUT].impter_53, [ADS_imp_1_OUT].impter_54, [ADS_imp_1_OUT].impter_55, [ADS_imp_1_OUT].impter_56, [ADS_imp_1_OUT].impter_57, [ADS_imp_1_OUT].impter_58, [ADS_imp_1_OUT].impter_59, [ADS_imp_1_OUT].impter_60, [ADS_imp_1_OUT].impter_61, [ADS_imp_1_OUT].impter_62, [ADS_imp_1_OUT].impter_63, [ADS_imp_1_OUT].impter_64, [ADS_imp_1_OUT].impter_65 
+INSERT INTO ##TMP_20180516120530_CODEGEN_ELZTGF_ADS_imp_1_OUT ([KEY], impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11, impter_12, impter_13, impter_14, impter_15, impter_16, impter_17, impter_18, impter_19, impter_20, impter_21, impter_22, impter_23, impter_24, impter_25, impter_26, impter_27, impter_28, impter_29, impter_30, impter_31, impter_32, impter_33, impter_34, impter_35, impter_36, impter_37, impter_38, impter_39, impter_40, impter_41, impter_42, impter_43, impter_44, impter_45, impter_46, impter_47, impter_48, impter_49, impter_50, impter_51, impter_52, impter_53, impter_54, impter_55, impter_56, impter_57, impter_58, impter_59, impter_60, impter_61, impter_62, impter_63, impter_64, impter_65) SELECT [ADS_imp_1_OUT].[KEY], [ADS_imp_1_OUT].impter_2, [ADS_imp_1_OUT].impter_3, [ADS_imp_1_OUT].impter_4, [ADS_imp_1_OUT].impter_5, [ADS_imp_1_OUT].impter_6, [ADS_imp_1_OUT].impter_7, [ADS_imp_1_OUT].impter_8, [ADS_imp_1_OUT].impter_9, [ADS_imp_1_OUT].impter_10, [ADS_imp_1_OUT].impter_11, [ADS_imp_1_OUT].impter_12, [ADS_imp_1_OUT].impter_13, [ADS_imp_1_OUT].impter_14, [ADS_imp_1_OUT].impter_15, [ADS_imp_1_OUT].impter_16, [ADS_imp_1_OUT].impter_17, [ADS_imp_1_OUT].impter_18, [ADS_imp_1_OUT].impter_19, [ADS_imp_1_OUT].impter_20, [ADS_imp_1_OUT].impter_21, [ADS_imp_1_OUT].impter_22, [ADS_imp_1_OUT].impter_23, [ADS_imp_1_OUT].impter_24, [ADS_imp_1_OUT].impter_25, [ADS_imp_1_OUT].impter_26, [ADS_imp_1_OUT].impter_27, [ADS_imp_1_OUT].impter_28, [ADS_imp_1_OUT].impter_29, [ADS_imp_1_OUT].impter_30, [ADS_imp_1_OUT].impter_31, [ADS_imp_1_OUT].impter_32, [ADS_imp_1_OUT].impter_33, [ADS_imp_1_OUT].impter_34, [ADS_imp_1_OUT].impter_35, [ADS_imp_1_OUT].impter_36, [ADS_imp_1_OUT].impter_37, [ADS_imp_1_OUT].impter_38, [ADS_imp_1_OUT].impter_39, [ADS_imp_1_OUT].impter_40, [ADS_imp_1_OUT].impter_41, [ADS_imp_1_OUT].impter_42, [ADS_imp_1_OUT].impter_43, [ADS_imp_1_OUT].impter_44, [ADS_imp_1_OUT].impter_45, [ADS_imp_1_OUT].impter_46, [ADS_imp_1_OUT].impter_47, [ADS_imp_1_OUT].impter_48, [ADS_imp_1_OUT].impter_49, [ADS_imp_1_OUT].impter_50, [ADS_imp_1_OUT].impter_51, [ADS_imp_1_OUT].impter_52, [ADS_imp_1_OUT].impter_53, [ADS_imp_1_OUT].impter_54, [ADS_imp_1_OUT].impter_55, [ADS_imp_1_OUT].impter_56, [ADS_imp_1_OUT].impter_57, [ADS_imp_1_OUT].impter_58, [ADS_imp_1_OUT].impter_59, [ADS_imp_1_OUT].impter_60, [ADS_imp_1_OUT].impter_61, [ADS_imp_1_OUT].impter_62, [ADS_imp_1_OUT].impter_63, [ADS_imp_1_OUT].impter_64, [ADS_imp_1_OUT].impter_65 
 FROM (SELECT [ADS].[KEY] AS [KEY], CASE WHEN ([ADS].[Feature_0] IS NULL) THEN 0.0 ELSE [ADS].[Feature_0] END AS impter_2, CASE WHEN ([ADS].[Feature_1] IS NULL) THEN 0.2950591510090466 ELSE [ADS].[Feature_1] END AS impter_3, CASE WHEN ([ADS].[Feature_2] IS NULL) THEN 5.104384133611691 ELSE [ADS].[Feature_2] END AS impter_4, CASE WHEN ([ADS].[Feature_3] IS NULL) THEN 11.791927627000696 ELSE [ADS].[Feature_3] END AS impter_5, CASE WHEN ([ADS].[Feature_4] IS NULL) THEN 11.84829505915101 ELSE [ADS].[Feature_4] END AS impter_6, CASE WHEN ([ADS].[Feature_5] IS NULL) THEN 5.823242867084203 ELSE [ADS].[Feature_5] END AS impter_7, CASE WHEN ([ADS].[Feature_6] IS NULL) THEN 1.394572025052192 ELSE [ADS].[Feature_6] END AS impter_8, CASE WHEN ([ADS].[Feature_7] IS NULL) THEN 0.13430758524704245 ELSE [ADS].[Feature_7] END AS impter_9, CASE WHEN ([ADS].[Feature_8] IS NULL) THEN 0.0055671537926235215 ELSE [ADS].[Feature_8] END AS impter_10, CASE WHEN ([ADS].[Feature_9] IS NULL) THEN 1.977035490605428 ELSE [ADS].[Feature_9] END AS impter_11, CASE WHEN ([ADS].[Feature_10] IS NULL) THEN 10.362560890744607 ELSE [ADS].[Feature_10] END AS impter_12, CASE WHEN ([ADS].[Feature_11] IS NULL) THEN 12.03061934585943 ELSE [ADS].[Feature_11] END AS impter_13, CASE WHEN ([ADS].[Feature_12] IS NULL) THEN 10.271398747390396 ELSE [ADS].[Feature_12] END AS impter_14, CASE WHEN ([ADS].[Feature_13] IS NULL) THEN 8.121781489213639 ELSE [ADS].[Feature_13] END AS impter_15, CASE WHEN ([ADS].[Feature_14] IS NULL) THEN 1.8921363952679193 ELSE [ADS].[Feature_14] END AS impter_16, CASE WHEN ([ADS].[Feature_15] IS NULL) THEN 0.11760612386917188 ELSE [ADS].[Feature_15] END AS impter_17, CASE WHEN ([ADS].[Feature_16] IS NULL) THEN 0.0020876826722338203 ELSE [ADS].[Feature_16] END AS impter_18, CASE WHEN ([ADS].[Feature_17] IS NULL) THEN 2.5427974947807934 ELSE [ADS].[Feature_17] END AS impter_19, CASE WHEN ([ADS].[Feature_18] IS NULL) THEN 9.935281837160751 ELSE [ADS].[Feature_18] END AS impter_20, CASE WHEN ([ADS].[Feature_19] IS NULL) THEN 7.099512874043145 ELSE [ADS].[Feature_19] END AS impter_21, CASE WHEN ([ADS].[Feature_20] IS NULL) THEN 7.132915796798887 ELSE [ADS].[Feature_20] END AS impter_22, CASE WHEN ([ADS].[Feature_21] IS NULL) THEN 7.81419624217119 ELSE [ADS].[Feature_21] END AS impter_23, CASE WHEN ([ADS].[Feature_22] IS NULL) THEN 1.8434237995824634 ELSE [ADS].[Feature_22] END AS impter_24, CASE WHEN ([ADS].[Feature_23] IS NULL) THEN 0.05775922059846903 ELSE [ADS].[Feature_23] END AS impter_25, CASE WHEN ([ADS].[Feature_24] IS NULL) THEN 0.0006958942240779402 ELSE [ADS].[Feature_24] END AS impter_26, CASE WHEN ([ADS].[Feature_25] IS NULL) THEN 2.4808629088378567 ELSE [ADS].[Feature_25] END AS impter_27, CASE WHEN ([ADS].[Feature_26] IS NULL) THEN 9.143354210160055 ELSE [ADS].[Feature_26] END AS impter_28, CASE WHEN ([ADS].[Feature_27] IS NULL) THEN 8.960334029227557 ELSE [ADS].[Feature_27] END AS impter_29, CASE WHEN ([ADS].[Feature_28] IS NULL) THEN 10.03688239387613 ELSE [ADS].[Feature_28] END AS impter_30, CASE WHEN ([ADS].[Feature_29] IS NULL) THEN 7.5949895615866385 ELSE [ADS].[Feature_29] END AS impter_31, CASE WHEN ([ADS].[Feature_30] IS NULL) THEN 2.337508698677801 ELSE [ADS].[Feature_30] END AS impter_32, CASE WHEN ([ADS].[Feature_31] IS NULL) THEN 0.0027835768963117608 ELSE [ADS].[Feature_31] END AS impter_33, CASE WHEN ([ADS].[Feature_32] IS NULL) THEN 0.0 ELSE [ADS].[Feature_32] END AS impter_34, CASE WHEN ([ADS].[Feature_33] IS NULL) THEN 2.3319415448851775 ELSE [ADS].[Feature_33] END AS impter_35, CASE WHEN ([ADS].[Feature_34] IS NULL) THEN 7.608907446068198 ELSE [ADS].[Feature_34] END AS impter_36, CASE WHEN ([ADS].[Feature_35] IS NULL) THEN 9.028531663187195 ELSE [ADS].[Feature_35] END AS impter_37, CASE WHEN ([ADS].[Feature_36] IS NULL) THEN 10.270006958942242 ELSE [ADS].[Feature_36] END AS impter_38, CASE WHEN ([ADS].[Feature_37] IS NULL) THEN 8.806541405706332 ELSE [ADS].[Feature_37] END AS impter_39, CASE WHEN ([ADS].[Feature_38] IS NULL) THEN 2.8754349338900487 ELSE [ADS].[Feature_38] END AS impter_40, CASE WHEN ([ADS].[Feature_39] IS NULL) THEN 0.0 ELSE [ADS].[Feature_39] END AS impter_41, CASE WHEN ([ADS].[Feature_40] IS NULL) THEN 0.010438413361169102 ELSE [ADS].[Feature_40] END AS impter_42, CASE WHEN ([ADS].[Feature_41] IS NULL) THEN 1.5755045233124565 ELSE [ADS].[Feature_41] END AS impter_43, CASE WHEN ([ADS].[Feature_42] IS NULL) THEN 6.858733472512178 ELSE [ADS].[Feature_42] END AS impter_44, CASE WHEN ([ADS].[Feature_43] IS NULL) THEN 7.258872651356993 ELSE [ADS].[Feature_43] END AS impter_45, CASE WHEN ([ADS].[Feature_44] IS NULL) THEN 7.710508002783577 ELSE [ADS].[Feature_44] END AS impter_46, CASE WHEN ([ADS].[Feature_45] IS NULL) THEN 8.281141266527488 ELSE [ADS].[Feature_45] END AS impter_47, CASE WHEN ([ADS].[Feature_46] IS NULL) THEN 3.432150313152401 ELSE [ADS].[Feature_46] END AS impter_48, CASE WHEN ([ADS].[Feature_47] IS NULL) THEN 0.031315240083507306 ELSE [ADS].[Feature_47] END AS impter_49, CASE WHEN ([ADS].[Feature_48] IS NULL) THEN 0.009046624913013222 ELSE [ADS].[Feature_48] END AS impter_50, CASE WHEN ([ADS].[Feature_49] IS NULL) THEN 0.708420320111343 ELSE [ADS].[Feature_49] END AS impter_51, CASE WHEN ([ADS].[Feature_50] IS NULL) THEN 7.492693110647181 ELSE [ADS].[Feature_50] END AS impter_52, CASE WHEN ([ADS].[Feature_51] IS NULL) THEN 9.529575504523313 ELSE [ADS].[Feature_51] END AS impter_53, CASE WHEN ([ADS].[Feature_52] IS NULL) THEN 9.541405706332638 ELSE [ADS].[Feature_52] END AS impter_54, CASE WHEN ([ADS].[Feature_53] IS NULL) THEN 8.754349338900488 ELSE [ADS].[Feature_53] END AS impter_55, CASE WHEN ([ADS].[Feature_54] IS NULL) THEN 3.7397355601948505 ELSE [ADS].[Feature_54] END AS impter_56, CASE WHEN ([ADS].[Feature_55] IS NULL) THEN 0.21920668058455114 ELSE [ADS].[Feature_55] END AS impter_57, CASE WHEN ([ADS].[Feature_56] IS NULL) THEN 0.0006958942240779402 ELSE [ADS].[Feature_56] END AS impter_58, CASE WHEN ([ADS].[Feature_57] IS NULL) THEN 0.26374391092553934 ELSE [ADS].[Feature_57] END AS impter_59, CASE WHEN ([ADS].[Feature_58] IS NULL) THEN 5.474599860821155 ELSE [ADS].[Feature_58] END AS impter_60, CASE WHEN ([ADS].[Feature_59] IS NULL) THEN 12.097425191370911 ELSE [ADS].[Feature_59] END AS impter_61, CASE WHEN ([ADS].[Feature_60] IS NULL) THEN 11.8580375782881 ELSE [ADS].[Feature_60] END AS impter_62, CASE WHEN ([ADS].[Feature_61] IS NULL) THEN 6.716771050800278 ELSE [ADS].[Feature_61] END AS impter_63, CASE WHEN ([ADS].[Feature_62] IS NULL) THEN 2.0869867780097424 ELSE [ADS].[Feature_62] END AS impter_64, CASE WHEN ([ADS].[Feature_63] IS NULL) THEN 0.3862212943632568 ELSE [ADS].[Feature_63] END AS impter_65 
 FROM digits AS [ADS]) AS [ADS_imp_1_OUT]
 
--- Code For temporary table ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT part 1. Create 
+-- Code For temporary table ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT (
+CREATE TABLE ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT (
 	[KEY] BIGINT NULL, 
 	scaler_2 FLOAT NULL, 
 	scaler_3 FLOAT NULL, 
@@ -162,16 +162,16 @@ CREATE TABLE ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT (
 
 
 
--- Code For temporary table ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT part 2. Populate
+-- Code For temporary table ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT part 2. Populate
 
-INSERT INTO ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT ([KEY], scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11, scaler_12, scaler_13, scaler_14, scaler_15, scaler_16, scaler_17, scaler_18, scaler_19, scaler_20, scaler_21, scaler_22, scaler_23, scaler_24, scaler_25, scaler_26, scaler_27, scaler_28, scaler_29, scaler_30, scaler_31, scaler_32, scaler_33, scaler_34, scaler_35, scaler_36, scaler_37, scaler_38, scaler_39, scaler_40, scaler_41, scaler_42, scaler_43, scaler_44, scaler_45, scaler_46, scaler_47, scaler_48, scaler_49, scaler_50, scaler_51, scaler_52, scaler_53, scaler_54, scaler_55, scaler_56, scaler_57, scaler_58, scaler_59, scaler_60, scaler_61, scaler_62, scaler_63, scaler_64, scaler_65) SELECT [ADS_sca_2_OUT].[KEY], [ADS_sca_2_OUT].scaler_2, [ADS_sca_2_OUT].scaler_3, [ADS_sca_2_OUT].scaler_4, [ADS_sca_2_OUT].scaler_5, [ADS_sca_2_OUT].scaler_6, [ADS_sca_2_OUT].scaler_7, [ADS_sca_2_OUT].scaler_8, [ADS_sca_2_OUT].scaler_9, [ADS_sca_2_OUT].scaler_10, [ADS_sca_2_OUT].scaler_11, [ADS_sca_2_OUT].scaler_12, [ADS_sca_2_OUT].scaler_13, [ADS_sca_2_OUT].scaler_14, [ADS_sca_2_OUT].scaler_15, [ADS_sca_2_OUT].scaler_16, [ADS_sca_2_OUT].scaler_17, [ADS_sca_2_OUT].scaler_18, [ADS_sca_2_OUT].scaler_19, [ADS_sca_2_OUT].scaler_20, [ADS_sca_2_OUT].scaler_21, [ADS_sca_2_OUT].scaler_22, [ADS_sca_2_OUT].scaler_23, [ADS_sca_2_OUT].scaler_24, [ADS_sca_2_OUT].scaler_25, [ADS_sca_2_OUT].scaler_26, [ADS_sca_2_OUT].scaler_27, [ADS_sca_2_OUT].scaler_28, [ADS_sca_2_OUT].scaler_29, [ADS_sca_2_OUT].scaler_30, [ADS_sca_2_OUT].scaler_31, [ADS_sca_2_OUT].scaler_32, [ADS_sca_2_OUT].scaler_33, [ADS_sca_2_OUT].scaler_34, [ADS_sca_2_OUT].scaler_35, [ADS_sca_2_OUT].scaler_36, [ADS_sca_2_OUT].scaler_37, [ADS_sca_2_OUT].scaler_38, [ADS_sca_2_OUT].scaler_39, [ADS_sca_2_OUT].scaler_40, [ADS_sca_2_OUT].scaler_41, [ADS_sca_2_OUT].scaler_42, [ADS_sca_2_OUT].scaler_43, [ADS_sca_2_OUT].scaler_44, [ADS_sca_2_OUT].scaler_45, [ADS_sca_2_OUT].scaler_46, [ADS_sca_2_OUT].scaler_47, [ADS_sca_2_OUT].scaler_48, [ADS_sca_2_OUT].scaler_49, [ADS_sca_2_OUT].scaler_50, [ADS_sca_2_OUT].scaler_51, [ADS_sca_2_OUT].scaler_52, [ADS_sca_2_OUT].scaler_53, [ADS_sca_2_OUT].scaler_54, [ADS_sca_2_OUT].scaler_55, [ADS_sca_2_OUT].scaler_56, [ADS_sca_2_OUT].scaler_57, [ADS_sca_2_OUT].scaler_58, [ADS_sca_2_OUT].scaler_59, [ADS_sca_2_OUT].scaler_60, [ADS_sca_2_OUT].scaler_61, [ADS_sca_2_OUT].scaler_62, [ADS_sca_2_OUT].scaler_63, [ADS_sca_2_OUT].scaler_64, [ADS_sca_2_OUT].scaler_65 
+INSERT INTO ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT ([KEY], scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11, scaler_12, scaler_13, scaler_14, scaler_15, scaler_16, scaler_17, scaler_18, scaler_19, scaler_20, scaler_21, scaler_22, scaler_23, scaler_24, scaler_25, scaler_26, scaler_27, scaler_28, scaler_29, scaler_30, scaler_31, scaler_32, scaler_33, scaler_34, scaler_35, scaler_36, scaler_37, scaler_38, scaler_39, scaler_40, scaler_41, scaler_42, scaler_43, scaler_44, scaler_45, scaler_46, scaler_47, scaler_48, scaler_49, scaler_50, scaler_51, scaler_52, scaler_53, scaler_54, scaler_55, scaler_56, scaler_57, scaler_58, scaler_59, scaler_60, scaler_61, scaler_62, scaler_63, scaler_64, scaler_65) SELECT [ADS_sca_2_OUT].[KEY], [ADS_sca_2_OUT].scaler_2, [ADS_sca_2_OUT].scaler_3, [ADS_sca_2_OUT].scaler_4, [ADS_sca_2_OUT].scaler_5, [ADS_sca_2_OUT].scaler_6, [ADS_sca_2_OUT].scaler_7, [ADS_sca_2_OUT].scaler_8, [ADS_sca_2_OUT].scaler_9, [ADS_sca_2_OUT].scaler_10, [ADS_sca_2_OUT].scaler_11, [ADS_sca_2_OUT].scaler_12, [ADS_sca_2_OUT].scaler_13, [ADS_sca_2_OUT].scaler_14, [ADS_sca_2_OUT].scaler_15, [ADS_sca_2_OUT].scaler_16, [ADS_sca_2_OUT].scaler_17, [ADS_sca_2_OUT].scaler_18, [ADS_sca_2_OUT].scaler_19, [ADS_sca_2_OUT].scaler_20, [ADS_sca_2_OUT].scaler_21, [ADS_sca_2_OUT].scaler_22, [ADS_sca_2_OUT].scaler_23, [ADS_sca_2_OUT].scaler_24, [ADS_sca_2_OUT].scaler_25, [ADS_sca_2_OUT].scaler_26, [ADS_sca_2_OUT].scaler_27, [ADS_sca_2_OUT].scaler_28, [ADS_sca_2_OUT].scaler_29, [ADS_sca_2_OUT].scaler_30, [ADS_sca_2_OUT].scaler_31, [ADS_sca_2_OUT].scaler_32, [ADS_sca_2_OUT].scaler_33, [ADS_sca_2_OUT].scaler_34, [ADS_sca_2_OUT].scaler_35, [ADS_sca_2_OUT].scaler_36, [ADS_sca_2_OUT].scaler_37, [ADS_sca_2_OUT].scaler_38, [ADS_sca_2_OUT].scaler_39, [ADS_sca_2_OUT].scaler_40, [ADS_sca_2_OUT].scaler_41, [ADS_sca_2_OUT].scaler_42, [ADS_sca_2_OUT].scaler_43, [ADS_sca_2_OUT].scaler_44, [ADS_sca_2_OUT].scaler_45, [ADS_sca_2_OUT].scaler_46, [ADS_sca_2_OUT].scaler_47, [ADS_sca_2_OUT].scaler_48, [ADS_sca_2_OUT].scaler_49, [ADS_sca_2_OUT].scaler_50, [ADS_sca_2_OUT].scaler_51, [ADS_sca_2_OUT].scaler_52, [ADS_sca_2_OUT].scaler_53, [ADS_sca_2_OUT].scaler_54, [ADS_sca_2_OUT].scaler_55, [ADS_sca_2_OUT].scaler_56, [ADS_sca_2_OUT].scaler_57, [ADS_sca_2_OUT].scaler_58, [ADS_sca_2_OUT].scaler_59, [ADS_sca_2_OUT].scaler_60, [ADS_sca_2_OUT].scaler_61, [ADS_sca_2_OUT].scaler_62, [ADS_sca_2_OUT].scaler_63, [ADS_sca_2_OUT].scaler_64, [ADS_sca_2_OUT].scaler_65 
 FROM (SELECT [ADS_imp_1_OUT].[KEY] AS [KEY], (CAST([ADS_imp_1_OUT].impter_2 AS FLOAT(53)) - 0.0) / 1.0 AS scaler_2, (CAST([ADS_imp_1_OUT].impter_3 AS FLOAT(53)) - 0.2950591510090466) / 0.886335971513945 AS scaler_3, (CAST([ADS_imp_1_OUT].impter_4 AS FLOAT(53)) - 5.104384133611691) / 4.714562522364591 AS scaler_4, (CAST([ADS_imp_1_OUT].impter_5 AS FLOAT(53)) - 11.791927627000696) / 4.242705177561994 AS scaler_5, (CAST([ADS_imp_1_OUT].impter_6 AS FLOAT(53)) - 11.84829505915101) / 4.298607850485783 AS scaler_6, (CAST([ADS_imp_1_OUT].impter_7 AS FLOAT(53)) - 5.823242867084203) / 5.664052593352563 AS scaler_7, (CAST([ADS_imp_1_OUT].impter_8 AS FLOAT(53)) - 1.394572025052192) / 3.3672537498889787 AS scaler_8, (CAST([ADS_imp_1_OUT].impter_9 AS FLOAT(53)) - 0.13430758524704245) / 1.0738488961060884 AS scaler_9, (CAST([ADS_imp_1_OUT].impter_10 AS FLOAT(53)) - 0.0055671537926235215) / 0.09121259500521199 AS scaler_10, (CAST([ADS_imp_1_OUT].impter_11 AS FLOAT(53)) - 1.977035490605428) / 3.1765759513448373 AS scaler_11, (CAST([ADS_imp_1_OUT].impter_12 AS FLOAT(53)) - 10.362560890744607) / 5.427455768043861 AS scaler_12, (CAST([ADS_imp_1_OUT].impter_13 AS FLOAT(53)) - 12.03061934585943) / 3.9240043126958595 AS scaler_13, (CAST([ADS_imp_1_OUT].impter_14 AS FLOAT(53)) - 10.271398747390396) / 4.751306782008032 AS scaler_14, (CAST([ADS_imp_1_OUT].impter_15 AS FLOAT(53)) - 8.121781489213639) / 6.055742470420089 AS scaler_15, (CAST([ADS_imp_1_OUT].impter_16 AS FLOAT(53)) - 1.8921363952679193) / 3.6358496015605493 AS scaler_16, (CAST([ADS_imp_1_OUT].impter_17 AS FLOAT(53)) - 0.11760612386917188) / 0.8809135848407257 AS scaler_17, (CAST([ADS_imp_1_OUT].impter_18 AS FLOAT(53)) - 0.0020876826722338203) / 0.04564344699180706 AS scaler_18, (CAST([ADS_imp_1_OUT].impter_19 AS FLOAT(53)) - 2.5427974947807934) / 3.535939148296097 AS scaler_19, (CAST([ADS_imp_1_OUT].impter_20 AS FLOAT(53)) - 9.935281837160751) / 5.674233427535142 AS scaler_20, (CAST([ADS_imp_1_OUT].impter_21 AS FLOAT(53)) - 7.099512874043145) / 5.828968622118506 AS scaler_21, (CAST([ADS_imp_1_OUT].impter_22 AS FLOAT(53)) - 7.132915796798887) / 6.164166380758013 AS scaler_22, (CAST([ADS_imp_1_OUT].impter_23 AS FLOAT(53)) - 7.81419624217119) / 6.237214641441282 AS scaler_23, (CAST([ADS_imp_1_OUT].impter_24 AS FLOAT(53)) - 1.8434237995824634) / 3.3552968495259408 AS scaler_24, (CAST([ADS_imp_1_OUT].impter_25 AS FLOAT(53)) - 0.05775922059846903) / 0.47057168084472595 AS scaler_25, (CAST([ADS_imp_1_OUT].impter_26 AS FLOAT(53)) - 0.0006958942240779402) / 0.0263706267522565 AS scaler_26, (CAST([ADS_imp_1_OUT].impter_27 AS FLOAT(53)) - 2.4808629088378567) / 3.1579531140532993 AS scaler_27, (CAST([ADS_imp_1_OUT].impter_28 AS FLOAT(53)) - 9.143354210160055) / 6.211448620771221 AS scaler_28, (CAST([ADS_imp_1_OUT].impter_29 AS FLOAT(53)) - 8.960334029227557) / 5.872499336895779 AS scaler_29, (CAST([ADS_imp_1_OUT].impter_30 AS FLOAT(53)) - 10.03688239387613) / 6.131194138822921 AS scaler_30, (CAST([ADS_imp_1_OUT].impter_31 AS FLOAT(53)) - 7.5949895615866385) / 5.883009512311774 AS scaler_31, (CAST([ADS_imp_1_OUT].impter_32 AS FLOAT(53)) - 2.337508698677801) / 3.7555163121005397 AS scaler_32, (CAST([ADS_imp_1_OUT].impter_33 AS FLOAT(53)) - 0.0027835768963117608) / 0.05268613286220741 AS scaler_33, (CAST([ADS_imp_1_OUT].impter_34 AS FLOAT(53)) - 0.0) / 1.0 AS scaler_34, (CAST([ADS_imp_1_OUT].impter_35 AS FLOAT(53)) - 2.3319415448851775) / 3.520361676701363 AS scaler_35, (CAST([ADS_imp_1_OUT].impter_36 AS FLOAT(53)) - 7.608907446068198) / 6.337427127154217 AS scaler_36, (CAST([ADS_imp_1_OUT].impter_37 AS FLOAT(53)) - 9.028531663187195) / 6.255398792908601 AS scaler_37, (CAST([ADS_imp_1_OUT].impter_38 AS FLOAT(53)) - 10.270006958942242) / 5.918328236602452 AS scaler_38, (CAST([ADS_imp_1_OUT].impter_39 AS FLOAT(53)) - 8.806541405706332) / 5.862505948752236 AS scaler_39, (CAST([ADS_imp_1_OUT].impter_40 AS FLOAT(53)) - 2.8754349338900487) / 3.521551388880749 AS scaler_40, (CAST([ADS_imp_1_OUT].impter_41 AS FLOAT(53)) - 0.0) / 1.0 AS scaler_41, (CAST([ADS_imp_1_OUT].impter_42 AS FLOAT(53)) - 0.010438413361169102) / 0.16012222149778146 AS scaler_42, (CAST([ADS_imp_1_OUT].impter_43 AS FLOAT(53)) - 1.5755045233124565) / 3.0148158575591246 AS scaler_43, (CAST([ADS_imp_1_OUT].impter_44 AS FLOAT(53)) - 6.858733472512178) / 6.5422093407655435 AS scaler_44, (CAST([ADS_imp_1_OUT].impter_45 AS FLOAT(53)) - 7.258872651356993) / 6.490917554434448 AS scaler_45, (CAST([ADS_imp_1_OUT].impter_46 AS FLOAT(53)) - 7.710508002783577) / 6.292873620677289 AS scaler_46, (CAST([ADS_imp_1_OUT].impter_47 AS FLOAT(53)) - 8.281141266527488) / 5.713309549149251 AS scaler_47, (CAST([ADS_imp_1_OUT].impter_48 AS FLOAT(53)) - 3.432150313152401) / 4.326500259143386 AS scaler_48, (CAST([ADS_imp_1_OUT].impter_49 AS FLOAT(53)) - 0.031315240083507306) / 0.33325414598330405 AS scaler_49, (CAST([ADS_imp_1_OUT].impter_50 AS FLOAT(53)) - 0.009046624913013222) / 0.22827664222063312 AS scaler_50, (CAST([ADS_imp_1_OUT].impter_51 AS FLOAT(53)) - 0.708420320111343) / 1.7630768232183456 AS scaler_51, (CAST([ADS_imp_1_OUT].impter_52 AS FLOAT(53)) - 7.492693110647181) / 5.6747357473393345 AS scaler_52, (CAST([ADS_imp_1_OUT].impter_53 AS FLOAT(53)) - 9.529575504523313) / 5.230790022511772 AS scaler_53, (CAST([ADS_imp_1_OUT].impter_54 AS FLOAT(53)) - 9.541405706332638) / 5.2515555146947035 AS scaler_54, (CAST([ADS_imp_1_OUT].impter_55 AS FLOAT(53)) - 8.754349338900488) / 6.0343648977583975 AS scaler_55, (CAST([ADS_imp_1_OUT].impter_56 AS FLOAT(53)) - 3.7397355601948505) / 4.953834269857758 AS scaler_56, (CAST([ADS_imp_1_OUT].impter_57 AS FLOAT(53)) - 0.21920668058455114) / 1.0257471420649142 AS scaler_57, (CAST([ADS_imp_1_OUT].impter_58 AS FLOAT(53)) - 0.0006958942240779402) / 0.02637062675225659 AS scaler_58, (CAST([ADS_imp_1_OUT].impter_59 AS FLOAT(53)) - 0.26374391092553934) / 0.893431165157604 AS scaler_59, (CAST([ADS_imp_1_OUT].impter_60 AS FLOAT(53)) - 5.474599860821155) / 5.06659361292149 AS scaler_60, (CAST([ADS_imp_1_OUT].impter_61 AS FLOAT(53)) - 12.097425191370911) / 4.359965306758356 AS scaler_61, (CAST([ADS_imp_1_OUT].impter_62 AS FLOAT(53)) - 11.8580375782881) / 4.889242282258171 AS scaler_62, (CAST([ADS_imp_1_OUT].impter_63 AS FLOAT(53)) - 6.716771050800278) / 5.87255780345831 AS scaler_63, (CAST([ADS_imp_1_OUT].impter_64 AS FLOAT(53)) - 2.0869867780097424) / 4.12826085471658 AS scaler_64, (CAST([ADS_imp_1_OUT].impter_65 AS FLOAT(53)) - 0.3862212943632568) / 1.915153500596726 AS scaler_65 
-FROM ##TMP_20180508184317_CODEGEN_N618AR_ADS_imp_1_OUT AS [ADS_imp_1_OUT]) AS [ADS_sca_2_OUT]
+FROM ##TMP_20180516120530_CODEGEN_ELZTGF_ADS_imp_1_OUT AS [ADS_imp_1_OUT]) AS [ADS_sca_2_OUT]
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_SEE3VC_XGB_B0 part 1. Create 
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_YEGV1B_XGB_B0 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508184319_CODEGEN_SEE3VC_XGB_B0 (
+CREATE TABLE ##TMP_20180516120531_CODEGEN_YEGV1B_XGB_B0 (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Score_1] FLOAT(53) NULL, 
@@ -187,11 +187,11 @@ CREATE TABLE ##TMP_20180508184319_CODEGEN_SEE3VC_XGB_B0 (
 
 
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_SEE3VC_XGB_B0 part 2. Populate
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_YEGV1B_XGB_B0 part 2. Populate
 
 WITH [DT_node_lookup] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.6508052349090576) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_30 < -0.9030675292015076) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.1439052820205688) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, 0.42500001192092896 AS [Score] UNION ALL SELECT 4 AS nid, -0.05141580104827881 AS [Score] UNION ALL SELECT 5 AS nid, -0.02562418021261692 AS [Score] UNION ALL SELECT 6 AS nid, -0.055285897105932236 AS [Score]) AS [Values]), 
@@ -203,7 +203,7 @@ FROM [DT_node_lookup] LEFT OUTER JOIN [DT_node_data] ON [DT_node_lookup].node_id
 FROM [DT_Output]), 
 [DT_node_lookup_1] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 1.441161870956421) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_12 < -1.817160964012146) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 1.0980479717254639) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_48 < -0.6777187585830688) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_22 < 1.357374906539917) THEN 9 ELSE 10 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_1] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, 0.17121587693691254 AS [Score] UNION ALL SELECT 6 AS nid, -0.014705884270370007 AS [Score] UNION ALL SELECT 7 AS nid, -0.05371730402112007 AS [Score] UNION ALL SELECT 8 AS nid, -0.008155586197972298 AS [Score] UNION ALL SELECT 9 AS nid, 0.22033898532390594 AS [Score] UNION ALL SELECT 10 AS nid, 0.41291728615760803 AS [Score]) AS [Values]), 
@@ -215,7 +215,7 @@ FROM [DT_node_lookup_1] LEFT OUTER JOIN [DT_node_data_1] ON [DT_node_lookup_1].n
 FROM [DT_Output_1]), 
 [DT_node_lookup_2] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_64 < 0.1000453308224678) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_39 < -1.0757415294647217) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_46 < 0.12545810639858246) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_47 < -1.3619322776794434) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_48 < -0.4465850591659546) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_29 < 0.26218241453170776) THEN 11 ELSE 12 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_61 < 0.321694016456604) THEN 13 ELSE 14 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_2] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 7 AS nid, 0.16141733527183533 AS [Score] UNION ALL SELECT 8 AS nid, -0.046821605414152145 AS [Score] UNION ALL SELECT 9 AS nid, -0.02587646245956421 AS [Score] UNION ALL SELECT 10 AS nid, -0.055184394121170044 AS [Score] UNION ALL SELECT 11 AS nid, 0.44529542326927185 AS [Score] UNION ALL SELECT 12 AS nid, 0.08041958510875702 AS [Score] UNION ALL SELECT 13 AS nid, -0.053016453981399536 AS [Score] UNION ALL SELECT 14 AS nid, 0.03671328350901604 AS [Score]) AS [Values]), 
@@ -227,7 +227,7 @@ FROM [DT_node_lookup_2] LEFT OUTER JOIN [DT_node_data_2] ON [DT_node_lookup_2].n
 FROM [DT_Output_2]), 
 [DT_node_lookup_3] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -1.3915199041366577) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.7331587076187134) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_7 < 0.29603487253189087) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.5865546464920044) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_48 < 0.01568235084414482) THEN 9 ELSE 10 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_56 < 0.35533374547958374) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_3] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, 0.41115498542785645 AS [Score] UNION ALL SELECT 7 AS nid, -0.052575111389160156 AS [Score] UNION ALL SELECT 8 AS nid, 0.0017482498660683632 AS [Score] UNION ALL SELECT 9 AS nid, -0.026845639571547508 AS [Score] UNION ALL SELECT 10 AS nid, 0.15460526943206787 AS [Score] UNION ALL SELECT 11 AS nid, -0.05432197079062462 AS [Score] UNION ALL SELECT 12 AS nid, -0.03110453300178051 AS [Score]) AS [Values]), 
@@ -239,7 +239,7 @@ FROM [DT_node_lookup_3] LEFT OUTER JOIN [DT_node_data_3] ON [DT_node_lookup_3].n
 FROM [DT_Output_3]), 
 [DT_node_lookup_4] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_35 < 1.7521092891693115) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_60 < -0.981843113899231) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_35 < 0.3318006992340088) THEN 5 ELSE 6 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_32 < 1.374642252922058) THEN 7 ELSE 8 END END ELSE 2 END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_4] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 2 AS nid, 0.36538463830947876 AS [Score] UNION ALL SELECT 5 AS nid, -0.03317536041140556 AS [Score] UNION ALL SELECT 6 AS nid, 0.2154017984867096 AS [Score] UNION ALL SELECT 7 AS nid, -0.05345986410975456 AS [Score] UNION ALL SELECT 8 AS nid, -0.025092938914895058 AS [Score]) AS [Values]), 
@@ -251,7 +251,7 @@ FROM [DT_node_lookup_4] LEFT OUTER JOIN [DT_node_data_4] ON [DT_node_lookup_4].n
 FROM [DT_Output_4]), 
 [DT_node_lookup_5] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.0123423337936401) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 < 0.1194828450679779) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < -0.8191014528274536) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_28 < 1.0233757495880127) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_12 < 0.3938197195529938) THEN 9 ELSE 10 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_5] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, 0.41099071502685547 AS [Score] UNION ALL SELECT 5 AS nid, -0.053880441933870316 AS [Score] UNION ALL SELECT 7 AS nid, 0.05271565541625023 AS [Score] UNION ALL SELECT 8 AS nid, -0.05177443102002144 AS [Score] UNION ALL SELECT 9 AS nid, -0.05297398194670677 AS [Score] UNION ALL SELECT 10 AS nid, 0.02166064828634262 AS [Score]) AS [Values]), 
@@ -263,7 +263,7 @@ FROM [DT_node_lookup_5] LEFT OUTER JOIN [DT_node_data_5] ON [DT_node_lookup_5].n
 FROM [DT_Output_5]), 
 [DT_node_lookup_6] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.1726703643798828) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.4037269949913025) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 0.9264910221099854) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_56 < 0.35533374547958374) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_14 < -1.635633945465088) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_6] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.034223709255456924 AS [Score] UNION ALL SELECT 6 AS nid, -0.05411936715245247 AS [Score] UNION ALL SELECT 7 AS nid, -0.05366848036646843 AS [Score] UNION ALL SELECT 8 AS nid, -0.014440434984862804 AS [Score] UNION ALL SELECT 9 AS nid, 0.09552495926618576 AS [Score] UNION ALL SELECT 10 AS nid, 0.4646017551422119 AS [Score]) AS [Values]), 
@@ -275,7 +275,7 @@ FROM [DT_node_lookup_6] LEFT OUTER JOIN [DT_node_data_6] ON [DT_node_lookup_6].n
 FROM [DT_Output_6]), 
 [DT_node_lookup_7] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -1.9140057563781738) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_20 < 0.2757585048675537) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -0.8913522958755493) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_31 < 0.4937966465950012) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_16 < 1.2673416137695312) THEN 9 ELSE 10 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_7] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, 0.4468085467815399 AS [Score] UNION ALL SELECT 4 AS nid, 0.12093862146139145 AS [Score] UNION ALL SELECT 7 AS nid, -0.03484603390097618 AS [Score] UNION ALL SELECT 8 AS nid, 0.21636953949928284 AS [Score] UNION ALL SELECT 9 AS nid, -0.05423799157142639 AS [Score] UNION ALL SELECT 10 AS nid, -0.007537690456956625 AS [Score]) AS [Values]), 
@@ -287,7 +287,7 @@ FROM [DT_node_lookup_7] LEFT OUTER JOIN [DT_node_data_7] ON [DT_node_lookup_7].n
 FROM [DT_Output_7]), 
 [DT_node_lookup_8] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.6745421886444092) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < 0.10995353013277054) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -0.5313583612442017) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_37 < 0.3950936496257782) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_29 < 0.6027529239654541) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_45 < 0.03714842349290848) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_8] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05500496178865433 AS [Score] UNION ALL SELECT 7 AS nid, -0.04538799822330475 AS [Score] UNION ALL SELECT 8 AS nid, 0.036802031099796295 AS [Score] UNION ALL SELECT 9 AS nid, -0.029458601027727127 AS [Score] UNION ALL SELECT 10 AS nid, 0.2719869911670685 AS [Score] UNION ALL SELECT 11 AS nid, -0.04969879612326622 AS [Score] UNION ALL SELECT 12 AS nid, 0.024207010865211487 AS [Score]) AS [Values]), 
@@ -299,7 +299,7 @@ FROM [DT_node_lookup_8] LEFT OUTER JOIN [DT_node_data_8] ON [DT_node_lookup_8].n
 FROM [DT_Output_8]), 
 [DT_node_lookup_9] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_31 < 1.0037397146224976) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < 1.23224937915802) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < -0.5133943557739258) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -1.0412814617156982) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_46 < -0.9869112968444824) THEN 9 ELSE 10 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.27097442746162415) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_9] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, 0.05844155699014664 AS [Score] UNION ALL SELECT 7 AS nid, -0.032932501286268234 AS [Score] UNION ALL SELECT 8 AS nid, -0.05414244532585144 AS [Score] UNION ALL SELECT 9 AS nid, 0.38343557715415955 AS [Score] UNION ALL SELECT 10 AS nid, 0.18916518986225128 AS [Score] UNION ALL SELECT 11 AS nid, 0.05932203680276871 AS [Score] UNION ALL SELECT 12 AS nid, -0.0463096983730793 AS [Score]) AS [Values]), 
@@ -309,7 +309,7 @@ FROM [DT_node_lookup_9] LEFT OUTER JOIN [DT_node_data_9] ON [DT_node_lookup_9].n
 [XGB_Model_9_0] AS 
 (SELECT [DT_Output_9].[KEY] AS [KEY], 0.0 AS [Score_0], 0.0 AS [Score_1], 0.0 AS [Score_2], 0.0 AS [Score_3], 0.0 AS [Score_4], 0.0 AS [Score_5], 0.0 AS [Score_6], 0.0 AS [Score_7], 0.0 AS [Score_8], [DT_Output_9].[Score] AS [Score_9] 
 FROM [DT_Output_9])
- INSERT INTO ##TMP_20180508184319_CODEGEN_SEE3VC_XGB_B0 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B0].[KEY], [XGB_B0].[Score_0], [XGB_B0].[Score_1], [XGB_B0].[Score_2], [XGB_B0].[Score_3], [XGB_B0].[Score_4], [XGB_B0].[Score_5], [XGB_B0].[Score_6], [XGB_B0].[Score_7], [XGB_B0].[Score_8], [XGB_B0].[Score_9] 
+ INSERT INTO ##TMP_20180516120531_CODEGEN_YEGV1B_XGB_B0 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B0].[KEY], [XGB_B0].[Score_0], [XGB_B0].[Score_1], [XGB_B0].[Score_2], [XGB_B0].[Score_3], [XGB_B0].[Score_4], [XGB_B0].[Score_5], [XGB_B0].[Score_6], [XGB_B0].[Score_7], [XGB_B0].[Score_8], [XGB_B0].[Score_9] 
 FROM (SELECT [XGB_esu_0].[KEY] AS [KEY], [XGB_esu_0].[Score_0] AS [Score_0], [XGB_esu_0].[Score_1] AS [Score_1], [XGB_esu_0].[Score_2] AS [Score_2], [XGB_esu_0].[Score_3] AS [Score_3], [XGB_esu_0].[Score_4] AS [Score_4], [XGB_esu_0].[Score_5] AS [Score_5], [XGB_esu_0].[Score_6] AS [Score_6], [XGB_esu_0].[Score_7] AS [Score_7], [XGB_esu_0].[Score_8] AS [Score_8], [XGB_esu_0].[Score_9] AS [Score_9] 
 FROM (SELECT [XGB_Model_0_0].[KEY] AS [KEY], [XGB_Model_0_0].[Score_0] AS [Score_0], [XGB_Model_0_0].[Score_1] AS [Score_1], [XGB_Model_0_0].[Score_2] AS [Score_2], [XGB_Model_0_0].[Score_3] AS [Score_3], [XGB_Model_0_0].[Score_4] AS [Score_4], [XGB_Model_0_0].[Score_5] AS [Score_5], [XGB_Model_0_0].[Score_6] AS [Score_6], [XGB_Model_0_0].[Score_7] AS [Score_7], [XGB_Model_0_0].[Score_8] AS [Score_8], [XGB_Model_0_0].[Score_9] AS [Score_9] 
 FROM [XGB_Model_0_0] UNION ALL SELECT [XGB_Model_1_0].[KEY] AS [KEY], [XGB_Model_1_0].[Score_0] AS [Score_0], [XGB_Model_1_0].[Score_1] AS [Score_1], [XGB_Model_1_0].[Score_2] AS [Score_2], [XGB_Model_1_0].[Score_3] AS [Score_3], [XGB_Model_1_0].[Score_4] AS [Score_4], [XGB_Model_1_0].[Score_5] AS [Score_5], [XGB_Model_1_0].[Score_6] AS [Score_6], [XGB_Model_1_0].[Score_7] AS [Score_7], [XGB_Model_1_0].[Score_8] AS [Score_8], [XGB_Model_1_0].[Score_9] AS [Score_9] 
@@ -323,10 +323,10 @@ FROM [XGB_Model_7_0] UNION ALL SELECT [XGB_Model_8_0].[KEY] AS [KEY], [XGB_Model
 FROM [XGB_Model_8_0] UNION ALL SELECT [XGB_Model_9_0].[KEY] AS [KEY], [XGB_Model_9_0].[Score_0] AS [Score_0], [XGB_Model_9_0].[Score_1] AS [Score_1], [XGB_Model_9_0].[Score_2] AS [Score_2], [XGB_Model_9_0].[Score_3] AS [Score_3], [XGB_Model_9_0].[Score_4] AS [Score_4], [XGB_Model_9_0].[Score_5] AS [Score_5], [XGB_Model_9_0].[Score_6] AS [Score_6], [XGB_Model_9_0].[Score_7] AS [Score_7], [XGB_Model_9_0].[Score_8] AS [Score_8], [XGB_Model_9_0].[Score_9] AS [Score_9] 
 FROM [XGB_Model_9_0]) AS [XGB_esu_0]) AS [XGB_B0]
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_Q2BEST_XGB_B1 part 1. Create 
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_24CZMQ_XGB_B1 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508184319_CODEGEN_Q2BEST_XGB_B1 (
+CREATE TABLE ##TMP_20180516120531_CODEGEN_24CZMQ_XGB_B1 (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Score_1] FLOAT(53) NULL, 
@@ -342,11 +342,11 @@ CREATE TABLE ##TMP_20180508184319_CODEGEN_Q2BEST_XGB_B1 (
 
 
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_Q2BEST_XGB_B1 part 2. Populate
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_24CZMQ_XGB_B1 part 2. Populate
 
 WITH [DT_node_lookup_10] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.6508052349090576) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_30 < -0.9030675292015076) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.8872201442718506) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.1439052820205688) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_10] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, -0.050944503396749496 AS [Score] UNION ALL SELECT 5 AS nid, -0.024744337424635887 AS [Score] UNION ALL SELECT 6 AS nid, -0.05491872504353523 AS [Score] UNION ALL SELECT 7 AS nid, 0.31408926844596863 AS [Score] UNION ALL SELECT 8 AS nid, 0.19198806583881378 AS [Score]) AS [Values]), 
@@ -358,7 +358,7 @@ FROM [DT_node_lookup_10] LEFT OUTER JOIN [DT_node_data_10] ON [DT_node_lookup_10
 FROM [DT_Output_10]), 
 [DT_node_lookup_11] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 1.441161870956421) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_12 < -1.817160964012146) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 1.0980479717254639) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_48 < -0.6777187585830688) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_14 < 1.100455403327942) THEN 9 ELSE 10 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_11] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, 0.14380459487438202 AS [Score] UNION ALL SELECT 6 AS nid, -0.013915041461586952 AS [Score] UNION ALL SELECT 7 AS nid, -0.053283996880054474 AS [Score] UNION ALL SELECT 8 AS nid, -0.007520557381212711 AS [Score] UNION ALL SELECT 9 AS nid, 0.15230460464954376 AS [Score] UNION ALL SELECT 10 AS nid, 0.2900988757610321 AS [Score]) AS [Values]), 
@@ -370,7 +370,7 @@ FROM [DT_node_lookup_11] LEFT OUTER JOIN [DT_node_data_11] ON [DT_node_lookup_11
 FROM [DT_Output_11]), 
 [DT_node_lookup_12] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_64 < 0.1000453308224678) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_39 < -1.0757415294647217) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_55 < 0.289284884929657) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_47 < -1.3619322776794434) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_48 < -0.4465850591659546) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_47 < -0.6618127822875977) THEN 11 ELSE 12 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_61 < 0.321694016456604) THEN 13 ELSE 14 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_12] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 7 AS nid, -0.040991269052028656 AS [Score] UNION ALL SELECT 8 AS nid, 0.17354609072208405 AS [Score] UNION ALL SELECT 9 AS nid, -0.024762148037552834 AS [Score] UNION ALL SELECT 10 AS nid, -0.054819751530885696 AS [Score] UNION ALL SELECT 11 AS nid, 0.2931760847568512 AS [Score] UNION ALL SELECT 12 AS nid, 0.06305088847875595 AS [Score] UNION ALL SELECT 13 AS nid, -0.052521612495183945 AS [Score] UNION ALL SELECT 14 AS nid, 0.03457337245345116 AS [Score]) AS [Values]), 
@@ -382,7 +382,7 @@ FROM [DT_node_lookup_12] LEFT OUTER JOIN [DT_node_data_12] ON [DT_node_lookup_12
 FROM [DT_Output_12]), 
 [DT_node_lookup_13] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -1.3915199041366577) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.7331587076187134) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_7 < 0.29603487253189087) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_20 < -1.1341235637664795) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_61 < 0.09233440458774567) THEN 9 ELSE 10 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.4255616366863251) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_13] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, 0.2794094681739807 AS [Score] UNION ALL SELECT 7 AS nid, -0.05218040570616722 AS [Score] UNION ALL SELECT 8 AS nid, 0.0021034737583249807 AS [Score] UNION ALL SELECT 9 AS nid, -0.0515911765396595 AS [Score] UNION ALL SELECT 10 AS nid, 0.1497468501329422 AS [Score] UNION ALL SELECT 11 AS nid, -0.010767647996544838 AS [Score] UNION ALL SELECT 12 AS nid, -0.05146458372473717 AS [Score]) AS [Values]), 
@@ -394,7 +394,7 @@ FROM [DT_node_lookup_13] LEFT OUTER JOIN [DT_node_data_13] ON [DT_node_lookup_13
 FROM [DT_Output_13]), 
 [DT_node_lookup_14] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_35 < 1.7521092891693115) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_60 < -0.981843113899231) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_35 < 0.3318006992340088) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_32 < 1.374642252922058) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_12 < -0.8959190249443054) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_14] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, 0.3211821913719177 AS [Score] UNION ALL SELECT 6 AS nid, 0.13735021650791168 AS [Score] UNION ALL SELECT 7 AS nid, -0.032297421246767044 AS [Score] UNION ALL SELECT 8 AS nid, 0.1728527992963791 AS [Score] UNION ALL SELECT 9 AS nid, -0.05301574617624283 AS [Score] UNION ALL SELECT 10 AS nid, -0.02386327274143696 AS [Score]) AS [Values]), 
@@ -406,7 +406,7 @@ FROM [DT_node_lookup_14] LEFT OUTER JOIN [DT_node_data_14] ON [DT_node_lookup_14
 FROM [DT_Output_14]), 
 [DT_node_lookup_15] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.0123423337936401) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 < 0.1194828450679779) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < -0.8191014528274536) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_44 < -0.8191014528274536) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_28 < 1.0233757495880127) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_12 < 0.3938197195529938) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_15] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05345836281776428 AS [Score] UNION ALL SELECT 7 AS nid, 0.047481294721364975 AS [Score] UNION ALL SELECT 8 AS nid, -0.05121250078082085 AS [Score] UNION ALL SELECT 9 AS nid, 0.3163931369781494 AS [Score] UNION ALL SELECT 10 AS nid, 0.17553815245628357 AS [Score] UNION ALL SELECT 11 AS nid, -0.05250459536910057 AS [Score] UNION ALL SELECT 12 AS nid, 0.020533094182610512 AS [Score]) AS [Values]), 
@@ -418,7 +418,7 @@ FROM [DT_node_lookup_15] LEFT OUTER JOIN [DT_node_data_15] ON [DT_node_lookup_15
 FROM [DT_Output_15]), 
 [DT_node_lookup_16] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.1726703643798828) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.4037269949913025) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_53 < 0.9502243995666504) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_56 < 0.35533374547958374) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_14 < -1.635633945465088) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_16] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.03332391753792763 AS [Score] UNION ALL SELECT 6 AS nid, -0.05370359495282173 AS [Score] UNION ALL SELECT 7 AS nid, -0.053286340087652206 AS [Score] UNION ALL SELECT 8 AS nid, -0.01391657441854477 AS [Score] UNION ALL SELECT 9 AS nid, 0.08667193353176117 AS [Score] UNION ALL SELECT 10 AS nid, 0.30246612429618835 AS [Score]) AS [Values]), 
@@ -430,7 +430,7 @@ FROM [DT_node_lookup_16] LEFT OUTER JOIN [DT_node_data_16] ON [DT_node_lookup_16
 FROM [DT_Output_16]), 
 [DT_node_lookup_17] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -0.8913522958755493) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_28 < 0.05741749331355095) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.39057642221450806) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_19 < -0.012103572487831116) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_16 < 1.2673416137695312) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -0.48229101300239563) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_17] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 6 AS nid, -0.0069360495544970036 AS [Score] UNION ALL SELECT 7 AS nid, 0.14318472146987915 AS [Score] UNION ALL SELECT 8 AS nid, 0.3244175910949707 AS [Score] UNION ALL SELECT 9 AS nid, 0.11004938185214996 AS [Score] UNION ALL SELECT 10 AS nid, -0.0441301129758358 AS [Score] UNION ALL SELECT 11 AS nid, -0.03500502184033394 AS [Score] UNION ALL SELECT 12 AS nid, -0.054883625358343124 AS [Score]) AS [Values]), 
@@ -442,7 +442,7 @@ FROM [DT_node_lookup_17] LEFT OUTER JOIN [DT_node_data_17] ON [DT_node_lookup_17
 FROM [DT_Output_17]), 
 [DT_node_lookup_18] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.6745421886444092) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.09801987558603287) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_47 < 0.5633965134620667) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_53 < 0.5678730010986328) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_29 < 0.6027529239654541) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_45 < 0.03714842349290848) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_18] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05460953712463379 AS [Score] UNION ALL SELECT 7 AS nid, -0.04310264810919762 AS [Score] UNION ALL SELECT 8 AS nid, 0.02761230431497097 AS [Score] UNION ALL SELECT 9 AS nid, 0.2473766803741455 AS [Score] UNION ALL SELECT 10 AS nid, -0.009374197572469711 AS [Score] UNION ALL SELECT 11 AS nid, -0.049176204949617386 AS [Score] UNION ALL SELECT 12 AS nid, 0.02308926358819008 AS [Score]) AS [Values]), 
@@ -454,7 +454,7 @@ FROM [DT_node_lookup_18] LEFT OUTER JOIN [DT_node_data_18] ON [DT_node_lookup_18
 FROM [DT_Output_18]), 
 [DT_node_lookup_19] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_31 < 1.0037397146224976) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < 1.23224937915802) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_54 < -1.3408229351043701) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.5790972709655762) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_35 < -0.5203844308853149) THEN 9 ELSE 10 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -1.5049443244934082) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_19] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, 0.053568821400403976 AS [Score] UNION ALL SELECT 7 AS nid, -0.016321713104844093 AS [Score] UNION ALL SELECT 8 AS nid, -0.04901460185647011 AS [Score] UNION ALL SELECT 9 AS nid, 0.27126333117485046 AS [Score] UNION ALL SELECT 10 AS nid, 0.04434709995985031 AS [Score] UNION ALL SELECT 11 AS nid, -0.02328353188931942 AS [Score] UNION ALL SELECT 12 AS nid, -0.052675116807222366 AS [Score]) AS [Values]), 
@@ -464,7 +464,7 @@ FROM [DT_node_lookup_19] LEFT OUTER JOIN [DT_node_data_19] ON [DT_node_lookup_19
 [XGB_Model_9_1] AS 
 (SELECT [DT_Output_19].[KEY] AS [KEY], 0.0 AS [Score_0], 0.0 AS [Score_1], 0.0 AS [Score_2], 0.0 AS [Score_3], 0.0 AS [Score_4], 0.0 AS [Score_5], 0.0 AS [Score_6], 0.0 AS [Score_7], 0.0 AS [Score_8], [DT_Output_19].[Score] AS [Score_9] 
 FROM [DT_Output_19])
- INSERT INTO ##TMP_20180508184319_CODEGEN_Q2BEST_XGB_B1 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B1].[KEY], [XGB_B1].[Score_0], [XGB_B1].[Score_1], [XGB_B1].[Score_2], [XGB_B1].[Score_3], [XGB_B1].[Score_4], [XGB_B1].[Score_5], [XGB_B1].[Score_6], [XGB_B1].[Score_7], [XGB_B1].[Score_8], [XGB_B1].[Score_9] 
+ INSERT INTO ##TMP_20180516120531_CODEGEN_24CZMQ_XGB_B1 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B1].[KEY], [XGB_B1].[Score_0], [XGB_B1].[Score_1], [XGB_B1].[Score_2], [XGB_B1].[Score_3], [XGB_B1].[Score_4], [XGB_B1].[Score_5], [XGB_B1].[Score_6], [XGB_B1].[Score_7], [XGB_B1].[Score_8], [XGB_B1].[Score_9] 
 FROM (SELECT [XGB_esu_1].[KEY] AS [KEY], [XGB_esu_1].[Score_0] AS [Score_0], [XGB_esu_1].[Score_1] AS [Score_1], [XGB_esu_1].[Score_2] AS [Score_2], [XGB_esu_1].[Score_3] AS [Score_3], [XGB_esu_1].[Score_4] AS [Score_4], [XGB_esu_1].[Score_5] AS [Score_5], [XGB_esu_1].[Score_6] AS [Score_6], [XGB_esu_1].[Score_7] AS [Score_7], [XGB_esu_1].[Score_8] AS [Score_8], [XGB_esu_1].[Score_9] AS [Score_9] 
 FROM (SELECT [XGB_Model_0_1].[KEY] AS [KEY], [XGB_Model_0_1].[Score_0] AS [Score_0], [XGB_Model_0_1].[Score_1] AS [Score_1], [XGB_Model_0_1].[Score_2] AS [Score_2], [XGB_Model_0_1].[Score_3] AS [Score_3], [XGB_Model_0_1].[Score_4] AS [Score_4], [XGB_Model_0_1].[Score_5] AS [Score_5], [XGB_Model_0_1].[Score_6] AS [Score_6], [XGB_Model_0_1].[Score_7] AS [Score_7], [XGB_Model_0_1].[Score_8] AS [Score_8], [XGB_Model_0_1].[Score_9] AS [Score_9] 
 FROM [XGB_Model_0_1] UNION ALL SELECT [XGB_Model_1_1].[KEY] AS [KEY], [XGB_Model_1_1].[Score_0] AS [Score_0], [XGB_Model_1_1].[Score_1] AS [Score_1], [XGB_Model_1_1].[Score_2] AS [Score_2], [XGB_Model_1_1].[Score_3] AS [Score_3], [XGB_Model_1_1].[Score_4] AS [Score_4], [XGB_Model_1_1].[Score_5] AS [Score_5], [XGB_Model_1_1].[Score_6] AS [Score_6], [XGB_Model_1_1].[Score_7] AS [Score_7], [XGB_Model_1_1].[Score_8] AS [Score_8], [XGB_Model_1_1].[Score_9] AS [Score_9] 
@@ -478,10 +478,10 @@ FROM [XGB_Model_7_1] UNION ALL SELECT [XGB_Model_8_1].[KEY] AS [KEY], [XGB_Model
 FROM [XGB_Model_8_1] UNION ALL SELECT [XGB_Model_9_1].[KEY] AS [KEY], [XGB_Model_9_1].[Score_0] AS [Score_0], [XGB_Model_9_1].[Score_1] AS [Score_1], [XGB_Model_9_1].[Score_2] AS [Score_2], [XGB_Model_9_1].[Score_3] AS [Score_3], [XGB_Model_9_1].[Score_4] AS [Score_4], [XGB_Model_9_1].[Score_5] AS [Score_5], [XGB_Model_9_1].[Score_6] AS [Score_6], [XGB_Model_9_1].[Score_7] AS [Score_7], [XGB_Model_9_1].[Score_8] AS [Score_8], [XGB_Model_9_1].[Score_9] AS [Score_9] 
 FROM [XGB_Model_9_1]) AS [XGB_esu_1]) AS [XGB_B1]
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_SZN5JN_XGB_B2 part 1. Create 
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_FD55UG_XGB_B2 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508184319_CODEGEN_SZN5JN_XGB_B2 (
+CREATE TABLE ##TMP_20180516120531_CODEGEN_FD55UG_XGB_B2 (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Score_1] FLOAT(53) NULL, 
@@ -497,11 +497,11 @@ CREATE TABLE ##TMP_20180508184319_CODEGEN_SZN5JN_XGB_B2 (
 
 
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_SZN5JN_XGB_B2 part 2. Populate
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_FD55UG_XGB_B2 part 2. Populate
 
 WITH [DT_node_lookup_20] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.6508052349090576) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_30 < -0.9030675292015076) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.7331587076187134) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.1439052820205688) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_20] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, -0.05053377151489258 AS [Score] UNION ALL SELECT 5 AS nid, -0.02379746176302433 AS [Score] UNION ALL SELECT 6 AS nid, -0.05458235740661621 AS [Score] UNION ALL SELECT 7 AS nid, 0.2382834404706955 AS [Score] UNION ALL SELECT 8 AS nid, 0.13738515973091125 AS [Score]) AS [Values]), 
@@ -513,7 +513,7 @@ FROM [DT_node_lookup_20] LEFT OUTER JOIN [DT_node_data_20] ON [DT_node_lookup_20
 FROM [DT_Output_20]), 
 [DT_node_lookup_21] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 1.441161870956421) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_12 < -1.817160964012146) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 1.0980479717254639) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.39057642221450806) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_54 < 0.7537946105003357) THEN 9 ELSE 10 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_21] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, 0.12322882562875748 AS [Score] UNION ALL SELECT 6 AS nid, -0.01956692710518837 AS [Score] UNION ALL SELECT 7 AS nid, -0.052879489958286285 AS [Score] UNION ALL SELECT 8 AS nid, -0.006891447585076094 AS [Score] UNION ALL SELECT 9 AS nid, 0.12212451547384262 AS [Score] UNION ALL SELECT 10 AS nid, 0.2390308827161789 AS [Score]) AS [Values]), 
@@ -525,7 +525,7 @@ FROM [DT_node_lookup_21] LEFT OUTER JOIN [DT_node_data_21] ON [DT_node_lookup_21
 FROM [DT_Output_21]), 
 [DT_node_lookup_22] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_64 < 0.1000453308224678) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_39 < -1.0757415294647217) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_55 < 0.289284884929657) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_47 < -1.3619322776794434) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_48 < 0.24681603908538818) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_47 < -0.13672307133674622) THEN 11 ELSE 12 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_46 < -0.8280013799667358) THEN 13 ELSE 14 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_22] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 7 AS nid, -0.040193598717451096 AS [Score] UNION ALL SELECT 8 AS nid, 0.14359734952449799 AS [Score] UNION ALL SELECT 9 AS nid, -0.023760374635457993 AS [Score] UNION ALL SELECT 10 AS nid, -0.054483670741319656 AS [Score] UNION ALL SELECT 11 AS nid, 0.2283671349287033 AS [Score] UNION ALL SELECT 12 AS nid, 0.0050452942959964275 AS [Score] UNION ALL SELECT 13 AS nid, -0.05195283517241478 AS [Score] UNION ALL SELECT 14 AS nid, -0.013755477033555508 AS [Score]) AS [Values]), 
@@ -537,7 +537,7 @@ FROM [DT_node_lookup_22] LEFT OUTER JOIN [DT_node_data_22] ON [DT_node_lookup_22
 FROM [DT_Output_22]), 
 [DT_node_lookup_23] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -1.3915199041366577) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.7331587076187134) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_11 < -0.4649772346019745) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_7 < 0.29603487253189087) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_20 < -1.1341235637664795) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.11691299825906754) THEN 11 ELSE 12 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.4255616366863251) THEN 13 ELSE 14 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_23] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 7 AS nid, 0.14876914024353027 AS [Score] UNION ALL SELECT 8 AS nid, 0.2385239154100418 AS [Score] UNION ALL SELECT 9 AS nid, -0.051788508892059326 AS [Score] UNION ALL SELECT 10 AS nid, 0.002367445034906268 AS [Score] UNION ALL SELECT 11 AS nid, 0.14999215304851532 AS [Score] UNION ALL SELECT 12 AS nid, -0.0350598581135273 AS [Score] UNION ALL SELECT 13 AS nid, -0.010331242345273495 AS [Score] UNION ALL SELECT 14 AS nid, -0.05095911771059036 AS [Score]) AS [Values]), 
@@ -549,7 +549,7 @@ FROM [DT_node_lookup_23] LEFT OUTER JOIN [DT_node_data_23] ON [DT_node_lookup_23
 FROM [DT_Output_23]), 
 [DT_node_lookup_24] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_35 < 1.7521092891693115) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_60 < -0.981843113899231) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_35 < -0.23632274568080902) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_32 < 1.374642252922058) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 0.24026328325271606) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_24] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, 0.10813464224338531 AS [Score] UNION ALL SELECT 6 AS nid, 0.24495895206928253 AS [Score] UNION ALL SELECT 7 AS nid, -0.049342233687639236 AS [Score] UNION ALL SELECT 8 AS nid, 0.12882207334041595 AS [Score] UNION ALL SELECT 9 AS nid, -0.052591390907764435 AS [Score] UNION ALL SELECT 10 AS nid, -0.022746987640857697 AS [Score]) AS [Values]), 
@@ -561,7 +561,7 @@ FROM [DT_node_lookup_24] LEFT OUTER JOIN [DT_node_data_24] ON [DT_node_lookup_24
 FROM [DT_Output_24]), 
 [DT_node_lookup_25] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.0123423337936401) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 < -0.410173237323761) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 < -0.9398293495178223) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_44 < -0.05483368784189224) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_28 < 1.0233757495880127) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_12 < 0.3938197195529938) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_25] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.053063709288835526 AS [Score] UNION ALL SELECT 7 AS nid, -0.05352247506380081 AS [Score] UNION ALL SELECT 8 AS nid, -0.008341199718415737 AS [Score] UNION ALL SELECT 9 AS nid, 0.2458045482635498 AS [Score] UNION ALL SELECT 10 AS nid, 0.03820202872157097 AS [Score] UNION ALL SELECT 11 AS nid, -0.05208899453282356 AS [Score] UNION ALL SELECT 12 AS nid, 0.01912727579474449 AS [Score]) AS [Values]), 
@@ -573,7 +573,7 @@ FROM [DT_node_lookup_25] LEFT OUTER JOIN [DT_node_data_25] ON [DT_node_lookup_25
 FROM [DT_Output_25]), 
 [DT_node_lookup_26] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.1726703643798828) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.2508734464645386) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_12 < 0.3938197195529938) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_48 < 0.47794973850250244) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_14 < -1.635633945465088) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_26] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.03254018723964691 AS [Score] UNION ALL SELECT 6 AS nid, -0.05331974849104881 AS [Score] UNION ALL SELECT 7 AS nid, -0.02283930592238903 AS [Score] UNION ALL SELECT 8 AS nid, -0.0528218112885952 AS [Score] UNION ALL SELECT 9 AS nid, 0.07792124152183533 AS [Score] UNION ALL SELECT 10 AS nid, 0.23665545880794525 AS [Score]) AS [Values]), 
@@ -585,7 +585,7 @@ FROM [DT_node_lookup_26] LEFT OUTER JOIN [DT_node_data_26] ON [DT_node_lookup_26
 FROM [DT_Output_26]), 
 [DT_node_lookup_27] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -0.8913522958755493) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_28 < 0.05741749331355095) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_38 < 0.7147276997566223) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_19 < -0.2949138879776001) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_16 < 1.2673416137695312) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -0.48229101300239563) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_27] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 6 AS nid, -0.006462218705564737 AS [Score] UNION ALL SELECT 7 AS nid, 0.10430070012807846 AS [Score] UNION ALL SELECT 8 AS nid, 0.24806153774261475 AS [Score] UNION ALL SELECT 9 AS nid, 0.12266023457050323 AS [Score] UNION ALL SELECT 10 AS nid, -0.045513566583395004 AS [Score] UNION ALL SELECT 11 AS nid, -0.034205030649900436 AS [Score] UNION ALL SELECT 12 AS nid, -0.05454021319746971 AS [Score]) AS [Values]), 
@@ -597,7 +597,7 @@ FROM [DT_node_lookup_27] LEFT OUTER JOIN [DT_node_data_27] ON [DT_node_lookup_27
 FROM [DT_Output_27]), 
 [DT_node_lookup_28] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.6745421886444092) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -0.5313583612442017) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_54 < -0.38872402906417847) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.09801987558603287) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_29 < 0.6027529239654541) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_40 < 0.1773550808429718) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_28] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05423889309167862 AS [Score] UNION ALL SELECT 7 AS nid, -0.018585849553346634 AS [Score] UNION ALL SELECT 8 AS nid, -0.05134585127234459 AS [Score] UNION ALL SELECT 9 AS nid, -0.0025886946823447943 AS [Score] UNION ALL SELECT 10 AS nid, 0.17803367972373962 AS [Score] UNION ALL SELECT 11 AS nid, 0.016280556097626686 AS [Score] UNION ALL SELECT 12 AS nid, -0.0526711642742157 AS [Score]) AS [Values]), 
@@ -609,7 +609,7 @@ FROM [DT_node_lookup_28] LEFT OUTER JOIN [DT_node_data_28] ON [DT_node_lookup_28
 FROM [DT_Output_28]), 
 [DT_node_lookup_29] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -1.0412814617156982) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_31 < 0.6637777090072632) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_54 < -0.9599833488464355) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_35 < -0.5203844308853149) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.5790972709655762) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_31 < 0.6637777090072632) THEN 11 ELSE 12 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -2.1185364723205566) THEN 13 ELSE 14 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_29] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 7 AS nid, 0.03242747485637665 AS [Score] UNION ALL SELECT 8 AS nid, -0.03840891644358635 AS [Score] UNION ALL SELECT 9 AS nid, 0.2103656530380249 AS [Score] UNION ALL SELECT 10 AS nid, 0.03716650977730751 AS [Score] UNION ALL SELECT 11 AS nid, -0.039887432008981705 AS [Score] UNION ALL SELECT 12 AS nid, 0.061097681522369385 AS [Score] UNION ALL SELECT 13 AS nid, -0.023756293579936028 AS [Score] UNION ALL SELECT 14 AS nid, -0.05298374965786934 AS [Score]) AS [Values]), 
@@ -619,7 +619,7 @@ FROM [DT_node_lookup_29] LEFT OUTER JOIN [DT_node_data_29] ON [DT_node_lookup_29
 [XGB_Model_9_2] AS 
 (SELECT [DT_Output_29].[KEY] AS [KEY], 0.0 AS [Score_0], 0.0 AS [Score_1], 0.0 AS [Score_2], 0.0 AS [Score_3], 0.0 AS [Score_4], 0.0 AS [Score_5], 0.0 AS [Score_6], 0.0 AS [Score_7], 0.0 AS [Score_8], [DT_Output_29].[Score] AS [Score_9] 
 FROM [DT_Output_29])
- INSERT INTO ##TMP_20180508184319_CODEGEN_SZN5JN_XGB_B2 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B2].[KEY], [XGB_B2].[Score_0], [XGB_B2].[Score_1], [XGB_B2].[Score_2], [XGB_B2].[Score_3], [XGB_B2].[Score_4], [XGB_B2].[Score_5], [XGB_B2].[Score_6], [XGB_B2].[Score_7], [XGB_B2].[Score_8], [XGB_B2].[Score_9] 
+ INSERT INTO ##TMP_20180516120531_CODEGEN_FD55UG_XGB_B2 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B2].[KEY], [XGB_B2].[Score_0], [XGB_B2].[Score_1], [XGB_B2].[Score_2], [XGB_B2].[Score_3], [XGB_B2].[Score_4], [XGB_B2].[Score_5], [XGB_B2].[Score_6], [XGB_B2].[Score_7], [XGB_B2].[Score_8], [XGB_B2].[Score_9] 
 FROM (SELECT [XGB_esu_2].[KEY] AS [KEY], [XGB_esu_2].[Score_0] AS [Score_0], [XGB_esu_2].[Score_1] AS [Score_1], [XGB_esu_2].[Score_2] AS [Score_2], [XGB_esu_2].[Score_3] AS [Score_3], [XGB_esu_2].[Score_4] AS [Score_4], [XGB_esu_2].[Score_5] AS [Score_5], [XGB_esu_2].[Score_6] AS [Score_6], [XGB_esu_2].[Score_7] AS [Score_7], [XGB_esu_2].[Score_8] AS [Score_8], [XGB_esu_2].[Score_9] AS [Score_9] 
 FROM (SELECT [XGB_Model_0_2].[KEY] AS [KEY], [XGB_Model_0_2].[Score_0] AS [Score_0], [XGB_Model_0_2].[Score_1] AS [Score_1], [XGB_Model_0_2].[Score_2] AS [Score_2], [XGB_Model_0_2].[Score_3] AS [Score_3], [XGB_Model_0_2].[Score_4] AS [Score_4], [XGB_Model_0_2].[Score_5] AS [Score_5], [XGB_Model_0_2].[Score_6] AS [Score_6], [XGB_Model_0_2].[Score_7] AS [Score_7], [XGB_Model_0_2].[Score_8] AS [Score_8], [XGB_Model_0_2].[Score_9] AS [Score_9] 
 FROM [XGB_Model_0_2] UNION ALL SELECT [XGB_Model_1_2].[KEY] AS [KEY], [XGB_Model_1_2].[Score_0] AS [Score_0], [XGB_Model_1_2].[Score_1] AS [Score_1], [XGB_Model_1_2].[Score_2] AS [Score_2], [XGB_Model_1_2].[Score_3] AS [Score_3], [XGB_Model_1_2].[Score_4] AS [Score_4], [XGB_Model_1_2].[Score_5] AS [Score_5], [XGB_Model_1_2].[Score_6] AS [Score_6], [XGB_Model_1_2].[Score_7] AS [Score_7], [XGB_Model_1_2].[Score_8] AS [Score_8], [XGB_Model_1_2].[Score_9] AS [Score_9] 
@@ -633,10 +633,10 @@ FROM [XGB_Model_7_2] UNION ALL SELECT [XGB_Model_8_2].[KEY] AS [KEY], [XGB_Model
 FROM [XGB_Model_8_2] UNION ALL SELECT [XGB_Model_9_2].[KEY] AS [KEY], [XGB_Model_9_2].[Score_0] AS [Score_0], [XGB_Model_9_2].[Score_1] AS [Score_1], [XGB_Model_9_2].[Score_2] AS [Score_2], [XGB_Model_9_2].[Score_3] AS [Score_3], [XGB_Model_9_2].[Score_4] AS [Score_4], [XGB_Model_9_2].[Score_5] AS [Score_5], [XGB_Model_9_2].[Score_6] AS [Score_6], [XGB_Model_9_2].[Score_7] AS [Score_7], [XGB_Model_9_2].[Score_8] AS [Score_8], [XGB_Model_9_2].[Score_9] AS [Score_9] 
 FROM [XGB_Model_9_2]) AS [XGB_esu_2]) AS [XGB_B2]
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_T5LTIC_XGB_B3 part 1. Create 
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_CK8F9D_XGB_B3 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508184319_CODEGEN_T5LTIC_XGB_B3 (
+CREATE TABLE ##TMP_20180516120531_CODEGEN_CK8F9D_XGB_B3 (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Score_1] FLOAT(53) NULL, 
@@ -652,11 +652,11 @@ CREATE TABLE ##TMP_20180508184319_CODEGEN_T5LTIC_XGB_B3 (
 
 
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_T5LTIC_XGB_B3 part 2. Populate
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_CK8F9D_XGB_B3 part 2. Populate
 
 WITH [DT_node_lookup_30] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.6508052349090576) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_35 < -0.5203844308853149) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_23 < 0.10995353013277054) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.1439052820205688) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_30] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.04416768252849579 AS [Score] UNION ALL SELECT 5 AS nid, -0.02298910729587078 AS [Score] UNION ALL SELECT 6 AS nid, -0.05426811799407005 AS [Score] UNION ALL SELECT 7 AS nid, 0.08690767735242844 AS [Score] UNION ALL SELECT 8 AS nid, 0.2009095698595047 AS [Score]) AS [Values]), 
@@ -668,7 +668,7 @@ FROM [DT_node_lookup_30] LEFT OUTER JOIN [DT_node_data_30] ON [DT_node_lookup_30
 FROM [DT_Output_30]), 
 [DT_node_lookup_31] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_22 < 1.357374906539917) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 1.441161870956421) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_12 < -1.0801674127578735) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_39 < -1.0757415294647217) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_12 < 0.5780681371688843) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_4 < -0.1281951665878296) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_31] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 6 AS nid, -0.04568067565560341 AS [Score] UNION ALL SELECT 7 AS nid, -0.025645246729254723 AS [Score] UNION ALL SELECT 8 AS nid, -0.05359559878706932 AS [Score] UNION ALL SELECT 9 AS nid, 0.16347520053386688 AS [Score] UNION ALL SELECT 10 AS nid, -0.017452631145715714 AS [Score] UNION ALL SELECT 11 AS nid, 0.21143761277198792 AS [Score] UNION ALL SELECT 12 AS nid, 0.09096337854862213 AS [Score]) AS [Values]), 
@@ -680,7 +680,7 @@ FROM [DT_node_lookup_31] LEFT OUTER JOIN [DT_node_data_31] ON [DT_node_lookup_31
 FROM [DT_Output_31]), 
 [DT_node_lookup_32] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_64 < 0.1000453308224678) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_39 < -1.2463171482086182) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_55 < 0.289284884929657) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_53 < 1.1414000988006592) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_48 < 0.24681603908538818) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 0.9264910221099854) THEN 11 ELSE 12 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_53 < 0.376697301864624) THEN 13 ELSE 14 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_32] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 7 AS nid, -0.04162544012069702 AS [Score] UNION ALL SELECT 8 AS nid, 0.15157228708267212 AS [Score] UNION ALL SELECT 9 AS nid, -0.05424482375383377 AS [Score] UNION ALL SELECT 10 AS nid, -0.02244284562766552 AS [Score] UNION ALL SELECT 11 AS nid, 0.18625134229660034 AS [Score] UNION ALL SELECT 12 AS nid, 0.00253272638656199 AS [Score] UNION ALL SELECT 13 AS nid, -0.05151901766657829 AS [Score] UNION ALL SELECT 14 AS nid, -0.013521708548069 AS [Score]) AS [Values]), 
@@ -692,7 +692,7 @@ FROM [DT_node_lookup_32] LEFT OUTER JOIN [DT_node_data_32] ON [DT_node_lookup_32
 FROM [DT_Output_32]), 
 [DT_node_lookup_33] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.5865546464920044) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.7331587076187134) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_32 < -0.4892825782299042) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_53 < -0.19682982563972473) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_56 < 0.35533374547958374) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_22 < 0.059551309794187546) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_33] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.053257524967193604 AS [Score] UNION ALL SELECT 7 AS nid, 0.19949455559253693 AS [Score] UNION ALL SELECT 8 AS nid, 0.014892578125 AS [Score] UNION ALL SELECT 9 AS nid, 0.03013257496058941 AS [Score] UNION ALL SELECT 10 AS nid, -0.04693377763032913 AS [Score] UNION ALL SELECT 11 AS nid, -0.04958438500761986 AS [Score] UNION ALL SELECT 12 AS nid, 0.03255090117454529 AS [Score]) AS [Values]), 
@@ -704,7 +704,7 @@ FROM [DT_node_lookup_33] LEFT OUTER JOIN [DT_node_data_33] ON [DT_node_lookup_33
 FROM [DT_Output_33]), 
 [DT_node_lookup_34] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_35 < 1.7521092891693115) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_32 < 1.640917181968689) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_5 < -1.4829990863800049) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_60 < -0.981843113899231) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_34] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, 0.11029904335737228 AS [Score] UNION ALL SELECT 5 AS nid, 0.2094239443540573 AS [Score] UNION ALL SELECT 6 AS nid, 0.052643097937107086 AS [Score] UNION ALL SELECT 7 AS nid, 0.0500672422349453 AS [Score] UNION ALL SELECT 8 AS nid, -0.047065116465091705 AS [Score]) AS [Values]), 
@@ -716,7 +716,7 @@ FROM [DT_node_lookup_34] LEFT OUTER JOIN [DT_node_data_34] ON [DT_node_lookup_34
 FROM [DT_Output_34]), 
 [DT_node_lookup_35] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.0123423337936401) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 < -0.410173237323761) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 < -0.9398293495178223) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_12 < 0.20957133173942566) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_28 < 1.0233757495880127) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_4 < -0.5524126887321472) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_35] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05268268659710884 AS [Score] UNION ALL SELECT 7 AS nid, -0.053112614899873734 AS [Score] UNION ALL SELECT 8 AS nid, -0.007393037434667349 AS [Score] UNION ALL SELECT 9 AS nid, 0.033163540065288544 AS [Score] UNION ALL SELECT 10 AS nid, 0.1983344554901123 AS [Score] UNION ALL SELECT 11 AS nid, -0.051847584545612335 AS [Score] UNION ALL SELECT 12 AS nid, 0.018456842750310898 AS [Score]) AS [Values]), 
@@ -728,7 +728,7 @@ FROM [DT_node_lookup_35] LEFT OUTER JOIN [DT_node_data_35] ON [DT_node_lookup_35
 FROM [DT_Output_35]), 
 [DT_node_lookup_36] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.1726703643798828) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.09801987558603287) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_56 < -0.25025779008865356) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_6 < -1.4768257141113281) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_36] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.04991184175014496 AS [Score] UNION ALL SELECT 5 AS nid, -0.03408415988087654 AS [Score] UNION ALL SELECT 6 AS nid, -0.05295097827911377 AS [Score] UNION ALL SELECT 7 AS nid, 0.0008557417313568294 AS [Score] UNION ALL SELECT 8 AS nid, 0.19244083762168884 AS [Score]) AS [Values]), 
@@ -740,7 +740,7 @@ FROM [DT_node_lookup_36] LEFT OUTER JOIN [DT_node_data_36] ON [DT_node_lookup_36
 FROM [DT_Output_36]), 
 [DT_node_lookup_37] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -0.8913522958755493) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_28 < 0.37940356135368347) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_38 < 0.37679439783096313) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_31 < 0.4937966465950012) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_16 < 1.2673416137695312) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -0.48229101300239563) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_37] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 6 AS nid, -0.005937022622674704 AS [Score] UNION ALL SELECT 7 AS nid, 0.036511342972517014 AS [Score] UNION ALL SELECT 8 AS nid, 0.19687147438526154 AS [Score] UNION ALL SELECT 9 AS nid, -0.042526718229055405 AS [Score] UNION ALL SELECT 10 AS nid, 0.06975218653678894 AS [Score] UNION ALL SELECT 11 AS nid, -0.0333261638879776 AS [Score] UNION ALL SELECT 12 AS nid, -0.05422106385231018 AS [Score]) AS [Values]), 
@@ -752,7 +752,7 @@ FROM [DT_node_lookup_37] LEFT OUTER JOIN [DT_node_data_37] ON [DT_node_lookup_37
 FROM [DT_Output_37]), 
 [DT_node_lookup_38] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.6745421886444092) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -0.5313583612442017) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_54 < -0.38872402906417847) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_37 < -0.08449207991361618) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_29 < 0.6027529239654541) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_45 < 0.03714842349290848) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_38] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05389195680618286 AS [Score] UNION ALL SELECT 7 AS nid, -0.017528457567095757 AS [Score] UNION ALL SELECT 8 AS nid, -0.050826944410800934 AS [Score] UNION ALL SELECT 9 AS nid, -0.048972126096487045 AS [Score] UNION ALL SELECT 10 AS nid, 0.1249564066529274 AS [Score] UNION ALL SELECT 11 AS nid, -0.048408474773168564 AS [Score] UNION ALL SELECT 12 AS nid, 0.022975612431764603 AS [Score]) AS [Values]), 
@@ -764,7 +764,7 @@ FROM [DT_node_lookup_38] LEFT OUTER JOIN [DT_node_data_38] ON [DT_node_lookup_38
 FROM [DT_Output_38]), 
 [DT_node_lookup_39] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -1.0412814617156982) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_31 < 0.6637777090072632) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_54 < -0.9599833488464355) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_29 < -0.24867334961891174) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.5790972709655762) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_30 < 0.07553465664386749) THEN 11 ELSE 12 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -2.1185364723205566) THEN 13 ELSE 14 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_39] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 7 AS nid, 0.02994956448674202 AS [Score] UNION ALL SELECT 8 AS nid, -0.03743002563714981 AS [Score] UNION ALL SELECT 9 AS nid, 0.014289197511970997 AS [Score] UNION ALL SELECT 10 AS nid, 0.17261843383312225 AS [Score] UNION ALL SELECT 11 AS nid, -0.044651687145233154 AS [Score] UNION ALL SELECT 12 AS nid, 0.04985909163951874 AS [Score] UNION ALL SELECT 13 AS nid, -0.022744543850421906 AS [Score] UNION ALL SELECT 14 AS nid, -0.0525805838406086 AS [Score]) AS [Values]), 
@@ -774,7 +774,7 @@ FROM [DT_node_lookup_39] LEFT OUTER JOIN [DT_node_data_39] ON [DT_node_lookup_39
 [XGB_Model_9_3] AS 
 (SELECT [DT_Output_39].[KEY] AS [KEY], 0.0 AS [Score_0], 0.0 AS [Score_1], 0.0 AS [Score_2], 0.0 AS [Score_3], 0.0 AS [Score_4], 0.0 AS [Score_5], 0.0 AS [Score_6], 0.0 AS [Score_7], 0.0 AS [Score_8], [DT_Output_39].[Score] AS [Score_9] 
 FROM [DT_Output_39])
- INSERT INTO ##TMP_20180508184319_CODEGEN_T5LTIC_XGB_B3 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B3].[KEY], [XGB_B3].[Score_0], [XGB_B3].[Score_1], [XGB_B3].[Score_2], [XGB_B3].[Score_3], [XGB_B3].[Score_4], [XGB_B3].[Score_5], [XGB_B3].[Score_6], [XGB_B3].[Score_7], [XGB_B3].[Score_8], [XGB_B3].[Score_9] 
+ INSERT INTO ##TMP_20180516120531_CODEGEN_CK8F9D_XGB_B3 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B3].[KEY], [XGB_B3].[Score_0], [XGB_B3].[Score_1], [XGB_B3].[Score_2], [XGB_B3].[Score_3], [XGB_B3].[Score_4], [XGB_B3].[Score_5], [XGB_B3].[Score_6], [XGB_B3].[Score_7], [XGB_B3].[Score_8], [XGB_B3].[Score_9] 
 FROM (SELECT [XGB_esu_3].[KEY] AS [KEY], [XGB_esu_3].[Score_0] AS [Score_0], [XGB_esu_3].[Score_1] AS [Score_1], [XGB_esu_3].[Score_2] AS [Score_2], [XGB_esu_3].[Score_3] AS [Score_3], [XGB_esu_3].[Score_4] AS [Score_4], [XGB_esu_3].[Score_5] AS [Score_5], [XGB_esu_3].[Score_6] AS [Score_6], [XGB_esu_3].[Score_7] AS [Score_7], [XGB_esu_3].[Score_8] AS [Score_8], [XGB_esu_3].[Score_9] AS [Score_9] 
 FROM (SELECT [XGB_Model_0_3].[KEY] AS [KEY], [XGB_Model_0_3].[Score_0] AS [Score_0], [XGB_Model_0_3].[Score_1] AS [Score_1], [XGB_Model_0_3].[Score_2] AS [Score_2], [XGB_Model_0_3].[Score_3] AS [Score_3], [XGB_Model_0_3].[Score_4] AS [Score_4], [XGB_Model_0_3].[Score_5] AS [Score_5], [XGB_Model_0_3].[Score_6] AS [Score_6], [XGB_Model_0_3].[Score_7] AS [Score_7], [XGB_Model_0_3].[Score_8] AS [Score_8], [XGB_Model_0_3].[Score_9] AS [Score_9] 
 FROM [XGB_Model_0_3] UNION ALL SELECT [XGB_Model_1_3].[KEY] AS [KEY], [XGB_Model_1_3].[Score_0] AS [Score_0], [XGB_Model_1_3].[Score_1] AS [Score_1], [XGB_Model_1_3].[Score_2] AS [Score_2], [XGB_Model_1_3].[Score_3] AS [Score_3], [XGB_Model_1_3].[Score_4] AS [Score_4], [XGB_Model_1_3].[Score_5] AS [Score_5], [XGB_Model_1_3].[Score_6] AS [Score_6], [XGB_Model_1_3].[Score_7] AS [Score_7], [XGB_Model_1_3].[Score_8] AS [Score_8], [XGB_Model_1_3].[Score_9] AS [Score_9] 
@@ -788,10 +788,10 @@ FROM [XGB_Model_7_3] UNION ALL SELECT [XGB_Model_8_3].[KEY] AS [KEY], [XGB_Model
 FROM [XGB_Model_8_3] UNION ALL SELECT [XGB_Model_9_3].[KEY] AS [KEY], [XGB_Model_9_3].[Score_0] AS [Score_0], [XGB_Model_9_3].[Score_1] AS [Score_1], [XGB_Model_9_3].[Score_2] AS [Score_2], [XGB_Model_9_3].[Score_3] AS [Score_3], [XGB_Model_9_3].[Score_4] AS [Score_4], [XGB_Model_9_3].[Score_5] AS [Score_5], [XGB_Model_9_3].[Score_6] AS [Score_6], [XGB_Model_9_3].[Score_7] AS [Score_7], [XGB_Model_9_3].[Score_8] AS [Score_8], [XGB_Model_9_3].[Score_9] AS [Score_9] 
 FROM [XGB_Model_9_3]) AS [XGB_esu_3]) AS [XGB_B3]
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_VL3JCX_XGB_B4 part 1. Create 
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_DVO6PQ_XGB_B4 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508184319_CODEGEN_VL3JCX_XGB_B4 (
+CREATE TABLE ##TMP_20180516120531_CODEGEN_DVO6PQ_XGB_B4 (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Score_1] FLOAT(53) NULL, 
@@ -807,11 +807,11 @@ CREATE TABLE ##TMP_20180508184319_CODEGEN_VL3JCX_XGB_B4 (
 
 
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_VL3JCX_XGB_B4 part 2. Populate
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_DVO6PQ_XGB_B4 part 2. Populate
 
 WITH [DT_node_lookup_40] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.6508052349090576) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_30 < -0.9030675292015076) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < 0.10995353013277054) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.1439052820205688) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_40] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, -0.04996355623006821 AS [Score] UNION ALL SELECT 5 AS nid, -0.02201833762228489 AS [Score] UNION ALL SELECT 6 AS nid, -0.05396927148103714 AS [Score] UNION ALL SELECT 7 AS nid, 0.08234163373708725 AS [Score] UNION ALL SELECT 8 AS nid, 0.16535356640815735 AS [Score]) AS [Values]), 
@@ -823,7 +823,7 @@ FROM [DT_node_lookup_40] LEFT OUTER JOIN [DT_node_data_40] ON [DT_node_lookup_40
 FROM [DT_Output_40]), 
 [DT_node_lookup_41] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 0.7549340724945068) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_12 < -1.2644157409667969) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_22 < 0.8706910014152527) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_6 < -1.4768257141113281) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_4 < 0.08391359448432922) THEN 9 ELSE 10 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_41] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, 0.017274487763643265 AS [Score] UNION ALL SELECT 4 AS nid, -0.053276427090168 AS [Score] UNION ALL SELECT 7 AS nid, 0.12498282641172409 AS [Score] UNION ALL SELECT 8 AS nid, -0.045910194516181946 AS [Score] UNION ALL SELECT 9 AS nid, 0.16764090955257416 AS [Score] UNION ALL SELECT 10 AS nid, 0.03537411242723465 AS [Score]) AS [Values]), 
@@ -835,7 +835,7 @@ FROM [DT_node_lookup_41] LEFT OUTER JOIN [DT_node_data_41] ON [DT_node_lookup_41
 FROM [DT_Output_41]), 
 [DT_node_lookup_42] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.4255616366863251) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.6745421886444092) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_56 < -0.4521216154098511) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_30 < 0.23863500356674194) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_64 < 1.7956745624542236) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_64 < 0.3422780930995941) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_42] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 6 AS nid, 0.026996908709406853 AS [Score] UNION ALL SELECT 7 AS nid, 0.0005397101631388068 AS [Score] UNION ALL SELECT 8 AS nid, 0.16153781116008759 AS [Score] UNION ALL SELECT 9 AS nid, -0.014293322339653969 AS [Score] UNION ALL SELECT 10 AS nid, -0.05234968289732933 AS [Score] UNION ALL SELECT 11 AS nid, -0.05415792390704155 AS [Score] UNION ALL SELECT 12 AS nid, -0.03505907580256462 AS [Score]) AS [Values]), 
@@ -847,7 +847,7 @@ FROM [DT_node_lookup_42] LEFT OUTER JOIN [DT_node_data_42] ON [DT_node_lookup_42
 FROM [DT_Output_42]), 
 [DT_node_lookup_43] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.5865546464920044) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.7331587076187134) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_32 < -0.4892825782299042) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_53 < -0.19682982563972473) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_56 < 0.35533374547958374) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_22 < 0.059551309794187546) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_43] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.052904803305864334 AS [Score] UNION ALL SELECT 7 AS nid, 0.16584116220474243 AS [Score] UNION ALL SELECT 8 AS nid, 0.01369822770357132 AS [Score] UNION ALL SELECT 9 AS nid, 0.028332171961665154 AS [Score] UNION ALL SELECT 10 AS nid, -0.04624162241816521 AS [Score] UNION ALL SELECT 11 AS nid, -0.04900453984737396 AS [Score] UNION ALL SELECT 12 AS nid, 0.030152643099427223 AS [Score]) AS [Values]), 
@@ -859,7 +859,7 @@ FROM [DT_node_lookup_43] LEFT OUTER JOIN [DT_node_data_43] ON [DT_node_lookup_43
 FROM [DT_Output_43]), 
 [DT_node_lookup_44] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_35 < 0.6158624291419983) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_36 < 0.9295716285705566) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_14 < -1.2146971225738525) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_60 < -0.981843113899231) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_46 < 0.4432779550552368) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_15 < -0.43294137716293335) THEN 11 ELSE 12 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_7 < -0.23362120985984802) THEN 13 ELSE 14 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_44] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 7 AS nid, -0.02599930576980114 AS [Score] UNION ALL SELECT 8 AS nid, -0.05336958169937134 AS [Score] UNION ALL SELECT 9 AS nid, 0.05828946456313133 AS [Score] UNION ALL SELECT 10 AS nid, -0.041196033358573914 AS [Score] UNION ALL SELECT 11 AS nid, -0.0011008448200300336 AS [Score] UNION ALL SELECT 12 AS nid, -0.052847594022750854 AS [Score] UNION ALL SELECT 13 AS nid, 0.19583715498447418 AS [Score] UNION ALL SELECT 14 AS nid, 0.07650043070316315 AS [Score]) AS [Values]), 
@@ -871,7 +871,7 @@ FROM [DT_node_lookup_44] LEFT OUTER JOIN [DT_node_data_44] ON [DT_node_lookup_44
 FROM [DT_Output_44]), 
 [DT_node_lookup_45] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.0123423337936401) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 < -0.410173237323761) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < -0.8191014528274536) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.09801987558603287) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -0.6916863918304443) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_8 < -0.265668123960495) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_45] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.012345640920102596 AS [Score] UNION ALL SELECT 7 AS nid, -0.005378255620598793 AS [Score] UNION ALL SELECT 8 AS nid, -0.05252743512392044 AS [Score] UNION ALL SELECT 9 AS nid, 0.16743043065071106 AS [Score] UNION ALL SELECT 10 AS nid, 0.018738731741905212 AS [Score] UNION ALL SELECT 11 AS nid, -0.05392295867204666 AS [Score] UNION ALL SELECT 12 AS nid, -0.03953910991549492 AS [Score]) AS [Values]), 
@@ -883,7 +883,7 @@ FROM [DT_node_lookup_45] LEFT OUTER JOIN [DT_node_data_45] ON [DT_node_lookup_45
 FROM [DT_Output_45]), 
 [DT_node_lookup_46] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.1726703643798828) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.09801987558603287) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_56 < -0.25025779008865356) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_6 < -1.4768257141113281) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_46] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.0494103841483593 AS [Score] UNION ALL SELECT 5 AS nid, -0.0332903191447258 AS [Score] UNION ALL SELECT 6 AS nid, -0.05258147791028023 AS [Score] UNION ALL SELECT 7 AS nid, 0.0012844575103372335 AS [Score] UNION ALL SELECT 8 AS nid, 0.16208775341510773 AS [Score]) AS [Values]), 
@@ -895,7 +895,7 @@ FROM [DT_node_lookup_46] LEFT OUTER JOIN [DT_node_data_46] ON [DT_node_lookup_46
 FROM [DT_Output_46]), 
 [DT_node_lookup_47] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_55 < -1.3678903579711914) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_39 < -1.4168925285339355) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_28 < 0.5403965711593628) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_16 < 2.0924582481384277) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_63 < -1.058613896369934) THEN 9 ELSE 10 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_47] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.02786155417561531 AS [Score] UNION ALL SELECT 6 AS nid, 0.01116995606571436 AS [Score] UNION ALL SELECT 7 AS nid, 0.17684023082256317 AS [Score] UNION ALL SELECT 8 AS nid, 0.014624306932091713 AS [Score] UNION ALL SELECT 9 AS nid, -0.0320485383272171 AS [Score] UNION ALL SELECT 10 AS nid, -0.05404367670416832 AS [Score]) AS [Values]), 
@@ -907,7 +907,7 @@ FROM [DT_node_lookup_47] LEFT OUTER JOIN [DT_node_data_47] ON [DT_node_lookup_47
 FROM [DT_Output_47]), 
 [DT_node_lookup_48] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.6745421886444092) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < -0.5133943557739258) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_47 < 0.5633965134620667) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_53 < 0.7590487003326416) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_29 < 0.6027529239654541) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_40 < 0.1773550808429718) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_48] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.053572531789541245 AS [Score] UNION ALL SELECT 7 AS nid, -0.05131329968571663 AS [Score] UNION ALL SELECT 8 AS nid, 0.008672515861690044 AS [Score] UNION ALL SELECT 9 AS nid, 0.1353280395269394 AS [Score] UNION ALL SELECT 10 AS nid, -0.02786143682897091 AS [Score] UNION ALL SELECT 11 AS nid, 0.016178464516997337 AS [Score] UNION ALL SELECT 12 AS nid, -0.05201391503214836 AS [Score]) AS [Values]), 
@@ -919,7 +919,7 @@ FROM [DT_node_lookup_48] LEFT OUTER JOIN [DT_node_data_48] ON [DT_node_lookup_48
 FROM [DT_Output_48]), 
 [DT_node_lookup_49] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -1.0412814617156982) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < 0.43060946464538574) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_63 < 0.6442216634750366) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_29 < -0.4189586043357849) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.5790972709655762) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_31 < 0.8337587118148804) THEN 11 ELSE 12 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -2.1185364723205566) THEN 13 ELSE 14 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_49] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 7 AS nid, -0.05375627800822258 AS [Score] UNION ALL SELECT 8 AS nid, 0.013976320624351501 AS [Score] UNION ALL SELECT 9 AS nid, -0.013326235115528107 AS [Score] UNION ALL SELECT 10 AS nid, 0.16691243648529053 AS [Score] UNION ALL SELECT 11 AS nid, -0.039843931794166565 AS [Score] UNION ALL SELECT 12 AS nid, 0.06539084762334824 AS [Score] UNION ALL SELECT 13 AS nid, -0.02146504446864128 AS [Score] UNION ALL SELECT 14 AS nid, -0.05218951776623726 AS [Score]) AS [Values]), 
@@ -929,7 +929,7 @@ FROM [DT_node_lookup_49] LEFT OUTER JOIN [DT_node_data_49] ON [DT_node_lookup_49
 [XGB_Model_9_4] AS 
 (SELECT [DT_Output_49].[KEY] AS [KEY], 0.0 AS [Score_0], 0.0 AS [Score_1], 0.0 AS [Score_2], 0.0 AS [Score_3], 0.0 AS [Score_4], 0.0 AS [Score_5], 0.0 AS [Score_6], 0.0 AS [Score_7], 0.0 AS [Score_8], [DT_Output_49].[Score] AS [Score_9] 
 FROM [DT_Output_49])
- INSERT INTO ##TMP_20180508184319_CODEGEN_VL3JCX_XGB_B4 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B4].[KEY], [XGB_B4].[Score_0], [XGB_B4].[Score_1], [XGB_B4].[Score_2], [XGB_B4].[Score_3], [XGB_B4].[Score_4], [XGB_B4].[Score_5], [XGB_B4].[Score_6], [XGB_B4].[Score_7], [XGB_B4].[Score_8], [XGB_B4].[Score_9] 
+ INSERT INTO ##TMP_20180516120531_CODEGEN_DVO6PQ_XGB_B4 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B4].[KEY], [XGB_B4].[Score_0], [XGB_B4].[Score_1], [XGB_B4].[Score_2], [XGB_B4].[Score_3], [XGB_B4].[Score_4], [XGB_B4].[Score_5], [XGB_B4].[Score_6], [XGB_B4].[Score_7], [XGB_B4].[Score_8], [XGB_B4].[Score_9] 
 FROM (SELECT [XGB_esu_4].[KEY] AS [KEY], [XGB_esu_4].[Score_0] AS [Score_0], [XGB_esu_4].[Score_1] AS [Score_1], [XGB_esu_4].[Score_2] AS [Score_2], [XGB_esu_4].[Score_3] AS [Score_3], [XGB_esu_4].[Score_4] AS [Score_4], [XGB_esu_4].[Score_5] AS [Score_5], [XGB_esu_4].[Score_6] AS [Score_6], [XGB_esu_4].[Score_7] AS [Score_7], [XGB_esu_4].[Score_8] AS [Score_8], [XGB_esu_4].[Score_9] AS [Score_9] 
 FROM (SELECT [XGB_Model_0_4].[KEY] AS [KEY], [XGB_Model_0_4].[Score_0] AS [Score_0], [XGB_Model_0_4].[Score_1] AS [Score_1], [XGB_Model_0_4].[Score_2] AS [Score_2], [XGB_Model_0_4].[Score_3] AS [Score_3], [XGB_Model_0_4].[Score_4] AS [Score_4], [XGB_Model_0_4].[Score_5] AS [Score_5], [XGB_Model_0_4].[Score_6] AS [Score_6], [XGB_Model_0_4].[Score_7] AS [Score_7], [XGB_Model_0_4].[Score_8] AS [Score_8], [XGB_Model_0_4].[Score_9] AS [Score_9] 
 FROM [XGB_Model_0_4] UNION ALL SELECT [XGB_Model_1_4].[KEY] AS [KEY], [XGB_Model_1_4].[Score_0] AS [Score_0], [XGB_Model_1_4].[Score_1] AS [Score_1], [XGB_Model_1_4].[Score_2] AS [Score_2], [XGB_Model_1_4].[Score_3] AS [Score_3], [XGB_Model_1_4].[Score_4] AS [Score_4], [XGB_Model_1_4].[Score_5] AS [Score_5], [XGB_Model_1_4].[Score_6] AS [Score_6], [XGB_Model_1_4].[Score_7] AS [Score_7], [XGB_Model_1_4].[Score_8] AS [Score_8], [XGB_Model_1_4].[Score_9] AS [Score_9] 
@@ -943,10 +943,10 @@ FROM [XGB_Model_7_4] UNION ALL SELECT [XGB_Model_8_4].[KEY] AS [KEY], [XGB_Model
 FROM [XGB_Model_8_4] UNION ALL SELECT [XGB_Model_9_4].[KEY] AS [KEY], [XGB_Model_9_4].[Score_0] AS [Score_0], [XGB_Model_9_4].[Score_1] AS [Score_1], [XGB_Model_9_4].[Score_2] AS [Score_2], [XGB_Model_9_4].[Score_3] AS [Score_3], [XGB_Model_9_4].[Score_4] AS [Score_4], [XGB_Model_9_4].[Score_5] AS [Score_5], [XGB_Model_9_4].[Score_6] AS [Score_6], [XGB_Model_9_4].[Score_7] AS [Score_7], [XGB_Model_9_4].[Score_8] AS [Score_8], [XGB_Model_9_4].[Score_9] AS [Score_9] 
 FROM [XGB_Model_9_4]) AS [XGB_esu_4]) AS [XGB_B4]
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_EQLDKS_XGB_B5 part 1. Create 
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_AE2LSP_XGB_B5 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508184319_CODEGEN_EQLDKS_XGB_B5 (
+CREATE TABLE ##TMP_20180516120531_CODEGEN_AE2LSP_XGB_B5 (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Score_1] FLOAT(53) NULL, 
@@ -962,11 +962,11 @@ CREATE TABLE ##TMP_20180508184319_CODEGEN_EQLDKS_XGB_B5 (
 
 
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_EQLDKS_XGB_B5 part 2. Populate
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_AE2LSP_XGB_B5 part 2. Populate
 
 WITH [DT_node_lookup_50] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.6508052349090576) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_35 < -0.5203844308853149) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_15 < -0.26780885457992554) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.1439052820205688) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_50] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.04368780925869942 AS [Score] UNION ALL SELECT 5 AS nid, -0.02103588543832302 AS [Score] UNION ALL SELECT 6 AS nid, -0.053684670478105545 AS [Score] UNION ALL SELECT 7 AS nid, 0.06183994933962822 AS [Score] UNION ALL SELECT 8 AS nid, 0.14618150889873505 AS [Score]) AS [Values]), 
@@ -978,7 +978,7 @@ FROM [DT_node_lookup_50] LEFT OUTER JOIN [DT_node_data_50] ON [DT_node_lookup_50
 FROM [DT_Output_50]), 
 [DT_node_lookup_51] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 0.7549340724945068) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_12 < -1.2644157409667969) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_14 < 0.8899869918823242) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_64 < 1.5534418821334839) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.6745421886444092) THEN 9 ELSE 10 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_51] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, 0.016664011403918266 AS [Score] UNION ALL SELECT 4 AS nid, -0.05295034870505333 AS [Score] UNION ALL SELECT 7 AS nid, -0.04403112828731537 AS [Score] UNION ALL SELECT 8 AS nid, 0.13235734403133392 AS [Score] UNION ALL SELECT 9 AS nid, 0.15531416237354279 AS [Score] UNION ALL SELECT 10 AS nid, 0.015490854158997536 AS [Score]) AS [Values]), 
@@ -990,7 +990,7 @@ FROM [DT_node_lookup_51] LEFT OUTER JOIN [DT_node_data_51] ON [DT_node_lookup_51
 FROM [DT_Output_51]), 
 [DT_node_lookup_52] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.4255616366863251) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_39 < -1.2463171482086182) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_46 < 0.28436800837516785) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_29 < -1.1000995635986328) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_64 < 2.037907361984253) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_64 < 0.3422780930995941) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_52] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 6 AS nid, 0.03226780146360397 AS [Score] UNION ALL SELECT 7 AS nid, 0.17589662969112396 AS [Score] UNION ALL SELECT 8 AS nid, 0.029317939653992653 AS [Score] UNION ALL SELECT 9 AS nid, 0.09517897665500641 AS [Score] UNION ALL SELECT 10 AS nid, -0.045066747814416885 AS [Score] UNION ALL SELECT 11 AS nid, -0.053868990391492844 AS [Score] UNION ALL SELECT 12 AS nid, -0.03515925258398056 AS [Score]) AS [Values]), 
@@ -1002,7 +1002,7 @@ FROM [DT_node_lookup_52] LEFT OUTER JOIN [DT_node_data_52] ON [DT_node_lookup_52
 FROM [DT_Output_52]), 
 [DT_node_lookup_53] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.5865546464920044) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.7331587076187134) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_32 < -0.4892825782299042) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_53 < -0.19682982563972473) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_56 < 0.35533374547958374) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_22 < 0.059551309794187546) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_53] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.052572157233953476 AS [Score] UNION ALL SELECT 7 AS nid, 0.14351312816143036 AS [Score] UNION ALL SELECT 8 AS nid, 0.012902790680527687 AS [Score] UNION ALL SELECT 9 AS nid, 0.026911521330475807 AS [Score] UNION ALL SELECT 10 AS nid, -0.04552152007818222 AS [Score] UNION ALL SELECT 11 AS nid, -0.04842172563076019 AS [Score] UNION ALL SELECT 12 AS nid, 0.027605606243014336 AS [Score]) AS [Values]), 
@@ -1014,7 +1014,7 @@ FROM [DT_node_lookup_53] LEFT OUTER JOIN [DT_node_data_53] ON [DT_node_lookup_53
 FROM [DT_Output_53]), 
 [DT_node_lookup_54] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_35 < 0.6158624291419983) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_36 < 0.9295716285705566) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_14 < -1.2146971225738525) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_60 < -0.981843113899231) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_46 < -0.033451806753873825) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_37 < -0.2443539798259735) THEN 11 ELSE 12 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_4 < -0.7645214796066284) THEN 13 ELSE 14 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_54] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 7 AS nid, -0.025079775601625443 AS [Score] UNION ALL SELECT 8 AS nid, -0.05303005129098892 AS [Score] UNION ALL SELECT 9 AS nid, 0.05364314466714859 AS [Score] UNION ALL SELECT 10 AS nid, -0.040364380925893784 AS [Score] UNION ALL SELECT 11 AS nid, -0.05204688385128975 AS [Score] UNION ALL SELECT 12 AS nid, -0.025095198303461075 AS [Score] UNION ALL SELECT 13 AS nid, 0.15614092350006104 AS [Score] UNION ALL SELECT 14 AS nid, 0.028764966875314713 AS [Score]) AS [Values]), 
@@ -1026,7 +1026,7 @@ FROM [DT_node_lookup_54] LEFT OUTER JOIN [DT_node_data_54] ON [DT_node_lookup_54
 FROM [DT_Output_54]), 
 [DT_node_lookup_55] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.0123423337936401) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 < -0.410173237323761) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 < -0.9398293495178223) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.09801987558603287) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_28 < 1.0233757495880127) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_44 < -0.9719550609588623) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_55] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05197006091475487 AS [Score] UNION ALL SELECT 7 AS nid, -0.05241909250617027 AS [Score] UNION ALL SELECT 8 AS nid, -0.004584539216011763 AS [Score] UNION ALL SELECT 9 AS nid, 0.1444874107837677 AS [Score] UNION ALL SELECT 10 AS nid, 0.017857851460576057 AS [Score] UNION ALL SELECT 11 AS nid, 0.02062699943780899 AS [Score] UNION ALL SELECT 12 AS nid, -0.05136324092745781 AS [Score]) AS [Values]), 
@@ -1038,7 +1038,7 @@ FROM [DT_node_lookup_55] LEFT OUTER JOIN [DT_node_data_55] ON [DT_node_lookup_55
 FROM [DT_Output_55]), 
 [DT_node_lookup_56] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.1726703643798828) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.09801987558603287) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_56 < -0.25025779008865356) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_36 < 1.2451571226119995) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_52 < -1.0560302734375) THEN 9 ELSE 10 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_56] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.04886993393301964 AS [Score] UNION ALL SELECT 5 AS nid, -0.05290396884083748 AS [Score] UNION ALL SELECT 7 AS nid, 0.0014737338060513139 AS [Score] UNION ALL SELECT 8 AS nid, 0.14125661551952362 AS [Score] UNION ALL SELECT 9 AS nid, -0.04944373667240143 AS [Score] UNION ALL SELECT 10 AS nid, -0.022265588864684105 AS [Score]) AS [Values]), 
@@ -1050,7 +1050,7 @@ FROM [DT_node_lookup_56] LEFT OUTER JOIN [DT_node_data_56] ON [DT_node_lookup_56
 FROM [DT_Output_56]), 
 [DT_node_lookup_57] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -0.8913522958755493) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_27 < 0.3227207660675049) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_39 < -1.2463171482086182) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_16 < 1.2673416137695312) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -0.48229101300239563) THEN 9 ELSE 10 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_57] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, -0.005771218799054623 AS [Score] UNION ALL SELECT 6 AS nid, -0.004518734756857157 AS [Score] UNION ALL SELECT 7 AS nid, 0.018534276634454727 AS [Score] UNION ALL SELECT 8 AS nid, 0.14124250411987305 AS [Score] UNION ALL SELECT 9 AS nid, -0.0318203829228878 AS [Score] UNION ALL SELECT 10 AS nid, -0.05366519093513489 AS [Score]) AS [Values]), 
@@ -1062,7 +1062,7 @@ FROM [DT_node_lookup_57] LEFT OUTER JOIN [DT_node_data_57] ON [DT_node_lookup_57
 FROM [DT_Output_57]), 
 [DT_node_lookup_58] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.6745421886444092) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -0.5313583612442017) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_54 < -0.38872402906417847) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_37 < -0.08449207991361618) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_29 < 0.6027529239654541) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_45 < 0.03714842349290848) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_58] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05325544625520706 AS [Score] UNION ALL SELECT 7 AS nid, -0.01726333424448967 AS [Score] UNION ALL SELECT 8 AS nid, -0.050137992948293686 AS [Score] UNION ALL SELECT 9 AS nid, -0.048198070377111435 AS [Score] UNION ALL SELECT 10 AS nid, 0.09798330068588257 AS [Score] UNION ALL SELECT 11 AS nid, -0.04752189293503761 AS [Score] UNION ALL SELECT 12 AS nid, 0.02312144637107849 AS [Score]) AS [Values]), 
@@ -1074,7 +1074,7 @@ FROM [DT_node_lookup_58] LEFT OUTER JOIN [DT_node_data_58] ON [DT_node_lookup_58
 FROM [DT_Output_58]), 
 [DT_node_lookup_59] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -1.0412814617156982) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < 0.43060946464538574) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_63 < 0.6442216634750366) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_29 < -1.1000995635986328) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.5790972709655762) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_31 < 0.8337587118148804) THEN 11 ELSE 12 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -2.1185364723205566) THEN 13 ELSE 14 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_59] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 7 AS nid, -0.053355492651462555 AS [Score] UNION ALL SELECT 8 AS nid, 0.013380567543208599 AS [Score] UNION ALL SELECT 9 AS nid, -0.03889039158821106 AS [Score] UNION ALL SELECT 10 AS nid, 0.13603301346302032 AS [Score] UNION ALL SELECT 11 AS nid, -0.03898314759135246 AS [Score] UNION ALL SELECT 12 AS nid, 0.05903744325041771 AS [Score] UNION ALL SELECT 13 AS nid, -0.02035626210272312 AS [Score] UNION ALL SELECT 14 AS nid, -0.05180515721440315 AS [Score]) AS [Values]), 
@@ -1084,7 +1084,7 @@ FROM [DT_node_lookup_59] LEFT OUTER JOIN [DT_node_data_59] ON [DT_node_lookup_59
 [XGB_Model_9_5] AS 
 (SELECT [DT_Output_59].[KEY] AS [KEY], 0.0 AS [Score_0], 0.0 AS [Score_1], 0.0 AS [Score_2], 0.0 AS [Score_3], 0.0 AS [Score_4], 0.0 AS [Score_5], 0.0 AS [Score_6], 0.0 AS [Score_7], 0.0 AS [Score_8], [DT_Output_59].[Score] AS [Score_9] 
 FROM [DT_Output_59])
- INSERT INTO ##TMP_20180508184319_CODEGEN_EQLDKS_XGB_B5 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B5].[KEY], [XGB_B5].[Score_0], [XGB_B5].[Score_1], [XGB_B5].[Score_2], [XGB_B5].[Score_3], [XGB_B5].[Score_4], [XGB_B5].[Score_5], [XGB_B5].[Score_6], [XGB_B5].[Score_7], [XGB_B5].[Score_8], [XGB_B5].[Score_9] 
+ INSERT INTO ##TMP_20180516120531_CODEGEN_AE2LSP_XGB_B5 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B5].[KEY], [XGB_B5].[Score_0], [XGB_B5].[Score_1], [XGB_B5].[Score_2], [XGB_B5].[Score_3], [XGB_B5].[Score_4], [XGB_B5].[Score_5], [XGB_B5].[Score_6], [XGB_B5].[Score_7], [XGB_B5].[Score_8], [XGB_B5].[Score_9] 
 FROM (SELECT [XGB_esu_5].[KEY] AS [KEY], [XGB_esu_5].[Score_0] AS [Score_0], [XGB_esu_5].[Score_1] AS [Score_1], [XGB_esu_5].[Score_2] AS [Score_2], [XGB_esu_5].[Score_3] AS [Score_3], [XGB_esu_5].[Score_4] AS [Score_4], [XGB_esu_5].[Score_5] AS [Score_5], [XGB_esu_5].[Score_6] AS [Score_6], [XGB_esu_5].[Score_7] AS [Score_7], [XGB_esu_5].[Score_8] AS [Score_8], [XGB_esu_5].[Score_9] AS [Score_9] 
 FROM (SELECT [XGB_Model_0_5].[KEY] AS [KEY], [XGB_Model_0_5].[Score_0] AS [Score_0], [XGB_Model_0_5].[Score_1] AS [Score_1], [XGB_Model_0_5].[Score_2] AS [Score_2], [XGB_Model_0_5].[Score_3] AS [Score_3], [XGB_Model_0_5].[Score_4] AS [Score_4], [XGB_Model_0_5].[Score_5] AS [Score_5], [XGB_Model_0_5].[Score_6] AS [Score_6], [XGB_Model_0_5].[Score_7] AS [Score_7], [XGB_Model_0_5].[Score_8] AS [Score_8], [XGB_Model_0_5].[Score_9] AS [Score_9] 
 FROM [XGB_Model_0_5] UNION ALL SELECT [XGB_Model_1_5].[KEY] AS [KEY], [XGB_Model_1_5].[Score_0] AS [Score_0], [XGB_Model_1_5].[Score_1] AS [Score_1], [XGB_Model_1_5].[Score_2] AS [Score_2], [XGB_Model_1_5].[Score_3] AS [Score_3], [XGB_Model_1_5].[Score_4] AS [Score_4], [XGB_Model_1_5].[Score_5] AS [Score_5], [XGB_Model_1_5].[Score_6] AS [Score_6], [XGB_Model_1_5].[Score_7] AS [Score_7], [XGB_Model_1_5].[Score_8] AS [Score_8], [XGB_Model_1_5].[Score_9] AS [Score_9] 
@@ -1098,10 +1098,10 @@ FROM [XGB_Model_7_5] UNION ALL SELECT [XGB_Model_8_5].[KEY] AS [KEY], [XGB_Model
 FROM [XGB_Model_8_5] UNION ALL SELECT [XGB_Model_9_5].[KEY] AS [KEY], [XGB_Model_9_5].[Score_0] AS [Score_0], [XGB_Model_9_5].[Score_1] AS [Score_1], [XGB_Model_9_5].[Score_2] AS [Score_2], [XGB_Model_9_5].[Score_3] AS [Score_3], [XGB_Model_9_5].[Score_4] AS [Score_4], [XGB_Model_9_5].[Score_5] AS [Score_5], [XGB_Model_9_5].[Score_6] AS [Score_6], [XGB_Model_9_5].[Score_7] AS [Score_7], [XGB_Model_9_5].[Score_8] AS [Score_8], [XGB_Model_9_5].[Score_9] AS [Score_9] 
 FROM [XGB_Model_9_5]) AS [XGB_esu_5]) AS [XGB_B5]
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_FL8WV2_XGB_B6 part 1. Create 
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_9O6YRI_XGB_B6 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508184319_CODEGEN_FL8WV2_XGB_B6 (
+CREATE TABLE ##TMP_20180516120531_CODEGEN_9O6YRI_XGB_B6 (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Score_1] FLOAT(53) NULL, 
@@ -1117,11 +1117,11 @@ CREATE TABLE ##TMP_20180508184319_CODEGEN_FL8WV2_XGB_B6 (
 
 
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_FL8WV2_XGB_B6 part 2. Populate
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_9O6YRI_XGB_B6 part 2. Populate
 
 WITH [DT_node_lookup_60] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.6508052349090576) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_30 < -1.2292683124542236) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_46 < -0.5101815462112427) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.1439052820205688) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_60] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, -0.03674351051449776 AS [Score] UNION ALL SELECT 5 AS nid, -0.02007313072681427 AS [Score] UNION ALL SELECT 6 AS nid, -0.05341845378279686 AS [Score] UNION ALL SELECT 7 AS nid, 0.1304497867822647 AS [Score] UNION ALL SELECT 8 AS nid, 0.05731522664427757 AS [Score]) AS [Values]), 
@@ -1133,7 +1133,7 @@ FROM [DT_node_lookup_60] LEFT OUTER JOIN [DT_node_data_60] ON [DT_node_lookup_60
 FROM [DT_Output_60]), 
 [DT_node_lookup_61] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 0.7549340724945068) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_12 < -1.0801674127578735) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_22 < 0.7084630727767944) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_6 < -1.4768257141113281) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_12 < 0.02532293274998665) THEN 9 ELSE 10 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_61] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, 0.009966841898858547 AS [Score] UNION ALL SELECT 4 AS nid, -0.05342170223593712 AS [Score] UNION ALL SELECT 7 AS nid, 0.0999288260936737 AS [Score] UNION ALL SELECT 8 AS nid, -0.0475156344473362 AS [Score] UNION ALL SELECT 9 AS nid, 0.1300528198480606 AS [Score] UNION ALL SELECT 10 AS nid, 0.03005315735936165 AS [Score]) AS [Values]), 
@@ -1145,7 +1145,7 @@ FROM [DT_node_lookup_61] LEFT OUTER JOIN [DT_node_data_61] ON [DT_node_lookup_61
 FROM [DT_Output_61]), 
 [DT_node_lookup_62] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_64 < 0.1000453308224678) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_39 < -1.0757415294647217) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_56 < -0.4521216154098511) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_47 < -1.1869025230407715) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_48 < 0.47794973850250244) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_47 < -0.13672307133674622) THEN 11 ELSE 12 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_13 < 0.37445950508117676) THEN 13 ELSE 14 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_62] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 7 AS nid, -0.04347557947039604 AS [Score] UNION ALL SELECT 8 AS nid, 0.14304497838020325 AS [Score] UNION ALL SELECT 9 AS nid, -0.0250555370002985 AS [Score] UNION ALL SELECT 10 AS nid, -0.05341310426592827 AS [Score] UNION ALL SELECT 11 AS nid, 0.1294081062078476 AS [Score] UNION ALL SELECT 12 AS nid, 0.001913461834192276 AS [Score] UNION ALL SELECT 13 AS nid, -0.04996000602841377 AS [Score] UNION ALL SELECT 14 AS nid, -0.022800320759415627 AS [Score]) AS [Values]), 
@@ -1157,7 +1157,7 @@ FROM [DT_node_lookup_62] LEFT OUTER JOIN [DT_node_data_62] ON [DT_node_lookup_62
 FROM [DT_Output_62]), 
 [DT_node_lookup_63] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.5865546464920044) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.7331587076187134) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 0.24026328325271606) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_53 < -0.19682982563972473) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_3 < 0.23122252523899078) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_56 < 1.3646528720855713) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_63] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 6 AS nid, -0.0061264014802873135 AS [Score] UNION ALL SELECT 7 AS nid, 0.12703323364257812 AS [Score] UNION ALL SELECT 8 AS nid, 0.004979535937309265 AS [Score] UNION ALL SELECT 9 AS nid, 0.02550330199301243 AS [Score] UNION ALL SELECT 10 AS nid, -0.0447964146733284 AS [Score] UNION ALL SELECT 11 AS nid, -0.05245524272322655 AS [Score] UNION ALL SELECT 12 AS nid, -0.02395681105554104 AS [Score]) AS [Values]), 
@@ -1169,7 +1169,7 @@ FROM [DT_node_lookup_63] LEFT OUTER JOIN [DT_node_data_63] ON [DT_node_lookup_63
 FROM [DT_Output_63]), 
 [DT_node_lookup_64] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_35 < 0.3318006992340088) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_36 < 0.9295716285705566) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_27 < 0.9560424089431763) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_12 < -0.5274222493171692) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_46 < 0.4432779550552368) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_15 < -1.0934714078903198) THEN 11 ELSE 12 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_15 < -0.10267634689807892) THEN 13 ELSE 14 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_64] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 7 AS nid, -0.052631597965955734 AS [Score] UNION ALL SELECT 8 AS nid, -0.030045559629797935 AS [Score] UNION ALL SELECT 9 AS nid, 0.011486165225505829 AS [Score] UNION ALL SELECT 10 AS nid, -0.04056014120578766 AS [Score] UNION ALL SELECT 11 AS nid, 0.00889600906521082 AS [Score] UNION ALL SELECT 12 AS nid, -0.04956508427858353 AS [Score] UNION ALL SELECT 13 AS nid, 0.1435585916042328 AS [Score] UNION ALL SELECT 14 AS nid, 0.013783042319118977 AS [Score]) AS [Values]), 
@@ -1181,7 +1181,7 @@ FROM [DT_node_lookup_64] LEFT OUTER JOIN [DT_node_data_64] ON [DT_node_lookup_64
 FROM [DT_Output_64]), 
 [DT_node_lookup_65] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.0123423337936401) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 < -0.5867252945899963) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_46 < -0.8280013799667358) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.2508734464645386) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_28 < 1.0233757495880127) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_4 < -0.5524126887321472) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_65] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.051613327115774155 AS [Score] UNION ALL SELECT 7 AS nid, -0.022788098081946373 AS [Score] UNION ALL SELECT 8 AS nid, -0.0519634447991848 AS [Score] UNION ALL SELECT 9 AS nid, 0.13064055144786835 AS [Score] UNION ALL SELECT 10 AS nid, -0.010181269608438015 AS [Score] UNION ALL SELECT 11 AS nid, -0.05084696412086487 AS [Score] UNION ALL SELECT 12 AS nid, 0.02187681756913662 AS [Score]) AS [Values]), 
@@ -1193,7 +1193,7 @@ FROM [DT_node_lookup_65] LEFT OUTER JOIN [DT_node_data_65] ON [DT_node_lookup_65
 FROM [DT_Output_65]), 
 [DT_node_lookup_66] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.1726703643798828) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.09801987558603287) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_56 < -0.25025779008865356) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_6 < -1.4768257141113281) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_66] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.04835380241274834 AS [Score] UNION ALL SELECT 5 AS nid, -0.03127969056367874 AS [Score] UNION ALL SELECT 6 AS nid, -0.05188966915011406 AS [Score] UNION ALL SELECT 7 AS nid, 0.0017563464352861047 AS [Score] UNION ALL SELECT 8 AS nid, 0.12556272745132446 AS [Score]) AS [Values]), 
@@ -1205,7 +1205,7 @@ FROM [DT_node_lookup_66] LEFT OUTER JOIN [DT_node_data_66] ON [DT_node_lookup_66
 FROM [DT_Output_66]), 
 [DT_node_lookup_67] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_55 < -1.3678903579711914) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_39 < -1.4168925285339355) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_7 < -0.9398293495178223) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_16 < 2.0924582481384277) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_63 < -1.058613896369934) THEN 9 ELSE 10 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_67] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.026695547625422478 AS [Score] UNION ALL SELECT 6 AS nid, 0.009665472432971 AS [Score] UNION ALL SELECT 7 AS nid, 0.0003741634718608111 AS [Score] UNION ALL SELECT 8 AS nid, 0.13413479924201965 AS [Score] UNION ALL SELECT 9 AS nid, -0.03104289248585701 AS [Score] UNION ALL SELECT 10 AS nid, -0.05352823808789253 AS [Score]) AS [Values]), 
@@ -1217,7 +1217,7 @@ FROM [DT_node_lookup_67] LEFT OUTER JOIN [DT_node_data_67] ON [DT_node_lookup_67
 FROM [DT_Output_67]), 
 [DT_node_lookup_68] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.6745421886444092) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < 0.10995353013277054) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -0.5313583612442017) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_37 < 0.3950936496257782) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_29 < 0.6027529239654541) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_40 < 0.1773550808429718) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_68] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.0529584176838398 AS [Score] UNION ALL SELECT 7 AS nid, -0.0419108085334301 AS [Score] UNION ALL SELECT 8 AS nid, 0.014424676075577736 AS [Score] UNION ALL SELECT 9 AS nid, -0.028979068621993065 AS [Score] UNION ALL SELECT 10 AS nid, 0.10942872613668442 AS [Score] UNION ALL SELECT 11 AS nid, 0.016106484457850456 AS [Score] UNION ALL SELECT 12 AS nid, -0.05139649659395218 AS [Score]) AS [Values]), 
@@ -1229,7 +1229,7 @@ FROM [DT_node_lookup_68] LEFT OUTER JOIN [DT_node_data_68] ON [DT_node_lookup_68
 FROM [DT_Output_68]), 
 [DT_node_lookup_69] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_31 < 1.0037397146224976) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < 1.23224937915802) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < -0.5133943557739258) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_46 < -0.1923617124557495) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < -0.6662479639053345) THEN 9 ELSE 10 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_30 < 0.7279360890388489) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_69] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, 0.04573267698287964 AS [Score] UNION ALL SELECT 7 AS nid, -0.02823255956172943 AS [Score] UNION ALL SELECT 8 AS nid, -0.052063025534152985 AS [Score] UNION ALL SELECT 9 AS nid, 0.1355106383562088 AS [Score] UNION ALL SELECT 10 AS nid, 0.029818817973136902 AS [Score] UNION ALL SELECT 11 AS nid, -0.04597330093383789 AS [Score] UNION ALL SELECT 12 AS nid, 0.03856043145060539 AS [Score]) AS [Values]), 
@@ -1239,7 +1239,7 @@ FROM [DT_node_lookup_69] LEFT OUTER JOIN [DT_node_data_69] ON [DT_node_lookup_69
 [XGB_Model_9_6] AS 
 (SELECT [DT_Output_69].[KEY] AS [KEY], 0.0 AS [Score_0], 0.0 AS [Score_1], 0.0 AS [Score_2], 0.0 AS [Score_3], 0.0 AS [Score_4], 0.0 AS [Score_5], 0.0 AS [Score_6], 0.0 AS [Score_7], 0.0 AS [Score_8], [DT_Output_69].[Score] AS [Score_9] 
 FROM [DT_Output_69])
- INSERT INTO ##TMP_20180508184319_CODEGEN_FL8WV2_XGB_B6 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B6].[KEY], [XGB_B6].[Score_0], [XGB_B6].[Score_1], [XGB_B6].[Score_2], [XGB_B6].[Score_3], [XGB_B6].[Score_4], [XGB_B6].[Score_5], [XGB_B6].[Score_6], [XGB_B6].[Score_7], [XGB_B6].[Score_8], [XGB_B6].[Score_9] 
+ INSERT INTO ##TMP_20180516120531_CODEGEN_9O6YRI_XGB_B6 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B6].[KEY], [XGB_B6].[Score_0], [XGB_B6].[Score_1], [XGB_B6].[Score_2], [XGB_B6].[Score_3], [XGB_B6].[Score_4], [XGB_B6].[Score_5], [XGB_B6].[Score_6], [XGB_B6].[Score_7], [XGB_B6].[Score_8], [XGB_B6].[Score_9] 
 FROM (SELECT [XGB_esu_6].[KEY] AS [KEY], [XGB_esu_6].[Score_0] AS [Score_0], [XGB_esu_6].[Score_1] AS [Score_1], [XGB_esu_6].[Score_2] AS [Score_2], [XGB_esu_6].[Score_3] AS [Score_3], [XGB_esu_6].[Score_4] AS [Score_4], [XGB_esu_6].[Score_5] AS [Score_5], [XGB_esu_6].[Score_6] AS [Score_6], [XGB_esu_6].[Score_7] AS [Score_7], [XGB_esu_6].[Score_8] AS [Score_8], [XGB_esu_6].[Score_9] AS [Score_9] 
 FROM (SELECT [XGB_Model_0_6].[KEY] AS [KEY], [XGB_Model_0_6].[Score_0] AS [Score_0], [XGB_Model_0_6].[Score_1] AS [Score_1], [XGB_Model_0_6].[Score_2] AS [Score_2], [XGB_Model_0_6].[Score_3] AS [Score_3], [XGB_Model_0_6].[Score_4] AS [Score_4], [XGB_Model_0_6].[Score_5] AS [Score_5], [XGB_Model_0_6].[Score_6] AS [Score_6], [XGB_Model_0_6].[Score_7] AS [Score_7], [XGB_Model_0_6].[Score_8] AS [Score_8], [XGB_Model_0_6].[Score_9] AS [Score_9] 
 FROM [XGB_Model_0_6] UNION ALL SELECT [XGB_Model_1_6].[KEY] AS [KEY], [XGB_Model_1_6].[Score_0] AS [Score_0], [XGB_Model_1_6].[Score_1] AS [Score_1], [XGB_Model_1_6].[Score_2] AS [Score_2], [XGB_Model_1_6].[Score_3] AS [Score_3], [XGB_Model_1_6].[Score_4] AS [Score_4], [XGB_Model_1_6].[Score_5] AS [Score_5], [XGB_Model_1_6].[Score_6] AS [Score_6], [XGB_Model_1_6].[Score_7] AS [Score_7], [XGB_Model_1_6].[Score_8] AS [Score_8], [XGB_Model_1_6].[Score_9] AS [Score_9] 
@@ -1253,10 +1253,10 @@ FROM [XGB_Model_7_6] UNION ALL SELECT [XGB_Model_8_6].[KEY] AS [KEY], [XGB_Model
 FROM [XGB_Model_8_6] UNION ALL SELECT [XGB_Model_9_6].[KEY] AS [KEY], [XGB_Model_9_6].[Score_0] AS [Score_0], [XGB_Model_9_6].[Score_1] AS [Score_1], [XGB_Model_9_6].[Score_2] AS [Score_2], [XGB_Model_9_6].[Score_3] AS [Score_3], [XGB_Model_9_6].[Score_4] AS [Score_4], [XGB_Model_9_6].[Score_5] AS [Score_5], [XGB_Model_9_6].[Score_6] AS [Score_6], [XGB_Model_9_6].[Score_7] AS [Score_7], [XGB_Model_9_6].[Score_8] AS [Score_8], [XGB_Model_9_6].[Score_9] AS [Score_9] 
 FROM [XGB_Model_9_6]) AS [XGB_esu_6]) AS [XGB_B6]
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_E7EX3E_XGB_B7 part 1. Create 
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_MPHRJ7_XGB_B7 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508184319_CODEGEN_E7EX3E_XGB_B7 (
+CREATE TABLE ##TMP_20180516120531_CODEGEN_MPHRJ7_XGB_B7 (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Score_1] FLOAT(53) NULL, 
@@ -1272,11 +1272,11 @@ CREATE TABLE ##TMP_20180508184319_CODEGEN_E7EX3E_XGB_B7 (
 
 
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_E7EX3E_XGB_B7 part 2. Populate
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_MPHRJ7_XGB_B7 part 2. Populate
 
 WITH [DT_node_lookup_70] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.6508052349090576) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_35 < -0.5203844308853149) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_23 < 0.10995353013277054) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.1439052820205688) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_70] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.04293115437030792 AS [Score] UNION ALL SELECT 5 AS nid, -0.019083376973867416 AS [Score] UNION ALL SELECT 6 AS nid, -0.05316632613539696 AS [Score] UNION ALL SELECT 7 AS nid, 0.05222516134381294 AS [Score] UNION ALL SELECT 8 AS nid, 0.11780966818332672 AS [Score]) AS [Values]), 
@@ -1288,7 +1288,7 @@ FROM [DT_node_lookup_70] LEFT OUTER JOIN [DT_node_data_70] ON [DT_node_lookup_70
 FROM [DT_Output_70]), 
 [DT_node_lookup_71] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 0.7549340724945068) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_12 < -1.0801674127578735) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.6745421886444092) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_12 < 0.5780681371688843) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_15 < -0.10267634689807892) THEN 9 ELSE 10 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_71] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, 0.009834724478423595 AS [Score] UNION ALL SELECT 4 AS nid, -0.053164344280958176 AS [Score] UNION ALL SELECT 7 AS nid, 0.11258210986852646 AS [Score] UNION ALL SELECT 8 AS nid, -0.018363604322075844 AS [Score] UNION ALL SELECT 9 AS nid, -0.0540500245988369 AS [Score] UNION ALL SELECT 10 AS nid, 0.0430915430188179 AS [Score]) AS [Values]), 
@@ -1300,7 +1300,7 @@ FROM [DT_node_lookup_71] LEFT OUTER JOIN [DT_node_data_71] ON [DT_node_lookup_71
 FROM [DT_Output_71]), 
 [DT_node_lookup_72] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.4255616366863251) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_53 < 0.7590487003326416) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_39 < -1.4168925285339355) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_55 < -0.8707377910614014) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_64 < 2.037907361984253) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_64 < 0.3422780930995941) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_72] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 6 AS nid, 0.024392975494265556 AS [Score] UNION ALL SELECT 7 AS nid, 0.08189865946769714 AS [Score] UNION ALL SELECT 8 AS nid, -0.04008705914020538 AS [Score] UNION ALL SELECT 9 AS nid, -0.0339292548596859 AS [Score] UNION ALL SELECT 10 AS nid, 0.13996681571006775 AS [Score] UNION ALL SELECT 11 AS nid, -0.053388115018606186 AS [Score] UNION ALL SELECT 12 AS nid, -0.03377879783511162 AS [Score]) AS [Values]), 
@@ -1312,7 +1312,7 @@ FROM [DT_node_lookup_72] LEFT OUTER JOIN [DT_node_data_72] ON [DT_node_lookup_72
 FROM [DT_Output_72]), 
 [DT_node_lookup_73] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.5865546464920044) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.7331587076187134) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -0.974938690662384) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_6 < 0.8495087623596191) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_56 < 0.35533374547958374) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_22 < 0.059551309794187546) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_73] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05194280669093132 AS [Score] UNION ALL SELECT 7 AS nid, 0.004356664139777422 AS [Score] UNION ALL SELECT 8 AS nid, 0.11447812616825104 AS [Score] UNION ALL SELECT 9 AS nid, -0.0467262826859951 AS [Score] UNION ALL SELECT 10 AS nid, 0.01878337934613228 AS [Score] UNION ALL SELECT 11 AS nid, -0.047363873571157455 AS [Score] UNION ALL SELECT 12 AS nid, 0.027376411482691765 AS [Score]) AS [Values]), 
@@ -1324,7 +1324,7 @@ FROM [DT_node_lookup_73] LEFT OUTER JOIN [DT_node_data_73] ON [DT_node_lookup_73
 FROM [DT_Output_73]), 
 [DT_node_lookup_74] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_60 < -0.981843113899231) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_35 < -0.23632274568080902) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_15 < -0.10267634689807892) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_35 < 1.7521092891693115) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_32 < 1.374642252922058) THEN 9 ELSE 10 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_74] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.04753420874476433 AS [Score] UNION ALL SELECT 6 AS nid, 0.03749707713723183 AS [Score] UNION ALL SELECT 7 AS nid, 0.12798283994197845 AS [Score] UNION ALL SELECT 8 AS nid, 0.005174619145691395 AS [Score] UNION ALL SELECT 9 AS nid, -0.05080663785338402 AS [Score] UNION ALL SELECT 10 AS nid, -0.01760980114340782 AS [Score]) AS [Values]), 
@@ -1336,7 +1336,7 @@ FROM [DT_node_lookup_74] LEFT OUTER JOIN [DT_node_data_74] ON [DT_node_lookup_74
 FROM [DT_Output_74]), 
 [DT_node_lookup_75] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.0123423337936401) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 < -0.5867252945899963) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_45 < 0.1912098526954651) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.2508734464645386) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_28 < 1.0233757495880127) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.6508052349090576) THEN 11 ELSE 12 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_44 < -0.9719550609588623) THEN 13 ELSE 14 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_75] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 7 AS nid, -0.02307707816362381 AS [Score] UNION ALL SELECT 8 AS nid, -0.05139002948999405 AS [Score] UNION ALL SELECT 9 AS nid, 0.11757262796163559 AS [Score] UNION ALL SELECT 10 AS nid, -0.009448256343603134 AS [Score] UNION ALL SELECT 11 AS nid, -0.03973310813307762 AS [Score] UNION ALL SELECT 12 AS nid, -0.05309125781059265 AS [Score] UNION ALL SELECT 13 AS nid, 0.021011030301451683 AS [Score] UNION ALL SELECT 14 AS nid, -0.05072809010744095 AS [Score]) AS [Values]), 
@@ -1348,7 +1348,7 @@ FROM [DT_node_lookup_75] LEFT OUTER JOIN [DT_node_data_75] ON [DT_node_lookup_75
 FROM [DT_Output_75]), 
 [DT_node_lookup_76] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.1726703643798828) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.09801987558603287) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_56 < -0.25025779008865356) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_36 < 1.2451571226119995) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_76] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.047802869230508804 AS [Score] UNION ALL SELECT 5 AS nid, -0.05230683088302612 AS [Score] UNION ALL SELECT 6 AS nid, -0.03583579882979393 AS [Score] UNION ALL SELECT 7 AS nid, 0.0019343806197866797 AS [Score] UNION ALL SELECT 8 AS nid, 0.11343914270401001 AS [Score]) AS [Values]), 
@@ -1360,7 +1360,7 @@ FROM [DT_node_lookup_76] LEFT OUTER JOIN [DT_node_data_76] ON [DT_node_lookup_76
 FROM [DT_Output_76]), 
 [DT_node_lookup_77] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_55 < -1.3678903579711914) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_31 < -0.35610848665237427) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -1.9140057563781738) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_14 < -1.0042287111282349) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_16 < 2.0924582481384277) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_63 < -1.058613896369934) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_77] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 6 AS nid, 0.009395121596753597 AS [Score] UNION ALL SELECT 7 AS nid, 0.04466312378644943 AS [Score] UNION ALL SELECT 8 AS nid, -0.05028834939002991 AS [Score] UNION ALL SELECT 9 AS nid, 0.006215463858097792 AS [Score] UNION ALL SELECT 10 AS nid, 0.12466017156839371 AS [Score] UNION ALL SELECT 11 AS nid, -0.030176615342497826 AS [Score] UNION ALL SELECT 12 AS nid, -0.05326321721076965 AS [Score]) AS [Values]), 
@@ -1372,7 +1372,7 @@ FROM [DT_node_lookup_77] LEFT OUTER JOIN [DT_node_data_77] ON [DT_node_lookup_77
 FROM [DT_Output_77]), 
 [DT_node_lookup_78] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.39057642221450806) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -0.5313583612442017) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_54 < -0.38872402906417847) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.09801987558603287) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_29 < 1.1136085987091064) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_78] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05155758932232857 AS [Score] UNION ALL SELECT 6 AS nid, -0.025254089385271072 AS [Score] UNION ALL SELECT 7 AS nid, -0.021582147106528282 AS [Score] UNION ALL SELECT 8 AS nid, -0.04947498068213463 AS [Score] UNION ALL SELECT 9 AS nid, -0.004186784382909536 AS [Score] UNION ALL SELECT 10 AS nid, 0.0936305820941925 AS [Score]) AS [Values]), 
@@ -1384,7 +1384,7 @@ FROM [DT_node_lookup_78] LEFT OUTER JOIN [DT_node_data_78] ON [DT_node_lookup_78
 FROM [DT_Output_78]), 
 [DT_node_lookup_79] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.5790972709655762) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < 0.43060946464538574) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_63 < 0.8145052194595337) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.5565805435180664) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -2.1185364723205566) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_37 < -0.7239397168159485) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_79] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.018379976972937584 AS [Score] UNION ALL SELECT 7 AS nid, -0.05048123002052307 AS [Score] UNION ALL SELECT 8 AS nid, 0.004175710026174784 AS [Score] UNION ALL SELECT 9 AS nid, 0.10397309064865112 AS [Score] UNION ALL SELECT 10 AS nid, -0.05146094784140587 AS [Score] UNION ALL SELECT 11 AS nid, -0.035508617758750916 AS [Score] UNION ALL SELECT 12 AS nid, -0.0531359426677227 AS [Score]) AS [Values]), 
@@ -1394,7 +1394,7 @@ FROM [DT_node_lookup_79] LEFT OUTER JOIN [DT_node_data_79] ON [DT_node_lookup_79
 [XGB_Model_9_7] AS 
 (SELECT [DT_Output_79].[KEY] AS [KEY], 0.0 AS [Score_0], 0.0 AS [Score_1], 0.0 AS [Score_2], 0.0 AS [Score_3], 0.0 AS [Score_4], 0.0 AS [Score_5], 0.0 AS [Score_6], 0.0 AS [Score_7], 0.0 AS [Score_8], [DT_Output_79].[Score] AS [Score_9] 
 FROM [DT_Output_79])
- INSERT INTO ##TMP_20180508184319_CODEGEN_E7EX3E_XGB_B7 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B7].[KEY], [XGB_B7].[Score_0], [XGB_B7].[Score_1], [XGB_B7].[Score_2], [XGB_B7].[Score_3], [XGB_B7].[Score_4], [XGB_B7].[Score_5], [XGB_B7].[Score_6], [XGB_B7].[Score_7], [XGB_B7].[Score_8], [XGB_B7].[Score_9] 
+ INSERT INTO ##TMP_20180516120531_CODEGEN_MPHRJ7_XGB_B7 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B7].[KEY], [XGB_B7].[Score_0], [XGB_B7].[Score_1], [XGB_B7].[Score_2], [XGB_B7].[Score_3], [XGB_B7].[Score_4], [XGB_B7].[Score_5], [XGB_B7].[Score_6], [XGB_B7].[Score_7], [XGB_B7].[Score_8], [XGB_B7].[Score_9] 
 FROM (SELECT [XGB_esu_7].[KEY] AS [KEY], [XGB_esu_7].[Score_0] AS [Score_0], [XGB_esu_7].[Score_1] AS [Score_1], [XGB_esu_7].[Score_2] AS [Score_2], [XGB_esu_7].[Score_3] AS [Score_3], [XGB_esu_7].[Score_4] AS [Score_4], [XGB_esu_7].[Score_5] AS [Score_5], [XGB_esu_7].[Score_6] AS [Score_6], [XGB_esu_7].[Score_7] AS [Score_7], [XGB_esu_7].[Score_8] AS [Score_8], [XGB_esu_7].[Score_9] AS [Score_9] 
 FROM (SELECT [XGB_Model_0_7].[KEY] AS [KEY], [XGB_Model_0_7].[Score_0] AS [Score_0], [XGB_Model_0_7].[Score_1] AS [Score_1], [XGB_Model_0_7].[Score_2] AS [Score_2], [XGB_Model_0_7].[Score_3] AS [Score_3], [XGB_Model_0_7].[Score_4] AS [Score_4], [XGB_Model_0_7].[Score_5] AS [Score_5], [XGB_Model_0_7].[Score_6] AS [Score_6], [XGB_Model_0_7].[Score_7] AS [Score_7], [XGB_Model_0_7].[Score_8] AS [Score_8], [XGB_Model_0_7].[Score_9] AS [Score_9] 
 FROM [XGB_Model_0_7] UNION ALL SELECT [XGB_Model_1_7].[KEY] AS [KEY], [XGB_Model_1_7].[Score_0] AS [Score_0], [XGB_Model_1_7].[Score_1] AS [Score_1], [XGB_Model_1_7].[Score_2] AS [Score_2], [XGB_Model_1_7].[Score_3] AS [Score_3], [XGB_Model_1_7].[Score_4] AS [Score_4], [XGB_Model_1_7].[Score_5] AS [Score_5], [XGB_Model_1_7].[Score_6] AS [Score_6], [XGB_Model_1_7].[Score_7] AS [Score_7], [XGB_Model_1_7].[Score_8] AS [Score_8], [XGB_Model_1_7].[Score_9] AS [Score_9] 
@@ -1408,10 +1408,10 @@ FROM [XGB_Model_7_7] UNION ALL SELECT [XGB_Model_8_7].[KEY] AS [KEY], [XGB_Model
 FROM [XGB_Model_8_7] UNION ALL SELECT [XGB_Model_9_7].[KEY] AS [KEY], [XGB_Model_9_7].[Score_0] AS [Score_0], [XGB_Model_9_7].[Score_1] AS [Score_1], [XGB_Model_9_7].[Score_2] AS [Score_2], [XGB_Model_9_7].[Score_3] AS [Score_3], [XGB_Model_9_7].[Score_4] AS [Score_4], [XGB_Model_9_7].[Score_5] AS [Score_5], [XGB_Model_9_7].[Score_6] AS [Score_6], [XGB_Model_9_7].[Score_7] AS [Score_7], [XGB_Model_9_7].[Score_8] AS [Score_8], [XGB_Model_9_7].[Score_9] AS [Score_9] 
 FROM [XGB_Model_9_7]) AS [XGB_esu_7]) AS [XGB_B7]
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_FZG3UB_XGB_B8 part 1. Create 
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_PDWKXL_XGB_B8 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508184319_CODEGEN_FZG3UB_XGB_B8 (
+CREATE TABLE ##TMP_20180516120531_CODEGEN_PDWKXL_XGB_B8 (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Score_1] FLOAT(53) NULL, 
@@ -1427,11 +1427,11 @@ CREATE TABLE ##TMP_20180508184319_CODEGEN_FZG3UB_XGB_B8 (
 
 
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_FZG3UB_XGB_B8 part 2. Populate
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_PDWKXL_XGB_B8 part 2. Populate
 
 WITH [DT_node_lookup_80] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.6508052349090576) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_30 < -1.2292683124542236) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_15 < -0.26780885457992554) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.1439052820205688) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_80] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, -0.036175306886434555 AS [Score] UNION ALL SELECT 5 AS nid, -0.01821603626012802 AS [Score] UNION ALL SELECT 6 AS nid, -0.05292722210288048 AS [Score] UNION ALL SELECT 7 AS nid, 0.039920076727867126 AS [Score] UNION ALL SELECT 8 AS nid, 0.10854512453079224 AS [Score]) AS [Values]), 
@@ -1443,7 +1443,7 @@ FROM [DT_node_lookup_80] LEFT OUTER JOIN [DT_node_data_80] ON [DT_node_lookup_80
 FROM [DT_Output_80]), 
 [DT_node_lookup_81] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 0.7549340724945068) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_12 < -1.0801674127578735) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_14 < 0.8899869918823242) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_65 < 0.05940970778465271) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.6745421886444092) THEN 9 ELSE 10 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_81] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, 0.00979448389261961 AS [Score] UNION ALL SELECT 4 AS nid, -0.05292236804962158 AS [Score] UNION ALL SELECT 7 AS nid, -0.04667988792061806 AS [Score] UNION ALL SELECT 8 AS nid, 0.13579986989498138 AS [Score] UNION ALL SELECT 9 AS nid, 0.11330021917819977 AS [Score] UNION ALL SELECT 10 AS nid, 0.012097137048840523 AS [Score]) AS [Values]), 
@@ -1455,7 +1455,7 @@ FROM [DT_node_lookup_81] LEFT OUTER JOIN [DT_node_data_81] ON [DT_node_lookup_81
 FROM [DT_Output_81]), 
 [DT_node_lookup_82] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.4255616366863251) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.6745421886444092) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_53 < -0.19682982563972473) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_29 < -0.7595291137695312) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_64 < 2.037907361984253) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_64 < 0.3422780930995941) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_82] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 6 AS nid, 0.02242175303399563 AS [Score] UNION ALL SELECT 7 AS nid, -0.024093972519040108 AS [Score] UNION ALL SELECT 8 AS nid, 0.09958355128765106 AS [Score] UNION ALL SELECT 9 AS nid, -0.014236784540116787 AS [Score] UNION ALL SELECT 10 AS nid, -0.050969481468200684 AS [Score] UNION ALL SELECT 11 AS nid, -0.05313631892204285 AS [Score] UNION ALL SELECT 12 AS nid, -0.03271622955799103 AS [Score]) AS [Values]), 
@@ -1467,7 +1467,7 @@ FROM [DT_node_lookup_82] LEFT OUTER JOIN [DT_node_data_82] ON [DT_node_lookup_82
 FROM [DT_Output_82]), 
 [DT_node_lookup_83] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.5865546464920044) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.7331587076187134) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 0.24026328325271606) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_53 < -0.19682982563972473) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_56 < 0.35533374547958374) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_22 < 0.059551309794187546) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_83] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05163044482469559 AS [Score] UNION ALL SELECT 7 AS nid, 0.1036817654967308 AS [Score] UNION ALL SELECT 8 AS nid, 0.0009772487683221698 AS [Score] UNION ALL SELECT 9 AS nid, 0.025667348876595497 AS [Score] UNION ALL SELECT 10 AS nid, -0.04348346218466759 AS [Score] UNION ALL SELECT 11 AS nid, -0.04678232595324516 AS [Score] UNION ALL SELECT 12 AS nid, 0.025139985606074333 AS [Score]) AS [Values]), 
@@ -1479,7 +1479,7 @@ FROM [DT_node_lookup_83] LEFT OUTER JOIN [DT_node_data_83] ON [DT_node_lookup_83
 FROM [DT_Output_83]), 
 [DT_node_lookup_84] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_4 < -0.9766302108764648) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_63 < 0.6442216634750366) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_15 < -0.10267634689807892) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_39 < 0.6300135850906372) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_14 < -1.4251656532287598) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_36 < 1.2451571226119995) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_84] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, 0.02916315197944641 AS [Score] UNION ALL SELECT 7 AS nid, 0.12166919559240341 AS [Score] UNION ALL SELECT 8 AS nid, 0.005962145980447531 AS [Score] UNION ALL SELECT 9 AS nid, -0.050889432430267334 AS [Score] UNION ALL SELECT 10 AS nid, -0.026520980522036552 AS [Score] UNION ALL SELECT 11 AS nid, -0.05332924798130989 AS [Score] UNION ALL SELECT 12 AS nid, -0.020313777029514313 AS [Score]) AS [Values]), 
@@ -1491,7 +1491,7 @@ FROM [DT_node_lookup_84] LEFT OUTER JOIN [DT_node_data_84] ON [DT_node_lookup_84
 FROM [DT_Output_84]), 
 [DT_node_lookup_85] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.0123423337936401) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 < -0.5867252945899963) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_37 < 0.23523172736167908) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_4 < -0.5524126887321472) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -0.6916863918304443) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_4 < 0.5081311464309692) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_85] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.006330996286123991 AS [Score] UNION ALL SELECT 7 AS nid, -0.022036774083971977 AS [Score] UNION ALL SELECT 8 AS nid, -0.05114221200346947 AS [Score] UNION ALL SELECT 9 AS nid, -0.004208183381706476 AS [Score] UNION ALL SELECT 10 AS nid, 0.10858211666345596 AS [Score] UNION ALL SELECT 11 AS nid, -0.05298755317926407 AS [Score] UNION ALL SELECT 12 AS nid, -0.03536299243569374 AS [Score]) AS [Values]), 
@@ -1503,7 +1503,7 @@ FROM [DT_node_lookup_85] LEFT OUTER JOIN [DT_node_data_85] ON [DT_node_lookup_85
 FROM [DT_Output_85]), 
 [DT_node_lookup_86] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.1726703643798828) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.09801987558603287) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_22 < -0.5893604755401611) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_36 < 1.2451571226119995) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_86] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.04726989567279816 AS [Score] UNION ALL SELECT 5 AS nid, -0.052013080567121506 AS [Score] UNION ALL SELECT 6 AS nid, -0.034927334636449814 AS [Score] UNION ALL SELECT 7 AS nid, 0.1036805734038353 AS [Score] UNION ALL SELECT 8 AS nid, 0.002213156083598733 AS [Score]) AS [Values]), 
@@ -1515,7 +1515,7 @@ FROM [DT_node_lookup_86] LEFT OUTER JOIN [DT_node_data_86] ON [DT_node_lookup_86
 FROM [DT_Output_86]), 
 [DT_node_lookup_87] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -0.8913522958755493) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_27 < 0.3227207660675049) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_32 < -0.22300760447978973) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_7 < 1.1787950992584229) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_30 < 0.4017353653907776) THEN 9 ELSE 10 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_87] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, -0.008382712490856647 AS [Score] UNION ALL SELECT 5 AS nid, -0.052317626774311066 AS [Score] UNION ALL SELECT 7 AS nid, 0.0529508963227272 AS [Score] UNION ALL SELECT 8 AS nid, 0.11878364533185959 AS [Score] UNION ALL SELECT 9 AS nid, 0.03918511047959328 AS [Score] UNION ALL SELECT 10 AS nid, -0.04934358224272728 AS [Score]) AS [Values]), 
@@ -1527,7 +1527,7 @@ FROM [DT_node_lookup_87] LEFT OUTER JOIN [DT_node_data_87] ON [DT_node_lookup_87
 FROM [DT_Output_87]), 
 [DT_node_lookup_88] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.39057642221450806) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_24 < -0.4003889560699463) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_15 < 0.2275886833667755) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_29 < -0.5892438292503357) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_29 < 1.1136085987091064) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_88] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.051208656281232834 AS [Score] UNION ALL SELECT 6 AS nid, -0.02448047138750553 AS [Score] UNION ALL SELECT 7 AS nid, -0.04145907983183861 AS [Score] UNION ALL SELECT 8 AS nid, 0.02833356335759163 AS [Score] UNION ALL SELECT 9 AS nid, -0.050577808171510696 AS [Score] UNION ALL SELECT 10 AS nid, 0.10150796175003052 AS [Score]) AS [Values]), 
@@ -1539,7 +1539,7 @@ FROM [DT_node_lookup_88] LEFT OUTER JOIN [DT_node_data_88] ON [DT_node_lookup_88
 FROM [DT_Output_88]), 
 [DT_node_lookup_89] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.5790972709655762) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < 0.43060946464538574) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_6 < -0.31365853548049927) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.5565805435180664) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -2.1185364723205566) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_37 < -0.7239397168159485) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_89] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.017276590690016747 AS [Score] UNION ALL SELECT 7 AS nid, 0.009943329729139805 AS [Score] UNION ALL SELECT 8 AS nid, -0.04790820926427841 AS [Score] UNION ALL SELECT 9 AS nid, 0.09300456196069717 AS [Score] UNION ALL SELECT 10 AS nid, -0.0509030818939209 AS [Score] UNION ALL SELECT 11 AS nid, -0.03456619009375572 AS [Score] UNION ALL SELECT 12 AS nid, -0.05287975072860718 AS [Score]) AS [Values]), 
@@ -1549,7 +1549,7 @@ FROM [DT_node_lookup_89] LEFT OUTER JOIN [DT_node_data_89] ON [DT_node_lookup_89
 [XGB_Model_9_8] AS 
 (SELECT [DT_Output_89].[KEY] AS [KEY], 0.0 AS [Score_0], 0.0 AS [Score_1], 0.0 AS [Score_2], 0.0 AS [Score_3], 0.0 AS [Score_4], 0.0 AS [Score_5], 0.0 AS [Score_6], 0.0 AS [Score_7], 0.0 AS [Score_8], [DT_Output_89].[Score] AS [Score_9] 
 FROM [DT_Output_89])
- INSERT INTO ##TMP_20180508184319_CODEGEN_FZG3UB_XGB_B8 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B8].[KEY], [XGB_B8].[Score_0], [XGB_B8].[Score_1], [XGB_B8].[Score_2], [XGB_B8].[Score_3], [XGB_B8].[Score_4], [XGB_B8].[Score_5], [XGB_B8].[Score_6], [XGB_B8].[Score_7], [XGB_B8].[Score_8], [XGB_B8].[Score_9] 
+ INSERT INTO ##TMP_20180516120531_CODEGEN_PDWKXL_XGB_B8 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B8].[KEY], [XGB_B8].[Score_0], [XGB_B8].[Score_1], [XGB_B8].[Score_2], [XGB_B8].[Score_3], [XGB_B8].[Score_4], [XGB_B8].[Score_5], [XGB_B8].[Score_6], [XGB_B8].[Score_7], [XGB_B8].[Score_8], [XGB_B8].[Score_9] 
 FROM (SELECT [XGB_esu_8].[KEY] AS [KEY], [XGB_esu_8].[Score_0] AS [Score_0], [XGB_esu_8].[Score_1] AS [Score_1], [XGB_esu_8].[Score_2] AS [Score_2], [XGB_esu_8].[Score_3] AS [Score_3], [XGB_esu_8].[Score_4] AS [Score_4], [XGB_esu_8].[Score_5] AS [Score_5], [XGB_esu_8].[Score_6] AS [Score_6], [XGB_esu_8].[Score_7] AS [Score_7], [XGB_esu_8].[Score_8] AS [Score_8], [XGB_esu_8].[Score_9] AS [Score_9] 
 FROM (SELECT [XGB_Model_0_8].[KEY] AS [KEY], [XGB_Model_0_8].[Score_0] AS [Score_0], [XGB_Model_0_8].[Score_1] AS [Score_1], [XGB_Model_0_8].[Score_2] AS [Score_2], [XGB_Model_0_8].[Score_3] AS [Score_3], [XGB_Model_0_8].[Score_4] AS [Score_4], [XGB_Model_0_8].[Score_5] AS [Score_5], [XGB_Model_0_8].[Score_6] AS [Score_6], [XGB_Model_0_8].[Score_7] AS [Score_7], [XGB_Model_0_8].[Score_8] AS [Score_8], [XGB_Model_0_8].[Score_9] AS [Score_9] 
 FROM [XGB_Model_0_8] UNION ALL SELECT [XGB_Model_1_8].[KEY] AS [KEY], [XGB_Model_1_8].[Score_0] AS [Score_0], [XGB_Model_1_8].[Score_1] AS [Score_1], [XGB_Model_1_8].[Score_2] AS [Score_2], [XGB_Model_1_8].[Score_3] AS [Score_3], [XGB_Model_1_8].[Score_4] AS [Score_4], [XGB_Model_1_8].[Score_5] AS [Score_5], [XGB_Model_1_8].[Score_6] AS [Score_6], [XGB_Model_1_8].[Score_7] AS [Score_7], [XGB_Model_1_8].[Score_8] AS [Score_8], [XGB_Model_1_8].[Score_9] AS [Score_9] 
@@ -1563,10 +1563,10 @@ FROM [XGB_Model_7_8] UNION ALL SELECT [XGB_Model_8_8].[KEY] AS [KEY], [XGB_Model
 FROM [XGB_Model_8_8] UNION ALL SELECT [XGB_Model_9_8].[KEY] AS [KEY], [XGB_Model_9_8].[Score_0] AS [Score_0], [XGB_Model_9_8].[Score_1] AS [Score_1], [XGB_Model_9_8].[Score_2] AS [Score_2], [XGB_Model_9_8].[Score_3] AS [Score_3], [XGB_Model_9_8].[Score_4] AS [Score_4], [XGB_Model_9_8].[Score_5] AS [Score_5], [XGB_Model_9_8].[Score_6] AS [Score_6], [XGB_Model_9_8].[Score_7] AS [Score_7], [XGB_Model_9_8].[Score_8] AS [Score_8], [XGB_Model_9_8].[Score_9] AS [Score_9] 
 FROM [XGB_Model_9_8]) AS [XGB_esu_8]) AS [XGB_B8]
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_GWZCLO_XGB_B9 part 1. Create 
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_YS4B4A_XGB_B9 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508184319_CODEGEN_GWZCLO_XGB_B9 (
+CREATE TABLE ##TMP_20180516120531_CODEGEN_YS4B4A_XGB_B9 (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Score_1] FLOAT(53) NULL, 
@@ -1582,11 +1582,11 @@ CREATE TABLE ##TMP_20180508184319_CODEGEN_GWZCLO_XGB_B9 (
 
 
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_GWZCLO_XGB_B9 part 2. Populate
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_YS4B4A_XGB_B9 part 2. Populate
 
 WITH [DT_node_lookup_90] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.6508052349090576) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_30 < -1.2292683124542236) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.42503583431243896) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_30 < -1.555469036102295) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_90] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, -0.03541151434183121 AS [Score] UNION ALL SELECT 5 AS nid, -0.017219481989741325 AS [Score] UNION ALL SELECT 6 AS nid, -0.05281325802206993 AS [Score] UNION ALL SELECT 7 AS nid, 0.10014750808477402 AS [Score] UNION ALL SELECT 8 AS nid, 0.03421618044376373 AS [Score]) AS [Values]), 
@@ -1598,7 +1598,7 @@ FROM [DT_node_lookup_90] LEFT OUTER JOIN [DT_node_data_90] ON [DT_node_lookup_90
 FROM [DT_Output_90]), 
 [DT_node_lookup_91] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 0.5833771228790283) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_61 < -0.8251041173934937) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_22 < 0.7084630727767944) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_65 < 0.05940970778465271) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_4 < 0.08391359448432922) THEN 9 ELSE 10 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_91] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.0030654696747660637 AS [Score] UNION ALL SELECT 4 AS nid, -0.05279405042529106 AS [Score] UNION ALL SELECT 7 AS nid, -0.045832209289073944 AS [Score] UNION ALL SELECT 8 AS nid, 0.11495832353830338 AS [Score] UNION ALL SELECT 9 AS nid, 0.10155969113111496 AS [Score] UNION ALL SELECT 10 AS nid, 0.010237496346235275 AS [Score]) AS [Values]), 
@@ -1610,7 +1610,7 @@ FROM [DT_node_lookup_91] LEFT OUTER JOIN [DT_node_data_91] ON [DT_node_lookup_91
 FROM [DT_Output_91]), 
 [DT_node_lookup_92] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.9085407257080078) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.6745421886444092) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_56 < -0.4521216154098511) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_54 < -0.38872402906417847) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_47 < -0.6618127822875977) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_56 < -0.6539855003356934) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_92] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 6 AS nid, -0.05235069990158081 AS [Score] UNION ALL SELECT 7 AS nid, 0.003284268546849489 AS [Score] UNION ALL SELECT 8 AS nid, 0.10488017648458481 AS [Score] UNION ALL SELECT 9 AS nid, -0.048902805894613266 AS [Score] UNION ALL SELECT 10 AS nid, -0.013764376752078533 AS [Score] UNION ALL SELECT 11 AS nid, -0.048022352159023285 AS [Score] UNION ALL SELECT 12 AS nid, 0.061609961092472076 AS [Score]) AS [Values]), 
@@ -1622,7 +1622,7 @@ FROM [DT_node_lookup_92] LEFT OUTER JOIN [DT_node_data_92] ON [DT_node_lookup_92
 FROM [DT_Output_92]), 
 [DT_node_lookup_93] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.5865546464920044) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.7331587076187134) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_32 < -0.4892825782299042) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_6 < 0.8495087623596191) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_3 < 0.23122252523899078) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_56 < 1.3646528720855713) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_93] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 6 AS nid, -0.0012541812611743808 AS [Score] UNION ALL SELECT 7 AS nid, 0.09702526777982712 AS [Score] UNION ALL SELECT 8 AS nid, 0.002301378408446908 AS [Score] UNION ALL SELECT 9 AS nid, -0.04571797698736191 AS [Score] UNION ALL SELECT 10 AS nid, 0.020825697109103203 AS [Score] UNION ALL SELECT 11 AS nid, -0.05161675810813904 AS [Score] UNION ALL SELECT 12 AS nid, -0.02026638761162758 AS [Score]) AS [Values]), 
@@ -1634,7 +1634,7 @@ FROM [DT_node_lookup_93] LEFT OUTER JOIN [DT_node_data_93] ON [DT_node_lookup_93
 FROM [DT_Output_93]), 
 [DT_node_lookup_94] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_35 < 0.3318006992340088) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_36 < 0.9295716285705566) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_14 < -1.2146971225738525) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_46 < -0.033451806753873825) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_32 < 1.1083672046661377) THEN 9 ELSE 10 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_15 < -0.10267634689807892) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_94] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, -0.011873692274093628 AS [Score] UNION ALL SELECT 7 AS nid, -0.0268925279378891 AS [Score] UNION ALL SELECT 8 AS nid, -0.051815129816532135 AS [Score] UNION ALL SELECT 9 AS nid, -0.052095867693424225 AS [Score] UNION ALL SELECT 10 AS nid, -0.025884563103318214 AS [Score] UNION ALL SELECT 11 AS nid, 0.10551740974187851 AS [Score] UNION ALL SELECT 12 AS nid, 0.0073084295727312565 AS [Score]) AS [Values]), 
@@ -1646,7 +1646,7 @@ FROM [DT_node_lookup_94] LEFT OUTER JOIN [DT_node_data_94] ON [DT_node_lookup_94
 FROM [DT_Output_94]), 
 [DT_node_lookup_95] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -0.8520143032073975) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 < -0.5867252945899963) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_46 < -0.8280013799667358) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.4037269949913025) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_15 < -0.26780885457992554) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_6 < -0.08102508634328842) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_95] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 6 AS nid, -0.05168730020523071 AS [Score] UNION ALL SELECT 7 AS nid, -0.02282322756946087 AS [Score] UNION ALL SELECT 8 AS nid, -0.05129546672105789 AS [Score] UNION ALL SELECT 9 AS nid, 0.10101326555013657 AS [Score] UNION ALL SELECT 10 AS nid, -0.01870923861861229 AS [Score] UNION ALL SELECT 11 AS nid, -0.04958179220557213 AS [Score] UNION ALL SELECT 12 AS nid, -0.0034626342821866274 AS [Score]) AS [Values]), 
@@ -1658,7 +1658,7 @@ FROM [DT_node_lookup_95] LEFT OUTER JOIN [DT_node_data_95] ON [DT_node_lookup_95
 FROM [DT_Output_95]), 
 [DT_node_lookup_96] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.1726703643798828) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.09801987558603287) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_56 < -0.4521216154098511) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_36 < 1.2451571226119995) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_96] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.04672126844525337 AS [Score] UNION ALL SELECT 5 AS nid, -0.05172860249876976 AS [Score] UNION ALL SELECT 6 AS nid, -0.03403058275580406 AS [Score] UNION ALL SELECT 7 AS nid, -0.006417918484658003 AS [Score] UNION ALL SELECT 8 AS nid, 0.09642396867275238 AS [Score]) AS [Values]), 
@@ -1670,7 +1670,7 @@ FROM [DT_node_lookup_96] LEFT OUTER JOIN [DT_node_data_96] ON [DT_node_lookup_96
 FROM [DT_Output_96]), 
 [DT_node_lookup_97] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_55 < -1.3678903579711914) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_39 < -1.4168925285339355) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_28 < 0.5403965711593628) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_16 < 2.0924582481384277) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_63 < -1.058613896369934) THEN 9 ELSE 10 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_97] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.026021962985396385 AS [Score] UNION ALL SELECT 6 AS nid, 0.009580346755683422 AS [Score] UNION ALL SELECT 7 AS nid, 0.10662728548049927 AS [Score] UNION ALL SELECT 8 AS nid, 0.003835584269836545 AS [Score] UNION ALL SELECT 9 AS nid, -0.02894289791584015 AS [Score] UNION ALL SELECT 10 AS nid, -0.052821289747953415 AS [Score]) AS [Values]), 
@@ -1682,7 +1682,7 @@ FROM [DT_node_lookup_97] LEFT OUTER JOIN [DT_node_data_97] ON [DT_node_lookup_97
 FROM [DT_Output_97]), 
 [DT_node_lookup_98] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.39057642221450806) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -0.5313583612442017) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_22 < 0.38400718569755554) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.09801987558603287) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_29 < 1.1136085987091064) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_98] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05087042972445488 AS [Score] UNION ALL SELECT 6 AS nid, -0.023740995675325394 AS [Score] UNION ALL SELECT 7 AS nid, -0.05150742083787918 AS [Score] UNION ALL SELECT 8 AS nid, -0.023919396102428436 AS [Score] UNION ALL SELECT 9 AS nid, -0.005470788571983576 AS [Score] UNION ALL SELECT 10 AS nid, 0.07852805405855179 AS [Score]) AS [Values]), 
@@ -1694,7 +1694,7 @@ FROM [DT_node_lookup_98] LEFT OUTER JOIN [DT_node_data_98] ON [DT_node_lookup_98
 FROM [DT_Output_98]), 
 [DT_node_lookup_99] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.5790972709655762) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < 0.43060946464538574) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_63 < 0.8145052194595337) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_29 < -1.1000995635986328) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -2.1185364723205566) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.11691299825906754) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_99] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.01603718101978302 AS [Score] UNION ALL SELECT 7 AS nid, -0.049595534801483154 AS [Score] UNION ALL SELECT 8 AS nid, 0.005509259179234505 AS [Score] UNION ALL SELECT 9 AS nid, -0.037980061024427414 AS [Score] UNION ALL SELECT 10 AS nid, 0.08812010288238525 AS [Score] UNION ALL SELECT 11 AS nid, -0.033518243581056595 AS [Score] UNION ALL SELECT 12 AS nid, -0.0526418499648571 AS [Score]) AS [Values]), 
@@ -1704,7 +1704,7 @@ FROM [DT_node_lookup_99] LEFT OUTER JOIN [DT_node_data_99] ON [DT_node_lookup_99
 [XGB_Model_9_9] AS 
 (SELECT [DT_Output_99].[KEY] AS [KEY], 0.0 AS [Score_0], 0.0 AS [Score_1], 0.0 AS [Score_2], 0.0 AS [Score_3], 0.0 AS [Score_4], 0.0 AS [Score_5], 0.0 AS [Score_6], 0.0 AS [Score_7], 0.0 AS [Score_8], [DT_Output_99].[Score] AS [Score_9] 
 FROM [DT_Output_99])
- INSERT INTO ##TMP_20180508184319_CODEGEN_GWZCLO_XGB_B9 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B9].[KEY], [XGB_B9].[Score_0], [XGB_B9].[Score_1], [XGB_B9].[Score_2], [XGB_B9].[Score_3], [XGB_B9].[Score_4], [XGB_B9].[Score_5], [XGB_B9].[Score_6], [XGB_B9].[Score_7], [XGB_B9].[Score_8], [XGB_B9].[Score_9] 
+ INSERT INTO ##TMP_20180516120531_CODEGEN_YS4B4A_XGB_B9 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B9].[KEY], [XGB_B9].[Score_0], [XGB_B9].[Score_1], [XGB_B9].[Score_2], [XGB_B9].[Score_3], [XGB_B9].[Score_4], [XGB_B9].[Score_5], [XGB_B9].[Score_6], [XGB_B9].[Score_7], [XGB_B9].[Score_8], [XGB_B9].[Score_9] 
 FROM (SELECT [XGB_esu_9].[KEY] AS [KEY], [XGB_esu_9].[Score_0] AS [Score_0], [XGB_esu_9].[Score_1] AS [Score_1], [XGB_esu_9].[Score_2] AS [Score_2], [XGB_esu_9].[Score_3] AS [Score_3], [XGB_esu_9].[Score_4] AS [Score_4], [XGB_esu_9].[Score_5] AS [Score_5], [XGB_esu_9].[Score_6] AS [Score_6], [XGB_esu_9].[Score_7] AS [Score_7], [XGB_esu_9].[Score_8] AS [Score_8], [XGB_esu_9].[Score_9] AS [Score_9] 
 FROM (SELECT [XGB_Model_0_9].[KEY] AS [KEY], [XGB_Model_0_9].[Score_0] AS [Score_0], [XGB_Model_0_9].[Score_1] AS [Score_1], [XGB_Model_0_9].[Score_2] AS [Score_2], [XGB_Model_0_9].[Score_3] AS [Score_3], [XGB_Model_0_9].[Score_4] AS [Score_4], [XGB_Model_0_9].[Score_5] AS [Score_5], [XGB_Model_0_9].[Score_6] AS [Score_6], [XGB_Model_0_9].[Score_7] AS [Score_7], [XGB_Model_0_9].[Score_8] AS [Score_8], [XGB_Model_0_9].[Score_9] AS [Score_9] 
 FROM [XGB_Model_0_9] UNION ALL SELECT [XGB_Model_1_9].[KEY] AS [KEY], [XGB_Model_1_9].[Score_0] AS [Score_0], [XGB_Model_1_9].[Score_1] AS [Score_1], [XGB_Model_1_9].[Score_2] AS [Score_2], [XGB_Model_1_9].[Score_3] AS [Score_3], [XGB_Model_1_9].[Score_4] AS [Score_4], [XGB_Model_1_9].[Score_5] AS [Score_5], [XGB_Model_1_9].[Score_6] AS [Score_6], [XGB_Model_1_9].[Score_7] AS [Score_7], [XGB_Model_1_9].[Score_8] AS [Score_8], [XGB_Model_1_9].[Score_9] AS [Score_9] 
@@ -1718,10 +1718,10 @@ FROM [XGB_Model_7_9] UNION ALL SELECT [XGB_Model_8_9].[KEY] AS [KEY], [XGB_Model
 FROM [XGB_Model_8_9] UNION ALL SELECT [XGB_Model_9_9].[KEY] AS [KEY], [XGB_Model_9_9].[Score_0] AS [Score_0], [XGB_Model_9_9].[Score_1] AS [Score_1], [XGB_Model_9_9].[Score_2] AS [Score_2], [XGB_Model_9_9].[Score_3] AS [Score_3], [XGB_Model_9_9].[Score_4] AS [Score_4], [XGB_Model_9_9].[Score_5] AS [Score_5], [XGB_Model_9_9].[Score_6] AS [Score_6], [XGB_Model_9_9].[Score_7] AS [Score_7], [XGB_Model_9_9].[Score_8] AS [Score_8], [XGB_Model_9_9].[Score_9] AS [Score_9] 
 FROM [XGB_Model_9_9]) AS [XGB_esu_9]) AS [XGB_B9]
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_YUBSXL_XGB_B10 part 1. Create 
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_IRPX7J_XGB_B10 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508184319_CODEGEN_YUBSXL_XGB_B10 (
+CREATE TABLE ##TMP_20180516120531_CODEGEN_IRPX7J_XGB_B10 (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Score_1] FLOAT(53) NULL, 
@@ -1737,11 +1737,11 @@ CREATE TABLE ##TMP_20180508184319_CODEGEN_YUBSXL_XGB_B10 (
 
 
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_YUBSXL_XGB_B10 part 2. Populate
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_IRPX7J_XGB_B10 part 2. Populate
 
 WITH [DT_node_lookup_100] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.6508052349090576) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_30 < -1.2292683124542236) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.42503583431243896) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_30 < -1.555469036102295) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_100] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, -0.03468821197748184 AS [Score] UNION ALL SELECT 5 AS nid, -0.01597071997821331 AS [Score] UNION ALL SELECT 6 AS nid, -0.052601736038923264 AS [Score] UNION ALL SELECT 7 AS nid, 0.09328173846006393 AS [Score] UNION ALL SELECT 8 AS nid, 0.03125768527388573 AS [Score]) AS [Values]), 
@@ -1753,7 +1753,7 @@ FROM [DT_node_lookup_100] LEFT OUTER JOIN [DT_node_data_100] ON [DT_node_lookup_
 FROM [DT_Output_100]), 
 [DT_node_lookup_101] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 0.5833771228790283) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_61 < -0.8251041173934937) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.6745421886444092) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_12 < 0.5780681371688843) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_15 < 0.062456175684928894) THEN 9 ELSE 10 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_101] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.002658989978954196 AS [Score] UNION ALL SELECT 4 AS nid, -0.052572984248399734 AS [Score] UNION ALL SELECT 7 AS nid, 0.08732356876134872 AS [Score] UNION ALL SELECT 8 AS nid, -0.0200151726603508 AS [Score] UNION ALL SELECT 9 AS nid, -0.05367259308695793 AS [Score] UNION ALL SELECT 10 AS nid, 0.04092565178871155 AS [Score]) AS [Values]), 
@@ -1765,7 +1765,7 @@ FROM [DT_node_lookup_101] LEFT OUTER JOIN [DT_node_data_101] ON [DT_node_lookup_
 FROM [DT_Output_101]), 
 [DT_node_lookup_102] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.26456859707832336) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.6745421886444092) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_29 < 0.7730381488800049) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_22 < -0.26490455865859985) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_64 < 1.0689764022827148) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_102] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05173828825354576 AS [Score] UNION ALL SELECT 6 AS nid, -0.007618315052241087 AS [Score] UNION ALL SELECT 7 AS nid, 0.08768768608570099 AS [Score] UNION ALL SELECT 8 AS nid, -0.017044855281710625 AS [Score] UNION ALL SELECT 9 AS nid, -0.014100420288741589 AS [Score] UNION ALL SELECT 10 AS nid, -0.05071665719151497 AS [Score]) AS [Values]), 
@@ -1777,7 +1777,7 @@ FROM [DT_node_lookup_102] LEFT OUTER JOIN [DT_node_data_102] ON [DT_node_lookup_
 FROM [DT_Output_102]), 
 [DT_node_lookup_103] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.5865546464920044) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.42503583431243896) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_32 < -0.4892825782299042) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_52 < -0.8798106908798218) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_56 < 0.35533374547958374) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_22 < 0.059551309794187546) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_103] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05105732008814812 AS [Score] UNION ALL SELECT 7 AS nid, 0.09007200598716736 AS [Score] UNION ALL SELECT 8 AS nid, -0.003987531177699566 AS [Score] UNION ALL SELECT 9 AS nid, 0.017464954406023026 AS [Score] UNION ALL SELECT 10 AS nid, -0.051646601408720016 AS [Score] UNION ALL SELECT 11 AS nid, -0.04573278874158859 AS [Score] UNION ALL SELECT 12 AS nid, 0.024585729464888573 AS [Score]) AS [Values]), 
@@ -1789,7 +1789,7 @@ FROM [DT_node_lookup_103] LEFT OUTER JOIN [DT_node_data_103] ON [DT_node_lookup_
 FROM [DT_Output_103]), 
 [DT_node_lookup_104] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_35 < 0.3318006992340088) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_36 < 0.9295716285705566) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_27 < 0.9560424089431763) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_46 < -0.033451806753873825) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_32 < 1.1083672046661377) THEN 9 ELSE 10 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_39 < -0.22286398708820343) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_104] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, -0.010848353616893291 AS [Score] UNION ALL SELECT 7 AS nid, -0.05152849107980728 AS [Score] UNION ALL SELECT 8 AS nid, -0.025634748861193657 AS [Score] UNION ALL SELECT 9 AS nid, -0.05165654420852661 AS [Score] UNION ALL SELECT 10 AS nid, -0.024634582921862602 AS [Score] UNION ALL SELECT 11 AS nid, -0.007467871066182852 AS [Score] UNION ALL SELECT 12 AS nid, 0.09452366083860397 AS [Score]) AS [Values]), 
@@ -1801,7 +1801,7 @@ FROM [DT_node_lookup_104] LEFT OUTER JOIN [DT_node_data_104] ON [DT_node_lookup_
 FROM [DT_Output_104]), 
 [DT_node_lookup_105] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -0.8520143032073975) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 < -0.5867252945899963) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_46 < -0.8280013799667358) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_4 < -0.5524126887321472) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_15 < -0.26780885457992554) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_4 < -0.3403039276599884) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_105] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 6 AS nid, -0.051407571882009506 AS [Score] UNION ALL SELECT 7 AS nid, -0.02179436944425106 AS [Score] UNION ALL SELECT 8 AS nid, -0.05094187334179878 AS [Score] UNION ALL SELECT 9 AS nid, -0.009420989081263542 AS [Score] UNION ALL SELECT 10 AS nid, 0.0955100730061531 AS [Score] UNION ALL SELECT 11 AS nid, -0.049179527908563614 AS [Score] UNION ALL SELECT 12 AS nid, -0.003222401486709714 AS [Score]) AS [Values]), 
@@ -1813,7 +1813,7 @@ FROM [DT_node_lookup_105] LEFT OUTER JOIN [DT_node_data_105] ON [DT_node_lookup_
 FROM [DT_Output_105]), 
 [DT_node_lookup_106] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.1726703643798828) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_4 < 0.08391359448432922) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_63 < 0.1333710104227066) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_39 < -0.7345905303955078) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_35 < 1.1839858293533325) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_106] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05151131749153137 AS [Score] UNION ALL SELECT 6 AS nid, -0.03297707065939903 AS [Score] UNION ALL SELECT 7 AS nid, -0.015552292577922344 AS [Score] UNION ALL SELECT 8 AS nid, 0.0962555855512619 AS [Score] UNION ALL SELECT 9 AS nid, -0.053906798362731934 AS [Score] UNION ALL SELECT 10 AS nid, -0.022318877279758453 AS [Score]) AS [Values]), 
@@ -1825,7 +1825,7 @@ FROM [DT_node_lookup_106] LEFT OUTER JOIN [DT_node_data_106] ON [DT_node_lookup_
 FROM [DT_Output_106]), 
 [DT_node_lookup_107] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_55 < -1.3678903579711914) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -0.48229101300239563) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_39 < -1.4168925285339355) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_16 < 2.0924582481384277) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_63 < -1.058613896369934) THEN 9 ELSE 10 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_107] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, -0.04067507013678551 AS [Score] UNION ALL SELECT 6 AS nid, 0.009140451438724995 AS [Score] UNION ALL SELECT 7 AS nid, -0.017995236441493034 AS [Score] UNION ALL SELECT 8 AS nid, 0.0897107943892479 AS [Score] UNION ALL SELECT 9 AS nid, -0.027970317751169205 AS [Score] UNION ALL SELECT 10 AS nid, -0.05260054022073746 AS [Score]) AS [Values]), 
@@ -1837,7 +1837,7 @@ FROM [DT_node_lookup_107] LEFT OUTER JOIN [DT_node_data_107] ON [DT_node_lookup_
 FROM [DT_Output_107]), 
 [DT_node_lookup_108] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.39057642221450806) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -0.5313583612442017) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_54 < -0.38872402906417847) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_52 < 0.17750728130340576) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_29 < 1.1136085987091064) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_108] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05052913352847099 AS [Score] UNION ALL SELECT 6 AS nid, -0.022906994447112083 AS [Score] UNION ALL SELECT 7 AS nid, -0.016665425151586533 AS [Score] UNION ALL SELECT 8 AS nid, -0.048121776431798935 AS [Score] UNION ALL SELECT 9 AS nid, -0.009048431180417538 AS [Score] UNION ALL SELECT 10 AS nid, 0.07032017409801483 AS [Score]) AS [Values]), 
@@ -1849,7 +1849,7 @@ FROM [DT_node_lookup_108] LEFT OUTER JOIN [DT_node_data_108] ON [DT_node_lookup_
 FROM [DT_Output_108]), 
 [DT_node_lookup_109] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.5790972709655762) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_31 < 0.15383459627628326) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < 0.43060946464538574) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_35 < 0.047738973051309586) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -2.1185364723205566) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_37 < -0.7239397168159485) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_109] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.014826244674623013 AS [Score] UNION ALL SELECT 7 AS nid, -0.047581255435943604 AS [Score] UNION ALL SELECT 8 AS nid, -0.010164924897253513 AS [Score] UNION ALL SELECT 9 AS nid, 0.07825443893671036 AS [Score] UNION ALL SELECT 10 AS nid, -0.04128832742571831 AS [Score] UNION ALL SELECT 11 AS nid, -0.032594189047813416 AS [Score] UNION ALL SELECT 12 AS nid, -0.05241534113883972 AS [Score]) AS [Values]), 
@@ -1859,7 +1859,7 @@ FROM [DT_node_lookup_109] LEFT OUTER JOIN [DT_node_data_109] ON [DT_node_lookup_
 [XGB_Model_9_10] AS 
 (SELECT [DT_Output_109].[KEY] AS [KEY], 0.0 AS [Score_0], 0.0 AS [Score_1], 0.0 AS [Score_2], 0.0 AS [Score_3], 0.0 AS [Score_4], 0.0 AS [Score_5], 0.0 AS [Score_6], 0.0 AS [Score_7], 0.0 AS [Score_8], [DT_Output_109].[Score] AS [Score_9] 
 FROM [DT_Output_109])
- INSERT INTO ##TMP_20180508184319_CODEGEN_YUBSXL_XGB_B10 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B10].[KEY], [XGB_B10].[Score_0], [XGB_B10].[Score_1], [XGB_B10].[Score_2], [XGB_B10].[Score_3], [XGB_B10].[Score_4], [XGB_B10].[Score_5], [XGB_B10].[Score_6], [XGB_B10].[Score_7], [XGB_B10].[Score_8], [XGB_B10].[Score_9] 
+ INSERT INTO ##TMP_20180516120531_CODEGEN_IRPX7J_XGB_B10 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B10].[KEY], [XGB_B10].[Score_0], [XGB_B10].[Score_1], [XGB_B10].[Score_2], [XGB_B10].[Score_3], [XGB_B10].[Score_4], [XGB_B10].[Score_5], [XGB_B10].[Score_6], [XGB_B10].[Score_7], [XGB_B10].[Score_8], [XGB_B10].[Score_9] 
 FROM (SELECT [XGB_esu_10].[KEY] AS [KEY], [XGB_esu_10].[Score_0] AS [Score_0], [XGB_esu_10].[Score_1] AS [Score_1], [XGB_esu_10].[Score_2] AS [Score_2], [XGB_esu_10].[Score_3] AS [Score_3], [XGB_esu_10].[Score_4] AS [Score_4], [XGB_esu_10].[Score_5] AS [Score_5], [XGB_esu_10].[Score_6] AS [Score_6], [XGB_esu_10].[Score_7] AS [Score_7], [XGB_esu_10].[Score_8] AS [Score_8], [XGB_esu_10].[Score_9] AS [Score_9] 
 FROM (SELECT [XGB_Model_0_10].[KEY] AS [KEY], [XGB_Model_0_10].[Score_0] AS [Score_0], [XGB_Model_0_10].[Score_1] AS [Score_1], [XGB_Model_0_10].[Score_2] AS [Score_2], [XGB_Model_0_10].[Score_3] AS [Score_3], [XGB_Model_0_10].[Score_4] AS [Score_4], [XGB_Model_0_10].[Score_5] AS [Score_5], [XGB_Model_0_10].[Score_6] AS [Score_6], [XGB_Model_0_10].[Score_7] AS [Score_7], [XGB_Model_0_10].[Score_8] AS [Score_8], [XGB_Model_0_10].[Score_9] AS [Score_9] 
 FROM [XGB_Model_0_10] UNION ALL SELECT [XGB_Model_1_10].[KEY] AS [KEY], [XGB_Model_1_10].[Score_0] AS [Score_0], [XGB_Model_1_10].[Score_1] AS [Score_1], [XGB_Model_1_10].[Score_2] AS [Score_2], [XGB_Model_1_10].[Score_3] AS [Score_3], [XGB_Model_1_10].[Score_4] AS [Score_4], [XGB_Model_1_10].[Score_5] AS [Score_5], [XGB_Model_1_10].[Score_6] AS [Score_6], [XGB_Model_1_10].[Score_7] AS [Score_7], [XGB_Model_1_10].[Score_8] AS [Score_8], [XGB_Model_1_10].[Score_9] AS [Score_9] 
@@ -1873,10 +1873,10 @@ FROM [XGB_Model_7_10] UNION ALL SELECT [XGB_Model_8_10].[KEY] AS [KEY], [XGB_Mod
 FROM [XGB_Model_8_10] UNION ALL SELECT [XGB_Model_9_10].[KEY] AS [KEY], [XGB_Model_9_10].[Score_0] AS [Score_0], [XGB_Model_9_10].[Score_1] AS [Score_1], [XGB_Model_9_10].[Score_2] AS [Score_2], [XGB_Model_9_10].[Score_3] AS [Score_3], [XGB_Model_9_10].[Score_4] AS [Score_4], [XGB_Model_9_10].[Score_5] AS [Score_5], [XGB_Model_9_10].[Score_6] AS [Score_6], [XGB_Model_9_10].[Score_7] AS [Score_7], [XGB_Model_9_10].[Score_8] AS [Score_8], [XGB_Model_9_10].[Score_9] AS [Score_9] 
 FROM [XGB_Model_9_10]) AS [XGB_esu_10]) AS [XGB_B10]
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_X8KXGP_XGB_B11 part 1. Create 
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_955H4B_XGB_B11 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508184319_CODEGEN_X8KXGP_XGB_B11 (
+CREATE TABLE ##TMP_20180516120531_CODEGEN_955H4B_XGB_B11 (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Score_1] FLOAT(53) NULL, 
@@ -1892,11 +1892,11 @@ CREATE TABLE ##TMP_20180508184319_CODEGEN_X8KXGP_XGB_B11 (
 
 
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_X8KXGP_XGB_B11 part 2. Populate
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_955H4B_XGB_B11 part 2. Populate
 
 WITH [DT_node_lookup_110] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.6508052349090576) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_30 < -1.2292683124542236) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_15 < -0.26780885457992554) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.1439052820205688) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_110] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, -0.033913787454366684 AS [Score] UNION ALL SELECT 5 AS nid, -0.013576596975326538 AS [Score] UNION ALL SELECT 6 AS nid, -0.05230698734521866 AS [Score] UNION ALL SELECT 7 AS nid, 0.02781345322728157 AS [Score] UNION ALL SELECT 8 AS nid, 0.08788666874170303 AS [Score]) AS [Values]), 
@@ -1908,7 +1908,7 @@ FROM [DT_node_lookup_110] LEFT OUTER JOIN [DT_node_data_110] ON [DT_node_lookup_
 FROM [DT_Output_110]), 
 [DT_node_lookup_111] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 0.5833771228790283) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_12 < -1.0801674127578735) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_22 < 0.2217792570590973) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_6 < -1.4768257141113281) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_12 < -0.3431738615036011) THEN 9 ELSE 10 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_111] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.001105005736462772 AS [Score] UNION ALL SELECT 4 AS nid, -0.05227602273225784 AS [Score] UNION ALL SELECT 7 AS nid, 0.0597551129758358 AS [Score] UNION ALL SELECT 8 AS nid, -0.052657365798950195 AS [Score] UNION ALL SELECT 9 AS nid, 0.08767811954021454 AS [Score] UNION ALL SELECT 10 AS nid, 0.015106347389519215 AS [Score]) AS [Values]), 
@@ -1920,7 +1920,7 @@ FROM [DT_node_lookup_111] LEFT OUTER JOIN [DT_node_data_111] ON [DT_node_lookup_
 FROM [DT_Output_111]), 
 [DT_node_lookup_112] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.26456859707832336) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_53 < 0.18552160263061523) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_47 < -0.8368426561355591) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_55 < -0.8707377910614014) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_64 < 1.0689764022827148) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_112] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05145533010363579 AS [Score] UNION ALL SELECT 6 AS nid, -0.007094025146216154 AS [Score] UNION ALL SELECT 7 AS nid, 0.031019551679491997 AS [Score] UNION ALL SELECT 8 AS nid, -0.046134740114212036 AS [Score] UNION ALL SELECT 9 AS nid, -0.039197925478219986 AS [Score] UNION ALL SELECT 10 AS nid, 0.0892297551035881 AS [Score]) AS [Values]), 
@@ -1932,7 +1932,7 @@ FROM [DT_node_lookup_112] LEFT OUTER JOIN [DT_node_data_112] ON [DT_node_lookup_
 FROM [DT_Output_112]), 
 [DT_node_lookup_113] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.5865546464920044) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.42503583431243896) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 0.24026328325271606) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_52 < -0.8798106908798218) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_3 < 0.23122252523899078) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_56 < 1.3646528720855713) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_113] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 6 AS nid, 0.0013735690154135227 AS [Score] UNION ALL SELECT 7 AS nid, 0.0832301527261734 AS [Score] UNION ALL SELECT 8 AS nid, -0.008352892473340034 AS [Score] UNION ALL SELECT 9 AS nid, 0.016962138935923576 AS [Score] UNION ALL SELECT 10 AS nid, -0.05128742381930351 AS [Score] UNION ALL SELECT 11 AS nid, -0.05109972506761551 AS [Score] UNION ALL SELECT 12 AS nid, -0.017778484150767326 AS [Score]) AS [Values]), 
@@ -1944,7 +1944,7 @@ FROM [DT_node_lookup_113] LEFT OUTER JOIN [DT_node_data_113] ON [DT_node_lookup_
 FROM [DT_Output_113]), 
 [DT_node_lookup_114] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_4 < -0.9766302108764648) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_63 < 0.6442216634750366) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 < 0.4725869297981262) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_14 < -1.4251656532287598) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_36 < 1.2451571226119995) THEN 9 ELSE 10 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_114] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, -0.03983049467206001 AS [Score] UNION ALL SELECT 5 AS nid, 0.026436258107423782 AS [Score] UNION ALL SELECT 7 AS nid, 0.09591170400381088 AS [Score] UNION ALL SELECT 8 AS nid, -0.008033663034439087 AS [Score] UNION ALL SELECT 9 AS nid, -0.052722103893756866 AS [Score] UNION ALL SELECT 10 AS nid, -0.020054293796420097 AS [Score]) AS [Values]), 
@@ -1956,7 +1956,7 @@ FROM [DT_node_lookup_114] LEFT OUTER JOIN [DT_node_data_114] ON [DT_node_lookup_
 FROM [DT_Output_114]), 
 [DT_node_lookup_115] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -0.8520143032073975) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 < -0.5867252945899963) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_14 < -1.0042287111282349) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.4037269949913025) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.4818384647369385) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.7094341516494751) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_115] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 6 AS nid, -0.05116866156458855 AS [Score] UNION ALL SELECT 7 AS nid, -0.02234474942088127 AS [Score] UNION ALL SELECT 8 AS nid, -0.05081378296017647 AS [Score] UNION ALL SELECT 9 AS nid, 0.08795496821403503 AS [Score] UNION ALL SELECT 10 AS nid, -0.018090473487973213 AS [Score] UNION ALL SELECT 11 AS nid, -0.00429901946336031 AS [Score] UNION ALL SELECT 12 AS nid, -0.048348795622587204 AS [Score]) AS [Values]), 
@@ -1968,7 +1968,7 @@ FROM [DT_node_lookup_115] LEFT OUTER JOIN [DT_node_data_115] ON [DT_node_lookup_
 FROM [DT_Output_115]), 
 [DT_node_lookup_116] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.1726703643798828) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_4 < 0.08391359448432922) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_63 < 0.1333710104227066) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_28 < 0.7013896703720093) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_35 < 1.1839858293533325) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_116] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05124391242861748 AS [Score] UNION ALL SELECT 6 AS nid, -0.03184208273887634 AS [Score] UNION ALL SELECT 7 AS nid, -0.01493560429662466 AS [Score] UNION ALL SELECT 8 AS nid, 0.08993328362703323 AS [Score] UNION ALL SELECT 9 AS nid, -0.05373185873031616 AS [Score] UNION ALL SELECT 10 AS nid, -0.022310269996523857 AS [Score]) AS [Values]), 
@@ -1980,7 +1980,7 @@ FROM [DT_node_lookup_116] LEFT OUTER JOIN [DT_node_data_116] ON [DT_node_lookup_
 FROM [DT_Output_116]), 
 [DT_node_lookup_117] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_55 < -1.3678903579711914) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_28 < 0.5403965711593628) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_31 < -0.35610848665237427) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_36 < 0.6139861345291138) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_16 < 2.0924582481384277) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_63 < -1.058613896369934) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_117] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 6 AS nid, 0.008834886364638805 AS [Score] UNION ALL SELECT 7 AS nid, 0.01766326278448105 AS [Score] UNION ALL SELECT 8 AS nid, 0.09481868892908096 AS [Score] UNION ALL SELECT 9 AS nid, 0.03978234902024269 AS [Score] UNION ALL SELECT 10 AS nid, -0.0515659935772419 AS [Score] UNION ALL SELECT 11 AS nid, -0.026953307911753654 AS [Score] UNION ALL SELECT 12 AS nid, -0.05238739773631096 AS [Score]) AS [Values]), 
@@ -1992,7 +1992,7 @@ FROM [DT_node_lookup_117] LEFT OUTER JOIN [DT_node_data_117] ON [DT_node_lookup_
 FROM [DT_Output_117]), 
 [DT_node_lookup_118] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.39057642221450806) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_24 < -0.4003889560699463) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_15 < 0.2275886833667755) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_29 < -0.4189586043357849) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_40 < 0.1773550808429718) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_118] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.028686467558145523 AS [Score] UNION ALL SELECT 6 AS nid, -0.05183344706892967 AS [Score] UNION ALL SELECT 7 AS nid, -0.039796434342861176 AS [Score] UNION ALL SELECT 8 AS nid, 0.02235383354127407 AS [Score] UNION ALL SELECT 9 AS nid, -0.03722779452800751 AS [Score] UNION ALL SELECT 10 AS nid, 0.0808396264910698 AS [Score]) AS [Values]), 
@@ -2004,7 +2004,7 @@ FROM [DT_node_lookup_118] LEFT OUTER JOIN [DT_node_data_118] ON [DT_node_lookup_
 FROM [DT_Output_118]), 
 [DT_node_lookup_119] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_44 < -0.36054080724716187) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_38 < 0.038861148059368134) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < 0.27028149366378784) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_28 < 0.5403965711593628) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_36 < -0.963941216468811) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_119] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.025698823854327202 AS [Score] UNION ALL SELECT 6 AS nid, -0.051256220787763596 AS [Score] UNION ALL SELECT 7 AS nid, -0.02134673297405243 AS [Score] UNION ALL SELECT 8 AS nid, 0.09231189638376236 AS [Score] UNION ALL SELECT 9 AS nid, -0.04701879248023033 AS [Score] UNION ALL SELECT 10 AS nid, 0.0229050200432539 AS [Score]) AS [Values]), 
@@ -2014,7 +2014,7 @@ FROM [DT_node_lookup_119] LEFT OUTER JOIN [DT_node_data_119] ON [DT_node_lookup_
 [XGB_Model_9_11] AS 
 (SELECT [DT_Output_119].[KEY] AS [KEY], 0.0 AS [Score_0], 0.0 AS [Score_1], 0.0 AS [Score_2], 0.0 AS [Score_3], 0.0 AS [Score_4], 0.0 AS [Score_5], 0.0 AS [Score_6], 0.0 AS [Score_7], 0.0 AS [Score_8], [DT_Output_119].[Score] AS [Score_9] 
 FROM [DT_Output_119])
- INSERT INTO ##TMP_20180508184319_CODEGEN_X8KXGP_XGB_B11 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B11].[KEY], [XGB_B11].[Score_0], [XGB_B11].[Score_1], [XGB_B11].[Score_2], [XGB_B11].[Score_3], [XGB_B11].[Score_4], [XGB_B11].[Score_5], [XGB_B11].[Score_6], [XGB_B11].[Score_7], [XGB_B11].[Score_8], [XGB_B11].[Score_9] 
+ INSERT INTO ##TMP_20180516120531_CODEGEN_955H4B_XGB_B11 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B11].[KEY], [XGB_B11].[Score_0], [XGB_B11].[Score_1], [XGB_B11].[Score_2], [XGB_B11].[Score_3], [XGB_B11].[Score_4], [XGB_B11].[Score_5], [XGB_B11].[Score_6], [XGB_B11].[Score_7], [XGB_B11].[Score_8], [XGB_B11].[Score_9] 
 FROM (SELECT [XGB_esu_11].[KEY] AS [KEY], [XGB_esu_11].[Score_0] AS [Score_0], [XGB_esu_11].[Score_1] AS [Score_1], [XGB_esu_11].[Score_2] AS [Score_2], [XGB_esu_11].[Score_3] AS [Score_3], [XGB_esu_11].[Score_4] AS [Score_4], [XGB_esu_11].[Score_5] AS [Score_5], [XGB_esu_11].[Score_6] AS [Score_6], [XGB_esu_11].[Score_7] AS [Score_7], [XGB_esu_11].[Score_8] AS [Score_8], [XGB_esu_11].[Score_9] AS [Score_9] 
 FROM (SELECT [XGB_Model_0_11].[KEY] AS [KEY], [XGB_Model_0_11].[Score_0] AS [Score_0], [XGB_Model_0_11].[Score_1] AS [Score_1], [XGB_Model_0_11].[Score_2] AS [Score_2], [XGB_Model_0_11].[Score_3] AS [Score_3], [XGB_Model_0_11].[Score_4] AS [Score_4], [XGB_Model_0_11].[Score_5] AS [Score_5], [XGB_Model_0_11].[Score_6] AS [Score_6], [XGB_Model_0_11].[Score_7] AS [Score_7], [XGB_Model_0_11].[Score_8] AS [Score_8], [XGB_Model_0_11].[Score_9] AS [Score_9] 
 FROM [XGB_Model_0_11] UNION ALL SELECT [XGB_Model_1_11].[KEY] AS [KEY], [XGB_Model_1_11].[Score_0] AS [Score_0], [XGB_Model_1_11].[Score_1] AS [Score_1], [XGB_Model_1_11].[Score_2] AS [Score_2], [XGB_Model_1_11].[Score_3] AS [Score_3], [XGB_Model_1_11].[Score_4] AS [Score_4], [XGB_Model_1_11].[Score_5] AS [Score_5], [XGB_Model_1_11].[Score_6] AS [Score_6], [XGB_Model_1_11].[Score_7] AS [Score_7], [XGB_Model_1_11].[Score_8] AS [Score_8], [XGB_Model_1_11].[Score_9] AS [Score_9] 
@@ -2028,10 +2028,10 @@ FROM [XGB_Model_7_11] UNION ALL SELECT [XGB_Model_8_11].[KEY] AS [KEY], [XGB_Mod
 FROM [XGB_Model_8_11] UNION ALL SELECT [XGB_Model_9_11].[KEY] AS [KEY], [XGB_Model_9_11].[Score_0] AS [Score_0], [XGB_Model_9_11].[Score_1] AS [Score_1], [XGB_Model_9_11].[Score_2] AS [Score_2], [XGB_Model_9_11].[Score_3] AS [Score_3], [XGB_Model_9_11].[Score_4] AS [Score_4], [XGB_Model_9_11].[Score_5] AS [Score_5], [XGB_Model_9_11].[Score_6] AS [Score_6], [XGB_Model_9_11].[Score_7] AS [Score_7], [XGB_Model_9_11].[Score_8] AS [Score_8], [XGB_Model_9_11].[Score_9] AS [Score_9] 
 FROM [XGB_Model_9_11]) AS [XGB_esu_11]) AS [XGB_B11]
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_DOEQ0U_XGB_B12 part 1. Create 
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_RIMRCJ_XGB_B12 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508184319_CODEGEN_DOEQ0U_XGB_B12 (
+CREATE TABLE ##TMP_20180516120531_CODEGEN_RIMRCJ_XGB_B12 (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Score_1] FLOAT(53) NULL, 
@@ -2047,11 +2047,11 @@ CREATE TABLE ##TMP_20180508184319_CODEGEN_DOEQ0U_XGB_B12 (
 
 
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_DOEQ0U_XGB_B12 part 2. Populate
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_RIMRCJ_XGB_B12 part 2. Populate
 
 WITH [DT_node_lookup_120] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.6508052349090576) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_29 < -0.07838809490203857) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_20 < 0.45199376344680786) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_30 < -1.555469036102295) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_120] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, -0.017297590151429176 AS [Score] UNION ALL SELECT 5 AS nid, -0.012195232324302197 AS [Score] UNION ALL SELECT 6 AS nid, -0.0522180013358593 AS [Score] UNION ALL SELECT 7 AS nid, 0.05098065733909607 AS [Score] UNION ALL SELECT 8 AS nid, 0.08253508806228638 AS [Score]) AS [Values]), 
@@ -2063,7 +2063,7 @@ FROM [DT_node_lookup_120] LEFT OUTER JOIN [DT_node_data_120] ON [DT_node_lookup_
 FROM [DT_Output_120]), 
 [DT_node_lookup_121] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 0.5833771228790283) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_61 < -0.8251041173934937) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_48 < -0.6777187585830688) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_24 < -0.4003889560699463) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_55 < 1.1178724765777588) THEN 9 ELSE 10 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_121] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.0005051139160059392 AS [Score] UNION ALL SELECT 4 AS nid, -0.05216929316520691 AS [Score] UNION ALL SELECT 7 AS nid, 0.07872914522886276 AS [Score] UNION ALL SELECT 8 AS nid, -0.00375438597984612 AS [Score] UNION ALL SELECT 9 AS nid, -0.05406145378947258 AS [Score] UNION ALL SELECT 10 AS nid, 0.06245175004005432 AS [Score]) AS [Values]), 
@@ -2075,7 +2075,7 @@ FROM [DT_node_lookup_121] LEFT OUTER JOIN [DT_node_data_121] ON [DT_node_lookup_
 FROM [DT_Output_121]), 
 [DT_node_lookup_122] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.26456859707832336) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_64 < -0.3844201862812042) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_39 < -1.0757415294647217) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.5790972709655762) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_64 < 1.0689764022827148) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_122] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.0511813722550869 AS [Score] UNION ALL SELECT 6 AS nid, -0.006606376264244318 AS [Score] UNION ALL SELECT 7 AS nid, 0.02617395855486393 AS [Score] UNION ALL SELECT 8 AS nid, -0.0447017177939415 AS [Score] UNION ALL SELECT 9 AS nid, -0.015405155718326569 AS [Score] UNION ALL SELECT 10 AS nid, 0.08948193490505219 AS [Score]) AS [Values]), 
@@ -2087,7 +2087,7 @@ FROM [DT_node_lookup_122] LEFT OUTER JOIN [DT_node_data_122] ON [DT_node_lookup_
 FROM [DT_Output_122]), 
 [DT_node_lookup_123] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.5865546464920044) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.42503583431243896) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_32 < -0.4892825782299042) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_52 < -0.8798106908798218) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_56 < 0.35533374547958374) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_6 < 0.15160837769508362) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_123] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05049384385347366 AS [Score] UNION ALL SELECT 7 AS nid, 0.0787838026881218 AS [Score] UNION ALL SELECT 8 AS nid, -0.005279031116515398 AS [Score] UNION ALL SELECT 9 AS nid, 0.016864001750946045 AS [Score] UNION ALL SELECT 10 AS nid, -0.05094866082072258 AS [Score] UNION ALL SELECT 11 AS nid, -0.050552647560834885 AS [Score] UNION ALL SELECT 12 AS nid, 0.020715927705168724 AS [Score]) AS [Values]), 
@@ -2099,7 +2099,7 @@ FROM [DT_node_lookup_123] LEFT OUTER JOIN [DT_node_data_123] ON [DT_node_lookup_
 FROM [DT_Output_123]), 
 [DT_node_lookup_124] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_35 < 0.3318006992340088) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_32 < 1.374642252922058) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 < -0.9398293495178223) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_46 < -0.033451806753873825) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_32 < 0.8420922756195068) THEN 9 ELSE 10 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_15 < 0.2275886833667755) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_124] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, 0.002755330177024007 AS [Score] UNION ALL SELECT 7 AS nid, -0.030431583523750305 AS [Score] UNION ALL SELECT 8 AS nid, -0.051063861697912216 AS [Score] UNION ALL SELECT 9 AS nid, -0.0509074442088604 AS [Score] UNION ALL SELECT 10 AS nid, -0.025966590270400047 AS [Score] UNION ALL SELECT 11 AS nid, 0.08495877683162689 AS [Score] UNION ALL SELECT 12 AS nid, -0.00322776404209435 AS [Score]) AS [Values]), 
@@ -2111,7 +2111,7 @@ FROM [DT_node_lookup_124] LEFT OUTER JOIN [DT_node_data_124] ON [DT_node_lookup_
 FROM [DT_Output_124]), 
 [DT_node_lookup_125] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -0.8520143032073975) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 < -0.5867252945899963) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_14 < -1.0042287111282349) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_4 < -0.5524126887321472) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_15 < -0.26780885457992554) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.39057642221450806) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_125] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 6 AS nid, -0.05085905268788338 AS [Score] UNION ALL SELECT 7 AS nid, -0.021216170862317085 AS [Score] UNION ALL SELECT 8 AS nid, -0.050488442182540894 AS [Score] UNION ALL SELECT 9 AS nid, -0.009747485630214214 AS [Score] UNION ALL SELECT 10 AS nid, 0.08458898961544037 AS [Score] UNION ALL SELECT 11 AS nid, -0.04823600500822067 AS [Score] UNION ALL SELECT 12 AS nid, -0.0030366212595254183 AS [Score]) AS [Values]), 
@@ -2123,7 +2123,7 @@ FROM [DT_node_lookup_125] LEFT OUTER JOIN [DT_node_data_125] ON [DT_node_lookup_
 FROM [DT_Output_125]), 
 [DT_node_lookup_126] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.1726703643798828) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.09801987558603287) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_22 < -0.5893604755401611) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_35 < 1.1839858293533325) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_126] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.045672472566366196 AS [Score] UNION ALL SELECT 5 AS nid, -0.05097769573330879 AS [Score] UNION ALL SELECT 6 AS nid, -0.030731189996004105 AS [Score] UNION ALL SELECT 7 AS nid, 0.0804237425327301 AS [Score] UNION ALL SELECT 8 AS nid, -0.001957874046638608 AS [Score]) AS [Values]), 
@@ -2135,7 +2135,7 @@ FROM [DT_node_lookup_126] LEFT OUTER JOIN [DT_node_data_126] ON [DT_node_lookup_
 FROM [DT_Output_126]), 
 [DT_node_lookup_127] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -0.8913522958755493) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_27 < 0.3227207660675049) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_32 < -0.22300760447978973) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_7 < 1.1787950992584229) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_127] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, -0.011525643989443779 AS [Score] UNION ALL SELECT 5 AS nid, -0.05142342671751976 AS [Score] UNION ALL SELECT 6 AS nid, -0.0008440850651822984 AS [Score] UNION ALL SELECT 7 AS nid, 0.04038384184241295 AS [Score] UNION ALL SELECT 8 AS nid, 0.09171309322118759 AS [Score]) AS [Values]), 
@@ -2147,7 +2147,7 @@ FROM [DT_node_lookup_127] LEFT OUTER JOIN [DT_node_data_127] ON [DT_node_lookup_
 FROM [DT_Output_127]), 
 [DT_node_lookup_128] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_37 < -0.08449207991361618) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_54 < -0.9599833488464355) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -0.5313583612442017) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_14 < 0.6795185804367065) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_45 < 1.2696397304534912) THEN 9 ELSE 10 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_128] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.014367560856044292 AS [Score] UNION ALL SELECT 4 AS nid, -0.05074114352464676 AS [Score] UNION ALL SELECT 7 AS nid, -0.051033951342105865 AS [Score] UNION ALL SELECT 8 AS nid, -0.01396673172712326 AS [Score] UNION ALL SELECT 9 AS nid, 0.059038251638412476 AS [Score] UNION ALL SELECT 10 AS nid, -0.04218379408121109 AS [Score]) AS [Values]), 
@@ -2159,7 +2159,7 @@ FROM [DT_node_lookup_128] LEFT OUTER JOIN [DT_node_data_128] ON [DT_node_lookup_
 FROM [DT_Output_128]), 
 [DT_node_lookup_129] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.5790972709655762) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < 0.27028149366378784) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_6 < -0.08102508634328842) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_20 < -0.9578883051872253) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -2.1185364723205566) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_37 < -0.7239397168159485) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_129] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.011837678961455822 AS [Score] UNION ALL SELECT 7 AS nid, 0.001365821692161262 AS [Score] UNION ALL SELECT 8 AS nid, -0.04955817386507988 AS [Score] UNION ALL SELECT 9 AS nid, -0.04084846004843712 AS [Score] UNION ALL SELECT 10 AS nid, 0.0701640173792839 AS [Score] UNION ALL SELECT 11 AS nid, -0.030558044090867043 AS [Score] UNION ALL SELECT 12 AS nid, -0.05204441025853157 AS [Score]) AS [Values]), 
@@ -2169,7 +2169,7 @@ FROM [DT_node_lookup_129] LEFT OUTER JOIN [DT_node_data_129] ON [DT_node_lookup_
 [XGB_Model_9_12] AS 
 (SELECT [DT_Output_129].[KEY] AS [KEY], 0.0 AS [Score_0], 0.0 AS [Score_1], 0.0 AS [Score_2], 0.0 AS [Score_3], 0.0 AS [Score_4], 0.0 AS [Score_5], 0.0 AS [Score_6], 0.0 AS [Score_7], 0.0 AS [Score_8], [DT_Output_129].[Score] AS [Score_9] 
 FROM [DT_Output_129])
- INSERT INTO ##TMP_20180508184319_CODEGEN_DOEQ0U_XGB_B12 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B12].[KEY], [XGB_B12].[Score_0], [XGB_B12].[Score_1], [XGB_B12].[Score_2], [XGB_B12].[Score_3], [XGB_B12].[Score_4], [XGB_B12].[Score_5], [XGB_B12].[Score_6], [XGB_B12].[Score_7], [XGB_B12].[Score_8], [XGB_B12].[Score_9] 
+ INSERT INTO ##TMP_20180516120531_CODEGEN_RIMRCJ_XGB_B12 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B12].[KEY], [XGB_B12].[Score_0], [XGB_B12].[Score_1], [XGB_B12].[Score_2], [XGB_B12].[Score_3], [XGB_B12].[Score_4], [XGB_B12].[Score_5], [XGB_B12].[Score_6], [XGB_B12].[Score_7], [XGB_B12].[Score_8], [XGB_B12].[Score_9] 
 FROM (SELECT [XGB_esu_12].[KEY] AS [KEY], [XGB_esu_12].[Score_0] AS [Score_0], [XGB_esu_12].[Score_1] AS [Score_1], [XGB_esu_12].[Score_2] AS [Score_2], [XGB_esu_12].[Score_3] AS [Score_3], [XGB_esu_12].[Score_4] AS [Score_4], [XGB_esu_12].[Score_5] AS [Score_5], [XGB_esu_12].[Score_6] AS [Score_6], [XGB_esu_12].[Score_7] AS [Score_7], [XGB_esu_12].[Score_8] AS [Score_8], [XGB_esu_12].[Score_9] AS [Score_9] 
 FROM (SELECT [XGB_Model_0_12].[KEY] AS [KEY], [XGB_Model_0_12].[Score_0] AS [Score_0], [XGB_Model_0_12].[Score_1] AS [Score_1], [XGB_Model_0_12].[Score_2] AS [Score_2], [XGB_Model_0_12].[Score_3] AS [Score_3], [XGB_Model_0_12].[Score_4] AS [Score_4], [XGB_Model_0_12].[Score_5] AS [Score_5], [XGB_Model_0_12].[Score_6] AS [Score_6], [XGB_Model_0_12].[Score_7] AS [Score_7], [XGB_Model_0_12].[Score_8] AS [Score_8], [XGB_Model_0_12].[Score_9] AS [Score_9] 
 FROM [XGB_Model_0_12] UNION ALL SELECT [XGB_Model_1_12].[KEY] AS [KEY], [XGB_Model_1_12].[Score_0] AS [Score_0], [XGB_Model_1_12].[Score_1] AS [Score_1], [XGB_Model_1_12].[Score_2] AS [Score_2], [XGB_Model_1_12].[Score_3] AS [Score_3], [XGB_Model_1_12].[Score_4] AS [Score_4], [XGB_Model_1_12].[Score_5] AS [Score_5], [XGB_Model_1_12].[Score_6] AS [Score_6], [XGB_Model_1_12].[Score_7] AS [Score_7], [XGB_Model_1_12].[Score_8] AS [Score_8], [XGB_Model_1_12].[Score_9] AS [Score_9] 
@@ -2183,10 +2183,10 @@ FROM [XGB_Model_7_12] UNION ALL SELECT [XGB_Model_8_12].[KEY] AS [KEY], [XGB_Mod
 FROM [XGB_Model_8_12] UNION ALL SELECT [XGB_Model_9_12].[KEY] AS [KEY], [XGB_Model_9_12].[Score_0] AS [Score_0], [XGB_Model_9_12].[Score_1] AS [Score_1], [XGB_Model_9_12].[Score_2] AS [Score_2], [XGB_Model_9_12].[Score_3] AS [Score_3], [XGB_Model_9_12].[Score_4] AS [Score_4], [XGB_Model_9_12].[Score_5] AS [Score_5], [XGB_Model_9_12].[Score_6] AS [Score_6], [XGB_Model_9_12].[Score_7] AS [Score_7], [XGB_Model_9_12].[Score_8] AS [Score_8], [XGB_Model_9_12].[Score_9] AS [Score_9] 
 FROM [XGB_Model_9_12]) AS [XGB_esu_12]) AS [XGB_B12]
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_8VUDF8_XGB_B13 part 1. Create 
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_48NQVE_XGB_B13 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508184319_CODEGEN_8VUDF8_XGB_B13 (
+CREATE TABLE ##TMP_20180516120531_CODEGEN_48NQVE_XGB_B13 (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Score_1] FLOAT(53) NULL, 
@@ -2202,11 +2202,11 @@ CREATE TABLE ##TMP_20180508184319_CODEGEN_8VUDF8_XGB_B13 (
 
 
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_8VUDF8_XGB_B13 part 2. Populate
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_48NQVE_XGB_B13 part 2. Populate
 
 WITH [DT_node_lookup_130] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.6508052349090576) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_29 < -0.07838809490203857) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_20 < 0.45199376344680786) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -0.974938690662384) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_130] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, -0.016801564022898674 AS [Score] UNION ALL SELECT 5 AS nid, -0.018008273094892502 AS [Score] UNION ALL SELECT 6 AS nid, -0.051931560039520264 AS [Score] UNION ALL SELECT 7 AS nid, 0.047999124974012375 AS [Score] UNION ALL SELECT 8 AS nid, 0.07853791862726212 AS [Score]) AS [Values]), 
@@ -2218,7 +2218,7 @@ FROM [DT_node_lookup_130] LEFT OUTER JOIN [DT_node_data_130] ON [DT_node_lookup_
 FROM [DT_Output_130]), 
 [DT_node_lookup_131] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 0.5833771228790283) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_12 < -1.0801674127578735) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_22 < 0.2217792570590973) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_6 < -1.4768257141113281) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_12 < -0.7116706371307373) THEN 9 ELSE 10 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_131] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, 0.0012105741770938039 AS [Score] UNION ALL SELECT 4 AS nid, -0.05189862474799156 AS [Score] UNION ALL SELECT 7 AS nid, 0.05156949162483215 AS [Score] UNION ALL SELECT 8 AS nid, -0.05219209939241409 AS [Score] UNION ALL SELECT 9 AS nid, 0.08321153372526169 AS [Score] UNION ALL SELECT 10 AS nid, 0.02182791940867901 AS [Score]) AS [Values]), 
@@ -2230,7 +2230,7 @@ FROM [DT_node_lookup_131] LEFT OUTER JOIN [DT_node_data_131] ON [DT_node_lookup_
 FROM [DT_Output_131]), 
 [DT_node_lookup_132] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.9085407257080078) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_64 < -0.3844201862812042) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_39 < -1.2463171482086182) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_54 < -0.579143762588501) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_47 < -0.6618127822875977) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_56 < -0.6539855003356934) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_132] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 6 AS nid, -0.051489200443029404 AS [Score] UNION ALL SELECT 7 AS nid, 0.04912085831165314 AS [Score] UNION ALL SELECT 8 AS nid, -0.041734229773283005 AS [Score] UNION ALL SELECT 9 AS nid, 0.002657391829416156 AS [Score] UNION ALL SELECT 10 AS nid, 0.08835061639547348 AS [Score] UNION ALL SELECT 11 AS nid, -0.04626366123557091 AS [Score] UNION ALL SELECT 12 AS nid, 0.05143818259239197 AS [Score]) AS [Values]), 
@@ -2242,7 +2242,7 @@ FROM [DT_node_lookup_132] LEFT OUTER JOIN [DT_node_data_132] ON [DT_node_lookup_
 FROM [DT_Output_132]), 
 [DT_node_lookup_133] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.5865546464920044) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.7331587076187134) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -0.974938690662384) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_6 < 0.8495087623596191) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_56 < 0.35533374547958374) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_6 < 0.15160837769508362) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_133] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05020688846707344 AS [Score] UNION ALL SELECT 7 AS nid, -0.007464112248271704 AS [Score] UNION ALL SELECT 8 AS nid, 0.0747990757226944 AS [Score] UNION ALL SELECT 9 AS nid, -0.043778564780950546 AS [Score] UNION ALL SELECT 10 AS nid, 0.023963041603565216 AS [Score] UNION ALL SELECT 11 AS nid, -0.050193578004837036 AS [Score] UNION ALL SELECT 12 AS nid, 0.019913149997591972 AS [Score]) AS [Values]), 
@@ -2254,7 +2254,7 @@ FROM [DT_node_lookup_133] LEFT OUTER JOIN [DT_node_data_133] ON [DT_node_lookup_
 FROM [DT_Output_133]), 
 [DT_node_lookup_134] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_4 < -0.9766302108764648) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_63 < 0.6442216634750366) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_15 < -0.10267634689807892) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_14 < -1.4251656532287598) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_36 < 1.2451571226119995) THEN 9 ELSE 10 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_134] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, -0.038435135036706924 AS [Score] UNION ALL SELECT 5 AS nid, 0.024651851505041122 AS [Score] UNION ALL SELECT 7 AS nid, 0.08832379430532455 AS [Score] UNION ALL SELECT 8 AS nid, 0.003193972399458289 AS [Score] UNION ALL SELECT 9 AS nid, -0.0523531511425972 AS [Score] UNION ALL SELECT 10 AS nid, -0.01930132322013378 AS [Score]) AS [Values]), 
@@ -2266,7 +2266,7 @@ FROM [DT_node_lookup_134] LEFT OUTER JOIN [DT_node_data_134] ON [DT_node_lookup_
 FROM [DT_Output_134]), 
 [DT_node_lookup_135] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -0.8520143032073975) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 < -0.5867252945899963) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_4 < 0.08391359448432922) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.4037269949913025) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.4818384647369385) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_135] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.025490297004580498 AS [Score] UNION ALL SELECT 6 AS nid, -0.05063594505190849 AS [Score] UNION ALL SELECT 7 AS nid, -0.049792516976594925 AS [Score] UNION ALL SELECT 8 AS nid, -0.022274820134043694 AS [Score] UNION ALL SELECT 9 AS nid, 0.07882794737815857 AS [Score] UNION ALL SELECT 10 AS nid, -0.01720767468214035 AS [Score]) AS [Values]), 
@@ -2278,7 +2278,7 @@ FROM [DT_node_lookup_135] LEFT OUTER JOIN [DT_node_data_135] ON [DT_node_lookup_
 FROM [DT_Output_135]), 
 [DT_node_lookup_136] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.1726703643798828) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_4 < 0.08391359448432922) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_56 < -0.6539855003356934) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_22 < -0.5893604755401611) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_35 < 1.1839858293533325) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_136] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05072423815727234 AS [Score] UNION ALL SELECT 6 AS nid, -0.02954886294901371 AS [Score] UNION ALL SELECT 7 AS nid, -0.016645243391394615 AS [Score] UNION ALL SELECT 8 AS nid, 0.0808570608496666 AS [Score] UNION ALL SELECT 9 AS nid, -0.02404082380235195 AS [Score] UNION ALL SELECT 10 AS nid, -0.05307502672076225 AS [Score]) AS [Values]), 
@@ -2290,7 +2290,7 @@ FROM [DT_node_lookup_136] LEFT OUTER JOIN [DT_node_data_136] ON [DT_node_lookup_
 FROM [DT_Output_136]), 
 [DT_node_lookup_137] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_63 < -1.058613896369934) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_28 < 0.5403965711593628) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.6745421886444092) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_8 < 0.32828769087791443) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_32 < 1.374642252922058) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_137] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.052284497767686844 AS [Score] UNION ALL SELECT 6 AS nid, -0.030328204855322838 AS [Score] UNION ALL SELECT 7 AS nid, 0.012830535881221294 AS [Score] UNION ALL SELECT 8 AS nid, 0.09033516049385071 AS [Score] UNION ALL SELECT 9 AS nid, -0.04425479844212532 AS [Score] UNION ALL SELECT 10 AS nid, 0.025784019380807877 AS [Score]) AS [Values]), 
@@ -2302,7 +2302,7 @@ FROM [DT_node_lookup_137] LEFT OUTER JOIN [DT_node_data_137] ON [DT_node_lookup_
 FROM [DT_Output_137]), 
 [DT_node_lookup_138] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.39057642221450806) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < -0.5133943557739258) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_47 < 0.5633965134620667) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_45 < 1.2696397304534912) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_40 < 0.1773550808429718) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_138] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.026869384571909904 AS [Score] UNION ALL SELECT 6 AS nid, -0.051484763622283936 AS [Score] UNION ALL SELECT 7 AS nid, -0.04857410117983818 AS [Score] UNION ALL SELECT 8 AS nid, 0.01740272156894207 AS [Score] UNION ALL SELECT 9 AS nid, 0.06647204607725143 AS [Score] UNION ALL SELECT 10 AS nid, -0.034878578037023544 AS [Score]) AS [Values]), 
@@ -2314,7 +2314,7 @@ FROM [DT_node_lookup_138] LEFT OUTER JOIN [DT_node_data_138] ON [DT_node_lookup_
 FROM [DT_Output_138]), 
 [DT_node_lookup_139] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_44 < -0.36054080724716187) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_38 < 0.038861148059368134) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -0.5313583612442017) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_28 < 0.5403965711593628) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_36 < -0.33277028799057007) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_139] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.03002198040485382 AS [Score] UNION ALL SELECT 6 AS nid, -0.052114248275756836 AS [Score] UNION ALL SELECT 7 AS nid, -0.03498983010649681 AS [Score] UNION ALL SELECT 8 AS nid, 0.07742877304553986 AS [Score] UNION ALL SELECT 9 AS nid, -0.04597368463873863 AS [Score] UNION ALL SELECT 10 AS nid, 0.021895715966820717 AS [Score]) AS [Values]), 
@@ -2324,7 +2324,7 @@ FROM [DT_node_lookup_139] LEFT OUTER JOIN [DT_node_data_139] ON [DT_node_lookup_
 [XGB_Model_9_13] AS 
 (SELECT [DT_Output_139].[KEY] AS [KEY], 0.0 AS [Score_0], 0.0 AS [Score_1], 0.0 AS [Score_2], 0.0 AS [Score_3], 0.0 AS [Score_4], 0.0 AS [Score_5], 0.0 AS [Score_6], 0.0 AS [Score_7], 0.0 AS [Score_8], [DT_Output_139].[Score] AS [Score_9] 
 FROM [DT_Output_139])
- INSERT INTO ##TMP_20180508184319_CODEGEN_8VUDF8_XGB_B13 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B13].[KEY], [XGB_B13].[Score_0], [XGB_B13].[Score_1], [XGB_B13].[Score_2], [XGB_B13].[Score_3], [XGB_B13].[Score_4], [XGB_B13].[Score_5], [XGB_B13].[Score_6], [XGB_B13].[Score_7], [XGB_B13].[Score_8], [XGB_B13].[Score_9] 
+ INSERT INTO ##TMP_20180516120531_CODEGEN_48NQVE_XGB_B13 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B13].[KEY], [XGB_B13].[Score_0], [XGB_B13].[Score_1], [XGB_B13].[Score_2], [XGB_B13].[Score_3], [XGB_B13].[Score_4], [XGB_B13].[Score_5], [XGB_B13].[Score_6], [XGB_B13].[Score_7], [XGB_B13].[Score_8], [XGB_B13].[Score_9] 
 FROM (SELECT [XGB_esu_13].[KEY] AS [KEY], [XGB_esu_13].[Score_0] AS [Score_0], [XGB_esu_13].[Score_1] AS [Score_1], [XGB_esu_13].[Score_2] AS [Score_2], [XGB_esu_13].[Score_3] AS [Score_3], [XGB_esu_13].[Score_4] AS [Score_4], [XGB_esu_13].[Score_5] AS [Score_5], [XGB_esu_13].[Score_6] AS [Score_6], [XGB_esu_13].[Score_7] AS [Score_7], [XGB_esu_13].[Score_8] AS [Score_8], [XGB_esu_13].[Score_9] AS [Score_9] 
 FROM (SELECT [XGB_Model_0_13].[KEY] AS [KEY], [XGB_Model_0_13].[Score_0] AS [Score_0], [XGB_Model_0_13].[Score_1] AS [Score_1], [XGB_Model_0_13].[Score_2] AS [Score_2], [XGB_Model_0_13].[Score_3] AS [Score_3], [XGB_Model_0_13].[Score_4] AS [Score_4], [XGB_Model_0_13].[Score_5] AS [Score_5], [XGB_Model_0_13].[Score_6] AS [Score_6], [XGB_Model_0_13].[Score_7] AS [Score_7], [XGB_Model_0_13].[Score_8] AS [Score_8], [XGB_Model_0_13].[Score_9] AS [Score_9] 
 FROM [XGB_Model_0_13] UNION ALL SELECT [XGB_Model_1_13].[KEY] AS [KEY], [XGB_Model_1_13].[Score_0] AS [Score_0], [XGB_Model_1_13].[Score_1] AS [Score_1], [XGB_Model_1_13].[Score_2] AS [Score_2], [XGB_Model_1_13].[Score_3] AS [Score_3], [XGB_Model_1_13].[Score_4] AS [Score_4], [XGB_Model_1_13].[Score_5] AS [Score_5], [XGB_Model_1_13].[Score_6] AS [Score_6], [XGB_Model_1_13].[Score_7] AS [Score_7], [XGB_Model_1_13].[Score_8] AS [Score_8], [XGB_Model_1_13].[Score_9] AS [Score_9] 
@@ -2338,10 +2338,10 @@ FROM [XGB_Model_7_13] UNION ALL SELECT [XGB_Model_8_13].[KEY] AS [KEY], [XGB_Mod
 FROM [XGB_Model_8_13] UNION ALL SELECT [XGB_Model_9_13].[KEY] AS [KEY], [XGB_Model_9_13].[Score_0] AS [Score_0], [XGB_Model_9_13].[Score_1] AS [Score_1], [XGB_Model_9_13].[Score_2] AS [Score_2], [XGB_Model_9_13].[Score_3] AS [Score_3], [XGB_Model_9_13].[Score_4] AS [Score_4], [XGB_Model_9_13].[Score_5] AS [Score_5], [XGB_Model_9_13].[Score_6] AS [Score_6], [XGB_Model_9_13].[Score_7] AS [Score_7], [XGB_Model_9_13].[Score_8] AS [Score_8], [XGB_Model_9_13].[Score_9] AS [Score_9] 
 FROM [XGB_Model_9_13]) AS [XGB_esu_13]) AS [XGB_B13]
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_05EN6G_XGB_B14 part 1. Create 
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_LC8WJV_XGB_B14 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508184319_CODEGEN_05EN6G_XGB_B14 (
+CREATE TABLE ##TMP_20180516120531_CODEGEN_LC8WJV_XGB_B14 (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Score_1] FLOAT(53) NULL, 
@@ -2357,11 +2357,11 @@ CREATE TABLE ##TMP_20180508184319_CODEGEN_05EN6G_XGB_B14 (
 
 
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_05EN6G_XGB_B14 part 2. Populate
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_LC8WJV_XGB_B14 part 2. Populate
 
 WITH [DT_node_lookup_140] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_30 < -1.2292683124542236) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -0.6916863918304443) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_20 < 0.2757585048675537) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_30 < -0.5768668055534363) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_140] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.04096454381942749 AS [Score] UNION ALL SELECT 5 AS nid, -0.03410135209560394 AS [Score] UNION ALL SELECT 6 AS nid, -0.0519716814160347 AS [Score] UNION ALL SELECT 7 AS nid, 0.04929071664810181 AS [Score] UNION ALL SELECT 8 AS nid, 0.08130327612161636 AS [Score]) AS [Values]), 
@@ -2373,7 +2373,7 @@ FROM [DT_node_lookup_140] LEFT OUTER JOIN [DT_node_data_140] ON [DT_node_lookup_
 FROM [DT_Output_140]), 
 [DT_node_lookup_141] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 0.5833771228790283) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_61 < -0.8251041173934937) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_48 < -0.6777187585830688) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_12 < 0.5780681371688843) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_55 < 1.1178724765777588) THEN 9 ELSE 10 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_141] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, 0.0013463431969285011 AS [Score] UNION ALL SELECT 4 AS nid, -0.05180269107222557 AS [Score] UNION ALL SELECT 7 AS nid, 0.06840729713439941 AS [Score] UNION ALL SELECT 8 AS nid, -0.016494499519467354 AS [Score] UNION ALL SELECT 9 AS nid, -0.05389906093478203 AS [Score] UNION ALL SELECT 10 AS nid, 0.05554443225264549 AS [Score]) AS [Values]), 
@@ -2385,7 +2385,7 @@ FROM [DT_node_lookup_141] LEFT OUTER JOIN [DT_node_data_141] ON [DT_node_lookup_
 FROM [DT_Output_141]), 
 [DT_node_lookup_142] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.26456859707832336) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_53 < 0.18552160263061523) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_47 < -0.8368426561355591) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_55 < -0.8707377910614014) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_64 < 1.0689764022827148) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_142] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05068894103169441 AS [Score] UNION ALL SELECT 6 AS nid, -0.006147983018308878 AS [Score] UNION ALL SELECT 7 AS nid, 0.024769870564341545 AS [Score] UNION ALL SELECT 8 AS nid, -0.04479637369513512 AS [Score] UNION ALL SELECT 9 AS nid, -0.03753141686320305 AS [Score] UNION ALL SELECT 10 AS nid, 0.07472237199544907 AS [Score]) AS [Values]), 
@@ -2397,7 +2397,7 @@ FROM [DT_node_lookup_142] LEFT OUTER JOIN [DT_node_data_142] ON [DT_node_lookup_
 FROM [DT_Output_142]), 
 [DT_node_lookup_143] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.5865546464920044) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_45 < -0.42503583431243896) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 0.24026328325271606) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_52 < -0.8798106908798218) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_14 < 1.100455403327942) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_56 < 1.5665167570114136) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_143] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 6 AS nid, -0.00490987952798605 AS [Score] UNION ALL SELECT 7 AS nid, 0.06979507952928543 AS [Score] UNION ALL SELECT 8 AS nid, -0.011277906596660614 AS [Score] UNION ALL SELECT 9 AS nid, 0.017695678398013115 AS [Score] UNION ALL SELECT 10 AS nid, -0.0503758005797863 AS [Score] UNION ALL SELECT 11 AS nid, -0.05189734324812889 AS [Score] UNION ALL SELECT 12 AS nid, -0.01414953451603651 AS [Score]) AS [Values]), 
@@ -2409,7 +2409,7 @@ FROM [DT_node_lookup_143] LEFT OUTER JOIN [DT_node_data_143] ON [DT_node_lookup_
 FROM [DT_Output_143]), 
 [DT_node_lookup_144] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_35 < -0.23632274568080902) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -1.3004136085510254) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_46 < -0.033451806753873825) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_46 < -0.8280013799667358) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_39 < -0.39343950152397156) THEN 9 ELSE 10 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_144] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.019732991233468056 AS [Score] UNION ALL SELECT 4 AS nid, -0.05074469372630119 AS [Score] UNION ALL SELECT 7 AS nid, -0.05065665766596794 AS [Score] UNION ALL SELECT 8 AS nid, -0.016894150525331497 AS [Score] UNION ALL SELECT 9 AS nid, -0.030673140659928322 AS [Score] UNION ALL SELECT 10 AS nid, 0.07491707801818848 AS [Score]) AS [Values]), 
@@ -2421,7 +2421,7 @@ FROM [DT_node_lookup_144] LEFT OUTER JOIN [DT_node_data_144] ON [DT_node_lookup_
 FROM [DT_Output_144]), 
 [DT_node_lookup_145] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -0.8520143032073975) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 < -0.5867252945899963) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_14 < -0.7937602996826172) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_4 < -0.5524126887321472) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_15 < -0.26780885457992554) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_145] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.024128230288624763 AS [Score] UNION ALL SELECT 6 AS nid, -0.05034429952502251 AS [Score] UNION ALL SELECT 7 AS nid, -0.021447328850626945 AS [Score] UNION ALL SELECT 8 AS nid, -0.04971348121762276 AS [Score] UNION ALL SELECT 9 AS nid, -0.009818612597882748 AS [Score] UNION ALL SELECT 10 AS nid, 0.07660257071256638 AS [Score]) AS [Values]), 
@@ -2433,7 +2433,7 @@ FROM [DT_node_lookup_145] LEFT OUTER JOIN [DT_node_data_145] ON [DT_node_lookup_
 FROM [DT_Output_145]), 
 [DT_node_lookup_146] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.1726703643798828) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < 0.09801987558603287) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_56 < -0.25025779008865356) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_35 < 1.1839858293533325) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_146] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.044869568198919296 AS [Score] UNION ALL SELECT 5 AS nid, -0.05047299340367317 AS [Score] UNION ALL SELECT 6 AS nid, -0.028375400230288506 AS [Score] UNION ALL SELECT 7 AS nid, -0.0010184021666646004 AS [Score] UNION ALL SELECT 8 AS nid, 0.07364839315414429 AS [Score]) AS [Values]), 
@@ -2445,7 +2445,7 @@ FROM [DT_node_lookup_146] LEFT OUTER JOIN [DT_node_data_146] ON [DT_node_lookup_
 FROM [DT_Output_146]), 
 [DT_node_lookup_147] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_55 < -1.2021727561950684) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_28 < 0.05741749331355095) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.6745421886444092) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_14 < -0.16235506534576416) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_24 < 1.6858646869659424) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_55 < -0.7050201892852783) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_147] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 6 AS nid, 0.0004680624697357416 AS [Score] UNION ALL SELECT 7 AS nid, 0.01701374724507332 AS [Score] UNION ALL SELECT 8 AS nid, 0.08486900478601456 AS [Score] UNION ALL SELECT 9 AS nid, -0.03262346610426903 AS [Score] UNION ALL SELECT 10 AS nid, 0.04519316554069519 AS [Score] UNION ALL SELECT 11 AS nid, -0.03343546763062477 AS [Score] UNION ALL SELECT 12 AS nid, -0.05213436484336853 AS [Score]) AS [Values]), 
@@ -2457,7 +2457,7 @@ FROM [DT_node_lookup_147] LEFT OUTER JOIN [DT_node_data_147] ON [DT_node_lookup_
 FROM [DT_Output_147]), 
 [DT_node_lookup_148] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.39057642221450806) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_44 < -0.5133943557739258) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_60 < -0.7844718098640442) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_53 < 0.7590487003326416) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_40 < 0.1773550808429718) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_148] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.025732124224305153 AS [Score] UNION ALL SELECT 6 AS nid, -0.0512520968914032 AS [Score] UNION ALL SELECT 7 AS nid, 0.021865949034690857 AS [Score] UNION ALL SELECT 8 AS nid, -0.04604689031839371 AS [Score] UNION ALL SELECT 9 AS nid, 0.06300308555364609 AS [Score] UNION ALL SELECT 10 AS nid, -0.029059603810310364 AS [Score]) AS [Values]), 
@@ -2469,7 +2469,7 @@ FROM [DT_node_lookup_148] LEFT OUTER JOIN [DT_node_data_148] ON [DT_node_lookup_
 FROM [DT_Output_148]), 
 [DT_node_lookup_149] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_44 < -0.36054080724716187) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < 0.27028149366378784) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_46 < -0.9869112968444824) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_20 < -0.9578883051872253) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_36 < -0.33277028799057007) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_149] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.029132559895515442 AS [Score] UNION ALL SELECT 6 AS nid, -0.051869530230760574 AS [Score] UNION ALL SELECT 7 AS nid, 0.0014855292392894626 AS [Score] UNION ALL SELECT 8 AS nid, -0.048245564103126526 AS [Score] UNION ALL SELECT 9 AS nid, -0.04268789291381836 AS [Score] UNION ALL SELECT 10 AS nid, 0.07138045877218246 AS [Score]) AS [Values]), 
@@ -2479,7 +2479,7 @@ FROM [DT_node_lookup_149] LEFT OUTER JOIN [DT_node_data_149] ON [DT_node_lookup_
 [XGB_Model_9_14] AS 
 (SELECT [DT_Output_149].[KEY] AS [KEY], 0.0 AS [Score_0], 0.0 AS [Score_1], 0.0 AS [Score_2], 0.0 AS [Score_3], 0.0 AS [Score_4], 0.0 AS [Score_5], 0.0 AS [Score_6], 0.0 AS [Score_7], 0.0 AS [Score_8], [DT_Output_149].[Score] AS [Score_9] 
 FROM [DT_Output_149])
- INSERT INTO ##TMP_20180508184319_CODEGEN_05EN6G_XGB_B14 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B14].[KEY], [XGB_B14].[Score_0], [XGB_B14].[Score_1], [XGB_B14].[Score_2], [XGB_B14].[Score_3], [XGB_B14].[Score_4], [XGB_B14].[Score_5], [XGB_B14].[Score_6], [XGB_B14].[Score_7], [XGB_B14].[Score_8], [XGB_B14].[Score_9] 
+ INSERT INTO ##TMP_20180516120531_CODEGEN_LC8WJV_XGB_B14 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B14].[KEY], [XGB_B14].[Score_0], [XGB_B14].[Score_1], [XGB_B14].[Score_2], [XGB_B14].[Score_3], [XGB_B14].[Score_4], [XGB_B14].[Score_5], [XGB_B14].[Score_6], [XGB_B14].[Score_7], [XGB_B14].[Score_8], [XGB_B14].[Score_9] 
 FROM (SELECT [XGB_esu_14].[KEY] AS [KEY], [XGB_esu_14].[Score_0] AS [Score_0], [XGB_esu_14].[Score_1] AS [Score_1], [XGB_esu_14].[Score_2] AS [Score_2], [XGB_esu_14].[Score_3] AS [Score_3], [XGB_esu_14].[Score_4] AS [Score_4], [XGB_esu_14].[Score_5] AS [Score_5], [XGB_esu_14].[Score_6] AS [Score_6], [XGB_esu_14].[Score_7] AS [Score_7], [XGB_esu_14].[Score_8] AS [Score_8], [XGB_esu_14].[Score_9] AS [Score_9] 
 FROM (SELECT [XGB_Model_0_14].[KEY] AS [KEY], [XGB_Model_0_14].[Score_0] AS [Score_0], [XGB_Model_0_14].[Score_1] AS [Score_1], [XGB_Model_0_14].[Score_2] AS [Score_2], [XGB_Model_0_14].[Score_3] AS [Score_3], [XGB_Model_0_14].[Score_4] AS [Score_4], [XGB_Model_0_14].[Score_5] AS [Score_5], [XGB_Model_0_14].[Score_6] AS [Score_6], [XGB_Model_0_14].[Score_7] AS [Score_7], [XGB_Model_0_14].[Score_8] AS [Score_8], [XGB_Model_0_14].[Score_9] AS [Score_9] 
 FROM [XGB_Model_0_14] UNION ALL SELECT [XGB_Model_1_14].[KEY] AS [KEY], [XGB_Model_1_14].[Score_0] AS [Score_0], [XGB_Model_1_14].[Score_1] AS [Score_1], [XGB_Model_1_14].[Score_2] AS [Score_2], [XGB_Model_1_14].[Score_3] AS [Score_3], [XGB_Model_1_14].[Score_4] AS [Score_4], [XGB_Model_1_14].[Score_5] AS [Score_5], [XGB_Model_1_14].[Score_6] AS [Score_6], [XGB_Model_1_14].[Score_7] AS [Score_7], [XGB_Model_1_14].[Score_8] AS [Score_8], [XGB_Model_1_14].[Score_9] AS [Score_9] 
@@ -2493,10 +2493,10 @@ FROM [XGB_Model_7_14] UNION ALL SELECT [XGB_Model_8_14].[KEY] AS [KEY], [XGB_Mod
 FROM [XGB_Model_8_14] UNION ALL SELECT [XGB_Model_9_14].[KEY] AS [KEY], [XGB_Model_9_14].[Score_0] AS [Score_0], [XGB_Model_9_14].[Score_1] AS [Score_1], [XGB_Model_9_14].[Score_2] AS [Score_2], [XGB_Model_9_14].[Score_3] AS [Score_3], [XGB_Model_9_14].[Score_4] AS [Score_4], [XGB_Model_9_14].[Score_5] AS [Score_5], [XGB_Model_9_14].[Score_6] AS [Score_6], [XGB_Model_9_14].[Score_7] AS [Score_7], [XGB_Model_9_14].[Score_8] AS [Score_8], [XGB_Model_9_14].[Score_9] AS [Score_9] 
 FROM [XGB_Model_9_14]) AS [XGB_esu_14]) AS [XGB_B14]
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_7HJ3W3_XGB_B15 part 1. Create 
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_BZOOZR_XGB_B15 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508184319_CODEGEN_7HJ3W3_XGB_B15 (
+CREATE TABLE ##TMP_20180516120531_CODEGEN_BZOOZR_XGB_B15 (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Score_1] FLOAT(53) NULL, 
@@ -2512,11 +2512,11 @@ CREATE TABLE ##TMP_20180508184319_CODEGEN_7HJ3W3_XGB_B15 (
 
 
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_7HJ3W3_XGB_B15 part 2. Populate
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_BZOOZR_XGB_B15 part 2. Populate
 
 WITH [DT_node_lookup_150] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_30 < -1.2292683124542236) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -0.6916863918304443) THEN 3 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_20 < 0.45199376344680786) THEN 7 ELSE 8 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_30 < -0.41376644372940063) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_150] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.03990961238741875 AS [Score] UNION ALL SELECT 5 AS nid, -0.03667905926704407 AS [Score] UNION ALL SELECT 6 AS nid, -0.05178096890449524 AS [Score] UNION ALL SELECT 7 AS nid, 0.05262298509478569 AS [Score] UNION ALL SELECT 8 AS nid, 0.07781780511140823 AS [Score]) AS [Values]), 
@@ -2528,7 +2528,7 @@ FROM [DT_node_lookup_150] LEFT OUTER JOIN [DT_node_data_150] ON [DT_node_lookup_
 FROM [DT_Output_150]), 
 [DT_node_lookup_151] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_22 < 1.1951467990875244) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_65 < 2.148015022277832) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_21 < 1.441161870956421) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_12 < 0.5780681371688843) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.6745421886444092) THEN 9 ELSE 10 END ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_151] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, 0.08142048120498657 AS [Score] UNION ALL SELECT 6 AS nid, -0.0433473065495491 AS [Score] UNION ALL SELECT 7 AS nid, -0.048427458852529526 AS [Score] UNION ALL SELECT 8 AS nid, 0.002335370983928442 AS [Score] UNION ALL SELECT 9 AS nid, 0.08045198768377304 AS [Score] UNION ALL SELECT 10 AS nid, 0.011983107775449753 AS [Score]) AS [Values]), 
@@ -2540,7 +2540,7 @@ FROM [DT_node_lookup_151] LEFT OUTER JOIN [DT_node_data_151] ON [DT_node_lookup_
 FROM [DT_Output_151]), 
 [DT_node_lookup_152] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < 0.21841052174568176) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_47 < -0.31175297498703003) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_55 < -0.8707377910614014) THEN 5 ELSE 6 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_54 < 0.944214403629303) THEN 7 ELSE 8 END END ELSE 2 END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_152] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 2 AS nid, -0.05084371566772461 AS [Score] UNION ALL SELECT 5 AS nid, -0.040712859481573105 AS [Score] UNION ALL SELECT 6 AS nid, 0.07580019533634186 AS [Score] UNION ALL SELECT 7 AS nid, -0.05053151771426201 AS [Score] UNION ALL SELECT 8 AS nid, 0.04184698313474655 AS [Score]) AS [Values]), 
@@ -2552,7 +2552,7 @@ FROM [DT_node_lookup_152] LEFT OUTER JOIN [DT_node_data_152] ON [DT_node_lookup_
 FROM [DT_Output_152]), 
 [DT_node_lookup_153] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_28 < -0.5865546464920044) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_32 < -0.22300760447978973) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_53 < 0.7590487003326416) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_56 < 0.35533374547958374) THEN 5 ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_6 < 0.15160837769508362) THEN 9 ELSE 10 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_153] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, -0.04921545088291168 AS [Score] UNION ALL SELECT 5 AS nid, -0.04967314749956131 AS [Score] UNION ALL SELECT 7 AS nid, 0.06346751004457474 AS [Score] UNION ALL SELECT 8 AS nid, -0.041886623948812485 AS [Score] UNION ALL SELECT 9 AS nid, -0.04962296411395073 AS [Score] UNION ALL SELECT 10 AS nid, 0.02178114466369152 AS [Score]) AS [Values]), 
@@ -2564,7 +2564,7 @@ FROM [DT_node_lookup_153] LEFT OUTER JOIN [DT_node_data_153] ON [DT_node_lookup_
 FROM [DT_Output_153]), 
 [DT_node_lookup_154] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_35 < -0.23632274568080902) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_62 < -1.3004136085510254) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_46 < 0.7610977292060852) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_52 < -0.527371346950531) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_15 < 0.2275886833667755) THEN 9 ELSE 10 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_154] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.018564006313681602 AS [Score] UNION ALL SELECT 4 AS nid, -0.050465550273656845 AS [Score] UNION ALL SELECT 7 AS nid, 0.034926772117614746 AS [Score] UNION ALL SELECT 8 AS nid, -0.045584749430418015 AS [Score] UNION ALL SELECT 9 AS nid, 0.0805031880736351 AS [Score] UNION ALL SELECT 10 AS nid, -0.0021682665683329105 AS [Score]) AS [Values]), 
@@ -2576,7 +2576,7 @@ FROM [DT_node_lookup_154] LEFT OUTER JOIN [DT_node_data_154] ON [DT_node_lookup_
 FROM [DT_Output_154]), 
 [DT_node_lookup_155] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -0.8520143032073975) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_7 < -0.5867252945899963) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_37 < 0.3950936496257782) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_4 < -0.5524126887321472) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -1.4818384647369385) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_155] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.02241761051118374 AS [Score] UNION ALL SELECT 6 AS nid, -0.05011887475848198 AS [Score] UNION ALL SELECT 7 AS nid, -0.02134847454726696 AS [Score] UNION ALL SELECT 8 AS nid, -0.04909873008728027 AS [Score] UNION ALL SELECT 9 AS nid, -0.009320106357336044 AS [Score] UNION ALL SELECT 10 AS nid, 0.07277721911668777 AS [Score]) AS [Values]), 
@@ -2588,7 +2588,7 @@ FROM [DT_node_lookup_155] LEFT OUTER JOIN [DT_node_data_155] ON [DT_node_lookup_
 FROM [DT_Output_155]), 
 [DT_node_lookup_156] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_23 < -1.1726703643798828) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_4 < 0.29602235555648804) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_63 < 0.1333710104227066) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_35 < 1.1839858293533325) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_156] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 4 AS nid, -0.045182906091213226 AS [Score] UNION ALL SELECT 5 AS nid, -0.05021481588482857 AS [Score] UNION ALL SELECT 6 AS nid, -0.027125565335154533 AS [Score] UNION ALL SELECT 7 AS nid, -0.018177684396505356 AS [Score] UNION ALL SELECT 8 AS nid, 0.07384877651929855 AS [Score]) AS [Values]), 
@@ -2600,7 +2600,7 @@ FROM [DT_node_lookup_156] LEFT OUTER JOIN [DT_node_data_156] ON [DT_node_lookup_
 FROM [DT_Output_156]), 
 [DT_node_lookup_157] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_63 < -1.058613896369934) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_28 < 0.5403965711593628) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_40 < -0.6745421886444092) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_36 < 0.6139861345291138) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_32 < 1.1083672046661377) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_157] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.05193626880645752 AS [Score] UNION ALL SELECT 6 AS nid, -0.03150944411754608 AS [Score] UNION ALL SELECT 7 AS nid, 0.01170475035905838 AS [Score] UNION ALL SELECT 8 AS nid, 0.08236218243837357 AS [Score] UNION ALL SELECT 9 AS nid, 0.015626313164830208 AS [Score] UNION ALL SELECT 10 AS nid, -0.05158861353993416 AS [Score]) AS [Values]), 
@@ -2612,7 +2612,7 @@ FROM [DT_node_lookup_157] LEFT OUTER JOIN [DT_node_data_157] ON [DT_node_lookup_
 FROM [DT_Output_157]), 
 [DT_node_lookup_158] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_37 < -0.08449207991361618) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_54 < -0.9599833488464355) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_23 < 0.27028149366378784) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_53 < 0.7590487003326416) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_52 < -0.703590989112854) THEN 9 ELSE 10 END END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_158] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 3 AS nid, -0.010803582146763802 AS [Score] UNION ALL SELECT 4 AS nid, -0.05001848563551903 AS [Score] UNION ALL SELECT 7 AS nid, -0.00020433570898603648 AS [Score] UNION ALL SELECT 8 AS nid, -0.047850679606199265 AS [Score] UNION ALL SELECT 9 AS nid, -0.02624225988984108 AS [Score] UNION ALL SELECT 10 AS nid, 0.06554655730724335 AS [Score]) AS [Values]), 
@@ -2624,7 +2624,7 @@ FROM [DT_node_lookup_158] LEFT OUTER JOIN [DT_node_data_158] ON [DT_node_lookup_
 FROM [DT_Output_158]), 
 [DT_node_lookup_159] AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CASE WHEN ([ADS_sca_2_OUT].scaler_44 < -0.36054080724716187) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_38 < -0.974938690662384) THEN CASE WHEN ([ADS_sca_2_OUT].scaler_27 < 0.3227207660675049) THEN 7 ELSE 8 END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_20 < -0.25294727087020874) THEN 9 ELSE 10 END END ELSE CASE WHEN ([ADS_sca_2_OUT].scaler_36 < -0.33277028799057007) THEN 5 ELSE 6 END END AS node_id_2 
-FROM ##TMP_20180508184317_CODEGEN_R8L247_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180516120530_CODEGEN_M0G8BD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [DT_node_data_159] AS 
 (SELECT [Values].nid AS nid, CAST([Values].[Score] AS FLOAT(53)) AS [Score] 
 FROM (SELECT 5 AS nid, -0.028238866478204727 AS [Score] UNION ALL SELECT 6 AS nid, -0.05162692070007324 AS [Score] UNION ALL SELECT 7 AS nid, 0.08395044505596161 AS [Score] UNION ALL SELECT 8 AS nid, 0.03025088645517826 AS [Score] UNION ALL SELECT 9 AS nid, -0.04820084199309349 AS [Score] UNION ALL SELECT 10 AS nid, 0.021868890151381493 AS [Score]) AS [Values]), 
@@ -2634,7 +2634,7 @@ FROM [DT_node_lookup_159] LEFT OUTER JOIN [DT_node_data_159] ON [DT_node_lookup_
 [XGB_Model_9_15] AS 
 (SELECT [DT_Output_159].[KEY] AS [KEY], 0.0 AS [Score_0], 0.0 AS [Score_1], 0.0 AS [Score_2], 0.0 AS [Score_3], 0.0 AS [Score_4], 0.0 AS [Score_5], 0.0 AS [Score_6], 0.0 AS [Score_7], 0.0 AS [Score_8], [DT_Output_159].[Score] AS [Score_9] 
 FROM [DT_Output_159])
- INSERT INTO ##TMP_20180508184319_CODEGEN_7HJ3W3_XGB_B15 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B15].[KEY], [XGB_B15].[Score_0], [XGB_B15].[Score_1], [XGB_B15].[Score_2], [XGB_B15].[Score_3], [XGB_B15].[Score_4], [XGB_B15].[Score_5], [XGB_B15].[Score_6], [XGB_B15].[Score_7], [XGB_B15].[Score_8], [XGB_B15].[Score_9] 
+ INSERT INTO ##TMP_20180516120531_CODEGEN_BZOOZR_XGB_B15 ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_B15].[KEY], [XGB_B15].[Score_0], [XGB_B15].[Score_1], [XGB_B15].[Score_2], [XGB_B15].[Score_3], [XGB_B15].[Score_4], [XGB_B15].[Score_5], [XGB_B15].[Score_6], [XGB_B15].[Score_7], [XGB_B15].[Score_8], [XGB_B15].[Score_9] 
 FROM (SELECT [XGB_esu_15].[KEY] AS [KEY], [XGB_esu_15].[Score_0] AS [Score_0], [XGB_esu_15].[Score_1] AS [Score_1], [XGB_esu_15].[Score_2] AS [Score_2], [XGB_esu_15].[Score_3] AS [Score_3], [XGB_esu_15].[Score_4] AS [Score_4], [XGB_esu_15].[Score_5] AS [Score_5], [XGB_esu_15].[Score_6] AS [Score_6], [XGB_esu_15].[Score_7] AS [Score_7], [XGB_esu_15].[Score_8] AS [Score_8], [XGB_esu_15].[Score_9] AS [Score_9] 
 FROM (SELECT [XGB_Model_0_15].[KEY] AS [KEY], [XGB_Model_0_15].[Score_0] AS [Score_0], [XGB_Model_0_15].[Score_1] AS [Score_1], [XGB_Model_0_15].[Score_2] AS [Score_2], [XGB_Model_0_15].[Score_3] AS [Score_3], [XGB_Model_0_15].[Score_4] AS [Score_4], [XGB_Model_0_15].[Score_5] AS [Score_5], [XGB_Model_0_15].[Score_6] AS [Score_6], [XGB_Model_0_15].[Score_7] AS [Score_7], [XGB_Model_0_15].[Score_8] AS [Score_8], [XGB_Model_0_15].[Score_9] AS [Score_9] 
 FROM [XGB_Model_0_15] UNION ALL SELECT [XGB_Model_1_15].[KEY] AS [KEY], [XGB_Model_1_15].[Score_0] AS [Score_0], [XGB_Model_1_15].[Score_1] AS [Score_1], [XGB_Model_1_15].[Score_2] AS [Score_2], [XGB_Model_1_15].[Score_3] AS [Score_3], [XGB_Model_1_15].[Score_4] AS [Score_4], [XGB_Model_1_15].[Score_5] AS [Score_5], [XGB_Model_1_15].[Score_6] AS [Score_6], [XGB_Model_1_15].[Score_7] AS [Score_7], [XGB_Model_1_15].[Score_8] AS [Score_8], [XGB_Model_1_15].[Score_9] AS [Score_9] 
@@ -2648,10 +2648,10 @@ FROM [XGB_Model_7_15] UNION ALL SELECT [XGB_Model_8_15].[KEY] AS [KEY], [XGB_Mod
 FROM [XGB_Model_8_15] UNION ALL SELECT [XGB_Model_9_15].[KEY] AS [KEY], [XGB_Model_9_15].[Score_0] AS [Score_0], [XGB_Model_9_15].[Score_1] AS [Score_1], [XGB_Model_9_15].[Score_2] AS [Score_2], [XGB_Model_9_15].[Score_3] AS [Score_3], [XGB_Model_9_15].[Score_4] AS [Score_4], [XGB_Model_9_15].[Score_5] AS [Score_5], [XGB_Model_9_15].[Score_6] AS [Score_6], [XGB_Model_9_15].[Score_7] AS [Score_7], [XGB_Model_9_15].[Score_8] AS [Score_8], [XGB_Model_9_15].[Score_9] AS [Score_9] 
 FROM [XGB_Model_9_15]) AS [XGB_esu_15]) AS [XGB_B15]
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_QNFJBL_XGB_Union part 1. Create 
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_ZZ7XB8_XGB_sum part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508184319_CODEGEN_QNFJBL_XGB_Union (
+CREATE TABLE ##TMP_20180516120531_CODEGEN_ZZ7XB8_XGB_sum (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Score_1] FLOAT(53) NULL, 
@@ -2667,59 +2667,37 @@ CREATE TABLE ##TMP_20180508184319_CODEGEN_QNFJBL_XGB_Union (
 
 
 
--- Code For temporary table ##TMP_20180508184319_CODEGEN_QNFJBL_XGB_Union part 2. Populate
+-- Code For temporary table ##TMP_20180516120531_CODEGEN_ZZ7XB8_XGB_sum part 2. Populate
 
-INSERT INTO ##TMP_20180508184319_CODEGEN_QNFJBL_XGB_Union ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_Union].[KEY], [XGB_Union].[Score_0], [XGB_Union].[Score_1], [XGB_Union].[Score_2], [XGB_Union].[Score_3], [XGB_Union].[Score_4], [XGB_Union].[Score_5], [XGB_Union].[Score_6], [XGB_Union].[Score_7], [XGB_Union].[Score_8], [XGB_Union].[Score_9] 
-FROM (SELECT [XGB_EnsembleUnion].[KEY] AS [KEY], [XGB_EnsembleUnion].[Score_0] AS [Score_0], [XGB_EnsembleUnion].[Score_1] AS [Score_1], [XGB_EnsembleUnion].[Score_2] AS [Score_2], [XGB_EnsembleUnion].[Score_3] AS [Score_3], [XGB_EnsembleUnion].[Score_4] AS [Score_4], [XGB_EnsembleUnion].[Score_5] AS [Score_5], [XGB_EnsembleUnion].[Score_6] AS [Score_6], [XGB_EnsembleUnion].[Score_7] AS [Score_7], [XGB_EnsembleUnion].[Score_8] AS [Score_8], [XGB_EnsembleUnion].[Score_9] AS [Score_9] 
+WITH [XGB_Union] AS 
+(SELECT [XGB_EnsembleUnion].[KEY] AS [KEY], [XGB_EnsembleUnion].[Score_0] AS [Score_0], [XGB_EnsembleUnion].[Score_1] AS [Score_1], [XGB_EnsembleUnion].[Score_2] AS [Score_2], [XGB_EnsembleUnion].[Score_3] AS [Score_3], [XGB_EnsembleUnion].[Score_4] AS [Score_4], [XGB_EnsembleUnion].[Score_5] AS [Score_5], [XGB_EnsembleUnion].[Score_6] AS [Score_6], [XGB_EnsembleUnion].[Score_7] AS [Score_7], [XGB_EnsembleUnion].[Score_8] AS [Score_8], [XGB_EnsembleUnion].[Score_9] AS [Score_9] 
 FROM (SELECT [XGB_B0].[KEY] AS [KEY], [XGB_B0].[Score_0] AS [Score_0], [XGB_B0].[Score_1] AS [Score_1], [XGB_B0].[Score_2] AS [Score_2], [XGB_B0].[Score_3] AS [Score_3], [XGB_B0].[Score_4] AS [Score_4], [XGB_B0].[Score_5] AS [Score_5], [XGB_B0].[Score_6] AS [Score_6], [XGB_B0].[Score_7] AS [Score_7], [XGB_B0].[Score_8] AS [Score_8], [XGB_B0].[Score_9] AS [Score_9] 
-FROM ##TMP_20180508184319_CODEGEN_SEE3VC_XGB_B0 AS [XGB_B0] UNION ALL SELECT [XGB_B1].[KEY] AS [KEY], [XGB_B1].[Score_0] AS [Score_0], [XGB_B1].[Score_1] AS [Score_1], [XGB_B1].[Score_2] AS [Score_2], [XGB_B1].[Score_3] AS [Score_3], [XGB_B1].[Score_4] AS [Score_4], [XGB_B1].[Score_5] AS [Score_5], [XGB_B1].[Score_6] AS [Score_6], [XGB_B1].[Score_7] AS [Score_7], [XGB_B1].[Score_8] AS [Score_8], [XGB_B1].[Score_9] AS [Score_9] 
-FROM ##TMP_20180508184319_CODEGEN_Q2BEST_XGB_B1 AS [XGB_B1] UNION ALL SELECT [XGB_B2].[KEY] AS [KEY], [XGB_B2].[Score_0] AS [Score_0], [XGB_B2].[Score_1] AS [Score_1], [XGB_B2].[Score_2] AS [Score_2], [XGB_B2].[Score_3] AS [Score_3], [XGB_B2].[Score_4] AS [Score_4], [XGB_B2].[Score_5] AS [Score_5], [XGB_B2].[Score_6] AS [Score_6], [XGB_B2].[Score_7] AS [Score_7], [XGB_B2].[Score_8] AS [Score_8], [XGB_B2].[Score_9] AS [Score_9] 
-FROM ##TMP_20180508184319_CODEGEN_SZN5JN_XGB_B2 AS [XGB_B2] UNION ALL SELECT [XGB_B3].[KEY] AS [KEY], [XGB_B3].[Score_0] AS [Score_0], [XGB_B3].[Score_1] AS [Score_1], [XGB_B3].[Score_2] AS [Score_2], [XGB_B3].[Score_3] AS [Score_3], [XGB_B3].[Score_4] AS [Score_4], [XGB_B3].[Score_5] AS [Score_5], [XGB_B3].[Score_6] AS [Score_6], [XGB_B3].[Score_7] AS [Score_7], [XGB_B3].[Score_8] AS [Score_8], [XGB_B3].[Score_9] AS [Score_9] 
-FROM ##TMP_20180508184319_CODEGEN_T5LTIC_XGB_B3 AS [XGB_B3] UNION ALL SELECT [XGB_B4].[KEY] AS [KEY], [XGB_B4].[Score_0] AS [Score_0], [XGB_B4].[Score_1] AS [Score_1], [XGB_B4].[Score_2] AS [Score_2], [XGB_B4].[Score_3] AS [Score_3], [XGB_B4].[Score_4] AS [Score_4], [XGB_B4].[Score_5] AS [Score_5], [XGB_B4].[Score_6] AS [Score_6], [XGB_B4].[Score_7] AS [Score_7], [XGB_B4].[Score_8] AS [Score_8], [XGB_B4].[Score_9] AS [Score_9] 
-FROM ##TMP_20180508184319_CODEGEN_VL3JCX_XGB_B4 AS [XGB_B4] UNION ALL SELECT [XGB_B5].[KEY] AS [KEY], [XGB_B5].[Score_0] AS [Score_0], [XGB_B5].[Score_1] AS [Score_1], [XGB_B5].[Score_2] AS [Score_2], [XGB_B5].[Score_3] AS [Score_3], [XGB_B5].[Score_4] AS [Score_4], [XGB_B5].[Score_5] AS [Score_5], [XGB_B5].[Score_6] AS [Score_6], [XGB_B5].[Score_7] AS [Score_7], [XGB_B5].[Score_8] AS [Score_8], [XGB_B5].[Score_9] AS [Score_9] 
-FROM ##TMP_20180508184319_CODEGEN_EQLDKS_XGB_B5 AS [XGB_B5] UNION ALL SELECT [XGB_B6].[KEY] AS [KEY], [XGB_B6].[Score_0] AS [Score_0], [XGB_B6].[Score_1] AS [Score_1], [XGB_B6].[Score_2] AS [Score_2], [XGB_B6].[Score_3] AS [Score_3], [XGB_B6].[Score_4] AS [Score_4], [XGB_B6].[Score_5] AS [Score_5], [XGB_B6].[Score_6] AS [Score_6], [XGB_B6].[Score_7] AS [Score_7], [XGB_B6].[Score_8] AS [Score_8], [XGB_B6].[Score_9] AS [Score_9] 
-FROM ##TMP_20180508184319_CODEGEN_FL8WV2_XGB_B6 AS [XGB_B6] UNION ALL SELECT [XGB_B7].[KEY] AS [KEY], [XGB_B7].[Score_0] AS [Score_0], [XGB_B7].[Score_1] AS [Score_1], [XGB_B7].[Score_2] AS [Score_2], [XGB_B7].[Score_3] AS [Score_3], [XGB_B7].[Score_4] AS [Score_4], [XGB_B7].[Score_5] AS [Score_5], [XGB_B7].[Score_6] AS [Score_6], [XGB_B7].[Score_7] AS [Score_7], [XGB_B7].[Score_8] AS [Score_8], [XGB_B7].[Score_9] AS [Score_9] 
-FROM ##TMP_20180508184319_CODEGEN_E7EX3E_XGB_B7 AS [XGB_B7] UNION ALL SELECT [XGB_B8].[KEY] AS [KEY], [XGB_B8].[Score_0] AS [Score_0], [XGB_B8].[Score_1] AS [Score_1], [XGB_B8].[Score_2] AS [Score_2], [XGB_B8].[Score_3] AS [Score_3], [XGB_B8].[Score_4] AS [Score_4], [XGB_B8].[Score_5] AS [Score_5], [XGB_B8].[Score_6] AS [Score_6], [XGB_B8].[Score_7] AS [Score_7], [XGB_B8].[Score_8] AS [Score_8], [XGB_B8].[Score_9] AS [Score_9] 
-FROM ##TMP_20180508184319_CODEGEN_FZG3UB_XGB_B8 AS [XGB_B8] UNION ALL SELECT [XGB_B9].[KEY] AS [KEY], [XGB_B9].[Score_0] AS [Score_0], [XGB_B9].[Score_1] AS [Score_1], [XGB_B9].[Score_2] AS [Score_2], [XGB_B9].[Score_3] AS [Score_3], [XGB_B9].[Score_4] AS [Score_4], [XGB_B9].[Score_5] AS [Score_5], [XGB_B9].[Score_6] AS [Score_6], [XGB_B9].[Score_7] AS [Score_7], [XGB_B9].[Score_8] AS [Score_8], [XGB_B9].[Score_9] AS [Score_9] 
-FROM ##TMP_20180508184319_CODEGEN_GWZCLO_XGB_B9 AS [XGB_B9] UNION ALL SELECT [XGB_B10].[KEY] AS [KEY], [XGB_B10].[Score_0] AS [Score_0], [XGB_B10].[Score_1] AS [Score_1], [XGB_B10].[Score_2] AS [Score_2], [XGB_B10].[Score_3] AS [Score_3], [XGB_B10].[Score_4] AS [Score_4], [XGB_B10].[Score_5] AS [Score_5], [XGB_B10].[Score_6] AS [Score_6], [XGB_B10].[Score_7] AS [Score_7], [XGB_B10].[Score_8] AS [Score_8], [XGB_B10].[Score_9] AS [Score_9] 
-FROM ##TMP_20180508184319_CODEGEN_YUBSXL_XGB_B10 AS [XGB_B10] UNION ALL SELECT [XGB_B11].[KEY] AS [KEY], [XGB_B11].[Score_0] AS [Score_0], [XGB_B11].[Score_1] AS [Score_1], [XGB_B11].[Score_2] AS [Score_2], [XGB_B11].[Score_3] AS [Score_3], [XGB_B11].[Score_4] AS [Score_4], [XGB_B11].[Score_5] AS [Score_5], [XGB_B11].[Score_6] AS [Score_6], [XGB_B11].[Score_7] AS [Score_7], [XGB_B11].[Score_8] AS [Score_8], [XGB_B11].[Score_9] AS [Score_9] 
-FROM ##TMP_20180508184319_CODEGEN_X8KXGP_XGB_B11 AS [XGB_B11] UNION ALL SELECT [XGB_B12].[KEY] AS [KEY], [XGB_B12].[Score_0] AS [Score_0], [XGB_B12].[Score_1] AS [Score_1], [XGB_B12].[Score_2] AS [Score_2], [XGB_B12].[Score_3] AS [Score_3], [XGB_B12].[Score_4] AS [Score_4], [XGB_B12].[Score_5] AS [Score_5], [XGB_B12].[Score_6] AS [Score_6], [XGB_B12].[Score_7] AS [Score_7], [XGB_B12].[Score_8] AS [Score_8], [XGB_B12].[Score_9] AS [Score_9] 
-FROM ##TMP_20180508184319_CODEGEN_DOEQ0U_XGB_B12 AS [XGB_B12] UNION ALL SELECT [XGB_B13].[KEY] AS [KEY], [XGB_B13].[Score_0] AS [Score_0], [XGB_B13].[Score_1] AS [Score_1], [XGB_B13].[Score_2] AS [Score_2], [XGB_B13].[Score_3] AS [Score_3], [XGB_B13].[Score_4] AS [Score_4], [XGB_B13].[Score_5] AS [Score_5], [XGB_B13].[Score_6] AS [Score_6], [XGB_B13].[Score_7] AS [Score_7], [XGB_B13].[Score_8] AS [Score_8], [XGB_B13].[Score_9] AS [Score_9] 
-FROM ##TMP_20180508184319_CODEGEN_8VUDF8_XGB_B13 AS [XGB_B13] UNION ALL SELECT [XGB_B14].[KEY] AS [KEY], [XGB_B14].[Score_0] AS [Score_0], [XGB_B14].[Score_1] AS [Score_1], [XGB_B14].[Score_2] AS [Score_2], [XGB_B14].[Score_3] AS [Score_3], [XGB_B14].[Score_4] AS [Score_4], [XGB_B14].[Score_5] AS [Score_5], [XGB_B14].[Score_6] AS [Score_6], [XGB_B14].[Score_7] AS [Score_7], [XGB_B14].[Score_8] AS [Score_8], [XGB_B14].[Score_9] AS [Score_9] 
-FROM ##TMP_20180508184319_CODEGEN_05EN6G_XGB_B14 AS [XGB_B14] UNION ALL SELECT [XGB_B15].[KEY] AS [KEY], [XGB_B15].[Score_0] AS [Score_0], [XGB_B15].[Score_1] AS [Score_1], [XGB_B15].[Score_2] AS [Score_2], [XGB_B15].[Score_3] AS [Score_3], [XGB_B15].[Score_4] AS [Score_4], [XGB_B15].[Score_5] AS [Score_5], [XGB_B15].[Score_6] AS [Score_6], [XGB_B15].[Score_7] AS [Score_7], [XGB_B15].[Score_8] AS [Score_8], [XGB_B15].[Score_9] AS [Score_9] 
-FROM ##TMP_20180508184319_CODEGEN_7HJ3W3_XGB_B15 AS [XGB_B15]) AS [XGB_EnsembleUnion]) AS [XGB_Union]
-
--- Code For temporary table ##TMP_20180508184319_CODEGEN_OYTBZN_XGB_sum part 1. Create 
-
-
-CREATE TABLE ##TMP_20180508184319_CODEGEN_OYTBZN_XGB_sum (
-	[KEY] BIGINT NULL, 
-	[Score_0] FLOAT(53) NULL, 
-	[Score_1] FLOAT(53) NULL, 
-	[Score_2] FLOAT(53) NULL, 
-	[Score_3] FLOAT(53) NULL, 
-	[Score_4] FLOAT(53) NULL, 
-	[Score_5] FLOAT(53) NULL, 
-	[Score_6] FLOAT(53) NULL, 
-	[Score_7] FLOAT(53) NULL, 
-	[Score_8] FLOAT(53) NULL, 
-	[Score_9] FLOAT(53) NULL
-)
-
-
-
--- Code For temporary table ##TMP_20180508184319_CODEGEN_OYTBZN_XGB_sum part 2. Populate
-
-INSERT INTO ##TMP_20180508184319_CODEGEN_OYTBZN_XGB_sum ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_sum].[KEY], [XGB_sum].[Score_0], [XGB_sum].[Score_1], [XGB_sum].[Score_2], [XGB_sum].[Score_3], [XGB_sum].[Score_4], [XGB_sum].[Score_5], [XGB_sum].[Score_6], [XGB_sum].[Score_7], [XGB_sum].[Score_8], [XGB_sum].[Score_9] 
+FROM ##TMP_20180516120531_CODEGEN_YEGV1B_XGB_B0 AS [XGB_B0] UNION ALL SELECT [XGB_B1].[KEY] AS [KEY], [XGB_B1].[Score_0] AS [Score_0], [XGB_B1].[Score_1] AS [Score_1], [XGB_B1].[Score_2] AS [Score_2], [XGB_B1].[Score_3] AS [Score_3], [XGB_B1].[Score_4] AS [Score_4], [XGB_B1].[Score_5] AS [Score_5], [XGB_B1].[Score_6] AS [Score_6], [XGB_B1].[Score_7] AS [Score_7], [XGB_B1].[Score_8] AS [Score_8], [XGB_B1].[Score_9] AS [Score_9] 
+FROM ##TMP_20180516120531_CODEGEN_24CZMQ_XGB_B1 AS [XGB_B1] UNION ALL SELECT [XGB_B2].[KEY] AS [KEY], [XGB_B2].[Score_0] AS [Score_0], [XGB_B2].[Score_1] AS [Score_1], [XGB_B2].[Score_2] AS [Score_2], [XGB_B2].[Score_3] AS [Score_3], [XGB_B2].[Score_4] AS [Score_4], [XGB_B2].[Score_5] AS [Score_5], [XGB_B2].[Score_6] AS [Score_6], [XGB_B2].[Score_7] AS [Score_7], [XGB_B2].[Score_8] AS [Score_8], [XGB_B2].[Score_9] AS [Score_9] 
+FROM ##TMP_20180516120531_CODEGEN_FD55UG_XGB_B2 AS [XGB_B2] UNION ALL SELECT [XGB_B3].[KEY] AS [KEY], [XGB_B3].[Score_0] AS [Score_0], [XGB_B3].[Score_1] AS [Score_1], [XGB_B3].[Score_2] AS [Score_2], [XGB_B3].[Score_3] AS [Score_3], [XGB_B3].[Score_4] AS [Score_4], [XGB_B3].[Score_5] AS [Score_5], [XGB_B3].[Score_6] AS [Score_6], [XGB_B3].[Score_7] AS [Score_7], [XGB_B3].[Score_8] AS [Score_8], [XGB_B3].[Score_9] AS [Score_9] 
+FROM ##TMP_20180516120531_CODEGEN_CK8F9D_XGB_B3 AS [XGB_B3] UNION ALL SELECT [XGB_B4].[KEY] AS [KEY], [XGB_B4].[Score_0] AS [Score_0], [XGB_B4].[Score_1] AS [Score_1], [XGB_B4].[Score_2] AS [Score_2], [XGB_B4].[Score_3] AS [Score_3], [XGB_B4].[Score_4] AS [Score_4], [XGB_B4].[Score_5] AS [Score_5], [XGB_B4].[Score_6] AS [Score_6], [XGB_B4].[Score_7] AS [Score_7], [XGB_B4].[Score_8] AS [Score_8], [XGB_B4].[Score_9] AS [Score_9] 
+FROM ##TMP_20180516120531_CODEGEN_DVO6PQ_XGB_B4 AS [XGB_B4] UNION ALL SELECT [XGB_B5].[KEY] AS [KEY], [XGB_B5].[Score_0] AS [Score_0], [XGB_B5].[Score_1] AS [Score_1], [XGB_B5].[Score_2] AS [Score_2], [XGB_B5].[Score_3] AS [Score_3], [XGB_B5].[Score_4] AS [Score_4], [XGB_B5].[Score_5] AS [Score_5], [XGB_B5].[Score_6] AS [Score_6], [XGB_B5].[Score_7] AS [Score_7], [XGB_B5].[Score_8] AS [Score_8], [XGB_B5].[Score_9] AS [Score_9] 
+FROM ##TMP_20180516120531_CODEGEN_AE2LSP_XGB_B5 AS [XGB_B5] UNION ALL SELECT [XGB_B6].[KEY] AS [KEY], [XGB_B6].[Score_0] AS [Score_0], [XGB_B6].[Score_1] AS [Score_1], [XGB_B6].[Score_2] AS [Score_2], [XGB_B6].[Score_3] AS [Score_3], [XGB_B6].[Score_4] AS [Score_4], [XGB_B6].[Score_5] AS [Score_5], [XGB_B6].[Score_6] AS [Score_6], [XGB_B6].[Score_7] AS [Score_7], [XGB_B6].[Score_8] AS [Score_8], [XGB_B6].[Score_9] AS [Score_9] 
+FROM ##TMP_20180516120531_CODEGEN_9O6YRI_XGB_B6 AS [XGB_B6] UNION ALL SELECT [XGB_B7].[KEY] AS [KEY], [XGB_B7].[Score_0] AS [Score_0], [XGB_B7].[Score_1] AS [Score_1], [XGB_B7].[Score_2] AS [Score_2], [XGB_B7].[Score_3] AS [Score_3], [XGB_B7].[Score_4] AS [Score_4], [XGB_B7].[Score_5] AS [Score_5], [XGB_B7].[Score_6] AS [Score_6], [XGB_B7].[Score_7] AS [Score_7], [XGB_B7].[Score_8] AS [Score_8], [XGB_B7].[Score_9] AS [Score_9] 
+FROM ##TMP_20180516120531_CODEGEN_MPHRJ7_XGB_B7 AS [XGB_B7] UNION ALL SELECT [XGB_B8].[KEY] AS [KEY], [XGB_B8].[Score_0] AS [Score_0], [XGB_B8].[Score_1] AS [Score_1], [XGB_B8].[Score_2] AS [Score_2], [XGB_B8].[Score_3] AS [Score_3], [XGB_B8].[Score_4] AS [Score_4], [XGB_B8].[Score_5] AS [Score_5], [XGB_B8].[Score_6] AS [Score_6], [XGB_B8].[Score_7] AS [Score_7], [XGB_B8].[Score_8] AS [Score_8], [XGB_B8].[Score_9] AS [Score_9] 
+FROM ##TMP_20180516120531_CODEGEN_PDWKXL_XGB_B8 AS [XGB_B8] UNION ALL SELECT [XGB_B9].[KEY] AS [KEY], [XGB_B9].[Score_0] AS [Score_0], [XGB_B9].[Score_1] AS [Score_1], [XGB_B9].[Score_2] AS [Score_2], [XGB_B9].[Score_3] AS [Score_3], [XGB_B9].[Score_4] AS [Score_4], [XGB_B9].[Score_5] AS [Score_5], [XGB_B9].[Score_6] AS [Score_6], [XGB_B9].[Score_7] AS [Score_7], [XGB_B9].[Score_8] AS [Score_8], [XGB_B9].[Score_9] AS [Score_9] 
+FROM ##TMP_20180516120531_CODEGEN_YS4B4A_XGB_B9 AS [XGB_B9] UNION ALL SELECT [XGB_B10].[KEY] AS [KEY], [XGB_B10].[Score_0] AS [Score_0], [XGB_B10].[Score_1] AS [Score_1], [XGB_B10].[Score_2] AS [Score_2], [XGB_B10].[Score_3] AS [Score_3], [XGB_B10].[Score_4] AS [Score_4], [XGB_B10].[Score_5] AS [Score_5], [XGB_B10].[Score_6] AS [Score_6], [XGB_B10].[Score_7] AS [Score_7], [XGB_B10].[Score_8] AS [Score_8], [XGB_B10].[Score_9] AS [Score_9] 
+FROM ##TMP_20180516120531_CODEGEN_IRPX7J_XGB_B10 AS [XGB_B10] UNION ALL SELECT [XGB_B11].[KEY] AS [KEY], [XGB_B11].[Score_0] AS [Score_0], [XGB_B11].[Score_1] AS [Score_1], [XGB_B11].[Score_2] AS [Score_2], [XGB_B11].[Score_3] AS [Score_3], [XGB_B11].[Score_4] AS [Score_4], [XGB_B11].[Score_5] AS [Score_5], [XGB_B11].[Score_6] AS [Score_6], [XGB_B11].[Score_7] AS [Score_7], [XGB_B11].[Score_8] AS [Score_8], [XGB_B11].[Score_9] AS [Score_9] 
+FROM ##TMP_20180516120531_CODEGEN_955H4B_XGB_B11 AS [XGB_B11] UNION ALL SELECT [XGB_B12].[KEY] AS [KEY], [XGB_B12].[Score_0] AS [Score_0], [XGB_B12].[Score_1] AS [Score_1], [XGB_B12].[Score_2] AS [Score_2], [XGB_B12].[Score_3] AS [Score_3], [XGB_B12].[Score_4] AS [Score_4], [XGB_B12].[Score_5] AS [Score_5], [XGB_B12].[Score_6] AS [Score_6], [XGB_B12].[Score_7] AS [Score_7], [XGB_B12].[Score_8] AS [Score_8], [XGB_B12].[Score_9] AS [Score_9] 
+FROM ##TMP_20180516120531_CODEGEN_RIMRCJ_XGB_B12 AS [XGB_B12] UNION ALL SELECT [XGB_B13].[KEY] AS [KEY], [XGB_B13].[Score_0] AS [Score_0], [XGB_B13].[Score_1] AS [Score_1], [XGB_B13].[Score_2] AS [Score_2], [XGB_B13].[Score_3] AS [Score_3], [XGB_B13].[Score_4] AS [Score_4], [XGB_B13].[Score_5] AS [Score_5], [XGB_B13].[Score_6] AS [Score_6], [XGB_B13].[Score_7] AS [Score_7], [XGB_B13].[Score_8] AS [Score_8], [XGB_B13].[Score_9] AS [Score_9] 
+FROM ##TMP_20180516120531_CODEGEN_48NQVE_XGB_B13 AS [XGB_B13] UNION ALL SELECT [XGB_B14].[KEY] AS [KEY], [XGB_B14].[Score_0] AS [Score_0], [XGB_B14].[Score_1] AS [Score_1], [XGB_B14].[Score_2] AS [Score_2], [XGB_B14].[Score_3] AS [Score_3], [XGB_B14].[Score_4] AS [Score_4], [XGB_B14].[Score_5] AS [Score_5], [XGB_B14].[Score_6] AS [Score_6], [XGB_B14].[Score_7] AS [Score_7], [XGB_B14].[Score_8] AS [Score_8], [XGB_B14].[Score_9] AS [Score_9] 
+FROM ##TMP_20180516120531_CODEGEN_LC8WJV_XGB_B14 AS [XGB_B14] UNION ALL SELECT [XGB_B15].[KEY] AS [KEY], [XGB_B15].[Score_0] AS [Score_0], [XGB_B15].[Score_1] AS [Score_1], [XGB_B15].[Score_2] AS [Score_2], [XGB_B15].[Score_3] AS [Score_3], [XGB_B15].[Score_4] AS [Score_4], [XGB_B15].[Score_5] AS [Score_5], [XGB_B15].[Score_6] AS [Score_6], [XGB_B15].[Score_7] AS [Score_7], [XGB_B15].[Score_8] AS [Score_8], [XGB_B15].[Score_9] AS [Score_9] 
+FROM ##TMP_20180516120531_CODEGEN_BZOOZR_XGB_B15 AS [XGB_B15]) AS [XGB_EnsembleUnion])
+ INSERT INTO ##TMP_20180516120531_CODEGEN_ZZ7XB8_XGB_sum ([KEY], [Score_0], [Score_1], [Score_2], [Score_3], [Score_4], [Score_5], [Score_6], [Score_7], [Score_8], [Score_9]) SELECT [XGB_sum].[KEY], [XGB_sum].[Score_0], [XGB_sum].[Score_1], [XGB_sum].[Score_2], [XGB_sum].[Score_3], [XGB_sum].[Score_4], [XGB_sum].[Score_5], [XGB_sum].[Score_6], [XGB_sum].[Score_7], [XGB_sum].[Score_8], [XGB_sum].[Score_9] 
 FROM (SELECT [T].[KEY] AS [KEY], CAST([T].[Score_0] AS FLOAT(53)) AS [Score_0], CAST([T].[Score_1] AS FLOAT(53)) AS [Score_1], CAST([T].[Score_2] AS FLOAT(53)) AS [Score_2], CAST([T].[Score_3] AS FLOAT(53)) AS [Score_3], CAST([T].[Score_4] AS FLOAT(53)) AS [Score_4], CAST([T].[Score_5] AS FLOAT(53)) AS [Score_5], CAST([T].[Score_6] AS FLOAT(53)) AS [Score_6], CAST([T].[Score_7] AS FLOAT(53)) AS [Score_7], CAST([T].[Score_8] AS FLOAT(53)) AS [Score_8], CAST([T].[Score_9] AS FLOAT(53)) AS [Score_9] 
 FROM (SELECT [XGB_Union].[KEY] AS [KEY], sum([XGB_Union].[Score_0]) AS [Score_0], sum([XGB_Union].[Score_1]) AS [Score_1], sum([XGB_Union].[Score_2]) AS [Score_2], sum([XGB_Union].[Score_3]) AS [Score_3], sum([XGB_Union].[Score_4]) AS [Score_4], sum([XGB_Union].[Score_5]) AS [Score_5], sum([XGB_Union].[Score_6]) AS [Score_6], sum([XGB_Union].[Score_7]) AS [Score_7], sum([XGB_Union].[Score_8]) AS [Score_8], sum([XGB_Union].[Score_9]) AS [Score_9] 
-FROM ##TMP_20180508184319_CODEGEN_QNFJBL_XGB_Union AS [XGB_Union] GROUP BY [XGB_Union].[KEY]) AS [T]) AS [XGB_sum]
+FROM [XGB_Union] GROUP BY [XGB_Union].[KEY]) AS [T]) AS [XGB_sum]
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT [XGB_sum].[KEY] AS [KEY], [XGB_sum].[Score_0] AS [Score_0], [XGB_sum].[Score_1] AS [Score_1], [XGB_sum].[Score_2] AS [Score_2], [XGB_sum].[Score_3] AS [Score_3], [XGB_sum].[Score_4] AS [Score_4], [XGB_sum].[Score_5] AS [Score_5], [XGB_sum].[Score_6] AS [Score_6], [XGB_sum].[Score_7] AS [Score_7], [XGB_sum].[Score_8] AS [Score_8], [XGB_sum].[Score_9] AS [Score_9], CAST(NULL AS FLOAT(53)) AS [Proba_0], CAST(NULL AS FLOAT(53)) AS [Proba_1], CAST(NULL AS FLOAT(53)) AS [Proba_2], CAST(NULL AS FLOAT(53)) AS [Proba_3], CAST(NULL AS FLOAT(53)) AS [Proba_4], CAST(NULL AS FLOAT(53)) AS [Proba_5], CAST(NULL AS FLOAT(53)) AS [Proba_6], CAST(NULL AS FLOAT(53)) AS [Proba_7], CAST(NULL AS FLOAT(53)) AS [Proba_8], CAST(NULL AS FLOAT(53)) AS [Proba_9], CAST(NULL AS FLOAT(53)) AS [LogProba_0], CAST(NULL AS FLOAT(53)) AS [LogProba_1], CAST(NULL AS FLOAT(53)) AS [LogProba_2], CAST(NULL AS FLOAT(53)) AS [LogProba_3], CAST(NULL AS FLOAT(53)) AS [LogProba_4], CAST(NULL AS FLOAT(53)) AS [LogProba_5], CAST(NULL AS FLOAT(53)) AS [LogProba_6], CAST(NULL AS FLOAT(53)) AS [LogProba_7], CAST(NULL AS FLOAT(53)) AS [LogProba_8], CAST(NULL AS FLOAT(53)) AS [LogProba_9], CAST(NULL AS BIGINT) AS [Decision], CAST(NULL AS FLOAT(53)) AS [DecisionProba] 
-FROM ##TMP_20180508184319_CODEGEN_OYTBZN_XGB_sum AS [XGB_sum]), 
+FROM ##TMP_20180516120531_CODEGEN_ZZ7XB8_XGB_sum AS [XGB_sum]), 
 score_class_union AS 
 (SELECT scu.[KEY_u] AS [KEY_u], scu.class AS class, scu.[LogProba] AS [LogProba], scu.[Proba] AS [Proba], scu.[Score] AS [Score] 
 FROM (SELECT orig_cte.[KEY] AS [KEY_u], 0 AS class, orig_cte.[LogProba_0] AS [LogProba], orig_cte.[Proba_0] AS [Proba], orig_cte.[Score_0] AS [Score] 
@@ -2738,7 +2716,7 @@ score_max AS
 FROM orig_cte LEFT OUTER JOIN (SELECT score_class_union.[KEY_u] AS [KEY_m], max(score_class_union.[Score]) AS [max_Score] 
 FROM score_class_union GROUP BY score_class_union.[KEY_u]) AS max_select ON orig_cte.[KEY] = max_select.[KEY_m]), 
 score_soft_max_deltas AS 
-(SELECT score_max.[KEY] AS [KEY], score_max.[Score_0] AS [Score_0], score_max.[Score_1] AS [Score_1], score_max.[Score_2] AS [Score_2], score_max.[Score_3] AS [Score_3], score_max.[Score_4] AS [Score_4], score_max.[Score_5] AS [Score_5], score_max.[Score_6] AS [Score_6], score_max.[Score_7] AS [Score_7], score_max.[Score_8] AS [Score_8], score_max.[Score_9] AS [Score_9], score_max.[Proba_0] AS [Proba_0], score_max.[Proba_1] AS [Proba_1], score_max.[Proba_2] AS [Proba_2], score_max.[Proba_3] AS [Proba_3], score_max.[Proba_4] AS [Proba_4], score_max.[Proba_5] AS [Proba_5], score_max.[Proba_6] AS [Proba_6], score_max.[Proba_7] AS [Proba_7], score_max.[Proba_8] AS [Proba_8], score_max.[Proba_9] AS [Proba_9], score_max.[LogProba_0] AS [LogProba_0], score_max.[LogProba_1] AS [LogProba_1], score_max.[LogProba_2] AS [LogProba_2], score_max.[LogProba_3] AS [LogProba_3], score_max.[LogProba_4] AS [LogProba_4], score_max.[LogProba_5] AS [LogProba_5], score_max.[LogProba_6] AS [LogProba_6], score_max.[LogProba_7] AS [LogProba_7], score_max.[LogProba_8] AS [LogProba_8], score_max.[LogProba_9] AS [LogProba_9], score_max.[Decision] AS [Decision], score_max.[DecisionProba] AS [DecisionProba], score_max.[KEY_m] AS [KEY_m], score_max.[max_Score] AS [max_Score], exp(score_max.[Score_0] - score_max.[max_Score]) AS [exp_delta_Score_0], exp(score_max.[Score_1] - score_max.[max_Score]) AS [exp_delta_Score_1], exp(score_max.[Score_2] - score_max.[max_Score]) AS [exp_delta_Score_2], exp(score_max.[Score_3] - score_max.[max_Score]) AS [exp_delta_Score_3], exp(score_max.[Score_4] - score_max.[max_Score]) AS [exp_delta_Score_4], exp(score_max.[Score_5] - score_max.[max_Score]) AS [exp_delta_Score_5], exp(score_max.[Score_6] - score_max.[max_Score]) AS [exp_delta_Score_6], exp(score_max.[Score_7] - score_max.[max_Score]) AS [exp_delta_Score_7], exp(score_max.[Score_8] - score_max.[max_Score]) AS [exp_delta_Score_8], exp(score_max.[Score_9] - score_max.[max_Score]) AS [exp_delta_Score_9] 
+(SELECT score_max.[KEY] AS [KEY], score_max.[Score_0] AS [Score_0], score_max.[Score_1] AS [Score_1], score_max.[Score_2] AS [Score_2], score_max.[Score_3] AS [Score_3], score_max.[Score_4] AS [Score_4], score_max.[Score_5] AS [Score_5], score_max.[Score_6] AS [Score_6], score_max.[Score_7] AS [Score_7], score_max.[Score_8] AS [Score_8], score_max.[Score_9] AS [Score_9], score_max.[Proba_0] AS [Proba_0], score_max.[Proba_1] AS [Proba_1], score_max.[Proba_2] AS [Proba_2], score_max.[Proba_3] AS [Proba_3], score_max.[Proba_4] AS [Proba_4], score_max.[Proba_5] AS [Proba_5], score_max.[Proba_6] AS [Proba_6], score_max.[Proba_7] AS [Proba_7], score_max.[Proba_8] AS [Proba_8], score_max.[Proba_9] AS [Proba_9], score_max.[LogProba_0] AS [LogProba_0], score_max.[LogProba_1] AS [LogProba_1], score_max.[LogProba_2] AS [LogProba_2], score_max.[LogProba_3] AS [LogProba_3], score_max.[LogProba_4] AS [LogProba_4], score_max.[LogProba_5] AS [LogProba_5], score_max.[LogProba_6] AS [LogProba_6], score_max.[LogProba_7] AS [LogProba_7], score_max.[LogProba_8] AS [LogProba_8], score_max.[LogProba_9] AS [LogProba_9], score_max.[Decision] AS [Decision], score_max.[DecisionProba] AS [DecisionProba], score_max.[KEY_m] AS [KEY_m], score_max.[max_Score] AS [max_Score], exp(CASE WHEN (-100.0 <= score_max.[Score_0] - score_max.[max_Score]) THEN score_max.[Score_0] - score_max.[max_Score] ELSE -100.0 END) AS [exp_delta_Score_0], exp(CASE WHEN (-100.0 <= score_max.[Score_1] - score_max.[max_Score]) THEN score_max.[Score_1] - score_max.[max_Score] ELSE -100.0 END) AS [exp_delta_Score_1], exp(CASE WHEN (-100.0 <= score_max.[Score_2] - score_max.[max_Score]) THEN score_max.[Score_2] - score_max.[max_Score] ELSE -100.0 END) AS [exp_delta_Score_2], exp(CASE WHEN (-100.0 <= score_max.[Score_3] - score_max.[max_Score]) THEN score_max.[Score_3] - score_max.[max_Score] ELSE -100.0 END) AS [exp_delta_Score_3], exp(CASE WHEN (-100.0 <= score_max.[Score_4] - score_max.[max_Score]) THEN score_max.[Score_4] - score_max.[max_Score] ELSE -100.0 END) AS [exp_delta_Score_4], exp(CASE WHEN (-100.0 <= score_max.[Score_5] - score_max.[max_Score]) THEN score_max.[Score_5] - score_max.[max_Score] ELSE -100.0 END) AS [exp_delta_Score_5], exp(CASE WHEN (-100.0 <= score_max.[Score_6] - score_max.[max_Score]) THEN score_max.[Score_6] - score_max.[max_Score] ELSE -100.0 END) AS [exp_delta_Score_6], exp(CASE WHEN (-100.0 <= score_max.[Score_7] - score_max.[max_Score]) THEN score_max.[Score_7] - score_max.[max_Score] ELSE -100.0 END) AS [exp_delta_Score_7], exp(CASE WHEN (-100.0 <= score_max.[Score_8] - score_max.[max_Score]) THEN score_max.[Score_8] - score_max.[max_Score] ELSE -100.0 END) AS [exp_delta_Score_8], exp(CASE WHEN (-100.0 <= score_max.[Score_9] - score_max.[max_Score]) THEN score_max.[Score_9] - score_max.[max_Score] ELSE -100.0 END) AS [exp_delta_Score_9] 
 FROM score_max), 
 score_class_union_soft AS 
 (SELECT soft_scu.[KEY] AS [KEY], soft_scu.class AS class, soft_scu.[exp_delta_Score] AS [exp_delta_Score] 

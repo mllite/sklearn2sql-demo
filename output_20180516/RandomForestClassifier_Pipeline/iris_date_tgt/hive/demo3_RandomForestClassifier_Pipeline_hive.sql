@@ -10,31 +10,31 @@
 
 
 
--- Code For temporary table tmp_20180509004747_codegen_o90vie_ads_imp_1_out part 1. Create 
+-- Code For temporary table tmp_20180516123829_codegen_giieuk_ads_imp_1_out part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180509004747_codegen_o90vie_ads_imp_1_out` STORED AS ORC AS SELECT `ADS_imp_1_OUT`.`KEY`, `ADS_imp_1_OUT`.`imputer_output_2`, `ADS_imp_1_OUT`.`imputer_output_3`, `ADS_imp_1_OUT`.`imputer_output_4`, `ADS_imp_1_OUT`.`imputer_output_5` 
+CREATE TEMPORARY TABLE `tmp_20180516123829_codegen_giieuk_ads_imp_1_out` STORED AS ORC AS SELECT `ADS_imp_1_OUT`.`KEY`, `ADS_imp_1_OUT`.`imputer_output_2`, `ADS_imp_1_OUT`.`imputer_output_3`, `ADS_imp_1_OUT`.`imputer_output_4`, `ADS_imp_1_OUT`.`imputer_output_5` 
 FROM (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_0` IS NULL) THEN 5.8474999999999975 ELSE `ADS`.`Feature_0` END AS `imputer_output_2`, CASE WHEN (`ADS`.`Feature_1` IS NULL) THEN 3.0366666666666657 ELSE `ADS`.`Feature_1` END AS `imputer_output_3`, CASE WHEN (`ADS`.`Feature_2` IS NULL) THEN 3.8450000000000006 ELSE `ADS`.`Feature_2` END AS `imputer_output_4`, CASE WHEN (`ADS`.`Feature_3` IS NULL) THEN 1.245 ELSE `ADS`.`Feature_3` END AS `imputer_output_5` 
 FROM `iris_date_tgt` AS `ADS`) AS `ADS_imp_1_OUT`
 
--- Code For temporary table tmp_20180509004747_codegen_o90vie_ads_imp_1_out part 2. Populate
+-- Code For temporary table tmp_20180516123829_codegen_giieuk_ads_imp_1_out part 2. Populate
 
-SELECT * FROM `tmp_20180509004747_codegen_o90vie_ads_imp_1_out`
+SELECT * FROM `tmp_20180516123829_codegen_giieuk_ads_imp_1_out`
 
--- Code For temporary table tmp_20180509004747_codegen_i8bnpr_ads_sca_2_out part 1. Create 
+-- Code For temporary table tmp_20180516123829_codegen_9msaln_ads_sca_2_out part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180509004747_codegen_i8bnpr_ads_sca_2_out` STORED AS ORC AS SELECT `ADS_sca_2_OUT`.`KEY`, `ADS_sca_2_OUT`.`scaler_output_2`, `ADS_sca_2_OUT`.`scaler_output_3`, `ADS_sca_2_OUT`.`scaler_output_4`, `ADS_sca_2_OUT`.`scaler_output_5` 
+CREATE TEMPORARY TABLE `tmp_20180516123829_codegen_9msaln_ads_sca_2_out` STORED AS ORC AS SELECT `ADS_sca_2_OUT`.`KEY`, `ADS_sca_2_OUT`.`scaler_output_2`, `ADS_sca_2_OUT`.`scaler_output_3`, `ADS_sca_2_OUT`.`scaler_output_4`, `ADS_sca_2_OUT`.`scaler_output_5` 
 FROM (SELECT `ADS_imp_1_OUT`.`KEY` AS `KEY`, (CAST(`ADS_imp_1_OUT`.`imputer_output_2` AS DOUBLE) - 5.8474999999999975) / 0.827039146594646 AS `scaler_output_2`, (CAST(`ADS_imp_1_OUT`.`imputer_output_3` AS DOUBLE) - 3.0366666666666657) / 0.43625935201691934 AS `scaler_output_3`, (CAST(`ADS_imp_1_OUT`.`imputer_output_4` AS DOUBLE) - 3.8450000000000006) / 1.709817241695732 AS `scaler_output_4`, (CAST(`ADS_imp_1_OUT`.`imputer_output_5` AS DOUBLE) - 1.245) / 0.7498722113355939 AS `scaler_output_5` 
-FROM `tmp_20180509004747_codegen_o90vie_ads_imp_1_out` AS `ADS_imp_1_OUT`) AS `ADS_sca_2_OUT`
+FROM `tmp_20180516123829_codegen_giieuk_ads_imp_1_out` AS `ADS_imp_1_OUT`) AS `ADS_sca_2_OUT`
 
--- Code For temporary table tmp_20180509004747_codegen_i8bnpr_ads_sca_2_out part 2. Populate
+-- Code For temporary table tmp_20180516123829_codegen_9msaln_ads_sca_2_out part 2. Populate
 
-SELECT * FROM `tmp_20180509004747_codegen_i8bnpr_ads_sca_2_out`
+SELECT * FROM `tmp_20180516123829_codegen_9msaln_ads_sca_2_out`
 
--- Code For temporary table tmp_20180509004747_codegen_i7h2i1_rf_b0 part 1. Create 
+-- Code For temporary table tmp_20180516123829_codegen_k7sltf_rf_b0 part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180509004747_codegen_i7h2i1_rf_b0` STORED AS ORC AS WITH `DT_node_lookup` AS 
+CREATE TEMPORARY TABLE `tmp_20180516123829_codegen_k7sltf_rf_b0` STORED AS ORC AS WITH `DT_node_lookup` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_2` <= -0.48063021898269653) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= -0.5934344530105591) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.47341400384902954) THEN 4 ELSE 5 END END ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.6734480857849121) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= -0.7267905473709106) THEN 8 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.6462678909301758) THEN 10 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_3` <= -1.0009336471557617) THEN 12 ELSE 13 END END END ELSE 14 END END AS `node_id_2` 
-FROM `tmp_20180509004747_codegen_i8bnpr_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
+FROM `tmp_20180516123829_codegen_9msaln_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
 `DT_node_data` AS 
 (SELECT `Values`.`nid` AS `nid`, CAST(`P_0.0` AS DOUBLE) AS `P_0.0`, CAST(`P_1.0` AS DOUBLE) AS `P_1.0`, CAST(`P_2.0` AS DOUBLE) AS `P_2.0`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 2 AS `nid`, 1.0 AS `P_0.0`, 0.0 AS `P_1.0`, 0.0 AS `P_2.0`, 0.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 4 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 5 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 8 AS `nid`, 1.0 AS `P_0.0`, 0.0 AS `P_1.0`, 0.0 AS `P_2.0`, 0.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 12 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 13 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 14 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP`) AS `Values`), 
@@ -46,7 +46,7 @@ FROM `DT_node_lookup` LEFT OUTER JOIN `DT_node_data` ON `DT_node_lookup`.`node_i
 FROM `DT_Output`), 
 `DT_node_lookup_1` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= -0.7281479835510254) THEN 1 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.5877821445465088) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.6067700386047363) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_3` <= 0.1451735943555832) THEN 6 ELSE 7 END END ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.6734480857849121) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_3` <= -1.5739872455596924) THEN 10 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.7047536373138428) THEN 12 ELSE 13 END END ELSE 14 END END END AS `node_id_2` 
-FROM `tmp_20180509004747_codegen_i8bnpr_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
+FROM `tmp_20180516123829_codegen_9msaln_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
 `DT_node_data_1` AS 
 (SELECT `Values`.`nid` AS `nid`, CAST(`P_0.0` AS DOUBLE) AS `P_0.0`, CAST(`P_1.0` AS DOUBLE) AS `P_1.0`, CAST(`P_2.0` AS DOUBLE) AS `P_2.0`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 1 AS `nid`, 1.0 AS `P_0.0`, 0.0 AS `P_1.0`, 0.0 AS `P_2.0`, 0.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 4 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 12 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 13 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 14 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP`) AS `Values`), 
@@ -58,7 +58,7 @@ FROM `DT_node_lookup_1` LEFT OUTER JOIN `DT_node_data_1` ON `DT_node_lookup_1`.`
 FROM `DT_Output_1`), 
 `DT_node_lookup_2` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.6734480857849121) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= -0.5934344530105591) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.273379921913147) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_3` <= -0.42788004875183105) THEN 6 ELSE 7 END END END ELSE 8 END AS `node_id_2` 
-FROM `tmp_20180509004747_codegen_i8bnpr_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
+FROM `tmp_20180516123829_codegen_9msaln_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
 `DT_node_data_2` AS 
 (SELECT `Values`.`nid` AS `nid`, CAST(`P_0.0` AS DOUBLE) AS `P_0.0`, CAST(`P_1.0` AS DOUBLE) AS `P_1.0`, CAST(`P_2.0` AS DOUBLE) AS `P_2.0`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 2 AS `nid`, 1.0 AS `P_0.0`, 0.0 AS `P_1.0`, 0.0 AS `P_2.0`, 0.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 4 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 8 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP`) AS `Values`), 
@@ -70,7 +70,7 @@ FROM `DT_node_lookup_2` LEFT OUTER JOIN `DT_node_data_2` ON `DT_node_lookup_2`.`
 FROM `DT_Output_2`), 
 `DT_node_lookup_3` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= -0.6601125001907349) THEN 1 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.5877821445465088) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.5400919914245605) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.47081053256988525) THEN 6 ELSE 7 END END ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.7047536373138428) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_2` <= 0.7889590263366699) THEN 10 ELSE 11 END ELSE 12 END END END AS `node_id_2` 
-FROM `tmp_20180509004747_codegen_i8bnpr_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
+FROM `tmp_20180516123829_codegen_9msaln_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
 `DT_node_data_3` AS 
 (SELECT `Values`.`nid` AS `nid`, CAST(`P_0.0` AS DOUBLE) AS `P_0.0`, CAST(`P_1.0` AS DOUBLE) AS `P_1.0`, CAST(`P_2.0` AS DOUBLE) AS `P_2.0`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 1 AS `nid`, 1.0 AS `P_0.0`, 0.0 AS `P_1.0`, 0.0 AS `P_2.0`, 0.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 4 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 11 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 12 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP`) AS `Values`), 
@@ -82,7 +82,7 @@ FROM `DT_node_lookup_3` LEFT OUTER JOIN `DT_node_data_3` ON `DT_node_lookup_3`.`
 FROM `DT_Output_3`), 
 `DT_node_lookup_4` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= -0.8158766627311707) THEN 1 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_2` <= -0.2388036847114563) THEN 3 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.6734480857849121) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.6462678909301758) THEN 6 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_3` <= -0.31326931715011597) THEN 8 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_2` <= 1.3330687284469604) THEN 10 ELSE 11 END END END ELSE 12 END END END AS `node_id_2` 
-FROM `tmp_20180509004747_codegen_i8bnpr_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
+FROM `tmp_20180516123829_codegen_9msaln_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
 `DT_node_data_4` AS 
 (SELECT `Values`.`nid` AS `nid`, CAST(`P_0.0` AS DOUBLE) AS `P_0.0`, CAST(`P_1.0` AS DOUBLE) AS `P_1.0`, CAST(`P_2.0` AS DOUBLE) AS `P_2.0`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 1 AS `nid`, 1.0 AS `P_0.0`, 0.0 AS `P_1.0`, 0.0 AS `P_2.0`, 0.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 3 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 8 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 11 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 12 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP`) AS `Values`), 
@@ -94,7 +94,7 @@ FROM `DT_node_lookup_4` LEFT OUTER JOIN `DT_node_data_4` ON `DT_node_lookup_4`.`
 FROM `DT_Output_4`), 
 `DT_node_lookup_5` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_2` <= -0.48063021898269653) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= -0.8743624687194824) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_3` <= -1.3447659015655518) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.2067018747329712) THEN 6 ELSE 7 END END END ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.529296338558197) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= -0.7934684753417969) THEN 10 ELSE 11 END ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.6462678909301758) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.5400920510292053) THEN 14 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_3` <= 0.1451735943555832) THEN 16 ELSE 17 END END ELSE 18 END END END AS `node_id_2` 
-FROM `tmp_20180509004747_codegen_i8bnpr_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
+FROM `tmp_20180516123829_codegen_9msaln_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
 `DT_node_data_5` AS 
 (SELECT `Values`.`nid` AS `nid`, CAST(`P_0.0` AS DOUBLE) AS `P_0.0`, CAST(`P_1.0` AS DOUBLE) AS `P_1.0`, CAST(`P_2.0` AS DOUBLE) AS `P_2.0`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 2 AS `nid`, 1.0 AS `P_0.0`, 0.0 AS `P_1.0`, 0.0 AS `P_2.0`, 0.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 4 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS `nid`, 1.0 AS `P_0.0`, 0.0 AS `P_1.0`, 0.0 AS `P_2.0`, 0.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 11 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 14 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 16 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 17 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 18 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP`) AS `Values`), 
@@ -106,7 +106,7 @@ FROM `DT_node_lookup_5` LEFT OUTER JOIN `DT_node_data_5` ON `DT_node_lookup_5`.`
 FROM `DT_Output_5`), 
 `DT_node_lookup_6` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= -0.5934344530105591) THEN 1 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.5877821445465088) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.5400919914245605) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_3` <= 0.1451735943555832) THEN 6 ELSE 7 END END ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.40673595666885376) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.6755107641220093) THEN 10 ELSE 11 END ELSE 12 END END END AS `node_id_2` 
-FROM `tmp_20180509004747_codegen_i8bnpr_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
+FROM `tmp_20180516123829_codegen_9msaln_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
 `DT_node_data_6` AS 
 (SELECT `Values`.`nid` AS `nid`, CAST(`P_0.0` AS DOUBLE) AS `P_0.0`, CAST(`P_1.0` AS DOUBLE) AS `P_1.0`, CAST(`P_2.0` AS DOUBLE) AS `P_2.0`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 1 AS `nid`, 1.0 AS `P_0.0`, 0.0 AS `P_1.0`, 0.0 AS `P_2.0`, 0.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 4 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 11 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 12 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP`) AS `Values`), 
@@ -118,7 +118,7 @@ FROM `DT_node_lookup_6` LEFT OUTER JOIN `DT_node_data_6` ON `DT_node_lookup_6`.`
 FROM `DT_Output_6`), 
 `DT_node_lookup_7` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= -0.8158766627311707) THEN 1 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.5400919914245605) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.6170250177383423) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.5877821445465088) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_2` <= 0.12393608689308167) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_3` <= -0.42788004875183105) THEN 9 ELSE 10 END ELSE 11 END ELSE 12 END END END AS `node_id_2` 
-FROM `tmp_20180509004747_codegen_i8bnpr_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
+FROM `tmp_20180516123829_codegen_9msaln_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
 `DT_node_data_7` AS 
 (SELECT `Values`.`nid` AS `nid`, CAST(`P_0.0` AS DOUBLE) AS `P_0.0`, CAST(`P_1.0` AS DOUBLE) AS `P_1.0`, CAST(`P_2.0` AS DOUBLE) AS `P_2.0`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 1 AS `nid`, 1.0 AS `P_0.0`, 0.0 AS `P_1.0`, 0.0 AS `P_2.0`, 0.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 4 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 5 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 9 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 11 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 12 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP`) AS `Values`), 
@@ -130,7 +130,7 @@ FROM `DT_node_lookup_7` LEFT OUTER JOIN `DT_node_data_7` ON `DT_node_lookup_7`.`
 FROM `DT_Output_7`), 
 `DT_node_lookup_8` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.5877821445465088) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_2` <= -0.48063021898269653) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= -0.7267905473709106) THEN 3 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.20762452483177185) THEN 5 ELSE 6 END END ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= -0.6696621775627136) THEN 8 ELSE 9 END END ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.6462678909301758) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_3` <= 0.030562859028577805) THEN 12 ELSE 13 END ELSE 14 END END AS `node_id_2` 
-FROM `tmp_20180509004747_codegen_i8bnpr_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
+FROM `tmp_20180516123829_codegen_9msaln_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
 `DT_node_data_8` AS 
 (SELECT `Values`.`nid` AS `nid`, CAST(`P_0.0` AS DOUBLE) AS `P_0.0`, CAST(`P_1.0` AS DOUBLE) AS `P_1.0`, CAST(`P_2.0` AS DOUBLE) AS `P_2.0`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 3 AS `nid`, 1.0 AS `P_0.0`, 0.0 AS `P_1.0`, 0.0 AS `P_2.0`, 0.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 5 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 8 AS `nid`, 1.0 AS `P_0.0`, 0.0 AS `P_1.0`, 0.0 AS `P_2.0`, 0.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 9 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 12 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 13 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 14 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP`) AS `Values`), 
@@ -142,7 +142,7 @@ FROM `DT_node_lookup_8` LEFT OUTER JOIN `DT_node_data_8` ON `DT_node_lookup_8`.`
 FROM `DT_Output_8`), 
 `DT_node_lookup_9` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= -0.5934344530105591) THEN 1 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.40673595666885376) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.6462678909301758) THEN 4 ELSE 5 END ELSE 6 END END AS `node_id_2` 
-FROM `tmp_20180509004747_codegen_i8bnpr_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
+FROM `tmp_20180516123829_codegen_9msaln_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
 `DT_node_data_9` AS 
 (SELECT `Values`.`nid` AS `nid`, CAST(`P_0.0` AS DOUBLE) AS `P_0.0`, CAST(`P_1.0` AS DOUBLE) AS `P_1.0`, CAST(`P_2.0` AS DOUBLE) AS `P_2.0`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 1 AS `nid`, 1.0 AS `P_0.0`, 0.0 AS `P_1.0`, 0.0 AS `P_2.0`, 0.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 4 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 5 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP`) AS `Values`), 
@@ -166,15 +166,15 @@ FROM `RF_Model_7` UNION ALL SELECT `RF_Model_8`.`KEY` AS `KEY`, `Score_1789-07-1
 FROM `RF_Model_8` UNION ALL SELECT `RF_Model_9`.`KEY` AS `KEY`, `Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `Proba_1789-07-14T00:00:00.000000000` AS `Proba_1789-07-14T00:00:00.000000000`, `LogProba_1789-07-14T00:00:00.000000000` AS `LogProba_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `Proba_1789-08-14T00:00:00.000000000` AS `Proba_1789-08-14T00:00:00.000000000`, `LogProba_1789-08-14T00:00:00.000000000` AS `LogProba_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000`, `Proba_1789-09-14T00:00:00.000000000` AS `Proba_1789-09-14T00:00:00.000000000`, `LogProba_1789-09-14T00:00:00.000000000` AS `LogProba_1789-09-14T00:00:00.000000000` 
 FROM `RF_Model_9`) AS `RF_esu_0`) AS `RF_B0`
 
--- Code For temporary table tmp_20180509004747_codegen_i7h2i1_rf_b0 part 2. Populate
+-- Code For temporary table tmp_20180516123829_codegen_k7sltf_rf_b0 part 2. Populate
 
-SELECT * FROM `tmp_20180509004747_codegen_i7h2i1_rf_b0`
+SELECT * FROM `tmp_20180516123829_codegen_k7sltf_rf_b0`
 
--- Code For temporary table tmp_20180509004747_codegen_z6eqtw_rf_b1 part 1. Create 
+-- Code For temporary table tmp_20180516123829_codegen_xfhhzg_rf_b1 part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180509004747_codegen_z6eqtw_rf_b1` STORED AS ORC AS WITH `DT_node_lookup_10` AS 
+CREATE TEMPORARY TABLE `tmp_20180516123829_codegen_xfhhzg_rf_b1` STORED AS ORC AS WITH `DT_node_lookup_10` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_2` <= -0.48063021898269653) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= -0.7281479835510254) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.47341400384902954) THEN 4 ELSE 5 END END ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.5877821445465088) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_3` <= 1.1766700744628906) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.529296338558197) THEN 9 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_2` <= 0.12393608689308167) THEN 11 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.47341400384902954) THEN 13 ELSE 14 END END END ELSE 15 END ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.6462678909301758) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_2` <= 0.42621922492980957) THEN 18 ELSE 19 END ELSE 20 END END END AS `node_id_2` 
-FROM `tmp_20180509004747_codegen_i8bnpr_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
+FROM `tmp_20180516123829_codegen_9msaln_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
 `DT_node_data_10` AS 
 (SELECT `Values`.`nid` AS `nid`, CAST(`P_0.0` AS DOUBLE) AS `P_0.0`, CAST(`P_1.0` AS DOUBLE) AS `P_1.0`, CAST(`P_2.0` AS DOUBLE) AS `P_2.0`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 2 AS `nid`, 1.0 AS `P_0.0`, 0.0 AS `P_1.0`, 0.0 AS `P_2.0`, 0.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 4 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 5 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 9 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 11 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 13 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 14 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 15 AS `nid`, 1.0 AS `P_0.0`, 0.0 AS `P_1.0`, 0.0 AS `P_2.0`, 0.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 18 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 19 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 20 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP`) AS `Values`), 
@@ -186,7 +186,7 @@ FROM `DT_node_lookup_10` LEFT OUTER JOIN `DT_node_data_10` ON `DT_node_lookup_10
 FROM `DT_Output_10`), 
 `DT_node_lookup_11` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.6462678909301758) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= -0.8158766627311707) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.8734821677207947) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_2` <= -1.0851964950561523) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_3` <= -1.3447659015655518) THEN 6 ELSE 7 END ELSE 8 END ELSE 9 END END ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.7047536373138428) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.7401261329650879) THEN 12 ELSE 13 END ELSE 14 END END AS `node_id_2` 
-FROM `tmp_20180509004747_codegen_i8bnpr_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
+FROM `tmp_20180516123829_codegen_9msaln_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
 `DT_node_data_11` AS 
 (SELECT `Values`.`nid` AS `nid`, CAST(`P_0.0` AS DOUBLE) AS `P_0.0`, CAST(`P_1.0` AS DOUBLE) AS `P_1.0`, CAST(`P_2.0` AS DOUBLE) AS `P_2.0`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 2 AS `nid`, 1.0 AS `P_0.0`, 0.0 AS `P_1.0`, 0.0 AS `P_2.0`, 0.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 8 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 9 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 12 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 13 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 14 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP`) AS `Values`), 
@@ -198,7 +198,7 @@ FROM `DT_node_lookup_11` LEFT OUTER JOIN `DT_node_data_11` ON `DT_node_lookup_11
 FROM `DT_Output_11`), 
 `DT_node_lookup_12` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= -0.6601125001907349) THEN 1 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.5400919914245605) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.6462678909301758) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.7047536373138428) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_2` <= 0.7889590263366699) THEN 8 ELSE 9 END ELSE 10 END END END AS `node_id_2` 
-FROM `tmp_20180509004747_codegen_i8bnpr_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
+FROM `tmp_20180516123829_codegen_9msaln_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
 `DT_node_data_12` AS 
 (SELECT `Values`.`nid` AS `nid`, CAST(`P_0.0` AS DOUBLE) AS `P_0.0`, CAST(`P_1.0` AS DOUBLE) AS `P_1.0`, CAST(`P_2.0` AS DOUBLE) AS `P_2.0`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 1 AS `nid`, 1.0 AS `P_0.0`, 0.0 AS `P_1.0`, 0.0 AS `P_2.0`, 0.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 4 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 5 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 8 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 9 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP`) AS `Values`), 
@@ -210,7 +210,7 @@ FROM `DT_node_lookup_12` LEFT OUTER JOIN `DT_node_data_12` ON `DT_node_lookup_12
 FROM `DT_Output_12`), 
 `DT_node_lookup_13` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.5877821445465088) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= -0.8158766627311707) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.5400919914245605) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.47081053256988525) THEN 6 ELSE 7 END END END ELSE 8 END AS `node_id_2` 
-FROM `tmp_20180509004747_codegen_i8bnpr_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
+FROM `tmp_20180516123829_codegen_9msaln_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
 `DT_node_data_13` AS 
 (SELECT `Values`.`nid` AS `nid`, CAST(`P_0.0` AS DOUBLE) AS `P_0.0`, CAST(`P_1.0` AS DOUBLE) AS `P_1.0`, CAST(`P_2.0` AS DOUBLE) AS `P_2.0`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 2 AS `nid`, 1.0 AS `P_0.0`, 0.0 AS `P_1.0`, 0.0 AS `P_2.0`, 0.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 4 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 8 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP`) AS `Values`), 
@@ -222,7 +222,7 @@ FROM `DT_node_lookup_13` LEFT OUTER JOIN `DT_node_data_13` ON `DT_node_lookup_13
 FROM `DT_Output_13`), 
 `DT_node_lookup_14` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= -0.8158766627311707) THEN 1 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.6462678909301758) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.6067700386047363) THEN 4 ELSE 5 END ELSE 6 END END AS `node_id_2` 
-FROM `tmp_20180509004747_codegen_i8bnpr_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
+FROM `tmp_20180516123829_codegen_9msaln_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
 `DT_node_data_14` AS 
 (SELECT `Values`.`nid` AS `nid`, CAST(`P_0.0` AS DOUBLE) AS `P_0.0`, CAST(`P_1.0` AS DOUBLE) AS `P_1.0`, CAST(`P_2.0` AS DOUBLE) AS `P_2.0`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 1 AS `nid`, 1.0 AS `P_0.0`, 0.0 AS `P_1.0`, 0.0 AS `P_2.0`, 0.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 4 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 5 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP`) AS `Values`), 
@@ -234,7 +234,7 @@ FROM `DT_node_lookup_14` LEFT OUTER JOIN `DT_node_data_14` ON `DT_node_lookup_14
 FROM `DT_Output_14`), 
 `DT_node_lookup_15` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= -0.8158766627311707) THEN 1 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.6734480857849121) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.8509681224822998) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.5400919914245605) THEN 5 ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_4` <= 0.529296338558197) THEN 7 ELSE 8 END END ELSE 9 END ELSE CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_5` <= 0.8068041801452637) THEN CASE WHEN (`ADS_sca_2_OUT`.`scaler_output_2` <= 0.12393608689308167) THEN 12 ELSE 13 END ELSE 14 END END END AS `node_id_2` 
-FROM `tmp_20180509004747_codegen_i8bnpr_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
+FROM `tmp_20180516123829_codegen_9msaln_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
 `DT_node_data_15` AS 
 (SELECT `Values`.`nid` AS `nid`, CAST(`P_0.0` AS DOUBLE) AS `P_0.0`, CAST(`P_1.0` AS DOUBLE) AS `P_1.0`, CAST(`P_2.0` AS DOUBLE) AS `P_2.0`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 1 AS `nid`, 1.0 AS `P_0.0`, 0.0 AS `P_1.0`, 0.0 AS `P_2.0`, 0.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 5 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 8 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 9 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 12 AS `nid`, 0.0 AS `P_0.0`, 1.0 AS `P_1.0`, 0.0 AS `P_2.0`, 1.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 13 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 14 AS `nid`, 0.0 AS `P_0.0`, 0.0 AS `P_1.0`, 1.0 AS `P_2.0`, 2.0 AS `D`, 1.0 AS `DP`) AS `Values`), 
@@ -254,38 +254,31 @@ FROM `RF_Model_13` UNION ALL SELECT `RF_Model_14`.`KEY` AS `KEY`, `Score_1789-07
 FROM `RF_Model_14` UNION ALL SELECT `RF_Model_15`.`KEY` AS `KEY`, `Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `Proba_1789-07-14T00:00:00.000000000` AS `Proba_1789-07-14T00:00:00.000000000`, `LogProba_1789-07-14T00:00:00.000000000` AS `LogProba_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `Proba_1789-08-14T00:00:00.000000000` AS `Proba_1789-08-14T00:00:00.000000000`, `LogProba_1789-08-14T00:00:00.000000000` AS `LogProba_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000`, `Proba_1789-09-14T00:00:00.000000000` AS `Proba_1789-09-14T00:00:00.000000000`, `LogProba_1789-09-14T00:00:00.000000000` AS `LogProba_1789-09-14T00:00:00.000000000` 
 FROM `RF_Model_15`) AS `RF_esu_1`) AS `RF_B1`
 
--- Code For temporary table tmp_20180509004747_codegen_z6eqtw_rf_b1 part 2. Populate
+-- Code For temporary table tmp_20180516123829_codegen_xfhhzg_rf_b1 part 2. Populate
 
-SELECT * FROM `tmp_20180509004747_codegen_z6eqtw_rf_b1`
+SELECT * FROM `tmp_20180516123829_codegen_xfhhzg_rf_b1`
 
--- Code For temporary table tmp_20180509004747_codegen_ielkae_rf_union part 1. Create 
+-- Code For temporary table tmp_20180516123829_codegen_iu5sm7_rf_avg part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180509004747_codegen_ielkae_rf_union` STORED AS ORC AS SELECT `RF_Union`.`KEY`, `Score_1789-07-14T00:00:00.000000000`, `Proba_1789-07-14T00:00:00.000000000`, `LogProba_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000`, `Proba_1789-08-14T00:00:00.000000000`, `LogProba_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000`, `Proba_1789-09-14T00:00:00.000000000`, `LogProba_1789-09-14T00:00:00.000000000` 
-FROM (SELECT `RF_EnsembleUnion`.`KEY` AS `KEY`, `Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `Proba_1789-07-14T00:00:00.000000000` AS `Proba_1789-07-14T00:00:00.000000000`, `LogProba_1789-07-14T00:00:00.000000000` AS `LogProba_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `Proba_1789-08-14T00:00:00.000000000` AS `Proba_1789-08-14T00:00:00.000000000`, `LogProba_1789-08-14T00:00:00.000000000` AS `LogProba_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000`, `Proba_1789-09-14T00:00:00.000000000` AS `Proba_1789-09-14T00:00:00.000000000`, `LogProba_1789-09-14T00:00:00.000000000` AS `LogProba_1789-09-14T00:00:00.000000000` 
+CREATE TEMPORARY TABLE `tmp_20180516123829_codegen_iu5sm7_rf_avg` STORED AS ORC AS WITH `RF_Union` AS 
+(SELECT `RF_EnsembleUnion`.`KEY` AS `KEY`, `Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `Proba_1789-07-14T00:00:00.000000000` AS `Proba_1789-07-14T00:00:00.000000000`, `LogProba_1789-07-14T00:00:00.000000000` AS `LogProba_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `Proba_1789-08-14T00:00:00.000000000` AS `Proba_1789-08-14T00:00:00.000000000`, `LogProba_1789-08-14T00:00:00.000000000` AS `LogProba_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000`, `Proba_1789-09-14T00:00:00.000000000` AS `Proba_1789-09-14T00:00:00.000000000`, `LogProba_1789-09-14T00:00:00.000000000` AS `LogProba_1789-09-14T00:00:00.000000000` 
 FROM (SELECT `RF_B0`.`KEY` AS `KEY`, `Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `Proba_1789-07-14T00:00:00.000000000` AS `Proba_1789-07-14T00:00:00.000000000`, `LogProba_1789-07-14T00:00:00.000000000` AS `LogProba_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `Proba_1789-08-14T00:00:00.000000000` AS `Proba_1789-08-14T00:00:00.000000000`, `LogProba_1789-08-14T00:00:00.000000000` AS `LogProba_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000`, `Proba_1789-09-14T00:00:00.000000000` AS `Proba_1789-09-14T00:00:00.000000000`, `LogProba_1789-09-14T00:00:00.000000000` AS `LogProba_1789-09-14T00:00:00.000000000` 
-FROM `tmp_20180509004747_codegen_i7h2i1_rf_b0` AS `RF_B0` UNION ALL SELECT `RF_B1`.`KEY` AS `KEY`, `Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `Proba_1789-07-14T00:00:00.000000000` AS `Proba_1789-07-14T00:00:00.000000000`, `LogProba_1789-07-14T00:00:00.000000000` AS `LogProba_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `Proba_1789-08-14T00:00:00.000000000` AS `Proba_1789-08-14T00:00:00.000000000`, `LogProba_1789-08-14T00:00:00.000000000` AS `LogProba_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000`, `Proba_1789-09-14T00:00:00.000000000` AS `Proba_1789-09-14T00:00:00.000000000`, `LogProba_1789-09-14T00:00:00.000000000` AS `LogProba_1789-09-14T00:00:00.000000000` 
-FROM `tmp_20180509004747_codegen_z6eqtw_rf_b1` AS `RF_B1`) AS `RF_EnsembleUnion`) AS `RF_Union`
-
--- Code For temporary table tmp_20180509004747_codegen_ielkae_rf_union part 2. Populate
-
-SELECT * FROM `tmp_20180509004747_codegen_ielkae_rf_union`
-
--- Code For temporary table tmp_20180509004747_codegen_fzimda_rf_avg part 1. Create 
-
-CREATE TEMPORARY TABLE `tmp_20180509004747_codegen_fzimda_rf_avg` STORED AS ORC AS SELECT `RF_avg`.`KEY`, `Score_1789-07-14T00:00:00.000000000`, `Proba_1789-07-14T00:00:00.000000000`, `LogProba_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000`, `Proba_1789-08-14T00:00:00.000000000`, `LogProba_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000`, `Proba_1789-09-14T00:00:00.000000000`, `LogProba_1789-09-14T00:00:00.000000000` 
+FROM `tmp_20180516123829_codegen_k7sltf_rf_b0` AS `RF_B0` UNION ALL SELECT `RF_B1`.`KEY` AS `KEY`, `Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `Proba_1789-07-14T00:00:00.000000000` AS `Proba_1789-07-14T00:00:00.000000000`, `LogProba_1789-07-14T00:00:00.000000000` AS `LogProba_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `Proba_1789-08-14T00:00:00.000000000` AS `Proba_1789-08-14T00:00:00.000000000`, `LogProba_1789-08-14T00:00:00.000000000` AS `LogProba_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000`, `Proba_1789-09-14T00:00:00.000000000` AS `Proba_1789-09-14T00:00:00.000000000`, `LogProba_1789-09-14T00:00:00.000000000` AS `LogProba_1789-09-14T00:00:00.000000000` 
+FROM `tmp_20180516123829_codegen_xfhhzg_rf_b1` AS `RF_B1`) AS `RF_EnsembleUnion`)
+ SELECT `RF_avg`.`KEY`, `Score_1789-07-14T00:00:00.000000000`, `Proba_1789-07-14T00:00:00.000000000`, `LogProba_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000`, `Proba_1789-08-14T00:00:00.000000000`, `LogProba_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000`, `Proba_1789-09-14T00:00:00.000000000`, `LogProba_1789-09-14T00:00:00.000000000` 
 FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`Score_1789-07-14T00:00:00.000000000` AS DOUBLE) AS `Score_1789-07-14T00:00:00.000000000`, CAST(`Proba_1789-07-14T00:00:00.000000000` AS DOUBLE) AS `Proba_1789-07-14T00:00:00.000000000`, CAST(`LogProba_1789-07-14T00:00:00.000000000` AS DOUBLE) AS `LogProba_1789-07-14T00:00:00.000000000`, CAST(`Score_1789-08-14T00:00:00.000000000` AS DOUBLE) AS `Score_1789-08-14T00:00:00.000000000`, CAST(`Proba_1789-08-14T00:00:00.000000000` AS DOUBLE) AS `Proba_1789-08-14T00:00:00.000000000`, CAST(`LogProba_1789-08-14T00:00:00.000000000` AS DOUBLE) AS `LogProba_1789-08-14T00:00:00.000000000`, CAST(`Score_1789-09-14T00:00:00.000000000` AS DOUBLE) AS `Score_1789-09-14T00:00:00.000000000`, CAST(`Proba_1789-09-14T00:00:00.000000000` AS DOUBLE) AS `Proba_1789-09-14T00:00:00.000000000`, CAST(`LogProba_1789-09-14T00:00:00.000000000` AS DOUBLE) AS `LogProba_1789-09-14T00:00:00.000000000` 
 FROM (SELECT `RF_Union`.`KEY` AS `KEY`, avg(CAST(`Score_1789-07-14T00:00:00.000000000` AS DOUBLE)) AS `Score_1789-07-14T00:00:00.000000000`, avg(CAST(`Proba_1789-07-14T00:00:00.000000000` AS DOUBLE)) AS `Proba_1789-07-14T00:00:00.000000000`, CAST(NULL AS DOUBLE) AS `LogProba_1789-07-14T00:00:00.000000000`, avg(CAST(`Score_1789-08-14T00:00:00.000000000` AS DOUBLE)) AS `Score_1789-08-14T00:00:00.000000000`, avg(CAST(`Proba_1789-08-14T00:00:00.000000000` AS DOUBLE)) AS `Proba_1789-08-14T00:00:00.000000000`, CAST(NULL AS DOUBLE) AS `LogProba_1789-08-14T00:00:00.000000000`, avg(CAST(`Score_1789-09-14T00:00:00.000000000` AS DOUBLE)) AS `Score_1789-09-14T00:00:00.000000000`, avg(CAST(`Proba_1789-09-14T00:00:00.000000000` AS DOUBLE)) AS `Proba_1789-09-14T00:00:00.000000000`, CAST(NULL AS DOUBLE) AS `LogProba_1789-09-14T00:00:00.000000000` 
-FROM `tmp_20180509004747_codegen_ielkae_rf_union` AS `RF_Union` GROUP BY `RF_Union`.`KEY`) AS `T`) AS `RF_avg`
+FROM `RF_Union` GROUP BY `RF_Union`.`KEY`) AS `T`) AS `RF_avg`
 
--- Code For temporary table tmp_20180509004747_codegen_fzimda_rf_avg part 2. Populate
+-- Code For temporary table tmp_20180516123829_codegen_iu5sm7_rf_avg part 2. Populate
 
-SELECT * FROM `tmp_20180509004747_codegen_fzimda_rf_avg`
+SELECT * FROM `tmp_20180516123829_codegen_iu5sm7_rf_avg`
 
 -- Model deployment code
 
 WITH `orig_cte` AS 
 (SELECT `RF_avg`.`KEY` AS `KEY`, `Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000`, `Proba_1789-07-14T00:00:00.000000000` AS `Proba_1789-07-14T00:00:00.000000000`, `Proba_1789-08-14T00:00:00.000000000` AS `Proba_1789-08-14T00:00:00.000000000`, `Proba_1789-09-14T00:00:00.000000000` AS `Proba_1789-09-14T00:00:00.000000000`, `LogProba_1789-07-14T00:00:00.000000000` AS `LogProba_1789-07-14T00:00:00.000000000`, `LogProba_1789-08-14T00:00:00.000000000` AS `LogProba_1789-08-14T00:00:00.000000000`, `LogProba_1789-09-14T00:00:00.000000000` AS `LogProba_1789-09-14T00:00:00.000000000`, CAST(NULL AS BIGINT) AS `Decision`, CAST(NULL AS DOUBLE) AS `DecisionProba` 
-FROM `tmp_20180509004747_codegen_fzimda_rf_avg` AS `RF_avg`), 
+FROM `tmp_20180516123829_codegen_iu5sm7_rf_avg` AS `RF_avg`), 
 `score_class_union` AS 
 (SELECT `scu`.`KEY_u` AS `KEY_u`, `scu`.`class` AS `class`, `scu`.`LogProba` AS `LogProba`, `scu`.`Proba` AS `Proba`, `scu`.`Score` AS `Score` 
 FROM (SELECT `orig_cte`.`KEY` AS `KEY_u`, '1789-07-14T00:00:00.000000000' AS `class`, `LogProba_1789-07-14T00:00:00.000000000` AS `LogProba`, `Proba_1789-07-14T00:00:00.000000000` AS `Proba`, `Score_1789-07-14T00:00:00.000000000` AS `Score` 

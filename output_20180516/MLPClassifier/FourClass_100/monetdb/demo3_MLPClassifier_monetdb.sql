@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180508181816_codegen_383dvx_hl_1_relu_1 part 1. Create 
+-- Code For temporary table tmp_20180516113126_codegen_8agbf0_hl_1_relu_1 part 1. Create 
 
 
-CREATE TEMPORARY TABLE tmp_20180508181816_codegen_383dvx_hl_1_relu_1 (
+CREATE TEMPORARY TABLE tmp_20180516113126_codegen_8agbf0_hl_1_relu_1 (
 	"KEY" BIGINT, 
 	"NEUR_1_1" DOUBLE, 
 	"NEUR_1_2" DOUBLE, 
@@ -22,9 +22,9 @@ CREATE TEMPORARY TABLE tmp_20180508181816_codegen_383dvx_hl_1_relu_1 (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508181816_codegen_383dvx_hl_1_relu_1 part 2. Populate
+-- Code For temporary table tmp_20180516113126_codegen_8agbf0_hl_1_relu_1 part 2. Populate
 
-INSERT INTO tmp_20180508181816_codegen_383dvx_hl_1_relu_1 ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "U"."KEY", "U"."NEUR_1_1", "U"."NEUR_1_2", "U"."NEUR_1_3" 
+INSERT INTO tmp_20180516113126_codegen_8agbf0_hl_1_relu_1 ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "U"."KEY", "U"."NEUR_1_1", "U"."NEUR_1_2", "U"."NEUR_1_3" 
 FROM (WITH "IL" AS 
 (SELECT "ADS"."KEY" AS "KEY", CAST("ADS"."Feature_0" AS DOUBLE) AS "Feature_0", CAST("ADS"."Feature_1" AS DOUBLE) AS "Feature_1", CAST("ADS"."Feature_2" AS DOUBLE) AS "Feature_2", CAST("ADS"."Feature_3" AS DOUBLE) AS "Feature_3", CAST("ADS"."Feature_4" AS DOUBLE) AS "Feature_4", CAST("ADS"."Feature_5" AS DOUBLE) AS "Feature_5", CAST("ADS"."Feature_6" AS DOUBLE) AS "Feature_6", CAST("ADS"."Feature_7" AS DOUBLE) AS "Feature_7", CAST("ADS"."Feature_8" AS DOUBLE) AS "Feature_8", CAST("ADS"."Feature_9" AS DOUBLE) AS "Feature_9", CAST("ADS"."Feature_10" AS DOUBLE) AS "Feature_10", CAST("ADS"."Feature_11" AS DOUBLE) AS "Feature_11", CAST("ADS"."Feature_12" AS DOUBLE) AS "Feature_12", CAST("ADS"."Feature_13" AS DOUBLE) AS "Feature_13", CAST("ADS"."Feature_14" AS DOUBLE) AS "Feature_14", CAST("ADS"."Feature_15" AS DOUBLE) AS "Feature_15", CAST("ADS"."Feature_16" AS DOUBLE) AS "Feature_16", CAST("ADS"."Feature_17" AS DOUBLE) AS "Feature_17", CAST("ADS"."Feature_18" AS DOUBLE) AS "Feature_18", CAST("ADS"."Feature_19" AS DOUBLE) AS "Feature_19", CAST("ADS"."Feature_20" AS DOUBLE) AS "Feature_20", CAST("ADS"."Feature_21" AS DOUBLE) AS "Feature_21", CAST("ADS"."Feature_22" AS DOUBLE) AS "Feature_22", CAST("ADS"."Feature_23" AS DOUBLE) AS "Feature_23", CAST("ADS"."Feature_24" AS DOUBLE) AS "Feature_24", CAST("ADS"."Feature_25" AS DOUBLE) AS "Feature_25", CAST("ADS"."Feature_26" AS DOUBLE) AS "Feature_26", CAST("ADS"."Feature_27" AS DOUBLE) AS "Feature_27", CAST("ADS"."Feature_28" AS DOUBLE) AS "Feature_28", CAST("ADS"."Feature_29" AS DOUBLE) AS "Feature_29", CAST("ADS"."Feature_30" AS DOUBLE) AS "Feature_30", CAST("ADS"."Feature_31" AS DOUBLE) AS "Feature_31", CAST("ADS"."Feature_32" AS DOUBLE) AS "Feature_32", CAST("ADS"."Feature_33" AS DOUBLE) AS "Feature_33", CAST("ADS"."Feature_34" AS DOUBLE) AS "Feature_34", CAST("ADS"."Feature_35" AS DOUBLE) AS "Feature_35", CAST("ADS"."Feature_36" AS DOUBLE) AS "Feature_36", CAST("ADS"."Feature_37" AS DOUBLE) AS "Feature_37", CAST("ADS"."Feature_38" AS DOUBLE) AS "Feature_38", CAST("ADS"."Feature_39" AS DOUBLE) AS "Feature_39", CAST("ADS"."Feature_40" AS DOUBLE) AS "Feature_40", CAST("ADS"."Feature_41" AS DOUBLE) AS "Feature_41", CAST("ADS"."Feature_42" AS DOUBLE) AS "Feature_42", CAST("ADS"."Feature_43" AS DOUBLE) AS "Feature_43", CAST("ADS"."Feature_44" AS DOUBLE) AS "Feature_44", CAST("ADS"."Feature_45" AS DOUBLE) AS "Feature_45", CAST("ADS"."Feature_46" AS DOUBLE) AS "Feature_46", CAST("ADS"."Feature_47" AS DOUBLE) AS "Feature_47", CAST("ADS"."Feature_48" AS DOUBLE) AS "Feature_48", CAST("ADS"."Feature_49" AS DOUBLE) AS "Feature_49", CAST("ADS"."Feature_50" AS DOUBLE) AS "Feature_50", CAST("ADS"."Feature_51" AS DOUBLE) AS "Feature_51", CAST("ADS"."Feature_52" AS DOUBLE) AS "Feature_52", CAST("ADS"."Feature_53" AS DOUBLE) AS "Feature_53", CAST("ADS"."Feature_54" AS DOUBLE) AS "Feature_54", CAST("ADS"."Feature_55" AS DOUBLE) AS "Feature_55", CAST("ADS"."Feature_56" AS DOUBLE) AS "Feature_56", CAST("ADS"."Feature_57" AS DOUBLE) AS "Feature_57", CAST("ADS"."Feature_58" AS DOUBLE) AS "Feature_58", CAST("ADS"."Feature_59" AS DOUBLE) AS "Feature_59", CAST("ADS"."Feature_60" AS DOUBLE) AS "Feature_60", CAST("ADS"."Feature_61" AS DOUBLE) AS "Feature_61", CAST("ADS"."Feature_62" AS DOUBLE) AS "Feature_62", CAST("ADS"."Feature_63" AS DOUBLE) AS "Feature_63", CAST("ADS"."Feature_64" AS DOUBLE) AS "Feature_64", CAST("ADS"."Feature_65" AS DOUBLE) AS "Feature_65", CAST("ADS"."Feature_66" AS DOUBLE) AS "Feature_66", CAST("ADS"."Feature_67" AS DOUBLE) AS "Feature_67", CAST("ADS"."Feature_68" AS DOUBLE) AS "Feature_68", CAST("ADS"."Feature_69" AS DOUBLE) AS "Feature_69", CAST("ADS"."Feature_70" AS DOUBLE) AS "Feature_70", CAST("ADS"."Feature_71" AS DOUBLE) AS "Feature_71", CAST("ADS"."Feature_72" AS DOUBLE) AS "Feature_72", CAST("ADS"."Feature_73" AS DOUBLE) AS "Feature_73", CAST("ADS"."Feature_74" AS DOUBLE) AS "Feature_74", CAST("ADS"."Feature_75" AS DOUBLE) AS "Feature_75", CAST("ADS"."Feature_76" AS DOUBLE) AS "Feature_76", CAST("ADS"."Feature_77" AS DOUBLE) AS "Feature_77", CAST("ADS"."Feature_78" AS DOUBLE) AS "Feature_78", CAST("ADS"."Feature_79" AS DOUBLE) AS "Feature_79", CAST("ADS"."Feature_80" AS DOUBLE) AS "Feature_80", CAST("ADS"."Feature_81" AS DOUBLE) AS "Feature_81", CAST("ADS"."Feature_82" AS DOUBLE) AS "Feature_82", CAST("ADS"."Feature_83" AS DOUBLE) AS "Feature_83", CAST("ADS"."Feature_84" AS DOUBLE) AS "Feature_84", CAST("ADS"."Feature_85" AS DOUBLE) AS "Feature_85", CAST("ADS"."Feature_86" AS DOUBLE) AS "Feature_86", CAST("ADS"."Feature_87" AS DOUBLE) AS "Feature_87", CAST("ADS"."Feature_88" AS DOUBLE) AS "Feature_88", CAST("ADS"."Feature_89" AS DOUBLE) AS "Feature_89", CAST("ADS"."Feature_90" AS DOUBLE) AS "Feature_90", CAST("ADS"."Feature_91" AS DOUBLE) AS "Feature_91", CAST("ADS"."Feature_92" AS DOUBLE) AS "Feature_92", CAST("ADS"."Feature_93" AS DOUBLE) AS "Feature_93", CAST("ADS"."Feature_94" AS DOUBLE) AS "Feature_94", CAST("ADS"."Feature_95" AS DOUBLE) AS "Feature_95", CAST("ADS"."Feature_96" AS DOUBLE) AS "Feature_96", CAST("ADS"."Feature_97" AS DOUBLE) AS "Feature_97", CAST("ADS"."Feature_98" AS DOUBLE) AS "Feature_98", CAST("ADS"."Feature_99" AS DOUBLE) AS "Feature_99" 
 FROM "FourClass_100" AS "ADS"), 
@@ -38,10 +38,10 @@ FROM "HL_BA_1")
 FROM (SELECT "HL_1_relu"."KEY" AS "KEY", "HL_1_relu"."NEUR_1_1" AS "NEUR_1_1", "HL_1_relu"."NEUR_1_2" AS "NEUR_1_2", "HL_1_relu"."NEUR_1_3" AS "NEUR_1_3" 
 FROM "HL_1_relu") AS "HL_1_relu_1") AS "U"
 
--- Code For temporary table tmp_20180508181816_codegen_b7qr9v_ol_softmax_1 part 1. Create 
+-- Code For temporary table tmp_20180516113126_codegen_w2a3oi_ol_softmax_1 part 1. Create 
 
 
-CREATE TEMPORARY TABLE tmp_20180508181816_codegen_b7qr9v_ol_softmax_1 (
+CREATE TEMPORARY TABLE tmp_20180516113126_codegen_w2a3oi_ol_softmax_1 (
 	"KEY" BIGINT, 
 	"NEUR_3_1" DOUBLE, 
 	"NEUR_3_2" DOUBLE, 
@@ -51,12 +51,12 @@ CREATE TEMPORARY TABLE tmp_20180508181816_codegen_b7qr9v_ol_softmax_1 (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508181816_codegen_b7qr9v_ol_softmax_1 part 2. Populate
+-- Code For temporary table tmp_20180516113126_codegen_w2a3oi_ol_softmax_1 part 2. Populate
 
-INSERT INTO tmp_20180508181816_codegen_b7qr9v_ol_softmax_1 ("KEY", "NEUR_3_1", "NEUR_3_2", "NEUR_3_3", "NEUR_3_4") SELECT "U"."KEY", "U"."NEUR_3_1", "U"."NEUR_3_2", "U"."NEUR_3_3", "U"."NEUR_3_4" 
+INSERT INTO tmp_20180516113126_codegen_w2a3oi_ol_softmax_1 ("KEY", "NEUR_3_1", "NEUR_3_2", "NEUR_3_3", "NEUR_3_4") SELECT "U"."KEY", "U"."NEUR_3_1", "U"."NEUR_3_2", "U"."NEUR_3_3", "U"."NEUR_3_4" 
 FROM (WITH "HL_BA_2" AS 
 (SELECT "HL_1_relu_1"."KEY" AS "KEY", 0.40850400024197087 * "HL_1_relu_1"."NEUR_1_1" + -0.3724854879085448 * "HL_1_relu_1"."NEUR_1_2" + 3.3318906201565635 * "HL_1_relu_1"."NEUR_1_3" + -1.5632332564550018 AS "NEUR_2_1", -2.762339357200178 * "HL_1_relu_1"."NEUR_1_1" + -2.5926459360642204 * "HL_1_relu_1"."NEUR_1_2" + 1.1938936236490711 * "HL_1_relu_1"."NEUR_1_3" + 4.414871798715717 AS "NEUR_2_2", -1.0959572451235382 * "HL_1_relu_1"."NEUR_1_1" + 1.0889889482527488 * "HL_1_relu_1"."NEUR_1_2" + 0.5322912426271365 * "HL_1_relu_1"."NEUR_1_3" + -1.8292351276529497 AS "NEUR_2_3", -0.16573869802078015 * "HL_1_relu_1"."NEUR_1_1" + 3.8662513683140896 * "HL_1_relu_1"."NEUR_1_2" + -1.5657067269338925 * "HL_1_relu_1"."NEUR_1_3" + 1.8982459372321105 AS "NEUR_2_4", -0.609304507588836 * "HL_1_relu_1"."NEUR_1_1" + -0.3776422773901093 * "HL_1_relu_1"."NEUR_1_2" + -0.6729549566187693 * "HL_1_relu_1"."NEUR_1_3" + -0.01807831622698608 AS "NEUR_2_5" 
-FROM tmp_20180508181816_codegen_383dvx_hl_1_relu_1 AS "HL_1_relu_1"), 
+FROM tmp_20180516113126_codegen_8agbf0_hl_1_relu_1 AS "HL_1_relu_1"), 
 "HL_2_relu" AS 
 (SELECT "HL_BA_2"."KEY" AS "KEY", CASE WHEN ("HL_BA_2"."NEUR_2_1" <= 0) THEN 0 ELSE "HL_BA_2"."NEUR_2_1" END AS "NEUR_2_1", CASE WHEN ("HL_BA_2"."NEUR_2_2" <= 0) THEN 0 ELSE "HL_BA_2"."NEUR_2_2" END AS "NEUR_2_2", CASE WHEN ("HL_BA_2"."NEUR_2_3" <= 0) THEN 0 ELSE "HL_BA_2"."NEUR_2_3" END AS "NEUR_2_3", CASE WHEN ("HL_BA_2"."NEUR_2_4" <= 0) THEN 0 ELSE "HL_BA_2"."NEUR_2_4" END AS "NEUR_2_4", CASE WHEN ("HL_BA_2"."NEUR_2_5" <= 0) THEN 0 ELSE "HL_BA_2"."NEUR_2_5" END AS "NEUR_2_5" 
 FROM "HL_BA_2"), 
@@ -74,7 +74,7 @@ FROM "OL_softmax") AS "OL_softmax_1") AS "U"
 
 WITH orig_cte AS 
 (SELECT "OL_softmax_1"."KEY" AS "KEY", "OL_softmax_1"."NEUR_3_1" AS "Score_0", "OL_softmax_1"."NEUR_3_2" AS "Score_1", "OL_softmax_1"."NEUR_3_3" AS "Score_2", "OL_softmax_1"."NEUR_3_4" AS "Score_3", CAST(NULL AS DOUBLE) AS "Proba_0", CAST(NULL AS DOUBLE) AS "Proba_1", CAST(NULL AS DOUBLE) AS "Proba_2", CAST(NULL AS DOUBLE) AS "Proba_3", CAST(NULL AS DOUBLE) AS "LogProba_0", CAST(NULL AS DOUBLE) AS "LogProba_1", CAST(NULL AS DOUBLE) AS "LogProba_2", CAST(NULL AS DOUBLE) AS "LogProba_3", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE) AS "DecisionProba" 
-FROM tmp_20180508181816_codegen_b7qr9v_ol_softmax_1 AS "OL_softmax_1"), 
+FROM tmp_20180516113126_codegen_w2a3oi_ol_softmax_1 AS "OL_softmax_1"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 
@@ -87,7 +87,7 @@ score_max AS
 FROM orig_cte LEFT OUTER JOIN (SELECT score_class_union."KEY_u" AS "KEY_m", max(score_class_union."Score") AS "max_Score" 
 FROM score_class_union GROUP BY score_class_union."KEY_u") AS max_select ON orig_cte."KEY" = max_select."KEY_m"), 
 score_soft_max_deltas AS 
-(SELECT score_max."KEY" AS "KEY", score_max."Score_0" AS "Score_0", score_max."Score_1" AS "Score_1", score_max."Score_2" AS "Score_2", score_max."Score_3" AS "Score_3", score_max."Proba_0" AS "Proba_0", score_max."Proba_1" AS "Proba_1", score_max."Proba_2" AS "Proba_2", score_max."Proba_3" AS "Proba_3", score_max."LogProba_0" AS "LogProba_0", score_max."LogProba_1" AS "LogProba_1", score_max."LogProba_2" AS "LogProba_2", score_max."LogProba_3" AS "LogProba_3", score_max."Decision" AS "Decision", score_max."DecisionProba" AS "DecisionProba", score_max."KEY_m" AS "KEY_m", score_max."max_Score" AS "max_Score", exp(score_max."Score_0" - score_max."max_Score") AS "exp_delta_Score_0", exp(score_max."Score_1" - score_max."max_Score") AS "exp_delta_Score_1", exp(score_max."Score_2" - score_max."max_Score") AS "exp_delta_Score_2", exp(score_max."Score_3" - score_max."max_Score") AS "exp_delta_Score_3" 
+(SELECT score_max."KEY" AS "KEY", score_max."Score_0" AS "Score_0", score_max."Score_1" AS "Score_1", score_max."Score_2" AS "Score_2", score_max."Score_3" AS "Score_3", score_max."Proba_0" AS "Proba_0", score_max."Proba_1" AS "Proba_1", score_max."Proba_2" AS "Proba_2", score_max."Proba_3" AS "Proba_3", score_max."LogProba_0" AS "LogProba_0", score_max."LogProba_1" AS "LogProba_1", score_max."LogProba_2" AS "LogProba_2", score_max."LogProba_3" AS "LogProba_3", score_max."Decision" AS "Decision", score_max."DecisionProba" AS "DecisionProba", score_max."KEY_m" AS "KEY_m", score_max."max_Score" AS "max_Score", exp(CASE WHEN (-100.0 <= score_max."Score_0" - score_max."max_Score") THEN score_max."Score_0" - score_max."max_Score" ELSE -100.0 END) AS "exp_delta_Score_0", exp(CASE WHEN (-100.0 <= score_max."Score_1" - score_max."max_Score") THEN score_max."Score_1" - score_max."max_Score" ELSE -100.0 END) AS "exp_delta_Score_1", exp(CASE WHEN (-100.0 <= score_max."Score_2" - score_max."max_Score") THEN score_max."Score_2" - score_max."max_Score" ELSE -100.0 END) AS "exp_delta_Score_2", exp(CASE WHEN (-100.0 <= score_max."Score_3" - score_max."max_Score") THEN score_max."Score_3" - score_max."max_Score" ELSE -100.0 END) AS "exp_delta_Score_3" 
 FROM score_max), 
 score_class_union_soft AS 
 (SELECT soft_scu."KEY" AS "KEY", soft_scu.class AS class, soft_scu."exp_delta_Score" AS "exp_delta_Score" 

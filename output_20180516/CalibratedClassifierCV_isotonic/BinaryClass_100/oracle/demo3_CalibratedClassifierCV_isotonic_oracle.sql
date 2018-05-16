@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table _CODEGEN_2VVVDL_CALPROB_B0 part 1. Create 
+-- Code For temporary table _CODEGEN_DBCRW2_CALPROB_B0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "_CODEGEN_2VVVDL_CALPROB_B0" (
+CREATE GLOBAL TEMPORARY TABLE "_CODEGEN_DBCRW2_CALPROB_B0" (
 	"KEY" NUMBER(19), 
 	"Proba_1" BINARY_DOUBLE, 
 	"Proba_0" BINARY_DOUBLE
@@ -21,9 +21,9 @@ CREATE GLOBAL TEMPORARY TABLE "_CODEGEN_2VVVDL_CALPROB_B0" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table _CODEGEN_2VVVDL_CALPROB_B0 part 2. Populate
+-- Code For temporary table _CODEGEN_DBCRW2_CALPROB_B0 part 2. Populate
 
-INSERT INTO "_CODEGEN_2VVVDL_CALPROB_B0" ("KEY", "Proba_1", "Proba_0") SELECT "U"."KEY", "U"."Proba_1", "U"."Proba_0" 
+INSERT INTO "_CODEGEN_DBCRW2_CALPROB_B0" ("KEY", "Proba_1", "Proba_0") SELECT "U"."KEY", "U"."Proba_1", "U"."Proba_0" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_57" <= 0.03440605849027634) THEN CASE WHEN ("ADS"."Feature_18" <= -1.1672475337982178) THEN CASE WHEN ("ADS"."Feature_77" <= 0.3908604085445404) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_88" <= 1.8314564228057861) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_18" <= 1.5096360445022583) THEN 9 ELSE CASE WHEN ("ADS"."Feature_32" <= 0.10546842217445374) THEN 11 ELSE 12 END END END AS node_id_2 
 FROM "BINARYCLASS_100" "ADS"), 
@@ -104,10 +104,10 @@ FROM "Normalized_Probas_1" UNION ALL SELECT "Normalized_Probas_2"."KEY" AS "KEY"
 FROM "Normalized_Probas_2" UNION ALL SELECT "Normalized_Probas_3"."KEY" AS "KEY", "Normalized_Probas_3"."Proba_1" AS "Proba_1", "Normalized_Probas_3"."Proba_0" AS "Proba_0" 
 FROM "Normalized_Probas_3") "CalProb_esu_0") "CalProb_B0") "U"
 
--- Code For temporary table DEGEN_HCGEIB_CALPROB_UNION part 1. Create 
+-- Code For temporary table CODEGEN_N95B70_CALPROB_AVG part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "DEGEN_HCGEIB_CALPROB_UNION" (
+CREATE GLOBAL TEMPORARY TABLE "CODEGEN_N95B70_CALPROB_AVG" (
 	"KEY" NUMBER(19), 
 	"Proba_1" BINARY_DOUBLE, 
 	"Proba_0" BINARY_DOUBLE
@@ -115,38 +115,23 @@ CREATE GLOBAL TEMPORARY TABLE "DEGEN_HCGEIB_CALPROB_UNION" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table DEGEN_HCGEIB_CALPROB_UNION part 2. Populate
+-- Code For temporary table CODEGEN_N95B70_CALPROB_AVG part 2. Populate
 
-INSERT INTO "DEGEN_HCGEIB_CALPROB_UNION" ("KEY", "Proba_1", "Proba_0") SELECT "U"."KEY", "U"."Proba_1", "U"."Proba_0" 
-FROM (SELECT "CalProb_Union"."KEY", "CalProb_Union"."Proba_1", "CalProb_Union"."Proba_0" 
-FROM (SELECT "CalProb_EnsembleUnion"."KEY" AS "KEY", "CalProb_EnsembleUnion"."Proba_1" AS "Proba_1", "CalProb_EnsembleUnion"."Proba_0" AS "Proba_0" 
+INSERT INTO "CODEGEN_N95B70_CALPROB_AVG" ("KEY", "Proba_1", "Proba_0") SELECT "U"."KEY", "U"."Proba_1", "U"."Proba_0" 
+FROM (WITH "CalProb_Union" AS 
+(SELECT "CalProb_EnsembleUnion"."KEY" AS "KEY", "CalProb_EnsembleUnion"."Proba_1" AS "Proba_1", "CalProb_EnsembleUnion"."Proba_0" AS "Proba_0" 
 FROM (SELECT "CalProb_B0"."KEY" AS "KEY", "CalProb_B0"."Proba_1" AS "Proba_1", "CalProb_B0"."Proba_0" AS "Proba_0" 
-FROM "_CODEGEN_2VVVDL_CALPROB_B0" "CalProb_B0") "CalProb_EnsembleUnion") "CalProb_Union") "U"
-
--- Code For temporary table CODEGEN_R7PUVX_CALPROB_AVG part 1. Create 
-
-
-CREATE GLOBAL TEMPORARY TABLE "CODEGEN_R7PUVX_CALPROB_AVG" (
-	"KEY" NUMBER(19), 
-	"Proba_1" BINARY_DOUBLE, 
-	"Proba_0" BINARY_DOUBLE
-)
-
- ON COMMIT PRESERVE ROWS
-
--- Code For temporary table CODEGEN_R7PUVX_CALPROB_AVG part 2. Populate
-
-INSERT INTO "CODEGEN_R7PUVX_CALPROB_AVG" ("KEY", "Proba_1", "Proba_0") SELECT "U"."KEY", "U"."Proba_1", "U"."Proba_0" 
-FROM (SELECT "CalProb_avg"."KEY", "CalProb_avg"."Proba_1", "CalProb_avg"."Proba_0" 
+FROM "_CODEGEN_DBCRW2_CALPROB_B0" "CalProb_B0") "CalProb_EnsembleUnion")
+ SELECT "CalProb_avg"."KEY", "CalProb_avg"."Proba_1", "CalProb_avg"."Proba_0" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Proba_1" AS BINARY_DOUBLE) AS "Proba_1", CAST("T"."Proba_0" AS BINARY_DOUBLE) AS "Proba_0" 
 FROM (SELECT "CalProb_Union"."KEY" AS "KEY", avg(CAST("CalProb_Union"."Proba_1" AS BINARY_DOUBLE)) AS "Proba_1", avg(CAST("CalProb_Union"."Proba_0" AS BINARY_DOUBLE)) AS "Proba_0" 
-FROM "DEGEN_HCGEIB_CALPROB_UNION" "CalProb_Union" GROUP BY "CalProb_Union"."KEY") "T") "CalProb_avg") "U"
+FROM "CalProb_Union" GROUP BY "CalProb_Union"."KEY") "T") "CalProb_avg") "U"
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT "CalProb_avg"."KEY" AS "KEY", CAST(NULL AS BINARY_DOUBLE) AS "Score_0", CAST(NULL AS BINARY_DOUBLE) AS "Score_1", "CalProb_avg"."Proba_0" AS "Proba_0", "CalProb_avg"."Proba_1" AS "Proba_1", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_0", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_1", CAST(NULL AS NUMBER(19)) AS "Decision", CAST(NULL AS BINARY_DOUBLE) AS "DecisionProba" 
-FROM "CODEGEN_R7PUVX_CALPROB_AVG" "CalProb_avg"), 
+FROM "CODEGEN_N95B70_CALPROB_AVG" "CalProb_avg"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

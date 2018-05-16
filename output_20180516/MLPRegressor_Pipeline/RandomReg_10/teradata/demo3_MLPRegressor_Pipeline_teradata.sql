@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180508182249_codegen_yocpga_ads_imp_1_out part 1. Create 
+-- Code For temporary table tmp_20180516113742_codegen_y45hlp_ads_imp_1_out part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508182249_codegen_yocpga_ads_imp_1_out  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516113742_codegen_y45hlp_ads_imp_1_out  (
 	"KEY" BIGINT, 
 	impter_2 DOUBLE PRECISION, 
 	impter_3 DOUBLE PRECISION, 
@@ -29,17 +29,17 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508182249_codegen_yocpga_ads_imp_1_out  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508182249_codegen_yocpga_ads_imp_1_out part 2. Populate
+-- Code For temporary table tmp_20180516113742_codegen_y45hlp_ads_imp_1_out part 2. Populate
 
-INSERT INTO tmp_20180508182249_codegen_yocpga_ads_imp_1_out ("KEY", impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT "U"."KEY", "U".impter_2, "U".impter_3, "U".impter_4, "U".impter_5, "U".impter_6, "U".impter_7, "U".impter_8, "U".impter_9, "U".impter_10, "U".impter_11 
+INSERT INTO tmp_20180516113742_codegen_y45hlp_ads_imp_1_out ("KEY", impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT "U"."KEY", "U".impter_2, "U".impter_3, "U".impter_4, "U".impter_5, "U".impter_6, "U".impter_7, "U".impter_8, "U".impter_9, "U".impter_10, "U".impter_11 
 FROM (SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".impter_2, "ADS_imp_1_OUT".impter_3, "ADS_imp_1_OUT".impter_4, "ADS_imp_1_OUT".impter_5, "ADS_imp_1_OUT".impter_6, "ADS_imp_1_OUT".impter_7, "ADS_imp_1_OUT".impter_8, "ADS_imp_1_OUT".impter_9, "ADS_imp_1_OUT".impter_10, "ADS_imp_1_OUT".impter_11 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN 0.16680947298137394 ELSE "ADS"."Feature_0" END AS impter_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN -0.16351271994443456 ELSE "ADS"."Feature_1" END AS impter_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 0.19149292241003152 ELSE "ADS"."Feature_2" END AS impter_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 0.058384844753055345 ELSE "ADS"."Feature_3" END AS impter_5, CASE WHEN ("ADS"."Feature_4" IS NULL) THEN -0.09933205162122274 ELSE "ADS"."Feature_4" END AS impter_6, CASE WHEN ("ADS"."Feature_5" IS NULL) THEN 0.21293121660488037 ELSE "ADS"."Feature_5" END AS impter_7, CASE WHEN ("ADS"."Feature_6" IS NULL) THEN 0.047865568690029614 ELSE "ADS"."Feature_6" END AS impter_8, CASE WHEN ("ADS"."Feature_7" IS NULL) THEN 0.05078698959084227 ELSE "ADS"."Feature_7" END AS impter_9, CASE WHEN ("ADS"."Feature_8" IS NULL) THEN -0.1913199225908187 ELSE "ADS"."Feature_8" END AS impter_10, CASE WHEN ("ADS"."Feature_9" IS NULL) THEN 0.19940405677473352 ELSE "ADS"."Feature_9" END AS impter_11 
 FROM "RandomReg_10" AS "ADS") AS "ADS_imp_1_OUT") AS "U"
 
--- Code For temporary table tmp_20180508182249_codegen_illfc2_ads_sca_2_out part 1. Create 
+-- Code For temporary table tmp_20180516113742_codegen_0548ns_ads_sca_2_out part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508182249_codegen_illfc2_ads_sca_2_out  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516113742_codegen_0548ns_ads_sca_2_out  (
 	"KEY" BIGINT, 
 	scaler_2 DOUBLE PRECISION, 
 	scaler_3 DOUBLE PRECISION, 
@@ -55,17 +55,17 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508182249_codegen_illfc2_ads_sca_2_out  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508182249_codegen_illfc2_ads_sca_2_out part 2. Populate
+-- Code For temporary table tmp_20180516113742_codegen_0548ns_ads_sca_2_out part 2. Populate
 
-INSERT INTO tmp_20180508182249_codegen_illfc2_ads_sca_2_out ("KEY", scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT "U"."KEY", "U".scaler_2, "U".scaler_3, "U".scaler_4, "U".scaler_5, "U".scaler_6, "U".scaler_7, "U".scaler_8, "U".scaler_9, "U".scaler_10, "U".scaler_11 
+INSERT INTO tmp_20180516113742_codegen_0548ns_ads_sca_2_out ("KEY", scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT "U"."KEY", "U".scaler_2, "U".scaler_3, "U".scaler_4, "U".scaler_5, "U".scaler_6, "U".scaler_7, "U".scaler_8, "U".scaler_9, "U".scaler_10, "U".scaler_11 
 FROM (SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_2, "ADS_sca_2_OUT".scaler_3, "ADS_sca_2_OUT".scaler_4, "ADS_sca_2_OUT".scaler_5, "ADS_sca_2_OUT".scaler_6, "ADS_sca_2_OUT".scaler_7, "ADS_sca_2_OUT".scaler_8, "ADS_sca_2_OUT".scaler_9, "ADS_sca_2_OUT".scaler_10, "ADS_sca_2_OUT".scaler_11 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".impter_2 AS DOUBLE PRECISION) - CAST(0.166809472981374 AS DOUBLE PRECISION)) / CAST(1.028983599704731 AS DOUBLE PRECISION) AS scaler_2, (CAST("ADS_imp_1_OUT".impter_3 AS DOUBLE PRECISION) - CAST(-0.163512719944435 AS DOUBLE PRECISION)) / CAST(0.991581253504681 AS DOUBLE PRECISION) AS scaler_3, (CAST("ADS_imp_1_OUT".impter_4 AS DOUBLE PRECISION) - CAST(0.191492922410032 AS DOUBLE PRECISION)) / CAST(0.932114762914776 AS DOUBLE PRECISION) AS scaler_4, (CAST("ADS_imp_1_OUT".impter_5 AS DOUBLE PRECISION) - CAST(0.058384844753055 AS DOUBLE PRECISION)) / CAST(1.08557293295068 AS DOUBLE PRECISION) AS scaler_5, (CAST("ADS_imp_1_OUT".impter_6 AS DOUBLE PRECISION) - CAST(-0.099332051621223 AS DOUBLE PRECISION)) / CAST(1.074390441288283 AS DOUBLE PRECISION) AS scaler_6, (CAST("ADS_imp_1_OUT".impter_7 AS DOUBLE PRECISION) - CAST(0.21293121660488 AS DOUBLE PRECISION)) / CAST(0.935807438188625 AS DOUBLE PRECISION) AS scaler_7, (CAST("ADS_imp_1_OUT".impter_8 AS DOUBLE PRECISION) - CAST(0.04786556869003 AS DOUBLE PRECISION)) / CAST(1.136357409061339 AS DOUBLE PRECISION) AS scaler_8, (CAST("ADS_imp_1_OUT".impter_9 AS DOUBLE PRECISION) - CAST(0.050786989590842 AS DOUBLE PRECISION)) / CAST(0.972545746009845 AS DOUBLE PRECISION) AS scaler_9, (CAST("ADS_imp_1_OUT".impter_10 AS DOUBLE PRECISION) - CAST(-0.191319922590819 AS DOUBLE PRECISION)) / CAST(1.141597467793656 AS DOUBLE PRECISION) AS scaler_10, (CAST("ADS_imp_1_OUT".impter_11 AS DOUBLE PRECISION) - CAST(0.199404056774734 AS DOUBLE PRECISION)) / CAST(0.882245682091319 AS DOUBLE PRECISION) AS scaler_11 
-FROM tmp_20180508182249_codegen_yocpga_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
+FROM tmp_20180516113742_codegen_y45hlp_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
 
--- Code For temporary table tmp_20180508182249_codegen_o09oaz_hl_1_relu_1 part 1. Create 
+-- Code For temporary table tmp_20180516113742_codegen_7xqr7w_hl_1_relu_1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508182249_codegen_o09oaz_hl_1_relu_1  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516113742_codegen_7xqr7w_hl_1_relu_1  (
 	"KEY" BIGINT, 
 	"NEUR_1_1" DOUBLE PRECISION, 
 	"NEUR_1_2" DOUBLE PRECISION, 
@@ -74,12 +74,12 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508182249_codegen_o09oaz_hl_1_relu_1  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508182249_codegen_o09oaz_hl_1_relu_1 part 2. Populate
+-- Code For temporary table tmp_20180516113742_codegen_7xqr7w_hl_1_relu_1 part 2. Populate
 
-INSERT INTO tmp_20180508182249_codegen_o09oaz_hl_1_relu_1 ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "U"."KEY", "U"."NEUR_1_1", "U"."NEUR_1_2", "U"."NEUR_1_3" 
+INSERT INTO tmp_20180516113742_codegen_7xqr7w_hl_1_relu_1 ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "U"."KEY", "U"."NEUR_1_1", "U"."NEUR_1_2", "U"."NEUR_1_3" 
 FROM (WITH "IL" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CAST("ADS_sca_2_OUT".scaler_2 AS DOUBLE PRECISION) AS scaler_2, CAST("ADS_sca_2_OUT".scaler_3 AS DOUBLE PRECISION) AS scaler_3, CAST("ADS_sca_2_OUT".scaler_4 AS DOUBLE PRECISION) AS scaler_4, CAST("ADS_sca_2_OUT".scaler_5 AS DOUBLE PRECISION) AS scaler_5, CAST("ADS_sca_2_OUT".scaler_6 AS DOUBLE PRECISION) AS scaler_6, CAST("ADS_sca_2_OUT".scaler_7 AS DOUBLE PRECISION) AS scaler_7, CAST("ADS_sca_2_OUT".scaler_8 AS DOUBLE PRECISION) AS scaler_8, CAST("ADS_sca_2_OUT".scaler_9 AS DOUBLE PRECISION) AS scaler_9, CAST("ADS_sca_2_OUT".scaler_10 AS DOUBLE PRECISION) AS scaler_10, CAST("ADS_sca_2_OUT".scaler_11 AS DOUBLE PRECISION) AS scaler_11 
-FROM tmp_20180508182249_codegen_illfc2_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516113742_codegen_0548ns_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "HL_BA_1" AS 
 (SELECT "IL"."KEY" AS "KEY", CAST(-1.265262838384639 AS DOUBLE PRECISION) * "IL".scaler_2 + CAST(-2.668180464330116 AS DOUBLE PRECISION) * "IL".scaler_3 + CAST(-3.158237912064006 AS DOUBLE PRECISION) * "IL".scaler_4 + CAST(-1.33854818885512 AS DOUBLE PRECISION) * "IL".scaler_5 + CAST(-2.057765548628674 AS DOUBLE PRECISION) * "IL".scaler_6 + CAST(-2.84417541907169 AS DOUBLE PRECISION) * "IL".scaler_7 + CAST(-1.379265067181442 AS DOUBLE PRECISION) * "IL".scaler_8 + CAST(-1.411481658802069 AS DOUBLE PRECISION) * "IL".scaler_9 + CAST(-3.356484043999449 AS DOUBLE PRECISION) * "IL".scaler_10 + CAST(-1.917243770264228 AS DOUBLE PRECISION) * "IL".scaler_11 + CAST(-0.649728152587234 AS DOUBLE PRECISION) AS "NEUR_1_1", CAST(-0.041332851423886 AS DOUBLE PRECISION) * "IL".scaler_2 + CAST(-0.949721922508506 AS DOUBLE PRECISION) * "IL".scaler_3 + CAST(-1.510806887744057 AS DOUBLE PRECISION) * "IL".scaler_4 + CAST(0.607253118130005 AS DOUBLE PRECISION) * "IL".scaler_5 + CAST(-0.105302069350983 AS DOUBLE PRECISION) * "IL".scaler_6 + CAST(-0.016259353825251 AS DOUBLE PRECISION) * "IL".scaler_7 + CAST(-0.686702996744942 AS DOUBLE PRECISION) * "IL".scaler_8 + CAST(-0.659594957728415 AS DOUBLE PRECISION) * "IL".scaler_9 + CAST(-0.421846267721271 AS DOUBLE PRECISION) * "IL".scaler_10 + CAST(-0.446347841509293 AS DOUBLE PRECISION) * "IL".scaler_11 + CAST(-0.7720217085016 AS DOUBLE PRECISION) AS "NEUR_1_2", CAST(1.714626878851648 AS DOUBLE PRECISION) * "IL".scaler_2 + CAST(3.615819646165203 AS DOUBLE PRECISION) * "IL".scaler_3 + CAST(4.279843760109578 AS DOUBLE PRECISION) * "IL".scaler_4 + CAST(1.814037775149173 AS DOUBLE PRECISION) * "IL".scaler_5 + CAST(2.78865104928233 AS DOUBLE PRECISION) * "IL".scaler_6 + CAST(3.854275947903176 AS DOUBLE PRECISION) * "IL".scaler_7 + CAST(1.869068036153398 AS DOUBLE PRECISION) * "IL".scaler_8 + CAST(1.912744355612302 AS DOUBLE PRECISION) * "IL".scaler_9 + CAST(4.548565544128607 AS DOUBLE PRECISION) * "IL".scaler_10 + CAST(2.598208870717786 AS DOUBLE PRECISION) * "IL".scaler_11 + CAST(1.097527009600231 AS DOUBLE PRECISION) AS "NEUR_1_3" 
 FROM "IL"), 
@@ -90,22 +90,22 @@ FROM "HL_BA_1")
 FROM (SELECT "HL_1_relu"."KEY" AS "KEY", "HL_1_relu"."NEUR_1_1" AS "NEUR_1_1", "HL_1_relu"."NEUR_1_2" AS "NEUR_1_2", "HL_1_relu"."NEUR_1_3" AS "NEUR_1_3" 
 FROM "HL_1_relu") AS "HL_1_relu_1") AS "U"
 
--- Code For temporary table tmp_20180508182249_codegen_mszels_ol_identity_1 part 1. Create 
+-- Code For temporary table tmp_20180516113742_codegen_kp6qjl_ol_identity_1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508182249_codegen_mszels_ol_identity_1  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516113742_codegen_kp6qjl_ol_identity_1  (
 	"KEY" BIGINT, 
 	"NEUR_3_1" DOUBLE PRECISION
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508182249_codegen_mszels_ol_identity_1 part 2. Populate
+-- Code For temporary table tmp_20180516113742_codegen_kp6qjl_ol_identity_1 part 2. Populate
 
-INSERT INTO tmp_20180508182249_codegen_mszels_ol_identity_1 ("KEY", "NEUR_3_1") SELECT "U"."KEY", "U"."NEUR_3_1" 
+INSERT INTO tmp_20180516113742_codegen_kp6qjl_ol_identity_1 ("KEY", "NEUR_3_1") SELECT "U"."KEY", "U"."NEUR_3_1" 
 FROM (WITH "HL_BA_2" AS 
 (SELECT "HL_1_relu_1"."KEY" AS "KEY", CAST(-0.741714792318346 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_1" + CAST(0.440055458908202 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_2" + CAST(0.430052254270289 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_3" + CAST(-0.254512596532487 AS DOUBLE PRECISION) AS "NEUR_2_1", CAST(4.995645153506303 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_1" + CAST(8.207578353e-06 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_2" + CAST(-0.506498415217461 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_3" + CAST(-0.672026054695173 AS DOUBLE PRECISION) AS "NEUR_2_2", CAST(-1.99638740106185 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_1" + CAST(-1.016601235410726 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_2" + CAST(4.959397453629041 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_3" + CAST(-0.162795274679575 AS DOUBLE PRECISION) AS "NEUR_2_3", CAST(-2.246948908540948 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_1" + CAST(-0.504740098649541 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_2" + CAST(-0.406629621969914 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_3" + CAST(-1.106754442995298 AS DOUBLE PRECISION) AS "NEUR_2_4", CAST(-0.632700414721291 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_1" + CAST(0.552007705104472 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_2" + CAST(-0.590170837065246 AS DOUBLE PRECISION) * "HL_1_relu_1"."NEUR_1_3" + CAST(-0.480908036421287 AS DOUBLE PRECISION) AS "NEUR_2_5" 
-FROM tmp_20180508182249_codegen_o09oaz_hl_1_relu_1 AS "HL_1_relu_1"), 
+FROM tmp_20180516113742_codegen_7xqr7w_hl_1_relu_1 AS "HL_1_relu_1"), 
 "HL_2_relu" AS 
 (SELECT "HL_BA_2"."KEY" AS "KEY", greatest("HL_BA_2"."NEUR_2_1", CAST(0 AS DOUBLE PRECISION)) AS "NEUR_2_1", greatest("HL_BA_2"."NEUR_2_2", CAST(0 AS DOUBLE PRECISION)) AS "NEUR_2_2", greatest("HL_BA_2"."NEUR_2_3", CAST(0 AS DOUBLE PRECISION)) AS "NEUR_2_3", greatest("HL_BA_2"."NEUR_2_4", CAST(0 AS DOUBLE PRECISION)) AS "NEUR_2_4", greatest("HL_BA_2"."NEUR_2_5", CAST(0 AS DOUBLE PRECISION)) AS "NEUR_2_5" 
 FROM "HL_BA_2"), 
@@ -122,4 +122,4 @@ FROM "OL_identity") AS "OL_identity_1") AS "U"
 -- Model deployment code
 
 SELECT "OL_identity_1"."KEY" AS "KEY", "OL_identity_1"."NEUR_3_1" AS "Estimator" 
-FROM tmp_20180508182249_codegen_mszels_ol_identity_1 AS "OL_identity_1"
+FROM tmp_20180516113742_codegen_kp6qjl_ol_identity_1 AS "OL_identity_1"

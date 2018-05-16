@@ -10,9 +10,9 @@
 
 
 
--- Code For temporary table tmp_20180509002942_codegen_qb483w_hl_1_relu_1 part 1. Create 
+-- Code For temporary table tmp_20180516113732_codegen_g43jew_hl_1_relu_1 part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180509002942_codegen_qb483w_hl_1_relu_1` STORED AS ORC AS WITH `IL` AS 
+CREATE TEMPORARY TABLE `tmp_20180516113732_codegen_g43jew_hl_1_relu_1` STORED AS ORC AS WITH `IL` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CAST(`ADS`.`Feature_0` AS DOUBLE) AS `Feature_0`, CAST(`ADS`.`Feature_1` AS DOUBLE) AS `Feature_1`, CAST(`ADS`.`Feature_2` AS DOUBLE) AS `Feature_2`, CAST(`ADS`.`Feature_3` AS DOUBLE) AS `Feature_3`, CAST(`ADS`.`Feature_4` AS DOUBLE) AS `Feature_4`, CAST(`ADS`.`Feature_5` AS DOUBLE) AS `Feature_5`, CAST(`ADS`.`Feature_6` AS DOUBLE) AS `Feature_6`, CAST(`ADS`.`Feature_7` AS DOUBLE) AS `Feature_7`, CAST(`ADS`.`Feature_8` AS DOUBLE) AS `Feature_8`, CAST(`ADS`.`Feature_9` AS DOUBLE) AS `Feature_9` 
 FROM `RandomReg_10` AS `ADS`), 
 `HL_BA_1` AS 
@@ -25,15 +25,15 @@ FROM `HL_BA_1`)
 FROM (SELECT `HL_1_relu`.`KEY` AS `KEY`, `HL_1_relu`.`NEUR_1_1` AS `NEUR_1_1`, `HL_1_relu`.`NEUR_1_2` AS `NEUR_1_2`, `HL_1_relu`.`NEUR_1_3` AS `NEUR_1_3` 
 FROM `HL_1_relu`) AS `HL_1_relu_1`
 
--- Code For temporary table tmp_20180509002942_codegen_qb483w_hl_1_relu_1 part 2. Populate
+-- Code For temporary table tmp_20180516113732_codegen_g43jew_hl_1_relu_1 part 2. Populate
 
-SELECT * FROM `tmp_20180509002942_codegen_qb483w_hl_1_relu_1`
+SELECT * FROM `tmp_20180516113732_codegen_g43jew_hl_1_relu_1`
 
--- Code For temporary table tmp_20180509002942_codegen_hfrm51_ol_identity_1 part 1. Create 
+-- Code For temporary table tmp_20180516113732_codegen_xr6lpt_ol_identity_1 part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180509002942_codegen_hfrm51_ol_identity_1` STORED AS ORC AS WITH `HL_BA_2` AS 
+CREATE TEMPORARY TABLE `tmp_20180516113732_codegen_xr6lpt_ol_identity_1` STORED AS ORC AS WITH `HL_BA_2` AS 
 (SELECT `HL_1_relu_1`.`KEY` AS `KEY`, 0.22894422824685728 * `HL_1_relu_1`.`NEUR_1_1` + -3.557643730582295 * `HL_1_relu_1`.`NEUR_1_2` + -4.88723322938756 * `HL_1_relu_1`.`NEUR_1_3` + -0.14141976992143357 AS `NEUR_2_1`, -17.332117414597715 * `HL_1_relu_1`.`NEUR_1_1` + -33.050420508846344 * `HL_1_relu_1`.`NEUR_1_2` + -10.870649906457865 * `HL_1_relu_1`.`NEUR_1_3` + 38.13148680676716 AS `NEUR_2_2`, -1.3691749878524247e-06 * `HL_1_relu_1`.`NEUR_1_1` + -1.7378259361112855e-07 * `HL_1_relu_1`.`NEUR_1_2` + 15.998980814223467 * `HL_1_relu_1`.`NEUR_1_3` + -113.4412256958844 AS `NEUR_2_3`, -5.5283472177126765 * `HL_1_relu_1`.`NEUR_1_1` + -0.5047406575065106 * `HL_1_relu_1`.`NEUR_1_2` + -0.40663007219724384 * `HL_1_relu_1`.`NEUR_1_3` + -1.49641474582629 AS `NEUR_2_4`, -0.606242203771098 * `HL_1_relu_1`.`NEUR_1_1` + -0.6491411176250613 * `HL_1_relu_1`.`NEUR_1_2` + -0.800371521031674 * `HL_1_relu_1`.`NEUR_1_3` + -1.2435281947513717 AS `NEUR_2_5` 
-FROM `tmp_20180509002942_codegen_qb483w_hl_1_relu_1` AS `HL_1_relu_1`), 
+FROM `tmp_20180516113732_codegen_g43jew_hl_1_relu_1` AS `HL_1_relu_1`), 
 `HL_2_relu` AS 
 (SELECT `HL_BA_2`.`KEY` AS `KEY`, CASE WHEN (`HL_BA_2`.`NEUR_2_1` <= 0) THEN 0 ELSE `HL_BA_2`.`NEUR_2_1` END AS `NEUR_2_1`, CASE WHEN (`HL_BA_2`.`NEUR_2_2` <= 0) THEN 0 ELSE `HL_BA_2`.`NEUR_2_2` END AS `NEUR_2_2`, CASE WHEN (`HL_BA_2`.`NEUR_2_3` <= 0) THEN 0 ELSE `HL_BA_2`.`NEUR_2_3` END AS `NEUR_2_3`, CASE WHEN (`HL_BA_2`.`NEUR_2_4` <= 0) THEN 0 ELSE `HL_BA_2`.`NEUR_2_4` END AS `NEUR_2_4`, CASE WHEN (`HL_BA_2`.`NEUR_2_5` <= 0) THEN 0 ELSE `HL_BA_2`.`NEUR_2_5` END AS `NEUR_2_5` 
 FROM `HL_BA_2`), 
@@ -47,11 +47,11 @@ FROM `OL_BA`)
 FROM (SELECT `OL_identity`.`KEY` AS `KEY`, `OL_identity`.`NEUR_3_1` AS `NEUR_3_1` 
 FROM `OL_identity`) AS `OL_identity_1`
 
--- Code For temporary table tmp_20180509002942_codegen_hfrm51_ol_identity_1 part 2. Populate
+-- Code For temporary table tmp_20180516113732_codegen_xr6lpt_ol_identity_1 part 2. Populate
 
-SELECT * FROM `tmp_20180509002942_codegen_hfrm51_ol_identity_1`
+SELECT * FROM `tmp_20180516113732_codegen_xr6lpt_ol_identity_1`
 
 -- Model deployment code
 
 SELECT `OL_identity_1`.`KEY` AS `KEY`, `OL_identity_1`.`NEUR_3_1` AS `Estimator` 
-FROM `tmp_20180509002942_codegen_hfrm51_ol_identity_1` AS `OL_identity_1`
+FROM `tmp_20180516113732_codegen_xr6lpt_ol_identity_1` AS `OL_identity_1`

@@ -10,9 +10,21 @@
 
 
 
--- Model deployment code
+-- Code For temporary table N_IOFGZR_NAIVEBAYES_SCORES part 1. Create 
 
-WITH centered_data AS 
+
+CREATE GLOBAL TEMPORARY TABLE "N_IOFGZR_NAIVEBAYES_SCORES" (
+	"KEY" NUMBER(19), 
+	"Score_0" BINARY_DOUBLE, 
+	"Score_1" BINARY_DOUBLE
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table N_IOFGZR_NAIVEBAYES_SCORES part 2. Populate
+
+INSERT INTO "N_IOFGZR_NAIVEBAYES_SCORES" ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
+FROM (WITH centered_data AS 
 (SELECT "ADS"."KEY" AS "KEY", CAST("ADS"."Feature_0" AS BINARY_DOUBLE) - 17.640437500000008 AS "Feature_0_0", CAST("ADS"."Feature_1" AS BINARY_DOUBLE) - 21.23356249999999 AS "Feature_1_0", CAST("ADS"."Feature_2" AS BINARY_DOUBLE) - 116.71625000000002 AS "Feature_2_0", CAST("ADS"."Feature_3" AS BINARY_DOUBLE) - 997.9731250000001 AS "Feature_3_0", CAST("ADS"."Feature_4" AS BINARY_DOUBLE) - 0.10367662500000004 AS "Feature_4_0", CAST("ADS"."Feature_5" AS BINARY_DOUBLE) - 0.14956893750000003 AS "Feature_5_0", CAST("ADS"."Feature_6" AS BINARY_DOUBLE) - 0.16609156250000007 AS "Feature_6_0", CAST("ADS"."Feature_7" AS BINARY_DOUBLE) - 0.09101468749999998 AS "Feature_7_0", CAST("ADS"."Feature_8" AS BINARY_DOUBLE) - 0.19494124999999993 AS "Feature_8_0", CAST("ADS"."Feature_9" AS BINARY_DOUBLE) - 0.06299824999999996 AS "Feature_9_0", CAST("ADS"."Feature_10" AS BINARY_DOUBLE) - 0.6418068749999999 AS "Feature_10_0", CAST("ADS"."Feature_11" AS BINARY_DOUBLE) - 1.23094 AS "Feature_11_0", CAST("ADS"."Feature_12" AS BINARY_DOUBLE) - 4.582681250000002 AS "Feature_12_0", CAST("ADS"."Feature_13" AS BINARY_DOUBLE) - 77.180875 AS "Feature_13_0", CAST("ADS"."Feature_14" AS BINARY_DOUBLE) - 0.0068303437500000005 AS "Feature_14_0", CAST("ADS"."Feature_15" AS BINARY_DOUBLE) - 0.033086856250000005 AS "Feature_15_0", CAST("ADS"."Feature_16" AS BINARY_DOUBLE) - 0.042250062500000005 AS "Feature_16_0", CAST("ADS"."Feature_17" AS BINARY_DOUBLE) - 0.015666206250000002 AS "Feature_17_0", CAST("ADS"."Feature_18" AS BINARY_DOUBLE) - 0.0213653875 AS "Feature_18_0", CAST("ADS"."Feature_19" AS BINARY_DOUBLE) - 0.0041392562500000025 AS "Feature_19_0", CAST("ADS"."Feature_20" AS BINARY_DOUBLE) - 21.339374999999993 AS "Feature_20_0", CAST("ADS"."Feature_21" AS BINARY_DOUBLE) - 28.707562499999995 AS "Feature_21_0", CAST("ADS"."Feature_22" AS BINARY_DOUBLE) - 143.08187499999994 AS "Feature_22_0", CAST("ADS"."Feature_23" AS BINARY_DOUBLE) - 1445.1737500000002 AS "Feature_23_0", CAST("ADS"."Feature_24" AS BINARY_DOUBLE) - 0.14505743749999986 AS "Feature_24_0", CAST("ADS"."Feature_25" AS BINARY_DOUBLE) - 0.37679406249999975 AS "Feature_25_0", CAST("ADS"."Feature_26" AS BINARY_DOUBLE) - 0.44977674999999967 AS "Feature_26_0", CAST("ADS"."Feature_27" AS BINARY_DOUBLE) - 0.18633093750000013 AS "Feature_27_0", CAST("ADS"."Feature_28" AS BINARY_DOUBLE) - 0.32580749999999986 AS "Feature_28_0", CAST("ADS"."Feature_29" AS BINARY_DOUBLE) - 0.09126924999999997 AS "Feature_29_0", CAST("ADS"."Feature_0" AS BINARY_DOUBLE) - 12.145386440677964 AS "Feature_0_1", CAST("ADS"."Feature_1" AS BINARY_DOUBLE) - 17.84881355932203 AS "Feature_1_1", CAST("ADS"."Feature_2" AS BINARY_DOUBLE) - 78.0729152542372 AS "Feature_2_1", CAST("ADS"."Feature_3" AS BINARY_DOUBLE) - 462.7613559322033 AS "Feature_3_1", CAST("ADS"."Feature_4" AS BINARY_DOUBLE) - 0.09248705084745759 AS "Feature_4_1", CAST("ADS"."Feature_5" AS BINARY_DOUBLE) - 0.07992647457627115 AS "Feature_5_1", CAST("ADS"."Feature_6" AS BINARY_DOUBLE) - 0.04604985999999998 AS "Feature_6_1", CAST("ADS"."Feature_7" AS BINARY_DOUBLE) - 0.025466481355932213 AS "Feature_7_1", CAST("ADS"."Feature_8" AS BINARY_DOUBLE) - 0.1743464406779661 AS "Feature_8_1", CAST("ADS"."Feature_9" AS BINARY_DOUBLE) - 0.06290888135593216 AS "Feature_9_1", CAST("ADS"."Feature_10" AS BINARY_DOUBLE) - 0.284146779661017 AS "Feature_10_1", CAST("ADS"."Feature_11" AS BINARY_DOUBLE) - 1.2095464406779655 AS "Feature_11_1", CAST("ADS"."Feature_12" AS BINARY_DOUBLE) - 1.9954552542372879 AS "Feature_12_1", CAST("ADS"."Feature_13" AS BINARY_DOUBLE) - 21.19121355932202 AS "Feature_13_1", CAST("ADS"."Feature_14" AS BINARY_DOUBLE) - 0.007178345762711861 AS "Feature_14_1", CAST("ADS"."Feature_15" AS BINARY_DOUBLE) - 0.021489715254237294 AS "Feature_15_1", CAST("ADS"."Feature_16" AS BINARY_DOUBLE) - 0.026439496949152534 AS "Feature_16_1", CAST("ADS"."Feature_17" AS BINARY_DOUBLE) - 0.00996893220338983 AS "Feature_17_1", CAST("ADS"."Feature_18" AS BINARY_DOUBLE) - 0.020641725423728836 AS "Feature_18_1", CAST("ADS"."Feature_19" AS BINARY_DOUBLE) - 0.0036877969491525436 AS "Feature_19_1", CAST("ADS"."Feature_20" AS BINARY_DOUBLE) - 13.378247457627124 AS "Feature_20_1", CAST("ADS"."Feature_21" AS BINARY_DOUBLE) - 23.397932203389832 AS "Feature_21_1", CAST("ADS"."Feature_22" AS BINARY_DOUBLE) - 86.93901694915259 AS "Feature_22_1", CAST("ADS"."Feature_23" AS BINARY_DOUBLE) - 559.3738983050844 AS "Feature_23_1", CAST("ADS"."Feature_24" AS BINARY_DOUBLE) - 0.12465203389830506 AS "Feature_24_1", CAST("ADS"."Feature_25" AS BINARY_DOUBLE) - 0.18110396610169477 AS "Feature_25_1", CAST("ADS"."Feature_26" AS BINARY_DOUBLE) - 0.16549405084745772 AS "Feature_26_1", CAST("ADS"."Feature_27" AS BINARY_DOUBLE) - 0.07397993559322037 AS "Feature_27_1", CAST("ADS"."Feature_28" AS BINARY_DOUBLE) - 0.27025220338983036 AS "Feature_28_1", CAST("ADS"."Feature_29" AS BINARY_DOUBLE) - 0.07950433898305088 AS "Feature_29_1" 
 FROM "BREASTCANCER" "ADS"), 
 "NaiveBayes_data" AS 
@@ -47,14 +59,17 @@ FROM centered_data UNION ALL SELECT centered_data."KEY" AS "KEY", 26 AS "Feature
 FROM centered_data UNION ALL SELECT centered_data."KEY" AS "KEY", 27 AS "Feature", -0.5 * -4.198949608958731 - (0.5 * centered_data."Feature_27_0" * centered_data."Feature_27_0") / 0.002389128377010113 AS log_proba_0, -0.5 * -4.6266459246011795 - (0.5 * centered_data."Feature_27_1" * centered_data."Feature_27_1") / 0.0015577341352217375 AS log_proba_1 
 FROM centered_data UNION ALL SELECT centered_data."KEY" AS "KEY", 28 AS "Feature", -0.5 * -3.2488521824643195 - (0.5 * centered_data."Feature_28_0" * centered_data."Feature_28_0") / 0.0061781942122640186 AS log_proba_0, -0.5 * -4.362958819109133 - (0.5 * centered_data."Feature_28_1" * centered_data."Feature_28_1") / 0.002027734973404855 AS log_proba_1 
 FROM centered_data UNION ALL SELECT centered_data."KEY" AS "KEY", 29 AS "Feature", -0.5 * -5.388172426262818 - (0.5 * centered_data."Feature_29_0" * centered_data."Feature_29_0") / 0.0007273887492015202 AS log_proba_0, -0.5 * -5.759377683054396 - (0.5 * centered_data."Feature_29_1" * centered_data."Feature_29_1") / 0.000501827185534704 AS log_proba_1 
-FROM centered_data) "Values"), 
-"NaiveBayes_Scores" AS 
-(SELECT nb_sums."KEY" AS "KEY", nb_sums."Score_0" AS "Score_0", nb_sums."Score_1" AS "Score_1" 
+FROM centered_data) "Values")
+ SELECT "NaiveBayes_Scores"."KEY", "NaiveBayes_Scores"."Score_0", "NaiveBayes_Scores"."Score_1" 
+FROM (SELECT nb_sums."KEY" AS "KEY", nb_sums."Score_0" AS "Score_0", nb_sums."Score_1" AS "Score_1" 
 FROM (SELECT "NaiveBayes_data"."KEY" AS "KEY", -1.0451236037171234 + sum("NaiveBayes_data".log_proba_0) AS "Score_0", -0.43332206261113054 + sum("NaiveBayes_data".log_proba_1) AS "Score_1" 
-FROM "NaiveBayes_data" GROUP BY "NaiveBayes_data"."KEY") nb_sums), 
-orig_cte AS 
+FROM "NaiveBayes_data" GROUP BY "NaiveBayes_data"."KEY") nb_sums) "NaiveBayes_Scores") "U"
+
+-- Model deployment code
+
+WITH orig_cte AS 
 (SELECT "NaiveBayes_Scores"."KEY" AS "KEY", "NaiveBayes_Scores"."Score_0" AS "Score_0", "NaiveBayes_Scores"."Score_1" AS "Score_1", CAST(NULL AS BINARY_DOUBLE) AS "Proba_0", CAST(NULL AS BINARY_DOUBLE) AS "Proba_1", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_0", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_1", CAST(NULL AS NUMBER(19)) AS "Decision", CAST(NULL AS BINARY_DOUBLE) AS "DecisionProba" 
-FROM "NaiveBayes_Scores"), 
+FROM "N_IOFGZR_NAIVEBAYES_SCORES" "NaiveBayes_Scores"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 
@@ -65,7 +80,7 @@ score_max AS
 FROM orig_cte LEFT OUTER JOIN (SELECT score_class_union."KEY_u" AS "KEY_m", max(score_class_union."Score") AS "max_Score" 
 FROM score_class_union GROUP BY score_class_union."KEY_u") max_select ON orig_cte."KEY" = max_select."KEY_m"), 
 score_soft_max_deltas AS 
-(SELECT score_max."KEY" AS "KEY", score_max."Score_0" AS "Score_0", score_max."Score_1" AS "Score_1", score_max."Proba_0" AS "Proba_0", score_max."Proba_1" AS "Proba_1", score_max."LogProba_0" AS "LogProba_0", score_max."LogProba_1" AS "LogProba_1", score_max."Decision" AS "Decision", score_max."DecisionProba" AS "DecisionProba", score_max."KEY_m" AS "KEY_m", score_max."max_Score" AS "max_Score", exp(score_max."Score_0" - score_max."max_Score") AS "exp_delta_Score_0", exp(score_max."Score_1" - score_max."max_Score") AS "exp_delta_Score_1" 
+(SELECT score_max."KEY" AS "KEY", score_max."Score_0" AS "Score_0", score_max."Score_1" AS "Score_1", score_max."Proba_0" AS "Proba_0", score_max."Proba_1" AS "Proba_1", score_max."LogProba_0" AS "LogProba_0", score_max."LogProba_1" AS "LogProba_1", score_max."Decision" AS "Decision", score_max."DecisionProba" AS "DecisionProba", score_max."KEY_m" AS "KEY_m", score_max."max_Score" AS "max_Score", exp(greatest(-100.0, score_max."Score_0" - score_max."max_Score")) AS "exp_delta_Score_0", exp(greatest(-100.0, score_max."Score_1" - score_max."max_Score")) AS "exp_delta_Score_1" 
 FROM score_max), 
 score_class_union_soft AS 
 (SELECT soft_scu."KEY" AS "KEY", soft_scu.class AS class, soft_scu."exp_delta_Score" AS "exp_delta_Score" 
@@ -83,7 +98,7 @@ arg_max_cte AS
 (SELECT score_soft_max."KEY" AS "KEY", score_soft_max."Score_0" AS "Score_0", score_soft_max."Score_1" AS "Score_1", score_soft_max."Proba_0" AS "Proba_0", score_soft_max."Proba_1" AS "Proba_1", score_soft_max."LogProba_0" AS "LogProba_0", score_soft_max."LogProba_1" AS "LogProba_1", score_soft_max."Decision" AS "Decision", score_soft_max."DecisionProba" AS "DecisionProba", score_soft_max."KEY_m" AS "KEY_m", score_soft_max."max_Score" AS "max_Score", score_soft_max."exp_delta_Score_0" AS "exp_delta_Score_0", score_soft_max."exp_delta_Score_1" AS "exp_delta_Score_1", score_soft_max."KEY_sum" AS "KEY_sum", score_soft_max."sum_ExpDeltaScore" AS "sum_ExpDeltaScore", "arg_max_t_Score"."KEY_Score" AS "KEY_Score", "arg_max_t_Score"."arg_max_Score" AS "arg_max_Score", soft_max_comp."KEY_softmax" AS "KEY_softmax", soft_max_comp."SoftProba_0" AS "SoftProba_0", soft_max_comp."SoftProba_1" AS "SoftProba_1" 
 FROM score_soft_max LEFT OUTER JOIN (SELECT union_with_max."KEY" AS "KEY_Score", min(union_with_max.class) AS "arg_max_Score" 
 FROM union_with_max 
-WHERE union_with_max."max_Score" <= union_with_max."Score" GROUP BY union_with_max."KEY") "arg_max_t_Score" ON score_soft_max."KEY" = "arg_max_t_Score"."KEY_Score" LEFT OUTER JOIN (SELECT score_soft_max."KEY" AS "KEY_softmax", score_soft_max."exp_delta_Score_0" / score_soft_max."sum_ExpDeltaScore" AS "SoftProba_0", score_soft_max."exp_delta_Score_1" / score_soft_max."sum_ExpDeltaScore" AS "SoftProba_1" 
+WHERE union_with_max."Score" >= union_with_max."max_Score" GROUP BY union_with_max."KEY") "arg_max_t_Score" ON score_soft_max."KEY" = "arg_max_t_Score"."KEY_Score" LEFT OUTER JOIN (SELECT score_soft_max."KEY" AS "KEY_softmax", score_soft_max."exp_delta_Score_0" / score_soft_max."sum_ExpDeltaScore" AS "SoftProba_0", score_soft_max."exp_delta_Score_1" / score_soft_max."sum_ExpDeltaScore" AS "SoftProba_1" 
 FROM score_soft_max) soft_max_comp ON soft_max_comp."KEY_softmax" = "arg_max_t_Score"."KEY_Score")
  SELECT arg_max_cte."KEY" AS "KEY", CAST(NULL AS BINARY_DOUBLE) AS "Score_0", CAST(NULL AS BINARY_DOUBLE) AS "Score_1", arg_max_cte."SoftProba_0" AS "Proba_0", arg_max_cte."SoftProba_1" AS "Proba_1", CASE WHEN (arg_max_cte."SoftProba_0" IS NULL OR arg_max_cte."SoftProba_0" > 0.0) THEN ln(arg_max_cte."SoftProba_0") ELSE -BINARY_DOUBLE_INFINITY END AS "LogProba_0", CASE WHEN (arg_max_cte."SoftProba_1" IS NULL OR arg_max_cte."SoftProba_1" > 0.0) THEN ln(arg_max_cte."SoftProba_1") ELSE -BINARY_DOUBLE_INFINITY END AS "LogProba_1", arg_max_cte."arg_max_Score" AS "Decision", greatest(arg_max_cte."SoftProba_0", arg_max_cte."SoftProba_1") AS "DecisionProba" 
 FROM arg_max_cte

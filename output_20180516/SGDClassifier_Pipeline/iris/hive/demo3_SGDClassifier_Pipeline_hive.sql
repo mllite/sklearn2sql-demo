@@ -10,31 +10,31 @@
 
 
 
--- Code For temporary table tmp_20180509004552_codegen_foej7y_ads_imp_1_out part 1. Create 
+-- Code For temporary table tmp_20180516122646_codegen_85x5uf_ads_imp_1_out part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180509004552_codegen_foej7y_ads_imp_1_out` STORED AS ORC AS SELECT `ADS_imp_1_OUT`.`KEY`, `ADS_imp_1_OUT`.`imputer_output_2`, `ADS_imp_1_OUT`.`imputer_output_3`, `ADS_imp_1_OUT`.`imputer_output_4`, `ADS_imp_1_OUT`.`imputer_output_5` 
+CREATE TEMPORARY TABLE `tmp_20180516122646_codegen_85x5uf_ads_imp_1_out` STORED AS ORC AS SELECT `ADS_imp_1_OUT`.`KEY`, `ADS_imp_1_OUT`.`imputer_output_2`, `ADS_imp_1_OUT`.`imputer_output_3`, `ADS_imp_1_OUT`.`imputer_output_4`, `ADS_imp_1_OUT`.`imputer_output_5` 
 FROM (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_0` IS NULL) THEN 5.8474999999999975 ELSE `ADS`.`Feature_0` END AS `imputer_output_2`, CASE WHEN (`ADS`.`Feature_1` IS NULL) THEN 3.0366666666666657 ELSE `ADS`.`Feature_1` END AS `imputer_output_3`, CASE WHEN (`ADS`.`Feature_2` IS NULL) THEN 3.8450000000000006 ELSE `ADS`.`Feature_2` END AS `imputer_output_4`, CASE WHEN (`ADS`.`Feature_3` IS NULL) THEN 1.245 ELSE `ADS`.`Feature_3` END AS `imputer_output_5` 
 FROM `iris` AS `ADS`) AS `ADS_imp_1_OUT`
 
--- Code For temporary table tmp_20180509004552_codegen_foej7y_ads_imp_1_out part 2. Populate
+-- Code For temporary table tmp_20180516122646_codegen_85x5uf_ads_imp_1_out part 2. Populate
 
-SELECT * FROM `tmp_20180509004552_codegen_foej7y_ads_imp_1_out`
+SELECT * FROM `tmp_20180516122646_codegen_85x5uf_ads_imp_1_out`
 
--- Code For temporary table tmp_20180509004552_codegen_32htq6_ads_sca_2_out part 1. Create 
+-- Code For temporary table tmp_20180516122646_codegen_heg5un_ads_sca_2_out part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180509004552_codegen_32htq6_ads_sca_2_out` STORED AS ORC AS SELECT `ADS_sca_2_OUT`.`KEY`, `ADS_sca_2_OUT`.`scaler_output_2`, `ADS_sca_2_OUT`.`scaler_output_3`, `ADS_sca_2_OUT`.`scaler_output_4`, `ADS_sca_2_OUT`.`scaler_output_5` 
+CREATE TEMPORARY TABLE `tmp_20180516122646_codegen_heg5un_ads_sca_2_out` STORED AS ORC AS SELECT `ADS_sca_2_OUT`.`KEY`, `ADS_sca_2_OUT`.`scaler_output_2`, `ADS_sca_2_OUT`.`scaler_output_3`, `ADS_sca_2_OUT`.`scaler_output_4`, `ADS_sca_2_OUT`.`scaler_output_5` 
 FROM (SELECT `ADS_imp_1_OUT`.`KEY` AS `KEY`, (CAST(`ADS_imp_1_OUT`.`imputer_output_2` AS DOUBLE) - 5.8474999999999975) / 0.827039146594646 AS `scaler_output_2`, (CAST(`ADS_imp_1_OUT`.`imputer_output_3` AS DOUBLE) - 3.0366666666666657) / 0.43625935201691934 AS `scaler_output_3`, (CAST(`ADS_imp_1_OUT`.`imputer_output_4` AS DOUBLE) - 3.8450000000000006) / 1.709817241695732 AS `scaler_output_4`, (CAST(`ADS_imp_1_OUT`.`imputer_output_5` AS DOUBLE) - 1.245) / 0.7498722113355939 AS `scaler_output_5` 
-FROM `tmp_20180509004552_codegen_foej7y_ads_imp_1_out` AS `ADS_imp_1_OUT`) AS `ADS_sca_2_OUT`
+FROM `tmp_20180516122646_codegen_85x5uf_ads_imp_1_out` AS `ADS_imp_1_OUT`) AS `ADS_sca_2_OUT`
 
--- Code For temporary table tmp_20180509004552_codegen_32htq6_ads_sca_2_out part 2. Populate
+-- Code For temporary table tmp_20180516122646_codegen_heg5un_ads_sca_2_out part 2. Populate
 
-SELECT * FROM `tmp_20180509004552_codegen_32htq6_ads_sca_2_out`
+SELECT * FROM `tmp_20180516122646_codegen_heg5un_ads_sca_2_out`
 
 -- Model deployment code
 
 WITH `linear_input` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CAST(`ADS_sca_2_OUT`.`scaler_output_2` AS DOUBLE) AS `scaler_output_2`, CAST(`ADS_sca_2_OUT`.`scaler_output_3` AS DOUBLE) AS `scaler_output_3`, CAST(`ADS_sca_2_OUT`.`scaler_output_4` AS DOUBLE) AS `scaler_output_4`, CAST(`ADS_sca_2_OUT`.`scaler_output_5` AS DOUBLE) AS `scaler_output_5` 
-FROM `tmp_20180509004552_codegen_32htq6_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
+FROM `tmp_20180516122646_codegen_heg5un_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
 `linear_model_cte` AS 
 (SELECT `linear_input`.`KEY` AS `KEY`, -6.446438699640585 * `linear_input`.`scaler_output_2` + 9.126807672452953 * `linear_input`.`scaler_output_3` + -11.174112993481211 * `linear_input`.`scaler_output_4` + -10.466657239707258 * `linear_input`.`scaler_output_5` + -9.900812765034766 AS `Score_0`, -1.5123609852529813 * `linear_input`.`scaler_output_2` + -5.73412000363537 * `linear_input`.`scaler_output_3` + 5.486471191562016 * `linear_input`.`scaler_output_4` + -15.011938670496466 * `linear_input`.`scaler_output_5` + -4.785341385824414 AS `Score_1`, -6.881242482900888 * `linear_input`.`scaler_output_2` + -12.232789341088875 * `linear_input`.`scaler_output_3` + 39.06367488392127 * `linear_input`.`scaler_output_4` + 29.85707802243188 * `linear_input`.`scaler_output_5` + -36.8472415903434 AS `Score_2` 
 FROM `linear_input`), 

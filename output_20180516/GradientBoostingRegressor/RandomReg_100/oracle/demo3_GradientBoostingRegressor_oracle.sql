@@ -10,19 +10,19 @@
 
 
 
--- Code For temporary table 82559_CODEGEN_BF2HAO_GB_B0 part 1. Create 
+-- Code For temporary table 80516_CODEGEN_D5C5JS_GB_B0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "82559_CODEGEN_BF2HAO_GB_B0" (
+CREATE GLOBAL TEMPORARY TABLE "80516_CODEGEN_D5C5JS_GB_B0" (
 	"KEY" NUMBER(19), 
 	"Estimator" BINARY_DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table 82559_CODEGEN_BF2HAO_GB_B0 part 2. Populate
+-- Code For temporary table 80516_CODEGEN_D5C5JS_GB_B0 part 2. Populate
 
-INSERT INTO "82559_CODEGEN_BF2HAO_GB_B0" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO "80516_CODEGEN_D5C5JS_GB_B0" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_80" <= -0.20716172456741333) THEN CASE WHEN ("ADS"."Feature_41" <= -0.5217077136039734) THEN CASE WHEN ("ADS"."Feature_55" <= 0.8011568188667297) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_63" <= 0.025700129568576813) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_39" <= 0.45573797821998596) THEN CASE WHEN ("ADS"."Feature_57" <= 0.7340818643569946) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_1" <= 1.2074711322784424) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM "RANDOMREG_100" "ADS"), 
@@ -157,19 +157,19 @@ FROM "GB_Model_7_0" UNION ALL SELECT "GB_Model_8_0"."KEY" AS "KEY", "GB_Model_8_
 FROM "GB_Model_8_0" UNION ALL SELECT "GB_Model_9_0"."KEY" AS "KEY", "GB_Model_9_0"."Estimator" AS "Estimator" 
 FROM "GB_Model_9_0") "GB_esu_0") "GB_B0") "U"
 
--- Code For temporary table 82559_CODEGEN_DQNSCS_GB_B1 part 1. Create 
+-- Code For temporary table 80516_CODEGEN_9J1DG1_GB_B1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "82559_CODEGEN_DQNSCS_GB_B1" (
+CREATE GLOBAL TEMPORARY TABLE "80516_CODEGEN_9J1DG1_GB_B1" (
 	"KEY" NUMBER(19), 
 	"Estimator" BINARY_DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table 82559_CODEGEN_DQNSCS_GB_B1 part 2. Populate
+-- Code For temporary table 80516_CODEGEN_9J1DG1_GB_B1 part 2. Populate
 
-INSERT INTO "82559_CODEGEN_DQNSCS_GB_B1" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO "80516_CODEGEN_9J1DG1_GB_B1" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "DT_node_lookup_10" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_41" <= -0.5153412222862244) THEN CASE WHEN ("ADS"."Feature_88" <= 1.8550121784210205) THEN CASE WHEN ("ADS"."Feature_81" <= 0.9404175281524658) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_56" <= 0.07086198031902313) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_92" <= -1.1308966875076294) THEN CASE WHEN ("ADS"."Feature_46" <= 0.5898699164390564) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_41" <= 1.2777845859527588) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM "RANDOMREG_100" "ADS"), 
@@ -252,44 +252,30 @@ FROM "GB_Model_13_0" UNION ALL SELECT "GB_Model_14_0"."KEY" AS "KEY", "GB_Model_
 FROM "GB_Model_14_0" UNION ALL SELECT "GB_Model_15_0"."KEY" AS "KEY", "GB_Model_15_0"."Estimator" AS "Estimator" 
 FROM "GB_Model_15_0") "GB_esu_1") "GB_B1") "U"
 
--- Code For temporary table 59_CODEGEN_HC0FEP_GB_UNION part 1. Create 
+-- Code For temporary table 0516_CODEGEN_4IOU7S_GB_SUM part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "59_CODEGEN_HC0FEP_GB_UNION" (
+CREATE GLOBAL TEMPORARY TABLE "0516_CODEGEN_4IOU7S_GB_SUM" (
 	"KEY" NUMBER(19), 
 	"Estimator" BINARY_DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table 59_CODEGEN_HC0FEP_GB_UNION part 2. Populate
+-- Code For temporary table 0516_CODEGEN_4IOU7S_GB_SUM part 2. Populate
 
-INSERT INTO "59_CODEGEN_HC0FEP_GB_UNION" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
-FROM (SELECT "GB_Union"."KEY", "GB_Union"."Estimator" 
-FROM (SELECT "GB_EnsembleUnion"."KEY" AS "KEY", "GB_EnsembleUnion"."Estimator" AS "Estimator" 
+INSERT INTO "0516_CODEGEN_4IOU7S_GB_SUM" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+FROM (WITH "GB_Union" AS 
+(SELECT "GB_EnsembleUnion"."KEY" AS "KEY", "GB_EnsembleUnion"."Estimator" AS "Estimator" 
 FROM (SELECT "GB_B0"."KEY" AS "KEY", "GB_B0"."Estimator" AS "Estimator" 
-FROM "82559_CODEGEN_BF2HAO_GB_B0" "GB_B0" UNION ALL SELECT "GB_B1"."KEY" AS "KEY", "GB_B1"."Estimator" AS "Estimator" 
-FROM "82559_CODEGEN_DQNSCS_GB_B1" "GB_B1") "GB_EnsembleUnion") "GB_Union") "U"
-
--- Code For temporary table 2559_CODEGEN_4WEURS_GB_SUM part 1. Create 
-
-
-CREATE GLOBAL TEMPORARY TABLE "2559_CODEGEN_4WEURS_GB_SUM" (
-	"KEY" NUMBER(19), 
-	"Estimator" BINARY_DOUBLE
-)
-
- ON COMMIT PRESERVE ROWS
-
--- Code For temporary table 2559_CODEGEN_4WEURS_GB_SUM part 2. Populate
-
-INSERT INTO "2559_CODEGEN_4WEURS_GB_SUM" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
-FROM (SELECT "GB_sum"."KEY", "GB_sum"."Estimator" 
+FROM "80516_CODEGEN_D5C5JS_GB_B0" "GB_B0" UNION ALL SELECT "GB_B1"."KEY" AS "KEY", "GB_B1"."Estimator" AS "Estimator" 
+FROM "80516_CODEGEN_9J1DG1_GB_B1" "GB_B1") "GB_EnsembleUnion")
+ SELECT "GB_sum"."KEY", "GB_sum"."Estimator" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Estimator" AS BINARY_DOUBLE) AS "Estimator" 
 FROM (SELECT "GB_Union"."KEY" AS "KEY", sum("GB_Union"."Estimator") AS "Estimator" 
-FROM "59_CODEGEN_HC0FEP_GB_UNION" "GB_Union" GROUP BY "GB_Union"."KEY") "T") "GB_sum") "U"
+FROM "GB_Union" GROUP BY "GB_Union"."KEY") "T") "GB_sum") "U"
 
 -- Model deployment code
 
 SELECT "GB_sum"."KEY" AS "KEY", -11.471614782695335 + 0.1 * "GB_sum"."Estimator" AS "Estimator" 
-FROM "2559_CODEGEN_4WEURS_GB_SUM" "GB_sum"
+FROM "0516_CODEGEN_4IOU7S_GB_SUM" "GB_sum"

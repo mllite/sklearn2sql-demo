@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table CODEGEN_NZ715F_HL_1_RELU_1 part 1. Create 
+-- Code For temporary table CODEGEN_JTRBH7_HL_1_RELU_1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "CODEGEN_NZ715F_HL_1_RELU_1" (
+CREATE GLOBAL TEMPORARY TABLE "CODEGEN_JTRBH7_HL_1_RELU_1" (
 	"KEY" NUMBER(19), 
 	"NEUR_1_1" BINARY_DOUBLE, 
 	"NEUR_1_2" BINARY_DOUBLE, 
@@ -22,9 +22,9 @@ CREATE GLOBAL TEMPORARY TABLE "CODEGEN_NZ715F_HL_1_RELU_1" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table CODEGEN_NZ715F_HL_1_RELU_1 part 2. Populate
+-- Code For temporary table CODEGEN_JTRBH7_HL_1_RELU_1 part 2. Populate
 
-INSERT INTO "CODEGEN_NZ715F_HL_1_RELU_1" ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "U"."KEY", "U"."NEUR_1_1", "U"."NEUR_1_2", "U"."NEUR_1_3" 
+INSERT INTO "CODEGEN_JTRBH7_HL_1_RELU_1" ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "U"."KEY", "U"."NEUR_1_1", "U"."NEUR_1_2", "U"."NEUR_1_3" 
 FROM (WITH "IL" AS 
 (SELECT "ADS"."KEY" AS "KEY", CAST("ADS"."Feature_0" AS BINARY_DOUBLE) AS "Feature_0", CAST("ADS"."Feature_1" AS BINARY_DOUBLE) AS "Feature_1", CAST("ADS"."Feature_2" AS BINARY_DOUBLE) AS "Feature_2", CAST("ADS"."Feature_3" AS BINARY_DOUBLE) AS "Feature_3", CAST("ADS"."Feature_4" AS BINARY_DOUBLE) AS "Feature_4", CAST("ADS"."Feature_5" AS BINARY_DOUBLE) AS "Feature_5", CAST("ADS"."Feature_6" AS BINARY_DOUBLE) AS "Feature_6", CAST("ADS"."Feature_7" AS BINARY_DOUBLE) AS "Feature_7", CAST("ADS"."Feature_8" AS BINARY_DOUBLE) AS "Feature_8", CAST("ADS"."Feature_9" AS BINARY_DOUBLE) AS "Feature_9", CAST("ADS"."Feature_10" AS BINARY_DOUBLE) AS "Feature_10", CAST("ADS"."Feature_11" AS BINARY_DOUBLE) AS "Feature_11", CAST("ADS"."Feature_12" AS BINARY_DOUBLE) AS "Feature_12", CAST("ADS"."Feature_13" AS BINARY_DOUBLE) AS "Feature_13", CAST("ADS"."Feature_14" AS BINARY_DOUBLE) AS "Feature_14", CAST("ADS"."Feature_15" AS BINARY_DOUBLE) AS "Feature_15", CAST("ADS"."Feature_16" AS BINARY_DOUBLE) AS "Feature_16", CAST("ADS"."Feature_17" AS BINARY_DOUBLE) AS "Feature_17", CAST("ADS"."Feature_18" AS BINARY_DOUBLE) AS "Feature_18", CAST("ADS"."Feature_19" AS BINARY_DOUBLE) AS "Feature_19", CAST("ADS"."Feature_20" AS BINARY_DOUBLE) AS "Feature_20", CAST("ADS"."Feature_21" AS BINARY_DOUBLE) AS "Feature_21", CAST("ADS"."Feature_22" AS BINARY_DOUBLE) AS "Feature_22", CAST("ADS"."Feature_23" AS BINARY_DOUBLE) AS "Feature_23", CAST("ADS"."Feature_24" AS BINARY_DOUBLE) AS "Feature_24", CAST("ADS"."Feature_25" AS BINARY_DOUBLE) AS "Feature_25", CAST("ADS"."Feature_26" AS BINARY_DOUBLE) AS "Feature_26", CAST("ADS"."Feature_27" AS BINARY_DOUBLE) AS "Feature_27", CAST("ADS"."Feature_28" AS BINARY_DOUBLE) AS "Feature_28", CAST("ADS"."Feature_29" AS BINARY_DOUBLE) AS "Feature_29", CAST("ADS"."Feature_30" AS BINARY_DOUBLE) AS "Feature_30", CAST("ADS"."Feature_31" AS BINARY_DOUBLE) AS "Feature_31", CAST("ADS"."Feature_32" AS BINARY_DOUBLE) AS "Feature_32", CAST("ADS"."Feature_33" AS BINARY_DOUBLE) AS "Feature_33", CAST("ADS"."Feature_34" AS BINARY_DOUBLE) AS "Feature_34", CAST("ADS"."Feature_35" AS BINARY_DOUBLE) AS "Feature_35", CAST("ADS"."Feature_36" AS BINARY_DOUBLE) AS "Feature_36", CAST("ADS"."Feature_37" AS BINARY_DOUBLE) AS "Feature_37", CAST("ADS"."Feature_38" AS BINARY_DOUBLE) AS "Feature_38", CAST("ADS"."Feature_39" AS BINARY_DOUBLE) AS "Feature_39", CAST("ADS"."Feature_40" AS BINARY_DOUBLE) AS "Feature_40", CAST("ADS"."Feature_41" AS BINARY_DOUBLE) AS "Feature_41", CAST("ADS"."Feature_42" AS BINARY_DOUBLE) AS "Feature_42", CAST("ADS"."Feature_43" AS BINARY_DOUBLE) AS "Feature_43", CAST("ADS"."Feature_44" AS BINARY_DOUBLE) AS "Feature_44", CAST("ADS"."Feature_45" AS BINARY_DOUBLE) AS "Feature_45", CAST("ADS"."Feature_46" AS BINARY_DOUBLE) AS "Feature_46", CAST("ADS"."Feature_47" AS BINARY_DOUBLE) AS "Feature_47", CAST("ADS"."Feature_48" AS BINARY_DOUBLE) AS "Feature_48", CAST("ADS"."Feature_49" AS BINARY_DOUBLE) AS "Feature_49", CAST("ADS"."Feature_50" AS BINARY_DOUBLE) AS "Feature_50", CAST("ADS"."Feature_51" AS BINARY_DOUBLE) AS "Feature_51", CAST("ADS"."Feature_52" AS BINARY_DOUBLE) AS "Feature_52", CAST("ADS"."Feature_53" AS BINARY_DOUBLE) AS "Feature_53", CAST("ADS"."Feature_54" AS BINARY_DOUBLE) AS "Feature_54", CAST("ADS"."Feature_55" AS BINARY_DOUBLE) AS "Feature_55", CAST("ADS"."Feature_56" AS BINARY_DOUBLE) AS "Feature_56", CAST("ADS"."Feature_57" AS BINARY_DOUBLE) AS "Feature_57", CAST("ADS"."Feature_58" AS BINARY_DOUBLE) AS "Feature_58", CAST("ADS"."Feature_59" AS BINARY_DOUBLE) AS "Feature_59", CAST("ADS"."Feature_60" AS BINARY_DOUBLE) AS "Feature_60", CAST("ADS"."Feature_61" AS BINARY_DOUBLE) AS "Feature_61", CAST("ADS"."Feature_62" AS BINARY_DOUBLE) AS "Feature_62", CAST("ADS"."Feature_63" AS BINARY_DOUBLE) AS "Feature_63" 
 FROM "DIGITS" "ADS"), 
@@ -38,10 +38,10 @@ FROM "HL_BA_1")
 FROM (SELECT "HL_1_relu"."KEY" AS "KEY", "HL_1_relu"."NEUR_1_1" AS "NEUR_1_1", "HL_1_relu"."NEUR_1_2" AS "NEUR_1_2", "HL_1_relu"."NEUR_1_3" AS "NEUR_1_3" 
 FROM "HL_1_relu") "HL_1_relu_1") "U"
 
--- Code For temporary table ODEGEN_DIZJSC_OL_SOFTMAX_1 part 1. Create 
+-- Code For temporary table ODEGEN_67ZPA4_OL_SOFTMAX_1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "ODEGEN_DIZJSC_OL_SOFTMAX_1" (
+CREATE GLOBAL TEMPORARY TABLE "ODEGEN_67ZPA4_OL_SOFTMAX_1" (
 	"KEY" NUMBER(19), 
 	"NEUR_3_1" BINARY_DOUBLE, 
 	"NEUR_3_2" BINARY_DOUBLE, 
@@ -57,12 +57,12 @@ CREATE GLOBAL TEMPORARY TABLE "ODEGEN_DIZJSC_OL_SOFTMAX_1" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table ODEGEN_DIZJSC_OL_SOFTMAX_1 part 2. Populate
+-- Code For temporary table ODEGEN_67ZPA4_OL_SOFTMAX_1 part 2. Populate
 
-INSERT INTO "ODEGEN_DIZJSC_OL_SOFTMAX_1" ("KEY", "NEUR_3_1", "NEUR_3_2", "NEUR_3_3", "NEUR_3_4", "NEUR_3_5", "NEUR_3_6", "NEUR_3_7", "NEUR_3_8", "NEUR_3_9", "NEUR_3_10") SELECT "U"."KEY", "U"."NEUR_3_1", "U"."NEUR_3_2", "U"."NEUR_3_3", "U"."NEUR_3_4", "U"."NEUR_3_5", "U"."NEUR_3_6", "U"."NEUR_3_7", "U"."NEUR_3_8", "U"."NEUR_3_9", "U"."NEUR_3_10" 
+INSERT INTO "ODEGEN_67ZPA4_OL_SOFTMAX_1" ("KEY", "NEUR_3_1", "NEUR_3_2", "NEUR_3_3", "NEUR_3_4", "NEUR_3_5", "NEUR_3_6", "NEUR_3_7", "NEUR_3_8", "NEUR_3_9", "NEUR_3_10") SELECT "U"."KEY", "U"."NEUR_3_1", "U"."NEUR_3_2", "U"."NEUR_3_3", "U"."NEUR_3_4", "U"."NEUR_3_5", "U"."NEUR_3_6", "U"."NEUR_3_7", "U"."NEUR_3_8", "U"."NEUR_3_9", "U"."NEUR_3_10" 
 FROM (WITH "HL_BA_2" AS 
 (SELECT "HL_1_relu_1"."KEY" AS "KEY", -0.5573364901029748 * "HL_1_relu_1"."NEUR_1_1" + -0.8641534243965675 * "HL_1_relu_1"."NEUR_1_2" + -0.2766604780895476 * "HL_1_relu_1"."NEUR_1_3" + 2.295386642805444 AS "NEUR_2_1", 0.011735522860248504 * "HL_1_relu_1"."NEUR_1_1" + -0.40341198658333843 * "HL_1_relu_1"."NEUR_1_2" + 0.18612367383081677 * "HL_1_relu_1"."NEUR_1_3" + -0.508232954910367 AS "NEUR_2_2", -0.05092130493601808 * "HL_1_relu_1"."NEUR_1_1" + 0.8491721010509943 * "HL_1_relu_1"."NEUR_1_2" + 0.8245555740350957 * "HL_1_relu_1"."NEUR_1_3" + -0.28455923399573535 AS "NEUR_2_3", -0.0038478434623372155 * "HL_1_relu_1"."NEUR_1_1" + 0.4002369724982778 * "HL_1_relu_1"."NEUR_1_2" + -0.2831833471670811 * "HL_1_relu_1"."NEUR_1_3" + -0.6915591457579999 AS "NEUR_2_4", 0.06290543230562325 * "HL_1_relu_1"."NEUR_1_1" + -0.26240803178662425 * "HL_1_relu_1"."NEUR_1_2" + 0.10991972529064754 * "HL_1_relu_1"."NEUR_1_3" + -3.8002843904832266 AS "NEUR_2_5" 
-FROM "CODEGEN_NZ715F_HL_1_RELU_1" "HL_1_relu_1"), 
+FROM "CODEGEN_JTRBH7_HL_1_RELU_1" "HL_1_relu_1"), 
 "HL_2_relu" AS 
 (SELECT "HL_BA_2"."KEY" AS "KEY", greatest("HL_BA_2"."NEUR_2_1", 0) AS "NEUR_2_1", greatest("HL_BA_2"."NEUR_2_2", 0) AS "NEUR_2_2", greatest("HL_BA_2"."NEUR_2_3", 0) AS "NEUR_2_3", greatest("HL_BA_2"."NEUR_2_4", 0) AS "NEUR_2_4", greatest("HL_BA_2"."NEUR_2_5", 0) AS "NEUR_2_5" 
 FROM "HL_BA_2"), 
@@ -80,7 +80,7 @@ FROM "OL_softmax") "OL_softmax_1") "U"
 
 WITH orig_cte AS 
 (SELECT "OL_softmax_1"."KEY" AS "KEY", "OL_softmax_1"."NEUR_3_1" AS "Score_0", "OL_softmax_1"."NEUR_3_2" AS "Score_1", "OL_softmax_1"."NEUR_3_3" AS "Score_2", "OL_softmax_1"."NEUR_3_4" AS "Score_3", "OL_softmax_1"."NEUR_3_5" AS "Score_4", "OL_softmax_1"."NEUR_3_6" AS "Score_5", "OL_softmax_1"."NEUR_3_7" AS "Score_6", "OL_softmax_1"."NEUR_3_8" AS "Score_7", "OL_softmax_1"."NEUR_3_9" AS "Score_8", "OL_softmax_1"."NEUR_3_10" AS "Score_9", CAST(NULL AS BINARY_DOUBLE) AS "Proba_0", CAST(NULL AS BINARY_DOUBLE) AS "Proba_1", CAST(NULL AS BINARY_DOUBLE) AS "Proba_2", CAST(NULL AS BINARY_DOUBLE) AS "Proba_3", CAST(NULL AS BINARY_DOUBLE) AS "Proba_4", CAST(NULL AS BINARY_DOUBLE) AS "Proba_5", CAST(NULL AS BINARY_DOUBLE) AS "Proba_6", CAST(NULL AS BINARY_DOUBLE) AS "Proba_7", CAST(NULL AS BINARY_DOUBLE) AS "Proba_8", CAST(NULL AS BINARY_DOUBLE) AS "Proba_9", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_0", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_1", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_2", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_3", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_4", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_5", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_6", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_7", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_8", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_9", CAST(NULL AS NUMBER(19)) AS "Decision", CAST(NULL AS BINARY_DOUBLE) AS "DecisionProba" 
-FROM "ODEGEN_DIZJSC_OL_SOFTMAX_1" "OL_softmax_1"), 
+FROM "ODEGEN_67ZPA4_OL_SOFTMAX_1" "OL_softmax_1"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 
@@ -99,7 +99,7 @@ score_max AS
 FROM orig_cte LEFT OUTER JOIN (SELECT score_class_union."KEY_u" AS "KEY_m", max(score_class_union."Score") AS "max_Score" 
 FROM score_class_union GROUP BY score_class_union."KEY_u") max_select ON orig_cte."KEY" = max_select."KEY_m"), 
 score_soft_max_deltas AS 
-(SELECT score_max."KEY" AS "KEY", score_max."Score_0" AS "Score_0", score_max."Score_1" AS "Score_1", score_max."Score_2" AS "Score_2", score_max."Score_3" AS "Score_3", score_max."Score_4" AS "Score_4", score_max."Score_5" AS "Score_5", score_max."Score_6" AS "Score_6", score_max."Score_7" AS "Score_7", score_max."Score_8" AS "Score_8", score_max."Score_9" AS "Score_9", score_max."Proba_0" AS "Proba_0", score_max."Proba_1" AS "Proba_1", score_max."Proba_2" AS "Proba_2", score_max."Proba_3" AS "Proba_3", score_max."Proba_4" AS "Proba_4", score_max."Proba_5" AS "Proba_5", score_max."Proba_6" AS "Proba_6", score_max."Proba_7" AS "Proba_7", score_max."Proba_8" AS "Proba_8", score_max."Proba_9" AS "Proba_9", score_max."LogProba_0" AS "LogProba_0", score_max."LogProba_1" AS "LogProba_1", score_max."LogProba_2" AS "LogProba_2", score_max."LogProba_3" AS "LogProba_3", score_max."LogProba_4" AS "LogProba_4", score_max."LogProba_5" AS "LogProba_5", score_max."LogProba_6" AS "LogProba_6", score_max."LogProba_7" AS "LogProba_7", score_max."LogProba_8" AS "LogProba_8", score_max."LogProba_9" AS "LogProba_9", score_max."Decision" AS "Decision", score_max."DecisionProba" AS "DecisionProba", score_max."KEY_m" AS "KEY_m", score_max."max_Score" AS "max_Score", exp(score_max."Score_0" - score_max."max_Score") AS "exp_delta_Score_0", exp(score_max."Score_1" - score_max."max_Score") AS "exp_delta_Score_1", exp(score_max."Score_2" - score_max."max_Score") AS "exp_delta_Score_2", exp(score_max."Score_3" - score_max."max_Score") AS "exp_delta_Score_3", exp(score_max."Score_4" - score_max."max_Score") AS "exp_delta_Score_4", exp(score_max."Score_5" - score_max."max_Score") AS "exp_delta_Score_5", exp(score_max."Score_6" - score_max."max_Score") AS "exp_delta_Score_6", exp(score_max."Score_7" - score_max."max_Score") AS "exp_delta_Score_7", exp(score_max."Score_8" - score_max."max_Score") AS "exp_delta_Score_8", exp(score_max."Score_9" - score_max."max_Score") AS "exp_delta_Score_9" 
+(SELECT score_max."KEY" AS "KEY", score_max."Score_0" AS "Score_0", score_max."Score_1" AS "Score_1", score_max."Score_2" AS "Score_2", score_max."Score_3" AS "Score_3", score_max."Score_4" AS "Score_4", score_max."Score_5" AS "Score_5", score_max."Score_6" AS "Score_6", score_max."Score_7" AS "Score_7", score_max."Score_8" AS "Score_8", score_max."Score_9" AS "Score_9", score_max."Proba_0" AS "Proba_0", score_max."Proba_1" AS "Proba_1", score_max."Proba_2" AS "Proba_2", score_max."Proba_3" AS "Proba_3", score_max."Proba_4" AS "Proba_4", score_max."Proba_5" AS "Proba_5", score_max."Proba_6" AS "Proba_6", score_max."Proba_7" AS "Proba_7", score_max."Proba_8" AS "Proba_8", score_max."Proba_9" AS "Proba_9", score_max."LogProba_0" AS "LogProba_0", score_max."LogProba_1" AS "LogProba_1", score_max."LogProba_2" AS "LogProba_2", score_max."LogProba_3" AS "LogProba_3", score_max."LogProba_4" AS "LogProba_4", score_max."LogProba_5" AS "LogProba_5", score_max."LogProba_6" AS "LogProba_6", score_max."LogProba_7" AS "LogProba_7", score_max."LogProba_8" AS "LogProba_8", score_max."LogProba_9" AS "LogProba_9", score_max."Decision" AS "Decision", score_max."DecisionProba" AS "DecisionProba", score_max."KEY_m" AS "KEY_m", score_max."max_Score" AS "max_Score", exp(greatest(-100.0, score_max."Score_0" - score_max."max_Score")) AS "exp_delta_Score_0", exp(greatest(-100.0, score_max."Score_1" - score_max."max_Score")) AS "exp_delta_Score_1", exp(greatest(-100.0, score_max."Score_2" - score_max."max_Score")) AS "exp_delta_Score_2", exp(greatest(-100.0, score_max."Score_3" - score_max."max_Score")) AS "exp_delta_Score_3", exp(greatest(-100.0, score_max."Score_4" - score_max."max_Score")) AS "exp_delta_Score_4", exp(greatest(-100.0, score_max."Score_5" - score_max."max_Score")) AS "exp_delta_Score_5", exp(greatest(-100.0, score_max."Score_6" - score_max."max_Score")) AS "exp_delta_Score_6", exp(greatest(-100.0, score_max."Score_7" - score_max."max_Score")) AS "exp_delta_Score_7", exp(greatest(-100.0, score_max."Score_8" - score_max."max_Score")) AS "exp_delta_Score_8", exp(greatest(-100.0, score_max."Score_9" - score_max."max_Score")) AS "exp_delta_Score_9" 
 FROM score_max), 
 score_class_union_soft AS 
 (SELECT soft_scu."KEY" AS "KEY", soft_scu.class AS class, soft_scu."exp_delta_Score" AS "exp_delta_Score" 

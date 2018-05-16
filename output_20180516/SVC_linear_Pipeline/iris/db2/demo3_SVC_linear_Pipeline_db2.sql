@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180508185844_codegen_8dq172_ads_imp_1_out part 1. Create 
+-- Code For temporary table tmp_20180516122754_codegen_oep16p_ads_imp_1_out part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508185844_codegen_8dq172_ads_imp_1_out (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516122754_codegen_oep16p_ads_imp_1_out (
 	"KEY" BIGINT, 
 	imputer_output_2 DOUBLE, 
 	imputer_output_3 DOUBLE, 
@@ -23,16 +23,16 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508185844_codegen_8dq172_ads_imp_1_out (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508185844_codegen_8dq172_ads_imp_1_out part 2. Populate
+-- Code For temporary table tmp_20180516122754_codegen_oep16p_ads_imp_1_out part 2. Populate
 
-INSERT INTO tmp_20180508185844_codegen_8dq172_ads_imp_1_out SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".imputer_output_2, "ADS_imp_1_OUT".imputer_output_3, "ADS_imp_1_OUT".imputer_output_4, "ADS_imp_1_OUT".imputer_output_5 
+INSERT INTO tmp_20180516122754_codegen_oep16p_ads_imp_1_out SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".imputer_output_2, "ADS_imp_1_OUT".imputer_output_3, "ADS_imp_1_OUT".imputer_output_4, "ADS_imp_1_OUT".imputer_output_5 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN 5.8474999999999975 ELSE "ADS"."Feature_0" END AS imputer_output_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 3.0366666666666657 ELSE "ADS"."Feature_1" END AS imputer_output_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 3.8450000000000006 ELSE "ADS"."Feature_2" END AS imputer_output_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 1.245 ELSE "ADS"."Feature_3" END AS imputer_output_5 
 FROM "IRIS" AS "ADS") AS "ADS_imp_1_OUT"
 
--- Code For temporary table tmp_20180508185844_codegen_cclt30_ads_sca_2_out part 1. Create 
+-- Code For temporary table tmp_20180516122754_codegen_42uos3_ads_sca_2_out part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508185844_codegen_cclt30_ads_sca_2_out (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516122754_codegen_42uos3_ads_sca_2_out (
 	"KEY" BIGINT, 
 	scaler_output_2 DOUBLE, 
 	scaler_output_3 DOUBLE, 
@@ -42,16 +42,16 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508185844_codegen_cclt30_ads_sca_2_out (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508185844_codegen_cclt30_ads_sca_2_out part 2. Populate
+-- Code For temporary table tmp_20180516122754_codegen_42uos3_ads_sca_2_out part 2. Populate
 
-INSERT INTO tmp_20180508185844_codegen_cclt30_ads_sca_2_out SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_output_2, "ADS_sca_2_OUT".scaler_output_3, "ADS_sca_2_OUT".scaler_output_4, "ADS_sca_2_OUT".scaler_output_5 
+INSERT INTO tmp_20180516122754_codegen_42uos3_ads_sca_2_out SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_output_2, "ADS_sca_2_OUT".scaler_output_3, "ADS_sca_2_OUT".scaler_output_4, "ADS_sca_2_OUT".scaler_output_5 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".imputer_output_2 AS DOUBLE) - 5.8474999999999975) / 0.827039146594646 AS scaler_output_2, (CAST("ADS_imp_1_OUT".imputer_output_3 AS DOUBLE) - 3.0366666666666657) / 0.43625935201691934 AS scaler_output_3, (CAST("ADS_imp_1_OUT".imputer_output_4 AS DOUBLE) - 3.8450000000000006) / 1.709817241695732 AS scaler_output_4, (CAST("ADS_imp_1_OUT".imputer_output_5 AS DOUBLE) - 1.245) / 0.7498722113355939 AS scaler_output_5 
-FROM tmp_20180508185844_codegen_8dq172_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT"
+FROM tmp_20180516122754_codegen_oep16p_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT"
 
--- Code For temporary table tmp_20180508185844_codegen_o1j6m7_kernagg_b0 part 1. Create 
+-- Code For temporary table tmp_20180516122754_codegen_5r7ubd_kernagg_b0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508185844_codegen_o1j6m7_kernagg_b0 (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516122754_codegen_5r7ubd_kernagg_b0 (
 	"KEY" BIGINT, 
 	"OVO_Class1" BIGINT, 
 	"OVO_Class2" BIGINT, 
@@ -61,11 +61,11 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508185844_codegen_o1j6m7_kernagg_b0 (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508185844_codegen_o1j6m7_kernagg_b0 part 2. Populate
+-- Code For temporary table tmp_20180516122754_codegen_5r7ubd_kernagg_b0 part 2. Populate
 
-INSERT INTO tmp_20180508185844_codegen_o1j6m7_kernagg_b0 WITH kernel_input AS 
+INSERT INTO tmp_20180516122754_codegen_5r7ubd_kernagg_b0 WITH kernel_input AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CAST("ADS_sca_2_OUT".scaler_output_2 AS DOUBLE) AS scaler_output_2, CAST("ADS_sca_2_OUT".scaler_output_3 AS DOUBLE) AS scaler_output_3, CAST("ADS_sca_2_OUT".scaler_output_4 AS DOUBLE) AS scaler_output_4, CAST("ADS_sca_2_OUT".scaler_output_5 AS DOUBLE) AS scaler_output_5 
-FROM tmp_20180508185844_codegen_cclt30_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516122754_codegen_42uos3_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "SV_data_0_1" AS 
 (SELECT "Values".sv_idx AS sv_idx, CAST("Values".dual_coeff AS DOUBLE) AS dual_coeff, CAST("Values".sv_0 AS DOUBLE) AS sv_0, CAST("Values".sv_1 AS DOUBLE) AS sv_1, CAST("Values".sv_2 AS DOUBLE) AS sv_2, CAST("Values".sv_3 AS DOUBLE) AS sv_3 
 FROM (SELECT 0 AS sv_idx, 0.3313142741679064 AS dual_coeff, -0.903826624263008 AS sv_0, 0.6036164774826909 AS sv_1, -1.2545200432489911 AS sv_2, -0.9935026111623527 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 1 AS sv_idx, 0.6120084742534154 AS dual_coeff, -1.6293061888888354 AS sv_0, -1.6885979939705589 AS sv_1, -1.4884631748571948 AS sv_2, -1.2602147215415076 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 2 AS sv_idx, -0.0 AS dual_coeff, 0.1843927226757343 AS sv_0, -0.3132693110986089 AS sv_1, 0.38308187800843274 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 3 AS sv_idx, -0.0 AS dual_coeff, 1.1516988088435047 AS sv_0, -0.542490758243934 AS sv_1, 0.5585392267145852 AS sv_2, 0.2067018855438449 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 4 AS sv_idx, -0.0 AS dual_coeff, -0.29926032040815137 AS sv_0, -0.08404786395328369 AS sv_1, 0.38308187800843274 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 5 AS sv_idx, -0.9163937780265576 AS dual_coeff, -0.903826624263008 AS sv_0, -1.2301550996799087 AS sv_1, -0.4942048655223301 AS sv_2, -0.19336628002488743 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 6 AS sv_idx, -0.0 AS dual_coeff, 0.5471325049886481 AS sv_0, -1.6885979939705589 AS sv_1, 0.3245960951063821 AS sv_2, 0.07334583035426756 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 7 AS sv_idx, -0.0 AS dual_coeff, 0.42621924421767715 AS sv_0, -1.917819441115883 AS sv_1, 0.38308187800843274 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 8 AS sv_idx, -0.026928970394764388 AS dual_coeff, -1.1456531458049497 AS sv_0, -1.4593765468252338 AS sv_1, -0.31874751681617763 AS sv_2, -0.3267223352144651 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 9 AS sv_idx, -0.0 AS dual_coeff, 0.06347946190476342 AS sv_0, 0.37439503033736665 AS sv_1, 0.5585392267145852 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 10 AS sv_idx, -0.0 AS dual_coeff, 0.5471325049886481 AS sv_0, -1.2301550996799087 AS sv_1, 0.6170250096166364 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 11 AS sv_idx, -0.0 AS dual_coeff, 0.3053059834467052 AS sv_0, -0.3132693110986089 AS sv_1, 0.5000534438125346 AS sv_2, 0.2067018855438449 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 12 AS sv_idx, -0.0 AS dual_coeff, -0.5410868419500932 AS sv_0, -0.08404786395328369 AS sv_1, 0.38308187800843274 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 13 AS sv_idx, -0.0 AS dual_coeff, 1.0307855480725336 AS sv_0, -0.08404786395328369 AS sv_1, 0.6755107925186871 AS sv_2, 0.6067700511125775 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 14 AS sv_idx, -0.0 AS dual_coeff, 1.2726120696144765 AS sv_0, 0.1451735831920415 AS sv_1, 0.6170250096166364 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1) AS "Values"), 
@@ -75,41 +75,17 @@ FROM (SELECT full_join_data_sv."KEY" AS "KEY", sum(CAST(full_join_data_sv.dot_pr
 FROM (SELECT kernel_input."KEY" AS "KEY", "SV_data_0_1".dual_coeff * (kernel_input.scaler_output_2 * "SV_data_0_1".sv_0 + kernel_input.scaler_output_3 * "SV_data_0_1".sv_1 + kernel_input.scaler_output_4 * "SV_data_0_1".sv_2 + kernel_input.scaler_output_5 * "SV_data_0_1".sv_3) AS dot_prod1 
 FROM kernel_input, "SV_data_0_1") AS full_join_data_sv GROUP BY full_join_data_sv."KEY") AS t), 
 kernel_cte_0_1 AS 
-(SELECT kernel_dp_0_1."KEY" AS "KEY", 0 AS "OVO_Class1", 1 AS "OVO_Class2", CASE WHEN (-kernel_dp_0_1.dot_product >= 0.0) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-kernel_dp_0_1.dot_product, 1.0 / (1.0 + exp(least(greatest(-100.0, -(-((-kernel_dp_0_1.dot_product) * -2.2135434169236117 + -0.10998471861922098))), 100.0)))) AS "OVO_Confidence" 
-FROM kernel_dp_0_1), 
-"SV_data_0_2" AS 
-(SELECT "Values".sv_idx AS sv_idx, CAST("Values".dual_coeff AS DOUBLE) AS dual_coeff, CAST("Values".sv_0 AS DOUBLE) AS sv_0, CAST("Values".sv_1 AS DOUBLE) AS sv_1, CAST("Values".sv_2 AS DOUBLE) AS sv_2, CAST("Values".sv_3 AS DOUBLE) AS sv_3 
-FROM (SELECT 0 AS sv_idx, 0.12171329143501097 AS dual_coeff, -0.903826624263008 AS sv_0, 0.6036164774826909 AS sv_1, -1.2545200432489911 AS sv_2, -0.9935026111623527 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 1 AS sv_idx, 0.18557788786333185 AS dual_coeff, -1.6293061888888354 AS sv_0, -1.6885979939705589 AS sv_1, -1.4884631748571948 AS sv_2, -1.2602147215415076 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 15 AS sv_idx, -0.0 AS dual_coeff, 0.3053059834467052 AS sv_0, -0.08404786395328369 AS sv_1, 0.6170250096166364 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 16 AS sv_idx, -0.30729117929834293 AS dual_coeff, -1.1456531458049497 AS sv_0, -1.2301550996799087 AS sv_1, 0.38308187800843274 AS sv_2, 0.6067700511125775 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 17 AS sv_idx, -0.0 AS dual_coeff, 0.7889590265305909 AS sv_0, 0.37439503033736665 AS sv_1, 0.7339965754207377 AS sv_2, 1.0068382166813101 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 18 AS sv_idx, -0.0 AS dual_coeff, 0.5471325049886481 AS sv_0, -0.7717122053892582 AS sv_1, 0.6170250096166364 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 19 AS sv_idx, -0.0 AS dual_coeff, 0.06347946190476342 AS sv_0, -0.08404786395328369 AS sv_1, 0.7339965754207377 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 20 AS sv_idx, -0.0 AS dual_coeff, 0.1843927226757343 AS sv_0, -0.08404786395328369 AS sv_1, 0.5585392267145852 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 21 AS sv_idx, -0.0 AS dual_coeff, 0.3053059834467052 AS sv_0, -1.0009336525345833 AS sv_1, 1.026425489930992 AS sv_2, 0.2067018855438449 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 22 AS sv_idx, -0.0 AS dual_coeff, 0.5471325049886481 AS sv_0, -0.542490758243934 AS sv_1, 0.7339965754207377 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 23 AS sv_idx, -0.0 AS dual_coeff, 0.7889590265305909 AS sv_0, -0.08404786395328369 AS sv_1, 0.9679397070289413 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 24 AS sv_idx, -0.0 AS dual_coeff, 1.6353518519273904 AS sv_0, -0.08404786395328369 AS sv_1, 1.1433970557350939 AS sv_2, 0.4734139959230002 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 25 AS sv_idx, -0.0 AS dual_coeff, 0.1843927226757343 AS sv_0, -1.917819441115883 AS sv_1, 0.6755107925186871 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1) AS "Values"), 
-kernel_dp_0_2 AS 
-(SELECT t_1."KEY" AS "KEY", t_1.dot_product AS dot_product 
-FROM (SELECT full_join_data_sv_1."KEY" AS "KEY", sum(CAST(full_join_data_sv_1.dot_prod1 AS DOUBLE)) + -0.361186144126904 AS dot_product 
-FROM (SELECT kernel_input."KEY" AS "KEY", "SV_data_0_2".dual_coeff * (kernel_input.scaler_output_2 * "SV_data_0_2".sv_0 + kernel_input.scaler_output_3 * "SV_data_0_2".sv_1 + kernel_input.scaler_output_4 * "SV_data_0_2".sv_2 + kernel_input.scaler_output_5 * "SV_data_0_2".sv_3) AS dot_prod1 
-FROM kernel_input, "SV_data_0_2") AS full_join_data_sv_1 GROUP BY full_join_data_sv_1."KEY") AS t_1), 
-kernel_cte_0_2 AS 
-(SELECT kernel_dp_0_2."KEY" AS "KEY", 0 AS "OVO_Class1", 2 AS "OVO_Class2", CASE WHEN (-kernel_dp_0_2.dot_product >= 0.0) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-kernel_dp_0_2.dot_product, 1.0 / (1.0 + exp(least(greatest(-100.0, -(-((-kernel_dp_0_2.dot_product) * -2.736234206138695 + -0.1865292430701433))), 100.0)))) AS "OVO_Confidence" 
-FROM kernel_dp_0_2), 
-"SV_data_1_2" AS 
-(SELECT "Values".sv_idx AS sv_idx, CAST("Values".dual_coeff AS DOUBLE) AS dual_coeff, CAST("Values".sv_0 AS DOUBLE) AS sv_0, CAST("Values".sv_1 AS DOUBLE) AS sv_1, CAST("Values".sv_2 AS DOUBLE) AS sv_2, CAST("Values".sv_3 AS DOUBLE) AS sv_3 
-FROM (SELECT 2 AS sv_idx, 1.0 AS dual_coeff, 0.1843927226757343 AS sv_0, -0.3132693110986089 AS sv_1, 0.38308187800843274 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 3 AS sv_idx, 0.32430979924616193 AS dual_coeff, 1.1516988088435047 AS sv_0, -0.542490758243934 AS sv_1, 0.5585392267145852 AS sv_2, 0.2067018855438449 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 4 AS sv_idx, 1.0 AS dual_coeff, -0.29926032040815137 AS sv_0, -0.08404786395328369 AS sv_1, 0.38308187800843274 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 5 AS sv_idx, 0.0 AS dual_coeff, -0.903826624263008 AS sv_0, -1.2301550996799087 AS sv_1, -0.4942048655223301 AS sv_2, -0.19336628002488743 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 6 AS sv_idx, 0.6962589219847841 AS dual_coeff, 0.5471325049886481 AS sv_0, -1.6885979939705589 AS sv_1, 0.3245960951063821 AS sv_2, 0.07334583035426756 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 7 AS sv_idx, 1.0 AS dual_coeff, 0.42621924421767715 AS sv_0, -1.917819441115883 AS sv_1, 0.38308187800843274 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 8 AS sv_idx, 0.0 AS dual_coeff, -1.1456531458049497 AS sv_0, -1.4593765468252338 AS sv_1, -0.31874751681617763 AS sv_2, -0.3267223352144651 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 9 AS sv_idx, 1.0 AS dual_coeff, 0.06347946190476342 AS sv_0, 0.37439503033736665 AS sv_1, 0.5585392267145852 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 10 AS sv_idx, 1.0 AS dual_coeff, 0.5471325049886481 AS sv_0, -1.2301550996799087 AS sv_1, 0.6170250096166364 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 11 AS sv_idx, 0.9928455350642991 AS dual_coeff, 0.3053059834467052 AS sv_0, -0.3132693110986089 AS sv_1, 0.5000534438125346 AS sv_2, 0.2067018855438449 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 12 AS sv_idx, 1.0 AS dual_coeff, -0.5410868419500932 AS sv_0, -0.08404786395328369 AS sv_1, 0.38308187800843274 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 13 AS sv_idx, 1.0 AS dual_coeff, 1.0307855480725336 AS sv_0, -0.08404786395328369 AS sv_1, 0.6755107925186871 AS sv_2, 0.6067700511125775 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 14 AS sv_idx, 1.0 AS dual_coeff, 1.2726120696144765 AS sv_0, 0.1451735831920415 AS sv_1, 0.6170250096166364 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 15 AS sv_idx, -1.0 AS dual_coeff, 0.3053059834467052 AS sv_0, -0.08404786395328369 AS sv_1, 0.6170250096166364 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 16 AS sv_idx, -1.0 AS dual_coeff, -1.1456531458049497 AS sv_0, -1.2301550996799087 AS sv_1, 0.38308187800843274 AS sv_2, 0.6067700511125775 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 17 AS sv_idx, -1.0 AS dual_coeff, 0.7889590265305909 AS sv_0, 0.37439503033736665 AS sv_1, 0.7339965754207377 AS sv_2, 1.0068382166813101 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 18 AS sv_idx, -1.0 AS dual_coeff, 0.5471325049886481 AS sv_0, -0.7717122053892582 AS sv_1, 0.6170250096166364 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 19 AS sv_idx, -1.0 AS dual_coeff, 0.06347946190476342 AS sv_0, -0.08404786395328369 AS sv_1, 0.7339965754207377 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 20 AS sv_idx, -1.0 AS dual_coeff, 0.1843927226757343 AS sv_0, -0.08404786395328369 AS sv_1, 0.5585392267145852 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 21 AS sv_idx, -1.0 AS dual_coeff, 0.3053059834467052 AS sv_0, -1.0009336525345833 AS sv_1, 1.026425489930992 AS sv_2, 0.2067018855438449 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 22 AS sv_idx, -1.0 AS dual_coeff, 0.5471325049886481 AS sv_0, -0.542490758243934 AS sv_1, 0.7339965754207377 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 23 AS sv_idx, -0.013414256295245043 AS dual_coeff, 0.7889590265305909 AS sv_0, -0.08404786395328369 AS sv_1, 0.9679397070289413 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 24 AS sv_idx, -1.0 AS dual_coeff, 1.6353518519273904 AS sv_0, -0.08404786395328369 AS sv_1, 1.1433970557350939 AS sv_2, 0.4734139959230002 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 25 AS sv_idx, -1.0 AS dual_coeff, 0.1843927226757343 AS sv_0, -1.917819441115883 AS sv_1, 0.6755107925186871 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1) AS "Values"), 
-kernel_dp_1_2 AS 
-(SELECT t_2."KEY" AS "KEY", t_2.dot_product AS dot_product 
-FROM (SELECT full_join_data_sv_2."KEY" AS "KEY", sum(CAST(full_join_data_sv_2.dot_prod1 AS DOUBLE)) + 2.70975831744 AS dot_product 
-FROM (SELECT kernel_input."KEY" AS "KEY", "SV_data_1_2".dual_coeff * (kernel_input.scaler_output_2 * "SV_data_1_2".sv_0 + kernel_input.scaler_output_3 * "SV_data_1_2".sv_1 + kernel_input.scaler_output_4 * "SV_data_1_2".sv_2 + kernel_input.scaler_output_5 * "SV_data_1_2".sv_3) AS dot_prod1 
-FROM kernel_input, "SV_data_1_2") AS full_join_data_sv_2 GROUP BY full_join_data_sv_2."KEY") AS t_2), 
-kernel_cte_1_2 AS 
-(SELECT kernel_dp_1_2."KEY" AS "KEY", 1 AS "OVO_Class1", 2 AS "OVO_Class2", CASE WHEN (-kernel_dp_1_2.dot_product >= 0.0) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-kernel_dp_1_2.dot_product, 1.0 / (1.0 + exp(least(greatest(-100.0, -(-((-kernel_dp_1_2.dot_product) * -2.4539876036750012 + 0.05089887468666801))), 100.0)))) AS "OVO_Confidence" 
-FROM kernel_dp_1_2)
+(SELECT kernel_dp_0_1."KEY" AS "KEY", 0 AS "OVO_Class1", 1 AS "OVO_Class2", CASE WHEN (-kernel_dp_0_1.dot_product >= 0.0) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-kernel_dp_0_1.dot_product, 1.0 / (1.0 + exp(least(greatest(-100.0, -(-((-kernel_dp_0_1.dot_product) * -2.2099928579493464 + -0.3580502228831513))), 100.0)))) AS "OVO_Confidence" 
+FROM kernel_dp_0_1)
  SELECT "KernAgg_B0"."KEY", "KernAgg_B0"."OVO_Class1", "KernAgg_B0"."OVO_Class2", "KernAgg_B0"."OVO_Decision", "KernAgg_B0"."OVO_Confidence" 
 FROM (SELECT "KernAgg_esu_0"."KEY" AS "KEY", "KernAgg_esu_0"."OVO_Class1" AS "OVO_Class1", "KernAgg_esu_0"."OVO_Class2" AS "OVO_Class2", "KernAgg_esu_0"."OVO_Decision" AS "OVO_Decision", "KernAgg_esu_0"."OVO_Confidence" AS "OVO_Confidence" 
 FROM (SELECT kernel_cte_0_1."KEY" AS "KEY", kernel_cte_0_1."OVO_Class1" AS "OVO_Class1", kernel_cte_0_1."OVO_Class2" AS "OVO_Class2", kernel_cte_0_1."OVO_Decision" AS "OVO_Decision", kernel_cte_0_1."OVO_Confidence" AS "OVO_Confidence" 
-FROM kernel_cte_0_1 UNION ALL SELECT kernel_cte_0_2."KEY" AS "KEY", kernel_cte_0_2."OVO_Class1" AS "OVO_Class1", kernel_cte_0_2."OVO_Class2" AS "OVO_Class2", kernel_cte_0_2."OVO_Decision" AS "OVO_Decision", kernel_cte_0_2."OVO_Confidence" AS "OVO_Confidence" 
-FROM kernel_cte_0_2 UNION ALL SELECT kernel_cte_1_2."KEY" AS "KEY", kernel_cte_1_2."OVO_Class1" AS "OVO_Class1", kernel_cte_1_2."OVO_Class2" AS "OVO_Class2", kernel_cte_1_2."OVO_Decision" AS "OVO_Decision", kernel_cte_1_2."OVO_Confidence" AS "OVO_Confidence" 
-FROM kernel_cte_1_2) AS "KernAgg_esu_0") AS "KernAgg_B0"
+FROM kernel_cte_0_1) AS "KernAgg_esu_0") AS "KernAgg_B0"
 
--- Code For temporary table tmp_20180508185844_codegen_0ljm5b_kernagg_union part 1. Create 
+-- Code For temporary table tmp_20180516122754_codegen_yzsc6p_kernagg_b1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508185844_codegen_0ljm5b_kernagg_union (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516122754_codegen_yzsc6p_kernagg_b1 (
 	"KEY" BIGINT, 
 	"OVO_Class1" BIGINT, 
 	"OVO_Class2" BIGINT, 
@@ -119,17 +95,65 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508185844_codegen_0ljm5b_kernagg_union (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508185844_codegen_0ljm5b_kernagg_union part 2. Populate
+-- Code For temporary table tmp_20180516122754_codegen_yzsc6p_kernagg_b1 part 2. Populate
 
-INSERT INTO tmp_20180508185844_codegen_0ljm5b_kernagg_union SELECT "KernAgg_Union"."KEY", "KernAgg_Union"."OVO_Class1", "KernAgg_Union"."OVO_Class2", "KernAgg_Union"."OVO_Decision", "KernAgg_Union"."OVO_Confidence" 
-FROM (SELECT "KernAgg_EnsembleUnion"."KEY" AS "KEY", "KernAgg_EnsembleUnion"."OVO_Class1" AS "OVO_Class1", "KernAgg_EnsembleUnion"."OVO_Class2" AS "OVO_Class2", "KernAgg_EnsembleUnion"."OVO_Decision" AS "OVO_Decision", "KernAgg_EnsembleUnion"."OVO_Confidence" AS "OVO_Confidence" 
-FROM (SELECT "KernAgg_B0"."KEY" AS "KEY", "KernAgg_B0"."OVO_Class1" AS "OVO_Class1", "KernAgg_B0"."OVO_Class2" AS "OVO_Class2", "KernAgg_B0"."OVO_Decision" AS "OVO_Decision", "KernAgg_B0"."OVO_Confidence" AS "OVO_Confidence" 
-FROM tmp_20180508185844_codegen_o1j6m7_kernagg_b0 AS "KernAgg_B0") AS "KernAgg_EnsembleUnion") AS "KernAgg_Union"
+INSERT INTO tmp_20180516122754_codegen_yzsc6p_kernagg_b1 WITH kernel_input AS 
+(SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CAST("ADS_sca_2_OUT".scaler_output_2 AS DOUBLE) AS scaler_output_2, CAST("ADS_sca_2_OUT".scaler_output_3 AS DOUBLE) AS scaler_output_3, CAST("ADS_sca_2_OUT".scaler_output_4 AS DOUBLE) AS scaler_output_4, CAST("ADS_sca_2_OUT".scaler_output_5 AS DOUBLE) AS scaler_output_5 
+FROM tmp_20180516122754_codegen_42uos3_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+"SV_data_0_2" AS 
+(SELECT "Values".sv_idx AS sv_idx, CAST("Values".dual_coeff AS DOUBLE) AS dual_coeff, CAST("Values".sv_0 AS DOUBLE) AS sv_0, CAST("Values".sv_1 AS DOUBLE) AS sv_1, CAST("Values".sv_2 AS DOUBLE) AS sv_2, CAST("Values".sv_3 AS DOUBLE) AS sv_3 
+FROM (SELECT 0 AS sv_idx, 0.12171329143501097 AS dual_coeff, -0.903826624263008 AS sv_0, 0.6036164774826909 AS sv_1, -1.2545200432489911 AS sv_2, -0.9935026111623527 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 1 AS sv_idx, 0.18557788786333185 AS dual_coeff, -1.6293061888888354 AS sv_0, -1.6885979939705589 AS sv_1, -1.4884631748571948 AS sv_2, -1.2602147215415076 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 15 AS sv_idx, -0.0 AS dual_coeff, 0.3053059834467052 AS sv_0, -0.08404786395328369 AS sv_1, 0.6170250096166364 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 16 AS sv_idx, -0.30729117929834293 AS dual_coeff, -1.1456531458049497 AS sv_0, -1.2301550996799087 AS sv_1, 0.38308187800843274 AS sv_2, 0.6067700511125775 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 17 AS sv_idx, -0.0 AS dual_coeff, 0.7889590265305909 AS sv_0, 0.37439503033736665 AS sv_1, 0.7339965754207377 AS sv_2, 1.0068382166813101 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 18 AS sv_idx, -0.0 AS dual_coeff, 0.5471325049886481 AS sv_0, -0.7717122053892582 AS sv_1, 0.6170250096166364 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 19 AS sv_idx, -0.0 AS dual_coeff, 0.06347946190476342 AS sv_0, -0.08404786395328369 AS sv_1, 0.7339965754207377 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 20 AS sv_idx, -0.0 AS dual_coeff, 0.1843927226757343 AS sv_0, -0.08404786395328369 AS sv_1, 0.5585392267145852 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 21 AS sv_idx, -0.0 AS dual_coeff, 0.3053059834467052 AS sv_0, -1.0009336525345833 AS sv_1, 1.026425489930992 AS sv_2, 0.2067018855438449 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 22 AS sv_idx, -0.0 AS dual_coeff, 0.5471325049886481 AS sv_0, -0.542490758243934 AS sv_1, 0.7339965754207377 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 23 AS sv_idx, -0.0 AS dual_coeff, 0.7889590265305909 AS sv_0, -0.08404786395328369 AS sv_1, 0.9679397070289413 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 24 AS sv_idx, -0.0 AS dual_coeff, 1.6353518519273904 AS sv_0, -0.08404786395328369 AS sv_1, 1.1433970557350939 AS sv_2, 0.4734139959230002 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 25 AS sv_idx, -0.0 AS dual_coeff, 0.1843927226757343 AS sv_0, -1.917819441115883 AS sv_1, 0.6755107925186871 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1) AS "Values"), 
+kernel_dp_0_2 AS 
+(SELECT t_1."KEY" AS "KEY", t_1.dot_product AS dot_product 
+FROM (SELECT full_join_data_sv_1."KEY" AS "KEY", sum(CAST(full_join_data_sv_1.dot_prod1 AS DOUBLE)) + -0.361186144126904 AS dot_product 
+FROM (SELECT kernel_input."KEY" AS "KEY", "SV_data_0_2".dual_coeff * (kernel_input.scaler_output_2 * "SV_data_0_2".sv_0 + kernel_input.scaler_output_3 * "SV_data_0_2".sv_1 + kernel_input.scaler_output_4 * "SV_data_0_2".sv_2 + kernel_input.scaler_output_5 * "SV_data_0_2".sv_3) AS dot_prod1 
+FROM kernel_input, "SV_data_0_2") AS full_join_data_sv_1 GROUP BY full_join_data_sv_1."KEY") AS t_1), 
+kernel_cte_0_2 AS 
+(SELECT kernel_dp_0_2."KEY" AS "KEY", 0 AS "OVO_Class1", 2 AS "OVO_Class2", CASE WHEN (-kernel_dp_0_2.dot_product >= 0.0) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-kernel_dp_0_2.dot_product, 1.0 / (1.0 + exp(least(greatest(-100.0, -(-((-kernel_dp_0_2.dot_product) * -2.7455088499966367 + -0.11250325153587908))), 100.0)))) AS "OVO_Confidence" 
+FROM kernel_dp_0_2)
+ SELECT "KernAgg_B1"."KEY", "KernAgg_B1"."OVO_Class1", "KernAgg_B1"."OVO_Class2", "KernAgg_B1"."OVO_Decision", "KernAgg_B1"."OVO_Confidence" 
+FROM (SELECT "KernAgg_esu_1"."KEY" AS "KEY", "KernAgg_esu_1"."OVO_Class1" AS "OVO_Class1", "KernAgg_esu_1"."OVO_Class2" AS "OVO_Class2", "KernAgg_esu_1"."OVO_Decision" AS "OVO_Decision", "KernAgg_esu_1"."OVO_Confidence" AS "OVO_Confidence" 
+FROM (SELECT kernel_cte_0_2."KEY" AS "KEY", kernel_cte_0_2."OVO_Class1" AS "OVO_Class1", kernel_cte_0_2."OVO_Class2" AS "OVO_Class2", kernel_cte_0_2."OVO_Decision" AS "OVO_Decision", kernel_cte_0_2."OVO_Confidence" AS "OVO_Confidence" 
+FROM kernel_cte_0_2) AS "KernAgg_esu_1") AS "KernAgg_B1"
 
--- Code For temporary table tmp_20180508185844_codegen_m1zky0_kernagg part 1. Create 
+-- Code For temporary table tmp_20180516122754_codegen_tem31q_kernagg_b2 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508185844_codegen_m1zky0_kernagg (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516122754_codegen_tem31q_kernagg_b2 (
+	"KEY" BIGINT, 
+	"OVO_Class1" BIGINT, 
+	"OVO_Class2" BIGINT, 
+	"OVO_Decision" BIGINT, 
+	"OVO_Confidence" DOUBLE
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table tmp_20180516122754_codegen_tem31q_kernagg_b2 part 2. Populate
+
+INSERT INTO tmp_20180516122754_codegen_tem31q_kernagg_b2 WITH kernel_input AS 
+(SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CAST("ADS_sca_2_OUT".scaler_output_2 AS DOUBLE) AS scaler_output_2, CAST("ADS_sca_2_OUT".scaler_output_3 AS DOUBLE) AS scaler_output_3, CAST("ADS_sca_2_OUT".scaler_output_4 AS DOUBLE) AS scaler_output_4, CAST("ADS_sca_2_OUT".scaler_output_5 AS DOUBLE) AS scaler_output_5 
+FROM tmp_20180516122754_codegen_42uos3_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+"SV_data_1_2" AS 
+(SELECT "Values".sv_idx AS sv_idx, CAST("Values".dual_coeff AS DOUBLE) AS dual_coeff, CAST("Values".sv_0 AS DOUBLE) AS sv_0, CAST("Values".sv_1 AS DOUBLE) AS sv_1, CAST("Values".sv_2 AS DOUBLE) AS sv_2, CAST("Values".sv_3 AS DOUBLE) AS sv_3 
+FROM (SELECT 2 AS sv_idx, 1.0 AS dual_coeff, 0.1843927226757343 AS sv_0, -0.3132693110986089 AS sv_1, 0.38308187800843274 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 3 AS sv_idx, 0.32430979924616193 AS dual_coeff, 1.1516988088435047 AS sv_0, -0.542490758243934 AS sv_1, 0.5585392267145852 AS sv_2, 0.2067018855438449 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 4 AS sv_idx, 1.0 AS dual_coeff, -0.29926032040815137 AS sv_0, -0.08404786395328369 AS sv_1, 0.38308187800843274 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 5 AS sv_idx, 0.0 AS dual_coeff, -0.903826624263008 AS sv_0, -1.2301550996799087 AS sv_1, -0.4942048655223301 AS sv_2, -0.19336628002488743 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 6 AS sv_idx, 0.6962589219847841 AS dual_coeff, 0.5471325049886481 AS sv_0, -1.6885979939705589 AS sv_1, 0.3245960951063821 AS sv_2, 0.07334583035426756 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 7 AS sv_idx, 1.0 AS dual_coeff, 0.42621924421767715 AS sv_0, -1.917819441115883 AS sv_1, 0.38308187800843274 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 8 AS sv_idx, 0.0 AS dual_coeff, -1.1456531458049497 AS sv_0, -1.4593765468252338 AS sv_1, -0.31874751681617763 AS sv_2, -0.3267223352144651 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 9 AS sv_idx, 1.0 AS dual_coeff, 0.06347946190476342 AS sv_0, 0.37439503033736665 AS sv_1, 0.5585392267145852 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 10 AS sv_idx, 1.0 AS dual_coeff, 0.5471325049886481 AS sv_0, -1.2301550996799087 AS sv_1, 0.6170250096166364 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 11 AS sv_idx, 0.9928455350642991 AS dual_coeff, 0.3053059834467052 AS sv_0, -0.3132693110986089 AS sv_1, 0.5000534438125346 AS sv_2, 0.2067018855438449 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 12 AS sv_idx, 1.0 AS dual_coeff, -0.5410868419500932 AS sv_0, -0.08404786395328369 AS sv_1, 0.38308187800843274 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 13 AS sv_idx, 1.0 AS dual_coeff, 1.0307855480725336 AS sv_0, -0.08404786395328369 AS sv_1, 0.6755107925186871 AS sv_2, 0.6067700511125775 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 14 AS sv_idx, 1.0 AS dual_coeff, 1.2726120696144765 AS sv_0, 0.1451735831920415 AS sv_1, 0.6170250096166364 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 15 AS sv_idx, -1.0 AS dual_coeff, 0.3053059834467052 AS sv_0, -0.08404786395328369 AS sv_1, 0.6170250096166364 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 16 AS sv_idx, -1.0 AS dual_coeff, -1.1456531458049497 AS sv_0, -1.2301550996799087 AS sv_1, 0.38308187800843274 AS sv_2, 0.6067700511125775 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 17 AS sv_idx, -1.0 AS dual_coeff, 0.7889590265305909 AS sv_0, 0.37439503033736665 AS sv_1, 0.7339965754207377 AS sv_2, 1.0068382166813101 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 18 AS sv_idx, -1.0 AS dual_coeff, 0.5471325049886481 AS sv_0, -0.7717122053892582 AS sv_1, 0.6170250096166364 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 19 AS sv_idx, -1.0 AS dual_coeff, 0.06347946190476342 AS sv_0, -0.08404786395328369 AS sv_1, 0.7339965754207377 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 20 AS sv_idx, -1.0 AS dual_coeff, 0.1843927226757343 AS sv_0, -0.08404786395328369 AS sv_1, 0.5585392267145852 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 21 AS sv_idx, -1.0 AS dual_coeff, 0.3053059834467052 AS sv_0, -1.0009336525345833 AS sv_1, 1.026425489930992 AS sv_2, 0.2067018855438449 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 22 AS sv_idx, -1.0 AS dual_coeff, 0.5471325049886481 AS sv_0, -0.542490758243934 AS sv_1, 0.7339965754207377 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 23 AS sv_idx, -0.013414256295245043 AS dual_coeff, 0.7889590265305909 AS sv_0, -0.08404786395328369 AS sv_1, 0.9679397070289413 AS sv_2, 0.7401261063021551 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 24 AS sv_idx, -1.0 AS dual_coeff, 1.6353518519273904 AS sv_0, -0.08404786395328369 AS sv_1, 1.1433970557350939 AS sv_2, 0.4734139959230002 AS sv_3 FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 25 AS sv_idx, -1.0 AS dual_coeff, 0.1843927226757343 AS sv_0, -1.917819441115883 AS sv_1, 0.6755107925186871 AS sv_2, 0.34005794073342255 AS sv_3 FROM SYSIBM.SYSDUMMY1) AS "Values"), 
+kernel_dp_1_2 AS 
+(SELECT t_2."KEY" AS "KEY", t_2.dot_product AS dot_product 
+FROM (SELECT full_join_data_sv_2."KEY" AS "KEY", sum(CAST(full_join_data_sv_2.dot_prod1 AS DOUBLE)) + 2.70975831744 AS dot_product 
+FROM (SELECT kernel_input."KEY" AS "KEY", "SV_data_1_2".dual_coeff * (kernel_input.scaler_output_2 * "SV_data_1_2".sv_0 + kernel_input.scaler_output_3 * "SV_data_1_2".sv_1 + kernel_input.scaler_output_4 * "SV_data_1_2".sv_2 + kernel_input.scaler_output_5 * "SV_data_1_2".sv_3) AS dot_prod1 
+FROM kernel_input, "SV_data_1_2") AS full_join_data_sv_2 GROUP BY full_join_data_sv_2."KEY") AS t_2), 
+kernel_cte_1_2 AS 
+(SELECT kernel_dp_1_2."KEY" AS "KEY", 1 AS "OVO_Class1", 2 AS "OVO_Class2", CASE WHEN (-kernel_dp_1_2.dot_product >= 0.0) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-kernel_dp_1_2.dot_product, 1.0 / (1.0 + exp(least(greatest(-100.0, -(-((-kernel_dp_1_2.dot_product) * -2.576210023558032 + -0.04939687419338655))), 100.0)))) AS "OVO_Confidence" 
+FROM kernel_dp_1_2)
+ SELECT "KernAgg_B2"."KEY", "KernAgg_B2"."OVO_Class1", "KernAgg_B2"."OVO_Class2", "KernAgg_B2"."OVO_Decision", "KernAgg_B2"."OVO_Confidence" 
+FROM (SELECT "KernAgg_esu_2"."KEY" AS "KEY", "KernAgg_esu_2"."OVO_Class1" AS "OVO_Class1", "KernAgg_esu_2"."OVO_Class2" AS "OVO_Class2", "KernAgg_esu_2"."OVO_Decision" AS "OVO_Decision", "KernAgg_esu_2"."OVO_Confidence" AS "OVO_Confidence" 
+FROM (SELECT kernel_cte_1_2."KEY" AS "KEY", kernel_cte_1_2."OVO_Class1" AS "OVO_Class1", kernel_cte_1_2."OVO_Class2" AS "OVO_Class2", kernel_cte_1_2."OVO_Decision" AS "OVO_Decision", kernel_cte_1_2."OVO_Confidence" AS "OVO_Confidence" 
+FROM kernel_cte_1_2) AS "KernAgg_esu_2") AS "KernAgg_B2"
+
+-- Code For temporary table tmp_20180516122754_codegen_a3ivk4_kernagg part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516122754_codegen_a3ivk4_kernagg (
 	"KEY" BIGINT, 
 	"OVO_Vote_0" BIGINT, 
 	"OVO_SumConfidence_0" DOUBLE, 
@@ -146,12 +170,18 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508185844_codegen_m1zky0_kernagg (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508185844_codegen_m1zky0_kernagg part 2. Populate
+-- Code For temporary table tmp_20180516122754_codegen_a3ivk4_kernagg part 2. Populate
 
-INSERT INTO tmp_20180508185844_codegen_m1zky0_kernagg WITH "OVO_Votes" AS 
+INSERT INTO tmp_20180516122754_codegen_a3ivk4_kernagg WITH "KernAgg_Union" AS 
+(SELECT "KernAgg_EnsembleUnion"."KEY" AS "KEY", "KernAgg_EnsembleUnion"."OVO_Class1" AS "OVO_Class1", "KernAgg_EnsembleUnion"."OVO_Class2" AS "OVO_Class2", "KernAgg_EnsembleUnion"."OVO_Decision" AS "OVO_Decision", "KernAgg_EnsembleUnion"."OVO_Confidence" AS "OVO_Confidence" 
+FROM (SELECT "KernAgg_B0"."KEY" AS "KEY", "KernAgg_B0"."OVO_Class1" AS "OVO_Class1", "KernAgg_B0"."OVO_Class2" AS "OVO_Class2", "KernAgg_B0"."OVO_Decision" AS "OVO_Decision", "KernAgg_B0"."OVO_Confidence" AS "OVO_Confidence" 
+FROM tmp_20180516122754_codegen_5r7ubd_kernagg_b0 AS "KernAgg_B0" UNION ALL SELECT "KernAgg_B1"."KEY" AS "KEY", "KernAgg_B1"."OVO_Class1" AS "OVO_Class1", "KernAgg_B1"."OVO_Class2" AS "OVO_Class2", "KernAgg_B1"."OVO_Decision" AS "OVO_Decision", "KernAgg_B1"."OVO_Confidence" AS "OVO_Confidence" 
+FROM tmp_20180516122754_codegen_yzsc6p_kernagg_b1 AS "KernAgg_B1" UNION ALL SELECT "KernAgg_B2"."KEY" AS "KEY", "KernAgg_B2"."OVO_Class1" AS "OVO_Class1", "KernAgg_B2"."OVO_Class2" AS "OVO_Class2", "KernAgg_B2"."OVO_Decision" AS "OVO_Decision", "KernAgg_B2"."OVO_Confidence" AS "OVO_Confidence" 
+FROM tmp_20180516122754_codegen_tem31q_kernagg_b2 AS "KernAgg_B2") AS "KernAgg_EnsembleUnion"), 
+"OVO_Votes" AS 
 (SELECT "Votes_Sel"."KEY" AS "KEY", "Votes_Sel"."OVO_Vote_0" AS "OVO_Vote_0", "Votes_Sel"."OVO_SumConfidence_0" AS "OVO_SumConfidence_0", "Votes_Sel"."OVO_Vote_1" AS "OVO_Vote_1", "Votes_Sel"."OVO_SumConfidence_1" AS "OVO_SumConfidence_1", "Votes_Sel"."OVO_Vote_2" AS "OVO_Vote_2", "Votes_Sel"."OVO_SumConfidence_2" AS "OVO_SumConfidence_2" 
 FROM (SELECT "KernAgg_Union"."KEY" AS "KEY", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = 0 OR "KernAgg_Union"."OVO_Class2" = 0) THEN 1 ELSE 0 END * (CASE WHEN ("KernAgg_Union"."OVO_Decision" = 0 AND "KernAgg_Union"."OVO_Class1" = 0) THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Decision" = 1 AND "KernAgg_Union"."OVO_Class2" = 0) THEN 1 ELSE 0 END)) AS "OVO_Vote_0", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = 0 OR "KernAgg_Union"."OVO_Class2" = 0) THEN 1 ELSE 0 END * "KernAgg_Union"."OVO_Confidence" * (-CASE WHEN ("KernAgg_Union"."OVO_Class1" = 0) THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Class2" = 0) THEN 1 ELSE 0 END)) AS "OVO_SumConfidence_0", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = 1 OR "KernAgg_Union"."OVO_Class2" = 1) THEN 1 ELSE 0 END * (CASE WHEN ("KernAgg_Union"."OVO_Decision" = 0 AND "KernAgg_Union"."OVO_Class1" = 1) THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Decision" = 1 AND "KernAgg_Union"."OVO_Class2" = 1) THEN 1 ELSE 0 END)) AS "OVO_Vote_1", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = 1 OR "KernAgg_Union"."OVO_Class2" = 1) THEN 1 ELSE 0 END * "KernAgg_Union"."OVO_Confidence" * (-CASE WHEN ("KernAgg_Union"."OVO_Class1" = 1) THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Class2" = 1) THEN 1 ELSE 0 END)) AS "OVO_SumConfidence_1", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = 2 OR "KernAgg_Union"."OVO_Class2" = 2) THEN 1 ELSE 0 END * (CASE WHEN ("KernAgg_Union"."OVO_Decision" = 0 AND "KernAgg_Union"."OVO_Class1" = 2) THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Decision" = 1 AND "KernAgg_Union"."OVO_Class2" = 2) THEN 1 ELSE 0 END)) AS "OVO_Vote_2", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = 2 OR "KernAgg_Union"."OVO_Class2" = 2) THEN 1 ELSE 0 END * "KernAgg_Union"."OVO_Confidence" * (-CASE WHEN ("KernAgg_Union"."OVO_Class1" = 2) THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Class2" = 2) THEN 1 ELSE 0 END)) AS "OVO_SumConfidence_2" 
-FROM tmp_20180508185844_codegen_0ljm5b_kernagg_union AS "KernAgg_Union" GROUP BY "KernAgg_Union"."KEY") AS "Votes_Sel"), 
+FROM "KernAgg_Union" GROUP BY "KernAgg_Union"."KEY") AS "Votes_Sel"), 
 "OVO_SumConf_CTE" AS 
 (SELECT "Values"."KEY" AS "KEY", CAST("Values"."OVO_SumConfidence" AS DOUBLE) AS "OVO_SumConfidence" 
 FROM (SELECT "OVO_Votes"."KEY" AS "KEY", "OVO_Votes"."OVO_SumConfidence_0" AS "OVO_SumConfidence" 
@@ -172,7 +202,7 @@ FROM "OVO_Votes_WithScale") AS "KernAgg"
 
 WITH orig_cte AS 
 (SELECT "KernAgg"."KEY" AS "KEY", "KernAgg"."Score_0" AS "Score_0", "KernAgg"."Score_1" AS "Score_1", "KernAgg"."Score_2" AS "Score_2", CAST(NULL AS DOUBLE) AS "Proba_0", CAST(NULL AS DOUBLE) AS "Proba_1", CAST(NULL AS DOUBLE) AS "Proba_2", CAST(NULL AS DOUBLE) AS "LogProba_0", CAST(NULL AS DOUBLE) AS "LogProba_1", CAST(NULL AS DOUBLE) AS "LogProba_2", NULL AS "Decision", CAST(NULL AS DOUBLE) AS "DecisionProba" 
-FROM tmp_20180508185844_codegen_m1zky0_kernagg AS "KernAgg"), 
+FROM tmp_20180516122754_codegen_a3ivk4_kernagg AS "KernAgg"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

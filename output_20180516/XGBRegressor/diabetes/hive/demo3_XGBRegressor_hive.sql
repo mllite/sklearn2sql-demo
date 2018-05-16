@@ -10,9 +10,9 @@
 
 
 
--- Code For temporary table tmp_20180509003544_codegen_2sh00m_xgb_b0 part 1. Create 
+-- Code For temporary table tmp_20180516115627_codegen_o585bu_xgb_b0 part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180509003544_codegen_2sh00m_xgb_b0` STORED AS ORC AS WITH `DT_node_lookup` AS 
+CREATE TEMPORARY TABLE `tmp_20180516115627_codegen_o585bu_xgb_b0` STORED AS ORC AS WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_8` < 0.0007076415931805968) THEN CASE WHEN (`ADS`.`Feature_2` < 0.0061888848431408405) THEN CASE WHEN (`ADS`.`Feature_6` < 0.021027816459536552) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN (`ADS`.`Feature_2` < 0.047145746648311615) THEN CASE WHEN (`ADS`.`Feature_2` < -0.021834230050444603) THEN 9 ELSE 10 END ELSE 6 END END AS `node_id_2` 
 FROM `diabetes` AS `ADS`), 
 `DT_node_data` AS 
@@ -146,13 +146,13 @@ FROM `XGB_Model_7` UNION ALL SELECT `XGB_Model_8`.`KEY` AS `KEY`, `XGB_Model_8`.
 FROM `XGB_Model_8` UNION ALL SELECT `XGB_Model_9`.`KEY` AS `KEY`, `XGB_Model_9`.`Estimator` AS `Estimator` 
 FROM `XGB_Model_9`) AS `XGB_esu_0`) AS `XGB_B0`
 
--- Code For temporary table tmp_20180509003544_codegen_2sh00m_xgb_b0 part 2. Populate
+-- Code For temporary table tmp_20180516115627_codegen_o585bu_xgb_b0 part 2. Populate
 
-SELECT * FROM `tmp_20180509003544_codegen_2sh00m_xgb_b0`
+SELECT * FROM `tmp_20180516115627_codegen_o585bu_xgb_b0`
 
--- Code For temporary table tmp_20180509003544_codegen_135ovb_xgb_b1 part 1. Create 
+-- Code For temporary table tmp_20180516115627_codegen_y5gbcj_xgb_b1 part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180509003544_codegen_135ovb_xgb_b1` STORED AS ORC AS WITH `DT_node_lookup_10` AS 
+CREATE TEMPORARY TABLE `tmp_20180516115627_codegen_y5gbcj_xgb_b1` STORED AS ORC AS WITH `DT_node_lookup_10` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` < 0.009422320872545242) THEN CASE WHEN (`ADS`.`Feature_7` < 0.03061874583363533) THEN CASE WHEN (`ADS`.`Feature_5` < -0.047346703708171844) THEN 7 ELSE 8 END ELSE CASE WHEN (`ADS`.`Feature_6` < -0.05260493978857994) THEN 9 ELSE 10 END END ELSE CASE WHEN (`ADS`.`Feature_3` < 0.02359379082918167) THEN CASE WHEN (`ADS`.`Feature_9` < 0.029988106340169907) THEN 11 ELSE 12 END ELSE CASE WHEN (`ADS`.`Feature_2` < 0.04660683870315552) THEN 13 ELSE 14 END END END AS `node_id_2` 
 FROM `diabetes` AS `ADS`), 
 `DT_node_data_10` AS 
@@ -234,34 +234,27 @@ FROM `XGB_Model_13` UNION ALL SELECT `XGB_Model_14`.`KEY` AS `KEY`, `XGB_Model_1
 FROM `XGB_Model_14` UNION ALL SELECT `XGB_Model_15`.`KEY` AS `KEY`, `XGB_Model_15`.`Estimator` AS `Estimator` 
 FROM `XGB_Model_15`) AS `XGB_esu_1`) AS `XGB_B1`
 
--- Code For temporary table tmp_20180509003544_codegen_135ovb_xgb_b1 part 2. Populate
+-- Code For temporary table tmp_20180516115627_codegen_y5gbcj_xgb_b1 part 2. Populate
 
-SELECT * FROM `tmp_20180509003544_codegen_135ovb_xgb_b1`
+SELECT * FROM `tmp_20180516115627_codegen_y5gbcj_xgb_b1`
 
--- Code For temporary table tmp_20180509003544_codegen_kn6u4h_xgb_union part 1. Create 
+-- Code For temporary table tmp_20180516115627_codegen_x0pt10_xgb_sum part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180509003544_codegen_kn6u4h_xgb_union` STORED AS ORC AS SELECT `XGB_Union`.`KEY`, `XGB_Union`.`Estimator` 
-FROM (SELECT `XGB_EnsembleUnion`.`KEY` AS `KEY`, `XGB_EnsembleUnion`.`Estimator` AS `Estimator` 
+CREATE TEMPORARY TABLE `tmp_20180516115627_codegen_x0pt10_xgb_sum` STORED AS ORC AS WITH `XGB_Union` AS 
+(SELECT `XGB_EnsembleUnion`.`KEY` AS `KEY`, `XGB_EnsembleUnion`.`Estimator` AS `Estimator` 
 FROM (SELECT `XGB_B0`.`KEY` AS `KEY`, `XGB_B0`.`Estimator` AS `Estimator` 
-FROM `tmp_20180509003544_codegen_2sh00m_xgb_b0` AS `XGB_B0` UNION ALL SELECT `XGB_B1`.`KEY` AS `KEY`, `XGB_B1`.`Estimator` AS `Estimator` 
-FROM `tmp_20180509003544_codegen_135ovb_xgb_b1` AS `XGB_B1`) AS `XGB_EnsembleUnion`) AS `XGB_Union`
-
--- Code For temporary table tmp_20180509003544_codegen_kn6u4h_xgb_union part 2. Populate
-
-SELECT * FROM `tmp_20180509003544_codegen_kn6u4h_xgb_union`
-
--- Code For temporary table tmp_20180509003544_codegen_82dsic_xgb_sum part 1. Create 
-
-CREATE TEMPORARY TABLE `tmp_20180509003544_codegen_82dsic_xgb_sum` STORED AS ORC AS SELECT `XGB_sum`.`KEY`, `XGB_sum`.`Estimator` 
+FROM `tmp_20180516115627_codegen_o585bu_xgb_b0` AS `XGB_B0` UNION ALL SELECT `XGB_B1`.`KEY` AS `KEY`, `XGB_B1`.`Estimator` AS `Estimator` 
+FROM `tmp_20180516115627_codegen_y5gbcj_xgb_b1` AS `XGB_B1`) AS `XGB_EnsembleUnion`)
+ SELECT `XGB_sum`.`KEY`, `XGB_sum`.`Estimator` 
 FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT `XGB_Union`.`KEY` AS `KEY`, sum(`XGB_Union`.`Estimator`) AS `Estimator` 
-FROM `tmp_20180509003544_codegen_kn6u4h_xgb_union` AS `XGB_Union` GROUP BY `XGB_Union`.`KEY`) AS `T`) AS `XGB_sum`
+FROM `XGB_Union` GROUP BY `XGB_Union`.`KEY`) AS `T`) AS `XGB_sum`
 
--- Code For temporary table tmp_20180509003544_codegen_82dsic_xgb_sum part 2. Populate
+-- Code For temporary table tmp_20180516115627_codegen_x0pt10_xgb_sum part 2. Populate
 
-SELECT * FROM `tmp_20180509003544_codegen_82dsic_xgb_sum`
+SELECT * FROM `tmp_20180516115627_codegen_x0pt10_xgb_sum`
 
 -- Model deployment code
 
 SELECT `XGB_sum`.`KEY` AS `KEY`, `XGB_sum`.`Estimator` + 0.5 AS `Estimator` 
-FROM `tmp_20180509003544_codegen_82dsic_xgb_sum` AS `XGB_sum`
+FROM `tmp_20180516115627_codegen_x0pt10_xgb_sum` AS `XGB_sum`

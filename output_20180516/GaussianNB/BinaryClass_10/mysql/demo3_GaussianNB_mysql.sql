@@ -10,13 +10,26 @@
 
 
 
--- Model deployment code
+-- Code For temporary table TMP_20180516110314_CODEGEN_7QN3QD_NaiveBayes_Scores part 1. Create 
 
-WITH centered_data AS 
-(SELECT `ADS`.`KEY` AS `KEY`, `ADS`.`Feature_0` - 0.8736540997238669 AS `Feature_0_0`, `ADS`.`Feature_1` - 0.22417823322532193 AS `Feature_1_0`, `ADS`.`Feature_2` - 0.05238040173285245 AS `Feature_2_0`, `ADS`.`Feature_3` - 0.008194292112152635 AS `Feature_3_0`, `ADS`.`Feature_4` - 0.04244853351408695 AS `Feature_4_0`, `ADS`.`Feature_5` - -0.011775929294600088 AS `Feature_5_0`, `ADS`.`Feature_6` - 0.3850522853640051 AS `Feature_6_0`, `ADS`.`Feature_7` - 0.34626546901416927 AS `Feature_7_0`, `ADS`.`Feature_8` - -0.11404947981156924 AS `Feature_8_0`, `ADS`.`Feature_9` - -0.8981761455859457 AS `Feature_9_0`, `ADS`.`Feature_0` - -0.7499956892475977 AS `Feature_0_1`, `ADS`.`Feature_1` - 0.12987104211834458 AS `Feature_1_1`, `ADS`.`Feature_2` - 0.03038729836521653 AS `Feature_2_1`, `ADS`.`Feature_3` - 0.2530186440047904 AS `Feature_3_1`, `ADS`.`Feature_4` - -0.16156474295374862 AS `Feature_4_1`, `ADS`.`Feature_5` - -0.08608225044561162 AS `Feature_5_1`, `ADS`.`Feature_6` - -0.0030163281297424945 AS `Feature_6_1`, `ADS`.`Feature_7` - -0.3021662755488199 AS `Feature_7_1`, `ADS`.`Feature_8` - -0.0014101482567108082 AS `Feature_8_1`, `ADS`.`Feature_9` - 0.7930769614818811 AS `Feature_9_1` 
+
+CREATE TEMPORARY TABLE `TMP_20180516110314_CODEGEN_7QN3QD_NaiveBayes_Scores` (
+	`KEY` BIGINT NOT NULL, 
+	`Score_0` DOUBLE, 
+	`Score_1` DOUBLE, 
+	PRIMARY KEY (`KEY`)
+)
+
+ ENGINE=MEMORY
+
+-- Code For temporary table TMP_20180516110314_CODEGEN_7QN3QD_NaiveBayes_Scores part 2. Populate
+
+INSERT INTO `TMP_20180516110314_CODEGEN_7QN3QD_NaiveBayes_Scores` (`KEY`, `Score_0`, `Score_1`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1` 
+FROM (WITH centered_data AS 
+(SELECT `ADS`.`KEY` AS `KEY`, CAST(`ADS`.`Feature_0` AS DOUBLE) - 0.8736540997238669 AS `Feature_0_0`, CAST(`ADS`.`Feature_1` AS DOUBLE) - 0.22417823322532193 AS `Feature_1_0`, CAST(`ADS`.`Feature_2` AS DOUBLE) - 0.05238040173285245 AS `Feature_2_0`, CAST(`ADS`.`Feature_3` AS DOUBLE) - 0.008194292112152635 AS `Feature_3_0`, CAST(`ADS`.`Feature_4` AS DOUBLE) - 0.04244853351408695 AS `Feature_4_0`, CAST(`ADS`.`Feature_5` AS DOUBLE) - -0.011775929294600088 AS `Feature_5_0`, CAST(`ADS`.`Feature_6` AS DOUBLE) - 0.3850522853640051 AS `Feature_6_0`, CAST(`ADS`.`Feature_7` AS DOUBLE) - 0.34626546901416927 AS `Feature_7_0`, CAST(`ADS`.`Feature_8` AS DOUBLE) - -0.11404947981156924 AS `Feature_8_0`, CAST(`ADS`.`Feature_9` AS DOUBLE) - -0.8981761455859457 AS `Feature_9_0`, CAST(`ADS`.`Feature_0` AS DOUBLE) - -0.7499956892475977 AS `Feature_0_1`, CAST(`ADS`.`Feature_1` AS DOUBLE) - 0.12987104211834458 AS `Feature_1_1`, CAST(`ADS`.`Feature_2` AS DOUBLE) - 0.03038729836521653 AS `Feature_2_1`, CAST(`ADS`.`Feature_3` AS DOUBLE) - 0.2530186440047904 AS `Feature_3_1`, CAST(`ADS`.`Feature_4` AS DOUBLE) - -0.16156474295374862 AS `Feature_4_1`, CAST(`ADS`.`Feature_5` AS DOUBLE) - -0.08608225044561162 AS `Feature_5_1`, CAST(`ADS`.`Feature_6` AS DOUBLE) - -0.0030163281297424945 AS `Feature_6_1`, CAST(`ADS`.`Feature_7` AS DOUBLE) - -0.3021662755488199 AS `Feature_7_1`, CAST(`ADS`.`Feature_8` AS DOUBLE) - -0.0014101482567108082 AS `Feature_8_1`, CAST(`ADS`.`Feature_9` AS DOUBLE) - 0.7930769614818811 AS `Feature_9_1` 
 FROM `BinaryClass_10` AS `ADS`), 
 `NaiveBayes_data` AS 
-(SELECT `Values`.`KEY` AS `KEY`, `Values`.`Feature` AS `Feature`, `Values`.log_proba_0 AS log_proba_0, `Values`.log_proba_1 AS log_proba_1 
+(SELECT `Values`.`KEY` AS `KEY`, CAST(`Values`.`Feature` AS DOUBLE) AS `Feature`, CAST(`Values`.log_proba_0 AS DOUBLE) AS log_proba_0, CAST(`Values`.log_proba_1 AS DOUBLE) AS log_proba_1 
 FROM (SELECT centered_data.`KEY` AS `KEY`, 0 AS `Feature`, -0.5 * 1.1659418918428306 - (0.5 * centered_data.`Feature_0_0` * centered_data.`Feature_0_0`) / 0.5107192898924603 AS log_proba_0, -0.5 * 2.0110028741373744 - (0.5 * centered_data.`Feature_0_1` * centered_data.`Feature_0_1`) / 1.1890156830364773 AS log_proba_1 
 FROM centered_data UNION ALL SELECT centered_data.`KEY` AS `KEY`, 1 AS `Feature`, -0.5 * 1.6339821388683364 - (0.5 * centered_data.`Feature_1_0` * centered_data.`Feature_1_0`) / 0.8155480583254483 AS log_proba_0, -0.5 * 1.7868950922987223 - (0.5 * centered_data.`Feature_1_1` * centered_data.`Feature_1_1`) / 0.9502958003050084 AS log_proba_1 
 FROM centered_data UNION ALL SELECT centered_data.`KEY` AS `KEY`, 2 AS `Feature`, -0.5 * 1.7326755778312752 - (0.5 * centered_data.`Feature_2_0` * centered_data.`Feature_2_0`) / 0.9001431357527093 AS log_proba_0, -0.5 * 2.1795863220093645 - (0.5 * centered_data.`Feature_2_1` * centered_data.`Feature_2_1`) / 1.407351058585931 AS log_proba_1 
@@ -27,14 +40,21 @@ FROM centered_data UNION ALL SELECT centered_data.`KEY` AS `KEY`, 6 AS `Feature`
 FROM centered_data UNION ALL SELECT centered_data.`KEY` AS `KEY`, 7 AS `Feature`, -0.5 * -1.024017408066938 - (0.5 * centered_data.`Feature_7_0` * centered_data.`Feature_7_0`) / 0.05716036876573926 AS log_proba_0, -0.5 * 0.14017504405557812 - (0.5 * centered_data.`Feature_7_1` * centered_data.`Feature_7_1`) / 0.18310380942558865 AS log_proba_1 
 FROM centered_data UNION ALL SELECT centered_data.`KEY` AS `KEY`, 8 AS `Feature`, -0.5 * 1.7950563371592299 - (0.5 * centered_data.`Feature_8_0` * centered_data.`Feature_8_0`) / 0.9580831309538496 AS log_proba_0, -0.5 * 2.1020484871647827 - (0.5 * centered_data.`Feature_8_1` * centered_data.`Feature_8_1`) / 1.302351427232641 AS log_proba_1 
 FROM centered_data UNION ALL SELECT centered_data.`KEY` AS `KEY`, 9 AS `Feature`, -0.5 * 0.6647622291855276 - (0.5 * centered_data.`Feature_9_0` * centered_data.`Feature_9_0`) / 0.3094017028245138 AS log_proba_0, -0.5 * 2.0685056235146035 - (0.5 * centered_data.`Feature_9_1` * centered_data.`Feature_9_1`) / 1.2593913605868818 AS log_proba_1 
-FROM centered_data) AS `Values`), 
-`NaiveBayes_Scores` AS 
-(SELECT nb_sums.`KEY` AS `KEY`, nb_sums.`Score_0` AS `Score_0`, nb_sums.`Score_1` AS `Score_1` 
+FROM centered_data) AS `Values`)
+ SELECT `NaiveBayes_Scores`.`KEY`, `NaiveBayes_Scores`.`Score_0`, `NaiveBayes_Scores`.`Score_1` 
+FROM (SELECT nb_sums.`KEY` AS `KEY`, nb_sums.`Score_0` AS `Score_0`, nb_sums.`Score_1` AS `Score_1` 
 FROM (SELECT `NaiveBayes_data`.`KEY` AS `KEY`, -0.6931471805599453 + sum(`NaiveBayes_data`.log_proba_0) AS `Score_0`, -0.6931471805599453 + sum(`NaiveBayes_data`.log_proba_1) AS `Score_1` 
-FROM `NaiveBayes_data` GROUP BY `NaiveBayes_data`.`KEY`) AS nb_sums), 
-orig_cte AS 
+FROM `NaiveBayes_data` GROUP BY `NaiveBayes_data`.`KEY`) AS nb_sums) AS `NaiveBayes_Scores`) AS `U`
+
+-- Code For temporary table TMP_20180516110314_CODEGEN_7QN3QD_NaiveBayes_Scores part 3. Create Index 
+
+CREATE INDEX `ix_TMP_20180516110314_CODEGEN_7QN3QD_NaiveBayes_Scores_KEY` ON `TMP_20180516110314_CODEGEN_7QN3QD_NaiveBayes_Scores` (`KEY`)
+
+-- Model deployment code
+
+WITH orig_cte AS 
 (SELECT `NaiveBayes_Scores`.`KEY` AS `KEY`, `NaiveBayes_Scores`.`Score_0` AS `Score_0`, `NaiveBayes_Scores`.`Score_1` AS `Score_1`, NULL AS `Proba_0`, NULL AS `Proba_1`, NULL AS `LogProba_0`, NULL AS `LogProba_1`, CAST(NULL AS SIGNED INTEGER) AS `Decision`, NULL AS `DecisionProba` 
-FROM `NaiveBayes_Scores`), 
+FROM `TMP_20180516110314_CODEGEN_7QN3QD_NaiveBayes_Scores` AS `NaiveBayes_Scores`), 
 score_class_union AS 
 (SELECT scu.`KEY_u` AS `KEY_u`, scu.class AS class, scu.`LogProba` AS `LogProba`, scu.`Proba` AS `Proba`, scu.`Score` AS `Score` 
 FROM (SELECT orig_cte.`KEY` AS `KEY_u`, 0 AS class, orig_cte.`LogProba_0` AS `LogProba`, orig_cte.`Proba_0` AS `Proba`, orig_cte.`Score_0` AS `Score` 
@@ -45,7 +65,7 @@ score_max AS
 FROM orig_cte LEFT OUTER JOIN (SELECT score_class_union.`KEY_u` AS `KEY_m`, max(score_class_union.`Score`) AS `max_Score` 
 FROM score_class_union GROUP BY score_class_union.`KEY_u`) AS max_select ON orig_cte.`KEY` = max_select.`KEY_m`), 
 score_soft_max_deltas AS 
-(SELECT score_max.`KEY` AS `KEY`, score_max.`Score_0` AS `Score_0`, score_max.`Score_1` AS `Score_1`, score_max.`Proba_0` AS `Proba_0`, score_max.`Proba_1` AS `Proba_1`, score_max.`LogProba_0` AS `LogProba_0`, score_max.`LogProba_1` AS `LogProba_1`, score_max.`Decision` AS `Decision`, score_max.`DecisionProba` AS `DecisionProba`, score_max.`KEY_m` AS `KEY_m`, score_max.`max_Score` AS `max_Score`, exp(score_max.`Score_0` - score_max.`max_Score`) AS `exp_delta_Score_0`, exp(score_max.`Score_1` - score_max.`max_Score`) AS `exp_delta_Score_1` 
+(SELECT score_max.`KEY` AS `KEY`, score_max.`Score_0` AS `Score_0`, score_max.`Score_1` AS `Score_1`, score_max.`Proba_0` AS `Proba_0`, score_max.`Proba_1` AS `Proba_1`, score_max.`LogProba_0` AS `LogProba_0`, score_max.`LogProba_1` AS `LogProba_1`, score_max.`Decision` AS `Decision`, score_max.`DecisionProba` AS `DecisionProba`, score_max.`KEY_m` AS `KEY_m`, score_max.`max_Score` AS `max_Score`, exp(greatest(-100.0, score_max.`Score_0` - score_max.`max_Score`)) AS `exp_delta_Score_0`, exp(greatest(-100.0, score_max.`Score_1` - score_max.`max_Score`)) AS `exp_delta_Score_1` 
 FROM score_max), 
 score_class_union_soft AS 
 (SELECT soft_scu.`KEY` AS `KEY`, soft_scu.class AS class, soft_scu.`exp_delta_Score` AS `exp_delta_Score` 
@@ -63,7 +83,7 @@ arg_max_cte AS
 (SELECT score_soft_max.`KEY` AS `KEY`, score_soft_max.`Score_0` AS `Score_0`, score_soft_max.`Score_1` AS `Score_1`, score_soft_max.`Proba_0` AS `Proba_0`, score_soft_max.`Proba_1` AS `Proba_1`, score_soft_max.`LogProba_0` AS `LogProba_0`, score_soft_max.`LogProba_1` AS `LogProba_1`, score_soft_max.`Decision` AS `Decision`, score_soft_max.`DecisionProba` AS `DecisionProba`, score_soft_max.`KEY_m` AS `KEY_m`, score_soft_max.`max_Score` AS `max_Score`, score_soft_max.`exp_delta_Score_0` AS `exp_delta_Score_0`, score_soft_max.`exp_delta_Score_1` AS `exp_delta_Score_1`, score_soft_max.`KEY_sum` AS `KEY_sum`, score_soft_max.`sum_ExpDeltaScore` AS `sum_ExpDeltaScore`, `arg_max_t_Score`.`KEY_Score` AS `KEY_Score`, `arg_max_t_Score`.`arg_max_Score` AS `arg_max_Score`, soft_max_comp.`KEY_softmax` AS `KEY_softmax`, soft_max_comp.`SoftProba_0` AS `SoftProba_0`, soft_max_comp.`SoftProba_1` AS `SoftProba_1` 
 FROM score_soft_max LEFT OUTER JOIN (SELECT union_with_max.`KEY` AS `KEY_Score`, min(union_with_max.class) AS `arg_max_Score` 
 FROM union_with_max 
-WHERE union_with_max.`max_Score` <= union_with_max.`Score` GROUP BY union_with_max.`KEY`) AS `arg_max_t_Score` ON score_soft_max.`KEY` = `arg_max_t_Score`.`KEY_Score` LEFT OUTER JOIN (SELECT score_soft_max.`KEY` AS `KEY_softmax`, score_soft_max.`exp_delta_Score_0` / score_soft_max.`sum_ExpDeltaScore` AS `SoftProba_0`, score_soft_max.`exp_delta_Score_1` / score_soft_max.`sum_ExpDeltaScore` AS `SoftProba_1` 
+WHERE union_with_max.`Score` >= union_with_max.`max_Score` GROUP BY union_with_max.`KEY`) AS `arg_max_t_Score` ON score_soft_max.`KEY` = `arg_max_t_Score`.`KEY_Score` LEFT OUTER JOIN (SELECT score_soft_max.`KEY` AS `KEY_softmax`, score_soft_max.`exp_delta_Score_0` / score_soft_max.`sum_ExpDeltaScore` AS `SoftProba_0`, score_soft_max.`exp_delta_Score_1` / score_soft_max.`sum_ExpDeltaScore` AS `SoftProba_1` 
 FROM score_soft_max) AS soft_max_comp ON soft_max_comp.`KEY_softmax` = `arg_max_t_Score`.`KEY_Score`)
  SELECT arg_max_cte.`KEY` AS `KEY`, NULL AS `Score_0`, NULL AS `Score_1`, arg_max_cte.`SoftProba_0` AS `Proba_0`, arg_max_cte.`SoftProba_1` AS `Proba_1`, CASE WHEN (arg_max_cte.`SoftProba_0` IS NULL OR arg_max_cte.`SoftProba_0` > 0.0) THEN ln(arg_max_cte.`SoftProba_0`) ELSE -1.79769313486231e+308 END AS `LogProba_0`, CASE WHEN (arg_max_cte.`SoftProba_1` IS NULL OR arg_max_cte.`SoftProba_1` > 0.0) THEN ln(arg_max_cte.`SoftProba_1`) ELSE -1.79769313486231e+308 END AS `LogProba_1`, arg_max_cte.`arg_max_Score` AS `Decision`, greatest(arg_max_cte.`SoftProba_0`, arg_max_cte.`SoftProba_1`) AS `DecisionProba` 
 FROM arg_max_cte

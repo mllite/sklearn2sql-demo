@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180508181412_CODEGEN_A1UH9T_ADS_imp_1_OUT part 1. Create 
+-- Code For temporary table TMP_20180516112542_CODEGEN_Y3TSLR_ADS_imp_1_OUT part 1. Create 
 
 
-CREATE TEMPORARY TABLE "TMP_20180508181412_CODEGEN_A1UH9T_ADS_imp_1_OUT" (
+CREATE TEMPORARY TABLE "TMP_20180516112542_CODEGEN_Y3TSLR_ADS_imp_1_OUT" (
 	"KEY" BIGINT NOT NULL, 
 	impter_2 FLOAT, 
 	impter_3 FLOAT, 
@@ -30,20 +30,20 @@ CREATE TEMPORARY TABLE "TMP_20180508181412_CODEGEN_A1UH9T_ADS_imp_1_OUT" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508181412_CODEGEN_A1UH9T_ADS_imp_1_OUT part 2. Populate
+-- Code For temporary table TMP_20180516112542_CODEGEN_Y3TSLR_ADS_imp_1_OUT part 2. Populate
 
-INSERT INTO "TMP_20180508181412_CODEGEN_A1UH9T_ADS_imp_1_OUT" ("KEY", impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".impter_2, "ADS_imp_1_OUT".impter_3, "ADS_imp_1_OUT".impter_4, "ADS_imp_1_OUT".impter_5, "ADS_imp_1_OUT".impter_6, "ADS_imp_1_OUT".impter_7, "ADS_imp_1_OUT".impter_8, "ADS_imp_1_OUT".impter_9, "ADS_imp_1_OUT".impter_10, "ADS_imp_1_OUT".impter_11 
+INSERT INTO "TMP_20180516112542_CODEGEN_Y3TSLR_ADS_imp_1_OUT" ("KEY", impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".impter_2, "ADS_imp_1_OUT".impter_3, "ADS_imp_1_OUT".impter_4, "ADS_imp_1_OUT".impter_5, "ADS_imp_1_OUT".impter_6, "ADS_imp_1_OUT".impter_7, "ADS_imp_1_OUT".impter_8, "ADS_imp_1_OUT".impter_9, "ADS_imp_1_OUT".impter_10, "ADS_imp_1_OUT".impter_11 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN -0.003903374463034205 ELSE "ADS"."Feature_0" END AS impter_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 0.6152232215702322 ELSE "ADS"."Feature_1" END AS impter_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 0.042796236914291665 ELSE "ADS"."Feature_2" END AS impter_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 0.7709819558904074 ELSE "ADS"."Feature_3" END AS impter_5, CASE WHEN ("ADS"."Feature_4" IS NULL) THEN -0.43300733624893334 ELSE "ADS"."Feature_4" END AS impter_6, CASE WHEN ("ADS"."Feature_5" IS NULL) THEN -0.0424956965794036 ELSE "ADS"."Feature_5" END AS impter_7, CASE WHEN ("ADS"."Feature_6" IS NULL) THEN -0.29809080119845455 ELSE "ADS"."Feature_6" END AS impter_8, CASE WHEN ("ADS"."Feature_7" IS NULL) THEN 0.14672241507251663 ELSE "ADS"."Feature_7" END AS impter_9, CASE WHEN ("ADS"."Feature_8" IS NULL) THEN 0.01746942384662034 ELSE "ADS"."Feature_8" END AS impter_10, CASE WHEN ("ADS"."Feature_9" IS NULL) THEN 0.11507331415602866 ELSE "ADS"."Feature_9" END AS impter_11 
 FROM "FourClass_10" AS "ADS") AS "ADS_imp_1_OUT"
 
--- Code For temporary table TMP_20180508181412_CODEGEN_A1UH9T_ADS_imp_1_OUT part 3. Create Index 
+-- Code For temporary table TMP_20180516112542_CODEGEN_Y3TSLR_ADS_imp_1_OUT part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508181412_CODEGEN_A1UH9T_ADS_imp_1_OUT_KEY" ON "TMP_20180508181412_CODEGEN_A1UH9T_ADS_imp_1_OUT" ("KEY")
+CREATE INDEX "ix_TMP_20180516112542_CODEGEN_Y3TSLR_ADS_imp_1_OUT_KEY" ON "TMP_20180516112542_CODEGEN_Y3TSLR_ADS_imp_1_OUT" ("KEY")
 
--- Code For temporary table TMP_20180508181412_CODEGEN_X6XNPC_ADS_sca_2_OUT part 1. Create 
+-- Code For temporary table TMP_20180516112542_CODEGEN_N5CEP0_ADS_sca_2_OUT part 1. Create 
 
 
-CREATE TEMPORARY TABLE "TMP_20180508181412_CODEGEN_X6XNPC_ADS_sca_2_OUT" (
+CREATE TEMPORARY TABLE "TMP_20180516112542_CODEGEN_N5CEP0_ADS_sca_2_OUT" (
 	"KEY" BIGINT NOT NULL, 
 	scaler_2 FLOAT, 
 	scaler_3 FLOAT, 
@@ -60,21 +60,21 @@ CREATE TEMPORARY TABLE "TMP_20180508181412_CODEGEN_X6XNPC_ADS_sca_2_OUT" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508181412_CODEGEN_X6XNPC_ADS_sca_2_OUT part 2. Populate
+-- Code For temporary table TMP_20180516112542_CODEGEN_N5CEP0_ADS_sca_2_OUT part 2. Populate
 
-INSERT INTO "TMP_20180508181412_CODEGEN_X6XNPC_ADS_sca_2_OUT" ("KEY", scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_2, "ADS_sca_2_OUT".scaler_3, "ADS_sca_2_OUT".scaler_4, "ADS_sca_2_OUT".scaler_5, "ADS_sca_2_OUT".scaler_6, "ADS_sca_2_OUT".scaler_7, "ADS_sca_2_OUT".scaler_8, "ADS_sca_2_OUT".scaler_9, "ADS_sca_2_OUT".scaler_10, "ADS_sca_2_OUT".scaler_11 
+INSERT INTO "TMP_20180516112542_CODEGEN_N5CEP0_ADS_sca_2_OUT" ("KEY", scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_2, "ADS_sca_2_OUT".scaler_3, "ADS_sca_2_OUT".scaler_4, "ADS_sca_2_OUT".scaler_5, "ADS_sca_2_OUT".scaler_6, "ADS_sca_2_OUT".scaler_7, "ADS_sca_2_OUT".scaler_8, "ADS_sca_2_OUT".scaler_9, "ADS_sca_2_OUT".scaler_10, "ADS_sca_2_OUT".scaler_11 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".impter_2 AS FLOAT) - -0.003903374463034205) / 0.9795060640183997 AS scaler_2, (CAST("ADS_imp_1_OUT".impter_3 AS FLOAT) - 0.6152232215702322) / 1.3900807236205235 AS scaler_3, (CAST("ADS_imp_1_OUT".impter_4 AS FLOAT) - 0.042796236914291665) / 1.4962685135870766 AS scaler_4, (CAST("ADS_imp_1_OUT".impter_5 AS FLOAT) - 0.7709819558904074) / 2.3333561060111743 AS scaler_5, (CAST("ADS_imp_1_OUT".impter_6 AS FLOAT) - -0.43300733624893334) / 1.4029757772648748 AS scaler_6, (CAST("ADS_imp_1_OUT".impter_7 AS FLOAT) - -0.0424956965794036) / 0.9558091076873229 AS scaler_7, (CAST("ADS_imp_1_OUT".impter_8 AS FLOAT) - -0.29809080119845455) / 1.017013180721433 AS scaler_8, (CAST("ADS_imp_1_OUT".impter_9 AS FLOAT) - 0.14672241507251663) / 1.600798539929603 AS scaler_9, (CAST("ADS_imp_1_OUT".impter_10 AS FLOAT) - 0.01746942384662034) / 1.1487296361671415 AS scaler_10, (CAST("ADS_imp_1_OUT".impter_11 AS FLOAT) - 0.11507331415602866) / 0.9690911857336224 AS scaler_11 
-FROM "TMP_20180508181412_CODEGEN_A1UH9T_ADS_imp_1_OUT" AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT"
+FROM "TMP_20180516112542_CODEGEN_Y3TSLR_ADS_imp_1_OUT" AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT"
 
--- Code For temporary table TMP_20180508181412_CODEGEN_X6XNPC_ADS_sca_2_OUT part 3. Create Index 
+-- Code For temporary table TMP_20180516112542_CODEGEN_N5CEP0_ADS_sca_2_OUT part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508181412_CODEGEN_X6XNPC_ADS_sca_2_OUT_KEY" ON "TMP_20180508181412_CODEGEN_X6XNPC_ADS_sca_2_OUT" ("KEY")
+CREATE INDEX "ix_TMP_20180516112542_CODEGEN_N5CEP0_ADS_sca_2_OUT_KEY" ON "TMP_20180516112542_CODEGEN_N5CEP0_ADS_sca_2_OUT" ("KEY")
 
 -- Model deployment code
 
 WITH linear_input AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CAST("ADS_sca_2_OUT".scaler_2 AS FLOAT) AS scaler_2, CAST("ADS_sca_2_OUT".scaler_3 AS FLOAT) AS scaler_3, CAST("ADS_sca_2_OUT".scaler_4 AS FLOAT) AS scaler_4, CAST("ADS_sca_2_OUT".scaler_5 AS FLOAT) AS scaler_5, CAST("ADS_sca_2_OUT".scaler_6 AS FLOAT) AS scaler_6, CAST("ADS_sca_2_OUT".scaler_7 AS FLOAT) AS scaler_7, CAST("ADS_sca_2_OUT".scaler_8 AS FLOAT) AS scaler_8, CAST("ADS_sca_2_OUT".scaler_9 AS FLOAT) AS scaler_9, CAST("ADS_sca_2_OUT".scaler_10 AS FLOAT) AS scaler_10, CAST("ADS_sca_2_OUT".scaler_11 AS FLOAT) AS scaler_11 
-FROM "TMP_20180508181412_CODEGEN_X6XNPC_ADS_sca_2_OUT" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180516112542_CODEGEN_N5CEP0_ADS_sca_2_OUT" AS "ADS_sca_2_OUT"), 
 linear_model_cte AS 
 (SELECT linear_input."KEY" AS "KEY", 0.859964417740931 * linear_input.scaler_2 + -7.550391959605404 * linear_input.scaler_3 + -8.937428754942879 * linear_input.scaler_4 + -10.890562081899631 * linear_input.scaler_5 + 55.23378110358883 * linear_input.scaler_6 + -19.363648785377926 * linear_input.scaler_7 + 12.91242542328279 * linear_input.scaler_8 + 19.32286828269792 * linear_input.scaler_9 + -4.456440679354909 * linear_input.scaler_10 + 12.394615827405165 * linear_input.scaler_11 + -58.090597104010975 AS "Score_0", 1.7692966376398824 * linear_input.scaler_2 + 2.4816785808984934 * linear_input.scaler_3 + 8.030898648965254 * linear_input.scaler_4 + 5.080534675958886 * linear_input.scaler_5 + 0.9926768205793448 * linear_input.scaler_6 + 10.74811366192622 * linear_input.scaler_7 + -4.510252649882861 * linear_input.scaler_8 + -2.13090081089852 * linear_input.scaler_9 + -8.990980370281147 * linear_input.scaler_10 + 26.322065417040605 * linear_input.scaler_11 + -47.41841686257241 AS "Score_1", -22.704036441268062 * linear_input.scaler_2 + -24.012804677588516 * linear_input.scaler_3 + -30.837869514121657 * linear_input.scaler_4 + -10.648518229552476 * linear_input.scaler_5 + -40.3962594930462 * linear_input.scaler_6 + 11.156475073125907 * linear_input.scaler_7 + 0.24015602544657585 * linear_input.scaler_8 + 34.35516225664873 * linear_input.scaler_9 + 13.507350112151777 * linear_input.scaler_10 + -5.409035409716997 * linear_input.scaler_11 + -50.61716912115697 AS "Score_2", -14.02427426059403 * linear_input.scaler_2 + 45.31004583332808 * linear_input.scaler_3 + 13.618899416135603 * linear_input.scaler_4 + 21.673885896148963 * linear_input.scaler_5 + -30.499020128436296 * linear_input.scaler_6 + 19.653566646399504 * linear_input.scaler_7 + -13.443000533357383 * linear_input.scaler_8 + -37.85986003928377 * linear_input.scaler_9 + -24.815482498920325 * linear_input.scaler_10 + -1.8050413915878403 * linear_input.scaler_11 + -56.57213865180252 AS "Score_3" 
 FROM linear_input), 

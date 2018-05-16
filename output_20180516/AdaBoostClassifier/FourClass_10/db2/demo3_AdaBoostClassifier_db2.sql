@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180508181050_codegen_0y9a30_adb_b0 part 1. Create 
+-- Code For temporary table tmp_20180516112056_codegen_xvlvdy_adb_b0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508181050_codegen_0y9a30_adb_b0 (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516112056_codegen_xvlvdy_adb_b0 (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE, 
 	"Proba_0" DOUBLE, 
@@ -27,9 +27,9 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508181050_codegen_0y9a30_adb_b0 (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508181050_codegen_0y9a30_adb_b0 part 2. Populate
+-- Code For temporary table tmp_20180516112056_codegen_xvlvdy_adb_b0 part 2. Populate
 
-INSERT INTO tmp_20180508181050_codegen_0y9a30_adb_b0 WITH "DT_node_lookup" AS 
+INSERT INTO tmp_20180516112056_codegen_xvlvdy_adb_b0 WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_3" <= 0.6375722885131836) THEN 1 ELSE 2 END AS node_id_2 
 FROM "FOURCLASS_10" AS "ADS"), 
 "DT_node_data" AS 
@@ -163,10 +163,10 @@ FROM "ADB_Model_7" UNION ALL SELECT "ADB_Model_8"."KEY" AS "KEY", "ADB_Model_8".
 FROM "ADB_Model_8" UNION ALL SELECT "ADB_Model_9"."KEY" AS "KEY", "ADB_Model_9"."Score_0" AS "Score_0", "ADB_Model_9"."Proba_0" AS "Proba_0", "ADB_Model_9"."Score_1" AS "Score_1", "ADB_Model_9"."Proba_1" AS "Proba_1", "ADB_Model_9"."Score_2" AS "Score_2", "ADB_Model_9"."Proba_2" AS "Proba_2", "ADB_Model_9"."Score_3" AS "Score_3", "ADB_Model_9"."Proba_3" AS "Proba_3" 
 FROM "ADB_Model_9") AS "ADB_esu_0") AS "ADB_B0"
 
--- Code For temporary table tmp_20180508181050_codegen_eaasti_adb_b1 part 1. Create 
+-- Code For temporary table tmp_20180516112056_codegen_qbr007_adb_b1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508181050_codegen_eaasti_adb_b1 (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516112056_codegen_qbr007_adb_b1 (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE, 
 	"Proba_0" DOUBLE, 
@@ -180,9 +180,9 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508181050_codegen_eaasti_adb_b1 (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508181050_codegen_eaasti_adb_b1 part 2. Populate
+-- Code For temporary table tmp_20180516112056_codegen_qbr007_adb_b1 part 2. Populate
 
-INSERT INTO tmp_20180508181050_codegen_eaasti_adb_b1 WITH "DT_node_lookup_10" AS 
+INSERT INTO tmp_20180516112056_codegen_qbr007_adb_b1 WITH "DT_node_lookup_10" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_3" <= 0.16097640991210938) THEN 1 ELSE 2 END AS node_id_2 
 FROM "FOURCLASS_10" AS "ADS"), 
 "DT_node_data_10" AS 
@@ -264,10 +264,10 @@ FROM "ADB_Model_13" UNION ALL SELECT "ADB_Model_14"."KEY" AS "KEY", "ADB_Model_1
 FROM "ADB_Model_14" UNION ALL SELECT "ADB_Model_15"."KEY" AS "KEY", "ADB_Model_15"."Score_0" AS "Score_0", "ADB_Model_15"."Proba_0" AS "Proba_0", "ADB_Model_15"."Score_1" AS "Score_1", "ADB_Model_15"."Proba_1" AS "Proba_1", "ADB_Model_15"."Score_2" AS "Score_2", "ADB_Model_15"."Proba_2" AS "Proba_2", "ADB_Model_15"."Score_3" AS "Score_3", "ADB_Model_15"."Proba_3" AS "Proba_3" 
 FROM "ADB_Model_15") AS "ADB_esu_1") AS "ADB_B1"
 
--- Code For temporary table tmp_20180508181050_codegen_z3apt7_adb_union part 1. Create 
+-- Code For temporary table tmp_20180516112056_codegen_cvk0dw_adb_sum part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508181050_codegen_z3apt7_adb_union (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516112056_codegen_cvk0dw_adb_sum (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE, 
 	"Proba_0" DOUBLE, 
@@ -281,43 +281,23 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508181050_codegen_z3apt7_adb_union (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508181050_codegen_z3apt7_adb_union part 2. Populate
+-- Code For temporary table tmp_20180516112056_codegen_cvk0dw_adb_sum part 2. Populate
 
-INSERT INTO tmp_20180508181050_codegen_z3apt7_adb_union SELECT "ADB_Union"."KEY", "ADB_Union"."Score_0", "ADB_Union"."Proba_0", "ADB_Union"."Score_1", "ADB_Union"."Proba_1", "ADB_Union"."Score_2", "ADB_Union"."Proba_2", "ADB_Union"."Score_3", "ADB_Union"."Proba_3" 
-FROM (SELECT "ADB_EnsembleUnion"."KEY" AS "KEY", "ADB_EnsembleUnion"."Score_0" AS "Score_0", "ADB_EnsembleUnion"."Proba_0" AS "Proba_0", "ADB_EnsembleUnion"."Score_1" AS "Score_1", "ADB_EnsembleUnion"."Proba_1" AS "Proba_1", "ADB_EnsembleUnion"."Score_2" AS "Score_2", "ADB_EnsembleUnion"."Proba_2" AS "Proba_2", "ADB_EnsembleUnion"."Score_3" AS "Score_3", "ADB_EnsembleUnion"."Proba_3" AS "Proba_3" 
+INSERT INTO tmp_20180516112056_codegen_cvk0dw_adb_sum WITH "ADB_Union" AS 
+(SELECT "ADB_EnsembleUnion"."KEY" AS "KEY", "ADB_EnsembleUnion"."Score_0" AS "Score_0", "ADB_EnsembleUnion"."Proba_0" AS "Proba_0", "ADB_EnsembleUnion"."Score_1" AS "Score_1", "ADB_EnsembleUnion"."Proba_1" AS "Proba_1", "ADB_EnsembleUnion"."Score_2" AS "Score_2", "ADB_EnsembleUnion"."Proba_2" AS "Proba_2", "ADB_EnsembleUnion"."Score_3" AS "Score_3", "ADB_EnsembleUnion"."Proba_3" AS "Proba_3" 
 FROM (SELECT "ADB_B0"."KEY" AS "KEY", "ADB_B0"."Score_0" AS "Score_0", "ADB_B0"."Proba_0" AS "Proba_0", "ADB_B0"."Score_1" AS "Score_1", "ADB_B0"."Proba_1" AS "Proba_1", "ADB_B0"."Score_2" AS "Score_2", "ADB_B0"."Proba_2" AS "Proba_2", "ADB_B0"."Score_3" AS "Score_3", "ADB_B0"."Proba_3" AS "Proba_3" 
-FROM tmp_20180508181050_codegen_0y9a30_adb_b0 AS "ADB_B0" UNION ALL SELECT "ADB_B1"."KEY" AS "KEY", "ADB_B1"."Score_0" AS "Score_0", "ADB_B1"."Proba_0" AS "Proba_0", "ADB_B1"."Score_1" AS "Score_1", "ADB_B1"."Proba_1" AS "Proba_1", "ADB_B1"."Score_2" AS "Score_2", "ADB_B1"."Proba_2" AS "Proba_2", "ADB_B1"."Score_3" AS "Score_3", "ADB_B1"."Proba_3" AS "Proba_3" 
-FROM tmp_20180508181050_codegen_eaasti_adb_b1 AS "ADB_B1") AS "ADB_EnsembleUnion") AS "ADB_Union"
-
--- Code For temporary table tmp_20180508181050_codegen_nm41v2_adb_sum part 1. Create 
-
-
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508181050_codegen_nm41v2_adb_sum (
-	"KEY" BIGINT, 
-	"Score_0" DOUBLE, 
-	"Proba_0" DOUBLE, 
-	"Score_1" DOUBLE, 
-	"Proba_1" DOUBLE, 
-	"Score_2" DOUBLE, 
-	"Proba_2" DOUBLE, 
-	"Score_3" DOUBLE, 
-	"Proba_3" DOUBLE
-)
-
- ON COMMIT PRESERVE ROWS
-
--- Code For temporary table tmp_20180508181050_codegen_nm41v2_adb_sum part 2. Populate
-
-INSERT INTO tmp_20180508181050_codegen_nm41v2_adb_sum SELECT "ADB_sum"."KEY", "ADB_sum"."Score_0", "ADB_sum"."Proba_0", "ADB_sum"."Score_1", "ADB_sum"."Proba_1", "ADB_sum"."Score_2", "ADB_sum"."Proba_2", "ADB_sum"."Score_3", "ADB_sum"."Proba_3" 
+FROM tmp_20180516112056_codegen_xvlvdy_adb_b0 AS "ADB_B0" UNION ALL SELECT "ADB_B1"."KEY" AS "KEY", "ADB_B1"."Score_0" AS "Score_0", "ADB_B1"."Proba_0" AS "Proba_0", "ADB_B1"."Score_1" AS "Score_1", "ADB_B1"."Proba_1" AS "Proba_1", "ADB_B1"."Score_2" AS "Score_2", "ADB_B1"."Proba_2" AS "Proba_2", "ADB_B1"."Score_3" AS "Score_3", "ADB_B1"."Proba_3" AS "Proba_3" 
+FROM tmp_20180516112056_codegen_qbr007_adb_b1 AS "ADB_B1") AS "ADB_EnsembleUnion")
+ SELECT "ADB_sum"."KEY", "ADB_sum"."Score_0", "ADB_sum"."Proba_0", "ADB_sum"."Score_1", "ADB_sum"."Proba_1", "ADB_sum"."Score_2", "ADB_sum"."Proba_2", "ADB_sum"."Score_3", "ADB_sum"."Proba_3" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Score_0" AS DOUBLE) AS "Score_0", CAST("T"."Proba_0" AS DOUBLE) AS "Proba_0", CAST("T"."Score_1" AS DOUBLE) AS "Score_1", CAST("T"."Proba_1" AS DOUBLE) AS "Proba_1", CAST("T"."Score_2" AS DOUBLE) AS "Score_2", CAST("T"."Proba_2" AS DOUBLE) AS "Proba_2", CAST("T"."Score_3" AS DOUBLE) AS "Score_3", CAST("T"."Proba_3" AS DOUBLE) AS "Proba_3" 
 FROM (SELECT "ADB_Union"."KEY" AS "KEY", sum("ADB_Union"."Score_0") AS "Score_0", sum("ADB_Union"."Proba_0") AS "Proba_0", sum("ADB_Union"."Score_1") AS "Score_1", sum("ADB_Union"."Proba_1") AS "Proba_1", sum("ADB_Union"."Score_2") AS "Score_2", sum("ADB_Union"."Proba_2") AS "Proba_2", sum("ADB_Union"."Score_3") AS "Score_3", sum("ADB_Union"."Proba_3") AS "Proba_3" 
-FROM tmp_20180508181050_codegen_z3apt7_adb_union AS "ADB_Union" GROUP BY "ADB_Union"."KEY") AS "T") AS "ADB_sum"
+FROM "ADB_Union" GROUP BY "ADB_Union"."KEY") AS "T") AS "ADB_sum"
 
 -- Model deployment code
 
 WITH "AdaBoost_AVG_Scores_BN" AS 
 (SELECT "ADB_sum"."KEY" AS "KEY", "ADB_sum"."Score_0" AS "Score_0", "ADB_sum"."Proba_0" AS "Proba_0", "ADB_sum"."Score_1" AS "Score_1", "ADB_sum"."Proba_1" AS "Proba_1", "ADB_sum"."Score_2" AS "Score_2", "ADB_sum"."Proba_2" AS "Proba_2", "ADB_sum"."Score_3" AS "Score_3", "ADB_sum"."Proba_3" AS "Proba_3" 
-FROM tmp_20180508181050_codegen_nm41v2_adb_sum AS "ADB_sum"), 
+FROM tmp_20180516112056_codegen_cvk0dw_adb_sum AS "ADB_sum"), 
 "AdaBoost_AVG_Scores" AS 
 (SELECT "AdaBoost_AVG_Scores_BN"."KEY" AS "KEY", "AdaBoost_AVG_Scores_BN"."Score_0" AS "Score_0", exp(("AdaBoost_AVG_Scores_BN"."Proba_0" / 16.0) / 3) / (exp(("AdaBoost_AVG_Scores_BN"."Proba_0" / 16.0) / 3) + exp(("AdaBoost_AVG_Scores_BN"."Proba_1" / 16.0) / 3) + exp(("AdaBoost_AVG_Scores_BN"."Proba_2" / 16.0) / 3) + exp(("AdaBoost_AVG_Scores_BN"."Proba_3" / 16.0) / 3)) AS "Proba_0", CAST(NULL AS DOUBLE) AS "LogProba_0", "AdaBoost_AVG_Scores_BN"."Score_1" AS "Score_1", exp(("AdaBoost_AVG_Scores_BN"."Proba_1" / 16.0) / 3) / (exp(("AdaBoost_AVG_Scores_BN"."Proba_0" / 16.0) / 3) + exp(("AdaBoost_AVG_Scores_BN"."Proba_1" / 16.0) / 3) + exp(("AdaBoost_AVG_Scores_BN"."Proba_2" / 16.0) / 3) + exp(("AdaBoost_AVG_Scores_BN"."Proba_3" / 16.0) / 3)) AS "Proba_1", CAST(NULL AS DOUBLE) AS "LogProba_1", "AdaBoost_AVG_Scores_BN"."Score_2" AS "Score_2", exp(("AdaBoost_AVG_Scores_BN"."Proba_2" / 16.0) / 3) / (exp(("AdaBoost_AVG_Scores_BN"."Proba_0" / 16.0) / 3) + exp(("AdaBoost_AVG_Scores_BN"."Proba_1" / 16.0) / 3) + exp(("AdaBoost_AVG_Scores_BN"."Proba_2" / 16.0) / 3) + exp(("AdaBoost_AVG_Scores_BN"."Proba_3" / 16.0) / 3)) AS "Proba_2", CAST(NULL AS DOUBLE) AS "LogProba_2", "AdaBoost_AVG_Scores_BN"."Score_3" AS "Score_3", exp(("AdaBoost_AVG_Scores_BN"."Proba_3" / 16.0) / 3) / (exp(("AdaBoost_AVG_Scores_BN"."Proba_0" / 16.0) / 3) + exp(("AdaBoost_AVG_Scores_BN"."Proba_1" / 16.0) / 3) + exp(("AdaBoost_AVG_Scores_BN"."Proba_2" / 16.0) / 3) + exp(("AdaBoost_AVG_Scores_BN"."Proba_3" / 16.0) / 3)) AS "Proba_3", CAST(NULL AS DOUBLE) AS "LogProba_3" 
 FROM "AdaBoost_AVG_Scores_BN"), 

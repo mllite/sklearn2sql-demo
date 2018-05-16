@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180508185436_codegen_c3c8rx_ads_imp_1_out part 1. Create 
+-- Code For temporary table tmp_20180516122209_codegen_i9j589_ads_imp_1_out part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508185436_codegen_c3c8rx_ads_imp_1_out (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516122209_codegen_i9j589_ads_imp_1_out (
 	"KEY" BIGINT, 
 	imputer_output_2 DOUBLE, 
 	imputer_output_3 DOUBLE, 
@@ -23,16 +23,16 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508185436_codegen_c3c8rx_ads_imp_1_out (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508185436_codegen_c3c8rx_ads_imp_1_out part 2. Populate
+-- Code For temporary table tmp_20180516122209_codegen_i9j589_ads_imp_1_out part 2. Populate
 
-INSERT INTO tmp_20180508185436_codegen_c3c8rx_ads_imp_1_out SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".imputer_output_2, "ADS_imp_1_OUT".imputer_output_3, "ADS_imp_1_OUT".imputer_output_4, "ADS_imp_1_OUT".imputer_output_5 
+INSERT INTO tmp_20180516122209_codegen_i9j589_ads_imp_1_out SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".imputer_output_2, "ADS_imp_1_OUT".imputer_output_3, "ADS_imp_1_OUT".imputer_output_4, "ADS_imp_1_OUT".imputer_output_5 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN 5.8474999999999975 ELSE "ADS"."Feature_0" END AS imputer_output_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 3.0366666666666657 ELSE "ADS"."Feature_1" END AS imputer_output_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 3.8450000000000006 ELSE "ADS"."Feature_2" END AS imputer_output_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 1.245 ELSE "ADS"."Feature_3" END AS imputer_output_5 
 FROM "IRIS" AS "ADS") AS "ADS_imp_1_OUT"
 
--- Code For temporary table tmp_20180508185436_codegen_jcna5c_ads_sca_2_out part 1. Create 
+-- Code For temporary table tmp_20180516122209_codegen_elzy7q_ads_sca_2_out part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508185436_codegen_jcna5c_ads_sca_2_out (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516122209_codegen_elzy7q_ads_sca_2_out (
 	"KEY" BIGINT, 
 	scaler_output_2 DOUBLE, 
 	scaler_output_3 DOUBLE, 
@@ -42,16 +42,16 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508185436_codegen_jcna5c_ads_sca_2_out (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508185436_codegen_jcna5c_ads_sca_2_out part 2. Populate
+-- Code For temporary table tmp_20180516122209_codegen_elzy7q_ads_sca_2_out part 2. Populate
 
-INSERT INTO tmp_20180508185436_codegen_jcna5c_ads_sca_2_out SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_output_2, "ADS_sca_2_OUT".scaler_output_3, "ADS_sca_2_OUT".scaler_output_4, "ADS_sca_2_OUT".scaler_output_5 
+INSERT INTO tmp_20180516122209_codegen_elzy7q_ads_sca_2_out SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_output_2, "ADS_sca_2_OUT".scaler_output_3, "ADS_sca_2_OUT".scaler_output_4, "ADS_sca_2_OUT".scaler_output_5 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".imputer_output_2 AS DOUBLE) - 5.8474999999999975) / 0.827039146594646 AS scaler_output_2, (CAST("ADS_imp_1_OUT".imputer_output_3 AS DOUBLE) - 3.0366666666666657) / 0.43625935201691934 AS scaler_output_3, (CAST("ADS_imp_1_OUT".imputer_output_4 AS DOUBLE) - 3.8450000000000006) / 1.709817241695732 AS scaler_output_4, (CAST("ADS_imp_1_OUT".imputer_output_5 AS DOUBLE) - 1.245) / 0.7498722113355939 AS scaler_output_5 
-FROM tmp_20180508185436_codegen_c3c8rx_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT"
+FROM tmp_20180516122209_codegen_i9j589_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT"
 
--- Code For temporary table tmp_20180508185436_codegen_4qgabe_adb_b0 part 1. Create 
+-- Code For temporary table tmp_20180516122210_codegen_m0bk8e_adb_b0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508185436_codegen_4qgabe_adb_b0 (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516122210_codegen_m0bk8e_adb_b0 (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE, 
 	"Proba_0" DOUBLE, 
@@ -63,11 +63,11 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508185436_codegen_4qgabe_adb_b0 (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508185436_codegen_4qgabe_adb_b0 part 2. Populate
+-- Code For temporary table tmp_20180516122210_codegen_m0bk8e_adb_b0 part 2. Populate
 
-INSERT INTO tmp_20180508185436_codegen_4qgabe_adb_b0 WITH "DT_node_lookup" AS 
+INSERT INTO tmp_20180516122210_codegen_m0bk8e_adb_b0 WITH "DT_node_lookup" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.8158766627311707) THEN 1 ELSE 2 END AS node_id_2 
-FROM tmp_20180508185436_codegen_jcna5c_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516122209_codegen_elzy7q_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE) AS "P_0", CAST("Values"."P_1" AS DOUBLE) AS "P_1", CAST("Values"."P_2" AS DOUBLE) AS "P_2", CAST("Values"."D" AS DOUBLE) AS "D", CAST("Values"."DP" AS DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 2 AS nid, 0.0 AS "P_0", 0.4819277108433735 AS "P_1", 0.5180722891566266 AS "P_2", 2 AS "D", 0.5180722891566266 AS "DP" FROM SYSIBM.SYSDUMMY1) AS "Values"), 
@@ -79,7 +79,7 @@ FROM "DT_node_lookup" LEFT OUTER JOIN "DT_node_data" ON "DT_node_lookup".node_id
 FROM "DT_Output"), 
 "DT_node_lookup_1" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.5877821445465088) THEN 1 ELSE 2 END AS node_id_2 
-FROM tmp_20180508185436_codegen_jcna5c_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516122209_codegen_elzy7q_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_1" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE) AS "P_0", CAST("Values"."P_1" AS DOUBLE) AS "P_1", CAST("Values"."P_2" AS DOUBLE) AS "P_2", CAST("Values"."D" AS DOUBLE) AS "D", CAST("Values"."DP" AS DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 4.412618350835303e-06 AS "P_0", 0.9521202749995236 AS "P_1", 0.04787531238212566 AS "P_2", 1 AS "D", 0.9521202749995236 AS "DP" FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 2 AS nid, 0.0 AS "P_0", 0.07292255511588465 AS "P_1", 0.9270774448841154 AS "P_2", 2 AS "D", 0.9270774448841154 AS "DP" FROM SYSIBM.SYSDUMMY1) AS "Values"), 
@@ -91,7 +91,7 @@ FROM "DT_node_lookup_1" LEFT OUTER JOIN "DT_node_data_1" ON "DT_node_lookup_1".n
 FROM "DT_Output_1"), 
 "DT_node_lookup_2" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= -0.5934344530105591) THEN 1 ELSE 2 END AS node_id_2 
-FROM tmp_20180508185436_codegen_jcna5c_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516122209_codegen_elzy7q_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_2" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE) AS "P_0", CAST("Values"."P_1" AS DOUBLE) AS "P_1", CAST("Values"."P_2" AS DOUBLE) AS "P_2", CAST("Values"."D" AS DOUBLE) AS "D", CAST("Values"."DP" AS DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 2 AS nid, 0.0 AS "P_0", 0.5000000000000002 AS "P_1", 0.4999999999999998 AS "P_2", 1 AS "D", 0.5000000000000002 AS "DP" FROM SYSIBM.SYSDUMMY1) AS "Values"), 
@@ -103,7 +103,7 @@ FROM "DT_node_lookup_2" LEFT OUTER JOIN "DT_node_data_2" ON "DT_node_lookup_2".n
 FROM "DT_Output_2"), 
 "DT_node_lookup_3" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.5400919914245605) THEN 1 ELSE 2 END AS node_id_2 
-FROM tmp_20180508185436_codegen_jcna5c_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516122209_codegen_elzy7q_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_3" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE) AS "P_0", CAST("Values"."P_1" AS DOUBLE) AS "P_1", CAST("Values"."P_2" AS DOUBLE) AS "P_2", CAST("Values"."D" AS DOUBLE) AS "D", CAST("Values"."DP" AS DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 4.937970304777942e-06 AS "P_0", 0.9999503857736846 AS "P_1", 4.4676256010536464e-05 AS "P_2", 1 AS "D", 0.9999503857736846 AS "DP" FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 2 AS nid, 0.0 AS "P_0", 0.026446267524541277 AS "P_1", 0.9735537324754588 AS "P_2", 2 AS "D", 0.9735537324754588 AS "DP" FROM SYSIBM.SYSDUMMY1) AS "Values"), 
@@ -115,7 +115,7 @@ FROM "DT_node_lookup_3" LEFT OUTER JOIN "DT_node_data_3" ON "DT_node_lookup_3".n
 FROM "DT_Output_3"), 
 "DT_node_lookup_4" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.8158766627311707) THEN 1 ELSE 2 END AS node_id_2 
-FROM tmp_20180508185436_codegen_jcna5c_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516122209_codegen_elzy7q_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_4" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE) AS "P_0", CAST("Values"."P_1" AS DOUBLE) AS "P_1", CAST("Values"."P_2" AS DOUBLE) AS "P_2", CAST("Values"."D" AS DOUBLE) AS "D", CAST("Values"."DP" AS DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 2 AS nid, 0.0 AS "P_0", 0.5000000000000008 AS "P_1", 0.4999999999999991 AS "P_2", 1 AS "D", 0.5000000000000008 AS "DP" FROM SYSIBM.SYSDUMMY1) AS "Values"), 
@@ -127,7 +127,7 @@ FROM "DT_node_lookup_4" LEFT OUTER JOIN "DT_node_data_4" ON "DT_node_lookup_4".n
 FROM "DT_Output_4"), 
 "DT_node_lookup_5" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.6462678909301758) THEN 1 ELSE 2 END AS node_id_2 
-FROM tmp_20180508185436_codegen_jcna5c_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516122209_codegen_elzy7q_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_5" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE) AS "P_0", CAST("Values"."P_1" AS DOUBLE) AS "P_1", CAST("Values"."P_2" AS DOUBLE) AS "P_2", CAST("Values"."D" AS DOUBLE) AS "D", CAST("Values"."DP" AS DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 4.776435899510506e-06 AS "P_0", 0.9968914731370432 AS "P_1", 0.0031037504270571997 AS "P_2", 1 AS "D", 0.9968914731370432 AS "DP" FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 2 AS nid, 0.0 AS "P_0", 1.7080242117155547e-05 AS "P_1", 0.9999829197578829 AS "P_2", 2 AS "D", 0.9999829197578829 AS "DP" FROM SYSIBM.SYSDUMMY1) AS "Values"), 
@@ -139,7 +139,7 @@ FROM "DT_node_lookup_5" LEFT OUTER JOIN "DT_node_data_5" ON "DT_node_lookup_5".n
 FROM "DT_Output_5"), 
 "DT_node_lookup_6" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= -0.5934344530105591) THEN 1 ELSE 2 END AS node_id_2 
-FROM tmp_20180508185436_codegen_jcna5c_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516122209_codegen_elzy7q_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_6" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE) AS "P_0", CAST("Values"."P_1" AS DOUBLE) AS "P_1", CAST("Values"."P_2" AS DOUBLE) AS "P_2", CAST("Values"."D" AS DOUBLE) AS "D", CAST("Values"."DP" AS DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 2 AS nid, 0.0 AS "P_0", 0.5000000000000006 AS "P_1", 0.49999999999999944 AS "P_2", 1 AS "D", 0.5000000000000006 AS "DP" FROM SYSIBM.SYSDUMMY1) AS "Values"), 
@@ -151,7 +151,7 @@ FROM "DT_node_lookup_6" LEFT OUTER JOIN "DT_node_data_6" ON "DT_node_lookup_6".n
 FROM "DT_Output_6"), 
 "DT_node_lookup_7" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.5400919914245605) THEN 1 ELSE 2 END AS node_id_2 
-FROM tmp_20180508185436_codegen_jcna5c_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516122209_codegen_elzy7q_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_7" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE) AS "P_0", CAST("Values"."P_1" AS DOUBLE) AS "P_1", CAST("Values"."P_2" AS DOUBLE) AS "P_2", CAST("Values"."D" AS DOUBLE) AS "D", CAST("Values"."DP" AS DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 4.820822504482422e-06 AS "P_0", 0.999931832803407 AS "P_1", 6.334637408853025e-05 AS "P_2", 1 AS "D", 0.999931832803407 AS "DP" FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 2 AS nid, 0.0 AS "P_0", 0.0031507476384588905 AS "P_1", 0.9968492523615411 AS "P_2", 2 AS "D", 0.9968492523615411 AS "DP" FROM SYSIBM.SYSDUMMY1) AS "Values"), 
@@ -163,7 +163,7 @@ FROM "DT_node_lookup_7" LEFT OUTER JOIN "DT_node_data_7" ON "DT_node_lookup_7".n
 FROM "DT_Output_7"), 
 "DT_node_lookup_8" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= -0.5934344530105591) THEN 1 ELSE 2 END AS node_id_2 
-FROM tmp_20180508185436_codegen_jcna5c_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516122209_codegen_elzy7q_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_8" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE) AS "P_0", CAST("Values"."P_1" AS DOUBLE) AS "P_1", CAST("Values"."P_2" AS DOUBLE) AS "P_2", CAST("Values"."D" AS DOUBLE) AS "D", CAST("Values"."DP" AS DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 2 AS nid, 0.0 AS "P_0", 0.5000000000000004 AS "P_1", 0.4999999999999996 AS "P_2", 1 AS "D", 0.5000000000000004 AS "DP" FROM SYSIBM.SYSDUMMY1) AS "Values"), 
@@ -175,7 +175,7 @@ FROM "DT_node_lookup_8" LEFT OUTER JOIN "DT_node_data_8" ON "DT_node_lookup_8".n
 FROM "DT_Output_8"), 
 "DT_node_lookup_9" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.6462678909301758) THEN 1 ELSE 2 END AS node_id_2 
-FROM tmp_20180508185436_codegen_jcna5c_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516122209_codegen_elzy7q_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_9" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE) AS "P_0", CAST("Values"."P_1" AS DOUBLE) AS "P_1", CAST("Values"."P_2" AS DOUBLE) AS "P_2", CAST("Values"."D" AS DOUBLE) AS "D", CAST("Values"."DP" AS DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 4.793617328869877e-06 AS "P_0", 0.9986735916405715 AS "P_1", 0.0013216147420995158 AS "P_2", 1 AS "D", 0.9986735916405715 AS "DP" FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 2 AS nid, 0.0 AS "P_0", 2.647608842412024e-05 AS "P_1", 0.9999735239115759 AS "P_2", 2 AS "D", 0.9999735239115759 AS "DP" FROM SYSIBM.SYSDUMMY1) AS "Values"), 
@@ -199,10 +199,10 @@ FROM "ADB_Model_7" UNION ALL SELECT "ADB_Model_8"."KEY" AS "KEY", "ADB_Model_8".
 FROM "ADB_Model_8" UNION ALL SELECT "ADB_Model_9"."KEY" AS "KEY", "ADB_Model_9"."Score_0" AS "Score_0", "ADB_Model_9"."Proba_0" AS "Proba_0", "ADB_Model_9"."Score_1" AS "Score_1", "ADB_Model_9"."Proba_1" AS "Proba_1", "ADB_Model_9"."Score_2" AS "Score_2", "ADB_Model_9"."Proba_2" AS "Proba_2" 
 FROM "ADB_Model_9") AS "ADB_esu_0") AS "ADB_B0"
 
--- Code For temporary table tmp_20180508185436_codegen_65t3pv_adb_b1 part 1. Create 
+-- Code For temporary table tmp_20180516122210_codegen_sg1z84_adb_b1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508185436_codegen_65t3pv_adb_b1 (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516122210_codegen_sg1z84_adb_b1 (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE, 
 	"Proba_0" DOUBLE, 
@@ -214,11 +214,11 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508185436_codegen_65t3pv_adb_b1 (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508185436_codegen_65t3pv_adb_b1 part 2. Populate
+-- Code For temporary table tmp_20180516122210_codegen_sg1z84_adb_b1 part 2. Populate
 
-INSERT INTO tmp_20180508185436_codegen_65t3pv_adb_b1 WITH "DT_node_lookup_10" AS 
+INSERT INTO tmp_20180516122210_codegen_sg1z84_adb_b1 WITH "DT_node_lookup_10" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.8158766627311707) THEN 1 ELSE 2 END AS node_id_2 
-FROM tmp_20180508185436_codegen_jcna5c_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516122209_codegen_elzy7q_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_10" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE) AS "P_0", CAST("Values"."P_1" AS DOUBLE) AS "P_1", CAST("Values"."P_2" AS DOUBLE) AS "P_2", CAST("Values"."D" AS DOUBLE) AS "D", CAST("Values"."DP" AS DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 2 AS nid, 0.0 AS "P_0", 0.49999999999999994 AS "P_1", 0.5000000000000001 AS "P_2", 2 AS "D", 0.5000000000000001 AS "DP" FROM SYSIBM.SYSDUMMY1) AS "Values"), 
@@ -230,7 +230,7 @@ FROM "DT_node_lookup_10" LEFT OUTER JOIN "DT_node_data_10" ON "DT_node_lookup_10
 FROM "DT_Output_10"), 
 "DT_node_lookup_11" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.5400919914245605) THEN 1 ELSE 2 END AS node_id_2 
-FROM tmp_20180508185436_codegen_jcna5c_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516122209_codegen_elzy7q_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_11" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE) AS "P_0", CAST("Values"."P_1" AS DOUBLE) AS "P_1", CAST("Values"."P_2" AS DOUBLE) AS "P_2", CAST("Values"."D" AS DOUBLE) AS "D", CAST("Values"."DP" AS DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 4.81196669298056e-06 AS "P_0", 0.9998977442279475 AS "P_1", 9.744380535948514e-05 AS "P_2", 1 AS "D", 0.9998977442279475 AS "DP" FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 2 AS nid, 0.0 AS "P_0", 0.0013923137600357898 AS "P_1", 0.9986076862399642 AS "P_2", 2 AS "D", 0.9986076862399642 AS "DP" FROM SYSIBM.SYSDUMMY1) AS "Values"), 
@@ -242,7 +242,7 @@ FROM "DT_node_lookup_11" LEFT OUTER JOIN "DT_node_data_11" ON "DT_node_lookup_11
 FROM "DT_Output_11"), 
 "DT_node_lookup_12" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= -0.5934344530105591) THEN 1 ELSE 2 END AS node_id_2 
-FROM tmp_20180508185436_codegen_jcna5c_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516122209_codegen_elzy7q_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_12" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE) AS "P_0", CAST("Values"."P_1" AS DOUBLE) AS "P_1", CAST("Values"."P_2" AS DOUBLE) AS "P_2", CAST("Values"."D" AS DOUBLE) AS "D", CAST("Values"."DP" AS DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 2 AS nid, 0.0 AS "P_0", 0.5000000000000002 AS "P_1", 0.49999999999999983 AS "P_2", 1 AS "D", 0.5000000000000002 AS "DP" FROM SYSIBM.SYSDUMMY1) AS "Values"), 
@@ -254,7 +254,7 @@ FROM "DT_node_lookup_12" LEFT OUTER JOIN "DT_node_data_12" ON "DT_node_lookup_12
 FROM "DT_Output_12"), 
 "DT_node_lookup_13" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.6462678909301758) THEN 1 ELSE 2 END AS node_id_2 
-FROM tmp_20180508185436_codegen_jcna5c_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516122209_codegen_elzy7q_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_13" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE) AS "P_0", CAST("Values"."P_1" AS DOUBLE) AS "P_1", CAST("Values"."P_2" AS DOUBLE) AS "P_2", CAST("Values"."D" AS DOUBLE) AS "D", CAST("Values"."DP" AS DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 4.798116221942719e-06 AS "P_0", 0.999124428950558 AS "P_1", 0.0008707729332201233 AS "P_2", 1 AS "D", 0.999124428950558 AS "DP" FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 2 AS nid, 0.0 AS "P_0", 6.0884107962139915e-05 AS "P_1", 0.9999391158920379 AS "P_2", 2 AS "D", 0.9999391158920379 AS "DP" FROM SYSIBM.SYSDUMMY1) AS "Values"), 
@@ -266,7 +266,7 @@ FROM "DT_node_lookup_13" LEFT OUTER JOIN "DT_node_data_13" ON "DT_node_lookup_13
 FROM "DT_Output_13"), 
 "DT_node_lookup_14" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.8158766627311707) THEN 1 ELSE 2 END AS node_id_2 
-FROM tmp_20180508185436_codegen_jcna5c_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516122209_codegen_elzy7q_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_14" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE) AS "P_0", CAST("Values"."P_1" AS DOUBLE) AS "P_1", CAST("Values"."P_2" AS DOUBLE) AS "P_2", CAST("Values"."D" AS DOUBLE) AS "D", CAST("Values"."DP" AS DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 2 AS nid, 0.0 AS "P_0", 0.5000000000000004 AS "P_1", 0.4999999999999995 AS "P_2", 1 AS "D", 0.5000000000000004 AS "DP" FROM SYSIBM.SYSDUMMY1) AS "Values"), 
@@ -278,7 +278,7 @@ FROM "DT_node_lookup_14" LEFT OUTER JOIN "DT_node_data_14" ON "DT_node_lookup_14
 FROM "DT_Output_14"), 
 "DT_node_lookup_15" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.5400919914245605) THEN 1 ELSE 2 END AS node_id_2 
-FROM tmp_20180508185436_codegen_jcna5c_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516122209_codegen_elzy7q_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_15" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE) AS "P_0", CAST("Values"."P_1" AS DOUBLE) AS "P_1", CAST("Values"."P_2" AS DOUBLE) AS "P_2", CAST("Values"."D" AS DOUBLE) AS "D", CAST("Values"."DP" AS DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 4.809382844138304e-06 AS "P_0", 0.9998473862639816 AS "P_1", 0.00014780435317418496 AS "P_2", 1 AS "D", 0.9998473862639816 AS "DP" FROM SYSIBM.SYSDUMMY1 UNION ALL SELECT 2 AS nid, 0.0 AS "P_0", 0.0009574869821768459 AS "P_1", 0.9990425130178231 AS "P_2", 2 AS "D", 0.9990425130178231 AS "DP" FROM SYSIBM.SYSDUMMY1) AS "Values"), 
@@ -298,10 +298,10 @@ FROM "ADB_Model_13" UNION ALL SELECT "ADB_Model_14"."KEY" AS "KEY", "ADB_Model_1
 FROM "ADB_Model_14" UNION ALL SELECT "ADB_Model_15"."KEY" AS "KEY", "ADB_Model_15"."Score_0" AS "Score_0", "ADB_Model_15"."Proba_0" AS "Proba_0", "ADB_Model_15"."Score_1" AS "Score_1", "ADB_Model_15"."Proba_1" AS "Proba_1", "ADB_Model_15"."Score_2" AS "Score_2", "ADB_Model_15"."Proba_2" AS "Proba_2" 
 FROM "ADB_Model_15") AS "ADB_esu_1") AS "ADB_B1"
 
--- Code For temporary table tmp_20180508185436_codegen_0lix6i_adb_union part 1. Create 
+-- Code For temporary table tmp_20180516122210_codegen_wqo6ln_adb_sum part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508185436_codegen_0lix6i_adb_union (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516122210_codegen_wqo6ln_adb_sum (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE, 
 	"Proba_0" DOUBLE, 
@@ -313,41 +313,23 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508185436_codegen_0lix6i_adb_union (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508185436_codegen_0lix6i_adb_union part 2. Populate
+-- Code For temporary table tmp_20180516122210_codegen_wqo6ln_adb_sum part 2. Populate
 
-INSERT INTO tmp_20180508185436_codegen_0lix6i_adb_union SELECT "ADB_Union"."KEY", "ADB_Union"."Score_0", "ADB_Union"."Proba_0", "ADB_Union"."Score_1", "ADB_Union"."Proba_1", "ADB_Union"."Score_2", "ADB_Union"."Proba_2" 
-FROM (SELECT "ADB_EnsembleUnion"."KEY" AS "KEY", "ADB_EnsembleUnion"."Score_0" AS "Score_0", "ADB_EnsembleUnion"."Proba_0" AS "Proba_0", "ADB_EnsembleUnion"."Score_1" AS "Score_1", "ADB_EnsembleUnion"."Proba_1" AS "Proba_1", "ADB_EnsembleUnion"."Score_2" AS "Score_2", "ADB_EnsembleUnion"."Proba_2" AS "Proba_2" 
+INSERT INTO tmp_20180516122210_codegen_wqo6ln_adb_sum WITH "ADB_Union" AS 
+(SELECT "ADB_EnsembleUnion"."KEY" AS "KEY", "ADB_EnsembleUnion"."Score_0" AS "Score_0", "ADB_EnsembleUnion"."Proba_0" AS "Proba_0", "ADB_EnsembleUnion"."Score_1" AS "Score_1", "ADB_EnsembleUnion"."Proba_1" AS "Proba_1", "ADB_EnsembleUnion"."Score_2" AS "Score_2", "ADB_EnsembleUnion"."Proba_2" AS "Proba_2" 
 FROM (SELECT "ADB_B0"."KEY" AS "KEY", "ADB_B0"."Score_0" AS "Score_0", "ADB_B0"."Proba_0" AS "Proba_0", "ADB_B0"."Score_1" AS "Score_1", "ADB_B0"."Proba_1" AS "Proba_1", "ADB_B0"."Score_2" AS "Score_2", "ADB_B0"."Proba_2" AS "Proba_2" 
-FROM tmp_20180508185436_codegen_4qgabe_adb_b0 AS "ADB_B0" UNION ALL SELECT "ADB_B1"."KEY" AS "KEY", "ADB_B1"."Score_0" AS "Score_0", "ADB_B1"."Proba_0" AS "Proba_0", "ADB_B1"."Score_1" AS "Score_1", "ADB_B1"."Proba_1" AS "Proba_1", "ADB_B1"."Score_2" AS "Score_2", "ADB_B1"."Proba_2" AS "Proba_2" 
-FROM tmp_20180508185436_codegen_65t3pv_adb_b1 AS "ADB_B1") AS "ADB_EnsembleUnion") AS "ADB_Union"
-
--- Code For temporary table tmp_20180508185436_codegen_jw4uc2_adb_sum part 1. Create 
-
-
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508185436_codegen_jw4uc2_adb_sum (
-	"KEY" BIGINT, 
-	"Score_0" DOUBLE, 
-	"Proba_0" DOUBLE, 
-	"Score_1" DOUBLE, 
-	"Proba_1" DOUBLE, 
-	"Score_2" DOUBLE, 
-	"Proba_2" DOUBLE
-)
-
- ON COMMIT PRESERVE ROWS
-
--- Code For temporary table tmp_20180508185436_codegen_jw4uc2_adb_sum part 2. Populate
-
-INSERT INTO tmp_20180508185436_codegen_jw4uc2_adb_sum SELECT "ADB_sum"."KEY", "ADB_sum"."Score_0", "ADB_sum"."Proba_0", "ADB_sum"."Score_1", "ADB_sum"."Proba_1", "ADB_sum"."Score_2", "ADB_sum"."Proba_2" 
+FROM tmp_20180516122210_codegen_m0bk8e_adb_b0 AS "ADB_B0" UNION ALL SELECT "ADB_B1"."KEY" AS "KEY", "ADB_B1"."Score_0" AS "Score_0", "ADB_B1"."Proba_0" AS "Proba_0", "ADB_B1"."Score_1" AS "Score_1", "ADB_B1"."Proba_1" AS "Proba_1", "ADB_B1"."Score_2" AS "Score_2", "ADB_B1"."Proba_2" AS "Proba_2" 
+FROM tmp_20180516122210_codegen_sg1z84_adb_b1 AS "ADB_B1") AS "ADB_EnsembleUnion")
+ SELECT "ADB_sum"."KEY", "ADB_sum"."Score_0", "ADB_sum"."Proba_0", "ADB_sum"."Score_1", "ADB_sum"."Proba_1", "ADB_sum"."Score_2", "ADB_sum"."Proba_2" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Score_0" AS DOUBLE) AS "Score_0", CAST("T"."Proba_0" AS DOUBLE) AS "Proba_0", CAST("T"."Score_1" AS DOUBLE) AS "Score_1", CAST("T"."Proba_1" AS DOUBLE) AS "Proba_1", CAST("T"."Score_2" AS DOUBLE) AS "Score_2", CAST("T"."Proba_2" AS DOUBLE) AS "Proba_2" 
 FROM (SELECT "ADB_Union"."KEY" AS "KEY", sum("ADB_Union"."Score_0") AS "Score_0", sum("ADB_Union"."Proba_0") AS "Proba_0", sum("ADB_Union"."Score_1") AS "Score_1", sum("ADB_Union"."Proba_1") AS "Proba_1", sum("ADB_Union"."Score_2") AS "Score_2", sum("ADB_Union"."Proba_2") AS "Proba_2" 
-FROM tmp_20180508185436_codegen_0lix6i_adb_union AS "ADB_Union" GROUP BY "ADB_Union"."KEY") AS "T") AS "ADB_sum"
+FROM "ADB_Union" GROUP BY "ADB_Union"."KEY") AS "T") AS "ADB_sum"
 
 -- Model deployment code
 
 WITH "AdaBoost_AVG_Scores_BN" AS 
 (SELECT "ADB_sum"."KEY" AS "KEY", "ADB_sum"."Score_0" AS "Score_0", "ADB_sum"."Proba_0" AS "Proba_0", "ADB_sum"."Score_1" AS "Score_1", "ADB_sum"."Proba_1" AS "Proba_1", "ADB_sum"."Score_2" AS "Score_2", "ADB_sum"."Proba_2" AS "Proba_2" 
-FROM tmp_20180508185436_codegen_jw4uc2_adb_sum AS "ADB_sum"), 
+FROM tmp_20180516122210_codegen_wqo6ln_adb_sum AS "ADB_sum"), 
 "AdaBoost_AVG_Scores" AS 
 (SELECT "AdaBoost_AVG_Scores_BN"."KEY" AS "KEY", "AdaBoost_AVG_Scores_BN"."Score_0" AS "Score_0", exp(("AdaBoost_AVG_Scores_BN"."Proba_0" / 16.0) / 2) / (exp(("AdaBoost_AVG_Scores_BN"."Proba_0" / 16.0) / 2) + exp(("AdaBoost_AVG_Scores_BN"."Proba_1" / 16.0) / 2) + exp(("AdaBoost_AVG_Scores_BN"."Proba_2" / 16.0) / 2)) AS "Proba_0", CAST(NULL AS DOUBLE) AS "LogProba_0", "AdaBoost_AVG_Scores_BN"."Score_1" AS "Score_1", exp(("AdaBoost_AVG_Scores_BN"."Proba_1" / 16.0) / 2) / (exp(("AdaBoost_AVG_Scores_BN"."Proba_0" / 16.0) / 2) + exp(("AdaBoost_AVG_Scores_BN"."Proba_1" / 16.0) / 2) + exp(("AdaBoost_AVG_Scores_BN"."Proba_2" / 16.0) / 2)) AS "Proba_1", CAST(NULL AS DOUBLE) AS "LogProba_1", "AdaBoost_AVG_Scores_BN"."Score_2" AS "Score_2", exp(("AdaBoost_AVG_Scores_BN"."Proba_2" / 16.0) / 2) / (exp(("AdaBoost_AVG_Scores_BN"."Proba_0" / 16.0) / 2) + exp(("AdaBoost_AVG_Scores_BN"."Proba_1" / 16.0) / 2) + exp(("AdaBoost_AVG_Scores_BN"."Proba_2" / 16.0) / 2)) AS "Proba_2", CAST(NULL AS DOUBLE) AS "LogProba_2" 
 FROM "AdaBoost_AVG_Scores_BN"), 

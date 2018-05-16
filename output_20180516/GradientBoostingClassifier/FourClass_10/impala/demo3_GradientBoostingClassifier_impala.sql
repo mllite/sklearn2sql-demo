@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180508192700_codegen_5dbdti_gb_b0 part 1. Create 
+-- Code For temporary table tmp_20180516112333_codegen_e78ijc_gb_b0 part 1. Create 
 
 
-CREATE TABLE tmp_20180508192700_codegen_5dbdti_gb_b0 (
+CREATE TABLE tmp_20180516112333_codegen_e78ijc_gb_b0 (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -23,7 +23,7 @@ CREATE TABLE tmp_20180508192700_codegen_5dbdti_gb_b0 (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180508192700_codegen_5dbdti_gb_b0 part 2. Populate
+-- Code For temporary table tmp_20180516112333_codegen_e78ijc_gb_b0 part 2. Populate
 
 WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_4` <= -0.35484129190444946) THEN CASE WHEN (`ADS`.`Feature_9` <= 2.524527072906494) THEN CASE WHEN (`ADS`.`Feature_0` <= -1.4582808017730713) THEN 3 ELSE 4 END ELSE 5 END ELSE CASE WHEN (`ADS`.`Feature_3` <= 1.1771701574325562) THEN CASE WHEN (`ADS`.`Feature_3` <= -2.255753517150879) THEN 8 ELSE 9 END ELSE CASE WHEN (`ADS`.`Feature_9` <= -1.1417204141616821) THEN 11 ELSE 12 END END END AS node_id_2 
@@ -145,7 +145,7 @@ FROM `DT_node_lookup_9` LEFT OUTER JOIN `DT_node_data_9` ON `DT_node_lookup_9`.n
 `GB_Model_2_1` AS 
 (SELECT `DT_Output_9`.`KEY` AS `KEY`, 0.0 AS `Score_0`, `DT_Output_9`.`E` AS `Score_1`, 0.0 AS `Score_2`, 0.0 AS `Score_3` 
 FROM `DT_Output_9`)
- INSERT INTO tmp_20180508192700_codegen_5dbdti_gb_b0 (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `GB_B0`.`KEY`, `GB_B0`.`Score_0`, `GB_B0`.`Score_1`, `GB_B0`.`Score_2`, `GB_B0`.`Score_3` 
+ INSERT INTO tmp_20180516112333_codegen_e78ijc_gb_b0 (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `GB_B0`.`KEY`, `GB_B0`.`Score_0`, `GB_B0`.`Score_1`, `GB_B0`.`Score_2`, `GB_B0`.`Score_3` 
 FROM (SELECT `GB_esu_0`.`KEY` AS `KEY`, `GB_esu_0`.`Score_0` AS `Score_0`, `GB_esu_0`.`Score_1` AS `Score_1`, `GB_esu_0`.`Score_2` AS `Score_2`, `GB_esu_0`.`Score_3` AS `Score_3` 
 FROM (SELECT `GB_Model_0_0`.`KEY` AS `KEY`, `GB_Model_0_0`.`Score_0` AS `Score_0`, `GB_Model_0_0`.`Score_1` AS `Score_1`, `GB_Model_0_0`.`Score_2` AS `Score_2`, `GB_Model_0_0`.`Score_3` AS `Score_3` 
 FROM `GB_Model_0_0` UNION ALL SELECT `GB_Model_0_1`.`KEY` AS `KEY`, `GB_Model_0_1`.`Score_0` AS `Score_0`, `GB_Model_0_1`.`Score_1` AS `Score_1`, `GB_Model_0_1`.`Score_2` AS `Score_2`, `GB_Model_0_1`.`Score_3` AS `Score_3` 
@@ -159,10 +159,10 @@ FROM `GB_Model_1_3` UNION ALL SELECT `GB_Model_2_0`.`KEY` AS `KEY`, `GB_Model_2_
 FROM `GB_Model_2_0` UNION ALL SELECT `GB_Model_2_1`.`KEY` AS `KEY`, `GB_Model_2_1`.`Score_0` AS `Score_0`, `GB_Model_2_1`.`Score_1` AS `Score_1`, `GB_Model_2_1`.`Score_2` AS `Score_2`, `GB_Model_2_1`.`Score_3` AS `Score_3` 
 FROM `GB_Model_2_1`) AS `GB_esu_0`) AS `GB_B0`
 
--- Code For temporary table tmp_20180508192700_codegen_nqtd47_gb_b1 part 1. Create 
+-- Code For temporary table tmp_20180516112333_codegen_ocg05g_gb_b1 part 1. Create 
 
 
-CREATE TABLE tmp_20180508192700_codegen_nqtd47_gb_b1 (
+CREATE TABLE tmp_20180516112333_codegen_ocg05g_gb_b1 (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -172,7 +172,7 @@ CREATE TABLE tmp_20180508192700_codegen_nqtd47_gb_b1 (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180508192700_codegen_nqtd47_gb_b1 part 2. Populate
+-- Code For temporary table tmp_20180516112333_codegen_ocg05g_gb_b1 part 2. Populate
 
 WITH `DT_node_lookup_10` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_3` <= -1.775954246520996) THEN CASE WHEN (`ADS`.`Feature_8` <= -0.6406186819076538) THEN 2 ELSE 3 END ELSE CASE WHEN (`ADS`.`Feature_2` <= -2.5394277572631836) THEN CASE WHEN (`ADS`.`Feature_5` <= -0.4660135507583618) THEN 6 ELSE 7 END ELSE CASE WHEN (`ADS`.`Feature_7` <= 3.1317644119262695) THEN 9 ELSE 10 END END END AS node_id_2 
@@ -294,7 +294,7 @@ FROM `DT_node_lookup_19` LEFT OUTER JOIN `DT_node_data_19` ON `DT_node_lookup_19
 `GB_Model_4_3` AS 
 (SELECT `DT_Output_19`.`KEY` AS `KEY`, 0.0 AS `Score_0`, 0.0 AS `Score_1`, 0.0 AS `Score_2`, `DT_Output_19`.`E` AS `Score_3` 
 FROM `DT_Output_19`)
- INSERT INTO tmp_20180508192700_codegen_nqtd47_gb_b1 (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `GB_B1`.`KEY`, `GB_B1`.`Score_0`, `GB_B1`.`Score_1`, `GB_B1`.`Score_2`, `GB_B1`.`Score_3` 
+ INSERT INTO tmp_20180516112333_codegen_ocg05g_gb_b1 (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `GB_B1`.`KEY`, `GB_B1`.`Score_0`, `GB_B1`.`Score_1`, `GB_B1`.`Score_2`, `GB_B1`.`Score_3` 
 FROM (SELECT `GB_esu_1`.`KEY` AS `KEY`, `GB_esu_1`.`Score_0` AS `Score_0`, `GB_esu_1`.`Score_1` AS `Score_1`, `GB_esu_1`.`Score_2` AS `Score_2`, `GB_esu_1`.`Score_3` AS `Score_3` 
 FROM (SELECT `GB_Model_2_2`.`KEY` AS `KEY`, `GB_Model_2_2`.`Score_0` AS `Score_0`, `GB_Model_2_2`.`Score_1` AS `Score_1`, `GB_Model_2_2`.`Score_2` AS `Score_2`, `GB_Model_2_2`.`Score_3` AS `Score_3` 
 FROM `GB_Model_2_2` UNION ALL SELECT `GB_Model_2_3`.`KEY` AS `KEY`, `GB_Model_2_3`.`Score_0` AS `Score_0`, `GB_Model_2_3`.`Score_1` AS `Score_1`, `GB_Model_2_3`.`Score_2` AS `Score_2`, `GB_Model_2_3`.`Score_3` AS `Score_3` 
@@ -308,10 +308,10 @@ FROM `GB_Model_4_1` UNION ALL SELECT `GB_Model_4_2`.`KEY` AS `KEY`, `GB_Model_4_
 FROM `GB_Model_4_2` UNION ALL SELECT `GB_Model_4_3`.`KEY` AS `KEY`, `GB_Model_4_3`.`Score_0` AS `Score_0`, `GB_Model_4_3`.`Score_1` AS `Score_1`, `GB_Model_4_3`.`Score_2` AS `Score_2`, `GB_Model_4_3`.`Score_3` AS `Score_3` 
 FROM `GB_Model_4_3`) AS `GB_esu_1`) AS `GB_B1`
 
--- Code For temporary table tmp_20180508192700_codegen_sb3146_gb_b2 part 1. Create 
+-- Code For temporary table tmp_20180516112333_codegen_on6wam_gb_b2 part 1. Create 
 
 
-CREATE TABLE tmp_20180508192700_codegen_sb3146_gb_b2 (
+CREATE TABLE tmp_20180516112333_codegen_on6wam_gb_b2 (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -321,7 +321,7 @@ CREATE TABLE tmp_20180508192700_codegen_sb3146_gb_b2 (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180508192700_codegen_sb3146_gb_b2 part 2. Populate
+-- Code For temporary table tmp_20180516112333_codegen_on6wam_gb_b2 part 2. Populate
 
 WITH `DT_node_lookup_20` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_4` <= -0.35484129190444946) THEN CASE WHEN (`ADS`.`Feature_9` <= 2.524527072906494) THEN CASE WHEN (`ADS`.`Feature_0` <= -1.4582808017730713) THEN 3 ELSE 4 END ELSE 5 END ELSE CASE WHEN (`ADS`.`Feature_3` <= 1.1771701574325562) THEN CASE WHEN (`ADS`.`Feature_6` <= 1.1597294807434082) THEN 8 ELSE 9 END ELSE CASE WHEN (`ADS`.`Feature_9` <= -1.1417204141616821) THEN 11 ELSE 12 END END END AS node_id_2 
@@ -443,7 +443,7 @@ FROM `DT_node_lookup_29` LEFT OUTER JOIN `DT_node_data_29` ON `DT_node_lookup_29
 `GB_Model_7_1` AS 
 (SELECT `DT_Output_29`.`KEY` AS `KEY`, 0.0 AS `Score_0`, `DT_Output_29`.`E` AS `Score_1`, 0.0 AS `Score_2`, 0.0 AS `Score_3` 
 FROM `DT_Output_29`)
- INSERT INTO tmp_20180508192700_codegen_sb3146_gb_b2 (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `GB_B2`.`KEY`, `GB_B2`.`Score_0`, `GB_B2`.`Score_1`, `GB_B2`.`Score_2`, `GB_B2`.`Score_3` 
+ INSERT INTO tmp_20180516112333_codegen_on6wam_gb_b2 (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `GB_B2`.`KEY`, `GB_B2`.`Score_0`, `GB_B2`.`Score_1`, `GB_B2`.`Score_2`, `GB_B2`.`Score_3` 
 FROM (SELECT `GB_esu_2`.`KEY` AS `KEY`, `GB_esu_2`.`Score_0` AS `Score_0`, `GB_esu_2`.`Score_1` AS `Score_1`, `GB_esu_2`.`Score_2` AS `Score_2`, `GB_esu_2`.`Score_3` AS `Score_3` 
 FROM (SELECT `GB_Model_5_0`.`KEY` AS `KEY`, `GB_Model_5_0`.`Score_0` AS `Score_0`, `GB_Model_5_0`.`Score_1` AS `Score_1`, `GB_Model_5_0`.`Score_2` AS `Score_2`, `GB_Model_5_0`.`Score_3` AS `Score_3` 
 FROM `GB_Model_5_0` UNION ALL SELECT `GB_Model_5_1`.`KEY` AS `KEY`, `GB_Model_5_1`.`Score_0` AS `Score_0`, `GB_Model_5_1`.`Score_1` AS `Score_1`, `GB_Model_5_1`.`Score_2` AS `Score_2`, `GB_Model_5_1`.`Score_3` AS `Score_3` 
@@ -457,10 +457,10 @@ FROM `GB_Model_6_3` UNION ALL SELECT `GB_Model_7_0`.`KEY` AS `KEY`, `GB_Model_7_
 FROM `GB_Model_7_0` UNION ALL SELECT `GB_Model_7_1`.`KEY` AS `KEY`, `GB_Model_7_1`.`Score_0` AS `Score_0`, `GB_Model_7_1`.`Score_1` AS `Score_1`, `GB_Model_7_1`.`Score_2` AS `Score_2`, `GB_Model_7_1`.`Score_3` AS `Score_3` 
 FROM `GB_Model_7_1`) AS `GB_esu_2`) AS `GB_B2`
 
--- Code For temporary table tmp_20180508192700_codegen_5ax797_gb_b3 part 1. Create 
+-- Code For temporary table tmp_20180516112333_codegen_13tbdh_gb_b3 part 1. Create 
 
 
-CREATE TABLE tmp_20180508192700_codegen_5ax797_gb_b3 (
+CREATE TABLE tmp_20180516112333_codegen_13tbdh_gb_b3 (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -470,7 +470,7 @@ CREATE TABLE tmp_20180508192700_codegen_5ax797_gb_b3 (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180508192700_codegen_5ax797_gb_b3 part 2. Populate
+-- Code For temporary table tmp_20180516112333_codegen_13tbdh_gb_b3 part 2. Populate
 
 WITH `DT_node_lookup_30` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_3` <= -1.775954246520996) THEN CASE WHEN (`ADS`.`Feature_8` <= -0.6406186819076538) THEN 2 ELSE CASE WHEN (`ADS`.`Feature_2` <= -2.7646288871765137) THEN 4 ELSE 5 END END ELSE CASE WHEN (`ADS`.`Feature_4` <= -3.922010898590088) THEN 7 ELSE CASE WHEN (`ADS`.`Feature_5` <= 1.6087135076522827) THEN 9 ELSE 10 END END END AS node_id_2 
@@ -592,7 +592,7 @@ FROM `DT_node_lookup_39` LEFT OUTER JOIN `DT_node_data_39` ON `DT_node_lookup_39
 `GB_Model_9_3` AS 
 (SELECT `DT_Output_39`.`KEY` AS `KEY`, 0.0 AS `Score_0`, 0.0 AS `Score_1`, 0.0 AS `Score_2`, `DT_Output_39`.`E` AS `Score_3` 
 FROM `DT_Output_39`)
- INSERT INTO tmp_20180508192700_codegen_5ax797_gb_b3 (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `GB_B3`.`KEY`, `GB_B3`.`Score_0`, `GB_B3`.`Score_1`, `GB_B3`.`Score_2`, `GB_B3`.`Score_3` 
+ INSERT INTO tmp_20180516112333_codegen_13tbdh_gb_b3 (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `GB_B3`.`KEY`, `GB_B3`.`Score_0`, `GB_B3`.`Score_1`, `GB_B3`.`Score_2`, `GB_B3`.`Score_3` 
 FROM (SELECT `GB_esu_3`.`KEY` AS `KEY`, `GB_esu_3`.`Score_0` AS `Score_0`, `GB_esu_3`.`Score_1` AS `Score_1`, `GB_esu_3`.`Score_2` AS `Score_2`, `GB_esu_3`.`Score_3` AS `Score_3` 
 FROM (SELECT `GB_Model_7_2`.`KEY` AS `KEY`, `GB_Model_7_2`.`Score_0` AS `Score_0`, `GB_Model_7_2`.`Score_1` AS `Score_1`, `GB_Model_7_2`.`Score_2` AS `Score_2`, `GB_Model_7_2`.`Score_3` AS `Score_3` 
 FROM `GB_Model_7_2` UNION ALL SELECT `GB_Model_7_3`.`KEY` AS `KEY`, `GB_Model_7_3`.`Score_0` AS `Score_0`, `GB_Model_7_3`.`Score_1` AS `Score_1`, `GB_Model_7_3`.`Score_2` AS `Score_2`, `GB_Model_7_3`.`Score_3` AS `Score_3` 
@@ -606,10 +606,10 @@ FROM `GB_Model_9_1` UNION ALL SELECT `GB_Model_9_2`.`KEY` AS `KEY`, `GB_Model_9_
 FROM `GB_Model_9_2` UNION ALL SELECT `GB_Model_9_3`.`KEY` AS `KEY`, `GB_Model_9_3`.`Score_0` AS `Score_0`, `GB_Model_9_3`.`Score_1` AS `Score_1`, `GB_Model_9_3`.`Score_2` AS `Score_2`, `GB_Model_9_3`.`Score_3` AS `Score_3` 
 FROM `GB_Model_9_3`) AS `GB_esu_3`) AS `GB_B3`
 
--- Code For temporary table tmp_20180508192700_codegen_pdnuis_gb_b4 part 1. Create 
+-- Code For temporary table tmp_20180516112333_codegen_ns23n8_gb_b4 part 1. Create 
 
 
-CREATE TABLE tmp_20180508192700_codegen_pdnuis_gb_b4 (
+CREATE TABLE tmp_20180516112333_codegen_ns23n8_gb_b4 (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -619,7 +619,7 @@ CREATE TABLE tmp_20180508192700_codegen_pdnuis_gb_b4 (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180508192700_codegen_pdnuis_gb_b4 part 2. Populate
+-- Code For temporary table tmp_20180516112333_codegen_ns23n8_gb_b4 part 2. Populate
 
 WITH `DT_node_lookup_40` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_4` <= 0.5936837196350098) THEN CASE WHEN (`ADS`.`Feature_1` <= -0.18501365184783936) THEN CASE WHEN (`ADS`.`Feature_7` <= 0.3409436345100403) THEN 3 ELSE 4 END ELSE CASE WHEN (`ADS`.`Feature_0` <= -2.1877102851867676) THEN 6 ELSE 7 END END ELSE CASE WHEN (`ADS`.`Feature_6` <= -0.843204140663147) THEN CASE WHEN (`ADS`.`Feature_5` <= 0.2948583662509918) THEN 10 ELSE 11 END ELSE CASE WHEN (`ADS`.`Feature_7` <= 0.10561398416757584) THEN 13 ELSE 14 END END END AS node_id_2 
@@ -741,7 +741,7 @@ FROM `DT_node_lookup_49` LEFT OUTER JOIN `DT_node_data_49` ON `DT_node_lookup_49
 `GB_Model_12_1` AS 
 (SELECT `DT_Output_49`.`KEY` AS `KEY`, 0.0 AS `Score_0`, `DT_Output_49`.`E` AS `Score_1`, 0.0 AS `Score_2`, 0.0 AS `Score_3` 
 FROM `DT_Output_49`)
- INSERT INTO tmp_20180508192700_codegen_pdnuis_gb_b4 (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `GB_B4`.`KEY`, `GB_B4`.`Score_0`, `GB_B4`.`Score_1`, `GB_B4`.`Score_2`, `GB_B4`.`Score_3` 
+ INSERT INTO tmp_20180516112333_codegen_ns23n8_gb_b4 (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `GB_B4`.`KEY`, `GB_B4`.`Score_0`, `GB_B4`.`Score_1`, `GB_B4`.`Score_2`, `GB_B4`.`Score_3` 
 FROM (SELECT `GB_esu_4`.`KEY` AS `KEY`, `GB_esu_4`.`Score_0` AS `Score_0`, `GB_esu_4`.`Score_1` AS `Score_1`, `GB_esu_4`.`Score_2` AS `Score_2`, `GB_esu_4`.`Score_3` AS `Score_3` 
 FROM (SELECT `GB_Model_10_0`.`KEY` AS `KEY`, `GB_Model_10_0`.`Score_0` AS `Score_0`, `GB_Model_10_0`.`Score_1` AS `Score_1`, `GB_Model_10_0`.`Score_2` AS `Score_2`, `GB_Model_10_0`.`Score_3` AS `Score_3` 
 FROM `GB_Model_10_0` UNION ALL SELECT `GB_Model_10_1`.`KEY` AS `KEY`, `GB_Model_10_1`.`Score_0` AS `Score_0`, `GB_Model_10_1`.`Score_1` AS `Score_1`, `GB_Model_10_1`.`Score_2` AS `Score_2`, `GB_Model_10_1`.`Score_3` AS `Score_3` 
@@ -755,10 +755,10 @@ FROM `GB_Model_11_3` UNION ALL SELECT `GB_Model_12_0`.`KEY` AS `KEY`, `GB_Model_
 FROM `GB_Model_12_0` UNION ALL SELECT `GB_Model_12_1`.`KEY` AS `KEY`, `GB_Model_12_1`.`Score_0` AS `Score_0`, `GB_Model_12_1`.`Score_1` AS `Score_1`, `GB_Model_12_1`.`Score_2` AS `Score_2`, `GB_Model_12_1`.`Score_3` AS `Score_3` 
 FROM `GB_Model_12_1`) AS `GB_esu_4`) AS `GB_B4`
 
--- Code For temporary table tmp_20180508192700_codegen_83zenu_gb_b5 part 1. Create 
+-- Code For temporary table tmp_20180516112333_codegen_mpdsyl_gb_b5 part 1. Create 
 
 
-CREATE TABLE tmp_20180508192700_codegen_83zenu_gb_b5 (
+CREATE TABLE tmp_20180516112333_codegen_mpdsyl_gb_b5 (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -768,7 +768,7 @@ CREATE TABLE tmp_20180508192700_codegen_83zenu_gb_b5 (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180508192700_codegen_83zenu_gb_b5 part 2. Populate
+-- Code For temporary table tmp_20180516112333_codegen_mpdsyl_gb_b5 part 2. Populate
 
 WITH `DT_node_lookup_50` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` <= 0.21300426125526428) THEN CASE WHEN (`ADS`.`Feature_6` <= -0.8226404190063477) THEN CASE WHEN (`ADS`.`Feature_8` <= 0.3499239683151245) THEN 3 ELSE 4 END ELSE CASE WHEN (`ADS`.`Feature_4` <= -2.5625624656677246) THEN 6 ELSE 7 END END ELSE CASE WHEN (`ADS`.`Feature_7` <= 3.1317644119262695) THEN CASE WHEN (`ADS`.`Feature_3` <= 1.7983448505401611) THEN 10 ELSE 11 END ELSE 12 END END AS node_id_2 
@@ -890,7 +890,7 @@ FROM `DT_node_lookup_59` LEFT OUTER JOIN `DT_node_data_59` ON `DT_node_lookup_59
 `GB_Model_14_3` AS 
 (SELECT `DT_Output_59`.`KEY` AS `KEY`, 0.0 AS `Score_0`, 0.0 AS `Score_1`, 0.0 AS `Score_2`, `DT_Output_59`.`E` AS `Score_3` 
 FROM `DT_Output_59`)
- INSERT INTO tmp_20180508192700_codegen_83zenu_gb_b5 (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `GB_B5`.`KEY`, `GB_B5`.`Score_0`, `GB_B5`.`Score_1`, `GB_B5`.`Score_2`, `GB_B5`.`Score_3` 
+ INSERT INTO tmp_20180516112333_codegen_mpdsyl_gb_b5 (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `GB_B5`.`KEY`, `GB_B5`.`Score_0`, `GB_B5`.`Score_1`, `GB_B5`.`Score_2`, `GB_B5`.`Score_3` 
 FROM (SELECT `GB_esu_5`.`KEY` AS `KEY`, `GB_esu_5`.`Score_0` AS `Score_0`, `GB_esu_5`.`Score_1` AS `Score_1`, `GB_esu_5`.`Score_2` AS `Score_2`, `GB_esu_5`.`Score_3` AS `Score_3` 
 FROM (SELECT `GB_Model_12_2`.`KEY` AS `KEY`, `GB_Model_12_2`.`Score_0` AS `Score_0`, `GB_Model_12_2`.`Score_1` AS `Score_1`, `GB_Model_12_2`.`Score_2` AS `Score_2`, `GB_Model_12_2`.`Score_3` AS `Score_3` 
 FROM `GB_Model_12_2` UNION ALL SELECT `GB_Model_12_3`.`KEY` AS `KEY`, `GB_Model_12_3`.`Score_0` AS `Score_0`, `GB_Model_12_3`.`Score_1` AS `Score_1`, `GB_Model_12_3`.`Score_2` AS `Score_2`, `GB_Model_12_3`.`Score_3` AS `Score_3` 
@@ -904,10 +904,10 @@ FROM `GB_Model_14_1` UNION ALL SELECT `GB_Model_14_2`.`KEY` AS `KEY`, `GB_Model_
 FROM `GB_Model_14_2` UNION ALL SELECT `GB_Model_14_3`.`KEY` AS `KEY`, `GB_Model_14_3`.`Score_0` AS `Score_0`, `GB_Model_14_3`.`Score_1` AS `Score_1`, `GB_Model_14_3`.`Score_2` AS `Score_2`, `GB_Model_14_3`.`Score_3` AS `Score_3` 
 FROM `GB_Model_14_3`) AS `GB_esu_5`) AS `GB_B5`
 
--- Code For temporary table tmp_20180508192700_codegen_gx18r4_gb_b6 part 1. Create 
+-- Code For temporary table tmp_20180516112333_codegen_tpzkox_gb_b6 part 1. Create 
 
 
-CREATE TABLE tmp_20180508192700_codegen_gx18r4_gb_b6 (
+CREATE TABLE tmp_20180516112333_codegen_tpzkox_gb_b6 (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -917,7 +917,7 @@ CREATE TABLE tmp_20180508192700_codegen_gx18r4_gb_b6 (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180508192700_codegen_gx18r4_gb_b6 part 2. Populate
+-- Code For temporary table tmp_20180516112333_codegen_tpzkox_gb_b6 part 2. Populate
 
 WITH `DT_node_lookup_60` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_4` <= 0.5936837196350098) THEN CASE WHEN (`ADS`.`Feature_0` <= 2.428734540939331) THEN CASE WHEN (`ADS`.`Feature_9` <= 2.524527072906494) THEN 3 ELSE 4 END ELSE 5 END ELSE CASE WHEN (`ADS`.`Feature_3` <= 1.8594939708709717) THEN CASE WHEN (`ADS`.`Feature_6` <= 1.1597294807434082) THEN 8 ELSE 9 END ELSE CASE WHEN (`ADS`.`Feature_0` <= -0.23275019228458405) THEN 11 ELSE 12 END END END AS node_id_2 
@@ -967,7 +967,7 @@ FROM `DT_node_lookup_63` LEFT OUTER JOIN `DT_node_data_63` ON `DT_node_lookup_63
 `GB_Model_15_3` AS 
 (SELECT `DT_Output_63`.`KEY` AS `KEY`, 0.0 AS `Score_0`, 0.0 AS `Score_1`, 0.0 AS `Score_2`, `DT_Output_63`.`E` AS `Score_3` 
 FROM `DT_Output_63`)
- INSERT INTO tmp_20180508192700_codegen_gx18r4_gb_b6 (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `GB_B6`.`KEY`, `GB_B6`.`Score_0`, `GB_B6`.`Score_1`, `GB_B6`.`Score_2`, `GB_B6`.`Score_3` 
+ INSERT INTO tmp_20180516112333_codegen_tpzkox_gb_b6 (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `GB_B6`.`KEY`, `GB_B6`.`Score_0`, `GB_B6`.`Score_1`, `GB_B6`.`Score_2`, `GB_B6`.`Score_3` 
 FROM (SELECT `GB_esu_6`.`KEY` AS `KEY`, `GB_esu_6`.`Score_0` AS `Score_0`, `GB_esu_6`.`Score_1` AS `Score_1`, `GB_esu_6`.`Score_2` AS `Score_2`, `GB_esu_6`.`Score_3` AS `Score_3` 
 FROM (SELECT `GB_Model_15_0`.`KEY` AS `KEY`, `GB_Model_15_0`.`Score_0` AS `Score_0`, `GB_Model_15_0`.`Score_1` AS `Score_1`, `GB_Model_15_0`.`Score_2` AS `Score_2`, `GB_Model_15_0`.`Score_3` AS `Score_3` 
 FROM `GB_Model_15_0` UNION ALL SELECT `GB_Model_15_1`.`KEY` AS `KEY`, `GB_Model_15_1`.`Score_0` AS `Score_0`, `GB_Model_15_1`.`Score_1` AS `Score_1`, `GB_Model_15_1`.`Score_2` AS `Score_2`, `GB_Model_15_1`.`Score_3` AS `Score_3` 
@@ -975,10 +975,10 @@ FROM `GB_Model_15_1` UNION ALL SELECT `GB_Model_15_2`.`KEY` AS `KEY`, `GB_Model_
 FROM `GB_Model_15_2` UNION ALL SELECT `GB_Model_15_3`.`KEY` AS `KEY`, `GB_Model_15_3`.`Score_0` AS `Score_0`, `GB_Model_15_3`.`Score_1` AS `Score_1`, `GB_Model_15_3`.`Score_2` AS `Score_2`, `GB_Model_15_3`.`Score_3` AS `Score_3` 
 FROM `GB_Model_15_3`) AS `GB_esu_6`) AS `GB_B6`
 
--- Code For temporary table tmp_20180508192700_codegen_btf0bs_gb_union part 1. Create 
+-- Code For temporary table tmp_20180516112333_codegen_y6d204_gb_sum part 1. Create 
 
 
-CREATE TABLE tmp_20180508192700_codegen_btf0bs_gb_union (
+CREATE TABLE tmp_20180516112333_codegen_y6d204_gb_sum (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -988,44 +988,28 @@ CREATE TABLE tmp_20180508192700_codegen_btf0bs_gb_union (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180508192700_codegen_btf0bs_gb_union part 2. Populate
+-- Code For temporary table tmp_20180516112333_codegen_y6d204_gb_sum part 2. Populate
 
-INSERT INTO tmp_20180508192700_codegen_btf0bs_gb_union (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `GB_Union`.`KEY`, `GB_Union`.`Score_0`, `GB_Union`.`Score_1`, `GB_Union`.`Score_2`, `GB_Union`.`Score_3` 
-FROM (SELECT `GB_EnsembleUnion`.`KEY` AS `KEY`, `GB_EnsembleUnion`.`Score_0` AS `Score_0`, `GB_EnsembleUnion`.`Score_1` AS `Score_1`, `GB_EnsembleUnion`.`Score_2` AS `Score_2`, `GB_EnsembleUnion`.`Score_3` AS `Score_3` 
+WITH `GB_Union` AS 
+(SELECT `GB_EnsembleUnion`.`KEY` AS `KEY`, `GB_EnsembleUnion`.`Score_0` AS `Score_0`, `GB_EnsembleUnion`.`Score_1` AS `Score_1`, `GB_EnsembleUnion`.`Score_2` AS `Score_2`, `GB_EnsembleUnion`.`Score_3` AS `Score_3` 
 FROM (SELECT `GB_B0`.`KEY` AS `KEY`, `GB_B0`.`Score_0` AS `Score_0`, `GB_B0`.`Score_1` AS `Score_1`, `GB_B0`.`Score_2` AS `Score_2`, `GB_B0`.`Score_3` AS `Score_3` 
-FROM tmp_20180508192700_codegen_5dbdti_gb_b0 AS `GB_B0` UNION ALL SELECT `GB_B1`.`KEY` AS `KEY`, `GB_B1`.`Score_0` AS `Score_0`, `GB_B1`.`Score_1` AS `Score_1`, `GB_B1`.`Score_2` AS `Score_2`, `GB_B1`.`Score_3` AS `Score_3` 
-FROM tmp_20180508192700_codegen_nqtd47_gb_b1 AS `GB_B1` UNION ALL SELECT `GB_B2`.`KEY` AS `KEY`, `GB_B2`.`Score_0` AS `Score_0`, `GB_B2`.`Score_1` AS `Score_1`, `GB_B2`.`Score_2` AS `Score_2`, `GB_B2`.`Score_3` AS `Score_3` 
-FROM tmp_20180508192700_codegen_sb3146_gb_b2 AS `GB_B2` UNION ALL SELECT `GB_B3`.`KEY` AS `KEY`, `GB_B3`.`Score_0` AS `Score_0`, `GB_B3`.`Score_1` AS `Score_1`, `GB_B3`.`Score_2` AS `Score_2`, `GB_B3`.`Score_3` AS `Score_3` 
-FROM tmp_20180508192700_codegen_5ax797_gb_b3 AS `GB_B3` UNION ALL SELECT `GB_B4`.`KEY` AS `KEY`, `GB_B4`.`Score_0` AS `Score_0`, `GB_B4`.`Score_1` AS `Score_1`, `GB_B4`.`Score_2` AS `Score_2`, `GB_B4`.`Score_3` AS `Score_3` 
-FROM tmp_20180508192700_codegen_pdnuis_gb_b4 AS `GB_B4` UNION ALL SELECT `GB_B5`.`KEY` AS `KEY`, `GB_B5`.`Score_0` AS `Score_0`, `GB_B5`.`Score_1` AS `Score_1`, `GB_B5`.`Score_2` AS `Score_2`, `GB_B5`.`Score_3` AS `Score_3` 
-FROM tmp_20180508192700_codegen_83zenu_gb_b5 AS `GB_B5` UNION ALL SELECT `GB_B6`.`KEY` AS `KEY`, `GB_B6`.`Score_0` AS `Score_0`, `GB_B6`.`Score_1` AS `Score_1`, `GB_B6`.`Score_2` AS `Score_2`, `GB_B6`.`Score_3` AS `Score_3` 
-FROM tmp_20180508192700_codegen_gx18r4_gb_b6 AS `GB_B6`) AS `GB_EnsembleUnion`) AS `GB_Union`
-
--- Code For temporary table tmp_20180508192700_codegen_r2waar_gb_sum part 1. Create 
-
-
-CREATE TABLE tmp_20180508192700_codegen_r2waar_gb_sum (
-	`KEY` BIGINT, 
-	`Score_0` DOUBLE, 
-	`Score_1` DOUBLE, 
-	`Score_2` DOUBLE, 
-	`Score_3` DOUBLE
-)
-
- CACHED IN 'one_gig_pool'
-
--- Code For temporary table tmp_20180508192700_codegen_r2waar_gb_sum part 2. Populate
-
-INSERT INTO tmp_20180508192700_codegen_r2waar_gb_sum (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `GB_sum`.`KEY`, `GB_sum`.`Score_0`, `GB_sum`.`Score_1`, `GB_sum`.`Score_2`, `GB_sum`.`Score_3` 
+FROM tmp_20180516112333_codegen_e78ijc_gb_b0 AS `GB_B0` UNION ALL SELECT `GB_B1`.`KEY` AS `KEY`, `GB_B1`.`Score_0` AS `Score_0`, `GB_B1`.`Score_1` AS `Score_1`, `GB_B1`.`Score_2` AS `Score_2`, `GB_B1`.`Score_3` AS `Score_3` 
+FROM tmp_20180516112333_codegen_ocg05g_gb_b1 AS `GB_B1` UNION ALL SELECT `GB_B2`.`KEY` AS `KEY`, `GB_B2`.`Score_0` AS `Score_0`, `GB_B2`.`Score_1` AS `Score_1`, `GB_B2`.`Score_2` AS `Score_2`, `GB_B2`.`Score_3` AS `Score_3` 
+FROM tmp_20180516112333_codegen_on6wam_gb_b2 AS `GB_B2` UNION ALL SELECT `GB_B3`.`KEY` AS `KEY`, `GB_B3`.`Score_0` AS `Score_0`, `GB_B3`.`Score_1` AS `Score_1`, `GB_B3`.`Score_2` AS `Score_2`, `GB_B3`.`Score_3` AS `Score_3` 
+FROM tmp_20180516112333_codegen_13tbdh_gb_b3 AS `GB_B3` UNION ALL SELECT `GB_B4`.`KEY` AS `KEY`, `GB_B4`.`Score_0` AS `Score_0`, `GB_B4`.`Score_1` AS `Score_1`, `GB_B4`.`Score_2` AS `Score_2`, `GB_B4`.`Score_3` AS `Score_3` 
+FROM tmp_20180516112333_codegen_ns23n8_gb_b4 AS `GB_B4` UNION ALL SELECT `GB_B5`.`KEY` AS `KEY`, `GB_B5`.`Score_0` AS `Score_0`, `GB_B5`.`Score_1` AS `Score_1`, `GB_B5`.`Score_2` AS `Score_2`, `GB_B5`.`Score_3` AS `Score_3` 
+FROM tmp_20180516112333_codegen_mpdsyl_gb_b5 AS `GB_B5` UNION ALL SELECT `GB_B6`.`KEY` AS `KEY`, `GB_B6`.`Score_0` AS `Score_0`, `GB_B6`.`Score_1` AS `Score_1`, `GB_B6`.`Score_2` AS `Score_2`, `GB_B6`.`Score_3` AS `Score_3` 
+FROM tmp_20180516112333_codegen_tpzkox_gb_b6 AS `GB_B6`) AS `GB_EnsembleUnion`)
+ INSERT INTO tmp_20180516112333_codegen_y6d204_gb_sum (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `GB_sum`.`KEY`, `GB_sum`.`Score_0`, `GB_sum`.`Score_1`, `GB_sum`.`Score_2`, `GB_sum`.`Score_3` 
 FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Score_0` AS DOUBLE) AS `Score_0`, CAST(`T`.`Score_1` AS DOUBLE) AS `Score_1`, CAST(`T`.`Score_2` AS DOUBLE) AS `Score_2`, CAST(`T`.`Score_3` AS DOUBLE) AS `Score_3` 
 FROM (SELECT `GB_Union`.`KEY` AS `KEY`, sum(`GB_Union`.`Score_0`) AS `Score_0`, sum(`GB_Union`.`Score_1`) AS `Score_1`, sum(`GB_Union`.`Score_2`) AS `Score_2`, sum(`GB_Union`.`Score_3`) AS `Score_3` 
-FROM tmp_20180508192700_codegen_btf0bs_gb_union AS `GB_Union` GROUP BY `GB_Union`.`KEY`) AS `T`) AS `GB_sum`
+FROM `GB_Union` GROUP BY `GB_Union`.`KEY`) AS `T`) AS `GB_sum`
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT `GB_sum`.`KEY` AS `KEY`, 0.225 + 0.1 * `GB_sum`.`Score_0` AS `Score_0`, 0.25 + 0.1 * `GB_sum`.`Score_1` AS `Score_1`, 0.25 + 0.1 * `GB_sum`.`Score_2` AS `Score_2`, 0.275 + 0.1 * `GB_sum`.`Score_3` AS `Score_3`, CAST(NULL AS DOUBLE) AS `Proba_0`, CAST(NULL AS DOUBLE) AS `Proba_1`, CAST(NULL AS DOUBLE) AS `Proba_2`, CAST(NULL AS DOUBLE) AS `Proba_3`, CAST(NULL AS DOUBLE) AS `LogProba_0`, CAST(NULL AS DOUBLE) AS `LogProba_1`, CAST(NULL AS DOUBLE) AS `LogProba_2`, CAST(NULL AS DOUBLE) AS `LogProba_3`, CAST(NULL AS BIGINT) AS `Decision`, CAST(NULL AS DOUBLE) AS `DecisionProba` 
-FROM tmp_20180508192700_codegen_r2waar_gb_sum AS `GB_sum`), 
+FROM tmp_20180516112333_codegen_y6d204_gb_sum AS `GB_sum`), 
 score_class_union AS 
 (SELECT scu.`KEY_u` AS `KEY_u`, scu.`class` AS `class`, scu.`LogProba` AS `LogProba`, scu.`Proba` AS `Proba`, scu.`Score` AS `Score` 
 FROM (SELECT orig_cte.`KEY` AS `KEY_u`, 0 AS `class`, orig_cte.`LogProba_0` AS `LogProba`, orig_cte.`Proba_0` AS `Proba`, orig_cte.`Score_0` AS `Score` 
@@ -1038,7 +1022,7 @@ score_max AS
 FROM orig_cte LEFT OUTER JOIN (SELECT score_class_union.`KEY_u` AS `KEY_m`, max(score_class_union.`Score`) AS `max_Score` 
 FROM score_class_union GROUP BY score_class_union.`KEY_u`) AS max_select ON orig_cte.`KEY` = max_select.`KEY_m`), 
 score_soft_max_deltas AS 
-(SELECT score_max.`KEY` AS `KEY`, score_max.`Score_0` AS `Score_0`, score_max.`Score_1` AS `Score_1`, score_max.`Score_2` AS `Score_2`, score_max.`Score_3` AS `Score_3`, score_max.`Proba_0` AS `Proba_0`, score_max.`Proba_1` AS `Proba_1`, score_max.`Proba_2` AS `Proba_2`, score_max.`Proba_3` AS `Proba_3`, score_max.`LogProba_0` AS `LogProba_0`, score_max.`LogProba_1` AS `LogProba_1`, score_max.`LogProba_2` AS `LogProba_2`, score_max.`LogProba_3` AS `LogProba_3`, score_max.`Decision` AS `Decision`, score_max.`DecisionProba` AS `DecisionProba`, score_max.`KEY_m` AS `KEY_m`, score_max.`max_Score` AS `max_Score`, exp(score_max.`Score_0` - score_max.`max_Score`) AS `exp_delta_Score_0`, exp(score_max.`Score_1` - score_max.`max_Score`) AS `exp_delta_Score_1`, exp(score_max.`Score_2` - score_max.`max_Score`) AS `exp_delta_Score_2`, exp(score_max.`Score_3` - score_max.`max_Score`) AS `exp_delta_Score_3` 
+(SELECT score_max.`KEY` AS `KEY`, score_max.`Score_0` AS `Score_0`, score_max.`Score_1` AS `Score_1`, score_max.`Score_2` AS `Score_2`, score_max.`Score_3` AS `Score_3`, score_max.`Proba_0` AS `Proba_0`, score_max.`Proba_1` AS `Proba_1`, score_max.`Proba_2` AS `Proba_2`, score_max.`Proba_3` AS `Proba_3`, score_max.`LogProba_0` AS `LogProba_0`, score_max.`LogProba_1` AS `LogProba_1`, score_max.`LogProba_2` AS `LogProba_2`, score_max.`LogProba_3` AS `LogProba_3`, score_max.`Decision` AS `Decision`, score_max.`DecisionProba` AS `DecisionProba`, score_max.`KEY_m` AS `KEY_m`, score_max.`max_Score` AS `max_Score`, exp(CASE WHEN (-100.0 <= score_max.`Score_0` - score_max.`max_Score`) THEN score_max.`Score_0` - score_max.`max_Score` ELSE -100.0 END) AS `exp_delta_Score_0`, exp(CASE WHEN (-100.0 <= score_max.`Score_1` - score_max.`max_Score`) THEN score_max.`Score_1` - score_max.`max_Score` ELSE -100.0 END) AS `exp_delta_Score_1`, exp(CASE WHEN (-100.0 <= score_max.`Score_2` - score_max.`max_Score`) THEN score_max.`Score_2` - score_max.`max_Score` ELSE -100.0 END) AS `exp_delta_Score_2`, exp(CASE WHEN (-100.0 <= score_max.`Score_3` - score_max.`max_Score`) THEN score_max.`Score_3` - score_max.`max_Score` ELSE -100.0 END) AS `exp_delta_Score_3` 
 FROM score_max), 
 score_class_union_soft AS 
 (SELECT soft_scu.`KEY` AS `KEY`, soft_scu.`class` AS `class`, soft_scu.`exp_delta_Score` AS `exp_delta_Score` 

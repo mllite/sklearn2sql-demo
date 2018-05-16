@@ -10,19 +10,19 @@
 
 
 
--- Code For temporary table 2430_CODEGEN_RHRY3B_XGB_B0 part 1. Create 
+-- Code For temporary table 0516_CODEGEN_Z5CVUO_XGB_B0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "2430_CODEGEN_RHRY3B_XGB_B0" (
+CREATE GLOBAL TEMPORARY TABLE "0516_CODEGEN_Z5CVUO_XGB_B0" (
 	"KEY" NUMBER(19), 
 	"Estimator" BINARY_DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table 2430_CODEGEN_RHRY3B_XGB_B0 part 2. Populate
+-- Code For temporary table 0516_CODEGEN_Z5CVUO_XGB_B0 part 2. Populate
 
-INSERT INTO "2430_CODEGEN_RHRY3B_XGB_B0" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO "0516_CODEGEN_Z5CVUO_XGB_B0" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 0.48648887872695923) THEN CASE WHEN ("ADS"."Feature_5" < -0.6670668125152588) THEN 3 ELSE CASE WHEN ("ADS"."Feature_8" < -0.10979260504245758) THEN 7 ELSE 8 END END ELSE CASE WHEN ("ADS"."Feature_1" < -0.5779649615287781) THEN 5 ELSE CASE WHEN ("ADS"."Feature_8" < -0.06810655444860458) THEN 9 ELSE 10 END END END AS node_id_2 
 FROM "RANDOMREG_10" "ADS"), 
@@ -157,19 +157,19 @@ FROM "XGB_Model_7" UNION ALL SELECT "XGB_Model_8"."KEY" AS "KEY", "XGB_Model_8".
 FROM "XGB_Model_8" UNION ALL SELECT "XGB_Model_9"."KEY" AS "KEY", "XGB_Model_9"."Estimator" AS "Estimator" 
 FROM "XGB_Model_9") "XGB_esu_0") "XGB_B0") "U"
 
--- Code For temporary table 2430_CODEGEN_CMZZ1K_XGB_B1 part 1. Create 
+-- Code For temporary table 0516_CODEGEN_33DPFT_XGB_B1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "2430_CODEGEN_CMZZ1K_XGB_B1" (
+CREATE GLOBAL TEMPORARY TABLE "0516_CODEGEN_33DPFT_XGB_B1" (
 	"KEY" NUMBER(19), 
 	"Estimator" BINARY_DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table 2430_CODEGEN_CMZZ1K_XGB_B1 part 2. Populate
+-- Code For temporary table 0516_CODEGEN_33DPFT_XGB_B1 part 2. Populate
 
-INSERT INTO "2430_CODEGEN_CMZZ1K_XGB_B1" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO "0516_CODEGEN_33DPFT_XGB_B1" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "DT_node_lookup_10" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_4" < -0.9727684259414673) THEN 1 ELSE CASE WHEN ("ADS"."Feature_8" < -0.5495923757553101) THEN CASE WHEN ("ADS"."Feature_7" < 0.0455145500600338) THEN 5 ELSE 6 END ELSE CASE WHEN ("ADS"."Feature_2" < -0.3419182002544403) THEN 7 ELSE 8 END END END AS node_id_2 
 FROM "RANDOMREG_10" "ADS"), 
@@ -252,44 +252,30 @@ FROM "XGB_Model_13" UNION ALL SELECT "XGB_Model_14"."KEY" AS "KEY", "XGB_Model_1
 FROM "XGB_Model_14" UNION ALL SELECT "XGB_Model_15"."KEY" AS "KEY", "XGB_Model_15"."Estimator" AS "Estimator" 
 FROM "XGB_Model_15") "XGB_esu_1") "XGB_B1") "U"
 
--- Code For temporary table 0_CODEGEN_2OQM1C_XGB_UNION part 1. Create 
+-- Code For temporary table 516_CODEGEN_8LQWN4_XGB_SUM part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "0_CODEGEN_2OQM1C_XGB_UNION" (
+CREATE GLOBAL TEMPORARY TABLE "516_CODEGEN_8LQWN4_XGB_SUM" (
 	"KEY" NUMBER(19), 
 	"Estimator" BINARY_DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table 0_CODEGEN_2OQM1C_XGB_UNION part 2. Populate
+-- Code For temporary table 516_CODEGEN_8LQWN4_XGB_SUM part 2. Populate
 
-INSERT INTO "0_CODEGEN_2OQM1C_XGB_UNION" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
-FROM (SELECT "XGB_Union"."KEY", "XGB_Union"."Estimator" 
-FROM (SELECT "XGB_EnsembleUnion"."KEY" AS "KEY", "XGB_EnsembleUnion"."Estimator" AS "Estimator" 
+INSERT INTO "516_CODEGEN_8LQWN4_XGB_SUM" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+FROM (WITH "XGB_Union" AS 
+(SELECT "XGB_EnsembleUnion"."KEY" AS "KEY", "XGB_EnsembleUnion"."Estimator" AS "Estimator" 
 FROM (SELECT "XGB_B0"."KEY" AS "KEY", "XGB_B0"."Estimator" AS "Estimator" 
-FROM "2430_CODEGEN_RHRY3B_XGB_B0" "XGB_B0" UNION ALL SELECT "XGB_B1"."KEY" AS "KEY", "XGB_B1"."Estimator" AS "Estimator" 
-FROM "2430_CODEGEN_CMZZ1K_XGB_B1" "XGB_B1") "XGB_EnsembleUnion") "XGB_Union") "U"
-
--- Code For temporary table 430_CODEGEN_X0PL7L_XGB_SUM part 1. Create 
-
-
-CREATE GLOBAL TEMPORARY TABLE "430_CODEGEN_X0PL7L_XGB_SUM" (
-	"KEY" NUMBER(19), 
-	"Estimator" BINARY_DOUBLE
-)
-
- ON COMMIT PRESERVE ROWS
-
--- Code For temporary table 430_CODEGEN_X0PL7L_XGB_SUM part 2. Populate
-
-INSERT INTO "430_CODEGEN_X0PL7L_XGB_SUM" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
-FROM (SELECT "XGB_sum"."KEY", "XGB_sum"."Estimator" 
+FROM "0516_CODEGEN_Z5CVUO_XGB_B0" "XGB_B0" UNION ALL SELECT "XGB_B1"."KEY" AS "KEY", "XGB_B1"."Estimator" AS "Estimator" 
+FROM "0516_CODEGEN_33DPFT_XGB_B1" "XGB_B1") "XGB_EnsembleUnion")
+ SELECT "XGB_sum"."KEY", "XGB_sum"."Estimator" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Estimator" AS BINARY_DOUBLE) AS "Estimator" 
 FROM (SELECT "XGB_Union"."KEY" AS "KEY", sum("XGB_Union"."Estimator") AS "Estimator" 
-FROM "0_CODEGEN_2OQM1C_XGB_UNION" "XGB_Union" GROUP BY "XGB_Union"."KEY") "T") "XGB_sum") "U"
+FROM "XGB_Union" GROUP BY "XGB_Union"."KEY") "T") "XGB_sum") "U"
 
 -- Model deployment code
 
 SELECT "XGB_sum"."KEY" AS "KEY", "XGB_sum"."Estimator" + 0.5 AS "Estimator" 
-FROM "430_CODEGEN_X0PL7L_XGB_SUM" "XGB_sum"
+FROM "516_CODEGEN_8LQWN4_XGB_SUM" "XGB_sum"

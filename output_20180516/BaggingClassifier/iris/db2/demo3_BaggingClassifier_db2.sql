@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180508185445_codegen_26twkx_bag_b0 part 1. Create 
+-- Code For temporary table tmp_20180516122218_codegen_kuboiq_bag_b0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508185445_codegen_26twkx_bag_b0 (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516122218_codegen_kuboiq_bag_b0 (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE, 
 	"Proba_0" DOUBLE, 
@@ -28,9 +28,9 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508185445_codegen_26twkx_bag_b0 (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508185445_codegen_26twkx_bag_b0 part 2. Populate
+-- Code For temporary table tmp_20180516122218_codegen_kuboiq_bag_b0 part 2. Populate
 
-INSERT INTO tmp_20180508185445_codegen_26twkx_bag_b0 WITH "DT_node_lookup" AS 
+INSERT INTO tmp_20180516122218_codegen_kuboiq_bag_b0 WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_3" <= 1.6500000953674316) THEN CASE WHEN ("ADS"."Feature_2" <= 2.5999999046325684) THEN 2 ELSE CASE WHEN ("ADS"."Feature_2" <= 4.949999809265137) THEN 4 ELSE 5 END END ELSE CASE WHEN ("ADS"."Feature_3" <= 1.75) THEN CASE WHEN ("ADS"."Feature_1" <= 2.75) THEN 8 ELSE 9 END ELSE 10 END END AS node_id_2 
 FROM "IRIS" AS "ADS"), 
 "DT_node_data" AS 
@@ -164,10 +164,10 @@ FROM "BAG_Model_7" UNION ALL SELECT "BAG_Model_8"."KEY" AS "KEY", "BAG_Model_8".
 FROM "BAG_Model_8" UNION ALL SELECT "BAG_Model_9"."KEY" AS "KEY", "BAG_Model_9"."Score_0" AS "Score_0", "BAG_Model_9"."Proba_0" AS "Proba_0", "BAG_Model_9"."LogProba_0" AS "LogProba_0", "BAG_Model_9"."Score_1" AS "Score_1", "BAG_Model_9"."Proba_1" AS "Proba_1", "BAG_Model_9"."LogProba_1" AS "LogProba_1", "BAG_Model_9"."Score_2" AS "Score_2", "BAG_Model_9"."Proba_2" AS "Proba_2", "BAG_Model_9"."LogProba_2" AS "LogProba_2" 
 FROM "BAG_Model_9") AS "BAG_esu_0") AS "BAG_B0"
 
--- Code For temporary table tmp_20180508185445_codegen_isif6d_bag_b1 part 1. Create 
+-- Code For temporary table tmp_20180516122218_codegen_hxnspd_bag_b1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508185445_codegen_isif6d_bag_b1 (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516122218_codegen_hxnspd_bag_b1 (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE, 
 	"Proba_0" DOUBLE, 
@@ -182,9 +182,9 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508185445_codegen_isif6d_bag_b1 (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508185445_codegen_isif6d_bag_b1 part 2. Populate
+-- Code For temporary table tmp_20180516122218_codegen_hxnspd_bag_b1 part 2. Populate
 
-INSERT INTO tmp_20180508185445_codegen_isif6d_bag_b1 WITH "DT_node_lookup_10" AS 
+INSERT INTO tmp_20180516122218_codegen_hxnspd_bag_b1 WITH "DT_node_lookup_10" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 2.5999999046325684) THEN 1 ELSE CASE WHEN ("ADS"."Feature_3" <= 1.5499999523162842) THEN 3 ELSE CASE WHEN ("ADS"."Feature_2" <= 4.850000381469727) THEN CASE WHEN ("ADS"."Feature_1" <= 3.0999999046325684) THEN 6 ELSE 7 END ELSE 8 END END END AS node_id_2 
 FROM "IRIS" AS "ADS"), 
 "DT_node_data_10" AS 
@@ -266,10 +266,10 @@ FROM "BAG_Model_13" UNION ALL SELECT "BAG_Model_14"."KEY" AS "KEY", "BAG_Model_1
 FROM "BAG_Model_14" UNION ALL SELECT "BAG_Model_15"."KEY" AS "KEY", "BAG_Model_15"."Score_0" AS "Score_0", "BAG_Model_15"."Proba_0" AS "Proba_0", "BAG_Model_15"."LogProba_0" AS "LogProba_0", "BAG_Model_15"."Score_1" AS "Score_1", "BAG_Model_15"."Proba_1" AS "Proba_1", "BAG_Model_15"."LogProba_1" AS "LogProba_1", "BAG_Model_15"."Score_2" AS "Score_2", "BAG_Model_15"."Proba_2" AS "Proba_2", "BAG_Model_15"."LogProba_2" AS "LogProba_2" 
 FROM "BAG_Model_15") AS "BAG_esu_1") AS "BAG_B1"
 
--- Code For temporary table tmp_20180508185445_codegen_n8plnu_bag_union part 1. Create 
+-- Code For temporary table tmp_20180516122218_codegen_y0hkvi_bag_avg part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508185445_codegen_n8plnu_bag_union (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516122218_codegen_y0hkvi_bag_avg (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE, 
 	"Proba_0" DOUBLE, 
@@ -284,44 +284,23 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180508185445_codegen_n8plnu_bag_union (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508185445_codegen_n8plnu_bag_union part 2. Populate
+-- Code For temporary table tmp_20180516122218_codegen_y0hkvi_bag_avg part 2. Populate
 
-INSERT INTO tmp_20180508185445_codegen_n8plnu_bag_union SELECT "BAG_Union"."KEY", "BAG_Union"."Score_0", "BAG_Union"."Proba_0", "BAG_Union"."LogProba_0", "BAG_Union"."Score_1", "BAG_Union"."Proba_1", "BAG_Union"."LogProba_1", "BAG_Union"."Score_2", "BAG_Union"."Proba_2", "BAG_Union"."LogProba_2" 
-FROM (SELECT "BAG_EnsembleUnion"."KEY" AS "KEY", "BAG_EnsembleUnion"."Score_0" AS "Score_0", "BAG_EnsembleUnion"."Proba_0" AS "Proba_0", "BAG_EnsembleUnion"."LogProba_0" AS "LogProba_0", "BAG_EnsembleUnion"."Score_1" AS "Score_1", "BAG_EnsembleUnion"."Proba_1" AS "Proba_1", "BAG_EnsembleUnion"."LogProba_1" AS "LogProba_1", "BAG_EnsembleUnion"."Score_2" AS "Score_2", "BAG_EnsembleUnion"."Proba_2" AS "Proba_2", "BAG_EnsembleUnion"."LogProba_2" AS "LogProba_2" 
+INSERT INTO tmp_20180516122218_codegen_y0hkvi_bag_avg WITH "BAG_Union" AS 
+(SELECT "BAG_EnsembleUnion"."KEY" AS "KEY", "BAG_EnsembleUnion"."Score_0" AS "Score_0", "BAG_EnsembleUnion"."Proba_0" AS "Proba_0", "BAG_EnsembleUnion"."LogProba_0" AS "LogProba_0", "BAG_EnsembleUnion"."Score_1" AS "Score_1", "BAG_EnsembleUnion"."Proba_1" AS "Proba_1", "BAG_EnsembleUnion"."LogProba_1" AS "LogProba_1", "BAG_EnsembleUnion"."Score_2" AS "Score_2", "BAG_EnsembleUnion"."Proba_2" AS "Proba_2", "BAG_EnsembleUnion"."LogProba_2" AS "LogProba_2" 
 FROM (SELECT "BAG_B0"."KEY" AS "KEY", "BAG_B0"."Score_0" AS "Score_0", "BAG_B0"."Proba_0" AS "Proba_0", "BAG_B0"."LogProba_0" AS "LogProba_0", "BAG_B0"."Score_1" AS "Score_1", "BAG_B0"."Proba_1" AS "Proba_1", "BAG_B0"."LogProba_1" AS "LogProba_1", "BAG_B0"."Score_2" AS "Score_2", "BAG_B0"."Proba_2" AS "Proba_2", "BAG_B0"."LogProba_2" AS "LogProba_2" 
-FROM tmp_20180508185445_codegen_26twkx_bag_b0 AS "BAG_B0" UNION ALL SELECT "BAG_B1"."KEY" AS "KEY", "BAG_B1"."Score_0" AS "Score_0", "BAG_B1"."Proba_0" AS "Proba_0", "BAG_B1"."LogProba_0" AS "LogProba_0", "BAG_B1"."Score_1" AS "Score_1", "BAG_B1"."Proba_1" AS "Proba_1", "BAG_B1"."LogProba_1" AS "LogProba_1", "BAG_B1"."Score_2" AS "Score_2", "BAG_B1"."Proba_2" AS "Proba_2", "BAG_B1"."LogProba_2" AS "LogProba_2" 
-FROM tmp_20180508185445_codegen_isif6d_bag_b1 AS "BAG_B1") AS "BAG_EnsembleUnion") AS "BAG_Union"
-
--- Code For temporary table tmp_20180508185445_codegen_e9unzk_bag_avg part 1. Create 
-
-
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508185445_codegen_e9unzk_bag_avg (
-	"KEY" BIGINT, 
-	"Score_0" DOUBLE, 
-	"Proba_0" DOUBLE, 
-	"LogProba_0" DOUBLE, 
-	"Score_1" DOUBLE, 
-	"Proba_1" DOUBLE, 
-	"LogProba_1" DOUBLE, 
-	"Score_2" DOUBLE, 
-	"Proba_2" DOUBLE, 
-	"LogProba_2" DOUBLE
-)
-
- ON COMMIT PRESERVE ROWS
-
--- Code For temporary table tmp_20180508185445_codegen_e9unzk_bag_avg part 2. Populate
-
-INSERT INTO tmp_20180508185445_codegen_e9unzk_bag_avg SELECT "BAG_avg"."KEY", "BAG_avg"."Score_0", "BAG_avg"."Proba_0", "BAG_avg"."LogProba_0", "BAG_avg"."Score_1", "BAG_avg"."Proba_1", "BAG_avg"."LogProba_1", "BAG_avg"."Score_2", "BAG_avg"."Proba_2", "BAG_avg"."LogProba_2" 
+FROM tmp_20180516122218_codegen_kuboiq_bag_b0 AS "BAG_B0" UNION ALL SELECT "BAG_B1"."KEY" AS "KEY", "BAG_B1"."Score_0" AS "Score_0", "BAG_B1"."Proba_0" AS "Proba_0", "BAG_B1"."LogProba_0" AS "LogProba_0", "BAG_B1"."Score_1" AS "Score_1", "BAG_B1"."Proba_1" AS "Proba_1", "BAG_B1"."LogProba_1" AS "LogProba_1", "BAG_B1"."Score_2" AS "Score_2", "BAG_B1"."Proba_2" AS "Proba_2", "BAG_B1"."LogProba_2" AS "LogProba_2" 
+FROM tmp_20180516122218_codegen_hxnspd_bag_b1 AS "BAG_B1") AS "BAG_EnsembleUnion")
+ SELECT "BAG_avg"."KEY", "BAG_avg"."Score_0", "BAG_avg"."Proba_0", "BAG_avg"."LogProba_0", "BAG_avg"."Score_1", "BAG_avg"."Proba_1", "BAG_avg"."LogProba_1", "BAG_avg"."Score_2", "BAG_avg"."Proba_2", "BAG_avg"."LogProba_2" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Score_0" AS DOUBLE) AS "Score_0", CAST("T"."Proba_0" AS DOUBLE) AS "Proba_0", CAST("T"."LogProba_0" AS DOUBLE) AS "LogProba_0", CAST("T"."Score_1" AS DOUBLE) AS "Score_1", CAST("T"."Proba_1" AS DOUBLE) AS "Proba_1", CAST("T"."LogProba_1" AS DOUBLE) AS "LogProba_1", CAST("T"."Score_2" AS DOUBLE) AS "Score_2", CAST("T"."Proba_2" AS DOUBLE) AS "Proba_2", CAST("T"."LogProba_2" AS DOUBLE) AS "LogProba_2" 
 FROM (SELECT "BAG_Union"."KEY" AS "KEY", AVG(DOUBLE((CAST("BAG_Union"."Score_0" AS DOUBLE)))) AS "Score_0", AVG(DOUBLE((CAST("BAG_Union"."Proba_0" AS DOUBLE)))) AS "Proba_0", CAST(NULL AS DOUBLE) AS "LogProba_0", AVG(DOUBLE((CAST("BAG_Union"."Score_1" AS DOUBLE)))) AS "Score_1", AVG(DOUBLE((CAST("BAG_Union"."Proba_1" AS DOUBLE)))) AS "Proba_1", CAST(NULL AS DOUBLE) AS "LogProba_1", AVG(DOUBLE((CAST("BAG_Union"."Score_2" AS DOUBLE)))) AS "Score_2", AVG(DOUBLE((CAST("BAG_Union"."Proba_2" AS DOUBLE)))) AS "Proba_2", CAST(NULL AS DOUBLE) AS "LogProba_2" 
-FROM tmp_20180508185445_codegen_n8plnu_bag_union AS "BAG_Union" GROUP BY "BAG_Union"."KEY") AS "T") AS "BAG_avg"
+FROM "BAG_Union" GROUP BY "BAG_Union"."KEY") AS "T") AS "BAG_avg"
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT "BAG_avg"."KEY" AS "KEY", "BAG_avg"."Score_0" AS "Score_0", "BAG_avg"."Score_1" AS "Score_1", "BAG_avg"."Score_2" AS "Score_2", "BAG_avg"."Proba_0" AS "Proba_0", "BAG_avg"."Proba_1" AS "Proba_1", "BAG_avg"."Proba_2" AS "Proba_2", "BAG_avg"."LogProba_0" AS "LogProba_0", "BAG_avg"."LogProba_1" AS "LogProba_1", "BAG_avg"."LogProba_2" AS "LogProba_2", NULL AS "Decision", CAST(NULL AS DOUBLE) AS "DecisionProba" 
-FROM tmp_20180508185445_codegen_e9unzk_bag_avg AS "BAG_avg"), 
+FROM tmp_20180516122218_codegen_y0hkvi_bag_avg AS "BAG_avg"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

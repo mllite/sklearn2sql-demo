@@ -10,9 +10,22 @@
 
 
 
--- Model deployment code
+-- Code For temporary table tmp_20180516122413_codegen_az42n2_naivebayes_scores part 1. Create 
 
-WITH centered_data AS 
+
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516122413_codegen_az42n2_naivebayes_scores  (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Score_2" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table tmp_20180516122413_codegen_az42n2_naivebayes_scores part 2. Populate
+
+INSERT INTO tmp_20180516122413_codegen_az42n2_naivebayes_scores ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
+FROM (WITH centered_data AS 
 (SELECT "ADS"."KEY" AS "KEY", CAST("ADS"."Feature_0" AS DOUBLE PRECISION) - CAST(4.95945945945946 AS DOUBLE PRECISION) AS "Feature_0_0", CAST("ADS"."Feature_1" AS DOUBLE PRECISION) - CAST(3.416216216216216 AS DOUBLE PRECISION) AS "Feature_1_0", CAST("ADS"."Feature_2" AS DOUBLE PRECISION) - CAST(1.486486486486486 AS DOUBLE PRECISION) AS "Feature_2_0", CAST("ADS"."Feature_3" AS DOUBLE PRECISION) - CAST(0.259459459459459 AS DOUBLE PRECISION) AS "Feature_3_0", CAST("ADS"."Feature_0" AS DOUBLE PRECISION) - CAST(5.914999999999999 AS DOUBLE PRECISION) AS "Feature_0_1", CAST("ADS"."Feature_1" AS DOUBLE PRECISION) - CAST(2.76 AS DOUBLE PRECISION) AS "Feature_1_1", CAST("ADS"."Feature_2" AS DOUBLE PRECISION) - CAST(4.245 AS DOUBLE PRECISION) AS "Feature_2_1", CAST("ADS"."Feature_3" AS DOUBLE PRECISION) - CAST(1.325 AS DOUBLE PRECISION) AS "Feature_3_1", CAST("ADS"."Feature_0" AS DOUBLE PRECISION) - CAST(6.548837209302325 AS DOUBLE PRECISION) AS "Feature_0_2", CAST("ADS"."Feature_1" AS DOUBLE PRECISION) - CAST(2.967441860465116 AS DOUBLE PRECISION) AS "Feature_1_2", CAST("ADS"."Feature_2" AS DOUBLE PRECISION) - CAST(5.502325581395348 AS DOUBLE PRECISION) AS "Feature_2_2", CAST("ADS"."Feature_3" AS DOUBLE PRECISION) - CAST(2.01860465116279 AS DOUBLE PRECISION) AS "Feature_3_2" 
 FROM iris AS "ADS"), 
 dummy_cte AS 
@@ -23,14 +36,17 @@ FROM (SELECT centered_data."KEY" AS "KEY", 0 AS "Feature", CAST(-0.5 AS DOUBLE P
 FROM centered_data, dummy_cte UNION ALL SELECT centered_data."KEY" AS "KEY", 1 AS "Feature", CAST(-0.5 AS DOUBLE PRECISION) * CAST(-0.041337447630578 AS DOUBLE PRECISION) - (CAST(0.5 AS DOUBLE PRECISION) * centered_data."Feature_1_0" * centered_data."Feature_1_0") / CAST(0.152710010228077 AS DOUBLE PRECISION) AS log_proba_0, CAST(-0.5 AS DOUBLE PRECISION) * CAST(-0.388673313214403 AS DOUBLE PRECISION) - (CAST(0.5 AS DOUBLE PRECISION) * centered_data."Feature_1_1" * centered_data."Feature_1_1") / CAST(0.107900002923475 AS DOUBLE PRECISION) AS log_proba_1, CAST(-0.5 AS DOUBLE PRECISION) * CAST(-0.47067492564648 AS DOUBLE PRECISION) - (CAST(0.5 AS DOUBLE PRECISION) * centered_data."Feature_1_2" * centered_data."Feature_1_2") / CAST(0.099405086752572 AS DOUBLE PRECISION) AS log_proba_2 
 FROM centered_data, dummy_cte UNION ALL SELECT centered_data."KEY" AS "KEY", 2 AS "Feature", CAST(-0.5 AS DOUBLE PRECISION) * CAST(-1.789939475777114 AS DOUBLE PRECISION) - (CAST(0.5 AS DOUBLE PRECISION) * centered_data."Feature_2_0" * centered_data."Feature_2_0") / CAST(0.026574144632752 AS DOUBLE PRECISION) AS log_proba_0, CAST(-0.5 AS DOUBLE PRECISION) * CAST(0.368092407502572 AS DOUBLE PRECISION) - (CAST(0.5 AS DOUBLE PRECISION) * centered_data."Feature_2_1" * centered_data."Feature_2_1") / CAST(0.229975002923475 AS DOUBLE PRECISION) AS log_proba_1, CAST(-0.5 AS DOUBLE PRECISION) * CAST(0.409768704122909 AS DOUBLE PRECISION) - (CAST(0.5 AS DOUBLE PRECISION) * centered_data."Feature_2_2" * centered_data."Feature_2_2") / CAST(0.239762036455114 AS DOUBLE PRECISION) AS log_proba_2 
 FROM centered_data, dummy_cte UNION ALL SELECT centered_data."KEY" AS "KEY", 3 AS "Feature", CAST(-0.5 AS DOUBLE PRECISION) * CAST(-2.529789819103305 AS DOUBLE PRECISION) - (CAST(0.5 AS DOUBLE PRECISION) * centered_data."Feature_3_0" * centered_data."Feature_3_0") / CAST(0.01268079182048 AS DOUBLE PRECISION) AS log_proba_0, CAST(-0.5 AS DOUBLE PRECISION) * CAST(-1.323319577881619 AS DOUBLE PRECISION) - (CAST(0.5 AS DOUBLE PRECISION) * centered_data."Feature_3_1" * centered_data."Feature_3_1") / CAST(0.042375002923475 AS DOUBLE PRECISION) AS log_proba_1, CAST(-0.5 AS DOUBLE PRECISION) * CAST(-0.703934755097896 AS DOUBLE PRECISION) - (CAST(0.5 AS DOUBLE PRECISION) * centered_data."Feature_3_2" * centered_data."Feature_3_2") / CAST(0.078723637320446 AS DOUBLE PRECISION) AS log_proba_2 
-FROM centered_data, dummy_cte) AS "Values"), 
-"NaiveBayes_Scores" AS 
-(SELECT nb_sums."KEY" AS "KEY", nb_sums."Score_0" AS "Score_0", nb_sums."Score_1" AS "Score_1", nb_sums."Score_2" AS "Score_2" 
+FROM centered_data, dummy_cte) AS "Values")
+ SELECT "NaiveBayes_Scores"."KEY", "NaiveBayes_Scores"."Score_0", "NaiveBayes_Scores"."Score_1", "NaiveBayes_Scores"."Score_2" 
+FROM (SELECT nb_sums."KEY" AS "KEY", nb_sums."Score_0" AS "Score_0", nb_sums."Score_1" AS "Score_1", nb_sums."Score_2" AS "Score_2" 
 FROM (SELECT "NaiveBayes_data"."KEY" AS "KEY", CAST(-1.176573830137822 AS DOUBLE PRECISION) + sum("NaiveBayes_data".log_proba_0) AS "Score_0", CAST(-1.09861228866811 AS DOUBLE PRECISION) + sum("NaiveBayes_data".log_proba_1) AS "Score_1", CAST(-1.026291627088484 AS DOUBLE PRECISION) + sum("NaiveBayes_data".log_proba_2) AS "Score_2" 
-FROM "NaiveBayes_data" GROUP BY "NaiveBayes_data"."KEY") AS nb_sums), 
-orig_cte AS 
+FROM "NaiveBayes_data" GROUP BY "NaiveBayes_data"."KEY") AS nb_sums) AS "NaiveBayes_Scores") AS "U"
+
+-- Model deployment code
+
+WITH orig_cte AS 
 (SELECT "NaiveBayes_Scores"."KEY" AS "KEY", "NaiveBayes_Scores"."Score_0" AS "Score_0", "NaiveBayes_Scores"."Score_1" AS "Score_1", "NaiveBayes_Scores"."Score_2" AS "Score_2", CAST(NULL AS DOUBLE PRECISION) AS "Proba_0", CAST(NULL AS DOUBLE PRECISION) AS "Proba_1", CAST(NULL AS DOUBLE PRECISION) AS "Proba_2", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_0", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_1", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_2", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba" 
-FROM "NaiveBayes_Scores"), 
+FROM tmp_20180516122413_codegen_az42n2_naivebayes_scores AS "NaiveBayes_Scores"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu."class" AS "class", scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS "class", orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 
@@ -42,7 +58,7 @@ score_max AS
 FROM orig_cte LEFT OUTER JOIN (SELECT score_class_union."KEY_u" AS "KEY_m", max(score_class_union."Score") AS "max_Score" 
 FROM score_class_union GROUP BY score_class_union."KEY_u") AS max_select ON orig_cte."KEY" = max_select."KEY_m"), 
 score_soft_max_deltas AS 
-(SELECT score_max."KEY" AS "KEY", score_max."Score_0" AS "Score_0", score_max."Score_1" AS "Score_1", score_max."Score_2" AS "Score_2", score_max."Proba_0" AS "Proba_0", score_max."Proba_1" AS "Proba_1", score_max."Proba_2" AS "Proba_2", score_max."LogProba_0" AS "LogProba_0", score_max."LogProba_1" AS "LogProba_1", score_max."LogProba_2" AS "LogProba_2", score_max."Decision" AS "Decision", score_max."DecisionProba" AS "DecisionProba", score_max."KEY_m" AS "KEY_m", score_max."max_Score" AS "max_Score", exp(score_max."Score_0" - score_max."max_Score") AS "exp_delta_Score_0", exp(score_max."Score_1" - score_max."max_Score") AS "exp_delta_Score_1", exp(score_max."Score_2" - score_max."max_Score") AS "exp_delta_Score_2" 
+(SELECT score_max."KEY" AS "KEY", score_max."Score_0" AS "Score_0", score_max."Score_1" AS "Score_1", score_max."Score_2" AS "Score_2", score_max."Proba_0" AS "Proba_0", score_max."Proba_1" AS "Proba_1", score_max."Proba_2" AS "Proba_2", score_max."LogProba_0" AS "LogProba_0", score_max."LogProba_1" AS "LogProba_1", score_max."LogProba_2" AS "LogProba_2", score_max."Decision" AS "Decision", score_max."DecisionProba" AS "DecisionProba", score_max."KEY_m" AS "KEY_m", score_max."max_Score" AS "max_Score", exp(greatest(CAST(-100.0 AS DOUBLE PRECISION), score_max."Score_0" - score_max."max_Score")) AS "exp_delta_Score_0", exp(greatest(CAST(-100.0 AS DOUBLE PRECISION), score_max."Score_1" - score_max."max_Score")) AS "exp_delta_Score_1", exp(greatest(CAST(-100.0 AS DOUBLE PRECISION), score_max."Score_2" - score_max."max_Score")) AS "exp_delta_Score_2" 
 FROM score_max), 
 score_class_union_soft AS 
 (SELECT soft_scu."KEY" AS "KEY", soft_scu."class" AS "class", soft_scu."exp_delta_Score" AS "exp_delta_Score" 
@@ -61,7 +77,7 @@ arg_max_cte AS
 (SELECT score_soft_max."KEY" AS "KEY", score_soft_max."Score_0" AS "Score_0", score_soft_max."Score_1" AS "Score_1", score_soft_max."Score_2" AS "Score_2", score_soft_max."Proba_0" AS "Proba_0", score_soft_max."Proba_1" AS "Proba_1", score_soft_max."Proba_2" AS "Proba_2", score_soft_max."LogProba_0" AS "LogProba_0", score_soft_max."LogProba_1" AS "LogProba_1", score_soft_max."LogProba_2" AS "LogProba_2", score_soft_max."Decision" AS "Decision", score_soft_max."DecisionProba" AS "DecisionProba", score_soft_max."KEY_m" AS "KEY_m", score_soft_max."max_Score" AS "max_Score", score_soft_max."exp_delta_Score_0" AS "exp_delta_Score_0", score_soft_max."exp_delta_Score_1" AS "exp_delta_Score_1", score_soft_max."exp_delta_Score_2" AS "exp_delta_Score_2", score_soft_max."KEY_sum" AS "KEY_sum", score_soft_max."sum_ExpDeltaScore" AS "sum_ExpDeltaScore", "arg_max_t_Score"."KEY_Score" AS "KEY_Score", "arg_max_t_Score"."arg_max_Score" AS "arg_max_Score", soft_max_comp."KEY_softmax" AS "KEY_softmax", soft_max_comp."SoftProba_0" AS "SoftProba_0", soft_max_comp."SoftProba_1" AS "SoftProba_1", soft_max_comp."SoftProba_2" AS "SoftProba_2" 
 FROM score_soft_max LEFT OUTER JOIN (SELECT union_with_max."KEY" AS "KEY_Score", min(union_with_max."class") AS "arg_max_Score" 
 FROM union_with_max 
-WHERE union_with_max."max_Score" <= union_with_max."Score" GROUP BY union_with_max."KEY") AS "arg_max_t_Score" ON score_soft_max."KEY" = "arg_max_t_Score"."KEY_Score" LEFT OUTER JOIN (SELECT score_soft_max."KEY" AS "KEY_softmax", score_soft_max."exp_delta_Score_0" / score_soft_max."sum_ExpDeltaScore" AS "SoftProba_0", score_soft_max."exp_delta_Score_1" / score_soft_max."sum_ExpDeltaScore" AS "SoftProba_1", score_soft_max."exp_delta_Score_2" / score_soft_max."sum_ExpDeltaScore" AS "SoftProba_2" 
+WHERE union_with_max."Score" >= union_with_max."max_Score" GROUP BY union_with_max."KEY") AS "arg_max_t_Score" ON score_soft_max."KEY" = "arg_max_t_Score"."KEY_Score" LEFT OUTER JOIN (SELECT score_soft_max."KEY" AS "KEY_softmax", score_soft_max."exp_delta_Score_0" / score_soft_max."sum_ExpDeltaScore" AS "SoftProba_0", score_soft_max."exp_delta_Score_1" / score_soft_max."sum_ExpDeltaScore" AS "SoftProba_1", score_soft_max."exp_delta_Score_2" / score_soft_max."sum_ExpDeltaScore" AS "SoftProba_2" 
 FROM score_soft_max) AS soft_max_comp ON soft_max_comp."KEY_softmax" = "arg_max_t_Score"."KEY_Score")
  SELECT arg_max_cte."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_1", CAST(NULL AS DOUBLE PRECISION) AS "Score_2", arg_max_cte."SoftProba_0" AS "Proba_0", arg_max_cte."SoftProba_1" AS "Proba_1", arg_max_cte."SoftProba_2" AS "Proba_2", CASE WHEN (arg_max_cte."SoftProba_0" IS NULL OR arg_max_cte."SoftProba_0" > CAST(0.0 AS DOUBLE PRECISION)) THEN ln(arg_max_cte."SoftProba_0") ELSE -1.79769313486231e+308 END AS "LogProba_0", CASE WHEN (arg_max_cte."SoftProba_1" IS NULL OR arg_max_cte."SoftProba_1" > CAST(0.0 AS DOUBLE PRECISION)) THEN ln(arg_max_cte."SoftProba_1") ELSE -1.79769313486231e+308 END AS "LogProba_1", CASE WHEN (arg_max_cte."SoftProba_2" IS NULL OR arg_max_cte."SoftProba_2" > CAST(0.0 AS DOUBLE PRECISION)) THEN ln(arg_max_cte."SoftProba_2") ELSE -1.79769313486231e+308 END AS "LogProba_2", arg_max_cte."arg_max_Score" AS "Decision", greatest(arg_max_cte."SoftProba_0", arg_max_cte."SoftProba_1", arg_max_cte."SoftProba_2") AS "DecisionProba" 
 FROM arg_max_cte

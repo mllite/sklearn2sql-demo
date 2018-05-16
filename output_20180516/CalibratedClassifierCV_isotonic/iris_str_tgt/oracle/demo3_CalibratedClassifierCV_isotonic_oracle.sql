@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table _CODEGEN_P8E4TO_CALPROB_B0 part 1. Create 
+-- Code For temporary table _CODEGEN_ZIAGWG_CALPROB_B0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "_CODEGEN_P8E4TO_CALPROB_B0" (
+CREATE GLOBAL TEMPORARY TABLE "_CODEGEN_ZIAGWG_CALPROB_B0" (
 	"KEY" NUMBER(19), 
 	"Proba_CLASS_0" BINARY_DOUBLE, 
 	"Proba_CLASS_1" BINARY_DOUBLE, 
@@ -22,9 +22,9 @@ CREATE GLOBAL TEMPORARY TABLE "_CODEGEN_P8E4TO_CALPROB_B0" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table _CODEGEN_P8E4TO_CALPROB_B0 part 2. Populate
+-- Code For temporary table _CODEGEN_ZIAGWG_CALPROB_B0 part 2. Populate
 
-INSERT INTO "_CODEGEN_P8E4TO_CALPROB_B0" ("KEY", "Proba_CLASS_0", "Proba_CLASS_1", "Proba_CLASS_2") SELECT "U"."KEY", "U"."Proba_CLASS_0", "U"."Proba_CLASS_1", "U"."Proba_CLASS_2" 
+INSERT INTO "_CODEGEN_ZIAGWG_CALPROB_B0" ("KEY", "Proba_CLASS_0", "Proba_CLASS_1", "Proba_CLASS_2") SELECT "U"."KEY", "U"."Proba_CLASS_0", "U"."Proba_CLASS_1", "U"."Proba_CLASS_2" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_3" <= 0.75) THEN 1 ELSE CASE WHEN ("ADS"."Feature_2" <= 4.75) THEN 3 ELSE CASE WHEN ("ADS"."Feature_2" <= 5.050000190734863) THEN CASE WHEN ("ADS"."Feature_1" <= 3.049999952316284) THEN CASE WHEN ("ADS"."Feature_3" <= 1.75) THEN 7 ELSE 8 END ELSE 9 END ELSE 10 END END END AS node_id_2 
 FROM "IRIS_STR_TGT" "ADS"), 
@@ -105,10 +105,10 @@ FROM "Normalized_Probas_1" UNION ALL SELECT "Normalized_Probas_2"."KEY" AS "KEY"
 FROM "Normalized_Probas_2" UNION ALL SELECT "Normalized_Probas_3"."KEY" AS "KEY", "Normalized_Probas_3"."Proba_CLASS_0" AS "Proba_CLASS_0", "Normalized_Probas_3"."Proba_CLASS_1" AS "Proba_CLASS_1", "Normalized_Probas_3"."Proba_CLASS_2" AS "Proba_CLASS_2" 
 FROM "Normalized_Probas_3") "CalProb_esu_0") "CalProb_B0") "U"
 
--- Code For temporary table DEGEN_MFBRQP_CALPROB_UNION part 1. Create 
+-- Code For temporary table CODEGEN_OZNKY1_CALPROB_AVG part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "DEGEN_MFBRQP_CALPROB_UNION" (
+CREATE GLOBAL TEMPORARY TABLE "CODEGEN_OZNKY1_CALPROB_AVG" (
 	"KEY" NUMBER(19), 
 	"Proba_CLASS_0" BINARY_DOUBLE, 
 	"Proba_CLASS_1" BINARY_DOUBLE, 
@@ -117,39 +117,23 @@ CREATE GLOBAL TEMPORARY TABLE "DEGEN_MFBRQP_CALPROB_UNION" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table DEGEN_MFBRQP_CALPROB_UNION part 2. Populate
+-- Code For temporary table CODEGEN_OZNKY1_CALPROB_AVG part 2. Populate
 
-INSERT INTO "DEGEN_MFBRQP_CALPROB_UNION" ("KEY", "Proba_CLASS_0", "Proba_CLASS_1", "Proba_CLASS_2") SELECT "U"."KEY", "U"."Proba_CLASS_0", "U"."Proba_CLASS_1", "U"."Proba_CLASS_2" 
-FROM (SELECT "CalProb_Union"."KEY", "CalProb_Union"."Proba_CLASS_0", "CalProb_Union"."Proba_CLASS_1", "CalProb_Union"."Proba_CLASS_2" 
-FROM (SELECT "CalProb_EnsembleUnion"."KEY" AS "KEY", "CalProb_EnsembleUnion"."Proba_CLASS_0" AS "Proba_CLASS_0", "CalProb_EnsembleUnion"."Proba_CLASS_1" AS "Proba_CLASS_1", "CalProb_EnsembleUnion"."Proba_CLASS_2" AS "Proba_CLASS_2" 
+INSERT INTO "CODEGEN_OZNKY1_CALPROB_AVG" ("KEY", "Proba_CLASS_0", "Proba_CLASS_1", "Proba_CLASS_2") SELECT "U"."KEY", "U"."Proba_CLASS_0", "U"."Proba_CLASS_1", "U"."Proba_CLASS_2" 
+FROM (WITH "CalProb_Union" AS 
+(SELECT "CalProb_EnsembleUnion"."KEY" AS "KEY", "CalProb_EnsembleUnion"."Proba_CLASS_0" AS "Proba_CLASS_0", "CalProb_EnsembleUnion"."Proba_CLASS_1" AS "Proba_CLASS_1", "CalProb_EnsembleUnion"."Proba_CLASS_2" AS "Proba_CLASS_2" 
 FROM (SELECT "CalProb_B0"."KEY" AS "KEY", "CalProb_B0"."Proba_CLASS_0" AS "Proba_CLASS_0", "CalProb_B0"."Proba_CLASS_1" AS "Proba_CLASS_1", "CalProb_B0"."Proba_CLASS_2" AS "Proba_CLASS_2" 
-FROM "_CODEGEN_P8E4TO_CALPROB_B0" "CalProb_B0") "CalProb_EnsembleUnion") "CalProb_Union") "U"
-
--- Code For temporary table CODEGEN_X5RBKC_CALPROB_AVG part 1. Create 
-
-
-CREATE GLOBAL TEMPORARY TABLE "CODEGEN_X5RBKC_CALPROB_AVG" (
-	"KEY" NUMBER(19), 
-	"Proba_CLASS_0" BINARY_DOUBLE, 
-	"Proba_CLASS_1" BINARY_DOUBLE, 
-	"Proba_CLASS_2" BINARY_DOUBLE
-)
-
- ON COMMIT PRESERVE ROWS
-
--- Code For temporary table CODEGEN_X5RBKC_CALPROB_AVG part 2. Populate
-
-INSERT INTO "CODEGEN_X5RBKC_CALPROB_AVG" ("KEY", "Proba_CLASS_0", "Proba_CLASS_1", "Proba_CLASS_2") SELECT "U"."KEY", "U"."Proba_CLASS_0", "U"."Proba_CLASS_1", "U"."Proba_CLASS_2" 
-FROM (SELECT "CalProb_avg"."KEY", "CalProb_avg"."Proba_CLASS_0", "CalProb_avg"."Proba_CLASS_1", "CalProb_avg"."Proba_CLASS_2" 
+FROM "_CODEGEN_ZIAGWG_CALPROB_B0" "CalProb_B0") "CalProb_EnsembleUnion")
+ SELECT "CalProb_avg"."KEY", "CalProb_avg"."Proba_CLASS_0", "CalProb_avg"."Proba_CLASS_1", "CalProb_avg"."Proba_CLASS_2" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Proba_CLASS_0" AS BINARY_DOUBLE) AS "Proba_CLASS_0", CAST("T"."Proba_CLASS_1" AS BINARY_DOUBLE) AS "Proba_CLASS_1", CAST("T"."Proba_CLASS_2" AS BINARY_DOUBLE) AS "Proba_CLASS_2" 
 FROM (SELECT "CalProb_Union"."KEY" AS "KEY", avg(CAST("CalProb_Union"."Proba_CLASS_0" AS BINARY_DOUBLE)) AS "Proba_CLASS_0", avg(CAST("CalProb_Union"."Proba_CLASS_1" AS BINARY_DOUBLE)) AS "Proba_CLASS_1", avg(CAST("CalProb_Union"."Proba_CLASS_2" AS BINARY_DOUBLE)) AS "Proba_CLASS_2" 
-FROM "DEGEN_MFBRQP_CALPROB_UNION" "CalProb_Union" GROUP BY "CalProb_Union"."KEY") "T") "CalProb_avg") "U"
+FROM "CalProb_Union" GROUP BY "CalProb_Union"."KEY") "T") "CalProb_avg") "U"
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT "CalProb_avg"."KEY" AS "KEY", CAST(NULL AS BINARY_DOUBLE) AS "Score_CLASS_0", CAST(NULL AS BINARY_DOUBLE) AS "Score_CLASS_1", CAST(NULL AS BINARY_DOUBLE) AS "Score_CLASS_2", "CalProb_avg"."Proba_CLASS_0" AS "Proba_CLASS_0", "CalProb_avg"."Proba_CLASS_1" AS "Proba_CLASS_1", "CalProb_avg"."Proba_CLASS_2" AS "Proba_CLASS_2", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_CLASS_0", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_CLASS_1", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_CLASS_2", CAST(NULL AS NUMBER(19)) AS "Decision", CAST(NULL AS BINARY_DOUBLE) AS "DecisionProba" 
-FROM "CODEGEN_X5RBKC_CALPROB_AVG" "CalProb_avg"), 
+FROM "CODEGEN_OZNKY1_CALPROB_AVG" "CalProb_avg"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 'CLASS_0' AS class, orig_cte."LogProba_CLASS_0" AS "LogProba", orig_cte."Proba_CLASS_0" AS "Proba", orig_cte."Score_CLASS_0" AS "Score" 

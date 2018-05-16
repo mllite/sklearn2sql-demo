@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table 81831_CODEGEN_CUS7LS_RF_B0 part 1. Create 
+-- Code For temporary table 80516_CODEGEN_0GP0E2_RF_B0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "81831_CODEGEN_CUS7LS_RF_B0" (
+CREATE GLOBAL TEMPORARY TABLE "80516_CODEGEN_0GP0E2_RF_B0" (
 	"KEY" NUMBER(19), 
 	"Score_0" BINARY_DOUBLE, 
 	"Proba_0" BINARY_DOUBLE, 
@@ -31,9 +31,9 @@ CREATE GLOBAL TEMPORARY TABLE "81831_CODEGEN_CUS7LS_RF_B0" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table 81831_CODEGEN_CUS7LS_RF_B0 part 2. Populate
+-- Code For temporary table 80516_CODEGEN_0GP0E2_RF_B0 part 2. Populate
 
-INSERT INTO "81831_CODEGEN_CUS7LS_RF_B0" ("KEY", "Score_0", "Proba_0", "LogProba_0", "Score_1", "Proba_1", "LogProba_1", "Score_2", "Proba_2", "LogProba_2", "Score_3", "Proba_3", "LogProba_3") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."LogProba_0", "U"."Score_1", "U"."Proba_1", "U"."LogProba_1", "U"."Score_2", "U"."Proba_2", "U"."LogProba_2", "U"."Score_3", "U"."Proba_3", "U"."LogProba_3" 
+INSERT INTO "80516_CODEGEN_0GP0E2_RF_B0" ("KEY", "Score_0", "Proba_0", "LogProba_0", "Score_1", "Proba_1", "LogProba_1", "Score_2", "Proba_2", "LogProba_2", "Score_3", "Proba_3", "LogProba_3") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."LogProba_0", "U"."Score_1", "U"."Proba_1", "U"."LogProba_1", "U"."Score_2", "U"."Proba_2", "U"."LogProba_2", "U"."Score_3", "U"."Proba_3", "U"."LogProba_3" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_65" <= 0.5756146907806396) THEN CASE WHEN ("ADS"."Feature_70" <= 1.0987422466278076) THEN CASE WHEN ("ADS"."Feature_34" <= 0.5442450046539307) THEN CASE WHEN ("ADS"."Feature_41" <= -0.3011489510536194) THEN CASE WHEN ("ADS"."Feature_99" <= 0.4967024624347687) THEN 5 ELSE CASE WHEN ("ADS"."Feature_56" <= -2.5421388149261475) THEN 7 ELSE 8 END END ELSE CASE WHEN ("ADS"."Feature_17" <= -0.239972785115242) THEN CASE WHEN ("ADS"."Feature_90" <= 1.7714502811431885) THEN 11 ELSE 12 END ELSE CASE WHEN ("ADS"."Feature_24" <= 0.09437672793865204) THEN 14 ELSE CASE WHEN ("ADS"."Feature_4" <= -0.8614770770072937) THEN 16 ELSE CASE WHEN ("ADS"."Feature_37" <= 0.5710773468017578) THEN 18 ELSE 19 END END END END END ELSE CASE WHEN ("ADS"."Feature_8" <= -0.6079371571540833) THEN CASE WHEN ("ADS"."Feature_82" <= -0.5997563600540161) THEN CASE WHEN ("ADS"."Feature_4" <= -0.47749948501586914) THEN 23 ELSE CASE WHEN ("ADS"."Feature_6" <= -1.002400279045105) THEN 25 ELSE 26 END END ELSE 27 END ELSE CASE WHEN ("ADS"."Feature_0" <= 0.3214724659919739) THEN 29 ELSE CASE WHEN ("ADS"."Feature_13" <= -0.025273285806179047) THEN 31 ELSE CASE WHEN ("ADS"."Feature_73" <= 0.19319891929626465) THEN 33 ELSE 34 END END END END END ELSE 35 END ELSE CASE WHEN ("ADS"."Feature_44" <= -1.4257612228393555) THEN 37 ELSE CASE WHEN ("ADS"."Feature_66" <= 1.4623148441314697) THEN CASE WHEN ("ADS"."Feature_13" <= -2.333749771118164) THEN 40 ELSE 41 END ELSE 42 END END END AS node_id_2 
 FROM "FOURCLASS_100" "ADS"), 
@@ -168,10 +168,10 @@ FROM "RF_Model_7" UNION ALL SELECT "RF_Model_8"."KEY" AS "KEY", "RF_Model_8"."Sc
 FROM "RF_Model_8" UNION ALL SELECT "RF_Model_9"."KEY" AS "KEY", "RF_Model_9"."Score_0" AS "Score_0", "RF_Model_9"."Proba_0" AS "Proba_0", "RF_Model_9"."LogProba_0" AS "LogProba_0", "RF_Model_9"."Score_1" AS "Score_1", "RF_Model_9"."Proba_1" AS "Proba_1", "RF_Model_9"."LogProba_1" AS "LogProba_1", "RF_Model_9"."Score_2" AS "Score_2", "RF_Model_9"."Proba_2" AS "Proba_2", "RF_Model_9"."LogProba_2" AS "LogProba_2", "RF_Model_9"."Score_3" AS "Score_3", "RF_Model_9"."Proba_3" AS "Proba_3", "RF_Model_9"."LogProba_3" AS "LogProba_3" 
 FROM "RF_Model_9") "RF_esu_0") "RF_B0") "U"
 
--- Code For temporary table 81831_CODEGEN_5XHQV7_RF_B1 part 1. Create 
+-- Code For temporary table 80516_CODEGEN_L5RWG7_RF_B1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "81831_CODEGEN_5XHQV7_RF_B1" (
+CREATE GLOBAL TEMPORARY TABLE "80516_CODEGEN_L5RWG7_RF_B1" (
 	"KEY" NUMBER(19), 
 	"Score_0" BINARY_DOUBLE, 
 	"Proba_0" BINARY_DOUBLE, 
@@ -189,9 +189,9 @@ CREATE GLOBAL TEMPORARY TABLE "81831_CODEGEN_5XHQV7_RF_B1" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table 81831_CODEGEN_5XHQV7_RF_B1 part 2. Populate
+-- Code For temporary table 80516_CODEGEN_L5RWG7_RF_B1 part 2. Populate
 
-INSERT INTO "81831_CODEGEN_5XHQV7_RF_B1" ("KEY", "Score_0", "Proba_0", "LogProba_0", "Score_1", "Proba_1", "LogProba_1", "Score_2", "Proba_2", "LogProba_2", "Score_3", "Proba_3", "LogProba_3") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."LogProba_0", "U"."Score_1", "U"."Proba_1", "U"."LogProba_1", "U"."Score_2", "U"."Proba_2", "U"."LogProba_2", "U"."Score_3", "U"."Proba_3", "U"."LogProba_3" 
+INSERT INTO "80516_CODEGEN_L5RWG7_RF_B1" ("KEY", "Score_0", "Proba_0", "LogProba_0", "Score_1", "Proba_1", "LogProba_1", "Score_2", "Proba_2", "LogProba_2", "Score_3", "Proba_3", "LogProba_3") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."LogProba_0", "U"."Score_1", "U"."Proba_1", "U"."LogProba_1", "U"."Score_2", "U"."Proba_2", "U"."LogProba_2", "U"."Score_3", "U"."Proba_3", "U"."LogProba_3" 
 FROM (WITH "DT_node_lookup_10" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_73" <= 1.6641205549240112) THEN CASE WHEN ("ADS"."Feature_56" <= 0.6710653305053711) THEN CASE WHEN ("ADS"."Feature_94" <= 1.5053610801696777) THEN CASE WHEN ("ADS"."Feature_51" <= 3.0495033264160156) THEN CASE WHEN ("ADS"."Feature_56" <= -1.138293981552124) THEN CASE WHEN ("ADS"."Feature_54" <= 0.32513749599456787) THEN CASE WHEN ("ADS"."Feature_53" <= -3.0611824989318848) THEN 7 ELSE 8 END ELSE CASE WHEN ("ADS"."Feature_33" <= -0.5274901390075684) THEN 10 ELSE CASE WHEN ("ADS"."Feature_82" <= 1.0715925693511963) THEN CASE WHEN ("ADS"."Feature_5" <= -0.07872672379016876) THEN 13 ELSE 14 END ELSE 15 END END END ELSE CASE WHEN ("ADS"."Feature_27" <= 0.6374855041503906) THEN 17 ELSE CASE WHEN ("ADS"."Feature_51" <= 0.1841343492269516) THEN 19 ELSE 20 END END END ELSE 21 END ELSE 22 END ELSE CASE WHEN ("ADS"."Feature_62" <= 0.33532100915908813) THEN CASE WHEN ("ADS"."Feature_53" <= 2.106461763381958) THEN CASE WHEN ("ADS"."Feature_33" <= 0.6387379765510559) THEN 26 ELSE CASE WHEN ("ADS"."Feature_87" <= 0.2247212529182434) THEN 28 ELSE 29 END END ELSE CASE WHEN ("ADS"."Feature_19" <= -0.39912694692611694) THEN CASE WHEN ("ADS"."Feature_87" <= 0.2607893645763397) THEN 32 ELSE 33 END ELSE 34 END END ELSE CASE WHEN ("ADS"."Feature_23" <= -0.10857518017292023) THEN 36 ELSE 37 END END END ELSE CASE WHEN ("ADS"."Feature_75" <= -1.472202181816101) THEN 39 ELSE 40 END END AS node_id_2 
 FROM "FOURCLASS_100" "ADS"), 
@@ -274,10 +274,10 @@ FROM "RF_Model_13" UNION ALL SELECT "RF_Model_14"."KEY" AS "KEY", "RF_Model_14".
 FROM "RF_Model_14" UNION ALL SELECT "RF_Model_15"."KEY" AS "KEY", "RF_Model_15"."Score_0" AS "Score_0", "RF_Model_15"."Proba_0" AS "Proba_0", "RF_Model_15"."LogProba_0" AS "LogProba_0", "RF_Model_15"."Score_1" AS "Score_1", "RF_Model_15"."Proba_1" AS "Proba_1", "RF_Model_15"."LogProba_1" AS "LogProba_1", "RF_Model_15"."Score_2" AS "Score_2", "RF_Model_15"."Proba_2" AS "Proba_2", "RF_Model_15"."LogProba_2" AS "LogProba_2", "RF_Model_15"."Score_3" AS "Score_3", "RF_Model_15"."Proba_3" AS "Proba_3", "RF_Model_15"."LogProba_3" AS "LogProba_3" 
 FROM "RF_Model_15") "RF_esu_1") "RF_B1") "U"
 
--- Code For temporary table 31_CODEGEN_ETQZS4_RF_UNION part 1. Create 
+-- Code For temporary table 0516_CODEGEN_I3X9E8_RF_AVG part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "31_CODEGEN_ETQZS4_RF_UNION" (
+CREATE GLOBAL TEMPORARY TABLE "0516_CODEGEN_I3X9E8_RF_AVG" (
 	"KEY" NUMBER(19), 
 	"Score_0" BINARY_DOUBLE, 
 	"Proba_0" BINARY_DOUBLE, 
@@ -295,49 +295,24 @@ CREATE GLOBAL TEMPORARY TABLE "31_CODEGEN_ETQZS4_RF_UNION" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table 31_CODEGEN_ETQZS4_RF_UNION part 2. Populate
+-- Code For temporary table 0516_CODEGEN_I3X9E8_RF_AVG part 2. Populate
 
-INSERT INTO "31_CODEGEN_ETQZS4_RF_UNION" ("KEY", "Score_0", "Proba_0", "LogProba_0", "Score_1", "Proba_1", "LogProba_1", "Score_2", "Proba_2", "LogProba_2", "Score_3", "Proba_3", "LogProba_3") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."LogProba_0", "U"."Score_1", "U"."Proba_1", "U"."LogProba_1", "U"."Score_2", "U"."Proba_2", "U"."LogProba_2", "U"."Score_3", "U"."Proba_3", "U"."LogProba_3" 
-FROM (SELECT "RF_Union"."KEY", "RF_Union"."Score_0", "RF_Union"."Proba_0", "RF_Union"."LogProba_0", "RF_Union"."Score_1", "RF_Union"."Proba_1", "RF_Union"."LogProba_1", "RF_Union"."Score_2", "RF_Union"."Proba_2", "RF_Union"."LogProba_2", "RF_Union"."Score_3", "RF_Union"."Proba_3", "RF_Union"."LogProba_3" 
-FROM (SELECT "RF_EnsembleUnion"."KEY" AS "KEY", "RF_EnsembleUnion"."Score_0" AS "Score_0", "RF_EnsembleUnion"."Proba_0" AS "Proba_0", "RF_EnsembleUnion"."LogProba_0" AS "LogProba_0", "RF_EnsembleUnion"."Score_1" AS "Score_1", "RF_EnsembleUnion"."Proba_1" AS "Proba_1", "RF_EnsembleUnion"."LogProba_1" AS "LogProba_1", "RF_EnsembleUnion"."Score_2" AS "Score_2", "RF_EnsembleUnion"."Proba_2" AS "Proba_2", "RF_EnsembleUnion"."LogProba_2" AS "LogProba_2", "RF_EnsembleUnion"."Score_3" AS "Score_3", "RF_EnsembleUnion"."Proba_3" AS "Proba_3", "RF_EnsembleUnion"."LogProba_3" AS "LogProba_3" 
+INSERT INTO "0516_CODEGEN_I3X9E8_RF_AVG" ("KEY", "Score_0", "Proba_0", "LogProba_0", "Score_1", "Proba_1", "LogProba_1", "Score_2", "Proba_2", "LogProba_2", "Score_3", "Proba_3", "LogProba_3") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."LogProba_0", "U"."Score_1", "U"."Proba_1", "U"."LogProba_1", "U"."Score_2", "U"."Proba_2", "U"."LogProba_2", "U"."Score_3", "U"."Proba_3", "U"."LogProba_3" 
+FROM (WITH "RF_Union" AS 
+(SELECT "RF_EnsembleUnion"."KEY" AS "KEY", "RF_EnsembleUnion"."Score_0" AS "Score_0", "RF_EnsembleUnion"."Proba_0" AS "Proba_0", "RF_EnsembleUnion"."LogProba_0" AS "LogProba_0", "RF_EnsembleUnion"."Score_1" AS "Score_1", "RF_EnsembleUnion"."Proba_1" AS "Proba_1", "RF_EnsembleUnion"."LogProba_1" AS "LogProba_1", "RF_EnsembleUnion"."Score_2" AS "Score_2", "RF_EnsembleUnion"."Proba_2" AS "Proba_2", "RF_EnsembleUnion"."LogProba_2" AS "LogProba_2", "RF_EnsembleUnion"."Score_3" AS "Score_3", "RF_EnsembleUnion"."Proba_3" AS "Proba_3", "RF_EnsembleUnion"."LogProba_3" AS "LogProba_3" 
 FROM (SELECT "RF_B0"."KEY" AS "KEY", "RF_B0"."Score_0" AS "Score_0", "RF_B0"."Proba_0" AS "Proba_0", "RF_B0"."LogProba_0" AS "LogProba_0", "RF_B0"."Score_1" AS "Score_1", "RF_B0"."Proba_1" AS "Proba_1", "RF_B0"."LogProba_1" AS "LogProba_1", "RF_B0"."Score_2" AS "Score_2", "RF_B0"."Proba_2" AS "Proba_2", "RF_B0"."LogProba_2" AS "LogProba_2", "RF_B0"."Score_3" AS "Score_3", "RF_B0"."Proba_3" AS "Proba_3", "RF_B0"."LogProba_3" AS "LogProba_3" 
-FROM "81831_CODEGEN_CUS7LS_RF_B0" "RF_B0" UNION ALL SELECT "RF_B1"."KEY" AS "KEY", "RF_B1"."Score_0" AS "Score_0", "RF_B1"."Proba_0" AS "Proba_0", "RF_B1"."LogProba_0" AS "LogProba_0", "RF_B1"."Score_1" AS "Score_1", "RF_B1"."Proba_1" AS "Proba_1", "RF_B1"."LogProba_1" AS "LogProba_1", "RF_B1"."Score_2" AS "Score_2", "RF_B1"."Proba_2" AS "Proba_2", "RF_B1"."LogProba_2" AS "LogProba_2", "RF_B1"."Score_3" AS "Score_3", "RF_B1"."Proba_3" AS "Proba_3", "RF_B1"."LogProba_3" AS "LogProba_3" 
-FROM "81831_CODEGEN_5XHQV7_RF_B1" "RF_B1") "RF_EnsembleUnion") "RF_Union") "U"
-
--- Code For temporary table 1831_CODEGEN_GO9DL1_RF_AVG part 1. Create 
-
-
-CREATE GLOBAL TEMPORARY TABLE "1831_CODEGEN_GO9DL1_RF_AVG" (
-	"KEY" NUMBER(19), 
-	"Score_0" BINARY_DOUBLE, 
-	"Proba_0" BINARY_DOUBLE, 
-	"LogProba_0" BINARY_DOUBLE, 
-	"Score_1" BINARY_DOUBLE, 
-	"Proba_1" BINARY_DOUBLE, 
-	"LogProba_1" BINARY_DOUBLE, 
-	"Score_2" BINARY_DOUBLE, 
-	"Proba_2" BINARY_DOUBLE, 
-	"LogProba_2" BINARY_DOUBLE, 
-	"Score_3" BINARY_DOUBLE, 
-	"Proba_3" BINARY_DOUBLE, 
-	"LogProba_3" BINARY_DOUBLE
-)
-
- ON COMMIT PRESERVE ROWS
-
--- Code For temporary table 1831_CODEGEN_GO9DL1_RF_AVG part 2. Populate
-
-INSERT INTO "1831_CODEGEN_GO9DL1_RF_AVG" ("KEY", "Score_0", "Proba_0", "LogProba_0", "Score_1", "Proba_1", "LogProba_1", "Score_2", "Proba_2", "LogProba_2", "Score_3", "Proba_3", "LogProba_3") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."LogProba_0", "U"."Score_1", "U"."Proba_1", "U"."LogProba_1", "U"."Score_2", "U"."Proba_2", "U"."LogProba_2", "U"."Score_3", "U"."Proba_3", "U"."LogProba_3" 
-FROM (SELECT "RF_avg"."KEY", "RF_avg"."Score_0", "RF_avg"."Proba_0", "RF_avg"."LogProba_0", "RF_avg"."Score_1", "RF_avg"."Proba_1", "RF_avg"."LogProba_1", "RF_avg"."Score_2", "RF_avg"."Proba_2", "RF_avg"."LogProba_2", "RF_avg"."Score_3", "RF_avg"."Proba_3", "RF_avg"."LogProba_3" 
+FROM "80516_CODEGEN_0GP0E2_RF_B0" "RF_B0" UNION ALL SELECT "RF_B1"."KEY" AS "KEY", "RF_B1"."Score_0" AS "Score_0", "RF_B1"."Proba_0" AS "Proba_0", "RF_B1"."LogProba_0" AS "LogProba_0", "RF_B1"."Score_1" AS "Score_1", "RF_B1"."Proba_1" AS "Proba_1", "RF_B1"."LogProba_1" AS "LogProba_1", "RF_B1"."Score_2" AS "Score_2", "RF_B1"."Proba_2" AS "Proba_2", "RF_B1"."LogProba_2" AS "LogProba_2", "RF_B1"."Score_3" AS "Score_3", "RF_B1"."Proba_3" AS "Proba_3", "RF_B1"."LogProba_3" AS "LogProba_3" 
+FROM "80516_CODEGEN_L5RWG7_RF_B1" "RF_B1") "RF_EnsembleUnion")
+ SELECT "RF_avg"."KEY", "RF_avg"."Score_0", "RF_avg"."Proba_0", "RF_avg"."LogProba_0", "RF_avg"."Score_1", "RF_avg"."Proba_1", "RF_avg"."LogProba_1", "RF_avg"."Score_2", "RF_avg"."Proba_2", "RF_avg"."LogProba_2", "RF_avg"."Score_3", "RF_avg"."Proba_3", "RF_avg"."LogProba_3" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Score_0" AS BINARY_DOUBLE) AS "Score_0", CAST("T"."Proba_0" AS BINARY_DOUBLE) AS "Proba_0", CAST("T"."LogProba_0" AS BINARY_DOUBLE) AS "LogProba_0", CAST("T"."Score_1" AS BINARY_DOUBLE) AS "Score_1", CAST("T"."Proba_1" AS BINARY_DOUBLE) AS "Proba_1", CAST("T"."LogProba_1" AS BINARY_DOUBLE) AS "LogProba_1", CAST("T"."Score_2" AS BINARY_DOUBLE) AS "Score_2", CAST("T"."Proba_2" AS BINARY_DOUBLE) AS "Proba_2", CAST("T"."LogProba_2" AS BINARY_DOUBLE) AS "LogProba_2", CAST("T"."Score_3" AS BINARY_DOUBLE) AS "Score_3", CAST("T"."Proba_3" AS BINARY_DOUBLE) AS "Proba_3", CAST("T"."LogProba_3" AS BINARY_DOUBLE) AS "LogProba_3" 
 FROM (SELECT "RF_Union"."KEY" AS "KEY", avg(CAST("RF_Union"."Score_0" AS BINARY_DOUBLE)) AS "Score_0", avg(CAST("RF_Union"."Proba_0" AS BINARY_DOUBLE)) AS "Proba_0", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_0", avg(CAST("RF_Union"."Score_1" AS BINARY_DOUBLE)) AS "Score_1", avg(CAST("RF_Union"."Proba_1" AS BINARY_DOUBLE)) AS "Proba_1", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_1", avg(CAST("RF_Union"."Score_2" AS BINARY_DOUBLE)) AS "Score_2", avg(CAST("RF_Union"."Proba_2" AS BINARY_DOUBLE)) AS "Proba_2", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_2", avg(CAST("RF_Union"."Score_3" AS BINARY_DOUBLE)) AS "Score_3", avg(CAST("RF_Union"."Proba_3" AS BINARY_DOUBLE)) AS "Proba_3", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_3" 
-FROM "31_CODEGEN_ETQZS4_RF_UNION" "RF_Union" GROUP BY "RF_Union"."KEY") "T") "RF_avg") "U"
+FROM "RF_Union" GROUP BY "RF_Union"."KEY") "T") "RF_avg") "U"
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT "RF_avg"."KEY" AS "KEY", "RF_avg"."Score_0" AS "Score_0", "RF_avg"."Score_1" AS "Score_1", "RF_avg"."Score_2" AS "Score_2", "RF_avg"."Score_3" AS "Score_3", "RF_avg"."Proba_0" AS "Proba_0", "RF_avg"."Proba_1" AS "Proba_1", "RF_avg"."Proba_2" AS "Proba_2", "RF_avg"."Proba_3" AS "Proba_3", "RF_avg"."LogProba_0" AS "LogProba_0", "RF_avg"."LogProba_1" AS "LogProba_1", "RF_avg"."LogProba_2" AS "LogProba_2", "RF_avg"."LogProba_3" AS "LogProba_3", CAST(NULL AS NUMBER(19)) AS "Decision", CAST(NULL AS BINARY_DOUBLE) AS "DecisionProba" 
-FROM "1831_CODEGEN_GO9DL1_RF_AVG" "RF_avg"), 
+FROM "0516_CODEGEN_I3X9E8_RF_AVG" "RF_avg"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

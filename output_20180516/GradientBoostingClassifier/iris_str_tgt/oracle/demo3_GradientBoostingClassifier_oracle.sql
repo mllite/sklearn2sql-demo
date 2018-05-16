@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table 90555_CODEGEN_YSZ19H_GB_B0 part 1. Create 
+-- Code For temporary table 80516_CODEGEN_RF48Y9_GB_B0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "90555_CODEGEN_YSZ19H_GB_B0" (
+CREATE GLOBAL TEMPORARY TABLE "80516_CODEGEN_RF48Y9_GB_B0" (
 	"KEY" NUMBER(19), 
 	"Score_CLASS_0" BINARY_DOUBLE, 
 	"Score_CLASS_1" BINARY_DOUBLE, 
@@ -22,9 +22,9 @@ CREATE GLOBAL TEMPORARY TABLE "90555_CODEGEN_YSZ19H_GB_B0" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table 90555_CODEGEN_YSZ19H_GB_B0 part 2. Populate
+-- Code For temporary table 80516_CODEGEN_RF48Y9_GB_B0 part 2. Populate
 
-INSERT INTO "90555_CODEGEN_YSZ19H_GB_B0" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
+INSERT INTO "80516_CODEGEN_RF48Y9_GB_B0" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_3" <= 0.800000011920929) THEN 1 ELSE 2 END AS node_id_2 
 FROM "IRIS_STR_TGT" "ADS"), 
@@ -159,10 +159,10 @@ FROM "GB_Model_2_1" UNION ALL SELECT "GB_Model_2_2"."KEY" AS "KEY", "GB_Model_2_
 FROM "GB_Model_2_2" UNION ALL SELECT "GB_Model_3_0"."KEY" AS "KEY", "GB_Model_3_0"."Score_CLASS_0" AS "Score_CLASS_0", "GB_Model_3_0"."Score_CLASS_1" AS "Score_CLASS_1", "GB_Model_3_0"."Score_CLASS_2" AS "Score_CLASS_2" 
 FROM "GB_Model_3_0") "GB_esu_0") "GB_B0") "U"
 
--- Code For temporary table 90555_CODEGEN_8PLTSZ_GB_B1 part 1. Create 
+-- Code For temporary table 80516_CODEGEN_EF253D_GB_B1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "90555_CODEGEN_8PLTSZ_GB_B1" (
+CREATE GLOBAL TEMPORARY TABLE "80516_CODEGEN_EF253D_GB_B1" (
 	"KEY" NUMBER(19), 
 	"Score_CLASS_0" BINARY_DOUBLE, 
 	"Score_CLASS_1" BINARY_DOUBLE, 
@@ -171,9 +171,9 @@ CREATE GLOBAL TEMPORARY TABLE "90555_CODEGEN_8PLTSZ_GB_B1" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table 90555_CODEGEN_8PLTSZ_GB_B1 part 2. Populate
+-- Code For temporary table 80516_CODEGEN_EF253D_GB_B1 part 2. Populate
 
-INSERT INTO "90555_CODEGEN_8PLTSZ_GB_B1" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
+INSERT INTO "80516_CODEGEN_EF253D_GB_B1" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
 FROM (WITH "DT_node_lookup_10" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 4.949999809265137) THEN CASE WHEN ("ADS"."Feature_3" <= 0.800000011920929) THEN 2 ELSE CASE WHEN ("ADS"."Feature_3" <= 1.6500000953674316) THEN 4 ELSE 5 END END ELSE CASE WHEN ("ADS"."Feature_2" <= 5.050000190734863) THEN CASE WHEN ("ADS"."Feature_1" <= 2.75) THEN 8 ELSE 9 END ELSE CASE WHEN ("ADS"."Feature_3" <= 1.7000000476837158) THEN 11 ELSE 12 END END END AS node_id_2 
 FROM "IRIS_STR_TGT" "ADS"), 
@@ -308,10 +308,10 @@ FROM "GB_Model_5_2" UNION ALL SELECT "GB_Model_6_0"."KEY" AS "KEY", "GB_Model_6_
 FROM "GB_Model_6_0" UNION ALL SELECT "GB_Model_6_1"."KEY" AS "KEY", "GB_Model_6_1"."Score_CLASS_0" AS "Score_CLASS_0", "GB_Model_6_1"."Score_CLASS_1" AS "Score_CLASS_1", "GB_Model_6_1"."Score_CLASS_2" AS "Score_CLASS_2" 
 FROM "GB_Model_6_1") "GB_esu_1") "GB_B1") "U"
 
--- Code For temporary table 90555_CODEGEN_VBTD5M_GB_B2 part 1. Create 
+-- Code For temporary table 80516_CODEGEN_UQ4ZJM_GB_B2 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "90555_CODEGEN_VBTD5M_GB_B2" (
+CREATE GLOBAL TEMPORARY TABLE "80516_CODEGEN_UQ4ZJM_GB_B2" (
 	"KEY" NUMBER(19), 
 	"Score_CLASS_0" BINARY_DOUBLE, 
 	"Score_CLASS_1" BINARY_DOUBLE, 
@@ -320,9 +320,9 @@ CREATE GLOBAL TEMPORARY TABLE "90555_CODEGEN_VBTD5M_GB_B2" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table 90555_CODEGEN_VBTD5M_GB_B2 part 2. Populate
+-- Code For temporary table 80516_CODEGEN_UQ4ZJM_GB_B2 part 2. Populate
 
-INSERT INTO "90555_CODEGEN_VBTD5M_GB_B2" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
+INSERT INTO "80516_CODEGEN_UQ4ZJM_GB_B2" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
 FROM (WITH "DT_node_lookup_20" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 4.850000381469727) THEN CASE WHEN ("ADS"."Feature_3" <= 1.6500000953674316) THEN CASE WHEN ("ADS"."Feature_3" <= 0.800000011920929) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_1" <= 3.0999999046325684) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_3" <= 1.75) THEN CASE WHEN ("ADS"."Feature_2" <= 4.949999809265137) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_2" <= 4.949999809265137) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM "IRIS_STR_TGT" "ADS"), 
@@ -457,10 +457,10 @@ FROM "GB_Model_9_0" UNION ALL SELECT "GB_Model_9_1"."KEY" AS "KEY", "GB_Model_9_
 FROM "GB_Model_9_1" UNION ALL SELECT "GB_Model_9_2"."KEY" AS "KEY", "GB_Model_9_2"."Score_CLASS_0" AS "Score_CLASS_0", "GB_Model_9_2"."Score_CLASS_1" AS "Score_CLASS_1", "GB_Model_9_2"."Score_CLASS_2" AS "Score_CLASS_2" 
 FROM "GB_Model_9_2") "GB_esu_2") "GB_B2") "U"
 
--- Code For temporary table 90555_CODEGEN_3XDS01_GB_B3 part 1. Create 
+-- Code For temporary table 80516_CODEGEN_SSEG4G_GB_B3 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "90555_CODEGEN_3XDS01_GB_B3" (
+CREATE GLOBAL TEMPORARY TABLE "80516_CODEGEN_SSEG4G_GB_B3" (
 	"KEY" NUMBER(19), 
 	"Score_CLASS_0" BINARY_DOUBLE, 
 	"Score_CLASS_1" BINARY_DOUBLE, 
@@ -469,9 +469,9 @@ CREATE GLOBAL TEMPORARY TABLE "90555_CODEGEN_3XDS01_GB_B3" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table 90555_CODEGEN_3XDS01_GB_B3 part 2. Populate
+-- Code For temporary table 80516_CODEGEN_SSEG4G_GB_B3 part 2. Populate
 
-INSERT INTO "90555_CODEGEN_3XDS01_GB_B3" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
+INSERT INTO "80516_CODEGEN_SSEG4G_GB_B3" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
 FROM (WITH "DT_node_lookup_30" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 2.450000047683716) THEN 1 ELSE CASE WHEN ("ADS"."Feature_1" <= 3.1500000953674316) THEN CASE WHEN ("ADS"."Feature_1" <= 2.25) THEN 4 ELSE 5 END ELSE CASE WHEN ("ADS"."Feature_0" <= 5.949999809265137) THEN 7 ELSE 8 END END END AS node_id_2 
 FROM "IRIS_STR_TGT" "ADS"), 
@@ -606,10 +606,10 @@ FROM "GB_Model_12_1" UNION ALL SELECT "GB_Model_12_2"."KEY" AS "KEY", "GB_Model_
 FROM "GB_Model_12_2" UNION ALL SELECT "GB_Model_13_0"."KEY" AS "KEY", "GB_Model_13_0"."Score_CLASS_0" AS "Score_CLASS_0", "GB_Model_13_0"."Score_CLASS_1" AS "Score_CLASS_1", "GB_Model_13_0"."Score_CLASS_2" AS "Score_CLASS_2" 
 FROM "GB_Model_13_0") "GB_esu_3") "GB_B3") "U"
 
--- Code For temporary table 90555_CODEGEN_PWP301_GB_B4 part 1. Create 
+-- Code For temporary table 80516_CODEGEN_1FT8DG_GB_B4 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "90555_CODEGEN_PWP301_GB_B4" (
+CREATE GLOBAL TEMPORARY TABLE "80516_CODEGEN_1FT8DG_GB_B4" (
 	"KEY" NUMBER(19), 
 	"Score_CLASS_0" BINARY_DOUBLE, 
 	"Score_CLASS_1" BINARY_DOUBLE, 
@@ -618,9 +618,9 @@ CREATE GLOBAL TEMPORARY TABLE "90555_CODEGEN_PWP301_GB_B4" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table 90555_CODEGEN_PWP301_GB_B4 part 2. Populate
+-- Code For temporary table 80516_CODEGEN_1FT8DG_GB_B4 part 2. Populate
 
-INSERT INTO "90555_CODEGEN_PWP301_GB_B4" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
+INSERT INTO "80516_CODEGEN_1FT8DG_GB_B4" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
 FROM (WITH "DT_node_lookup_40" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 4.949999809265137) THEN CASE WHEN ("ADS"."Feature_2" <= 2.450000047683716) THEN 2 ELSE CASE WHEN ("ADS"."Feature_3" <= 1.6500000953674316) THEN 4 ELSE 5 END END ELSE CASE WHEN ("ADS"."Feature_1" <= 2.3499999046325684) THEN 7 ELSE CASE WHEN ("ADS"."Feature_2" <= 5.050000190734863) THEN 9 ELSE 10 END END END AS node_id_2 
 FROM "IRIS_STR_TGT" "ADS"), 
@@ -729,10 +729,10 @@ FROM "GB_Model_15_0" UNION ALL SELECT "GB_Model_15_1"."KEY" AS "KEY", "GB_Model_
 FROM "GB_Model_15_1" UNION ALL SELECT "GB_Model_15_2"."KEY" AS "KEY", "GB_Model_15_2"."Score_CLASS_0" AS "Score_CLASS_0", "GB_Model_15_2"."Score_CLASS_1" AS "Score_CLASS_1", "GB_Model_15_2"."Score_CLASS_2" AS "Score_CLASS_2" 
 FROM "GB_Model_15_2") "GB_esu_4") "GB_B4") "U"
 
--- Code For temporary table 55_CODEGEN_1UD1JJ_GB_UNION part 1. Create 
+-- Code For temporary table 0516_CODEGEN_DUQRHW_GB_SUM part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "55_CODEGEN_1UD1JJ_GB_UNION" (
+CREATE GLOBAL TEMPORARY TABLE "0516_CODEGEN_DUQRHW_GB_SUM" (
 	"KEY" NUMBER(19), 
 	"Score_CLASS_0" BINARY_DOUBLE, 
 	"Score_CLASS_1" BINARY_DOUBLE, 
@@ -741,43 +741,27 @@ CREATE GLOBAL TEMPORARY TABLE "55_CODEGEN_1UD1JJ_GB_UNION" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table 55_CODEGEN_1UD1JJ_GB_UNION part 2. Populate
+-- Code For temporary table 0516_CODEGEN_DUQRHW_GB_SUM part 2. Populate
 
-INSERT INTO "55_CODEGEN_1UD1JJ_GB_UNION" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
-FROM (SELECT "GB_Union"."KEY", "GB_Union"."Score_CLASS_0", "GB_Union"."Score_CLASS_1", "GB_Union"."Score_CLASS_2" 
-FROM (SELECT "GB_EnsembleUnion"."KEY" AS "KEY", "GB_EnsembleUnion"."Score_CLASS_0" AS "Score_CLASS_0", "GB_EnsembleUnion"."Score_CLASS_1" AS "Score_CLASS_1", "GB_EnsembleUnion"."Score_CLASS_2" AS "Score_CLASS_2" 
+INSERT INTO "0516_CODEGEN_DUQRHW_GB_SUM" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
+FROM (WITH "GB_Union" AS 
+(SELECT "GB_EnsembleUnion"."KEY" AS "KEY", "GB_EnsembleUnion"."Score_CLASS_0" AS "Score_CLASS_0", "GB_EnsembleUnion"."Score_CLASS_1" AS "Score_CLASS_1", "GB_EnsembleUnion"."Score_CLASS_2" AS "Score_CLASS_2" 
 FROM (SELECT "GB_B0"."KEY" AS "KEY", "GB_B0"."Score_CLASS_0" AS "Score_CLASS_0", "GB_B0"."Score_CLASS_1" AS "Score_CLASS_1", "GB_B0"."Score_CLASS_2" AS "Score_CLASS_2" 
-FROM "90555_CODEGEN_YSZ19H_GB_B0" "GB_B0" UNION ALL SELECT "GB_B1"."KEY" AS "KEY", "GB_B1"."Score_CLASS_0" AS "Score_CLASS_0", "GB_B1"."Score_CLASS_1" AS "Score_CLASS_1", "GB_B1"."Score_CLASS_2" AS "Score_CLASS_2" 
-FROM "90555_CODEGEN_8PLTSZ_GB_B1" "GB_B1" UNION ALL SELECT "GB_B2"."KEY" AS "KEY", "GB_B2"."Score_CLASS_0" AS "Score_CLASS_0", "GB_B2"."Score_CLASS_1" AS "Score_CLASS_1", "GB_B2"."Score_CLASS_2" AS "Score_CLASS_2" 
-FROM "90555_CODEGEN_VBTD5M_GB_B2" "GB_B2" UNION ALL SELECT "GB_B3"."KEY" AS "KEY", "GB_B3"."Score_CLASS_0" AS "Score_CLASS_0", "GB_B3"."Score_CLASS_1" AS "Score_CLASS_1", "GB_B3"."Score_CLASS_2" AS "Score_CLASS_2" 
-FROM "90555_CODEGEN_3XDS01_GB_B3" "GB_B3" UNION ALL SELECT "GB_B4"."KEY" AS "KEY", "GB_B4"."Score_CLASS_0" AS "Score_CLASS_0", "GB_B4"."Score_CLASS_1" AS "Score_CLASS_1", "GB_B4"."Score_CLASS_2" AS "Score_CLASS_2" 
-FROM "90555_CODEGEN_PWP301_GB_B4" "GB_B4") "GB_EnsembleUnion") "GB_Union") "U"
-
--- Code For temporary table 0555_CODEGEN_1OIHB3_GB_SUM part 1. Create 
-
-
-CREATE GLOBAL TEMPORARY TABLE "0555_CODEGEN_1OIHB3_GB_SUM" (
-	"KEY" NUMBER(19), 
-	"Score_CLASS_0" BINARY_DOUBLE, 
-	"Score_CLASS_1" BINARY_DOUBLE, 
-	"Score_CLASS_2" BINARY_DOUBLE
-)
-
- ON COMMIT PRESERVE ROWS
-
--- Code For temporary table 0555_CODEGEN_1OIHB3_GB_SUM part 2. Populate
-
-INSERT INTO "0555_CODEGEN_1OIHB3_GB_SUM" ("KEY", "Score_CLASS_0", "Score_CLASS_1", "Score_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Score_CLASS_1", "U"."Score_CLASS_2" 
-FROM (SELECT "GB_sum"."KEY", "GB_sum"."Score_CLASS_0", "GB_sum"."Score_CLASS_1", "GB_sum"."Score_CLASS_2" 
+FROM "80516_CODEGEN_RF48Y9_GB_B0" "GB_B0" UNION ALL SELECT "GB_B1"."KEY" AS "KEY", "GB_B1"."Score_CLASS_0" AS "Score_CLASS_0", "GB_B1"."Score_CLASS_1" AS "Score_CLASS_1", "GB_B1"."Score_CLASS_2" AS "Score_CLASS_2" 
+FROM "80516_CODEGEN_EF253D_GB_B1" "GB_B1" UNION ALL SELECT "GB_B2"."KEY" AS "KEY", "GB_B2"."Score_CLASS_0" AS "Score_CLASS_0", "GB_B2"."Score_CLASS_1" AS "Score_CLASS_1", "GB_B2"."Score_CLASS_2" AS "Score_CLASS_2" 
+FROM "80516_CODEGEN_UQ4ZJM_GB_B2" "GB_B2" UNION ALL SELECT "GB_B3"."KEY" AS "KEY", "GB_B3"."Score_CLASS_0" AS "Score_CLASS_0", "GB_B3"."Score_CLASS_1" AS "Score_CLASS_1", "GB_B3"."Score_CLASS_2" AS "Score_CLASS_2" 
+FROM "80516_CODEGEN_SSEG4G_GB_B3" "GB_B3" UNION ALL SELECT "GB_B4"."KEY" AS "KEY", "GB_B4"."Score_CLASS_0" AS "Score_CLASS_0", "GB_B4"."Score_CLASS_1" AS "Score_CLASS_1", "GB_B4"."Score_CLASS_2" AS "Score_CLASS_2" 
+FROM "80516_CODEGEN_1FT8DG_GB_B4" "GB_B4") "GB_EnsembleUnion")
+ SELECT "GB_sum"."KEY", "GB_sum"."Score_CLASS_0", "GB_sum"."Score_CLASS_1", "GB_sum"."Score_CLASS_2" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Score_CLASS_0" AS BINARY_DOUBLE) AS "Score_CLASS_0", CAST("T"."Score_CLASS_1" AS BINARY_DOUBLE) AS "Score_CLASS_1", CAST("T"."Score_CLASS_2" AS BINARY_DOUBLE) AS "Score_CLASS_2" 
 FROM (SELECT "GB_Union"."KEY" AS "KEY", sum("GB_Union"."Score_CLASS_0") AS "Score_CLASS_0", sum("GB_Union"."Score_CLASS_1") AS "Score_CLASS_1", sum("GB_Union"."Score_CLASS_2") AS "Score_CLASS_2" 
-FROM "55_CODEGEN_1UD1JJ_GB_UNION" "GB_Union" GROUP BY "GB_Union"."KEY") "T") "GB_sum") "U"
+FROM "GB_Union" GROUP BY "GB_Union"."KEY") "T") "GB_sum") "U"
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT "GB_sum"."KEY" AS "KEY", 0.30833333333333335 + 0.1 * "GB_sum"."Score_CLASS_0" AS "Score_CLASS_0", 0.3333333333333333 + 0.1 * "GB_sum"."Score_CLASS_1" AS "Score_CLASS_1", 0.35833333333333334 + 0.1 * "GB_sum"."Score_CLASS_2" AS "Score_CLASS_2", CAST(NULL AS BINARY_DOUBLE) AS "Proba_CLASS_0", CAST(NULL AS BINARY_DOUBLE) AS "Proba_CLASS_1", CAST(NULL AS BINARY_DOUBLE) AS "Proba_CLASS_2", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_CLASS_0", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_CLASS_1", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_CLASS_2", CAST(NULL AS NUMBER(19)) AS "Decision", CAST(NULL AS BINARY_DOUBLE) AS "DecisionProba" 
-FROM "0555_CODEGEN_1OIHB3_GB_SUM" "GB_sum"), 
+FROM "0516_CODEGEN_DUQRHW_GB_SUM" "GB_sum"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 'CLASS_0' AS class, orig_cte."LogProba_CLASS_0" AS "LogProba", orig_cte."Proba_CLASS_0" AS "Proba", orig_cte."Score_CLASS_0" AS "Score" 
@@ -789,7 +773,7 @@ score_max AS
 FROM orig_cte LEFT OUTER JOIN (SELECT score_class_union."KEY_u" AS "KEY_m", max(score_class_union."Score") AS "max_Score" 
 FROM score_class_union GROUP BY score_class_union."KEY_u") max_select ON orig_cte."KEY" = max_select."KEY_m"), 
 score_soft_max_deltas AS 
-(SELECT score_max."KEY" AS "KEY", score_max."Score_CLASS_0" AS "Score_CLASS_0", score_max."Score_CLASS_1" AS "Score_CLASS_1", score_max."Score_CLASS_2" AS "Score_CLASS_2", score_max."Proba_CLASS_0" AS "Proba_CLASS_0", score_max."Proba_CLASS_1" AS "Proba_CLASS_1", score_max."Proba_CLASS_2" AS "Proba_CLASS_2", score_max."LogProba_CLASS_0" AS "LogProba_CLASS_0", score_max."LogProba_CLASS_1" AS "LogProba_CLASS_1", score_max."LogProba_CLASS_2" AS "LogProba_CLASS_2", score_max."Decision" AS "Decision", score_max."DecisionProba" AS "DecisionProba", score_max."KEY_m" AS "KEY_m", score_max."max_Score" AS "max_Score", exp(score_max."Score_CLASS_0" - score_max."max_Score") AS "exp_delta_Score_CLASS_0", exp(score_max."Score_CLASS_1" - score_max."max_Score") AS "exp_delta_Score_CLASS_1", exp(score_max."Score_CLASS_2" - score_max."max_Score") AS "exp_delta_Score_CLASS_2" 
+(SELECT score_max."KEY" AS "KEY", score_max."Score_CLASS_0" AS "Score_CLASS_0", score_max."Score_CLASS_1" AS "Score_CLASS_1", score_max."Score_CLASS_2" AS "Score_CLASS_2", score_max."Proba_CLASS_0" AS "Proba_CLASS_0", score_max."Proba_CLASS_1" AS "Proba_CLASS_1", score_max."Proba_CLASS_2" AS "Proba_CLASS_2", score_max."LogProba_CLASS_0" AS "LogProba_CLASS_0", score_max."LogProba_CLASS_1" AS "LogProba_CLASS_1", score_max."LogProba_CLASS_2" AS "LogProba_CLASS_2", score_max."Decision" AS "Decision", score_max."DecisionProba" AS "DecisionProba", score_max."KEY_m" AS "KEY_m", score_max."max_Score" AS "max_Score", exp(greatest(-100.0, score_max."Score_CLASS_0" - score_max."max_Score")) AS "exp_delta_Score_CLASS_0", exp(greatest(-100.0, score_max."Score_CLASS_1" - score_max."max_Score")) AS "exp_delta_Score_CLASS_1", exp(greatest(-100.0, score_max."Score_CLASS_2" - score_max."max_Score")) AS "exp_delta_Score_CLASS_2" 
 FROM score_max), 
 score_class_union_soft AS 
 (SELECT soft_scu."KEY" AS "KEY", soft_scu.class AS class, soft_scu."exp_delta_Score" AS "exp_delta_Score" 

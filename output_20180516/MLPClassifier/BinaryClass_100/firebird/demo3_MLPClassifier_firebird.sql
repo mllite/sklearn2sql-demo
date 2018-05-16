@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180508180352_CODEGEN_7A68 part 1. Create 
+-- Code For temporary table TMP_20180516_CODEGEN_236AO7_HL_ part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508180352_CODEGEN_7A68" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_236AO7_HL_" (
 	"KEY" BIGINT NOT NULL, 
 	"NEUR_1_1" DOUBLE PRECISION, 
 	"NEUR_1_2" DOUBLE PRECISION, 
@@ -23,9 +23,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180508180352_CODEGEN_7A68" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508180352_CODEGEN_7A68 part 2. Populate
+-- Code For temporary table TMP_20180516_CODEGEN_236AO7_HL_ part 2. Populate
 
-INSERT INTO "TMP_20180508180352_CODEGEN_7A68" ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "U"."KEY", "U"."NEUR_1_1", "U"."NEUR_1_2", "U"."NEUR_1_3" 
+INSERT INTO "TMP_20180516_CODEGEN_236AO7_HL_" ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "U"."KEY", "U"."NEUR_1_1", "U"."NEUR_1_2", "U"."NEUR_1_3" 
 FROM (WITH "IL" AS 
 (SELECT "ADS"."KEY" AS "KEY", CAST("ADS"."Feature_0" AS DOUBLE PRECISION) AS "Feature_0", CAST("ADS"."Feature_1" AS DOUBLE PRECISION) AS "Feature_1", CAST("ADS"."Feature_2" AS DOUBLE PRECISION) AS "Feature_2", CAST("ADS"."Feature_3" AS DOUBLE PRECISION) AS "Feature_3", CAST("ADS"."Feature_4" AS DOUBLE PRECISION) AS "Feature_4", CAST("ADS"."Feature_5" AS DOUBLE PRECISION) AS "Feature_5", CAST("ADS"."Feature_6" AS DOUBLE PRECISION) AS "Feature_6", CAST("ADS"."Feature_7" AS DOUBLE PRECISION) AS "Feature_7", CAST("ADS"."Feature_8" AS DOUBLE PRECISION) AS "Feature_8", CAST("ADS"."Feature_9" AS DOUBLE PRECISION) AS "Feature_9", CAST("ADS"."Feature_10" AS DOUBLE PRECISION) AS "Feature_10", CAST("ADS"."Feature_11" AS DOUBLE PRECISION) AS "Feature_11", CAST("ADS"."Feature_12" AS DOUBLE PRECISION) AS "Feature_12", CAST("ADS"."Feature_13" AS DOUBLE PRECISION) AS "Feature_13", CAST("ADS"."Feature_14" AS DOUBLE PRECISION) AS "Feature_14", CAST("ADS"."Feature_15" AS DOUBLE PRECISION) AS "Feature_15", CAST("ADS"."Feature_16" AS DOUBLE PRECISION) AS "Feature_16", CAST("ADS"."Feature_17" AS DOUBLE PRECISION) AS "Feature_17", CAST("ADS"."Feature_18" AS DOUBLE PRECISION) AS "Feature_18", CAST("ADS"."Feature_19" AS DOUBLE PRECISION) AS "Feature_19", CAST("ADS"."Feature_20" AS DOUBLE PRECISION) AS "Feature_20", CAST("ADS"."Feature_21" AS DOUBLE PRECISION) AS "Feature_21", CAST("ADS"."Feature_22" AS DOUBLE PRECISION) AS "Feature_22", CAST("ADS"."Feature_23" AS DOUBLE PRECISION) AS "Feature_23", CAST("ADS"."Feature_24" AS DOUBLE PRECISION) AS "Feature_24", CAST("ADS"."Feature_25" AS DOUBLE PRECISION) AS "Feature_25", CAST("ADS"."Feature_26" AS DOUBLE PRECISION) AS "Feature_26", CAST("ADS"."Feature_27" AS DOUBLE PRECISION) AS "Feature_27", CAST("ADS"."Feature_28" AS DOUBLE PRECISION) AS "Feature_28", CAST("ADS"."Feature_29" AS DOUBLE PRECISION) AS "Feature_29", CAST("ADS"."Feature_30" AS DOUBLE PRECISION) AS "Feature_30", CAST("ADS"."Feature_31" AS DOUBLE PRECISION) AS "Feature_31", CAST("ADS"."Feature_32" AS DOUBLE PRECISION) AS "Feature_32", CAST("ADS"."Feature_33" AS DOUBLE PRECISION) AS "Feature_33", CAST("ADS"."Feature_34" AS DOUBLE PRECISION) AS "Feature_34", CAST("ADS"."Feature_35" AS DOUBLE PRECISION) AS "Feature_35", CAST("ADS"."Feature_36" AS DOUBLE PRECISION) AS "Feature_36", CAST("ADS"."Feature_37" AS DOUBLE PRECISION) AS "Feature_37", CAST("ADS"."Feature_38" AS DOUBLE PRECISION) AS "Feature_38", CAST("ADS"."Feature_39" AS DOUBLE PRECISION) AS "Feature_39", CAST("ADS"."Feature_40" AS DOUBLE PRECISION) AS "Feature_40", CAST("ADS"."Feature_41" AS DOUBLE PRECISION) AS "Feature_41", CAST("ADS"."Feature_42" AS DOUBLE PRECISION) AS "Feature_42", CAST("ADS"."Feature_43" AS DOUBLE PRECISION) AS "Feature_43", CAST("ADS"."Feature_44" AS DOUBLE PRECISION) AS "Feature_44", CAST("ADS"."Feature_45" AS DOUBLE PRECISION) AS "Feature_45", CAST("ADS"."Feature_46" AS DOUBLE PRECISION) AS "Feature_46", CAST("ADS"."Feature_47" AS DOUBLE PRECISION) AS "Feature_47", CAST("ADS"."Feature_48" AS DOUBLE PRECISION) AS "Feature_48", CAST("ADS"."Feature_49" AS DOUBLE PRECISION) AS "Feature_49", CAST("ADS"."Feature_50" AS DOUBLE PRECISION) AS "Feature_50", CAST("ADS"."Feature_51" AS DOUBLE PRECISION) AS "Feature_51", CAST("ADS"."Feature_52" AS DOUBLE PRECISION) AS "Feature_52", CAST("ADS"."Feature_53" AS DOUBLE PRECISION) AS "Feature_53", CAST("ADS"."Feature_54" AS DOUBLE PRECISION) AS "Feature_54", CAST("ADS"."Feature_55" AS DOUBLE PRECISION) AS "Feature_55", CAST("ADS"."Feature_56" AS DOUBLE PRECISION) AS "Feature_56", CAST("ADS"."Feature_57" AS DOUBLE PRECISION) AS "Feature_57", CAST("ADS"."Feature_58" AS DOUBLE PRECISION) AS "Feature_58", CAST("ADS"."Feature_59" AS DOUBLE PRECISION) AS "Feature_59", CAST("ADS"."Feature_60" AS DOUBLE PRECISION) AS "Feature_60", CAST("ADS"."Feature_61" AS DOUBLE PRECISION) AS "Feature_61", CAST("ADS"."Feature_62" AS DOUBLE PRECISION) AS "Feature_62", CAST("ADS"."Feature_63" AS DOUBLE PRECISION) AS "Feature_63", CAST("ADS"."Feature_64" AS DOUBLE PRECISION) AS "Feature_64", CAST("ADS"."Feature_65" AS DOUBLE PRECISION) AS "Feature_65", CAST("ADS"."Feature_66" AS DOUBLE PRECISION) AS "Feature_66", CAST("ADS"."Feature_67" AS DOUBLE PRECISION) AS "Feature_67", CAST("ADS"."Feature_68" AS DOUBLE PRECISION) AS "Feature_68", CAST("ADS"."Feature_69" AS DOUBLE PRECISION) AS "Feature_69", CAST("ADS"."Feature_70" AS DOUBLE PRECISION) AS "Feature_70", CAST("ADS"."Feature_71" AS DOUBLE PRECISION) AS "Feature_71", CAST("ADS"."Feature_72" AS DOUBLE PRECISION) AS "Feature_72", CAST("ADS"."Feature_73" AS DOUBLE PRECISION) AS "Feature_73", CAST("ADS"."Feature_74" AS DOUBLE PRECISION) AS "Feature_74", CAST("ADS"."Feature_75" AS DOUBLE PRECISION) AS "Feature_75", CAST("ADS"."Feature_76" AS DOUBLE PRECISION) AS "Feature_76", CAST("ADS"."Feature_77" AS DOUBLE PRECISION) AS "Feature_77", CAST("ADS"."Feature_78" AS DOUBLE PRECISION) AS "Feature_78", CAST("ADS"."Feature_79" AS DOUBLE PRECISION) AS "Feature_79", CAST("ADS"."Feature_80" AS DOUBLE PRECISION) AS "Feature_80", CAST("ADS"."Feature_81" AS DOUBLE PRECISION) AS "Feature_81", CAST("ADS"."Feature_82" AS DOUBLE PRECISION) AS "Feature_82", CAST("ADS"."Feature_83" AS DOUBLE PRECISION) AS "Feature_83", CAST("ADS"."Feature_84" AS DOUBLE PRECISION) AS "Feature_84", CAST("ADS"."Feature_85" AS DOUBLE PRECISION) AS "Feature_85", CAST("ADS"."Feature_86" AS DOUBLE PRECISION) AS "Feature_86", CAST("ADS"."Feature_87" AS DOUBLE PRECISION) AS "Feature_87", CAST("ADS"."Feature_88" AS DOUBLE PRECISION) AS "Feature_88", CAST("ADS"."Feature_89" AS DOUBLE PRECISION) AS "Feature_89", CAST("ADS"."Feature_90" AS DOUBLE PRECISION) AS "Feature_90", CAST("ADS"."Feature_91" AS DOUBLE PRECISION) AS "Feature_91", CAST("ADS"."Feature_92" AS DOUBLE PRECISION) AS "Feature_92", CAST("ADS"."Feature_93" AS DOUBLE PRECISION) AS "Feature_93", CAST("ADS"."Feature_94" AS DOUBLE PRECISION) AS "Feature_94", CAST("ADS"."Feature_95" AS DOUBLE PRECISION) AS "Feature_95", CAST("ADS"."Feature_96" AS DOUBLE PRECISION) AS "Feature_96", CAST("ADS"."Feature_97" AS DOUBLE PRECISION) AS "Feature_97", CAST("ADS"."Feature_98" AS DOUBLE PRECISION) AS "Feature_98", CAST("ADS"."Feature_99" AS DOUBLE PRECISION) AS "Feature_99" 
 FROM "BinaryClass_100" AS "ADS"), 
@@ -39,14 +39,14 @@ FROM "HL_BA_1")
 FROM (SELECT "HL_1_relu"."KEY" AS "KEY", "HL_1_relu"."NEUR_1_1" AS "NEUR_1_1", "HL_1_relu"."NEUR_1_2" AS "NEUR_1_2", "HL_1_relu"."NEUR_1_3" AS "NEUR_1_3" 
 FROM "HL_1_relu") AS "HL_1_relu_1") AS "U"
 
--- Code For temporary table TMP_20180508180352_CODEGEN_7A68 part 3. Create Index 
+-- Code For temporary table TMP_20180516_CODEGEN_236AO7_HL_ part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508180352_C_a611" ON "TMP_20180508180352_CODEGEN_7A68" ("KEY")
+CREATE INDEX "ix_TMP_20180516_CODEGEN_a7d6" ON "TMP_20180516_CODEGEN_236AO7_HL_" ("KEY")
 
--- Code For temporary table TMP_20180508180352_CODEGEN_HNPS part 1. Create 
+-- Code For temporary table TMP_20180516_CODEGEN_IY43V5_OL_ part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180508180352_CODEGEN_HNPS" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_IY43V5_OL_" (
 	"KEY" BIGINT NOT NULL, 
 	"NEUR_3_1" DOUBLE PRECISION, 
 	PRIMARY KEY ("KEY")
@@ -54,12 +54,12 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180508180352_CODEGEN_HNPS" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180508180352_CODEGEN_HNPS part 2. Populate
+-- Code For temporary table TMP_20180516_CODEGEN_IY43V5_OL_ part 2. Populate
 
-INSERT INTO "TMP_20180508180352_CODEGEN_HNPS" ("KEY", "NEUR_3_1") SELECT "U"."KEY", "U"."NEUR_3_1" 
+INSERT INTO "TMP_20180516_CODEGEN_IY43V5_OL_" ("KEY", "NEUR_3_1") SELECT "U"."KEY", "U"."NEUR_3_1" 
 FROM (WITH "HL_BA_2" AS 
 (SELECT "HL_1_relu_1"."KEY" AS "KEY", 0.5147985458726192 * "HL_1_relu_1"."NEUR_1_1" + 0.7209459805988819 * "HL_1_relu_1"."NEUR_1_2" + 1.3969064762974124 * "HL_1_relu_1"."NEUR_1_3" + -0.41953234908823284 AS "NEUR_2_1", -0.19388281061373336 * "HL_1_relu_1"."NEUR_1_1" + -0.09655262728288522 * "HL_1_relu_1"."NEUR_1_2" + 0.1925939492527063 * "HL_1_relu_1"."NEUR_1_3" + 2.7845930644168537 AS "NEUR_2_2", -0.37977845315855363 * "HL_1_relu_1"."NEUR_1_1" + 1.3296838800598012 * "HL_1_relu_1"."NEUR_1_2" + 1.0662425817806298 * "HL_1_relu_1"."NEUR_1_3" + -0.20900266243930857 AS "NEUR_2_3", -0.46740821640123237 * "HL_1_relu_1"."NEUR_1_1" + 0.2261203603024419 * "HL_1_relu_1"."NEUR_1_2" + -0.601925421214221 * "HL_1_relu_1"."NEUR_1_3" + 0.8639085215796434 AS "NEUR_2_4", -0.6091649727400567 * "HL_1_relu_1"."NEUR_1_1" + -0.3775557947571933 * "HL_1_relu_1"."NEUR_1_2" + -0.6728008453871377 * "HL_1_relu_1"."NEUR_1_3" + -0.01807831622698608 AS "NEUR_2_5" 
-FROM "TMP_20180508180352_CODEGEN_7A68" AS "HL_1_relu_1"), 
+FROM "TMP_20180516_CODEGEN_236AO7_HL_" AS "HL_1_relu_1"), 
 "HL_2_relu" AS 
 (SELECT "HL_BA_2"."KEY" AS "KEY", maxvalue("HL_BA_2"."NEUR_2_1", 0) AS "NEUR_2_1", maxvalue("HL_BA_2"."NEUR_2_2", 0) AS "NEUR_2_2", maxvalue("HL_BA_2"."NEUR_2_3", 0) AS "NEUR_2_3", maxvalue("HL_BA_2"."NEUR_2_4", 0) AS "NEUR_2_4", maxvalue("HL_BA_2"."NEUR_2_5", 0) AS "NEUR_2_5" 
 FROM "HL_BA_2"), 
@@ -73,15 +73,15 @@ FROM "OL_BA")
 FROM (SELECT "OL_logistic"."KEY" AS "KEY", "OL_logistic"."NEUR_3_1" AS "NEUR_3_1" 
 FROM "OL_logistic") AS "OL_logistic_1") AS "U"
 
--- Code For temporary table TMP_20180508180352_CODEGEN_HNPS part 3. Create Index 
+-- Code For temporary table TMP_20180516_CODEGEN_IY43V5_OL_ part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508180352_C_a9ed" ON "TMP_20180508180352_CODEGEN_HNPS" ("KEY")
+CREATE INDEX "ix_TMP_20180516_CODEGEN_6593" ON "TMP_20180516_CODEGEN_IY43V5_OL_" ("KEY")
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT "OL_logistic_1"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_1", 1.0 - "OL_logistic_1"."NEUR_3_1" AS "Proba_0", "OL_logistic_1"."NEUR_3_1" AS "Proba_1", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_0", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_1", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba" 
-FROM "TMP_20180508180352_CODEGEN_HNPS" AS "OL_logistic_1"), 
+FROM "TMP_20180516_CODEGEN_IY43V5_OL_" AS "OL_logistic_1"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 
@@ -99,5 +99,5 @@ arg_max_cte AS
 FROM score_max LEFT OUTER JOIN (SELECT union_with_max."KEY" AS "KEY_Proba", min(union_with_max.class) AS "arg_max_Proba" 
 FROM union_with_max 
 WHERE union_with_max."max_Proba" <= union_with_max."Proba" GROUP BY union_with_max."KEY") AS "arg_max_t_Proba" ON score_max."KEY" = "arg_max_t_Proba"."KEY_Proba")
- SELECT arg_max_cte."KEY" AS "KEY", arg_max_cte."Score_0" AS "Score_0", arg_max_cte."Score_1" AS "Score_1", arg_max_cte."Proba_0" AS "Proba_0", arg_max_cte."Proba_1" AS "Proba_1", CASE WHEN (arg_max_cte."Proba_0" IS NULL OR arg_max_cte."Proba_0" > 0.0) THEN ln(arg_max_cte."Proba_0") ELSE -1e+20 END AS "LogProba_0", CASE WHEN (arg_max_cte."Proba_1" IS NULL OR arg_max_cte."Proba_1" > 0.0) THEN ln(arg_max_cte."Proba_1") ELSE -1e+20 END AS "LogProba_1", arg_max_cte."arg_max_Proba" AS "Decision", arg_max_cte."max_Proba" AS "DecisionProba" 
+ SELECT arg_max_cte."KEY" AS "KEY", arg_max_cte."Score_0" AS "Score_0", arg_max_cte."Score_1" AS "Score_1", arg_max_cte."Proba_0" AS "Proba_0", arg_max_cte."Proba_1" AS "Proba_1", CASE WHEN (arg_max_cte."Proba_0" IS NULL OR arg_max_cte."Proba_0" > 0.0) THEN ln(arg_max_cte."Proba_0") ELSE -1.79769313486231e+308 END AS "LogProba_0", CASE WHEN (arg_max_cte."Proba_1" IS NULL OR arg_max_cte."Proba_1" > 0.0) THEN ln(arg_max_cte."Proba_1") ELSE -1.79769313486231e+308 END AS "LogProba_1", arg_max_cte."arg_max_Proba" AS "Decision", arg_max_cte."max_Proba" AS "DecisionProba" 
 FROM arg_max_cte

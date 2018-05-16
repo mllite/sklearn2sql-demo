@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180508185959_codegen_bf85o4_calprob_b0 part 1. Create 
+-- Code For temporary table tmp_20180516122942_codegen_yfi5wk_calprob_b0 part 1. Create 
 
 
-CREATE TEMPORARY TABLE tmp_20180508185959_codegen_bf85o4_calprob_b0 (
+CREATE TEMPORARY TABLE tmp_20180516122942_codegen_yfi5wk_calprob_b0 (
 	"KEY" BIGINT, 
 	"Proba_1789-07-14T00:00:00.000000000" DOUBLE, 
 	"Proba_1789-08-14T00:00:00.000000000" DOUBLE, 
@@ -22,9 +22,9 @@ CREATE TEMPORARY TABLE tmp_20180508185959_codegen_bf85o4_calprob_b0 (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508185959_codegen_bf85o4_calprob_b0 part 2. Populate
+-- Code For temporary table tmp_20180516122942_codegen_yfi5wk_calprob_b0 part 2. Populate
 
-INSERT INTO tmp_20180508185959_codegen_bf85o4_calprob_b0 ("KEY", "Proba_1789-07-14T00:00:00.000000000", "Proba_1789-08-14T00:00:00.000000000", "Proba_1789-09-14T00:00:00.000000000") SELECT "U"."KEY", "U"."Proba_1789-07-14T00:00:00.000000000", "U"."Proba_1789-08-14T00:00:00.000000000", "U"."Proba_1789-09-14T00:00:00.000000000" 
+INSERT INTO tmp_20180516122942_codegen_yfi5wk_calprob_b0 ("KEY", "Proba_1789-07-14T00:00:00.000000000", "Proba_1789-08-14T00:00:00.000000000", "Proba_1789-09-14T00:00:00.000000000") SELECT "U"."KEY", "U"."Proba_1789-07-14T00:00:00.000000000", "U"."Proba_1789-08-14T00:00:00.000000000", "U"."Proba_1789-09-14T00:00:00.000000000" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_3" <= 0.75) THEN 1 ELSE CASE WHEN ("ADS"."Feature_2" <= 4.75) THEN 3 ELSE CASE WHEN ("ADS"."Feature_2" <= 5.050000190734863) THEN CASE WHEN ("ADS"."Feature_1" <= 3.049999952316284) THEN CASE WHEN ("ADS"."Feature_3" <= 1.75) THEN 7 ELSE 8 END ELSE 9 END ELSE 10 END END END AS node_id_2 
 FROM iris_date_tgt AS "ADS"), 
@@ -105,10 +105,10 @@ FROM "Normalized_Probas_1" UNION ALL SELECT "Normalized_Probas_2"."KEY" AS "KEY"
 FROM "Normalized_Probas_2" UNION ALL SELECT "Normalized_Probas_3"."KEY" AS "KEY", "Normalized_Probas_3"."Proba_1789-07-14T00:00:00.000000000" AS "Proba_1789-07-14T00:00:00.000000000", "Normalized_Probas_3"."Proba_1789-08-14T00:00:00.000000000" AS "Proba_1789-08-14T00:00:00.000000000", "Normalized_Probas_3"."Proba_1789-09-14T00:00:00.000000000" AS "Proba_1789-09-14T00:00:00.000000000" 
 FROM "Normalized_Probas_3") AS "CalProb_esu_0") AS "CalProb_B0") AS "U"
 
--- Code For temporary table tmp_20180508185959_codegen_whptg2_calprob_union part 1. Create 
+-- Code For temporary table tmp_20180516122942_codegen_jwtltn_calprob_avg part 1. Create 
 
 
-CREATE TEMPORARY TABLE tmp_20180508185959_codegen_whptg2_calprob_union (
+CREATE TEMPORARY TABLE tmp_20180516122942_codegen_jwtltn_calprob_avg (
 	"KEY" BIGINT, 
 	"Proba_1789-07-14T00:00:00.000000000" DOUBLE, 
 	"Proba_1789-08-14T00:00:00.000000000" DOUBLE, 
@@ -117,39 +117,23 @@ CREATE TEMPORARY TABLE tmp_20180508185959_codegen_whptg2_calprob_union (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508185959_codegen_whptg2_calprob_union part 2. Populate
+-- Code For temporary table tmp_20180516122942_codegen_jwtltn_calprob_avg part 2. Populate
 
-INSERT INTO tmp_20180508185959_codegen_whptg2_calprob_union ("KEY", "Proba_1789-07-14T00:00:00.000000000", "Proba_1789-08-14T00:00:00.000000000", "Proba_1789-09-14T00:00:00.000000000") SELECT "U"."KEY", "U"."Proba_1789-07-14T00:00:00.000000000", "U"."Proba_1789-08-14T00:00:00.000000000", "U"."Proba_1789-09-14T00:00:00.000000000" 
-FROM (SELECT "CalProb_Union"."KEY", "CalProb_Union"."Proba_1789-07-14T00:00:00.000000000", "CalProb_Union"."Proba_1789-08-14T00:00:00.000000000", "CalProb_Union"."Proba_1789-09-14T00:00:00.000000000" 
-FROM (SELECT "CalProb_EnsembleUnion"."KEY" AS "KEY", "CalProb_EnsembleUnion"."Proba_1789-07-14T00:00:00.000000000" AS "Proba_1789-07-14T00:00:00.000000000", "CalProb_EnsembleUnion"."Proba_1789-08-14T00:00:00.000000000" AS "Proba_1789-08-14T00:00:00.000000000", "CalProb_EnsembleUnion"."Proba_1789-09-14T00:00:00.000000000" AS "Proba_1789-09-14T00:00:00.000000000" 
+INSERT INTO tmp_20180516122942_codegen_jwtltn_calprob_avg ("KEY", "Proba_1789-07-14T00:00:00.000000000", "Proba_1789-08-14T00:00:00.000000000", "Proba_1789-09-14T00:00:00.000000000") SELECT "U"."KEY", "U"."Proba_1789-07-14T00:00:00.000000000", "U"."Proba_1789-08-14T00:00:00.000000000", "U"."Proba_1789-09-14T00:00:00.000000000" 
+FROM (WITH "CalProb_Union" AS 
+(SELECT "CalProb_EnsembleUnion"."KEY" AS "KEY", "CalProb_EnsembleUnion"."Proba_1789-07-14T00:00:00.000000000" AS "Proba_1789-07-14T00:00:00.000000000", "CalProb_EnsembleUnion"."Proba_1789-08-14T00:00:00.000000000" AS "Proba_1789-08-14T00:00:00.000000000", "CalProb_EnsembleUnion"."Proba_1789-09-14T00:00:00.000000000" AS "Proba_1789-09-14T00:00:00.000000000" 
 FROM (SELECT "CalProb_B0"."KEY" AS "KEY", "CalProb_B0"."Proba_1789-07-14T00:00:00.000000000" AS "Proba_1789-07-14T00:00:00.000000000", "CalProb_B0"."Proba_1789-08-14T00:00:00.000000000" AS "Proba_1789-08-14T00:00:00.000000000", "CalProb_B0"."Proba_1789-09-14T00:00:00.000000000" AS "Proba_1789-09-14T00:00:00.000000000" 
-FROM tmp_20180508185959_codegen_bf85o4_calprob_b0 AS "CalProb_B0") AS "CalProb_EnsembleUnion") AS "CalProb_Union") AS "U"
-
--- Code For temporary table tmp_20180508185959_codegen_cc0a65_calprob_avg part 1. Create 
-
-
-CREATE TEMPORARY TABLE tmp_20180508185959_codegen_cc0a65_calprob_avg (
-	"KEY" BIGINT, 
-	"Proba_1789-07-14T00:00:00.000000000" DOUBLE, 
-	"Proba_1789-08-14T00:00:00.000000000" DOUBLE, 
-	"Proba_1789-09-14T00:00:00.000000000" DOUBLE
-)
-
- ON COMMIT PRESERVE ROWS
-
--- Code For temporary table tmp_20180508185959_codegen_cc0a65_calprob_avg part 2. Populate
-
-INSERT INTO tmp_20180508185959_codegen_cc0a65_calprob_avg ("KEY", "Proba_1789-07-14T00:00:00.000000000", "Proba_1789-08-14T00:00:00.000000000", "Proba_1789-09-14T00:00:00.000000000") SELECT "U"."KEY", "U"."Proba_1789-07-14T00:00:00.000000000", "U"."Proba_1789-08-14T00:00:00.000000000", "U"."Proba_1789-09-14T00:00:00.000000000" 
-FROM (SELECT "CalProb_avg"."KEY", "CalProb_avg"."Proba_1789-07-14T00:00:00.000000000", "CalProb_avg"."Proba_1789-08-14T00:00:00.000000000", "CalProb_avg"."Proba_1789-09-14T00:00:00.000000000" 
+FROM tmp_20180516122942_codegen_yfi5wk_calprob_b0 AS "CalProb_B0") AS "CalProb_EnsembleUnion")
+ SELECT "CalProb_avg"."KEY", "CalProb_avg"."Proba_1789-07-14T00:00:00.000000000", "CalProb_avg"."Proba_1789-08-14T00:00:00.000000000", "CalProb_avg"."Proba_1789-09-14T00:00:00.000000000" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Proba_1789-07-14T00:00:00.000000000" AS DOUBLE) AS "Proba_1789-07-14T00:00:00.000000000", CAST("T"."Proba_1789-08-14T00:00:00.000000000" AS DOUBLE) AS "Proba_1789-08-14T00:00:00.000000000", CAST("T"."Proba_1789-09-14T00:00:00.000000000" AS DOUBLE) AS "Proba_1789-09-14T00:00:00.000000000" 
 FROM (SELECT "CalProb_Union"."KEY" AS "KEY", avg(CAST("CalProb_Union"."Proba_1789-07-14T00:00:00.000000000" AS DOUBLE)) AS "Proba_1789-07-14T00:00:00.000000000", avg(CAST("CalProb_Union"."Proba_1789-08-14T00:00:00.000000000" AS DOUBLE)) AS "Proba_1789-08-14T00:00:00.000000000", avg(CAST("CalProb_Union"."Proba_1789-09-14T00:00:00.000000000" AS DOUBLE)) AS "Proba_1789-09-14T00:00:00.000000000" 
-FROM tmp_20180508185959_codegen_whptg2_calprob_union AS "CalProb_Union" GROUP BY "CalProb_Union"."KEY") AS "T") AS "CalProb_avg") AS "U"
+FROM "CalProb_Union" GROUP BY "CalProb_Union"."KEY") AS "T") AS "CalProb_avg") AS "U"
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT "CalProb_avg"."KEY" AS "KEY", CAST(NULL AS DOUBLE) AS "Score_1789-07-14T00:00:00.000000000", CAST(NULL AS DOUBLE) AS "Score_1789-08-14T00:00:00.000000000", CAST(NULL AS DOUBLE) AS "Score_1789-09-14T00:00:00.000000000", "CalProb_avg"."Proba_1789-07-14T00:00:00.000000000" AS "Proba_1789-07-14T00:00:00.000000000", "CalProb_avg"."Proba_1789-08-14T00:00:00.000000000" AS "Proba_1789-08-14T00:00:00.000000000", "CalProb_avg"."Proba_1789-09-14T00:00:00.000000000" AS "Proba_1789-09-14T00:00:00.000000000", CAST(NULL AS DOUBLE) AS "LogProba_1789-07-14T00:00:00.000000000", CAST(NULL AS DOUBLE) AS "LogProba_1789-08-14T00:00:00.000000000", CAST(NULL AS DOUBLE) AS "LogProba_1789-09-14T00:00:00.000000000", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE) AS "DecisionProba" 
-FROM tmp_20180508185959_codegen_cc0a65_calprob_avg AS "CalProb_avg"), 
+FROM tmp_20180516122942_codegen_jwtltn_calprob_avg AS "CalProb_avg"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", '1789-07-14T00:00:00.000000000' AS class, orig_cte."LogProba_1789-07-14T00:00:00.000000000" AS "LogProba", orig_cte."Proba_1789-07-14T00:00:00.000000000" AS "Proba", orig_cte."Score_1789-07-14T00:00:00.000000000" AS "Score" 

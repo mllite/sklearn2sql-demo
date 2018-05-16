@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180508175834_codegen_z2jlf9_ads_imp_1_out part 1. Create 
+-- Code For temporary table tmp_20180516110343_codegen_08gf2x_ads_imp_1_out part 1. Create 
 
 
-CREATE TEMPORARY TABLE tmp_20180508175834_codegen_z2jlf9_ads_imp_1_out (
+CREATE TEMPORARY TABLE tmp_20180516110343_codegen_08gf2x_ads_imp_1_out (
 	"KEY" BIGINT, 
 	impter_2 DOUBLE, 
 	impter_3 DOUBLE, 
@@ -29,17 +29,17 @@ CREATE TEMPORARY TABLE tmp_20180508175834_codegen_z2jlf9_ads_imp_1_out (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508175834_codegen_z2jlf9_ads_imp_1_out part 2. Populate
+-- Code For temporary table tmp_20180516110343_codegen_08gf2x_ads_imp_1_out part 2. Populate
 
-INSERT INTO tmp_20180508175834_codegen_z2jlf9_ads_imp_1_out ("KEY", impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT "U"."KEY", "U".impter_2, "U".impter_3, "U".impter_4, "U".impter_5, "U".impter_6, "U".impter_7, "U".impter_8, "U".impter_9, "U".impter_10, "U".impter_11 
+INSERT INTO tmp_20180516110343_codegen_08gf2x_ads_imp_1_out ("KEY", impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT "U"."KEY", "U".impter_2, "U".impter_3, "U".impter_4, "U".impter_5, "U".impter_6, "U".impter_7, "U".impter_8, "U".impter_9, "U".impter_10, "U".impter_11 
 FROM (SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".impter_2, "ADS_imp_1_OUT".impter_3, "ADS_imp_1_OUT".impter_4, "ADS_imp_1_OUT".impter_5, "ADS_imp_1_OUT".impter_6, "ADS_imp_1_OUT".impter_7, "ADS_imp_1_OUT".impter_8, "ADS_imp_1_OUT".impter_9, "ADS_imp_1_OUT".impter_10, "ADS_imp_1_OUT".impter_11 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN 0.061829205238134496 ELSE "ADS"."Feature_0" END AS impter_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 0.17702463767183324 ELSE "ADS"."Feature_1" END AS impter_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 0.04138385004903454 ELSE "ADS"."Feature_2" END AS impter_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 0.13060646805847148 ELSE "ADS"."Feature_3" END AS impter_5, CASE WHEN ("ADS"."Feature_4" IS NULL) THEN -0.05955810471983082 ELSE "ADS"."Feature_4" END AS impter_6, CASE WHEN ("ADS"."Feature_5" IS NULL) THEN -0.04892908987010584 ELSE "ADS"."Feature_5" END AS impter_7, CASE WHEN ("ADS"."Feature_6" IS NULL) THEN 0.19101797861713127 ELSE "ADS"."Feature_6" END AS impter_8, CASE WHEN ("ADS"."Feature_7" IS NULL) THEN 0.02204959673267471 ELSE "ADS"."Feature_7" END AS impter_9, CASE WHEN ("ADS"."Feature_8" IS NULL) THEN -0.057729814034140035 ELSE "ADS"."Feature_8" END AS impter_10, CASE WHEN ("ADS"."Feature_9" IS NULL) THEN -0.05254959205203237 ELSE "ADS"."Feature_9" END AS impter_11 
 FROM "BinaryClass_10" AS "ADS") AS "ADS_imp_1_OUT") AS "U"
 
--- Code For temporary table tmp_20180508175834_codegen_gzcsam_ads_sca_2_out part 1. Create 
+-- Code For temporary table tmp_20180516110343_codegen_0bz82b_ads_sca_2_out part 1. Create 
 
 
-CREATE TEMPORARY TABLE tmp_20180508175834_codegen_gzcsam_ads_sca_2_out (
+CREATE TEMPORARY TABLE tmp_20180516110343_codegen_0bz82b_ads_sca_2_out (
 	"KEY" BIGINT, 
 	scaler_2 DOUBLE, 
 	scaler_3 DOUBLE, 
@@ -55,17 +55,17 @@ CREATE TEMPORARY TABLE tmp_20180508175834_codegen_gzcsam_ads_sca_2_out (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508175834_codegen_gzcsam_ads_sca_2_out part 2. Populate
+-- Code For temporary table tmp_20180516110343_codegen_0bz82b_ads_sca_2_out part 2. Populate
 
-INSERT INTO tmp_20180508175834_codegen_gzcsam_ads_sca_2_out ("KEY", scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT "U"."KEY", "U".scaler_2, "U".scaler_3, "U".scaler_4, "U".scaler_5, "U".scaler_6, "U".scaler_7, "U".scaler_8, "U".scaler_9, "U".scaler_10, "U".scaler_11 
+INSERT INTO tmp_20180516110343_codegen_0bz82b_ads_sca_2_out ("KEY", scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT "U"."KEY", "U".scaler_2, "U".scaler_3, "U".scaler_4, "U".scaler_5, "U".scaler_6, "U".scaler_7, "U".scaler_8, "U".scaler_9, "U".scaler_10, "U".scaler_11 
 FROM (SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_2, "ADS_sca_2_OUT".scaler_3, "ADS_sca_2_OUT".scaler_4, "ADS_sca_2_OUT".scaler_5, "ADS_sca_2_OUT".scaler_6, "ADS_sca_2_OUT".scaler_7, "ADS_sca_2_OUT".scaler_8, "ADS_sca_2_OUT".scaler_9, "ADS_sca_2_OUT".scaler_10, "ADS_sca_2_OUT".scaler_11 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".impter_2 AS DOUBLE) - 0.061829205238134496) / 1.2283839562090673 AS scaler_2, (CAST("ADS_imp_1_OUT".impter_3 AS DOUBLE) - 0.17702463767183324) / 0.940821656314017 AS scaler_3, (CAST("ADS_imp_1_OUT".impter_4 AS DOUBLE) - 0.04138385004903454) / 1.0741824888811282 AS scaler_4, (CAST("ADS_imp_1_OUT".impter_5 AS DOUBLE) - 0.13060646805847148) / 1.0792244559733761 AS scaler_5, (CAST("ADS_imp_1_OUT".impter_6 AS DOUBLE) - -0.05955810471983082) / 1.1095891190508123 AS scaler_6, (CAST("ADS_imp_1_OUT".impter_7 AS DOUBLE) - -0.04892908987010584) / 1.3781871812029047 AS scaler_7, (CAST("ADS_imp_1_OUT".impter_8 AS DOUBLE) - 0.19101797861713127) / 0.9735285246303208 AS scaler_8, (CAST("ADS_imp_1_OUT".impter_9 AS DOUBLE) - 0.02204959673267471) / 0.47460301203797095 AS scaler_9, (CAST("ADS_imp_1_OUT".impter_10 AS DOUBLE) - -0.057729814034140035) / 1.064607524840552 AS scaler_10, (CAST("ADS_imp_1_OUT".impter_11 AS DOUBLE) - -0.05254959205203237) / 1.2245328896554564 AS scaler_11 
-FROM tmp_20180508175834_codegen_z2jlf9_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
+FROM tmp_20180516110343_codegen_08gf2x_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
 
--- Code For temporary table tmp_20180508175834_codegen_oxm18c_gb_b0 part 1. Create 
+-- Code For temporary table tmp_20180516110343_codegen_00citk_gb_b0 part 1. Create 
 
 
-CREATE TEMPORARY TABLE tmp_20180508175834_codegen_oxm18c_gb_b0 (
+CREATE TEMPORARY TABLE tmp_20180516110343_codegen_00citk_gb_b0 (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE, 
 	"Score_1" DOUBLE
@@ -73,12 +73,12 @@ CREATE TEMPORARY TABLE tmp_20180508175834_codegen_oxm18c_gb_b0 (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508175834_codegen_oxm18c_gb_b0 part 2. Populate
+-- Code For temporary table tmp_20180516110343_codegen_00citk_gb_b0 part 2. Populate
 
-INSERT INTO tmp_20180508175834_codegen_oxm18c_gb_b0 ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
+INSERT INTO tmp_20180516110343_codegen_00citk_gb_b0 ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_11 <= 0.07101128250360489) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= 1.7556507587432861) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -0.8114416599273682) THEN 3 ELSE 4 END ELSE 5 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_8 <= 1.7904822826385498) THEN 7 ELSE 8 END END AS node_id_2 
-FROM tmp_20180508175834_codegen_gzcsam_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516110343_codegen_0bz82b_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."E" AS DOUBLE) AS "E" 
 FROM (SELECT 3 AS nid, -0.15384615384615385 AS "E" UNION ALL SELECT 4 AS nid, -2.0 AS "E" UNION ALL SELECT 5 AS nid, 2.0 AS "E" UNION ALL SELECT 7 AS nid, 2.0 AS "E" UNION ALL SELECT 8 AS nid, -2.0 AS "E") AS "Values"), 
@@ -93,7 +93,7 @@ FROM "DT_Output"),
 FROM "DT_Output"), 
 "DT_node_lookup_1" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_11 <= 0.07101128250360489) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= 1.7556507587432861) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -0.8114416599273682) THEN 3 ELSE 4 END ELSE 5 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_8 <= 1.7904822826385498) THEN 7 ELSE 8 END END AS node_id_2 
-FROM tmp_20180508175834_codegen_gzcsam_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516110343_codegen_0bz82b_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_1" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."E" AS DOUBLE) AS "E" 
 FROM (SELECT 3 AS nid, -0.13847003506844247 AS "E" UNION ALL SELECT 4 AS nid, -1.8187307530779822 AS "E" UNION ALL SELECT 5 AS nid, 1.8187307530779817 AS "E" UNION ALL SELECT 7 AS nid, 1.8187307530779817 AS "E" UNION ALL SELECT 8 AS nid, -1.8187307530779822 AS "E") AS "Values"), 
@@ -108,7 +108,7 @@ FROM "DT_Output_1"),
 FROM "DT_Output_1"), 
 "DT_node_lookup_2" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_11 <= 0.07101128250360489) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_9 <= 0.6601690649986267) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -0.7541185617446899) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -0.9067436456680298) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_8 <= 1.7904822826385498) THEN 9 ELSE 10 END END AS node_id_2 
-FROM tmp_20180508175834_codegen_gzcsam_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516110343_codegen_0bz82b_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_2" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."E" AS DOUBLE) AS "E" 
 FROM (SELECT 3 AS nid, 2.029663056273607 AS "E" UNION ALL SELECT 4 AS nid, -1.1217211227850905 AS "E" UNION ALL SELECT 6 AS nid, -1.9711914921168885 AS "E" UNION ALL SELECT 7 AS nid, -1.6825816841776358 AS "E" UNION ALL SELECT 9 AS nid, 1.682581684177635 AS "E" UNION ALL SELECT 10 AS nid, -1.6825816841776358 AS "E") AS "Values"), 
@@ -123,7 +123,7 @@ FROM "DT_Output_2"),
 FROM "DT_Output_2"), 
 "DT_node_lookup_3" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_11 <= 0.07101128250360489) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= 1.7556507587432861) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_5 <= 1.496748447418213) THEN 3 ELSE 4 END ELSE 5 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_8 <= 1.7904822826385498) THEN 7 ELSE 8 END END AS node_id_2 
-FROM tmp_20180508175834_codegen_gzcsam_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516110343_codegen_0bz82b_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_3" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."E" AS DOUBLE) AS "E" 
 FROM (SELECT 3 AS nid, -1.2864660764794682 AS "E" UNION ALL SELECT 4 AS nid, 1.8405198691485003 AS "E" UNION ALL SELECT 5 AS nid, 1.7636078071636292 AS "E" UNION ALL SELECT 7 AS nid, 1.5768740943066493 AS "E" UNION ALL SELECT 8 AS nid, -1.5768740943066488 AS "E") AS "Values"), 
@@ -138,7 +138,7 @@ FROM "DT_Output_3"),
 FROM "DT_Output_3"), 
 "DT_node_lookup_4" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_11 <= 0.07101128250360489) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= 1.7556507587432861) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_4 <= 1.7515931129455566) THEN 3 ELSE 4 END ELSE 5 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_8 <= 1.7904822826385498) THEN 7 ELSE 8 END END AS node_id_2 
-FROM tmp_20180508175834_codegen_gzcsam_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516110343_codegen_0bz82b_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_4" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."E" AS DOUBLE) AS "E" 
 FROM (SELECT 3 AS nid, -1.2117249884428376 AS "E" UNION ALL SELECT 4 AS nid, 1.9559132821549832 AS "E" UNION ALL SELECT 5 AS nid, 1.6401442459379127 AS "E" UNION ALL SELECT 7 AS nid, 1.492717814519233 AS "E" UNION ALL SELECT 8 AS nid, -1.492717814519233 AS "E") AS "Values"), 
@@ -165,10 +165,10 @@ FROM "GB_Model_3_1" UNION ALL SELECT "GB_Model_4_0"."KEY" AS "KEY", "GB_Model_4_
 FROM "GB_Model_4_0" UNION ALL SELECT "GB_Model_4_1"."KEY" AS "KEY", "GB_Model_4_1"."Score_0" AS "Score_0", "GB_Model_4_1"."Score_1" AS "Score_1" 
 FROM "GB_Model_4_1") AS "GB_esu_0") AS "GB_B0") AS "U"
 
--- Code For temporary table tmp_20180508175834_codegen_ifk1od_gb_b1 part 1. Create 
+-- Code For temporary table tmp_20180516110343_codegen_9g97nt_gb_b1 part 1. Create 
 
 
-CREATE TEMPORARY TABLE tmp_20180508175834_codegen_ifk1od_gb_b1 (
+CREATE TEMPORARY TABLE tmp_20180516110343_codegen_9g97nt_gb_b1 (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE, 
 	"Score_1" DOUBLE
@@ -176,12 +176,12 @@ CREATE TEMPORARY TABLE tmp_20180508175834_codegen_ifk1od_gb_b1 (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508175834_codegen_ifk1od_gb_b1 part 2. Populate
+-- Code For temporary table tmp_20180516110343_codegen_9g97nt_gb_b1 part 2. Populate
 
-INSERT INTO tmp_20180508175834_codegen_ifk1od_gb_b1 ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
+INSERT INTO tmp_20180516110343_codegen_9g97nt_gb_b1 ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
 FROM (WITH "DT_node_lookup_5" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_11 <= 0.07101128250360489) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_9 <= 0.6601690649986267) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -0.7541185617446899) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -0.9067436456680298) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_8 <= 1.7904822826385498) THEN 9 ELSE 10 END END AS node_id_2 
-FROM tmp_20180508175834_codegen_gzcsam_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516110343_codegen_0bz82b_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_5" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."E" AS DOUBLE) AS "E" 
 FROM (SELECT 3 AS nid, 1.885642417488209 AS "E" UNION ALL SELECT 4 AS nid, -0.9536234176150937 AS "E" UNION ALL SELECT 6 AS nid, -1.6211579543283008 AS "E" UNION ALL SELECT 7 AS nid, -1.449351273756259 AS "E" UNION ALL SELECT 9 AS nid, 1.4243950929603062 AS "E" UNION ALL SELECT 10 AS nid, -1.4243950929603058 AS "E") AS "Values"), 
@@ -196,7 +196,7 @@ FROM "DT_Output_5"),
 FROM "DT_Output_5"), 
 "DT_node_lookup_6" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_11 <= 0.07101128250360489) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= 1.7556507587432861) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -0.8114416599273682) THEN 3 ELSE 4 END ELSE 5 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_8 <= 1.7904822826385498) THEN 7 ELSE 8 END END AS node_id_2 
-FROM tmp_20180508175834_codegen_gzcsam_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516110343_codegen_0bz82b_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_6" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."E" AS DOUBLE) AS "E" 
 FROM (SELECT 3 AS nid, 0.034092464473056215 AS "E" UNION ALL SELECT 4 AS nid, -1.4101642957975853 AS "E" UNION ALL SELECT 5 AS nid, 1.5976716078766435 AS "E" UNION ALL SELECT 7 AS nid, 1.368052405793643 AS "E" UNION ALL SELECT 8 AS nid, -1.3680524057936443 AS "E") AS "Values"), 
@@ -211,7 +211,7 @@ FROM "DT_Output_6"),
 FROM "DT_Output_6"), 
 "DT_node_lookup_7" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_11 <= 0.07101128250360489) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_9 <= 0.6601690649986267) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -0.7541185617446899) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -0.9067436456680298) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_8 <= 1.7904822826385498) THEN 9 ELSE 10 END END AS node_id_2 
-FROM tmp_20180508175834_codegen_gzcsam_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516110343_codegen_0bz82b_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_7" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."E" AS DOUBLE) AS "E" 
 FROM (SELECT 3 AS nid, 1.7325581378799262 AS "E" UNION ALL SELECT 4 AS nid, -0.8446287141773386 AS "E" UNION ALL SELECT 6 AS nid, -1.5300009798940906 AS "E" UNION ALL SELECT 7 AS nid, -1.3375971672397093 AS "E" UNION ALL SELECT 9 AS nid, 1.320993249880287 AS "E" UNION ALL SELECT 10 AS nid, -1.320993249880286 AS "E") AS "Values"), 
@@ -226,7 +226,7 @@ FROM "DT_Output_7"),
 FROM "DT_Output_7"), 
 "DT_node_lookup_8" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_11 <= 0.07101128250360489) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= 1.7556507587432861) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_5 <= 1.496748447418213) THEN 3 ELSE 4 END ELSE 5 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_8 <= 1.7904822826385498) THEN 7 ELSE 8 END END AS node_id_2 
-FROM tmp_20180508175834_codegen_gzcsam_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516110343_codegen_0bz82b_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_8" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."E" AS DOUBLE) AS "E" 
 FROM (SELECT 3 AS nid, -0.9991597393140883 AS "E" UNION ALL SELECT 4 AS nid, 1.5478008465502715 AS "E" UNION ALL SELECT 5 AS nid, 1.554317242661278 AS "E" UNION ALL SELECT 7 AS nid, 1.2812716053275388 AS "E" UNION ALL SELECT 8 AS nid, -1.281271605327538 AS "E") AS "Values"), 
@@ -241,7 +241,7 @@ FROM "DT_Output_8"),
 FROM "DT_Output_8"), 
 "DT_node_lookup_9" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_9 <= 0.6601690649986267) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -0.6792029142379761) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_9 <= 0.13018524646759033) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_11 <= 0.3664867579936981) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -0.9067436456680298) THEN 9 ELSE 10 END END AS node_id_2 
-FROM tmp_20180508175834_codegen_gzcsam_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516110343_codegen_0bz82b_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_9" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."E" AS DOUBLE) AS "E" 
 FROM (SELECT 3 AS nid, 1.2474463050002376 AS "E" UNION ALL SELECT 4 AS nid, 1.6409435582754206 AS "E" UNION ALL SELECT 6 AS nid, -0.7048073824764006 AS "E" UNION ALL SELECT 7 AS nid, 1.1286418950002148 AS "E" UNION ALL SELECT 9 AS nid, -1.4115632784888261 AS "E" UNION ALL SELECT 10 AS nid, -1.267248164332446 AS "E") AS "Values"), 
@@ -268,10 +268,10 @@ FROM "GB_Model_8_1" UNION ALL SELECT "GB_Model_9_0"."KEY" AS "KEY", "GB_Model_9_
 FROM "GB_Model_9_0" UNION ALL SELECT "GB_Model_9_1"."KEY" AS "KEY", "GB_Model_9_1"."Score_0" AS "Score_0", "GB_Model_9_1"."Score_1" AS "Score_1" 
 FROM "GB_Model_9_1") AS "GB_esu_1") AS "GB_B1") AS "U"
 
--- Code For temporary table tmp_20180508175834_codegen_k203en_gb_b2 part 1. Create 
+-- Code For temporary table tmp_20180516110343_codegen_8mgx5r_gb_b2 part 1. Create 
 
 
-CREATE TEMPORARY TABLE tmp_20180508175834_codegen_k203en_gb_b2 (
+CREATE TEMPORARY TABLE tmp_20180516110343_codegen_8mgx5r_gb_b2 (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE, 
 	"Score_1" DOUBLE
@@ -279,12 +279,12 @@ CREATE TEMPORARY TABLE tmp_20180508175834_codegen_k203en_gb_b2 (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508175834_codegen_k203en_gb_b2 part 2. Populate
+-- Code For temporary table tmp_20180516110343_codegen_8mgx5r_gb_b2 part 2. Populate
 
-INSERT INTO tmp_20180508175834_codegen_k203en_gb_b2 ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
+INSERT INTO tmp_20180516110343_codegen_8mgx5r_gb_b2 ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
 FROM (WITH "DT_node_lookup_10" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_9 <= 0.6601690649986267) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -0.6792029142379761) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_2 <= 0.2611241638660431) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_11 <= 0.3664867579936981) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -0.9067436456680298) THEN 9 ELSE 10 END END AS node_id_2 
-FROM tmp_20180508175834_codegen_gzcsam_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516110343_codegen_0bz82b_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_10" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."E" AS DOUBLE) AS "E" 
 FROM (SELECT 3 AS nid, 1.2184263700300324 AS "E" UNION ALL SELECT 4 AS nid, 1.5461569468624359 AS "E" UNION ALL SELECT 6 AS nid, -0.650107306740469 AS "E" UNION ALL SELECT 7 AS nid, 1.08568074504253 AS "E" UNION ALL SELECT 9 AS nid, -1.3573824352603094 AS "E" UNION ALL SELECT 10 AS nid, -1.2354392373628378 AS "E") AS "Values"), 
@@ -299,7 +299,7 @@ FROM "DT_Output_10"),
 FROM "DT_Output_10"), 
 "DT_node_lookup_11" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_9 <= 0.6601690649986267) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -0.6792029142379761) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_11 <= -0.012886635959148407) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_9 <= -0.28781408071517944) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -0.9067436456680298) THEN 9 ELSE 10 END END AS node_id_2 
-FROM tmp_20180508175834_codegen_gzcsam_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516110343_codegen_0bz82b_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_11" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."E" AS DOUBLE) AS "E" 
 FROM (SELECT 3 AS nid, 1.4696247823959214 AS "E" UNION ALL SELECT 4 AS nid, 1.193370171985729 AS "E" UNION ALL SELECT 6 AS nid, 0.9559635164394037 AS "E" UNION ALL SELECT 7 AS nid, -0.6719261067130203 AS "E" UNION ALL SELECT 9 AS nid, -1.312020288239965 AS "E" UNION ALL SELECT 10 AS nid, -1.2080771534525385 AS "E") AS "Values"), 
@@ -314,7 +314,7 @@ FROM "DT_Output_11"),
 FROM "DT_Output_11"), 
 "DT_node_lookup_12" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_9 <= 0.6601690649986267) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -0.6792029142379761) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_11 <= -0.012886635959148407) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_2 <= 0.2812865674495697) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -0.9067436456680298) THEN 9 ELSE 10 END END AS node_id_2 
-FROM tmp_20180508175834_codegen_gzcsam_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516110343_codegen_0bz82b_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_12" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."E" AS DOUBLE) AS "E" 
 FROM (SELECT 3 AS nid, 1.4067686970730768 AS "E" UNION ALL SELECT 4 AS nid, 1.1716176992600653 AS "E" UNION ALL SELECT 6 AS nid, 0.5662845648276641 AS "E" UNION ALL SELECT 7 AS nid, -1.254792449094061 AS "E" UNION ALL SELECT 9 AS nid, -1.2736544511427008 AS "E" UNION ALL SELECT 10 AS nid, -1.184398877840221 AS "E") AS "Values"), 
@@ -329,7 +329,7 @@ FROM "DT_Output_12"),
 FROM "DT_Output_12"), 
 "DT_node_lookup_13" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_11 <= 0.07101128250360489) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= 1.7556507587432861) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -0.8114416599273682) THEN 3 ELSE 4 END ELSE 5 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_8 <= 1.7904822826385498) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= 1.2279863357543945) THEN 8 ELSE 9 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_6 <= 1.609443187713623) THEN 11 ELSE 12 END END END AS node_id_2 
-FROM tmp_20180508175834_codegen_gzcsam_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516110343_codegen_0bz82b_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_13" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."E" AS DOUBLE) AS "E" 
 FROM (SELECT 3 AS nid, 0.0744224226197791 AS "E" UNION ALL SELECT 4 AS nid, -1.2077480105959142 AS "E" UNION ALL SELECT 5 AS nid, 1.5491441975162652 AS "E" UNION ALL SELECT 8 AS nid, 1.1645200827182243 AS "E" UNION ALL SELECT 9 AS nid, 1.2111046798702165 AS "E" UNION ALL SELECT 11 AS nid, -1.3595490765186873 AS "E" UNION ALL SELECT 12 AS nid, -1.251621745056133 AS "E") AS "Values"), 
@@ -344,7 +344,7 @@ FROM "DT_Output_13"),
 FROM "DT_Output_13"), 
 "DT_node_lookup_14" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_9 <= 0.6601690649986267) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -0.6792029142379761) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_2 <= 0.2611241638660431) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_11 <= 0.39982807636260986) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -0.9067436456680298) THEN 9 ELSE 10 END END AS node_id_2 
-FROM tmp_20180508175834_codegen_gzcsam_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516110343_codegen_0bz82b_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_14" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."E" AS DOUBLE) AS "E" 
 FROM (SELECT 3 AS nid, 1.135864157694164 AS "E" UNION ALL SELECT 4 AS nid, 1.3518548370812429 AS "E" UNION ALL SELECT 6 AS nid, -0.4726610334665721 AS "E" UNION ALL SELECT 7 AS nid, 1.1515365924767922 AS "E" UNION ALL SELECT 9 AS nid, -1.2427283654474486 AS "E" UNION ALL SELECT 10 AS nid, -1.1451672515691305 AS "E") AS "Values"), 
@@ -371,10 +371,10 @@ FROM "GB_Model_13_1" UNION ALL SELECT "GB_Model_14_0"."KEY" AS "KEY", "GB_Model_
 FROM "GB_Model_14_0" UNION ALL SELECT "GB_Model_14_1"."KEY" AS "KEY", "GB_Model_14_1"."Score_0" AS "Score_0", "GB_Model_14_1"."Score_1" AS "Score_1" 
 FROM "GB_Model_14_1") AS "GB_esu_2") AS "GB_B2") AS "U"
 
--- Code For temporary table tmp_20180508175834_codegen_2n1f0s_gb_b3 part 1. Create 
+-- Code For temporary table tmp_20180516110343_codegen_xlsezk_gb_b3 part 1. Create 
 
 
-CREATE TEMPORARY TABLE tmp_20180508175834_codegen_2n1f0s_gb_b3 (
+CREATE TEMPORARY TABLE tmp_20180516110343_codegen_xlsezk_gb_b3 (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE, 
 	"Score_1" DOUBLE
@@ -382,12 +382,12 @@ CREATE TEMPORARY TABLE tmp_20180508175834_codegen_2n1f0s_gb_b3 (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508175834_codegen_2n1f0s_gb_b3 part 2. Populate
+-- Code For temporary table tmp_20180516110343_codegen_xlsezk_gb_b3 part 2. Populate
 
-INSERT INTO tmp_20180508175834_codegen_2n1f0s_gb_b3 ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
+INSERT INTO tmp_20180516110343_codegen_xlsezk_gb_b3 ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
 FROM (WITH "DT_node_lookup_15" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_9 <= 0.6601690649986267) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_11 <= -0.6752315759658813) THEN 2 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_11 <= 0.07101128250360489) THEN 4 ELSE 5 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -0.9067436456680298) THEN 7 ELSE 8 END END AS node_id_2 
-FROM tmp_20180508175834_codegen_gzcsam_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180516110343_codegen_0bz82b_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_15" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."E" AS DOUBLE) AS "E" 
 FROM (SELECT 2 AS nid, 1.4931003709313195 AS "E" UNION ALL SELECT 4 AS nid, -0.3736476669355103 AS "E" UNION ALL SELECT 5 AS nid, 0.9204301051861393 AS "E" UNION ALL SELECT 7 AS nid, -1.2143628508478628 AS "E" UNION ALL SELECT 8 AS nid, -1.1294597227644136 AS "E") AS "Values"), 
@@ -406,10 +406,10 @@ FROM (SELECT "GB_Model_15_0"."KEY" AS "KEY", "GB_Model_15_0"."Score_0" AS "Score
 FROM "GB_Model_15_0" UNION ALL SELECT "GB_Model_15_1"."KEY" AS "KEY", "GB_Model_15_1"."Score_0" AS "Score_0", "GB_Model_15_1"."Score_1" AS "Score_1" 
 FROM "GB_Model_15_1") AS "GB_esu_3") AS "GB_B3") AS "U"
 
--- Code For temporary table tmp_20180508175834_codegen_t3zpjy_gb_union part 1. Create 
+-- Code For temporary table tmp_20180516110343_codegen_fr1o93_gb_sum part 1. Create 
 
 
-CREATE TEMPORARY TABLE tmp_20180508175834_codegen_t3zpjy_gb_union (
+CREATE TEMPORARY TABLE tmp_20180516110343_codegen_fr1o93_gb_sum (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE, 
 	"Score_1" DOUBLE
@@ -417,41 +417,26 @@ CREATE TEMPORARY TABLE tmp_20180508175834_codegen_t3zpjy_gb_union (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508175834_codegen_t3zpjy_gb_union part 2. Populate
+-- Code For temporary table tmp_20180516110343_codegen_fr1o93_gb_sum part 2. Populate
 
-INSERT INTO tmp_20180508175834_codegen_t3zpjy_gb_union ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
-FROM (SELECT "GB_Union"."KEY", "GB_Union"."Score_0", "GB_Union"."Score_1" 
-FROM (SELECT "GB_EnsembleUnion"."KEY" AS "KEY", "GB_EnsembleUnion"."Score_0" AS "Score_0", "GB_EnsembleUnion"."Score_1" AS "Score_1" 
+INSERT INTO tmp_20180516110343_codegen_fr1o93_gb_sum ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
+FROM (WITH "GB_Union" AS 
+(SELECT "GB_EnsembleUnion"."KEY" AS "KEY", "GB_EnsembleUnion"."Score_0" AS "Score_0", "GB_EnsembleUnion"."Score_1" AS "Score_1" 
 FROM (SELECT "GB_B0"."KEY" AS "KEY", "GB_B0"."Score_0" AS "Score_0", "GB_B0"."Score_1" AS "Score_1" 
-FROM tmp_20180508175834_codegen_oxm18c_gb_b0 AS "GB_B0" UNION ALL SELECT "GB_B1"."KEY" AS "KEY", "GB_B1"."Score_0" AS "Score_0", "GB_B1"."Score_1" AS "Score_1" 
-FROM tmp_20180508175834_codegen_ifk1od_gb_b1 AS "GB_B1" UNION ALL SELECT "GB_B2"."KEY" AS "KEY", "GB_B2"."Score_0" AS "Score_0", "GB_B2"."Score_1" AS "Score_1" 
-FROM tmp_20180508175834_codegen_k203en_gb_b2 AS "GB_B2" UNION ALL SELECT "GB_B3"."KEY" AS "KEY", "GB_B3"."Score_0" AS "Score_0", "GB_B3"."Score_1" AS "Score_1" 
-FROM tmp_20180508175834_codegen_2n1f0s_gb_b3 AS "GB_B3") AS "GB_EnsembleUnion") AS "GB_Union") AS "U"
-
--- Code For temporary table tmp_20180508175834_codegen_d4lmth_gb_sum part 1. Create 
-
-
-CREATE TEMPORARY TABLE tmp_20180508175834_codegen_d4lmth_gb_sum (
-	"KEY" BIGINT, 
-	"Score_0" DOUBLE, 
-	"Score_1" DOUBLE
-)
-
- ON COMMIT PRESERVE ROWS
-
--- Code For temporary table tmp_20180508175834_codegen_d4lmth_gb_sum part 2. Populate
-
-INSERT INTO tmp_20180508175834_codegen_d4lmth_gb_sum ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
-FROM (SELECT "GB_sum"."KEY", "GB_sum"."Score_0", "GB_sum"."Score_1" 
+FROM tmp_20180516110343_codegen_00citk_gb_b0 AS "GB_B0" UNION ALL SELECT "GB_B1"."KEY" AS "KEY", "GB_B1"."Score_0" AS "Score_0", "GB_B1"."Score_1" AS "Score_1" 
+FROM tmp_20180516110343_codegen_9g97nt_gb_b1 AS "GB_B1" UNION ALL SELECT "GB_B2"."KEY" AS "KEY", "GB_B2"."Score_0" AS "Score_0", "GB_B2"."Score_1" AS "Score_1" 
+FROM tmp_20180516110343_codegen_8mgx5r_gb_b2 AS "GB_B2" UNION ALL SELECT "GB_B3"."KEY" AS "KEY", "GB_B3"."Score_0" AS "Score_0", "GB_B3"."Score_1" AS "Score_1" 
+FROM tmp_20180516110343_codegen_xlsezk_gb_b3 AS "GB_B3") AS "GB_EnsembleUnion")
+ SELECT "GB_sum"."KEY", "GB_sum"."Score_0", "GB_sum"."Score_1" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Score_0" AS DOUBLE) AS "Score_0", CAST("T"."Score_1" AS DOUBLE) AS "Score_1" 
 FROM (SELECT "GB_Union"."KEY" AS "KEY", sum("GB_Union"."Score_0") AS "Score_0", sum("GB_Union"."Score_1") AS "Score_1" 
-FROM tmp_20180508175834_codegen_t3zpjy_gb_union AS "GB_Union" GROUP BY "GB_Union"."KEY") AS "T") AS "GB_sum") AS "U"
+FROM "GB_Union" GROUP BY "GB_Union"."KEY") AS "T") AS "GB_sum") AS "U"
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT "GB_sum"."KEY" AS "KEY", -(0.0 + 0.1 * "GB_sum"."Score_1") AS "Score_0", 0.0 + 0.1 * "GB_sum"."Score_1" AS "Score_1", 1.0 - 1.0 / (1.0 + exp(CASE WHEN (CASE WHEN (-100.0 <= -(0.0 + 0.1 * "GB_sum"."Score_1")) THEN -(0.0 + 0.1 * "GB_sum"."Score_1") ELSE -100.0 END <= 100.0) THEN CASE WHEN (-100.0 <= -(0.0 + 0.1 * "GB_sum"."Score_1")) THEN -(0.0 + 0.1 * "GB_sum"."Score_1") ELSE -100.0 END ELSE 100.0 END)) AS "Proba_0", 1.0 / (1.0 + exp(CASE WHEN (CASE WHEN (-100.0 <= -(0.0 + 0.1 * "GB_sum"."Score_1")) THEN -(0.0 + 0.1 * "GB_sum"."Score_1") ELSE -100.0 END <= 100.0) THEN CASE WHEN (-100.0 <= -(0.0 + 0.1 * "GB_sum"."Score_1")) THEN -(0.0 + 0.1 * "GB_sum"."Score_1") ELSE -100.0 END ELSE 100.0 END)) AS "Proba_1", CAST(NULL AS DOUBLE) AS "LogProba_0", CAST(NULL AS DOUBLE) AS "LogProba_1", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE) AS "DecisionProba" 
-FROM tmp_20180508175834_codegen_d4lmth_gb_sum AS "GB_sum"), 
+FROM tmp_20180516110343_codegen_fr1o93_gb_sum AS "GB_sum"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

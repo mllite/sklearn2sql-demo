@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180508192743_codegen_gvxme4_ads_imp_1_out part 1. Create 
+-- Code For temporary table tmp_20180516112523_codegen_j67ffr_ads_imp_1_out part 1. Create 
 
 
-CREATE TABLE tmp_20180508192743_codegen_gvxme4_ads_imp_1_out (
+CREATE TABLE tmp_20180516112523_codegen_j67ffr_ads_imp_1_out (
 	`KEY` BIGINT, 
 	impter_2 DOUBLE, 
 	impter_3 DOUBLE, 
@@ -29,16 +29,16 @@ CREATE TABLE tmp_20180508192743_codegen_gvxme4_ads_imp_1_out (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180508192743_codegen_gvxme4_ads_imp_1_out part 2. Populate
+-- Code For temporary table tmp_20180516112523_codegen_j67ffr_ads_imp_1_out part 2. Populate
 
-INSERT INTO tmp_20180508192743_codegen_gvxme4_ads_imp_1_out (`KEY`, impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT `ADS_imp_1_OUT`.`KEY`, `ADS_imp_1_OUT`.impter_2, `ADS_imp_1_OUT`.impter_3, `ADS_imp_1_OUT`.impter_4, `ADS_imp_1_OUT`.impter_5, `ADS_imp_1_OUT`.impter_6, `ADS_imp_1_OUT`.impter_7, `ADS_imp_1_OUT`.impter_8, `ADS_imp_1_OUT`.impter_9, `ADS_imp_1_OUT`.impter_10, `ADS_imp_1_OUT`.impter_11 
+INSERT INTO tmp_20180516112523_codegen_j67ffr_ads_imp_1_out (`KEY`, impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT `ADS_imp_1_OUT`.`KEY`, `ADS_imp_1_OUT`.impter_2, `ADS_imp_1_OUT`.impter_3, `ADS_imp_1_OUT`.impter_4, `ADS_imp_1_OUT`.impter_5, `ADS_imp_1_OUT`.impter_6, `ADS_imp_1_OUT`.impter_7, `ADS_imp_1_OUT`.impter_8, `ADS_imp_1_OUT`.impter_9, `ADS_imp_1_OUT`.impter_10, `ADS_imp_1_OUT`.impter_11 
 FROM (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_0` IS NULL) THEN -0.003903374463034205 ELSE `ADS`.`Feature_0` END AS impter_2, CASE WHEN (`ADS`.`Feature_1` IS NULL) THEN 0.6152232215702322 ELSE `ADS`.`Feature_1` END AS impter_3, CASE WHEN (`ADS`.`Feature_2` IS NULL) THEN 0.042796236914291665 ELSE `ADS`.`Feature_2` END AS impter_4, CASE WHEN (`ADS`.`Feature_3` IS NULL) THEN 0.7709819558904074 ELSE `ADS`.`Feature_3` END AS impter_5, CASE WHEN (`ADS`.`Feature_4` IS NULL) THEN -0.43300733624893334 ELSE `ADS`.`Feature_4` END AS impter_6, CASE WHEN (`ADS`.`Feature_5` IS NULL) THEN -0.0424956965794036 ELSE `ADS`.`Feature_5` END AS impter_7, CASE WHEN (`ADS`.`Feature_6` IS NULL) THEN -0.29809080119845455 ELSE `ADS`.`Feature_6` END AS impter_8, CASE WHEN (`ADS`.`Feature_7` IS NULL) THEN 0.14672241507251663 ELSE `ADS`.`Feature_7` END AS impter_9, CASE WHEN (`ADS`.`Feature_8` IS NULL) THEN 0.01746942384662034 ELSE `ADS`.`Feature_8` END AS impter_10, CASE WHEN (`ADS`.`Feature_9` IS NULL) THEN 0.11507331415602866 ELSE `ADS`.`Feature_9` END AS impter_11 
 FROM `FourClass_10` AS `ADS`) AS `ADS_imp_1_OUT`
 
--- Code For temporary table tmp_20180508192743_codegen_3ctljt_ads_sca_2_out part 1. Create 
+-- Code For temporary table tmp_20180516112523_codegen_wwp21v_ads_sca_2_out part 1. Create 
 
 
-CREATE TABLE tmp_20180508192743_codegen_3ctljt_ads_sca_2_out (
+CREATE TABLE tmp_20180516112523_codegen_wwp21v_ads_sca_2_out (
 	`KEY` BIGINT, 
 	scaler_2 DOUBLE, 
 	scaler_3 DOUBLE, 
@@ -54,17 +54,17 @@ CREATE TABLE tmp_20180508192743_codegen_3ctljt_ads_sca_2_out (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180508192743_codegen_3ctljt_ads_sca_2_out part 2. Populate
+-- Code For temporary table tmp_20180516112523_codegen_wwp21v_ads_sca_2_out part 2. Populate
 
-INSERT INTO tmp_20180508192743_codegen_3ctljt_ads_sca_2_out (`KEY`, scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT `ADS_sca_2_OUT`.`KEY`, `ADS_sca_2_OUT`.scaler_2, `ADS_sca_2_OUT`.scaler_3, `ADS_sca_2_OUT`.scaler_4, `ADS_sca_2_OUT`.scaler_5, `ADS_sca_2_OUT`.scaler_6, `ADS_sca_2_OUT`.scaler_7, `ADS_sca_2_OUT`.scaler_8, `ADS_sca_2_OUT`.scaler_9, `ADS_sca_2_OUT`.scaler_10, `ADS_sca_2_OUT`.scaler_11 
+INSERT INTO tmp_20180516112523_codegen_wwp21v_ads_sca_2_out (`KEY`, scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT `ADS_sca_2_OUT`.`KEY`, `ADS_sca_2_OUT`.scaler_2, `ADS_sca_2_OUT`.scaler_3, `ADS_sca_2_OUT`.scaler_4, `ADS_sca_2_OUT`.scaler_5, `ADS_sca_2_OUT`.scaler_6, `ADS_sca_2_OUT`.scaler_7, `ADS_sca_2_OUT`.scaler_8, `ADS_sca_2_OUT`.scaler_9, `ADS_sca_2_OUT`.scaler_10, `ADS_sca_2_OUT`.scaler_11 
 FROM (SELECT `ADS_imp_1_OUT`.`KEY` AS `KEY`, (CAST(`ADS_imp_1_OUT`.impter_2 AS DOUBLE) - -0.003903374463034205) / 0.9795060640183997 AS scaler_2, (CAST(`ADS_imp_1_OUT`.impter_3 AS DOUBLE) - 0.6152232215702322) / 1.3900807236205235 AS scaler_3, (CAST(`ADS_imp_1_OUT`.impter_4 AS DOUBLE) - 0.042796236914291665) / 1.4962685135870766 AS scaler_4, (CAST(`ADS_imp_1_OUT`.impter_5 AS DOUBLE) - 0.7709819558904074) / 2.3333561060111743 AS scaler_5, (CAST(`ADS_imp_1_OUT`.impter_6 AS DOUBLE) - -0.43300733624893334) / 1.4029757772648748 AS scaler_6, (CAST(`ADS_imp_1_OUT`.impter_7 AS DOUBLE) - -0.0424956965794036) / 0.9558091076873229 AS scaler_7, (CAST(`ADS_imp_1_OUT`.impter_8 AS DOUBLE) - -0.29809080119845455) / 1.017013180721433 AS scaler_8, (CAST(`ADS_imp_1_OUT`.impter_9 AS DOUBLE) - 0.14672241507251663) / 1.600798539929603 AS scaler_9, (CAST(`ADS_imp_1_OUT`.impter_10 AS DOUBLE) - 0.01746942384662034) / 1.1487296361671415 AS scaler_10, (CAST(`ADS_imp_1_OUT`.impter_11 AS DOUBLE) - 0.11507331415602866) / 0.9690911857336224 AS scaler_11 
-FROM tmp_20180508192743_codegen_gvxme4_ads_imp_1_out AS `ADS_imp_1_OUT`) AS `ADS_sca_2_OUT`
+FROM tmp_20180516112523_codegen_j67ffr_ads_imp_1_out AS `ADS_imp_1_OUT`) AS `ADS_sca_2_OUT`
 
 -- Model deployment code
 
 WITH linear_input AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CAST(`ADS_sca_2_OUT`.scaler_2 AS DOUBLE) AS scaler_2, CAST(`ADS_sca_2_OUT`.scaler_3 AS DOUBLE) AS scaler_3, CAST(`ADS_sca_2_OUT`.scaler_4 AS DOUBLE) AS scaler_4, CAST(`ADS_sca_2_OUT`.scaler_5 AS DOUBLE) AS scaler_5, CAST(`ADS_sca_2_OUT`.scaler_6 AS DOUBLE) AS scaler_6, CAST(`ADS_sca_2_OUT`.scaler_7 AS DOUBLE) AS scaler_7, CAST(`ADS_sca_2_OUT`.scaler_8 AS DOUBLE) AS scaler_8, CAST(`ADS_sca_2_OUT`.scaler_9 AS DOUBLE) AS scaler_9, CAST(`ADS_sca_2_OUT`.scaler_10 AS DOUBLE) AS scaler_10, CAST(`ADS_sca_2_OUT`.scaler_11 AS DOUBLE) AS scaler_11 
-FROM tmp_20180508192743_codegen_3ctljt_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180516112523_codegen_wwp21v_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 linear_model_cte AS 
 (SELECT linear_input.`KEY` AS `KEY`, 0.10292344892622607 * linear_input.scaler_2 + -0.16128879814907518 * linear_input.scaler_3 + -0.016595188655310848 * linear_input.scaler_4 + -0.08197797950089047 * linear_input.scaler_5 + 0.2794985031895576 * linear_input.scaler_6 + -0.09441389938820662 * linear_input.scaler_7 + 0.06640902290102761 * linear_input.scaler_8 + 0.1464737146923038 * linear_input.scaler_9 + 0.13322022377978143 * linear_input.scaler_10 + 0.021794692001736293 * linear_input.scaler_11 + -0.55 AS `Score_0`, -0.016253991411340468 * linear_input.scaler_2 + 0.025836013334245983 * linear_input.scaler_3 + 0.16765035649042398 * linear_input.scaler_4 + 0.13530522456149877 * linear_input.scaler_5 + 0.13036121444754706 * linear_input.scaler_6 + -0.02955502745314405 * linear_input.scaler_7 + -0.1327660683159943 * linear_input.scaler_8 + 0.11183960221027377 * linear_input.scaler_9 + -0.08783745128360582 * linear_input.scaler_10 + 0.03008145245996441 * linear_input.scaler_11 + -0.5 AS `Score_1`, -0.055034959342427525 * linear_input.scaler_2 + -0.24628236565598852 * linear_input.scaler_3 + -0.24675054936025034 * linear_input.scaler_4 + -0.14553957987129795 * linear_input.scaler_5 + -0.2897178460869261 * linear_input.scaler_6 + 6.457878012107637e-05 * linear_input.scaler_7 + 0.0628100091998104 * linear_input.scaler_8 + 0.20525968769047165 * linear_input.scaler_9 + 0.12455162823735587 * linear_input.scaler_10 + 0.022640261593938928 * linear_input.scaler_11 + -0.5 AS `Score_2`, -0.03163449817245797 * linear_input.scaler_2 + 0.38173515047082146 * linear_input.scaler_3 + 0.09569538152514169 * linear_input.scaler_4 + 0.09221233481068326 * linear_input.scaler_5 + -0.12014187155017984 * linear_input.scaler_6 + 0.12390434806122959 * linear_input.scaler_7 + 0.003547036215157446 * linear_input.scaler_8 + -0.4635730045930462 * linear_input.scaler_9 + -0.16993440073353147 * linear_input.scaler_10 + -0.07451640605563964 * linear_input.scaler_11 + -0.45 AS `Score_3` 
 FROM linear_input), 

@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180508180621_CODEGEN_UNRN6H_BAG_B0 part 1. Create 
+-- Code For temporary table TMP_20180516111428_CODEGEN_FBH22B_BAG_B0 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180508180621_CODEGEN_UNRN6H_BAG_B0` (
+CREATE TEMPORARY TABLE `TMP_20180516111428_CODEGEN_FBH22B_BAG_B0` (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Proba_0` DOUBLE, 
@@ -25,14 +25,14 @@ CREATE TEMPORARY TABLE `TMP_20180508180621_CODEGEN_UNRN6H_BAG_B0` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180508180621_CODEGEN_UNRN6H_BAG_B0 part 2. Populate
+-- Code For temporary table TMP_20180516111428_CODEGEN_FBH22B_BAG_B0 part 2. Populate
 
-INSERT INTO `TMP_20180508180621_CODEGEN_UNRN6H_BAG_B0` (`KEY`, `Score_0`, `Proba_0`, `LogProba_0`, `Score_1`, `Proba_1`, `LogProba_1`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Proba_0`, `U`.`LogProba_0`, `U`.`Score_1`, `U`.`Proba_1`, `U`.`LogProba_1` 
+INSERT INTO `TMP_20180516111428_CODEGEN_FBH22B_BAG_B0` (`KEY`, `Score_0`, `Proba_0`, `LogProba_0`, `Score_1`, `Proba_1`, `LogProba_1`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Proba_0`, `U`.`LogProba_0`, `U`.`Score_1`, `U`.`Proba_1`, `U`.`LogProba_1` 
 FROM (WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_27` <= 0.1454000025987625) THEN CASE WHEN (`ADS`.`Feature_20` <= 17.809999465942383) THEN CASE WHEN (`ADS`.`Feature_13` <= 38.60499954223633) THEN CASE WHEN (`ADS`.`Feature_26` <= 0.3787499964237213) THEN 4 ELSE CASE WHEN (`ADS`.`Feature_26` <= 0.38999998569488525) THEN 6 ELSE 7 END END ELSE CASE WHEN (`ADS`.`Feature_19` <= 0.0037369998171925545) THEN 9 ELSE 10 END END ELSE CASE WHEN (`ADS`.`Feature_24` <= 0.0879800021648407) THEN 12 ELSE 13 END END ELSE CASE WHEN (`ADS`.`Feature_16` <= 0.13565000891685486) THEN CASE WHEN (`ADS`.`Feature_10` <= 0.2468000054359436) THEN CASE WHEN (`ADS`.`Feature_10` <= 0.23070000112056732) THEN 17 ELSE 18 END ELSE 19 END ELSE 20 END END AS node_id_2 
 FROM `BreastCancer` AS `ADS`), 
 `DT_node_data` AS 
-(SELECT `Values`.nid AS nid, `Values`.`P_0` AS `P_0`, `Values`.`P_1` AS `P_1`, `Values`.`D` AS `D`, `Values`.`DP` AS `DP` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`P_0` AS DOUBLE) AS `P_0`, CAST(`Values`.`P_1` AS DOUBLE) AS `P_1`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 4 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 9 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 12 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 13 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 17 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 18 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 19 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 20 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP`) AS `Values`), 
 `DT_Output` AS 
 (SELECT `DT_node_lookup`.`KEY` AS `KEY`, `DT_node_lookup`.node_id_2 AS node_id_2, `DT_node_data`.nid AS nid, `DT_node_data`.`P_0` AS `P_0`, `DT_node_data`.`P_1` AS `P_1`, `DT_node_data`.`D` AS `D`, `DT_node_data`.`DP` AS `DP` 
@@ -44,7 +44,7 @@ FROM `DT_Output`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_7` <= 0.055799998342990875) THEN CASE WHEN (`ADS`.`Feature_13` <= 39.970001220703125) THEN CASE WHEN (`ADS`.`Feature_23` <= 1019.5) THEN CASE WHEN (`ADS`.`Feature_28` <= 0.3469499945640564) THEN 4 ELSE CASE WHEN (`ADS`.`Feature_22` <= 107.55000305175781) THEN 6 ELSE 7 END END ELSE 8 END ELSE CASE WHEN (`ADS`.`Feature_8` <= 0.16565001010894775) THEN 10 ELSE CASE WHEN (`ADS`.`Feature_16` <= 0.03630499914288521) THEN 12 ELSE 13 END END END ELSE CASE WHEN (`ADS`.`Feature_16` <= 0.13565000891685486) THEN CASE WHEN (`ADS`.`Feature_21` <= 16.654998779296875) THEN 16 ELSE 17 END ELSE 18 END END AS node_id_2 
 FROM `BreastCancer` AS `ADS`), 
 `DT_node_data_1` AS 
-(SELECT `Values`.nid AS nid, `Values`.`P_0` AS `P_0`, `Values`.`P_1` AS `P_1`, `Values`.`D` AS `D`, `Values`.`DP` AS `DP` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`P_0` AS DOUBLE) AS `P_0`, CAST(`Values`.`P_1` AS DOUBLE) AS `P_1`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 4 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 8 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 12 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 13 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 16 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 17 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 18 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP`) AS `Values`), 
 `DT_Output_1` AS 
 (SELECT `DT_node_lookup_1`.`KEY` AS `KEY`, `DT_node_lookup_1`.node_id_2 AS node_id_2, `DT_node_data_1`.nid AS nid, `DT_node_data_1`.`P_0` AS `P_0`, `DT_node_data_1`.`P_1` AS `P_1`, `DT_node_data_1`.`D` AS `D`, `DT_node_data_1`.`DP` AS `DP` 
@@ -56,7 +56,7 @@ FROM `DT_Output_1`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_22` <= 113.14999389648438) THEN CASE WHEN (`ADS`.`Feature_13` <= 48.70000076293945) THEN CASE WHEN (`ADS`.`Feature_28` <= 0.3593499958515167) THEN CASE WHEN (`ADS`.`Feature_13` <= 38.349998474121094) THEN 4 ELSE CASE WHEN (`ADS`.`Feature_21` <= 28.130001068115234) THEN 6 ELSE 7 END END ELSE CASE WHEN (`ADS`.`Feature_18` <= 0.031700000166893005) THEN 9 ELSE 10 END END ELSE CASE WHEN (`ADS`.`Feature_18` <= 0.030310001224279404) THEN 12 ELSE 13 END END ELSE CASE WHEN (`ADS`.`Feature_11` <= 0.5234500169754028) THEN 15 ELSE CASE WHEN (`ADS`.`Feature_8` <= 0.15004999935626984) THEN 17 ELSE CASE WHEN (`ADS`.`Feature_7` <= 0.028039999306201935) THEN 19 ELSE CASE WHEN (`ADS`.`Feature_19` <= 0.0016250000335276127) THEN 21 ELSE 22 END END END END END AS node_id_2 
 FROM `BreastCancer` AS `ADS`), 
 `DT_node_data_2` AS 
-(SELECT `Values`.nid AS nid, `Values`.`P_0` AS `P_0`, `Values`.`P_1` AS `P_1`, `Values`.`D` AS `D`, `Values`.`DP` AS `DP` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`P_0` AS DOUBLE) AS `P_0`, CAST(`Values`.`P_1` AS DOUBLE) AS `P_1`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 4 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 9 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 12 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 13 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 15 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 17 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 19 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 21 AS nid, 0.8333333333333334 AS `P_0`, 0.16666666666666666 AS `P_1`, 0 AS `D`, 0.8333333333333334 AS `DP` UNION ALL SELECT 22 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP`) AS `Values`), 
 `DT_Output_2` AS 
 (SELECT `DT_node_lookup_2`.`KEY` AS `KEY`, `DT_node_lookup_2`.node_id_2 AS node_id_2, `DT_node_data_2`.nid AS nid, `DT_node_data_2`.`P_0` AS `P_0`, `DT_node_data_2`.`P_1` AS `P_1`, `DT_node_data_2`.`D` AS `D`, `DT_node_data_2`.`DP` AS `DP` 
@@ -68,7 +68,7 @@ FROM `DT_Output_2`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_27` <= 0.1464499980211258) THEN CASE WHEN (`ADS`.`Feature_20` <= 17.719999313354492) THEN CASE WHEN (`ADS`.`Feature_27` <= 0.12229999899864197) THEN CASE WHEN (`ADS`.`Feature_10` <= 1.0475499629974365) THEN CASE WHEN (`ADS`.`Feature_13` <= 48.974998474121094) THEN 5 ELSE 6 END ELSE 7 END ELSE CASE WHEN (`ADS`.`Feature_9` <= 0.05646499991416931) THEN 9 ELSE CASE WHEN (`ADS`.`Feature_1` <= 24.565000534057617) THEN 11 ELSE 12 END END END ELSE CASE WHEN (`ADS`.`Feature_13` <= 37.04499816894531) THEN CASE WHEN (`ADS`.`Feature_6` <= 0.047554999589920044) THEN 15 ELSE 16 END ELSE 17 END END ELSE CASE WHEN (`ADS`.`Feature_19` <= 0.012910000048577785) THEN CASE WHEN (`ADS`.`Feature_6` <= 0.08588500320911407) THEN CASE WHEN (`ADS`.`Feature_16` <= 0.02555999904870987) THEN 21 ELSE 22 END ELSE 23 END ELSE 24 END END AS node_id_2 
 FROM `BreastCancer` AS `ADS`), 
 `DT_node_data_3` AS 
-(SELECT `Values`.nid AS nid, `Values`.`P_0` AS `P_0`, `Values`.`P_1` AS `P_1`, `Values`.`D` AS `D`, `Values`.`DP` AS `DP` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`P_0` AS DOUBLE) AS `P_0`, CAST(`Values`.`P_1` AS DOUBLE) AS `P_1`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 5 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS nid, 0.25 AS `P_0`, 0.75 AS `P_1`, 1 AS `D`, 0.75 AS `DP` UNION ALL SELECT 7 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 9 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 11 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 12 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 15 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 16 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 17 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 21 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 22 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 23 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 24 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP`) AS `Values`), 
 `DT_Output_3` AS 
 (SELECT `DT_node_lookup_3`.`KEY` AS `KEY`, `DT_node_lookup_3`.node_id_2 AS node_id_2, `DT_node_data_3`.nid AS nid, `DT_node_data_3`.`P_0` AS `P_0`, `DT_node_data_3`.`P_1` AS `P_1`, `DT_node_data_3`.`D` AS `D`, `DT_node_data_3`.`DP` AS `DP` 
@@ -80,7 +80,7 @@ FROM `DT_Output_3`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_27` <= 0.14559999108314514) THEN CASE WHEN (`ADS`.`Feature_22` <= 123.80000305175781) THEN CASE WHEN (`ADS`.`Feature_14` <= 0.002832000143826008) THEN 3 ELSE CASE WHEN (`ADS`.`Feature_6` <= 0.1197499930858612) THEN CASE WHEN (`ADS`.`Feature_21` <= 35.63500213623047) THEN 6 ELSE 7 END ELSE CASE WHEN (`ADS`.`Feature_9` <= 0.0652099996805191) THEN 9 ELSE 10 END END END ELSE 11 END ELSE CASE WHEN (`ADS`.`Feature_16` <= 0.12630000710487366) THEN CASE WHEN (`ADS`.`Feature_26` <= 0.20340000092983246) THEN 14 ELSE 15 END ELSE 16 END END AS node_id_2 
 FROM `BreastCancer` AS `ADS`), 
 `DT_node_data_4` AS 
-(SELECT `Values`.nid AS nid, `Values`.`P_0` AS `P_0`, `Values`.`P_1` AS `P_1`, `Values`.`D` AS `D`, `Values`.`DP` AS `DP` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`P_0` AS DOUBLE) AS `P_0`, CAST(`Values`.`P_1` AS DOUBLE) AS `P_1`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 3 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS nid, 0.125 AS `P_0`, 0.875 AS `P_1`, 1 AS `D`, 0.875 AS `DP` UNION ALL SELECT 9 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 11 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 14 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 15 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 16 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP`) AS `Values`), 
 `DT_Output_4` AS 
 (SELECT `DT_node_lookup_4`.`KEY` AS `KEY`, `DT_node_lookup_4`.node_id_2 AS node_id_2, `DT_node_data_4`.nid AS nid, `DT_node_data_4`.`P_0` AS `P_0`, `DT_node_data_4`.`P_1` AS `P_1`, `DT_node_data_4`.`D` AS `D`, `DT_node_data_4`.`DP` AS `DP` 
@@ -92,7 +92,7 @@ FROM `DT_Output_4`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_27` <= 0.14429999887943268) THEN CASE WHEN (`ADS`.`Feature_20` <= 17.524999618530273) THEN CASE WHEN (`ADS`.`Feature_18` <= 0.009211000055074692) THEN 3 ELSE CASE WHEN (`ADS`.`Feature_27` <= 0.131850004196167) THEN 5 ELSE CASE WHEN (`ADS`.`Feature_1` <= 21.90999984741211) THEN 7 ELSE 8 END END END ELSE CASE WHEN (`ADS`.`Feature_4` <= 0.07642500102519989) THEN 10 ELSE 11 END END ELSE CASE WHEN (`ADS`.`Feature_16` <= 0.13565000891685486) THEN CASE WHEN (`ADS`.`Feature_26` <= 0.20509999990463257) THEN 14 ELSE CASE WHEN (`ADS`.`Feature_10` <= 0.24755001068115234) THEN CASE WHEN (`ADS`.`Feature_29` <= 0.0865049958229065) THEN 17 ELSE 18 END ELSE 19 END END ELSE 20 END END AS node_id_2 
 FROM `BreastCancer` AS `ADS`), 
 `DT_node_data_5` AS 
-(SELECT `Values`.nid AS nid, `Values`.`P_0` AS `P_0`, `Values`.`P_1` AS `P_1`, `Values`.`D` AS `D`, `Values`.`DP` AS `DP` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`P_0` AS DOUBLE) AS `P_0`, CAST(`Values`.`P_1` AS DOUBLE) AS `P_1`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 3 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 5 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS nid, 0.1111111111111111 AS `P_0`, 0.8888888888888888 AS `P_1`, 1 AS `D`, 0.8888888888888888 AS `DP` UNION ALL SELECT 8 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 11 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 14 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 17 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 18 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 19 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 20 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP`) AS `Values`), 
 `DT_Output_5` AS 
 (SELECT `DT_node_lookup_5`.`KEY` AS `KEY`, `DT_node_lookup_5`.node_id_2 AS node_id_2, `DT_node_data_5`.nid AS nid, `DT_node_data_5`.`P_0` AS `P_0`, `DT_node_data_5`.`P_1` AS `P_1`, `DT_node_data_5`.`D` AS `D`, `DT_node_data_5`.`DP` AS `DP` 
@@ -104,7 +104,7 @@ FROM `DT_Output_5`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_27` <= 0.13580000400543213) THEN CASE WHEN (`ADS`.`Feature_20` <= 16.829999923706055) THEN CASE WHEN (`ADS`.`Feature_13` <= 48.974998474121094) THEN CASE WHEN (`ADS`.`Feature_6` <= 0.11534999310970306) THEN 4 ELSE CASE WHEN (`ADS`.`Feature_22` <= 103.11000061035156) THEN 6 ELSE 7 END END ELSE CASE WHEN (`ADS`.`Feature_20` <= 13.555000305175781) THEN 9 ELSE 10 END END ELSE CASE WHEN (`ADS`.`Feature_26` <= 0.1956000030040741) THEN 12 ELSE 13 END END ELSE CASE WHEN (`ADS`.`Feature_16` <= 0.13565000891685486) THEN CASE WHEN (`ADS`.`Feature_6` <= 0.06266500055789948) THEN CASE WHEN (`ADS`.`Feature_25` <= 0.2543500065803528) THEN 17 ELSE 18 END ELSE CASE WHEN (`ADS`.`Feature_10` <= 0.17840000987052917) THEN 20 ELSE 21 END END ELSE 22 END END AS node_id_2 
 FROM `BreastCancer` AS `ADS`), 
 `DT_node_data_6` AS 
-(SELECT `Values`.nid AS nid, `Values`.`P_0` AS `P_0`, `Values`.`P_1` AS `P_1`, `Values`.`D` AS `D`, `Values`.`DP` AS `DP` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`P_0` AS DOUBLE) AS `P_0`, CAST(`Values`.`P_1` AS DOUBLE) AS `P_1`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 4 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 9 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 12 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 13 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 17 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 18 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 20 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 21 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 22 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP`) AS `Values`), 
 `DT_Output_6` AS 
 (SELECT `DT_node_lookup_6`.`KEY` AS `KEY`, `DT_node_lookup_6`.node_id_2 AS node_id_2, `DT_node_data_6`.nid AS nid, `DT_node_data_6`.`P_0` AS `P_0`, `DT_node_data_6`.`P_1` AS `P_1`, `DT_node_data_6`.`D` AS `D`, `DT_node_data_6`.`DP` AS `DP` 
@@ -116,7 +116,7 @@ FROM `DT_Output_6`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_27` <= 0.14544999599456787) THEN CASE WHEN (`ADS`.`Feature_23` <= 961.550048828125) THEN CASE WHEN (`ADS`.`Feature_13` <= 48.974998474121094) THEN CASE WHEN (`ADS`.`Feature_7` <= 0.04891999810934067) THEN 4 ELSE CASE WHEN (`ADS`.`Feature_28` <= 0.29874998331069946) THEN 6 ELSE 7 END END ELSE CASE WHEN (`ADS`.`Feature_8` <= 0.16565001010894775) THEN 9 ELSE 10 END END ELSE CASE WHEN (`ADS`.`Feature_24` <= 0.1326500028371811) THEN 12 ELSE CASE WHEN (`ADS`.`Feature_27` <= 0.09796500205993652) THEN 14 ELSE 15 END END END ELSE CASE WHEN (`ADS`.`Feature_16` <= 0.13565000891685486) THEN CASE WHEN (`ADS`.`Feature_26` <= 0.20509999990463257) THEN 18 ELSE CASE WHEN (`ADS`.`Feature_10` <= 0.24755001068115234) THEN CASE WHEN (`ADS`.`Feature_3` <= 609.199951171875) THEN 21 ELSE 22 END ELSE 23 END END ELSE 24 END END AS node_id_2 
 FROM `BreastCancer` AS `ADS`), 
 `DT_node_data_7` AS 
-(SELECT `Values`.nid AS nid, `Values`.`P_0` AS `P_0`, `Values`.`P_1` AS `P_1`, `Values`.`D` AS `D`, `Values`.`DP` AS `DP` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`P_0` AS DOUBLE) AS `P_0`, CAST(`Values`.`P_1` AS DOUBLE) AS `P_1`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 4 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 9 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 12 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 14 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 15 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 18 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 21 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 22 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 23 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 24 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP`) AS `Values`), 
 `DT_Output_7` AS 
 (SELECT `DT_node_lookup_7`.`KEY` AS `KEY`, `DT_node_lookup_7`.node_id_2 AS node_id_2, `DT_node_data_7`.nid AS nid, `DT_node_data_7`.`P_0` AS `P_0`, `DT_node_data_7`.`P_1` AS `P_1`, `DT_node_data_7`.`D` AS `D`, `DT_node_data_7`.`DP` AS `DP` 
@@ -128,7 +128,7 @@ FROM `DT_Output_7`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_22` <= 113.14999389648438) THEN CASE WHEN (`ADS`.`Feature_27` <= 0.15129999816417694) THEN CASE WHEN (`ADS`.`Feature_13` <= 48.974998474121094) THEN CASE WHEN (`ADS`.`Feature_27` <= 0.13490000367164612) THEN 4 ELSE CASE WHEN (`ADS`.`Feature_13` <= 31.1299991607666) THEN 6 ELSE 7 END END ELSE CASE WHEN (`ADS`.`Feature_9` <= 0.06739500164985657) THEN 9 ELSE 10 END END ELSE CASE WHEN (`ADS`.`Feature_11` <= 2.0959999561309814) THEN 12 ELSE 13 END END ELSE CASE WHEN (`ADS`.`Feature_27` <= 0.11569999903440475) THEN CASE WHEN (`ADS`.`Feature_1` <= 19.2450008392334) THEN 16 ELSE 17 END ELSE 18 END END AS node_id_2 
 FROM `BreastCancer` AS `ADS`), 
 `DT_node_data_8` AS 
-(SELECT `Values`.nid AS nid, `Values`.`P_0` AS `P_0`, `Values`.`P_1` AS `P_1`, `Values`.`D` AS `D`, `Values`.`DP` AS `DP` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`P_0` AS DOUBLE) AS `P_0`, CAST(`Values`.`P_1` AS DOUBLE) AS `P_1`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 4 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 9 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 12 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 13 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 16 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 17 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 18 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP`) AS `Values`), 
 `DT_Output_8` AS 
 (SELECT `DT_node_lookup_8`.`KEY` AS `KEY`, `DT_node_lookup_8`.node_id_2 AS node_id_2, `DT_node_data_8`.nid AS nid, `DT_node_data_8`.`P_0` AS `P_0`, `DT_node_data_8`.`P_1` AS `P_1`, `DT_node_data_8`.`D` AS `D`, `DT_node_data_8`.`DP` AS `DP` 
@@ -140,7 +140,7 @@ FROM `DT_Output_8`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_27` <= 0.14339999854564667) THEN CASE WHEN (`ADS`.`Feature_2` <= 106.8499984741211) THEN CASE WHEN (`ADS`.`Feature_13` <= 35.290000915527344) THEN CASE WHEN (`ADS`.`Feature_27` <= 0.13580000400543213) THEN 4 ELSE CASE WHEN (`ADS`.`Feature_15` <= 0.02397499978542328) THEN 6 ELSE 7 END END ELSE CASE WHEN (`ADS`.`Feature_11` <= 2.006999969482422) THEN CASE WHEN (`ADS`.`Feature_26` <= 0.2854499816894531) THEN 10 ELSE 11 END ELSE 12 END END ELSE CASE WHEN (`ADS`.`Feature_27` <= 0.08586500585079193) THEN 14 ELSE 15 END END ELSE CASE WHEN (`ADS`.`Feature_6` <= 0.08635000139474869) THEN CASE WHEN (`ADS`.`Feature_21` <= 26.244998931884766) THEN 18 ELSE CASE WHEN (`ADS`.`Feature_22` <= 101.41500091552734) THEN 20 ELSE 21 END END ELSE CASE WHEN (`ADS`.`Feature_22` <= 84.13500213623047) THEN 23 ELSE 24 END END END AS node_id_2 
 FROM `BreastCancer` AS `ADS`), 
 `DT_node_data_9` AS 
-(SELECT `Values`.nid AS nid, `Values`.`P_0` AS `P_0`, `Values`.`P_1` AS `P_1`, `Values`.`D` AS `D`, `Values`.`DP` AS `DP` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`P_0` AS DOUBLE) AS `P_0`, CAST(`Values`.`P_1` AS DOUBLE) AS `P_1`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 4 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 11 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 12 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 14 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 15 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 18 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 20 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 21 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 23 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 24 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP`) AS `Values`), 
 `DT_Output_9` AS 
 (SELECT `DT_node_lookup_9`.`KEY` AS `KEY`, `DT_node_lookup_9`.node_id_2 AS node_id_2, `DT_node_data_9`.nid AS nid, `DT_node_data_9`.`P_0` AS `P_0`, `DT_node_data_9`.`P_1` AS `P_1`, `DT_node_data_9`.`D` AS `D`, `DT_node_data_9`.`DP` AS `DP` 
@@ -162,10 +162,10 @@ FROM `BAG_Model_7` UNION ALL SELECT `BAG_Model_8`.`KEY` AS `KEY`, `BAG_Model_8`.
 FROM `BAG_Model_8` UNION ALL SELECT `BAG_Model_9`.`KEY` AS `KEY`, `BAG_Model_9`.`Score_0` AS `Score_0`, `BAG_Model_9`.`Proba_0` AS `Proba_0`, `BAG_Model_9`.`LogProba_0` AS `LogProba_0`, `BAG_Model_9`.`Score_1` AS `Score_1`, `BAG_Model_9`.`Proba_1` AS `Proba_1`, `BAG_Model_9`.`LogProba_1` AS `LogProba_1` 
 FROM `BAG_Model_9`) AS `BAG_esu_0`) AS `BAG_B0`) AS `U`
 
--- Code For temporary table TMP_20180508180621_CODEGEN_XOXVD2_BAG_B1 part 1. Create 
+-- Code For temporary table TMP_20180516111428_CODEGEN_BFG2F2_BAG_B1 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180508180621_CODEGEN_XOXVD2_BAG_B1` (
+CREATE TEMPORARY TABLE `TMP_20180516111428_CODEGEN_BFG2F2_BAG_B1` (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Proba_0` DOUBLE, 
@@ -177,14 +177,14 @@ CREATE TEMPORARY TABLE `TMP_20180508180621_CODEGEN_XOXVD2_BAG_B1` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180508180621_CODEGEN_XOXVD2_BAG_B1 part 2. Populate
+-- Code For temporary table TMP_20180516111428_CODEGEN_BFG2F2_BAG_B1 part 2. Populate
 
-INSERT INTO `TMP_20180508180621_CODEGEN_XOXVD2_BAG_B1` (`KEY`, `Score_0`, `Proba_0`, `LogProba_0`, `Score_1`, `Proba_1`, `LogProba_1`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Proba_0`, `U`.`LogProba_0`, `U`.`Score_1`, `U`.`Proba_1`, `U`.`LogProba_1` 
+INSERT INTO `TMP_20180516111428_CODEGEN_BFG2F2_BAG_B1` (`KEY`, `Score_0`, `Proba_0`, `LogProba_0`, `Score_1`, `Proba_1`, `LogProba_1`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Proba_0`, `U`.`LogProba_0`, `U`.`Score_1`, `U`.`Proba_1`, `U`.`LogProba_1` 
 FROM (WITH `DT_node_lookup_10` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_22` <= 114.39999389648438) THEN CASE WHEN (`ADS`.`Feature_27` <= 0.14785000681877136) THEN CASE WHEN (`ADS`.`Feature_23` <= 953.9500122070312) THEN CASE WHEN (`ADS`.`Feature_13` <= 48.70000076293945) THEN CASE WHEN (`ADS`.`Feature_9` <= 0.05432000011205673) THEN 5 ELSE 6 END ELSE CASE WHEN (`ADS`.`Feature_2` <= 78.50999450683594) THEN 8 ELSE 9 END END ELSE 10 END ELSE CASE WHEN (`ADS`.`Feature_21` <= 25.05500030517578) THEN 12 ELSE 13 END END ELSE CASE WHEN (`ADS`.`Feature_12` <= 1.7519999742507935) THEN 15 ELSE 16 END END AS node_id_2 
 FROM `BreastCancer` AS `ADS`), 
 `DT_node_data_10` AS 
-(SELECT `Values`.nid AS nid, `Values`.`P_0` AS `P_0`, `Values`.`P_1` AS `P_1`, `Values`.`D` AS `D`, `Values`.`DP` AS `DP` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`P_0` AS DOUBLE) AS `P_0`, CAST(`Values`.`P_1` AS DOUBLE) AS `P_1`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 5 AS nid, 0.1111111111111111 AS `P_0`, 0.8888888888888888 AS `P_1`, 1 AS `D`, 0.8888888888888888 AS `DP` UNION ALL SELECT 6 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 8 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 9 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 12 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 13 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 15 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 16 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP`) AS `Values`), 
 `DT_Output_10` AS 
 (SELECT `DT_node_lookup_10`.`KEY` AS `KEY`, `DT_node_lookup_10`.node_id_2 AS node_id_2, `DT_node_data_10`.nid AS nid, `DT_node_data_10`.`P_0` AS `P_0`, `DT_node_data_10`.`P_1` AS `P_1`, `DT_node_data_10`.`D` AS `D`, `DT_node_data_10`.`DP` AS `DP` 
@@ -196,7 +196,7 @@ FROM `DT_Output_10`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_22` <= 112.80000305175781) THEN CASE WHEN (`ADS`.`Feature_25` <= 0.3761500120162964) THEN CASE WHEN (`ADS`.`Feature_12` <= 6.3420000076293945) THEN CASE WHEN (`ADS`.`Feature_6` <= 0.11185000091791153) THEN CASE WHEN (`ADS`.`Feature_13` <= 48.974998474121094) THEN 5 ELSE 6 END ELSE CASE WHEN (`ADS`.`Feature_29` <= 0.07312500476837158) THEN 8 ELSE 9 END END ELSE 10 END ELSE CASE WHEN (`ADS`.`Feature_15` <= 0.05231500044465065) THEN CASE WHEN (`ADS`.`Feature_27` <= 0.12924998998641968) THEN 13 ELSE 14 END ELSE 15 END END ELSE CASE WHEN (`ADS`.`Feature_27` <= 0.1132500022649765) THEN CASE WHEN (`ADS`.`Feature_1` <= 19.829999923706055) THEN 18 ELSE 19 END ELSE CASE WHEN (`ADS`.`Feature_20` <= 15.760000228881836) THEN 21 ELSE 22 END END END AS node_id_2 
 FROM `BreastCancer` AS `ADS`), 
 `DT_node_data_11` AS 
-(SELECT `Values`.nid AS nid, `Values`.`P_0` AS `P_0`, `Values`.`P_1` AS `P_1`, `Values`.`D` AS `D`, `Values`.`DP` AS `DP` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`P_0` AS DOUBLE) AS `P_0`, CAST(`Values`.`P_1` AS DOUBLE) AS `P_1`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 5 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 8 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 9 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 13 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 14 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 15 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 18 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 19 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 21 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 22 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP`) AS `Values`), 
 `DT_Output_11` AS 
 (SELECT `DT_node_lookup_11`.`KEY` AS `KEY`, `DT_node_lookup_11`.node_id_2 AS node_id_2, `DT_node_data_11`.nid AS nid, `DT_node_data_11`.`P_0` AS `P_0`, `DT_node_data_11`.`P_1` AS `P_1`, `DT_node_data_11`.`D` AS `D`, `DT_node_data_11`.`DP` AS `DP` 
@@ -208,7 +208,7 @@ FROM `DT_Output_11`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_27` <= 0.1454000025987625) THEN CASE WHEN (`ADS`.`Feature_23` <= 961.550048828125) THEN CASE WHEN (`ADS`.`Feature_27` <= 0.131850004196167) THEN 3 ELSE CASE WHEN (`ADS`.`Feature_21` <= 21.790000915527344) THEN 5 ELSE CASE WHEN (`ADS`.`Feature_24` <= 0.12325000017881393) THEN 7 ELSE 8 END END END ELSE CASE WHEN (`ADS`.`Feature_7` <= 0.028039999306201935) THEN 10 ELSE 11 END END ELSE CASE WHEN (`ADS`.`Feature_16` <= 0.2157999873161316) THEN CASE WHEN (`ADS`.`Feature_26` <= 0.210999995470047) THEN 14 ELSE CASE WHEN (`ADS`.`Feature_6` <= 0.08588500320911407) THEN CASE WHEN (`ADS`.`Feature_13` <= 25.060001373291016) THEN 17 ELSE 18 END ELSE 19 END END ELSE 20 END END AS node_id_2 
 FROM `BreastCancer` AS `ADS`), 
 `DT_node_data_12` AS 
-(SELECT `Values`.nid AS nid, `Values`.`P_0` AS `P_0`, `Values`.`P_1` AS `P_1`, `Values`.`D` AS `D`, `Values`.`DP` AS `DP` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`P_0` AS DOUBLE) AS `P_0`, CAST(`Values`.`P_1` AS DOUBLE) AS `P_1`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 3 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 5 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 8 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 11 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 14 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 17 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 18 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 19 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 20 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP`) AS `Values`), 
 `DT_Output_12` AS 
 (SELECT `DT_node_lookup_12`.`KEY` AS `KEY`, `DT_node_lookup_12`.node_id_2 AS node_id_2, `DT_node_data_12`.nid AS nid, `DT_node_data_12`.`P_0` AS `P_0`, `DT_node_data_12`.`P_1` AS `P_1`, `DT_node_data_12`.`D` AS `D`, `DT_node_data_12`.`DP` AS `DP` 
@@ -220,7 +220,7 @@ FROM `DT_Output_12`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_23` <= 884.75) THEN CASE WHEN (`ADS`.`Feature_27` <= 0.1626499891281128) THEN CASE WHEN (`ADS`.`Feature_13` <= 32.57499694824219) THEN CASE WHEN (`ADS`.`Feature_20` <= 16.825000762939453) THEN 4 ELSE CASE WHEN (`ADS`.`Feature_19` <= 0.001860499964095652) THEN 6 ELSE 7 END END ELSE CASE WHEN (`ADS`.`Feature_26` <= 0.2587500214576721) THEN CASE WHEN (`ADS`.`Feature_11` <= 2.006999969482422) THEN 10 ELSE 11 END ELSE CASE WHEN (`ADS`.`Feature_0` <= 14.645000457763672) THEN 13 ELSE 14 END END END ELSE 15 END ELSE CASE WHEN (`ADS`.`Feature_10` <= 0.24594999849796295) THEN 17 ELSE CASE WHEN (`ADS`.`Feature_8` <= 0.15004999935626984) THEN 19 ELSE CASE WHEN (`ADS`.`Feature_24` <= 0.0879800021648407) THEN 21 ELSE 22 END END END END AS node_id_2 
 FROM `BreastCancer` AS `ADS`), 
 `DT_node_data_13` AS 
-(SELECT `Values`.nid AS nid, `Values`.`P_0` AS `P_0`, `Values`.`P_1` AS `P_1`, `Values`.`D` AS `D`, `Values`.`DP` AS `DP` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`P_0` AS DOUBLE) AS `P_0`, CAST(`Values`.`P_1` AS DOUBLE) AS `P_1`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 4 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 11 AS nid, 0.6666666666666666 AS `P_0`, 0.3333333333333333 AS `P_1`, 0 AS `D`, 0.6666666666666666 AS `DP` UNION ALL SELECT 13 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 14 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 15 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 17 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 19 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 21 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 22 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP`) AS `Values`), 
 `DT_Output_13` AS 
 (SELECT `DT_node_lookup_13`.`KEY` AS `KEY`, `DT_node_lookup_13`.node_id_2 AS node_id_2, `DT_node_data_13`.nid AS nid, `DT_node_data_13`.`P_0` AS `P_0`, `DT_node_data_13`.`P_1` AS `P_1`, `DT_node_data_13`.`D` AS `D`, `DT_node_data_13`.`DP` AS `DP` 
@@ -232,7 +232,7 @@ FROM `DT_Output_13`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_27` <= 0.14239999651908875) THEN CASE WHEN (`ADS`.`Feature_22` <= 123.80000305175781) THEN CASE WHEN (`ADS`.`Feature_18` <= 0.010335000231862068) THEN 3 ELSE CASE WHEN (`ADS`.`Feature_6` <= 0.11710000038146973) THEN 5 ELSE CASE WHEN (`ADS`.`Feature_17` <= 0.016704998910427094) THEN 7 ELSE 8 END END END ELSE 9 END ELSE CASE WHEN (`ADS`.`Feature_20` <= 15.420000076293945) THEN CASE WHEN (`ADS`.`Feature_25` <= 0.6513999700546265) THEN 12 ELSE 13 END ELSE CASE WHEN (`ADS`.`Feature_26` <= 0.20340000092983246) THEN 15 ELSE 16 END END END AS node_id_2 
 FROM `BreastCancer` AS `ADS`), 
 `DT_node_data_14` AS 
-(SELECT `Values`.nid AS nid, `Values`.`P_0` AS `P_0`, `Values`.`P_1` AS `P_1`, `Values`.`D` AS `D`, `Values`.`DP` AS `DP` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`P_0` AS DOUBLE) AS `P_0`, CAST(`Values`.`P_1` AS DOUBLE) AS `P_1`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 3 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 5 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 8 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 9 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 12 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 13 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 15 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 16 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP`) AS `Values`), 
 `DT_Output_14` AS 
 (SELECT `DT_node_lookup_14`.`KEY` AS `KEY`, `DT_node_lookup_14`.node_id_2 AS node_id_2, `DT_node_data_14`.nid AS nid, `DT_node_data_14`.`P_0` AS `P_0`, `DT_node_data_14`.`P_1` AS `P_1`, `DT_node_data_14`.`D` AS `D`, `DT_node_data_14`.`DP` AS `DP` 
@@ -244,7 +244,7 @@ FROM `DT_Output_14`),
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_23` <= 884.75) THEN CASE WHEN (`ADS`.`Feature_27` <= 0.16029998660087585) THEN CASE WHEN (`ADS`.`Feature_13` <= 34.404998779296875) THEN CASE WHEN (`ADS`.`Feature_22` <= 113.14999389648438) THEN 4 ELSE CASE WHEN (`ADS`.`Feature_4` <= 0.09066499769687653) THEN 6 ELSE 7 END END ELSE CASE WHEN (`ADS`.`Feature_27` <= 0.11560000479221344) THEN CASE WHEN (`ADS`.`Feature_28` <= 0.20024999976158142) THEN 10 ELSE 11 END ELSE CASE WHEN (`ADS`.`Feature_8` <= 0.24114999175071716) THEN 13 ELSE 14 END END END ELSE CASE WHEN (`ADS`.`Feature_22` <= 78.6300048828125) THEN 16 ELSE 17 END END ELSE CASE WHEN (`ADS`.`Feature_11` <= 0.5105500221252441) THEN 19 ELSE CASE WHEN (`ADS`.`Feature_24` <= 0.0879800021648407) THEN 21 ELSE CASE WHEN (`ADS`.`Feature_13` <= 22.005001068115234) THEN CASE WHEN (`ADS`.`Feature_29` <= 0.08571000397205353) THEN 24 ELSE 25 END ELSE 26 END END END END AS node_id_2 
 FROM `BreastCancer` AS `ADS`), 
 `DT_node_data_15` AS 
-(SELECT `Values`.nid AS nid, `Values`.`P_0` AS `P_0`, `Values`.`P_1` AS `P_1`, `Values`.`D` AS `D`, `Values`.`DP` AS `DP` 
+(SELECT `Values`.nid AS nid, CAST(`Values`.`P_0` AS DOUBLE) AS `P_0`, CAST(`Values`.`P_1` AS DOUBLE) AS `P_1`, CAST(`Values`.`D` AS DOUBLE) AS `D`, CAST(`Values`.`DP` AS DOUBLE) AS `DP` 
 FROM (SELECT 4 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 6 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 7 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 10 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 11 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 13 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 14 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 16 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 17 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 19 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 21 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 24 AS nid, 0.0 AS `P_0`, 1.0 AS `P_1`, 1 AS `D`, 1.0 AS `DP` UNION ALL SELECT 25 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP` UNION ALL SELECT 26 AS nid, 1.0 AS `P_0`, 0.0 AS `P_1`, 0 AS `D`, 1.0 AS `DP`) AS `Values`), 
 `DT_Output_15` AS 
 (SELECT `DT_node_lookup_15`.`KEY` AS `KEY`, `DT_node_lookup_15`.node_id_2 AS node_id_2, `DT_node_data_15`.nid AS nid, `DT_node_data_15`.`P_0` AS `P_0`, `DT_node_data_15`.`P_1` AS `P_1`, `DT_node_data_15`.`D` AS `D`, `DT_node_data_15`.`DP` AS `DP` 
@@ -262,34 +262,10 @@ FROM `BAG_Model_13` UNION ALL SELECT `BAG_Model_14`.`KEY` AS `KEY`, `BAG_Model_1
 FROM `BAG_Model_14` UNION ALL SELECT `BAG_Model_15`.`KEY` AS `KEY`, `BAG_Model_15`.`Score_0` AS `Score_0`, `BAG_Model_15`.`Proba_0` AS `Proba_0`, `BAG_Model_15`.`LogProba_0` AS `LogProba_0`, `BAG_Model_15`.`Score_1` AS `Score_1`, `BAG_Model_15`.`Proba_1` AS `Proba_1`, `BAG_Model_15`.`LogProba_1` AS `LogProba_1` 
 FROM `BAG_Model_15`) AS `BAG_esu_1`) AS `BAG_B1`) AS `U`
 
--- Code For temporary table TMP_20180508180621_CODEGEN_A32OTJ_BAG_Union part 1. Create 
+-- Code For temporary table TMP_20180516111428_CODEGEN_JWKAT6_BAG_avg part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180508180621_CODEGEN_A32OTJ_BAG_Union` (
-	`KEY` BIGINT, 
-	`Score_0` DOUBLE, 
-	`Proba_0` DOUBLE, 
-	`LogProba_0` DOUBLE, 
-	`Score_1` DOUBLE, 
-	`Proba_1` DOUBLE, 
-	`LogProba_1` DOUBLE
-)
-
- ENGINE=MEMORY
-
--- Code For temporary table TMP_20180508180621_CODEGEN_A32OTJ_BAG_Union part 2. Populate
-
-INSERT INTO `TMP_20180508180621_CODEGEN_A32OTJ_BAG_Union` (`KEY`, `Score_0`, `Proba_0`, `LogProba_0`, `Score_1`, `Proba_1`, `LogProba_1`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Proba_0`, `U`.`LogProba_0`, `U`.`Score_1`, `U`.`Proba_1`, `U`.`LogProba_1` 
-FROM (SELECT `BAG_Union`.`KEY`, `BAG_Union`.`Score_0`, `BAG_Union`.`Proba_0`, `BAG_Union`.`LogProba_0`, `BAG_Union`.`Score_1`, `BAG_Union`.`Proba_1`, `BAG_Union`.`LogProba_1` 
-FROM (SELECT `BAG_EnsembleUnion`.`KEY` AS `KEY`, `BAG_EnsembleUnion`.`Score_0` AS `Score_0`, `BAG_EnsembleUnion`.`Proba_0` AS `Proba_0`, `BAG_EnsembleUnion`.`LogProba_0` AS `LogProba_0`, `BAG_EnsembleUnion`.`Score_1` AS `Score_1`, `BAG_EnsembleUnion`.`Proba_1` AS `Proba_1`, `BAG_EnsembleUnion`.`LogProba_1` AS `LogProba_1` 
-FROM (SELECT `BAG_B0`.`KEY` AS `KEY`, `BAG_B0`.`Score_0` AS `Score_0`, `BAG_B0`.`Proba_0` AS `Proba_0`, `BAG_B0`.`LogProba_0` AS `LogProba_0`, `BAG_B0`.`Score_1` AS `Score_1`, `BAG_B0`.`Proba_1` AS `Proba_1`, `BAG_B0`.`LogProba_1` AS `LogProba_1` 
-FROM `TMP_20180508180621_CODEGEN_UNRN6H_BAG_B0` AS `BAG_B0` UNION ALL SELECT `BAG_B1`.`KEY` AS `KEY`, `BAG_B1`.`Score_0` AS `Score_0`, `BAG_B1`.`Proba_0` AS `Proba_0`, `BAG_B1`.`LogProba_0` AS `LogProba_0`, `BAG_B1`.`Score_1` AS `Score_1`, `BAG_B1`.`Proba_1` AS `Proba_1`, `BAG_B1`.`LogProba_1` AS `LogProba_1` 
-FROM `TMP_20180508180621_CODEGEN_XOXVD2_BAG_B1` AS `BAG_B1`) AS `BAG_EnsembleUnion`) AS `BAG_Union`) AS `U`
-
--- Code For temporary table TMP_20180508180621_CODEGEN_4G4JZS_BAG_avg part 1. Create 
-
-
-CREATE TEMPORARY TABLE `TMP_20180508180621_CODEGEN_4G4JZS_BAG_avg` (
+CREATE TEMPORARY TABLE `TMP_20180516111428_CODEGEN_JWKAT6_BAG_avg` (
 	`KEY` BIGINT NOT NULL, 
 	`Score_0` DOUBLE, 
 	`Proba_0` DOUBLE, 
@@ -302,23 +278,28 @@ CREATE TEMPORARY TABLE `TMP_20180508180621_CODEGEN_4G4JZS_BAG_avg` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180508180621_CODEGEN_4G4JZS_BAG_avg part 2. Populate
+-- Code For temporary table TMP_20180516111428_CODEGEN_JWKAT6_BAG_avg part 2. Populate
 
-INSERT INTO `TMP_20180508180621_CODEGEN_4G4JZS_BAG_avg` (`KEY`, `Score_0`, `Proba_0`, `LogProba_0`, `Score_1`, `Proba_1`, `LogProba_1`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Proba_0`, `U`.`LogProba_0`, `U`.`Score_1`, `U`.`Proba_1`, `U`.`LogProba_1` 
-FROM (SELECT `BAG_avg`.`KEY`, `BAG_avg`.`Score_0`, `BAG_avg`.`Proba_0`, `BAG_avg`.`LogProba_0`, `BAG_avg`.`Score_1`, `BAG_avg`.`Proba_1`, `BAG_avg`.`LogProba_1` 
-FROM (SELECT `T`.`KEY` AS `KEY`, `T`.`Score_0` AS `Score_0`, `T`.`Proba_0` AS `Proba_0`, `T`.`LogProba_0` AS `LogProba_0`, `T`.`Score_1` AS `Score_1`, `T`.`Proba_1` AS `Proba_1`, `T`.`LogProba_1` AS `LogProba_1` 
-FROM (SELECT `BAG_Union`.`KEY` AS `KEY`, avg(`BAG_Union`.`Score_0`) AS `Score_0`, avg(`BAG_Union`.`Proba_0`) AS `Proba_0`, NULL AS `LogProba_0`, avg(`BAG_Union`.`Score_1`) AS `Score_1`, avg(`BAG_Union`.`Proba_1`) AS `Proba_1`, NULL AS `LogProba_1` 
-FROM `TMP_20180508180621_CODEGEN_A32OTJ_BAG_Union` AS `BAG_Union` GROUP BY `BAG_Union`.`KEY`) AS `T`) AS `BAG_avg`) AS `U`
+INSERT INTO `TMP_20180516111428_CODEGEN_JWKAT6_BAG_avg` (`KEY`, `Score_0`, `Proba_0`, `LogProba_0`, `Score_1`, `Proba_1`, `LogProba_1`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Proba_0`, `U`.`LogProba_0`, `U`.`Score_1`, `U`.`Proba_1`, `U`.`LogProba_1` 
+FROM (WITH `BAG_Union` AS 
+(SELECT `BAG_EnsembleUnion`.`KEY` AS `KEY`, `BAG_EnsembleUnion`.`Score_0` AS `Score_0`, `BAG_EnsembleUnion`.`Proba_0` AS `Proba_0`, `BAG_EnsembleUnion`.`LogProba_0` AS `LogProba_0`, `BAG_EnsembleUnion`.`Score_1` AS `Score_1`, `BAG_EnsembleUnion`.`Proba_1` AS `Proba_1`, `BAG_EnsembleUnion`.`LogProba_1` AS `LogProba_1` 
+FROM (SELECT `BAG_B0`.`KEY` AS `KEY`, `BAG_B0`.`Score_0` AS `Score_0`, `BAG_B0`.`Proba_0` AS `Proba_0`, `BAG_B0`.`LogProba_0` AS `LogProba_0`, `BAG_B0`.`Score_1` AS `Score_1`, `BAG_B0`.`Proba_1` AS `Proba_1`, `BAG_B0`.`LogProba_1` AS `LogProba_1` 
+FROM `TMP_20180516111428_CODEGEN_FBH22B_BAG_B0` AS `BAG_B0` UNION ALL SELECT `BAG_B1`.`KEY` AS `KEY`, `BAG_B1`.`Score_0` AS `Score_0`, `BAG_B1`.`Proba_0` AS `Proba_0`, `BAG_B1`.`LogProba_0` AS `LogProba_0`, `BAG_B1`.`Score_1` AS `Score_1`, `BAG_B1`.`Proba_1` AS `Proba_1`, `BAG_B1`.`LogProba_1` AS `LogProba_1` 
+FROM `TMP_20180516111428_CODEGEN_BFG2F2_BAG_B1` AS `BAG_B1`) AS `BAG_EnsembleUnion`)
+ SELECT `BAG_avg`.`KEY`, `BAG_avg`.`Score_0`, `BAG_avg`.`Proba_0`, `BAG_avg`.`LogProba_0`, `BAG_avg`.`Score_1`, `BAG_avg`.`Proba_1`, `BAG_avg`.`LogProba_1` 
+FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Score_0` AS DOUBLE) AS `Score_0`, CAST(`T`.`Proba_0` AS DOUBLE) AS `Proba_0`, CAST(`T`.`LogProba_0` AS DOUBLE) AS `LogProba_0`, CAST(`T`.`Score_1` AS DOUBLE) AS `Score_1`, CAST(`T`.`Proba_1` AS DOUBLE) AS `Proba_1`, CAST(`T`.`LogProba_1` AS DOUBLE) AS `LogProba_1` 
+FROM (SELECT `BAG_Union`.`KEY` AS `KEY`, avg(CAST(`BAG_Union`.`Score_0` AS DOUBLE)) AS `Score_0`, avg(CAST(`BAG_Union`.`Proba_0` AS DOUBLE)) AS `Proba_0`, NULL AS `LogProba_0`, avg(CAST(`BAG_Union`.`Score_1` AS DOUBLE)) AS `Score_1`, avg(CAST(`BAG_Union`.`Proba_1` AS DOUBLE)) AS `Proba_1`, NULL AS `LogProba_1` 
+FROM `BAG_Union` GROUP BY `BAG_Union`.`KEY`) AS `T`) AS `BAG_avg`) AS `U`
 
--- Code For temporary table TMP_20180508180621_CODEGEN_4G4JZS_BAG_avg part 3. Create Index 
+-- Code For temporary table TMP_20180516111428_CODEGEN_JWKAT6_BAG_avg part 3. Create Index 
 
-CREATE INDEX `ix_TMP_20180508180621_CODEGEN_4G4JZS_BAG_avg_KEY` ON `TMP_20180508180621_CODEGEN_4G4JZS_BAG_avg` (`KEY`)
+CREATE INDEX `ix_TMP_20180516111428_CODEGEN_JWKAT6_BAG_avg_KEY` ON `TMP_20180516111428_CODEGEN_JWKAT6_BAG_avg` (`KEY`)
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT `BAG_avg`.`KEY` AS `KEY`, `BAG_avg`.`Score_0` AS `Score_0`, `BAG_avg`.`Score_1` AS `Score_1`, `BAG_avg`.`Proba_0` AS `Proba_0`, `BAG_avg`.`Proba_1` AS `Proba_1`, `BAG_avg`.`LogProba_0` AS `LogProba_0`, `BAG_avg`.`LogProba_1` AS `LogProba_1`, CAST(NULL AS SIGNED INTEGER) AS `Decision`, NULL AS `DecisionProba` 
-FROM `TMP_20180508180621_CODEGEN_4G4JZS_BAG_avg` AS `BAG_avg`), 
+FROM `TMP_20180516111428_CODEGEN_JWKAT6_BAG_avg` AS `BAG_avg`), 
 score_class_union AS 
 (SELECT scu.`KEY_u` AS `KEY_u`, scu.class AS class, scu.`LogProba` AS `LogProba`, scu.`Proba` AS `Proba`, scu.`Score` AS `Score` 
 FROM (SELECT orig_cte.`KEY` AS `KEY_u`, 0 AS class, orig_cte.`LogProba_0` AS `LogProba`, orig_cte.`Proba_0` AS `Proba`, orig_cte.`Score_0` AS `Score` 

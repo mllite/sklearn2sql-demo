@@ -10,17 +10,17 @@
 
 
 
--- Code For temporary table tmp_20180508193550_codegen_8qthvr_bag_b0 part 1. Create 
+-- Code For temporary table tmp_20180516114628_codegen_kbt7fj_bag_b0 part 1. Create 
 
 
-CREATE TABLE tmp_20180508193550_codegen_8qthvr_bag_b0 (
+CREATE TABLE tmp_20180516114628_codegen_kbt7fj_bag_b0 (
 	`KEY` BIGINT, 
 	`Estimator` DOUBLE
 )
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180508193550_codegen_8qthvr_bag_b0 part 2. Populate
+-- Code For temporary table tmp_20180516114628_codegen_kbt7fj_bag_b0 part 2. Populate
 
 WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_5` <= 6.945000171661377) THEN CASE WHEN (`ADS`.`Feature_12` <= 14.805000305175781) THEN CASE WHEN (`ADS`.`Feature_7` <= 1.2271499633789062) THEN 3 ELSE CASE WHEN (`ADS`.`Feature_5` <= 6.531000137329102) THEN CASE WHEN (`ADS`.`Feature_12` <= 11.28499984741211) THEN 6 ELSE 7 END ELSE CASE WHEN (`ADS`.`Feature_12` <= 7.039999961853027) THEN 9 ELSE 10 END END END ELSE CASE WHEN (`ADS`.`Feature_4` <= 0.6030000448226929) THEN CASE WHEN (`ADS`.`Feature_5` <= 6.614500045776367) THEN CASE WHEN (`ADS`.`Feature_0` <= 0.5538100004196167) THEN 14 ELSE 15 END ELSE 16 END ELSE CASE WHEN (`ADS`.`Feature_12` <= 19.494998931884766) THEN CASE WHEN (`ADS`.`Feature_0` <= 12.223600387573242) THEN 19 ELSE 20 END ELSE CASE WHEN (`ADS`.`Feature_0` <= 11.486350059509277) THEN 22 ELSE 23 END END END END ELSE CASE WHEN (`ADS`.`Feature_5` <= 7.470000267028809) THEN CASE WHEN (`ADS`.`Feature_4` <= 0.659000039100647) THEN CASE WHEN (`ADS`.`Feature_9` <= 267.0) THEN CASE WHEN (`ADS`.`Feature_0` <= 0.7443850040435791) THEN 28 ELSE 29 END ELSE CASE WHEN (`ADS`.`Feature_6` <= 78.94999694824219) THEN 31 ELSE 32 END END ELSE CASE WHEN (`ADS`.`Feature_11` <= 386.385009765625) THEN 34 ELSE 35 END END ELSE CASE WHEN (`ADS`.`Feature_11` <= 361.92498779296875) THEN 37 ELSE CASE WHEN (`ADS`.`Feature_7` <= 6.077500343322754) THEN CASE WHEN (`ADS`.`Feature_10` <= 17.899999618530273) THEN 40 ELSE 41 END ELSE CASE WHEN (`ADS`.`Feature_8` <= 4.5) THEN 43 ELSE 44 END END END END END AS node_id_2 
@@ -142,7 +142,7 @@ FROM `DT_node_lookup_9` LEFT OUTER JOIN `DT_node_data_9` ON `DT_node_lookup_9`.n
 `BAG_Model_9` AS 
 (SELECT `DT_Output_9`.`KEY` AS `KEY`, `DT_Output_9`.`E` AS `Estimator` 
 FROM `DT_Output_9`)
- INSERT INTO tmp_20180508193550_codegen_8qthvr_bag_b0 (`KEY`, `Estimator`) SELECT `BAG_B0`.`KEY`, `BAG_B0`.`Estimator` 
+ INSERT INTO tmp_20180516114628_codegen_kbt7fj_bag_b0 (`KEY`, `Estimator`) SELECT `BAG_B0`.`KEY`, `BAG_B0`.`Estimator` 
 FROM (SELECT `BAG_esu_0`.`KEY` AS `KEY`, `BAG_esu_0`.`Estimator` AS `Estimator` 
 FROM (SELECT `BAG_Model_0`.`KEY` AS `KEY`, `BAG_Model_0`.`Estimator` AS `Estimator` 
 FROM `BAG_Model_0` UNION ALL SELECT `BAG_Model_1`.`KEY` AS `KEY`, `BAG_Model_1`.`Estimator` AS `Estimator` 
@@ -156,17 +156,17 @@ FROM `BAG_Model_7` UNION ALL SELECT `BAG_Model_8`.`KEY` AS `KEY`, `BAG_Model_8`.
 FROM `BAG_Model_8` UNION ALL SELECT `BAG_Model_9`.`KEY` AS `KEY`, `BAG_Model_9`.`Estimator` AS `Estimator` 
 FROM `BAG_Model_9`) AS `BAG_esu_0`) AS `BAG_B0`
 
--- Code For temporary table tmp_20180508193550_codegen_2a8h6x_bag_b1 part 1. Create 
+-- Code For temporary table tmp_20180516114628_codegen_gyasn2_bag_b1 part 1. Create 
 
 
-CREATE TABLE tmp_20180508193550_codegen_2a8h6x_bag_b1 (
+CREATE TABLE tmp_20180516114628_codegen_gyasn2_bag_b1 (
 	`KEY` BIGINT, 
 	`Estimator` DOUBLE
 )
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180508193550_codegen_2a8h6x_bag_b1 part 2. Populate
+-- Code For temporary table tmp_20180516114628_codegen_gyasn2_bag_b1 part 2. Populate
 
 WITH `DT_node_lookup_10` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_12` <= 9.614999771118164) THEN CASE WHEN (`ADS`.`Feature_5` <= 7.141499996185303) THEN CASE WHEN (`ADS`.`Feature_7` <= 1.4849499464035034) THEN 3 ELSE CASE WHEN (`ADS`.`Feature_5` <= 6.543499946594238) THEN CASE WHEN (`ADS`.`Feature_12` <= 7.569999694824219) THEN 6 ELSE 7 END ELSE CASE WHEN (`ADS`.`Feature_6` <= 38.80000305175781) THEN 9 ELSE 10 END END END ELSE CASE WHEN (`ADS`.`Feature_5` <= 7.437000274658203) THEN CASE WHEN (`ADS`.`Feature_9` <= 274.0) THEN CASE WHEN (`ADS`.`Feature_5` <= 7.376500129699707) THEN 14 ELSE 15 END ELSE CASE WHEN (`ADS`.`Feature_7` <= 7.173449993133545) THEN 17 ELSE 18 END END ELSE CASE WHEN (`ADS`.`Feature_10` <= 19.100000381469727) THEN CASE WHEN (`ADS`.`Feature_10` <= 14.799999237060547) THEN 21 ELSE 22 END ELSE 23 END END END ELSE CASE WHEN (`ADS`.`Feature_12` <= 14.800000190734863) THEN CASE WHEN (`ADS`.`Feature_5` <= 6.796999931335449) THEN CASE WHEN (`ADS`.`Feature_7` <= 1.3490999937057495) THEN 27 ELSE CASE WHEN (`ADS`.`Feature_11` <= 361.885009765625) THEN 29 ELSE 30 END END ELSE CASE WHEN (`ADS`.`Feature_0` <= 0.23568999767303467) THEN 32 ELSE CASE WHEN (`ADS`.`Feature_5` <= 6.9654998779296875) THEN 34 ELSE 35 END END END ELSE CASE WHEN (`ADS`.`Feature_0` <= 5.769209861755371) THEN CASE WHEN (`ADS`.`Feature_11` <= 377.4849853515625) THEN CASE WHEN (`ADS`.`Feature_10` <= 19.600000381469727) THEN 39 ELSE 40 END ELSE CASE WHEN (`ADS`.`Feature_12` <= 24.06999969482422) THEN 42 ELSE 43 END END ELSE CASE WHEN (`ADS`.`Feature_4` <= 0.6410000324249268) THEN CASE WHEN (`ADS`.`Feature_5` <= 6.518500328063965) THEN 46 ELSE 47 END ELSE CASE WHEN (`ADS`.`Feature_0` <= 10.379525184631348) THEN 49 ELSE 50 END END END END END AS node_id_2 
@@ -240,7 +240,7 @@ FROM `DT_node_lookup_15` LEFT OUTER JOIN `DT_node_data_15` ON `DT_node_lookup_15
 `BAG_Model_15` AS 
 (SELECT `DT_Output_15`.`KEY` AS `KEY`, `DT_Output_15`.`E` AS `Estimator` 
 FROM `DT_Output_15`)
- INSERT INTO tmp_20180508193550_codegen_2a8h6x_bag_b1 (`KEY`, `Estimator`) SELECT `BAG_B1`.`KEY`, `BAG_B1`.`Estimator` 
+ INSERT INTO tmp_20180516114628_codegen_gyasn2_bag_b1 (`KEY`, `Estimator`) SELECT `BAG_B1`.`KEY`, `BAG_B1`.`Estimator` 
 FROM (SELECT `BAG_esu_1`.`KEY` AS `KEY`, `BAG_esu_1`.`Estimator` AS `Estimator` 
 FROM (SELECT `BAG_Model_10`.`KEY` AS `KEY`, `BAG_Model_10`.`Estimator` AS `Estimator` 
 FROM `BAG_Model_10` UNION ALL SELECT `BAG_Model_11`.`KEY` AS `KEY`, `BAG_Model_11`.`Estimator` AS `Estimator` 
@@ -250,42 +250,29 @@ FROM `BAG_Model_13` UNION ALL SELECT `BAG_Model_14`.`KEY` AS `KEY`, `BAG_Model_1
 FROM `BAG_Model_14` UNION ALL SELECT `BAG_Model_15`.`KEY` AS `KEY`, `BAG_Model_15`.`Estimator` AS `Estimator` 
 FROM `BAG_Model_15`) AS `BAG_esu_1`) AS `BAG_B1`
 
--- Code For temporary table tmp_20180508193550_codegen_p1klxq_bag_union part 1. Create 
+-- Code For temporary table tmp_20180516114628_codegen_hpgfm8_bag_avg part 1. Create 
 
 
-CREATE TABLE tmp_20180508193550_codegen_p1klxq_bag_union (
+CREATE TABLE tmp_20180516114628_codegen_hpgfm8_bag_avg (
 	`KEY` BIGINT, 
 	`Estimator` DOUBLE
 )
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180508193550_codegen_p1klxq_bag_union part 2. Populate
+-- Code For temporary table tmp_20180516114628_codegen_hpgfm8_bag_avg part 2. Populate
 
-INSERT INTO tmp_20180508193550_codegen_p1klxq_bag_union (`KEY`, `Estimator`) SELECT `BAG_Union`.`KEY`, `BAG_Union`.`Estimator` 
-FROM (SELECT `BAG_EnsembleUnion`.`KEY` AS `KEY`, `BAG_EnsembleUnion`.`Estimator` AS `Estimator` 
+WITH `BAG_Union` AS 
+(SELECT `BAG_EnsembleUnion`.`KEY` AS `KEY`, `BAG_EnsembleUnion`.`Estimator` AS `Estimator` 
 FROM (SELECT `BAG_B0`.`KEY` AS `KEY`, `BAG_B0`.`Estimator` AS `Estimator` 
-FROM tmp_20180508193550_codegen_8qthvr_bag_b0 AS `BAG_B0` UNION ALL SELECT `BAG_B1`.`KEY` AS `KEY`, `BAG_B1`.`Estimator` AS `Estimator` 
-FROM tmp_20180508193550_codegen_2a8h6x_bag_b1 AS `BAG_B1`) AS `BAG_EnsembleUnion`) AS `BAG_Union`
-
--- Code For temporary table tmp_20180508193550_codegen_hz0o1o_bag_avg part 1. Create 
-
-
-CREATE TABLE tmp_20180508193550_codegen_hz0o1o_bag_avg (
-	`KEY` BIGINT, 
-	`Estimator` DOUBLE
-)
-
- CACHED IN 'one_gig_pool'
-
--- Code For temporary table tmp_20180508193550_codegen_hz0o1o_bag_avg part 2. Populate
-
-INSERT INTO tmp_20180508193550_codegen_hz0o1o_bag_avg (`KEY`, `Estimator`) SELECT `BAG_avg`.`KEY`, `BAG_avg`.`Estimator` 
+FROM tmp_20180516114628_codegen_kbt7fj_bag_b0 AS `BAG_B0` UNION ALL SELECT `BAG_B1`.`KEY` AS `KEY`, `BAG_B1`.`Estimator` AS `Estimator` 
+FROM tmp_20180516114628_codegen_gyasn2_bag_b1 AS `BAG_B1`) AS `BAG_EnsembleUnion`)
+ INSERT INTO tmp_20180516114628_codegen_hpgfm8_bag_avg (`KEY`, `Estimator`) SELECT `BAG_avg`.`KEY`, `BAG_avg`.`Estimator` 
 FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT `BAG_Union`.`KEY` AS `KEY`, avg(CAST(`BAG_Union`.`Estimator` AS DOUBLE)) AS `Estimator` 
-FROM tmp_20180508193550_codegen_p1klxq_bag_union AS `BAG_Union` GROUP BY `BAG_Union`.`KEY`) AS `T`) AS `BAG_avg`
+FROM `BAG_Union` GROUP BY `BAG_Union`.`KEY`) AS `T`) AS `BAG_avg`
 
 -- Model deployment code
 
 SELECT `BAG_avg`.`KEY` AS `KEY`, `BAG_avg`.`Estimator` AS `Estimator` 
-FROM tmp_20180508193550_codegen_hz0o1o_bag_avg AS `BAG_avg`
+FROM tmp_20180516114628_codegen_hpgfm8_bag_avg AS `BAG_avg`

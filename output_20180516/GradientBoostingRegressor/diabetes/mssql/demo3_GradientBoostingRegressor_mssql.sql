@@ -10,17 +10,17 @@
 
 
 
--- Code For temporary table ##TMP_20180508183351_CODEGEN_C3K39N_GB_B0 part 1. Create 
+-- Code For temporary table ##TMP_20180516115308_CODEGEN_N8IWS8_GB_B0 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508183351_CODEGEN_C3K39N_GB_B0 (
+CREATE TABLE ##TMP_20180516115308_CODEGEN_N8IWS8_GB_B0 (
 	[KEY] BIGINT NULL, 
 	[Estimator] FLOAT(53) NULL
 )
 
 
 
--- Code For temporary table ##TMP_20180508183351_CODEGEN_C3K39N_GB_B0 part 2. Populate
+-- Code For temporary table ##TMP_20180516115308_CODEGEN_N8IWS8_GB_B0 part 2. Populate
 
 WITH [DT_node_lookup] AS 
 (SELECT [ADS].[KEY] AS [KEY], CASE WHEN ([ADS].[Feature_8] <= 0.0007076415931805968) THEN CASE WHEN ([ADS].[Feature_2] <= 0.0061888848431408405) THEN CASE WHEN ([ADS].[Feature_5] <= 0.11267216503620148) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS].[Feature_0] <= -0.08361412584781647) THEN 6 ELSE 7 END END ELSE CASE WHEN ([ADS].[Feature_2] <= 0.05576823651790619) THEN CASE WHEN ([ADS].[Feature_3] <= 0.037365272641181946) THEN 10 ELSE 11 END ELSE CASE WHEN ([ADS].[Feature_5] <= 0.022485405206680298) THEN 13 ELSE 14 END END END AS node_id_2 
@@ -142,7 +142,7 @@ FROM [DT_node_lookup_9] LEFT OUTER JOIN [DT_node_data_9] ON [DT_node_lookup_9].n
 [GB_Model_9_0] AS 
 (SELECT [DT_Output_9].[KEY] AS [KEY], [DT_Output_9].[E] AS [Estimator] 
 FROM [DT_Output_9])
- INSERT INTO ##TMP_20180508183351_CODEGEN_C3K39N_GB_B0 ([KEY], [Estimator]) SELECT [GB_B0].[KEY], [GB_B0].[Estimator] 
+ INSERT INTO ##TMP_20180516115308_CODEGEN_N8IWS8_GB_B0 ([KEY], [Estimator]) SELECT [GB_B0].[KEY], [GB_B0].[Estimator] 
 FROM (SELECT [GB_esu_0].[KEY] AS [KEY], [GB_esu_0].[Estimator] AS [Estimator] 
 FROM (SELECT [GB_Model_0_0].[KEY] AS [KEY], [GB_Model_0_0].[Estimator] AS [Estimator] 
 FROM [GB_Model_0_0] UNION ALL SELECT [GB_Model_1_0].[KEY] AS [KEY], [GB_Model_1_0].[Estimator] AS [Estimator] 
@@ -156,17 +156,17 @@ FROM [GB_Model_7_0] UNION ALL SELECT [GB_Model_8_0].[KEY] AS [KEY], [GB_Model_8_
 FROM [GB_Model_8_0] UNION ALL SELECT [GB_Model_9_0].[KEY] AS [KEY], [GB_Model_9_0].[Estimator] AS [Estimator] 
 FROM [GB_Model_9_0]) AS [GB_esu_0]) AS [GB_B0]
 
--- Code For temporary table ##TMP_20180508183351_CODEGEN_UPTZCK_GB_B1 part 1. Create 
+-- Code For temporary table ##TMP_20180516115308_CODEGEN_264YZK_GB_B1 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508183351_CODEGEN_UPTZCK_GB_B1 (
+CREATE TABLE ##TMP_20180516115308_CODEGEN_264YZK_GB_B1 (
 	[KEY] BIGINT NULL, 
 	[Estimator] FLOAT(53) NULL
 )
 
 
 
--- Code For temporary table ##TMP_20180508183351_CODEGEN_UPTZCK_GB_B1 part 2. Populate
+-- Code For temporary table ##TMP_20180516115308_CODEGEN_264YZK_GB_B1 part 2. Populate
 
 WITH [DT_node_lookup_10] AS 
 (SELECT [ADS].[KEY] AS [KEY], CASE WHEN ([ADS].[Feature_2] <= 0.009422320872545242) THEN CASE WHEN ([ADS].[Feature_7] <= 0.03061874583363533) THEN CASE WHEN ([ADS].[Feature_8] <= 0.027040982618927956) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS].[Feature_3] <= -0.041246943175792694) THEN 6 ELSE 7 END END ELSE CASE WHEN ([ADS].[Feature_3] <= 0.02359379082918167) THEN CASE WHEN ([ADS].[Feature_9] <= 0.029988106340169907) THEN 10 ELSE 11 END ELSE CASE WHEN ([ADS].[Feature_8] <= -0.03199999779462814) THEN 13 ELSE 14 END END END AS node_id_2 
@@ -240,7 +240,7 @@ FROM [DT_node_lookup_15] LEFT OUTER JOIN [DT_node_data_15] ON [DT_node_lookup_15
 [GB_Model_15_0] AS 
 (SELECT [DT_Output_15].[KEY] AS [KEY], [DT_Output_15].[E] AS [Estimator] 
 FROM [DT_Output_15])
- INSERT INTO ##TMP_20180508183351_CODEGEN_UPTZCK_GB_B1 ([KEY], [Estimator]) SELECT [GB_B1].[KEY], [GB_B1].[Estimator] 
+ INSERT INTO ##TMP_20180516115308_CODEGEN_264YZK_GB_B1 ([KEY], [Estimator]) SELECT [GB_B1].[KEY], [GB_B1].[Estimator] 
 FROM (SELECT [GB_esu_1].[KEY] AS [KEY], [GB_esu_1].[Estimator] AS [Estimator] 
 FROM (SELECT [GB_Model_10_0].[KEY] AS [KEY], [GB_Model_10_0].[Estimator] AS [Estimator] 
 FROM [GB_Model_10_0] UNION ALL SELECT [GB_Model_11_0].[KEY] AS [KEY], [GB_Model_11_0].[Estimator] AS [Estimator] 
@@ -250,42 +250,29 @@ FROM [GB_Model_13_0] UNION ALL SELECT [GB_Model_14_0].[KEY] AS [KEY], [GB_Model_
 FROM [GB_Model_14_0] UNION ALL SELECT [GB_Model_15_0].[KEY] AS [KEY], [GB_Model_15_0].[Estimator] AS [Estimator] 
 FROM [GB_Model_15_0]) AS [GB_esu_1]) AS [GB_B1]
 
--- Code For temporary table ##TMP_20180508183351_CODEGEN_IE0704_GB_Union part 1. Create 
+-- Code For temporary table ##TMP_20180516115308_CODEGEN_NL9E4I_GB_sum part 1. Create 
 
 
-CREATE TABLE ##TMP_20180508183351_CODEGEN_IE0704_GB_Union (
+CREATE TABLE ##TMP_20180516115308_CODEGEN_NL9E4I_GB_sum (
 	[KEY] BIGINT NULL, 
 	[Estimator] FLOAT(53) NULL
 )
 
 
 
--- Code For temporary table ##TMP_20180508183351_CODEGEN_IE0704_GB_Union part 2. Populate
+-- Code For temporary table ##TMP_20180516115308_CODEGEN_NL9E4I_GB_sum part 2. Populate
 
-INSERT INTO ##TMP_20180508183351_CODEGEN_IE0704_GB_Union ([KEY], [Estimator]) SELECT [GB_Union].[KEY], [GB_Union].[Estimator] 
-FROM (SELECT [GB_EnsembleUnion].[KEY] AS [KEY], [GB_EnsembleUnion].[Estimator] AS [Estimator] 
+WITH [GB_Union] AS 
+(SELECT [GB_EnsembleUnion].[KEY] AS [KEY], [GB_EnsembleUnion].[Estimator] AS [Estimator] 
 FROM (SELECT [GB_B0].[KEY] AS [KEY], [GB_B0].[Estimator] AS [Estimator] 
-FROM ##TMP_20180508183351_CODEGEN_C3K39N_GB_B0 AS [GB_B0] UNION ALL SELECT [GB_B1].[KEY] AS [KEY], [GB_B1].[Estimator] AS [Estimator] 
-FROM ##TMP_20180508183351_CODEGEN_UPTZCK_GB_B1 AS [GB_B1]) AS [GB_EnsembleUnion]) AS [GB_Union]
-
--- Code For temporary table ##TMP_20180508183351_CODEGEN_F58VG5_GB_sum part 1. Create 
-
-
-CREATE TABLE ##TMP_20180508183351_CODEGEN_F58VG5_GB_sum (
-	[KEY] BIGINT NULL, 
-	[Estimator] FLOAT(53) NULL
-)
-
-
-
--- Code For temporary table ##TMP_20180508183351_CODEGEN_F58VG5_GB_sum part 2. Populate
-
-INSERT INTO ##TMP_20180508183351_CODEGEN_F58VG5_GB_sum ([KEY], [Estimator]) SELECT [GB_sum].[KEY], [GB_sum].[Estimator] 
+FROM ##TMP_20180516115308_CODEGEN_N8IWS8_GB_B0 AS [GB_B0] UNION ALL SELECT [GB_B1].[KEY] AS [KEY], [GB_B1].[Estimator] AS [Estimator] 
+FROM ##TMP_20180516115308_CODEGEN_264YZK_GB_B1 AS [GB_B1]) AS [GB_EnsembleUnion])
+ INSERT INTO ##TMP_20180516115308_CODEGEN_NL9E4I_GB_sum ([KEY], [Estimator]) SELECT [GB_sum].[KEY], [GB_sum].[Estimator] 
 FROM (SELECT [T].[KEY] AS [KEY], CAST([T].[Estimator] AS FLOAT(53)) AS [Estimator] 
 FROM (SELECT [GB_Union].[KEY] AS [KEY], sum([GB_Union].[Estimator]) AS [Estimator] 
-FROM ##TMP_20180508183351_CODEGEN_IE0704_GB_Union AS [GB_Union] GROUP BY [GB_Union].[KEY]) AS [T]) AS [GB_sum]
+FROM [GB_Union] GROUP BY [GB_Union].[KEY]) AS [T]) AS [GB_sum]
 
 -- Model deployment code
 
 SELECT [GB_sum].[KEY] AS [KEY], 154.07365439093485 + 0.1 * [GB_sum].[Estimator] AS [Estimator] 
-FROM ##TMP_20180508183351_CODEGEN_F58VG5_GB_sum AS [GB_sum]
+FROM ##TMP_20180516115308_CODEGEN_NL9E4I_GB_sum AS [GB_sum]

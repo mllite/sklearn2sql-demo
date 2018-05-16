@@ -10,19 +10,19 @@
 
 
 
--- Code For temporary table tmp_20180508184833_codegen_di4kfc_lgbm_b0 part 1. Create 
+-- Code For temporary table tmp_20180516121315_codegen_qp6oxq_lgbm_b0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508184833_codegen_di4kfc_lgbm_b0 (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516121315_codegen_qp6oxq_lgbm_b0 (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508184833_codegen_di4kfc_lgbm_b0 part 2. Populate
+-- Code For temporary table tmp_20180516121315_codegen_qp6oxq_lgbm_b0 part 2. Populate
 
-INSERT INTO tmp_20180508184833_codegen_di4kfc_lgbm_b0 WITH "DT_node_lookup" AS 
+INSERT INTO tmp_20180516121315_codegen_qp6oxq_lgbm_b0 WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 0.41442794810547895) THEN 2 ELSE CASE WHEN ("ADS"."Feature_1" <= 870.9581401280838) THEN 6 ELSE 7 END END AS node_id_2 
 FROM "FREIDMAN2" AS "ADS"), 
 "DT_node_data" AS 
@@ -156,19 +156,19 @@ FROM "LGBM_Model_7" UNION ALL SELECT "LGBM_Model_8"."KEY" AS "KEY", "LGBM_Model_
 FROM "LGBM_Model_8" UNION ALL SELECT "LGBM_Model_9"."KEY" AS "KEY", "LGBM_Model_9"."Estimator" AS "Estimator" 
 FROM "LGBM_Model_9") AS "LGBM_esu_0") AS "LGBM_B0"
 
--- Code For temporary table tmp_20180508184833_codegen_yv50sk_lgbm_b1 part 1. Create 
+-- Code For temporary table tmp_20180516121315_codegen_4995zv_lgbm_b1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508184833_codegen_yv50sk_lgbm_b1 (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516121315_codegen_4995zv_lgbm_b1 (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508184833_codegen_yv50sk_lgbm_b1 part 2. Populate
+-- Code For temporary table tmp_20180516121315_codegen_4995zv_lgbm_b1 part 2. Populate
 
-INSERT INTO tmp_20180508184833_codegen_yv50sk_lgbm_b1 WITH "DT_node_lookup_10" AS 
+INSERT INTO tmp_20180516121315_codegen_4995zv_lgbm_b1 WITH "DT_node_lookup_10" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 0.5668879806967247) THEN 2 ELSE CASE WHEN ("ADS"."Feature_1" <= 989.364790234492) THEN 6 ELSE 7 END END AS node_id_2 
 FROM "FREIDMAN2" AS "ADS"), 
 "DT_node_data_10" AS 
@@ -250,42 +250,29 @@ FROM "LGBM_Model_13" UNION ALL SELECT "LGBM_Model_14"."KEY" AS "KEY", "LGBM_Mode
 FROM "LGBM_Model_14" UNION ALL SELECT "LGBM_Model_15"."KEY" AS "KEY", "LGBM_Model_15"."Estimator" AS "Estimator" 
 FROM "LGBM_Model_15") AS "LGBM_esu_1") AS "LGBM_B1"
 
--- Code For temporary table tmp_20180508184833_codegen_uxz084_lgbm_union part 1. Create 
+-- Code For temporary table tmp_20180516121315_codegen_ki7c5p_lgbm_sum part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508184833_codegen_uxz084_lgbm_union (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516121315_codegen_ki7c5p_lgbm_sum (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508184833_codegen_uxz084_lgbm_union part 2. Populate
+-- Code For temporary table tmp_20180516121315_codegen_ki7c5p_lgbm_sum part 2. Populate
 
-INSERT INTO tmp_20180508184833_codegen_uxz084_lgbm_union SELECT "LGBM_Union"."KEY", "LGBM_Union"."Estimator" 
-FROM (SELECT "LGBM_EnsembleUnion"."KEY" AS "KEY", "LGBM_EnsembleUnion"."Estimator" AS "Estimator" 
+INSERT INTO tmp_20180516121315_codegen_ki7c5p_lgbm_sum WITH "LGBM_Union" AS 
+(SELECT "LGBM_EnsembleUnion"."KEY" AS "KEY", "LGBM_EnsembleUnion"."Estimator" AS "Estimator" 
 FROM (SELECT "LGBM_B0"."KEY" AS "KEY", "LGBM_B0"."Estimator" AS "Estimator" 
-FROM tmp_20180508184833_codegen_di4kfc_lgbm_b0 AS "LGBM_B0" UNION ALL SELECT "LGBM_B1"."KEY" AS "KEY", "LGBM_B1"."Estimator" AS "Estimator" 
-FROM tmp_20180508184833_codegen_yv50sk_lgbm_b1 AS "LGBM_B1") AS "LGBM_EnsembleUnion") AS "LGBM_Union"
-
--- Code For temporary table tmp_20180508184833_codegen_ab6vfq_lgbm_sum part 1. Create 
-
-
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508184833_codegen_ab6vfq_lgbm_sum (
-	"KEY" BIGINT, 
-	"Estimator" DOUBLE
-)
-
- ON COMMIT PRESERVE ROWS
-
--- Code For temporary table tmp_20180508184833_codegen_ab6vfq_lgbm_sum part 2. Populate
-
-INSERT INTO tmp_20180508184833_codegen_ab6vfq_lgbm_sum SELECT "LGBM_sum"."KEY", "LGBM_sum"."Estimator" 
+FROM tmp_20180516121315_codegen_qp6oxq_lgbm_b0 AS "LGBM_B0" UNION ALL SELECT "LGBM_B1"."KEY" AS "KEY", "LGBM_B1"."Estimator" AS "Estimator" 
+FROM tmp_20180516121315_codegen_4995zv_lgbm_b1 AS "LGBM_B1") AS "LGBM_EnsembleUnion")
+ SELECT "LGBM_sum"."KEY", "LGBM_sum"."Estimator" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Estimator" AS DOUBLE) AS "Estimator" 
 FROM (SELECT "LGBM_Union"."KEY" AS "KEY", sum("LGBM_Union"."Estimator") AS "Estimator" 
-FROM tmp_20180508184833_codegen_uxz084_lgbm_union AS "LGBM_Union" GROUP BY "LGBM_Union"."KEY") AS "T") AS "LGBM_sum"
+FROM "LGBM_Union" GROUP BY "LGBM_Union"."KEY") AS "T") AS "LGBM_sum"
 
 -- Model deployment code
 
 SELECT "LGBM_sum"."KEY" AS "KEY", "LGBM_sum"."Estimator" AS "Estimator" 
-FROM tmp_20180508184833_codegen_ab6vfq_lgbm_sum AS "LGBM_sum"
+FROM tmp_20180516121315_codegen_ki7c5p_lgbm_sum AS "LGBM_sum"

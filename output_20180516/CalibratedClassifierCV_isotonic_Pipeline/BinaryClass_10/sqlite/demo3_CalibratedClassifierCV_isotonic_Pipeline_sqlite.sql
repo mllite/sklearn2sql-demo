@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180508175725_CODEGEN_X8W0F7_ADS_imp_1_OUT part 1. Create 
+-- Code For temporary table TMP_20180516110209_CODEGEN_YYI2N4_ADS_imp_1_OUT part 1. Create 
 
 
-CREATE TEMPORARY TABLE "TMP_20180508175725_CODEGEN_X8W0F7_ADS_imp_1_OUT" (
+CREATE TEMPORARY TABLE "TMP_20180516110209_CODEGEN_YYI2N4_ADS_imp_1_OUT" (
 	"KEY" BIGINT NOT NULL, 
 	impter_2 FLOAT, 
 	impter_3 FLOAT, 
@@ -30,20 +30,20 @@ CREATE TEMPORARY TABLE "TMP_20180508175725_CODEGEN_X8W0F7_ADS_imp_1_OUT" (
 
 
 
--- Code For temporary table TMP_20180508175725_CODEGEN_X8W0F7_ADS_imp_1_OUT part 2. Populate
+-- Code For temporary table TMP_20180516110209_CODEGEN_YYI2N4_ADS_imp_1_OUT part 2. Populate
 
-INSERT INTO "TMP_20180508175725_CODEGEN_X8W0F7_ADS_imp_1_OUT" ("KEY", impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".impter_2, "ADS_imp_1_OUT".impter_3, "ADS_imp_1_OUT".impter_4, "ADS_imp_1_OUT".impter_5, "ADS_imp_1_OUT".impter_6, "ADS_imp_1_OUT".impter_7, "ADS_imp_1_OUT".impter_8, "ADS_imp_1_OUT".impter_9, "ADS_imp_1_OUT".impter_10, "ADS_imp_1_OUT".impter_11 
+INSERT INTO "TMP_20180516110209_CODEGEN_YYI2N4_ADS_imp_1_OUT" ("KEY", impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".impter_2, "ADS_imp_1_OUT".impter_3, "ADS_imp_1_OUT".impter_4, "ADS_imp_1_OUT".impter_5, "ADS_imp_1_OUT".impter_6, "ADS_imp_1_OUT".impter_7, "ADS_imp_1_OUT".impter_8, "ADS_imp_1_OUT".impter_9, "ADS_imp_1_OUT".impter_10, "ADS_imp_1_OUT".impter_11 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN 0.061829205238134496 ELSE "ADS"."Feature_0" END AS impter_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 0.17702463767183324 ELSE "ADS"."Feature_1" END AS impter_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 0.04138385004903454 ELSE "ADS"."Feature_2" END AS impter_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 0.13060646805847148 ELSE "ADS"."Feature_3" END AS impter_5, CASE WHEN ("ADS"."Feature_4" IS NULL) THEN -0.05955810471983082 ELSE "ADS"."Feature_4" END AS impter_6, CASE WHEN ("ADS"."Feature_5" IS NULL) THEN -0.04892908987010584 ELSE "ADS"."Feature_5" END AS impter_7, CASE WHEN ("ADS"."Feature_6" IS NULL) THEN 0.19101797861713127 ELSE "ADS"."Feature_6" END AS impter_8, CASE WHEN ("ADS"."Feature_7" IS NULL) THEN 0.02204959673267471 ELSE "ADS"."Feature_7" END AS impter_9, CASE WHEN ("ADS"."Feature_8" IS NULL) THEN -0.057729814034140035 ELSE "ADS"."Feature_8" END AS impter_10, CASE WHEN ("ADS"."Feature_9" IS NULL) THEN -0.05254959205203237 ELSE "ADS"."Feature_9" END AS impter_11 
 FROM "BinaryClass_10" AS "ADS") AS "ADS_imp_1_OUT"
 
--- Code For temporary table TMP_20180508175725_CODEGEN_X8W0F7_ADS_imp_1_OUT part 3. Create Index 
+-- Code For temporary table TMP_20180516110209_CODEGEN_YYI2N4_ADS_imp_1_OUT part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508175725_CODEGEN_X8W0F7_ADS_imp_1_OUT_KEY" ON "TMP_20180508175725_CODEGEN_X8W0F7_ADS_imp_1_OUT" ("KEY")
+CREATE INDEX "ix_TMP_20180516110209_CODEGEN_YYI2N4_ADS_imp_1_OUT_KEY" ON "TMP_20180516110209_CODEGEN_YYI2N4_ADS_imp_1_OUT" ("KEY")
 
--- Code For temporary table TMP_20180508175725_CODEGEN_3YGP13_ADS_sca_2_OUT part 1. Create 
+-- Code For temporary table TMP_20180516110209_CODEGEN_OPZVJV_ADS_sca_2_OUT part 1. Create 
 
 
-CREATE TEMPORARY TABLE "TMP_20180508175725_CODEGEN_3YGP13_ADS_sca_2_OUT" (
+CREATE TEMPORARY TABLE "TMP_20180516110209_CODEGEN_OPZVJV_ADS_sca_2_OUT" (
 	"KEY" BIGINT NOT NULL, 
 	scaler_2 FLOAT, 
 	scaler_3 FLOAT, 
@@ -60,20 +60,20 @@ CREATE TEMPORARY TABLE "TMP_20180508175725_CODEGEN_3YGP13_ADS_sca_2_OUT" (
 
 
 
--- Code For temporary table TMP_20180508175725_CODEGEN_3YGP13_ADS_sca_2_OUT part 2. Populate
+-- Code For temporary table TMP_20180516110209_CODEGEN_OPZVJV_ADS_sca_2_OUT part 2. Populate
 
-INSERT INTO "TMP_20180508175725_CODEGEN_3YGP13_ADS_sca_2_OUT" ("KEY", scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_2, "ADS_sca_2_OUT".scaler_3, "ADS_sca_2_OUT".scaler_4, "ADS_sca_2_OUT".scaler_5, "ADS_sca_2_OUT".scaler_6, "ADS_sca_2_OUT".scaler_7, "ADS_sca_2_OUT".scaler_8, "ADS_sca_2_OUT".scaler_9, "ADS_sca_2_OUT".scaler_10, "ADS_sca_2_OUT".scaler_11 
+INSERT INTO "TMP_20180516110209_CODEGEN_OPZVJV_ADS_sca_2_OUT" ("KEY", scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_2, "ADS_sca_2_OUT".scaler_3, "ADS_sca_2_OUT".scaler_4, "ADS_sca_2_OUT".scaler_5, "ADS_sca_2_OUT".scaler_6, "ADS_sca_2_OUT".scaler_7, "ADS_sca_2_OUT".scaler_8, "ADS_sca_2_OUT".scaler_9, "ADS_sca_2_OUT".scaler_10, "ADS_sca_2_OUT".scaler_11 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".impter_2 AS FLOAT) - 0.061829205238134496) / 1.2283839562090673 AS scaler_2, (CAST("ADS_imp_1_OUT".impter_3 AS FLOAT) - 0.17702463767183324) / 0.940821656314017 AS scaler_3, (CAST("ADS_imp_1_OUT".impter_4 AS FLOAT) - 0.04138385004903454) / 1.0741824888811282 AS scaler_4, (CAST("ADS_imp_1_OUT".impter_5 AS FLOAT) - 0.13060646805847148) / 1.0792244559733761 AS scaler_5, (CAST("ADS_imp_1_OUT".impter_6 AS FLOAT) - -0.05955810471983082) / 1.1095891190508123 AS scaler_6, (CAST("ADS_imp_1_OUT".impter_7 AS FLOAT) - -0.04892908987010584) / 1.3781871812029047 AS scaler_7, (CAST("ADS_imp_1_OUT".impter_8 AS FLOAT) - 0.19101797861713127) / 0.9735285246303208 AS scaler_8, (CAST("ADS_imp_1_OUT".impter_9 AS FLOAT) - 0.02204959673267471) / 0.47460301203797095 AS scaler_9, (CAST("ADS_imp_1_OUT".impter_10 AS FLOAT) - -0.057729814034140035) / 1.064607524840552 AS scaler_10, (CAST("ADS_imp_1_OUT".impter_11 AS FLOAT) - -0.05254959205203237) / 1.2245328896554564 AS scaler_11 
-FROM "TMP_20180508175725_CODEGEN_X8W0F7_ADS_imp_1_OUT" AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT"
+FROM "TMP_20180516110209_CODEGEN_YYI2N4_ADS_imp_1_OUT" AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT"
 
--- Code For temporary table TMP_20180508175725_CODEGEN_3YGP13_ADS_sca_2_OUT part 3. Create Index 
+-- Code For temporary table TMP_20180516110209_CODEGEN_OPZVJV_ADS_sca_2_OUT part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508175725_CODEGEN_3YGP13_ADS_sca_2_OUT_KEY" ON "TMP_20180508175725_CODEGEN_3YGP13_ADS_sca_2_OUT" ("KEY")
+CREATE INDEX "ix_TMP_20180516110209_CODEGEN_OPZVJV_ADS_sca_2_OUT_KEY" ON "TMP_20180516110209_CODEGEN_OPZVJV_ADS_sca_2_OUT" ("KEY")
 
--- Code For temporary table TMP_20180508175725_CODEGEN_OTGDL4_CalProb_B0 part 1. Create 
+-- Code For temporary table TMP_20180516110209_CODEGEN_M3KBL9_CalProb_B0 part 1. Create 
 
 
-CREATE TEMPORARY TABLE "TMP_20180508175725_CODEGEN_OTGDL4_CalProb_B0" (
+CREATE TEMPORARY TABLE "TMP_20180516110209_CODEGEN_M3KBL9_CalProb_B0" (
 	"KEY" BIGINT, 
 	"Proba_1" FLOAT, 
 	"Proba_0" FLOAT
@@ -81,11 +81,11 @@ CREATE TEMPORARY TABLE "TMP_20180508175725_CODEGEN_OTGDL4_CalProb_B0" (
 
 
 
--- Code For temporary table TMP_20180508175725_CODEGEN_OTGDL4_CalProb_B0 part 2. Populate
+-- Code For temporary table TMP_20180516110209_CODEGEN_M3KBL9_CalProb_B0 part 2. Populate
 
 WITH "DT_node_lookup" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_11 <= 0.167745441198349) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= 1.7556507587432861) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -1.0334277153015137) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_5 <= 0.6659789085388184) THEN 4 ELSE 5 END ELSE 6 END ELSE 7 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_8 <= 1.7904822826385498) THEN 9 ELSE 10 END END AS node_id_2 
-FROM "TMP_20180508175725_CODEGEN_3YGP13_ADS_sca_2_OUT" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180516110209_CODEGEN_OPZVJV_ADS_sca_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS FLOAT) AS "P_0", CAST("Values"."P_1" AS FLOAT) AS "P_1", CAST("Values"."D" AS FLOAT) AS "D", CAST("Values"."DP" AS FLOAT) AS "DP" 
 FROM (SELECT 4 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0 AS "D", 1.0 AS "DP" UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 1 AS "D", 1.0 AS "DP" UNION ALL SELECT 6 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0 AS "D", 1.0 AS "DP" UNION ALL SELECT 7 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 1 AS "D", 1.0 AS "DP" UNION ALL SELECT 9 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 1 AS "D", 1.0 AS "DP" UNION ALL SELECT 10 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0 AS "D", 1.0 AS "DP") AS "Values"), 
@@ -103,7 +103,7 @@ FROM "Calibrated_Model_0"),
 FROM isotonic_cte_0), 
 "DT_node_lookup_1" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_11 <= 0.07101128250360489) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= 1.7556507587432861) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_4 <= 1.7515931129455566) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_5 <= 1.4045209884643555) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_5 <= 1.0299372673034668) THEN 5 ELSE 6 END ELSE 7 END ELSE 8 END ELSE 9 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= 1.4344911575317383) THEN 11 ELSE 12 END END AS node_id_2 
-FROM "TMP_20180508175725_CODEGEN_3YGP13_ADS_sca_2_OUT" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180516110209_CODEGEN_OPZVJV_ADS_sca_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_1" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS FLOAT) AS "P_0", CAST("Values"."P_1" AS FLOAT) AS "P_1", CAST("Values"."D" AS FLOAT) AS "D", CAST("Values"."DP" AS FLOAT) AS "DP" 
 FROM (SELECT 5 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0 AS "D", 1.0 AS "DP" UNION ALL SELECT 6 AS nid, 0.75 AS "P_0", 0.25 AS "P_1", 0 AS "D", 0.75 AS "DP" UNION ALL SELECT 7 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 1 AS "D", 1.0 AS "DP" UNION ALL SELECT 8 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 1 AS "D", 1.0 AS "DP" UNION ALL SELECT 9 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 1 AS "D", 1.0 AS "DP" UNION ALL SELECT 11 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 1 AS "D", 1.0 AS "DP" UNION ALL SELECT 12 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0 AS "D", 1.0 AS "DP") AS "Values"), 
@@ -121,7 +121,7 @@ FROM "Calibrated_Model_1"),
 FROM isotonic_cte_1), 
 "DT_node_lookup_2" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_11 <= 0.07101128250360489) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= 1.7556507587432861) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_4 <= 1.7515931129455566) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_5 <= 1.5206031799316406) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_10 <= 1.0610102415084839) THEN 5 ELSE 6 END ELSE 7 END ELSE 8 END ELSE 9 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_8 <= 1.8911219835281372) THEN 11 ELSE 12 END END AS node_id_2 
-FROM "TMP_20180508175725_CODEGEN_3YGP13_ADS_sca_2_OUT" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180516110209_CODEGEN_OPZVJV_ADS_sca_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_2" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS FLOAT) AS "P_0", CAST("Values"."P_1" AS FLOAT) AS "P_1", CAST("Values"."D" AS FLOAT) AS "D", CAST("Values"."DP" AS FLOAT) AS "DP" 
 FROM (SELECT 5 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0 AS "D", 1.0 AS "DP" UNION ALL SELECT 6 AS nid, 0.8 AS "P_0", 0.2 AS "P_1", 0 AS "D", 0.8 AS "DP" UNION ALL SELECT 7 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 1 AS "D", 1.0 AS "DP" UNION ALL SELECT 8 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 1 AS "D", 1.0 AS "DP" UNION ALL SELECT 9 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 1 AS "D", 1.0 AS "DP" UNION ALL SELECT 11 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 1 AS "D", 1.0 AS "DP" UNION ALL SELECT 12 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0 AS "D", 1.0 AS "DP") AS "Values"), 
@@ -139,7 +139,7 @@ FROM "Calibrated_Model_2"),
 FROM isotonic_cte_2), 
 "DT_node_lookup_3" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_11 <= -0.17995494604110718) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_8 <= 1.4718672037124634) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= 1.77065110206604) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_7 <= -1.0334277153015137) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_2 <= 0.8862568140029907) THEN 5 ELSE 6 END ELSE 7 END ELSE 8 END ELSE 9 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_8 <= 1.7904822826385498) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_11 <= 0.010654184967279434) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_5 <= -0.21191619336605072) THEN 13 ELSE 14 END ELSE 15 END ELSE 16 END END AS node_id_2 
-FROM "TMP_20180508175725_CODEGEN_3YGP13_ADS_sca_2_OUT" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180516110209_CODEGEN_OPZVJV_ADS_sca_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_3" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS FLOAT) AS "P_0", CAST("Values"."P_1" AS FLOAT) AS "P_1", CAST("Values"."D" AS FLOAT) AS "D", CAST("Values"."DP" AS FLOAT) AS "DP" 
 FROM (SELECT 5 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 1 AS "D", 1.0 AS "DP" UNION ALL SELECT 6 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0 AS "D", 1.0 AS "DP" UNION ALL SELECT 7 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0 AS "D", 1.0 AS "DP" UNION ALL SELECT 8 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 1 AS "D", 1.0 AS "DP" UNION ALL SELECT 9 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 1 AS "D", 1.0 AS "DP" UNION ALL SELECT 13 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0 AS "D", 1.0 AS "DP" UNION ALL SELECT 14 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 1 AS "D", 1.0 AS "DP" UNION ALL SELECT 15 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 1 AS "D", 1.0 AS "DP" UNION ALL SELECT 16 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0 AS "D", 1.0 AS "DP") AS "Values"), 
@@ -155,7 +155,7 @@ FROM "Calibrated_Model_3"),
 "Normalized_Probas_3" AS 
 (SELECT isotonic_cte_3."KEY" AS "KEY", isotonic_cte_3."Proba_1" / (isotonic_cte_3."Proba_0" + isotonic_cte_3."Proba_1") AS "Proba_1", isotonic_cte_3."Proba_0" / (isotonic_cte_3."Proba_0" + isotonic_cte_3."Proba_1") AS "Proba_0" 
 FROM isotonic_cte_3)
- INSERT INTO "TMP_20180508175725_CODEGEN_OTGDL4_CalProb_B0" ("KEY", "Proba_1", "Proba_0") SELECT "CalProb_B0"."KEY", "CalProb_B0"."Proba_1", "CalProb_B0"."Proba_0" 
+ INSERT INTO "TMP_20180516110209_CODEGEN_M3KBL9_CalProb_B0" ("KEY", "Proba_1", "Proba_0") SELECT "CalProb_B0"."KEY", "CalProb_B0"."Proba_1", "CalProb_B0"."Proba_0" 
 FROM (SELECT "CalProb_esu_0"."KEY" AS "KEY", "CalProb_esu_0"."Proba_1" AS "Proba_1", "CalProb_esu_0"."Proba_0" AS "Proba_0" 
 FROM (SELECT "Normalized_Probas"."KEY" AS "KEY", "Normalized_Probas"."Proba_1" AS "Proba_1", "Normalized_Probas"."Proba_0" AS "Proba_0" 
 FROM "Normalized_Probas" UNION ALL SELECT "Normalized_Probas_1"."KEY" AS "KEY", "Normalized_Probas_1"."Proba_1" AS "Proba_1", "Normalized_Probas_1"."Proba_0" AS "Proba_0" 
@@ -163,28 +163,10 @@ FROM "Normalized_Probas_1" UNION ALL SELECT "Normalized_Probas_2"."KEY" AS "KEY"
 FROM "Normalized_Probas_2" UNION ALL SELECT "Normalized_Probas_3"."KEY" AS "KEY", "Normalized_Probas_3"."Proba_1" AS "Proba_1", "Normalized_Probas_3"."Proba_0" AS "Proba_0" 
 FROM "Normalized_Probas_3") AS "CalProb_esu_0") AS "CalProb_B0"
 
--- Code For temporary table TMP_20180508175725_CODEGEN_YE9U9K_CalProb_Union part 1. Create 
+-- Code For temporary table TMP_20180516110209_CODEGEN_525QWU_CalProb_avg part 1. Create 
 
 
-CREATE TEMPORARY TABLE "TMP_20180508175725_CODEGEN_YE9U9K_CalProb_Union" (
-	"KEY" BIGINT, 
-	"Proba_1" FLOAT, 
-	"Proba_0" FLOAT
-)
-
-
-
--- Code For temporary table TMP_20180508175725_CODEGEN_YE9U9K_CalProb_Union part 2. Populate
-
-INSERT INTO "TMP_20180508175725_CODEGEN_YE9U9K_CalProb_Union" ("KEY", "Proba_1", "Proba_0") SELECT "CalProb_Union"."KEY", "CalProb_Union"."Proba_1", "CalProb_Union"."Proba_0" 
-FROM (SELECT "CalProb_EnsembleUnion"."KEY" AS "KEY", "CalProb_EnsembleUnion"."Proba_1" AS "Proba_1", "CalProb_EnsembleUnion"."Proba_0" AS "Proba_0" 
-FROM (SELECT "CalProb_B0"."KEY" AS "KEY", "CalProb_B0"."Proba_1" AS "Proba_1", "CalProb_B0"."Proba_0" AS "Proba_0" 
-FROM "TMP_20180508175725_CODEGEN_OTGDL4_CalProb_B0" AS "CalProb_B0") AS "CalProb_EnsembleUnion") AS "CalProb_Union"
-
--- Code For temporary table TMP_20180508175725_CODEGEN_T149E7_CalProb_avg part 1. Create 
-
-
-CREATE TEMPORARY TABLE "TMP_20180508175725_CODEGEN_T149E7_CalProb_avg" (
+CREATE TEMPORARY TABLE "TMP_20180516110209_CODEGEN_525QWU_CalProb_avg" (
 	"KEY" BIGINT NOT NULL, 
 	"Proba_1" FLOAT, 
 	"Proba_0" FLOAT, 
@@ -193,22 +175,26 @@ CREATE TEMPORARY TABLE "TMP_20180508175725_CODEGEN_T149E7_CalProb_avg" (
 
 
 
--- Code For temporary table TMP_20180508175725_CODEGEN_T149E7_CalProb_avg part 2. Populate
+-- Code For temporary table TMP_20180516110209_CODEGEN_525QWU_CalProb_avg part 2. Populate
 
-INSERT INTO "TMP_20180508175725_CODEGEN_T149E7_CalProb_avg" ("KEY", "Proba_1", "Proba_0") SELECT "CalProb_avg"."KEY", "CalProb_avg"."Proba_1", "CalProb_avg"."Proba_0" 
+WITH "CalProb_Union" AS 
+(SELECT "CalProb_EnsembleUnion"."KEY" AS "KEY", "CalProb_EnsembleUnion"."Proba_1" AS "Proba_1", "CalProb_EnsembleUnion"."Proba_0" AS "Proba_0" 
+FROM (SELECT "CalProb_B0"."KEY" AS "KEY", "CalProb_B0"."Proba_1" AS "Proba_1", "CalProb_B0"."Proba_0" AS "Proba_0" 
+FROM "TMP_20180516110209_CODEGEN_M3KBL9_CalProb_B0" AS "CalProb_B0") AS "CalProb_EnsembleUnion")
+ INSERT INTO "TMP_20180516110209_CODEGEN_525QWU_CalProb_avg" ("KEY", "Proba_1", "Proba_0") SELECT "CalProb_avg"."KEY", "CalProb_avg"."Proba_1", "CalProb_avg"."Proba_0" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Proba_1" AS FLOAT) AS "Proba_1", CAST("T"."Proba_0" AS FLOAT) AS "Proba_0" 
 FROM (SELECT "CalProb_Union"."KEY" AS "KEY", avg(CAST("CalProb_Union"."Proba_1" AS FLOAT)) AS "Proba_1", avg(CAST("CalProb_Union"."Proba_0" AS FLOAT)) AS "Proba_0" 
-FROM "TMP_20180508175725_CODEGEN_YE9U9K_CalProb_Union" AS "CalProb_Union" GROUP BY "CalProb_Union"."KEY") AS "T") AS "CalProb_avg"
+FROM "CalProb_Union" GROUP BY "CalProb_Union"."KEY") AS "T") AS "CalProb_avg"
 
--- Code For temporary table TMP_20180508175725_CODEGEN_T149E7_CalProb_avg part 3. Create Index 
+-- Code For temporary table TMP_20180516110209_CODEGEN_525QWU_CalProb_avg part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180508175725_CODEGEN_T149E7_CalProb_avg_KEY" ON "TMP_20180508175725_CODEGEN_T149E7_CalProb_avg" ("KEY")
+CREATE INDEX "ix_TMP_20180516110209_CODEGEN_525QWU_CalProb_avg_KEY" ON "TMP_20180516110209_CODEGEN_525QWU_CalProb_avg" ("KEY")
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT "CalProb_avg"."KEY" AS "KEY", CAST(NULL AS FLOAT) AS "Score_0", CAST(NULL AS FLOAT) AS "Score_1", "CalProb_avg"."Proba_0" AS "Proba_0", "CalProb_avg"."Proba_1" AS "Proba_1", CAST(NULL AS FLOAT) AS "LogProba_0", CAST(NULL AS FLOAT) AS "LogProba_1", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS FLOAT) AS "DecisionProba" 
-FROM "TMP_20180508175725_CODEGEN_T149E7_CalProb_avg" AS "CalProb_avg"), 
+FROM "TMP_20180516110209_CODEGEN_525QWU_CalProb_avg" AS "CalProb_avg"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table CODEGEN_OALV61_HL_1_RELU_1 part 1. Create 
+-- Code For temporary table CODEGEN_6VIZ61_HL_1_RELU_1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "CODEGEN_OALV61_HL_1_RELU_1" (
+CREATE GLOBAL TEMPORARY TABLE "CODEGEN_6VIZ61_HL_1_RELU_1" (
 	"KEY" NUMBER(19), 
 	"NEUR_1_1" BINARY_DOUBLE, 
 	"NEUR_1_2" BINARY_DOUBLE, 
@@ -22,9 +22,9 @@ CREATE GLOBAL TEMPORARY TABLE "CODEGEN_OALV61_HL_1_RELU_1" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table CODEGEN_OALV61_HL_1_RELU_1 part 2. Populate
+-- Code For temporary table CODEGEN_6VIZ61_HL_1_RELU_1 part 2. Populate
 
-INSERT INTO "CODEGEN_OALV61_HL_1_RELU_1" ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "U"."KEY", "U"."NEUR_1_1", "U"."NEUR_1_2", "U"."NEUR_1_3" 
+INSERT INTO "CODEGEN_6VIZ61_HL_1_RELU_1" ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "U"."KEY", "U"."NEUR_1_1", "U"."NEUR_1_2", "U"."NEUR_1_3" 
 FROM (WITH "IL" AS 
 (SELECT "ADS"."KEY" AS "KEY", CAST("ADS"."Feature_0" AS BINARY_DOUBLE) AS "Feature_0", CAST("ADS"."Feature_1" AS BINARY_DOUBLE) AS "Feature_1", CAST("ADS"."Feature_2" AS BINARY_DOUBLE) AS "Feature_2", CAST("ADS"."Feature_3" AS BINARY_DOUBLE) AS "Feature_3" 
 FROM "IRIS_DATE_TGT" "ADS"), 
@@ -38,10 +38,10 @@ FROM "HL_BA_1")
 FROM (SELECT "HL_1_relu"."KEY" AS "KEY", "HL_1_relu"."NEUR_1_1" AS "NEUR_1_1", "HL_1_relu"."NEUR_1_2" AS "NEUR_1_2", "HL_1_relu"."NEUR_1_3" AS "NEUR_1_3" 
 FROM "HL_1_relu") "HL_1_relu_1") "U"
 
--- Code For temporary table ODEGEN_6EPR39_OL_SOFTMAX_1 part 1. Create 
+-- Code For temporary table ODEGEN_MBZ6E7_OL_SOFTMAX_1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "ODEGEN_6EPR39_OL_SOFTMAX_1" (
+CREATE GLOBAL TEMPORARY TABLE "ODEGEN_MBZ6E7_OL_SOFTMAX_1" (
 	"KEY" NUMBER(19), 
 	"NEUR_3_1" BINARY_DOUBLE, 
 	"NEUR_3_2" BINARY_DOUBLE, 
@@ -50,12 +50,12 @@ CREATE GLOBAL TEMPORARY TABLE "ODEGEN_6EPR39_OL_SOFTMAX_1" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table ODEGEN_6EPR39_OL_SOFTMAX_1 part 2. Populate
+-- Code For temporary table ODEGEN_MBZ6E7_OL_SOFTMAX_1 part 2. Populate
 
-INSERT INTO "ODEGEN_6EPR39_OL_SOFTMAX_1" ("KEY", "NEUR_3_1", "NEUR_3_2", "NEUR_3_3") SELECT "U"."KEY", "U"."NEUR_3_1", "U"."NEUR_3_2", "U"."NEUR_3_3" 
+INSERT INTO "ODEGEN_MBZ6E7_OL_SOFTMAX_1" ("KEY", "NEUR_3_1", "NEUR_3_2", "NEUR_3_3") SELECT "U"."KEY", "U"."NEUR_3_1", "U"."NEUR_3_2", "U"."NEUR_3_3" 
 FROM (WITH "HL_BA_2" AS 
 (SELECT "HL_1_relu_1"."KEY" AS "KEY", 0.672671923104853 * "HL_1_relu_1"."NEUR_1_1" + 5.419802759827511 * "HL_1_relu_1"."NEUR_1_2" + -1.9271053122849495 * "HL_1_relu_1"."NEUR_1_3" + 5.16187181842687 AS "NEUR_2_1", 0.6487191883099986 * "HL_1_relu_1"."NEUR_1_1" + -0.06938249903932749 * "HL_1_relu_1"."NEUR_1_2" + -0.6458158083131357 * "HL_1_relu_1"."NEUR_1_3" + -0.5292904296119374 AS "NEUR_2_2", -0.3006659700228309 * "HL_1_relu_1"."NEUR_1_1" + -0.8271971827368583 * "HL_1_relu_1"."NEUR_1_2" + -0.3009923810787846 * "HL_1_relu_1"."NEUR_1_3" + -0.010394282503777497 AS "NEUR_2_3", -0.34127033794348177 * "HL_1_relu_1"."NEUR_1_1" + -0.5188069008070966 * "HL_1_relu_1"."NEUR_1_2" + -0.12230784517386467 * "HL_1_relu_1"."NEUR_1_3" + -0.7406283496068888 AS "NEUR_2_4", -0.38669908724665947 * "HL_1_relu_1"."NEUR_1_1" + -5.0643406659762 * "HL_1_relu_1"."NEUR_1_2" + 16.572683876392247 * "HL_1_relu_1"."NEUR_1_3" + -6.299977617411162 AS "NEUR_2_5" 
-FROM "CODEGEN_OALV61_HL_1_RELU_1" "HL_1_relu_1"), 
+FROM "CODEGEN_6VIZ61_HL_1_RELU_1" "HL_1_relu_1"), 
 "HL_2_relu" AS 
 (SELECT "HL_BA_2"."KEY" AS "KEY", greatest("HL_BA_2"."NEUR_2_1", 0) AS "NEUR_2_1", greatest("HL_BA_2"."NEUR_2_2", 0) AS "NEUR_2_2", greatest("HL_BA_2"."NEUR_2_3", 0) AS "NEUR_2_3", greatest("HL_BA_2"."NEUR_2_4", 0) AS "NEUR_2_4", greatest("HL_BA_2"."NEUR_2_5", 0) AS "NEUR_2_5" 
 FROM "HL_BA_2"), 
@@ -73,7 +73,7 @@ FROM "OL_softmax") "OL_softmax_1") "U"
 
 WITH orig_cte AS 
 (SELECT "OL_softmax_1"."KEY" AS "KEY", "OL_softmax_1"."NEUR_3_1" AS "Score_1789-07-14T00:00:00.000000000", "OL_softmax_1"."NEUR_3_2" AS "Score_1789-08-14T00:00:00.000000000", "OL_softmax_1"."NEUR_3_3" AS "Score_1789-09-14T00:00:00.000000000", CAST(NULL AS BINARY_DOUBLE) AS "Proba_1789-07-14T00:00:00.000000000", CAST(NULL AS BINARY_DOUBLE) AS "Proba_1789-08-14T00:00:00.000000000", CAST(NULL AS BINARY_DOUBLE) AS "Proba_1789-09-14T00:00:00.000000000", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_1789-07-14T00:00:00.000000000", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_1789-08-14T00:00:00.000000000", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_1789-09-14T00:00:00.000000000", CAST(NULL AS NUMBER(19)) AS "Decision", CAST(NULL AS BINARY_DOUBLE) AS "DecisionProba" 
-FROM "ODEGEN_6EPR39_OL_SOFTMAX_1" "OL_softmax_1"), 
+FROM "ODEGEN_MBZ6E7_OL_SOFTMAX_1" "OL_softmax_1"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", '1789-07-14T00:00:00.000000000' AS class, orig_cte."LogProba_1789-07-14T00:00:00.000000000" AS "LogProba", orig_cte."Proba_1789-07-14T00:00:00.000000000" AS "Proba", orig_cte."Score_1789-07-14T00:00:00.000000000" AS "Score" 
@@ -85,7 +85,7 @@ score_max AS
 FROM orig_cte LEFT OUTER JOIN (SELECT score_class_union."KEY_u" AS "KEY_m", max(score_class_union."Score") AS "max_Score" 
 FROM score_class_union GROUP BY score_class_union."KEY_u") max_select ON orig_cte."KEY" = max_select."KEY_m"), 
 score_soft_max_deltas AS 
-(SELECT score_max."KEY" AS "KEY", score_max."Score_1789-07-14T00:00:0_4" AS "Score_1789-07-14T00:00:0_4", score_max."Score_1789-08-14T00:00:0_5" AS "Score_1789-08-14T00:00:0_5", score_max."Score_1789-09-14T00:00:0_6" AS "Score_1789-09-14T00:00:0_6", score_max."Proba_1789-07-14T00:00:0_7" AS "Proba_1789-07-14T00:00:0_7", score_max."Proba_1789-08-14T00:00:0_8" AS "Proba_1789-08-14T00:00:0_8", score_max."Proba_1789-09-14T00:00:0_9" AS "Proba_1789-09-14T00:00:0_9", score_max."LogProba_1789-07-14T00:0_a" AS "LogProba_1789-07-14T00:0_a", score_max."LogProba_1789-08-14T00:0_b" AS "LogProba_1789-08-14T00:0_b", score_max."LogProba_1789-09-14T00:0_c" AS "LogProba_1789-09-14T00:0_c", score_max."Decision" AS "Decision", score_max."DecisionProba" AS "DecisionProba", score_max."KEY_m" AS "KEY_m", score_max."max_Score" AS "max_Score", exp(score_max."Score_1789-07-14T00:00:0_4" - score_max."max_Score") AS "exp_delta_Score_1789-07-14T00:00:00.000000000", exp(score_max."Score_1789-08-14T00:00:0_5" - score_max."max_Score") AS "exp_delta_Score_1789-08-14T00:00:00.000000000", exp(score_max."Score_1789-09-14T00:00:0_6" - score_max."max_Score") AS "exp_delta_Score_1789-09-14T00:00:00.000000000" 
+(SELECT score_max."KEY" AS "KEY", score_max."Score_1789-07-14T00:00:0_4" AS "Score_1789-07-14T00:00:0_4", score_max."Score_1789-08-14T00:00:0_5" AS "Score_1789-08-14T00:00:0_5", score_max."Score_1789-09-14T00:00:0_6" AS "Score_1789-09-14T00:00:0_6", score_max."Proba_1789-07-14T00:00:0_7" AS "Proba_1789-07-14T00:00:0_7", score_max."Proba_1789-08-14T00:00:0_8" AS "Proba_1789-08-14T00:00:0_8", score_max."Proba_1789-09-14T00:00:0_9" AS "Proba_1789-09-14T00:00:0_9", score_max."LogProba_1789-07-14T00:0_a" AS "LogProba_1789-07-14T00:0_a", score_max."LogProba_1789-08-14T00:0_b" AS "LogProba_1789-08-14T00:0_b", score_max."LogProba_1789-09-14T00:0_c" AS "LogProba_1789-09-14T00:0_c", score_max."Decision" AS "Decision", score_max."DecisionProba" AS "DecisionProba", score_max."KEY_m" AS "KEY_m", score_max."max_Score" AS "max_Score", exp(greatest(-100.0, score_max."Score_1789-07-14T00:00:0_4" - score_max."max_Score")) AS "exp_delta_Score_1789-07-14T00:00:00.000000000", exp(greatest(-100.0, score_max."Score_1789-08-14T00:00:0_5" - score_max."max_Score")) AS "exp_delta_Score_1789-08-14T00:00:00.000000000", exp(greatest(-100.0, score_max."Score_1789-09-14T00:00:0_6" - score_max."max_Score")) AS "exp_delta_Score_1789-09-14T00:00:00.000000000" 
 FROM score_max), 
 score_class_union_soft AS 
 (SELECT soft_scu."KEY" AS "KEY", soft_scu.class AS class, soft_scu."exp_delta_Score" AS "exp_delta_Score" 

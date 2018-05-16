@@ -10,19 +10,19 @@
 
 
 
--- Code For temporary table tmp_20180508183617_codegen_jnuaq0_xgb_b0 part 1. Create 
+-- Code For temporary table tmp_20180516115627_codegen_4kt1ae_xgb_b0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508183617_codegen_jnuaq0_xgb_b0  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516115627_codegen_4kt1ae_xgb_b0  (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE PRECISION
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508183617_codegen_jnuaq0_xgb_b0 part 2. Populate
+-- Code For temporary table tmp_20180516115627_codegen_4kt1ae_xgb_b0 part 2. Populate
 
-INSERT INTO tmp_20180508183617_codegen_jnuaq0_xgb_b0 ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO tmp_20180516115627_codegen_4kt1ae_xgb_b0 ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_8" < CAST(0.000707641593181 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_2" < CAST(0.006188884843141 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_6" < CAST(0.021027816459537 AS DOUBLE PRECISION)) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_2" < CAST(0.047145746648312 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_2" < CAST(-0.021834230050445 AS DOUBLE PRECISION)) THEN 9 ELSE 10 END ELSE 6 END END AS node_id_2 
 FROM diabetes AS "ADS"), 
@@ -229,19 +229,19 @@ FROM "XGB_Model_7" UNION ALL SELECT "XGB_Model_8"."KEY" AS "KEY", "XGB_Model_8".
 FROM "XGB_Model_8" UNION ALL SELECT "XGB_Model_9"."KEY" AS "KEY", "XGB_Model_9"."Estimator" AS "Estimator" 
 FROM "XGB_Model_9") AS "XGB_esu_0") AS "XGB_B0") AS "U"
 
--- Code For temporary table tmp_20180508183617_codegen_gxakos_xgb_b1 part 1. Create 
+-- Code For temporary table tmp_20180516115627_codegen_pv3l7v_xgb_b1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508183617_codegen_gxakos_xgb_b1  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516115627_codegen_pv3l7v_xgb_b1  (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE PRECISION
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508183617_codegen_gxakos_xgb_b1 part 2. Populate
+-- Code For temporary table tmp_20180516115627_codegen_pv3l7v_xgb_b1 part 2. Populate
 
-INSERT INTO tmp_20180508183617_codegen_gxakos_xgb_b1 ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO tmp_20180516115627_codegen_pv3l7v_xgb_b1 ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "DT_node_lookup_10" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < CAST(0.009422320872545 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_7" < CAST(0.030618745833635 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_5" < CAST(-0.047346703708172 AS DOUBLE PRECISION)) THEN 7 ELSE 8 END ELSE CASE WHEN ("ADS"."Feature_6" < CAST(-0.05260493978858 AS DOUBLE PRECISION)) THEN 9 ELSE 10 END END ELSE CASE WHEN ("ADS"."Feature_3" < CAST(0.023593790829182 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_9" < CAST(0.02998810634017 AS DOUBLE PRECISION)) THEN 11 ELSE 12 END ELSE CASE WHEN ("ADS"."Feature_2" < CAST(0.046606838703156 AS DOUBLE PRECISION)) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM diabetes AS "ADS"), 
@@ -374,44 +374,30 @@ FROM "XGB_Model_13" UNION ALL SELECT "XGB_Model_14"."KEY" AS "KEY", "XGB_Model_1
 FROM "XGB_Model_14" UNION ALL SELECT "XGB_Model_15"."KEY" AS "KEY", "XGB_Model_15"."Estimator" AS "Estimator" 
 FROM "XGB_Model_15") AS "XGB_esu_1") AS "XGB_B1") AS "U"
 
--- Code For temporary table tmp_20180508183617_codegen_63ms8r_xgb_union part 1. Create 
+-- Code For temporary table tmp_20180516115627_codegen_01vdqa_xgb_sum part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508183617_codegen_63ms8r_xgb_union  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180516115627_codegen_01vdqa_xgb_sum  (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE PRECISION
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180508183617_codegen_63ms8r_xgb_union part 2. Populate
+-- Code For temporary table tmp_20180516115627_codegen_01vdqa_xgb_sum part 2. Populate
 
-INSERT INTO tmp_20180508183617_codegen_63ms8r_xgb_union ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
-FROM (SELECT "XGB_Union"."KEY", "XGB_Union"."Estimator" 
-FROM (SELECT "XGB_EnsembleUnion"."KEY" AS "KEY", "XGB_EnsembleUnion"."Estimator" AS "Estimator" 
+INSERT INTO tmp_20180516115627_codegen_01vdqa_xgb_sum ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+FROM (WITH "XGB_Union" AS 
+(SELECT "XGB_EnsembleUnion"."KEY" AS "KEY", "XGB_EnsembleUnion"."Estimator" AS "Estimator" 
 FROM (SELECT "XGB_B0"."KEY" AS "KEY", "XGB_B0"."Estimator" AS "Estimator" 
-FROM tmp_20180508183617_codegen_jnuaq0_xgb_b0 AS "XGB_B0" UNION ALL SELECT "XGB_B1"."KEY" AS "KEY", "XGB_B1"."Estimator" AS "Estimator" 
-FROM tmp_20180508183617_codegen_gxakos_xgb_b1 AS "XGB_B1") AS "XGB_EnsembleUnion") AS "XGB_Union") AS "U"
-
--- Code For temporary table tmp_20180508183617_codegen_nztebn_xgb_sum part 1. Create 
-
-
-CREATE GLOBAL TEMPORARY TABLE tmp_20180508183617_codegen_nztebn_xgb_sum  (
-	"KEY" BIGINT, 
-	"Estimator" DOUBLE PRECISION
-)
-
- ON COMMIT PRESERVE ROWS
-
--- Code For temporary table tmp_20180508183617_codegen_nztebn_xgb_sum part 2. Populate
-
-INSERT INTO tmp_20180508183617_codegen_nztebn_xgb_sum ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
-FROM (SELECT "XGB_sum"."KEY", "XGB_sum"."Estimator" 
+FROM tmp_20180516115627_codegen_4kt1ae_xgb_b0 AS "XGB_B0" UNION ALL SELECT "XGB_B1"."KEY" AS "KEY", "XGB_B1"."Estimator" AS "Estimator" 
+FROM tmp_20180516115627_codegen_pv3l7v_xgb_b1 AS "XGB_B1") AS "XGB_EnsembleUnion")
+ SELECT "XGB_sum"."KEY", "XGB_sum"."Estimator" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Estimator" AS DOUBLE PRECISION) AS "Estimator" 
 FROM (SELECT "XGB_Union"."KEY" AS "KEY", sum("XGB_Union"."Estimator") AS "Estimator" 
-FROM tmp_20180508183617_codegen_63ms8r_xgb_union AS "XGB_Union" GROUP BY "XGB_Union"."KEY") AS "T") AS "XGB_sum") AS "U"
+FROM "XGB_Union" GROUP BY "XGB_Union"."KEY") AS "T") AS "XGB_sum") AS "U"
 
 -- Model deployment code
 
 SELECT "XGB_sum"."KEY" AS "KEY", "XGB_sum"."Estimator" + CAST(0.5 AS DOUBLE PRECISION) AS "Estimator" 
-FROM tmp_20180508183617_codegen_nztebn_xgb_sum AS "XGB_sum"
+FROM tmp_20180516115627_codegen_01vdqa_xgb_sum AS "XGB_sum"
