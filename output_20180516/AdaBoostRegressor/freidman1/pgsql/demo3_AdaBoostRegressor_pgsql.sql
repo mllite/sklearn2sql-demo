@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180516120544_CODEGEN_YYXAJH_WE_B0 part 1. Create 
+-- Code For temporary table TMP_20180602151054_XQ9_WE_B0 part 1. Create 
 
 
-CREATE TEMPORARY TABLE "TMP_20180516120544_CODEGEN_YYXAJH_WE_B0" (
+CREATE TEMPORARY TABLE "TMP_20180602151054_XQ9_WE_B0" (
 	"KEY" BIGINT, 
 	"Estimator" FLOAT, 
 	"Weight" FLOAT, 
@@ -22,7 +22,7 @@ CREATE TEMPORARY TABLE "TMP_20180516120544_CODEGEN_YYXAJH_WE_B0" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516120544_CODEGEN_YYXAJH_WE_B0 part 2. Populate
+-- Code For temporary table TMP_20180602151054_XQ9_WE_B0 part 2. Populate
 
 WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_1" <= 0.28362607955932617) THEN CASE WHEN ("ADS"."Feature_4" <= 0.6014193892478943) THEN CASE WHEN ("ADS"."Feature_3" <= 0.3159424662590027) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_6" <= 0.6361697912216187) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_3" <= 0.8160629272460938) THEN CASE WHEN ("ADS"."Feature_5" <= 0.02199404314160347) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_9" <= 0.09068352729082108) THEN 13 ELSE 14 END END END AS node_id_2 
@@ -144,7 +144,7 @@ FROM "DT_node_lookup_9" LEFT OUTER JOIN "DT_node_data_9" ON "DT_node_lookup_9".n
 "ADB_Model_9" AS 
 (SELECT "DT_Output_9"."KEY" AS "KEY", "DT_Output_9"."E" AS "Estimator", 0.059051226129531266 AS "Weight", 9 AS est_index 
 FROM "DT_Output_9")
- INSERT INTO "TMP_20180516120544_CODEGEN_YYXAJH_WE_B0" ("KEY", "Estimator", "Weight", est_index) SELECT "WE_B0"."KEY", "WE_B0"."Estimator", "WE_B0"."Weight", "WE_B0".est_index 
+ INSERT INTO "TMP_20180602151054_XQ9_WE_B0" ("KEY", "Estimator", "Weight", est_index) SELECT "WE_B0"."KEY", "WE_B0"."Estimator", "WE_B0"."Weight", "WE_B0".est_index 
 FROM (SELECT "WE_esu_0"."KEY" AS "KEY", "WE_esu_0"."Estimator" AS "Estimator", "WE_esu_0"."Weight" AS "Weight", "WE_esu_0".est_index AS est_index 
 FROM (SELECT "ADB_Model_0"."KEY" AS "KEY", "ADB_Model_0"."Estimator" AS "Estimator", "ADB_Model_0"."Weight" AS "Weight", "ADB_Model_0".est_index AS est_index 
 FROM "ADB_Model_0" UNION ALL SELECT "ADB_Model_1"."KEY" AS "KEY", "ADB_Model_1"."Estimator" AS "Estimator", "ADB_Model_1"."Weight" AS "Weight", "ADB_Model_1".est_index AS est_index 
@@ -158,10 +158,10 @@ FROM "ADB_Model_7" UNION ALL SELECT "ADB_Model_8"."KEY" AS "KEY", "ADB_Model_8".
 FROM "ADB_Model_8" UNION ALL SELECT "ADB_Model_9"."KEY" AS "KEY", "ADB_Model_9"."Estimator" AS "Estimator", "ADB_Model_9"."Weight" AS "Weight", "ADB_Model_9".est_index AS est_index 
 FROM "ADB_Model_9") AS "WE_esu_0") AS "WE_B0"
 
--- Code For temporary table TMP_20180516120544_CODEGEN_PFJBA0_WE_B1 part 1. Create 
+-- Code For temporary table TMP_20180602151054_O2P_WE_B1 part 1. Create 
 
 
-CREATE TEMPORARY TABLE "TMP_20180516120544_CODEGEN_PFJBA0_WE_B1" (
+CREATE TEMPORARY TABLE "TMP_20180602151054_O2P_WE_B1" (
 	"KEY" BIGINT, 
 	"Estimator" FLOAT, 
 	"Weight" FLOAT, 
@@ -170,7 +170,7 @@ CREATE TEMPORARY TABLE "TMP_20180516120544_CODEGEN_PFJBA0_WE_B1" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516120544_CODEGEN_PFJBA0_WE_B1 part 2. Populate
+-- Code For temporary table TMP_20180602151054_O2P_WE_B1 part 2. Populate
 
 WITH "DT_node_lookup_10" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_4" <= 0.7056353688240051) THEN CASE WHEN ("ADS"."Feature_1" <= 0.37473800778388977) THEN CASE WHEN ("ADS"."Feature_3" <= 0.24764415621757507) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_0" <= 0.39444440603256226) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_1" <= 0.7234399914741516) THEN CASE WHEN ("ADS"."Feature_7" <= 0.7185869812965393) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_8" <= 0.8085499405860901) THEN 13 ELSE 14 END END END AS node_id_2 
@@ -244,7 +244,7 @@ FROM "DT_node_lookup_15" LEFT OUTER JOIN "DT_node_data_15" ON "DT_node_lookup_15
 "ADB_Model_15" AS 
 (SELECT "DT_Output_15"."KEY" AS "KEY", "DT_Output_15"."E" AS "Estimator", 0.06720189343079747 AS "Weight", 15 AS est_index 
 FROM "DT_Output_15")
- INSERT INTO "TMP_20180516120544_CODEGEN_PFJBA0_WE_B1" ("KEY", "Estimator", "Weight", est_index) SELECT "WE_B1"."KEY", "WE_B1"."Estimator", "WE_B1"."Weight", "WE_B1".est_index 
+ INSERT INTO "TMP_20180602151054_O2P_WE_B1" ("KEY", "Estimator", "Weight", est_index) SELECT "WE_B1"."KEY", "WE_B1"."Estimator", "WE_B1"."Weight", "WE_B1".est_index 
 FROM (SELECT "WE_esu_1"."KEY" AS "KEY", "WE_esu_1"."Estimator" AS "Estimator", "WE_esu_1"."Weight" AS "Weight", "WE_esu_1".est_index AS est_index 
 FROM (SELECT "ADB_Model_10"."KEY" AS "KEY", "ADB_Model_10"."Estimator" AS "Estimator", "ADB_Model_10"."Weight" AS "Weight", "ADB_Model_10".est_index AS est_index 
 FROM "ADB_Model_10" UNION ALL SELECT "ADB_Model_11"."KEY" AS "KEY", "ADB_Model_11"."Estimator" AS "Estimator", "ADB_Model_11"."Weight" AS "Weight", "ADB_Model_11".est_index AS est_index 
@@ -254,29 +254,29 @@ FROM "ADB_Model_13" UNION ALL SELECT "ADB_Model_14"."KEY" AS "KEY", "ADB_Model_1
 FROM "ADB_Model_14" UNION ALL SELECT "ADB_Model_15"."KEY" AS "KEY", "ADB_Model_15"."Estimator" AS "Estimator", "ADB_Model_15"."Weight" AS "Weight", "ADB_Model_15".est_index AS est_index 
 FROM "ADB_Model_15") AS "WE_esu_1") AS "WE_B1"
 
--- Code For temporary table TMP_20180516120544_CODEGEN_G12685_Quantiles part 1. Create 
+-- Code For temporary table TMP_20180602151054_TY5_Quantiles part 1. Create 
 
 
-CREATE TEMPORARY TABLE "TMP_20180516120544_CODEGEN_G12685_Quantiles" (
+CREATE TEMPORARY TABLE "TMP_20180602151054_TY5_Quantiles" (
 	"KEY" BIGINT, 
 	"Quantile" FLOAT
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516120544_CODEGEN_G12685_Quantiles part 2. Populate
+-- Code For temporary table TMP_20180602151054_TY5_Quantiles part 2. Populate
 
 WITH "WE_Union" AS 
 (SELECT "WE_EnsembleUnion"."KEY" AS "KEY", "WE_EnsembleUnion"."Estimator" AS "Estimator", "WE_EnsembleUnion"."Weight" AS "Weight", "WE_EnsembleUnion".est_index AS est_index 
 FROM (SELECT "WE_B0"."KEY" AS "KEY", "WE_B0"."Estimator" AS "Estimator", "WE_B0"."Weight" AS "Weight", "WE_B0".est_index AS est_index 
-FROM "TMP_20180516120544_CODEGEN_YYXAJH_WE_B0" AS "WE_B0" UNION ALL SELECT "WE_B1"."KEY" AS "KEY", "WE_B1"."Estimator" AS "Estimator", "WE_B1"."Weight" AS "Weight", "WE_B1".est_index AS est_index 
-FROM "TMP_20180516120544_CODEGEN_PFJBA0_WE_B1" AS "WE_B1") AS "WE_EnsembleUnion"), 
+FROM "TMP_20180602151054_XQ9_WE_B0" AS "WE_B0" UNION ALL SELECT "WE_B1"."KEY" AS "KEY", "WE_B1"."Estimator" AS "Estimator", "WE_B1"."Weight" AS "Weight", "WE_B1".est_index AS est_index 
+FROM "TMP_20180602151054_O2P_WE_B1" AS "WE_B1") AS "WE_EnsembleUnion"), 
 "Cumulative_Frequencies" AS 
 (SELECT "CW"."KEY" AS "KEY", "CW"."Estimator" AS "Estimator", "CW"."Weight" AS "Weight", "CW".est_index AS est_index, "CW".cum_weight AS cum_weight 
 FROM (SELECT u1."KEY" AS "KEY", u1."Estimator" AS "Estimator", u1."Weight" AS "Weight", u1.est_index AS est_index, sum(u2."Weight") AS cum_weight 
 FROM "WE_Union" AS u1, "WE_Union" AS u2 
 WHERE u1."Estimator" >= u2."Estimator" AND u1."KEY" = u2."KEY" GROUP BY u1."KEY", u1.est_index, u1."Estimator", u1."Weight") AS "CW")
- INSERT INTO "TMP_20180516120544_CODEGEN_G12685_Quantiles" ("KEY", "Quantile") SELECT "Quantiles"."KEY", "Quantiles"."Quantile" 
+ INSERT INTO "TMP_20180602151054_TY5_Quantiles" ("KEY", "Quantile") SELECT "Quantiles"."KEY", "Quantiles"."Quantile" 
 FROM (SELECT "CW2"."KEY" AS "KEY", "CW2"."Quantile" AS "Quantile" 
 FROM (SELECT "Cumulative_Frequencies"."KEY" AS "KEY", min("Cumulative_Frequencies"."Estimator") AS "Quantile" 
 FROM "Cumulative_Frequencies" 
@@ -285,4 +285,4 @@ WHERE "Cumulative_Frequencies".cum_weight >= 0.5 GROUP BY "Cumulative_Frequencie
 -- Model deployment code
 
 SELECT "Quantiles"."KEY" AS "KEY", "Quantiles"."Quantile" AS "Estimator" 
-FROM "TMP_20180516120544_CODEGEN_G12685_Quantiles" AS "Quantiles"
+FROM "TMP_20180602151054_TY5_Quantiles" AS "Quantiles"

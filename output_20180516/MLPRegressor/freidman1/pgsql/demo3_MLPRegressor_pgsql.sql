@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180516120813_CODEGEN_CBEK1S_HL_1_relu_1 part 1. Create 
+-- Code For temporary table TMP_20180602151306_5BH_HL_1_relu_1 part 1. Create 
 
 
-CREATE TEMPORARY TABLE "TMP_20180516120813_CODEGEN_CBEK1S_HL_1_relu_1" (
+CREATE TEMPORARY TABLE "TMP_20180602151306_5BH_HL_1_relu_1" (
 	"KEY" BIGINT NOT NULL, 
 	"NEUR_1_1" FLOAT, 
 	"NEUR_1_2" FLOAT, 
@@ -23,7 +23,7 @@ CREATE TEMPORARY TABLE "TMP_20180516120813_CODEGEN_CBEK1S_HL_1_relu_1" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516120813_CODEGEN_CBEK1S_HL_1_relu_1 part 2. Populate
+-- Code For temporary table TMP_20180602151306_5BH_HL_1_relu_1 part 2. Populate
 
 WITH "IL" AS 
 (SELECT "ADS"."KEY" AS "KEY", CAST("ADS"."Feature_0" AS FLOAT) AS "Feature_0", CAST("ADS"."Feature_1" AS FLOAT) AS "Feature_1", CAST("ADS"."Feature_2" AS FLOAT) AS "Feature_2", CAST("ADS"."Feature_3" AS FLOAT) AS "Feature_3", CAST("ADS"."Feature_4" AS FLOAT) AS "Feature_4", CAST("ADS"."Feature_5" AS FLOAT) AS "Feature_5", CAST("ADS"."Feature_6" AS FLOAT) AS "Feature_6", CAST("ADS"."Feature_7" AS FLOAT) AS "Feature_7", CAST("ADS"."Feature_8" AS FLOAT) AS "Feature_8", CAST("ADS"."Feature_9" AS FLOAT) AS "Feature_9" 
@@ -34,18 +34,18 @@ FROM "IL"),
 "HL_1_relu" AS 
 (SELECT "HL_BA_1"."KEY" AS "KEY", greatest("HL_BA_1"."NEUR_1_1", 0) AS "NEUR_1_1", greatest("HL_BA_1"."NEUR_1_2", 0) AS "NEUR_1_2", greatest("HL_BA_1"."NEUR_1_3", 0) AS "NEUR_1_3" 
 FROM "HL_BA_1")
- INSERT INTO "TMP_20180516120813_CODEGEN_CBEK1S_HL_1_relu_1" ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "HL_1_relu_1"."KEY", "HL_1_relu_1"."NEUR_1_1", "HL_1_relu_1"."NEUR_1_2", "HL_1_relu_1"."NEUR_1_3" 
+ INSERT INTO "TMP_20180602151306_5BH_HL_1_relu_1" ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "HL_1_relu_1"."KEY", "HL_1_relu_1"."NEUR_1_1", "HL_1_relu_1"."NEUR_1_2", "HL_1_relu_1"."NEUR_1_3" 
 FROM (SELECT "HL_1_relu"."KEY" AS "KEY", "HL_1_relu"."NEUR_1_1" AS "NEUR_1_1", "HL_1_relu"."NEUR_1_2" AS "NEUR_1_2", "HL_1_relu"."NEUR_1_3" AS "NEUR_1_3" 
 FROM "HL_1_relu") AS "HL_1_relu_1"
 
--- Code For temporary table TMP_20180516120813_CODEGEN_CBEK1S_HL_1_relu_1 part 3. Create Index 
+-- Code For temporary table TMP_20180602151306_5BH_HL_1_relu_1 part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180516120813_CODEGEN_CBEK1S_HL_1_relu_1_KEY" ON "TMP_20180516120813_CODEGEN_CBEK1S_HL_1_relu_1" ("KEY")
+CREATE INDEX "ix_TMP_20180602151306_5BH_HL_1_relu_1_KEY" ON "TMP_20180602151306_5BH_HL_1_relu_1" ("KEY")
 
--- Code For temporary table TMP_20180516120813_CODEGEN_1XYO76_OL_identity_1 part 1. Create 
+-- Code For temporary table TMP_20180602151306_P28_OL_identity_1 part 1. Create 
 
 
-CREATE TEMPORARY TABLE "TMP_20180516120813_CODEGEN_1XYO76_OL_identity_1" (
+CREATE TEMPORARY TABLE "TMP_20180602151306_P28_OL_identity_1" (
 	"KEY" BIGINT NOT NULL, 
 	"NEUR_3_1" FLOAT, 
 	PRIMARY KEY ("KEY")
@@ -53,11 +53,11 @@ CREATE TEMPORARY TABLE "TMP_20180516120813_CODEGEN_1XYO76_OL_identity_1" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516120813_CODEGEN_1XYO76_OL_identity_1 part 2. Populate
+-- Code For temporary table TMP_20180602151306_P28_OL_identity_1 part 2. Populate
 
 WITH "HL_BA_2" AS 
 (SELECT "HL_1_relu_1"."KEY" AS "KEY", -0.7406270038492997 * "HL_1_relu_1"."NEUR_1_1" + 0.587316714257745 * "HL_1_relu_1"."NEUR_1_2" + -0.07639477246651688 * "HL_1_relu_1"."NEUR_1_3" + -0.2547446044040141 AS "NEUR_2_1", -0.14939295511024037 * "HL_1_relu_1"."NEUR_1_1" + 0.5647841168272525 * "HL_1_relu_1"."NEUR_1_2" + -0.87497145291444 * "HL_1_relu_1"."NEUR_1_3" + -0.8894709359521616 AS "NEUR_2_2", 0.003345119477739777 * "HL_1_relu_1"."NEUR_1_1" + 0.4487095545793379 * "HL_1_relu_1"."NEUR_1_2" + 3.292612238880642 * "HL_1_relu_1"."NEUR_1_3" + -0.2608819972354321 AS "NEUR_2_3", 0.1110896151056272 * "HL_1_relu_1"."NEUR_1_1" + -0.5047392872721349 * "HL_1_relu_1"."NEUR_1_2" + -0.40662896830659395 * "HL_1_relu_1"."NEUR_1_3" + -0.7964330424336139 AS "NEUR_2_4", -0.6221511379019263 * "HL_1_relu_1"."NEUR_1_1" + 0.43321194021857856 * "HL_1_relu_1"."NEUR_1_2" + -0.6588750179423376 * "HL_1_relu_1"."NEUR_1_3" + -0.5537916280920224 AS "NEUR_2_5" 
-FROM "TMP_20180516120813_CODEGEN_CBEK1S_HL_1_relu_1" AS "HL_1_relu_1"), 
+FROM "TMP_20180602151306_5BH_HL_1_relu_1" AS "HL_1_relu_1"), 
 "HL_2_relu" AS 
 (SELECT "HL_BA_2"."KEY" AS "KEY", greatest("HL_BA_2"."NEUR_2_1", 0) AS "NEUR_2_1", greatest("HL_BA_2"."NEUR_2_2", 0) AS "NEUR_2_2", greatest("HL_BA_2"."NEUR_2_3", 0) AS "NEUR_2_3", greatest("HL_BA_2"."NEUR_2_4", 0) AS "NEUR_2_4", greatest("HL_BA_2"."NEUR_2_5", 0) AS "NEUR_2_5" 
 FROM "HL_BA_2"), 
@@ -67,15 +67,15 @@ FROM "HL_2_relu"),
 "OL_identity" AS 
 (SELECT "OL_BA"."KEY" AS "KEY", "OL_BA"."NEUR_3_1" AS "NEUR_3_1" 
 FROM "OL_BA")
- INSERT INTO "TMP_20180516120813_CODEGEN_1XYO76_OL_identity_1" ("KEY", "NEUR_3_1") SELECT "OL_identity_1"."KEY", "OL_identity_1"."NEUR_3_1" 
+ INSERT INTO "TMP_20180602151306_P28_OL_identity_1" ("KEY", "NEUR_3_1") SELECT "OL_identity_1"."KEY", "OL_identity_1"."NEUR_3_1" 
 FROM (SELECT "OL_identity"."KEY" AS "KEY", "OL_identity"."NEUR_3_1" AS "NEUR_3_1" 
 FROM "OL_identity") AS "OL_identity_1"
 
--- Code For temporary table TMP_20180516120813_CODEGEN_1XYO76_OL_identity_1 part 3. Create Index 
+-- Code For temporary table TMP_20180602151306_P28_OL_identity_1 part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180516120813_CODEGEN_1XYO76_OL_identity_1_KEY" ON "TMP_20180516120813_CODEGEN_1XYO76_OL_identity_1" ("KEY")
+CREATE INDEX "ix_TMP_20180602151306_P28_OL_identity_1_KEY" ON "TMP_20180602151306_P28_OL_identity_1" ("KEY")
 
 -- Model deployment code
 
 SELECT "OL_identity_1"."KEY" AS "KEY", "OL_identity_1"."NEUR_3_1" AS "Estimator" 
-FROM "TMP_20180516120813_CODEGEN_1XYO76_OL_identity_1" AS "OL_identity_1"
+FROM "TMP_20180602151306_P28_OL_identity_1" AS "OL_identity_1"
