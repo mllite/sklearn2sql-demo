@@ -10,22 +10,22 @@
 
 
 
--- Code For temporary table _CODEGEN_1Y270A_KERNAGG_B0 part 1. Create 
+-- Code For temporary table MP_20180602_8PK_KERNAGG_B0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "_CODEGEN_1Y270A_KERNAGG_B0" (
+CREATE GLOBAL TEMPORARY TABLE "MP_20180602_8PK_KERNAGG_B0" (
 	"KEY" NUMBER(19), 
 	"OVO_Class1" VARCHAR2, 
 	"OVO_Class2" VARCHAR2, 
 	"OVO_Decision" NUMBER(19), 
-	"OVO_Confidence" BINARY_DOUBLE
+	"OVO_Conf" BINARY_DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table _CODEGEN_1Y270A_KERNAGG_B0 part 2. Populate
+-- Code For temporary table MP_20180602_8PK_KERNAGG_B0 part 2. Populate
 
-INSERT INTO "_CODEGEN_1Y270A_KERNAGG_B0" ("KEY", "OVO_Class1", "OVO_Class2", "OVO_Decision", "OVO_Confidence") SELECT "U"."KEY", "U"."OVO_Class1", "U"."OVO_Class2", "U"."OVO_Decision", "U"."OVO_Confidence" 
+INSERT INTO "MP_20180602_8PK_KERNAGG_B0" ("KEY", "OVO_Class1", "OVO_Class2", "OVO_Decision", "OVO_Conf") SELECT "U"."KEY", "U"."OVO_Class1", "U"."OVO_Class2", "U"."OVO_Decision", "U"."OVO_Conf" 
 FROM (WITH kernel_input AS 
 (SELECT "ADS"."KEY" AS "KEY", CAST("ADS"."Feature_0" AS BINARY_DOUBLE) AS "Feature_0", CAST("ADS"."Feature_1" AS BINARY_DOUBLE) AS "Feature_1", CAST("ADS"."Feature_2" AS BINARY_DOUBLE) AS "Feature_2", CAST("ADS"."Feature_3" AS BINARY_DOUBLE) AS "Feature_3", CAST("ADS"."TGT" AS BINARY_DOUBLE) AS "TGT" 
 FROM "IRIS_DATE_TGT" "ADS"), 
@@ -38,29 +38,29 @@ FROM (SELECT full_join_data_sv."KEY" AS "KEY", sum(CAST(full_join_data_sv.dot_pr
 FROM (SELECT kernel_input."KEY" AS "KEY", "SV_data_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000".dual_coeff * tanh(0.25 * (kernel_input."Feature_0" * "SV_data_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000".sv_0 + kernel_input."Feature_1" * "SV_data_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000".sv_1 + kernel_input."Feature_2" * "SV_data_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000".sv_2 + kernel_input."Feature_3" * "SV_data_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000".sv_3) + 0.0) AS dot_prod1 
 FROM kernel_input, "SV_data_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000") full_join_data_sv GROUP BY full_join_data_sv."KEY") t), 
 "kernel_cte_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000" AS 
-(SELECT "kernel_dp_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000"."KEY" AS "KEY", '1789-07-14T00:00:00.000000000' AS "OVO_Class1", '1789-08-14T00:00:00.000000000' AS "OVO_Class2", CASE WHEN (-"kernel_dp_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000".dot_product >= 0.0) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-"kernel_dp_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000".dot_product, 1.0 / (1.0 + exp(least(greatest(-100.0, -(-((-"kernel_dp_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000".dot_product) * 0.3533449328428498 + 0.2185827960234441))), 100.0)))) AS "OVO_Confidence" 
+(SELECT "kernel_dp_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000"."KEY" AS "KEY", '1789-07-14T00:00:00.000000000' AS "OVO_Class1", '1789-08-14T00:00:00.000000000' AS "OVO_Class2", CASE WHEN (-"kernel_dp_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000".dot_product >= 0.0) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-"kernel_dp_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000".dot_product, 1.0 / (1.0 + exp(least(greatest(-100.0, -(-((-"kernel_dp_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000".dot_product) * 0.38504774237545897 + 0.38870926185498067))), 100.0)))) AS "OVO_Conf" 
 FROM "kernel_dp_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000")
- SELECT "KernAgg_B0"."KEY", "KernAgg_B0"."OVO_Class1", "KernAgg_B0"."OVO_Class2", "KernAgg_B0"."OVO_Decision", "KernAgg_B0"."OVO_Confidence" 
-FROM (SELECT "KernAgg_esu_0"."KEY" AS "KEY", "KernAgg_esu_0"."OVO_Class1" AS "OVO_Class1", "KernAgg_esu_0"."OVO_Class2" AS "OVO_Class2", "KernAgg_esu_0"."OVO_Decision" AS "OVO_Decision", "KernAgg_esu_0"."OVO_Confidence" AS "OVO_Confidence" 
-FROM (SELECT "kernel_cte_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000"."KEY" AS "KEY", "kernel_cte_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000"."OVO_Class1" AS "OVO_Class1", "kernel_cte_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000"."OVO_Class2" AS "OVO_Class2", "kernel_cte_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000"."OVO_Decision" AS "OVO_Decision", "kernel_cte_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000"."OVO_Confidence" AS "OVO_Confidence" 
+ SELECT "KernAgg_B0"."KEY", "KernAgg_B0"."OVO_Class1", "KernAgg_B0"."OVO_Class2", "KernAgg_B0"."OVO_Decision", "KernAgg_B0"."OVO_Conf" 
+FROM (SELECT "KernAgg_esu_0"."KEY" AS "KEY", "KernAgg_esu_0"."OVO_Class1" AS "OVO_Class1", "KernAgg_esu_0"."OVO_Class2" AS "OVO_Class2", "KernAgg_esu_0"."OVO_Decision" AS "OVO_Decision", "KernAgg_esu_0"."OVO_Conf" AS "OVO_Conf" 
+FROM (SELECT "kernel_cte_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000"."KEY" AS "KEY", "kernel_cte_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000"."OVO_Class1" AS "OVO_Class1", "kernel_cte_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000"."OVO_Class2" AS "OVO_Class2", "kernel_cte_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000"."OVO_Decision" AS "OVO_Decision", "kernel_cte_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000"."OVO_Conf" AS "OVO_Conf" 
 FROM "kernel_cte_1789-07-14T00:00:00.000000000_1789-08-14T00:00:00.000000000") "KernAgg_esu_0") "KernAgg_B0") "U"
 
--- Code For temporary table _CODEGEN_ARC2YW_KERNAGG_B1 part 1. Create 
+-- Code For temporary table MP_20180602_X7I_KERNAGG_B1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "_CODEGEN_ARC2YW_KERNAGG_B1" (
+CREATE GLOBAL TEMPORARY TABLE "MP_20180602_X7I_KERNAGG_B1" (
 	"KEY" NUMBER(19), 
 	"OVO_Class1" VARCHAR2, 
 	"OVO_Class2" VARCHAR2, 
 	"OVO_Decision" NUMBER(19), 
-	"OVO_Confidence" BINARY_DOUBLE
+	"OVO_Conf" BINARY_DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table _CODEGEN_ARC2YW_KERNAGG_B1 part 2. Populate
+-- Code For temporary table MP_20180602_X7I_KERNAGG_B1 part 2. Populate
 
-INSERT INTO "_CODEGEN_ARC2YW_KERNAGG_B1" ("KEY", "OVO_Class1", "OVO_Class2", "OVO_Decision", "OVO_Confidence") SELECT "U"."KEY", "U"."OVO_Class1", "U"."OVO_Class2", "U"."OVO_Decision", "U"."OVO_Confidence" 
+INSERT INTO "MP_20180602_X7I_KERNAGG_B1" ("KEY", "OVO_Class1", "OVO_Class2", "OVO_Decision", "OVO_Conf") SELECT "U"."KEY", "U"."OVO_Class1", "U"."OVO_Class2", "U"."OVO_Decision", "U"."OVO_Conf" 
 FROM (WITH kernel_input AS 
 (SELECT "ADS"."KEY" AS "KEY", CAST("ADS"."Feature_0" AS BINARY_DOUBLE) AS "Feature_0", CAST("ADS"."Feature_1" AS BINARY_DOUBLE) AS "Feature_1", CAST("ADS"."Feature_2" AS BINARY_DOUBLE) AS "Feature_2", CAST("ADS"."Feature_3" AS BINARY_DOUBLE) AS "Feature_3", CAST("ADS"."TGT" AS BINARY_DOUBLE) AS "TGT" 
 FROM "IRIS_DATE_TGT" "ADS"), 
@@ -73,29 +73,29 @@ FROM (SELECT full_join_data_sv_1."KEY" AS "KEY", sum(CAST(full_join_data_sv_1.do
 FROM (SELECT kernel_input."KEY" AS "KEY", "SV_data_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000".dual_coeff * tanh(0.25 * (kernel_input."Feature_0" * "SV_data_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000".sv_0 + kernel_input."Feature_1" * "SV_data_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000".sv_1 + kernel_input."Feature_2" * "SV_data_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000".sv_2 + kernel_input."Feature_3" * "SV_data_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000".sv_3) + 0.0) AS dot_prod1 
 FROM kernel_input, "SV_data_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000") full_join_data_sv_1 GROUP BY full_join_data_sv_1."KEY") t_1), 
 "kernel_cte_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000" AS 
-(SELECT "kernel_dp_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."KEY" AS "KEY", '1789-07-14T00:00:00.000000000' AS "OVO_Class1", '1789-09-14T00:00:00.000000000' AS "OVO_Class2", CASE WHEN (-"kernel_dp_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000".dot_product >= 0.0) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-"kernel_dp_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000".dot_product, 1.0 / (1.0 + exp(least(greatest(-100.0, -(-((-"kernel_dp_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000".dot_product) * 6592173.047563261 + 6592174.645899224))), 100.0)))) AS "OVO_Confidence" 
+(SELECT "kernel_dp_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."KEY" AS "KEY", '1789-07-14T00:00:00.000000000' AS "OVO_Class1", '1789-09-14T00:00:00.000000000' AS "OVO_Class2", CASE WHEN (-"kernel_dp_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000".dot_product >= 0.0) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-"kernel_dp_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000".dot_product, 1.0 / (1.0 + exp(least(greatest(-100.0, -(-((-"kernel_dp_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000".dot_product) * 0.7480237800820363 + 0.7548602743273524))), 100.0)))) AS "OVO_Conf" 
 FROM "kernel_dp_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000")
- SELECT "KernAgg_B1"."KEY", "KernAgg_B1"."OVO_Class1", "KernAgg_B1"."OVO_Class2", "KernAgg_B1"."OVO_Decision", "KernAgg_B1"."OVO_Confidence" 
-FROM (SELECT "KernAgg_esu_1"."KEY" AS "KEY", "KernAgg_esu_1"."OVO_Class1" AS "OVO_Class1", "KernAgg_esu_1"."OVO_Class2" AS "OVO_Class2", "KernAgg_esu_1"."OVO_Decision" AS "OVO_Decision", "KernAgg_esu_1"."OVO_Confidence" AS "OVO_Confidence" 
-FROM (SELECT "kernel_cte_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."KEY" AS "KEY", "kernel_cte_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."OVO_Class1" AS "OVO_Class1", "kernel_cte_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."OVO_Class2" AS "OVO_Class2", "kernel_cte_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."OVO_Decision" AS "OVO_Decision", "kernel_cte_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."OVO_Confidence" AS "OVO_Confidence" 
+ SELECT "KernAgg_B1"."KEY", "KernAgg_B1"."OVO_Class1", "KernAgg_B1"."OVO_Class2", "KernAgg_B1"."OVO_Decision", "KernAgg_B1"."OVO_Conf" 
+FROM (SELECT "KernAgg_esu_1"."KEY" AS "KEY", "KernAgg_esu_1"."OVO_Class1" AS "OVO_Class1", "KernAgg_esu_1"."OVO_Class2" AS "OVO_Class2", "KernAgg_esu_1"."OVO_Decision" AS "OVO_Decision", "KernAgg_esu_1"."OVO_Conf" AS "OVO_Conf" 
+FROM (SELECT "kernel_cte_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."KEY" AS "KEY", "kernel_cte_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."OVO_Class1" AS "OVO_Class1", "kernel_cte_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."OVO_Class2" AS "OVO_Class2", "kernel_cte_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."OVO_Decision" AS "OVO_Decision", "kernel_cte_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."OVO_Conf" AS "OVO_Conf" 
 FROM "kernel_cte_1789-07-14T00:00:00.000000000_1789-09-14T00:00:00.000000000") "KernAgg_esu_1") "KernAgg_B1") "U"
 
--- Code For temporary table _CODEGEN_SQWJOO_KERNAGG_B2 part 1. Create 
+-- Code For temporary table MP_20180602_7UY_KERNAGG_B2 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "_CODEGEN_SQWJOO_KERNAGG_B2" (
+CREATE GLOBAL TEMPORARY TABLE "MP_20180602_7UY_KERNAGG_B2" (
 	"KEY" NUMBER(19), 
 	"OVO_Class1" VARCHAR2, 
 	"OVO_Class2" VARCHAR2, 
 	"OVO_Decision" NUMBER(19), 
-	"OVO_Confidence" BINARY_DOUBLE
+	"OVO_Conf" BINARY_DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table _CODEGEN_SQWJOO_KERNAGG_B2 part 2. Populate
+-- Code For temporary table MP_20180602_7UY_KERNAGG_B2 part 2. Populate
 
-INSERT INTO "_CODEGEN_SQWJOO_KERNAGG_B2" ("KEY", "OVO_Class1", "OVO_Class2", "OVO_Decision", "OVO_Confidence") SELECT "U"."KEY", "U"."OVO_Class1", "U"."OVO_Class2", "U"."OVO_Decision", "U"."OVO_Confidence" 
+INSERT INTO "MP_20180602_7UY_KERNAGG_B2" ("KEY", "OVO_Class1", "OVO_Class2", "OVO_Decision", "OVO_Conf") SELECT "U"."KEY", "U"."OVO_Class1", "U"."OVO_Class2", "U"."OVO_Decision", "U"."OVO_Conf" 
 FROM (WITH kernel_input AS 
 (SELECT "ADS"."KEY" AS "KEY", CAST("ADS"."Feature_0" AS BINARY_DOUBLE) AS "Feature_0", CAST("ADS"."Feature_1" AS BINARY_DOUBLE) AS "Feature_1", CAST("ADS"."Feature_2" AS BINARY_DOUBLE) AS "Feature_2", CAST("ADS"."Feature_3" AS BINARY_DOUBLE) AS "Feature_3", CAST("ADS"."TGT" AS BINARY_DOUBLE) AS "TGT" 
 FROM "IRIS_DATE_TGT" "ADS"), 
@@ -108,17 +108,17 @@ FROM (SELECT full_join_data_sv_2."KEY" AS "KEY", sum(CAST(full_join_data_sv_2.do
 FROM (SELECT kernel_input."KEY" AS "KEY", "SV_data_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000".dual_coeff * tanh(0.25 * (kernel_input."Feature_0" * "SV_data_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000".sv_0 + kernel_input."Feature_1" * "SV_data_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000".sv_1 + kernel_input."Feature_2" * "SV_data_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000".sv_2 + kernel_input."Feature_3" * "SV_data_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000".sv_3) + 0.0) AS dot_prod1 
 FROM kernel_input, "SV_data_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000") full_join_data_sv_2 GROUP BY full_join_data_sv_2."KEY") t_2), 
 "kernel_cte_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000" AS 
-(SELECT "kernel_dp_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."KEY" AS "KEY", '1789-08-14T00:00:00.000000000' AS "OVO_Class1", '1789-09-14T00:00:00.000000000' AS "OVO_Class2", CASE WHEN (-"kernel_dp_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000".dot_product >= 0.0) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-"kernel_dp_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000".dot_product, 1.0 / (1.0 + exp(least(greatest(-100.0, -(-((-"kernel_dp_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000".dot_product) * 0.5908464678828631 + 0.4514122823419919))), 100.0)))) AS "OVO_Confidence" 
+(SELECT "kernel_dp_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."KEY" AS "KEY", '1789-08-14T00:00:00.000000000' AS "OVO_Class1", '1789-09-14T00:00:00.000000000' AS "OVO_Class2", CASE WHEN (-"kernel_dp_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000".dot_product >= 0.0) THEN 1 ELSE 0 END AS "OVO_Decision", coalesce(-"kernel_dp_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000".dot_product, 1.0 / (1.0 + exp(least(greatest(-100.0, -(-((-"kernel_dp_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000".dot_product) * 0.40621419401467246 + 0.23299143241470452))), 100.0)))) AS "OVO_Conf" 
 FROM "kernel_dp_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000")
- SELECT "KernAgg_B2"."KEY", "KernAgg_B2"."OVO_Class1", "KernAgg_B2"."OVO_Class2", "KernAgg_B2"."OVO_Decision", "KernAgg_B2"."OVO_Confidence" 
-FROM (SELECT "KernAgg_esu_2"."KEY" AS "KEY", "KernAgg_esu_2"."OVO_Class1" AS "OVO_Class1", "KernAgg_esu_2"."OVO_Class2" AS "OVO_Class2", "KernAgg_esu_2"."OVO_Decision" AS "OVO_Decision", "KernAgg_esu_2"."OVO_Confidence" AS "OVO_Confidence" 
-FROM (SELECT "kernel_cte_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."KEY" AS "KEY", "kernel_cte_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."OVO_Class1" AS "OVO_Class1", "kernel_cte_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."OVO_Class2" AS "OVO_Class2", "kernel_cte_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."OVO_Decision" AS "OVO_Decision", "kernel_cte_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."OVO_Confidence" AS "OVO_Confidence" 
+ SELECT "KernAgg_B2"."KEY", "KernAgg_B2"."OVO_Class1", "KernAgg_B2"."OVO_Class2", "KernAgg_B2"."OVO_Decision", "KernAgg_B2"."OVO_Conf" 
+FROM (SELECT "KernAgg_esu_2"."KEY" AS "KEY", "KernAgg_esu_2"."OVO_Class1" AS "OVO_Class1", "KernAgg_esu_2"."OVO_Class2" AS "OVO_Class2", "KernAgg_esu_2"."OVO_Decision" AS "OVO_Decision", "KernAgg_esu_2"."OVO_Conf" AS "OVO_Conf" 
+FROM (SELECT "kernel_cte_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."KEY" AS "KEY", "kernel_cte_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."OVO_Class1" AS "OVO_Class1", "kernel_cte_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."OVO_Class2" AS "OVO_Class2", "kernel_cte_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."OVO_Decision" AS "OVO_Decision", "kernel_cte_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000"."OVO_Conf" AS "OVO_Conf" 
 FROM "kernel_cte_1789-08-14T00:00:00.000000000_1789-09-14T00:00:00.000000000") "KernAgg_esu_2") "KernAgg_B2") "U"
 
--- Code For temporary table 516_CODEGEN_XLDKQ2_KERNAGG part 1. Create 
+-- Code For temporary table P_20180602_0JM_KERNAGG_AGG part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "516_CODEGEN_XLDKQ2_KERNAGG" (
+CREATE GLOBAL TEMPORARY TABLE "P_20180602_0JM_KERNAGG_AGG" (
 	"KEY" NUMBER(19), 
 	"OVO_Vote_1789-07-14T00:00:00.000000000" NUMBER(19), 
 	"OVO_SumConfidence_1789-07-14T00:00:00.000000000" BINARY_DOUBLE, 
@@ -135,18 +135,18 @@ CREATE GLOBAL TEMPORARY TABLE "516_CODEGEN_XLDKQ2_KERNAGG" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table 516_CODEGEN_XLDKQ2_KERNAGG part 2. Populate
+-- Code For temporary table P_20180602_0JM_KERNAGG_AGG part 2. Populate
 
-INSERT INTO "516_CODEGEN_XLDKQ2_KERNAGG" ("KEY", "OVO_Vote_1789-07-14T00:00:00.000000000", "OVO_SumConfidence_1789-07-14T00:00:00.000000000", "OVO_Vote_1789-08-14T00:00:00.000000000", "OVO_SumConfidence_1789-08-14T00:00:00.000000000", "OVO_Vote_1789-09-14T00:00:00.000000000", "OVO_SumConfidence_1789-09-14T00:00:00.000000000", max_abs_confidence, "OVO_Scale", "Score_1789-07-14T00:00:00.000000000", "Score_1789-08-14T00:00:00.000000000", "Score_1789-09-14T00:00:00.000000000") SELECT "U"."KEY", "U"."OVO_Vote_1789-07-14T00:0_1", "U"."OVO_SumConfidence_1789-0_2", "U"."OVO_Vote_1789-08-14T00:0_3", "U"."OVO_SumConfidence_1789-0_4", "U"."OVO_Vote_1789-09-14T00:0_5", "U"."OVO_SumConfidence_1789-0_6", "U".max_abs_confidence, "U"."OVO_Scale", "U"."Score_1789-07-14T00:00:00.000000000", "U"."Score_1789-08-14T00:00:00.000000000", "U"."Score_1789-09-14T00:00:00.000000000" 
+INSERT INTO "P_20180602_0JM_KERNAGG_AGG" ("KEY", "OVO_Vote_1789-07-14T00:00:00.000000000", "OVO_SumConfidence_1789-07-14T00:00:00.000000000", "OVO_Vote_1789-08-14T00:00:00.000000000", "OVO_SumConfidence_1789-08-14T00:00:00.000000000", "OVO_Vote_1789-09-14T00:00:00.000000000", "OVO_SumConfidence_1789-09-14T00:00:00.000000000", max_abs_confidence, "OVO_Scale", "Score_1789-07-14T00:00:00.000000000", "Score_1789-08-14T00:00:00.000000000", "Score_1789-09-14T00:00:00.000000000") SELECT "U"."KEY", "U"."OVO_Vote_1789-07-14T00:0_1", "U"."OVO_SumConfidence_1789-0_2", "U"."OVO_Vote_1789-08-14T00:0_3", "U"."OVO_SumConfidence_1789-0_4", "U"."OVO_Vote_1789-09-14T00:0_5", "U"."OVO_SumConfidence_1789-0_6", "U".max_abs_confidence, "U"."OVO_Scale", "U"."Score_1789-07-14T00:00:00.000000000", "U"."Score_1789-08-14T00:00:00.000000000", "U"."Score_1789-09-14T00:00:00.000000000" 
 FROM (WITH "KernAgg_Union" AS 
-(SELECT "KernAgg_EnsembleUnion"."KEY" AS "KEY", "KernAgg_EnsembleUnion"."OVO_Class1" AS "OVO_Class1", "KernAgg_EnsembleUnion"."OVO_Class2" AS "OVO_Class2", "KernAgg_EnsembleUnion"."OVO_Decision" AS "OVO_Decision", "KernAgg_EnsembleUnion"."OVO_Confidence" AS "OVO_Confidence" 
-FROM (SELECT "KernAgg_B0"."KEY" AS "KEY", "KernAgg_B0"."OVO_Class1" AS "OVO_Class1", "KernAgg_B0"."OVO_Class2" AS "OVO_Class2", "KernAgg_B0"."OVO_Decision" AS "OVO_Decision", "KernAgg_B0"."OVO_Confidence" AS "OVO_Confidence" 
-FROM "_CODEGEN_1Y270A_KERNAGG_B0" "KernAgg_B0" UNION ALL SELECT "KernAgg_B1"."KEY" AS "KEY", "KernAgg_B1"."OVO_Class1" AS "OVO_Class1", "KernAgg_B1"."OVO_Class2" AS "OVO_Class2", "KernAgg_B1"."OVO_Decision" AS "OVO_Decision", "KernAgg_B1"."OVO_Confidence" AS "OVO_Confidence" 
-FROM "_CODEGEN_ARC2YW_KERNAGG_B1" "KernAgg_B1" UNION ALL SELECT "KernAgg_B2"."KEY" AS "KEY", "KernAgg_B2"."OVO_Class1" AS "OVO_Class1", "KernAgg_B2"."OVO_Class2" AS "OVO_Class2", "KernAgg_B2"."OVO_Decision" AS "OVO_Decision", "KernAgg_B2"."OVO_Confidence" AS "OVO_Confidence" 
-FROM "_CODEGEN_SQWJOO_KERNAGG_B2" "KernAgg_B2") "KernAgg_EnsembleUnion"), 
+(SELECT "KernAgg_EnsembleUnion"."KEY" AS "KEY", "KernAgg_EnsembleUnion"."OVO_Class1" AS "OVO_Class1", "KernAgg_EnsembleUnion"."OVO_Class2" AS "OVO_Class2", "KernAgg_EnsembleUnion"."OVO_Decision" AS "OVO_Decision", "KernAgg_EnsembleUnion"."OVO_Conf" AS "OVO_Conf" 
+FROM (SELECT "KernAgg_B0"."KEY" AS "KEY", "KernAgg_B0"."OVO_Class1" AS "OVO_Class1", "KernAgg_B0"."OVO_Class2" AS "OVO_Class2", "KernAgg_B0"."OVO_Decision" AS "OVO_Decision", "KernAgg_B0"."OVO_Conf" AS "OVO_Conf" 
+FROM "MP_20180602_8PK_KERNAGG_B0" "KernAgg_B0" UNION ALL SELECT "KernAgg_B1"."KEY" AS "KEY", "KernAgg_B1"."OVO_Class1" AS "OVO_Class1", "KernAgg_B1"."OVO_Class2" AS "OVO_Class2", "KernAgg_B1"."OVO_Decision" AS "OVO_Decision", "KernAgg_B1"."OVO_Conf" AS "OVO_Conf" 
+FROM "MP_20180602_X7I_KERNAGG_B1" "KernAgg_B1" UNION ALL SELECT "KernAgg_B2"."KEY" AS "KEY", "KernAgg_B2"."OVO_Class1" AS "OVO_Class1", "KernAgg_B2"."OVO_Class2" AS "OVO_Class2", "KernAgg_B2"."OVO_Decision" AS "OVO_Decision", "KernAgg_B2"."OVO_Conf" AS "OVO_Conf" 
+FROM "MP_20180602_7UY_KERNAGG_B2" "KernAgg_B2") "KernAgg_EnsembleUnion"), 
 "OVO_Votes" AS 
 (SELECT "Votes_Sel"."KEY" AS "KEY", "Votes_Sel"."OVO_Vote_1789-07-14T00:00:00.000000000" AS "OVO_Vote_1789-07-14T00:0_1", "Votes_Sel"."OVO_SumConfidence_1789-07-14T00:00:00.000000000" AS "OVO_SumConfidence_1789-0_2", "Votes_Sel"."OVO_Vote_1789-08-14T00:00:00.000000000" AS "OVO_Vote_1789-08-14T00:0_3", "Votes_Sel"."OVO_SumConfidence_1789-08-14T00:00:00.000000000" AS "OVO_SumConfidence_1789-0_4", "Votes_Sel"."OVO_Vote_1789-09-14T00:00:00.000000000" AS "OVO_Vote_1789-09-14T00:0_5", "Votes_Sel"."OVO_SumConfidence_1789-09-14T00:00:00.000000000" AS "OVO_SumConfidence_1789-0_6" 
-FROM (SELECT "KernAgg_Union"."KEY" AS "KEY", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = '1789-07-14T00:00:00.000000000' OR "KernAgg_Union"."OVO_Class2" = '1789-07-14T00:00:00.000000000') THEN 1 ELSE 0 END * (CASE WHEN ("KernAgg_Union"."OVO_Decision" = 0 AND "KernAgg_Union"."OVO_Class1" = '1789-07-14T00:00:00.000000000') THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Decision" = 1 AND "KernAgg_Union"."OVO_Class2" = '1789-07-14T00:00:00.000000000') THEN 1 ELSE 0 END)) AS "OVO_Vote_1789-07-14T00:00:00.000000000", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = '1789-07-14T00:00:00.000000000' OR "KernAgg_Union"."OVO_Class2" = '1789-07-14T00:00:00.000000000') THEN 1 ELSE 0 END * "KernAgg_Union"."OVO_Confidence" * (-CASE WHEN ("KernAgg_Union"."OVO_Class1" = '1789-07-14T00:00:00.000000000') THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Class2" = '1789-07-14T00:00:00.000000000') THEN 1 ELSE 0 END)) AS "OVO_SumConfidence_1789-07-14T00:00:00.000000000", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = '1789-08-14T00:00:00.000000000' OR "KernAgg_Union"."OVO_Class2" = '1789-08-14T00:00:00.000000000') THEN 1 ELSE 0 END * (CASE WHEN ("KernAgg_Union"."OVO_Decision" = 0 AND "KernAgg_Union"."OVO_Class1" = '1789-08-14T00:00:00.000000000') THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Decision" = 1 AND "KernAgg_Union"."OVO_Class2" = '1789-08-14T00:00:00.000000000') THEN 1 ELSE 0 END)) AS "OVO_Vote_1789-08-14T00:00:00.000000000", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = '1789-08-14T00:00:00.000000000' OR "KernAgg_Union"."OVO_Class2" = '1789-08-14T00:00:00.000000000') THEN 1 ELSE 0 END * "KernAgg_Union"."OVO_Confidence" * (-CASE WHEN ("KernAgg_Union"."OVO_Class1" = '1789-08-14T00:00:00.000000000') THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Class2" = '1789-08-14T00:00:00.000000000') THEN 1 ELSE 0 END)) AS "OVO_SumConfidence_1789-08-14T00:00:00.000000000", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = '1789-09-14T00:00:00.000000000' OR "KernAgg_Union"."OVO_Class2" = '1789-09-14T00:00:00.000000000') THEN 1 ELSE 0 END * (CASE WHEN ("KernAgg_Union"."OVO_Decision" = 0 AND "KernAgg_Union"."OVO_Class1" = '1789-09-14T00:00:00.000000000') THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Decision" = 1 AND "KernAgg_Union"."OVO_Class2" = '1789-09-14T00:00:00.000000000') THEN 1 ELSE 0 END)) AS "OVO_Vote_1789-09-14T00:00:00.000000000", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = '1789-09-14T00:00:00.000000000' OR "KernAgg_Union"."OVO_Class2" = '1789-09-14T00:00:00.000000000') THEN 1 ELSE 0 END * "KernAgg_Union"."OVO_Confidence" * (-CASE WHEN ("KernAgg_Union"."OVO_Class1" = '1789-09-14T00:00:00.000000000') THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Class2" = '1789-09-14T00:00:00.000000000') THEN 1 ELSE 0 END)) AS "OVO_SumConfidence_1789-09-14T00:00:00.000000000" 
+FROM (SELECT "KernAgg_Union"."KEY" AS "KEY", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = '1789-07-14T00:00:00.000000000' OR "KernAgg_Union"."OVO_Class2" = '1789-07-14T00:00:00.000000000') THEN 1 ELSE 0 END * (CASE WHEN ("KernAgg_Union"."OVO_Decision" = 0 AND "KernAgg_Union"."OVO_Class1" = '1789-07-14T00:00:00.000000000') THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Decision" = 1 AND "KernAgg_Union"."OVO_Class2" = '1789-07-14T00:00:00.000000000') THEN 1 ELSE 0 END)) AS "OVO_Vote_1789-07-14T00:00:00.000000000", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = '1789-07-14T00:00:00.000000000' OR "KernAgg_Union"."OVO_Class2" = '1789-07-14T00:00:00.000000000') THEN 1 ELSE 0 END * "KernAgg_Union"."OVO_Conf" * (-CASE WHEN ("KernAgg_Union"."OVO_Class1" = '1789-07-14T00:00:00.000000000') THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Class2" = '1789-07-14T00:00:00.000000000') THEN 1 ELSE 0 END)) AS "OVO_SumConfidence_1789-07-14T00:00:00.000000000", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = '1789-08-14T00:00:00.000000000' OR "KernAgg_Union"."OVO_Class2" = '1789-08-14T00:00:00.000000000') THEN 1 ELSE 0 END * (CASE WHEN ("KernAgg_Union"."OVO_Decision" = 0 AND "KernAgg_Union"."OVO_Class1" = '1789-08-14T00:00:00.000000000') THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Decision" = 1 AND "KernAgg_Union"."OVO_Class2" = '1789-08-14T00:00:00.000000000') THEN 1 ELSE 0 END)) AS "OVO_Vote_1789-08-14T00:00:00.000000000", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = '1789-08-14T00:00:00.000000000' OR "KernAgg_Union"."OVO_Class2" = '1789-08-14T00:00:00.000000000') THEN 1 ELSE 0 END * "KernAgg_Union"."OVO_Conf" * (-CASE WHEN ("KernAgg_Union"."OVO_Class1" = '1789-08-14T00:00:00.000000000') THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Class2" = '1789-08-14T00:00:00.000000000') THEN 1 ELSE 0 END)) AS "OVO_SumConfidence_1789-08-14T00:00:00.000000000", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = '1789-09-14T00:00:00.000000000' OR "KernAgg_Union"."OVO_Class2" = '1789-09-14T00:00:00.000000000') THEN 1 ELSE 0 END * (CASE WHEN ("KernAgg_Union"."OVO_Decision" = 0 AND "KernAgg_Union"."OVO_Class1" = '1789-09-14T00:00:00.000000000') THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Decision" = 1 AND "KernAgg_Union"."OVO_Class2" = '1789-09-14T00:00:00.000000000') THEN 1 ELSE 0 END)) AS "OVO_Vote_1789-09-14T00:00:00.000000000", sum(CASE WHEN ("KernAgg_Union"."OVO_Class1" = '1789-09-14T00:00:00.000000000' OR "KernAgg_Union"."OVO_Class2" = '1789-09-14T00:00:00.000000000') THEN 1 ELSE 0 END * "KernAgg_Union"."OVO_Conf" * (-CASE WHEN ("KernAgg_Union"."OVO_Class1" = '1789-09-14T00:00:00.000000000') THEN 1 ELSE 0 END + CASE WHEN ("KernAgg_Union"."OVO_Class2" = '1789-09-14T00:00:00.000000000') THEN 1 ELSE 0 END)) AS "OVO_SumConfidence_1789-09-14T00:00:00.000000000" 
 FROM "KernAgg_Union" GROUP BY "KernAgg_Union"."KEY") "Votes_Sel"), 
 "OVO_SumConf_CTE" AS 
 (SELECT "Values"."KEY" AS "KEY", CAST("Values"."OVO_SumConfidence" AS BINARY_DOUBLE) AS "OVO_SumConfidence" 
@@ -160,15 +160,15 @@ FROM "OVO_SumConf_CTE"),
 "OVO_Votes_WithScale" AS 
 (SELECT "OVO_Votes"."KEY" AS "KEY", "OVO_Votes"."OVO_Vote_1789-07-14T00:0_1" AS "OVO_Vote_1789-07-14T00:0_1", "OVO_Votes"."OVO_SumConfidence_1789-0_2" AS "OVO_SumConfidence_1789-0_2", "OVO_Votes"."OVO_Vote_1789-08-14T00:0_3" AS "OVO_Vote_1789-08-14T00:0_3", "OVO_Votes"."OVO_SumConfidence_1789-0_4" AS "OVO_SumConfidence_1789-0_4", "OVO_Votes"."OVO_Vote_1789-09-14T00:0_5" AS "OVO_Vote_1789-09-14T00:0_5", "OVO_Votes"."OVO_SumConfidence_1789-0_6" AS "OVO_SumConfidence_1789-0_6", CAST(CASE WHEN (abs("MinMaxConf"."OVO_min_conf") >= abs("MinMaxConf"."OVO_max_conf")) THEN abs("MinMaxConf"."OVO_min_conf") ELSE abs("MinMaxConf"."OVO_max_conf") END AS BINARY_DOUBLE) AS max_abs_confidence, CASE WHEN ("MinMaxConf"."OVO_max_conf" - "MinMaxConf"."OVO_min_conf" <= 0.0) THEN 0.0 ELSE 0.4999999999999998 / CAST(CASE WHEN (abs("MinMaxConf"."OVO_min_conf") >= abs("MinMaxConf"."OVO_max_conf")) THEN abs("MinMaxConf"."OVO_min_conf") ELSE abs("MinMaxConf"."OVO_max_conf") END AS BINARY_DOUBLE) END AS "OVO_Scale" 
 FROM "OVO_Votes", "MinMaxConf")
- SELECT "KernAgg"."KEY", "KernAgg"."OVO_Vote_1789-07-14T00:0_1", "KernAgg"."OVO_SumConfidence_1789-0_2", "KernAgg"."OVO_Vote_1789-08-14T00:0_3", "KernAgg"."OVO_SumConfidence_1789-0_4", "KernAgg"."OVO_Vote_1789-09-14T00:0_5", "KernAgg"."OVO_SumConfidence_1789-0_6", "KernAgg".max_abs_confidence, "KernAgg"."OVO_Scale", "KernAgg"."Score_1789-07-14T00:00:00.000000000", "KernAgg"."Score_1789-08-14T00:00:00.000000000", "KernAgg"."Score_1789-09-14T00:00:00.000000000" 
+ SELECT "KernAgg_agg"."KEY", "KernAgg_agg"."OVO_Vote_1789-07-14T00:0_1", "KernAgg_agg"."OVO_SumConfidence_1789-0_2", "KernAgg_agg"."OVO_Vote_1789-08-14T00:0_3", "KernAgg_agg"."OVO_SumConfidence_1789-0_4", "KernAgg_agg"."OVO_Vote_1789-09-14T00:0_5", "KernAgg_agg"."OVO_SumConfidence_1789-0_6", "KernAgg_agg".max_abs_confidence, "KernAgg_agg"."OVO_Scale", "KernAgg_agg"."Score_1789-07-14T00:00:00.000000000", "KernAgg_agg"."Score_1789-08-14T00:00:00.000000000", "KernAgg_agg"."Score_1789-09-14T00:00:00.000000000" 
 FROM (SELECT "OVO_Votes_WithScale"."KEY" AS "KEY", "OVO_Votes_WithScale"."OVO_Vote_1789-07-14T00:0_1" AS "OVO_Vote_1789-07-14T00:0_1", "OVO_Votes_WithScale"."OVO_SumConfidence_1789-0_2" AS "OVO_SumConfidence_1789-0_2", "OVO_Votes_WithScale"."OVO_Vote_1789-08-14T00:0_3" AS "OVO_Vote_1789-08-14T00:0_3", "OVO_Votes_WithScale"."OVO_SumConfidence_1789-0_4" AS "OVO_SumConfidence_1789-0_4", "OVO_Votes_WithScale"."OVO_Vote_1789-09-14T00:0_5" AS "OVO_Vote_1789-09-14T00:0_5", "OVO_Votes_WithScale"."OVO_SumConfidence_1789-0_6" AS "OVO_SumConfidence_1789-0_6", "OVO_Votes_WithScale".max_abs_confidence AS max_abs_confidence, "OVO_Votes_WithScale"."OVO_Scale" AS "OVO_Scale", "OVO_Votes_WithScale"."OVO_Vote_1789-07-14T00:0_1" + "OVO_Votes_WithScale"."OVO_Scale" * "OVO_Votes_WithScale"."OVO_SumConfidence_1789-0_2" AS "Score_1789-07-14T00:00:00.000000000", "OVO_Votes_WithScale"."OVO_Vote_1789-08-14T00:0_3" + "OVO_Votes_WithScale"."OVO_Scale" * "OVO_Votes_WithScale"."OVO_SumConfidence_1789-0_4" AS "Score_1789-08-14T00:00:00.000000000", "OVO_Votes_WithScale"."OVO_Vote_1789-09-14T00:0_5" + "OVO_Votes_WithScale"."OVO_Scale" * "OVO_Votes_WithScale"."OVO_SumConfidence_1789-0_6" AS "Score_1789-09-14T00:00:00.000000000" 
-FROM "OVO_Votes_WithScale") "KernAgg") "U"
+FROM "OVO_Votes_WithScale") "KernAgg_agg") "U"
 
 -- Model deployment code
 
 WITH orig_cte AS 
-(SELECT "KernAgg"."KEY" AS "KEY", "KernAgg"."Score_1789-07-14T00:00:00.000000000" AS "Score_1789-07-14T00:00:00.000000000", "KernAgg"."Score_1789-08-14T00:00:00.000000000" AS "Score_1789-08-14T00:00:00.000000000", "KernAgg"."Score_1789-09-14T00:00:00.000000000" AS "Score_1789-09-14T00:00:00.000000000", CAST(NULL AS BINARY_DOUBLE) AS "Proba_1789-07-14T00:00:00.000000000", CAST(NULL AS BINARY_DOUBLE) AS "Proba_1789-08-14T00:00:00.000000000", CAST(NULL AS BINARY_DOUBLE) AS "Proba_1789-09-14T00:00:00.000000000", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_1789-07-14T00:00:00.000000000", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_1789-08-14T00:00:00.000000000", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_1789-09-14T00:00:00.000000000", CAST(NULL AS NUMBER(19)) AS "Decision", CAST(NULL AS BINARY_DOUBLE) AS "DecisionProba" 
-FROM "516_CODEGEN_XLDKQ2_KERNAGG" "KernAgg"), 
+(SELECT "KernAgg_agg"."KEY" AS "KEY", "KernAgg_agg"."Score_1789-07-14T00:00:00.000000000" AS "Score_1789-07-14T00:00:00.000000000", "KernAgg_agg"."Score_1789-08-14T00:00:00.000000000" AS "Score_1789-08-14T00:00:00.000000000", "KernAgg_agg"."Score_1789-09-14T00:00:00.000000000" AS "Score_1789-09-14T00:00:00.000000000", CAST(NULL AS BINARY_DOUBLE) AS "Proba_1789-07-14T00:00:00.000000000", CAST(NULL AS BINARY_DOUBLE) AS "Proba_1789-08-14T00:00:00.000000000", CAST(NULL AS BINARY_DOUBLE) AS "Proba_1789-09-14T00:00:00.000000000", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_1789-07-14T00:00:00.000000000", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_1789-08-14T00:00:00.000000000", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_1789-09-14T00:00:00.000000000", CAST(NULL AS NUMBER(19)) AS "Decision", CAST(NULL AS BINARY_DOUBLE) AS "DecisionProba" 
+FROM "P_20180602_0JM_KERNAGG_AGG" "KernAgg_agg"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", '1789-07-14T00:00:00.000000000' AS class, orig_cte."LogProba_1789-07-14T00:00:00.000000000" AS "LogProba", orig_cte."Proba_1789-07-14T00:00:00.000000000" AS "Proba", orig_cte."Score_1789-07-14T00:00:00.000000000" AS "Score" 

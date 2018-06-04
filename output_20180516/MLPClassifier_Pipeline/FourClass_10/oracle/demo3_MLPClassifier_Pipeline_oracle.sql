@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table DEGEN_CT87GO_ADS_IMP_1_OUT part 1. Create 
+-- Code For temporary table 20180602_2D4_ADS_IMP_1_OUT part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "DEGEN_CT87GO_ADS_IMP_1_OUT" (
+CREATE GLOBAL TEMPORARY TABLE "20180602_2D4_ADS_IMP_1_OUT" (
 	"KEY" NUMBER(19), 
 	impter_2 BINARY_DOUBLE, 
 	impter_3 BINARY_DOUBLE, 
@@ -29,17 +29,17 @@ CREATE GLOBAL TEMPORARY TABLE "DEGEN_CT87GO_ADS_IMP_1_OUT" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table DEGEN_CT87GO_ADS_IMP_1_OUT part 2. Populate
+-- Code For temporary table 20180602_2D4_ADS_IMP_1_OUT part 2. Populate
 
-INSERT INTO "DEGEN_CT87GO_ADS_IMP_1_OUT" ("KEY", impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT "U"."KEY", "U".impter_2, "U".impter_3, "U".impter_4, "U".impter_5, "U".impter_6, "U".impter_7, "U".impter_8, "U".impter_9, "U".impter_10, "U".impter_11 
+INSERT INTO "20180602_2D4_ADS_IMP_1_OUT" ("KEY", impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT "U"."KEY", "U".impter_2, "U".impter_3, "U".impter_4, "U".impter_5, "U".impter_6, "U".impter_7, "U".impter_8, "U".impter_9, "U".impter_10, "U".impter_11 
 FROM (SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".impter_2, "ADS_imp_1_OUT".impter_3, "ADS_imp_1_OUT".impter_4, "ADS_imp_1_OUT".impter_5, "ADS_imp_1_OUT".impter_6, "ADS_imp_1_OUT".impter_7, "ADS_imp_1_OUT".impter_8, "ADS_imp_1_OUT".impter_9, "ADS_imp_1_OUT".impter_10, "ADS_imp_1_OUT".impter_11 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN -0.003903374463034205 ELSE "ADS"."Feature_0" END AS impter_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 0.6152232215702322 ELSE "ADS"."Feature_1" END AS impter_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 0.042796236914291665 ELSE "ADS"."Feature_2" END AS impter_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 0.7709819558904074 ELSE "ADS"."Feature_3" END AS impter_5, CASE WHEN ("ADS"."Feature_4" IS NULL) THEN -0.43300733624893334 ELSE "ADS"."Feature_4" END AS impter_6, CASE WHEN ("ADS"."Feature_5" IS NULL) THEN -0.0424956965794036 ELSE "ADS"."Feature_5" END AS impter_7, CASE WHEN ("ADS"."Feature_6" IS NULL) THEN -0.29809080119845455 ELSE "ADS"."Feature_6" END AS impter_8, CASE WHEN ("ADS"."Feature_7" IS NULL) THEN 0.14672241507251663 ELSE "ADS"."Feature_7" END AS impter_9, CASE WHEN ("ADS"."Feature_8" IS NULL) THEN 0.01746942384662034 ELSE "ADS"."Feature_8" END AS impter_10, CASE WHEN ("ADS"."Feature_9" IS NULL) THEN 0.11507331415602866 ELSE "ADS"."Feature_9" END AS impter_11 
 FROM "FOURCLASS_10" "ADS") "ADS_imp_1_OUT") "U"
 
--- Code For temporary table DEGEN_ID5AR3_ADS_SCA_2_OUT part 1. Create 
+-- Code For temporary table 20180602_QVL_ADS_SCA_2_OUT part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "DEGEN_ID5AR3_ADS_SCA_2_OUT" (
+CREATE GLOBAL TEMPORARY TABLE "20180602_QVL_ADS_SCA_2_OUT" (
 	"KEY" NUMBER(19), 
 	scaler_2 BINARY_DOUBLE, 
 	scaler_3 BINARY_DOUBLE, 
@@ -55,17 +55,17 @@ CREATE GLOBAL TEMPORARY TABLE "DEGEN_ID5AR3_ADS_SCA_2_OUT" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table DEGEN_ID5AR3_ADS_SCA_2_OUT part 2. Populate
+-- Code For temporary table 20180602_QVL_ADS_SCA_2_OUT part 2. Populate
 
-INSERT INTO "DEGEN_ID5AR3_ADS_SCA_2_OUT" ("KEY", scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT "U"."KEY", "U".scaler_2, "U".scaler_3, "U".scaler_4, "U".scaler_5, "U".scaler_6, "U".scaler_7, "U".scaler_8, "U".scaler_9, "U".scaler_10, "U".scaler_11 
+INSERT INTO "20180602_QVL_ADS_SCA_2_OUT" ("KEY", scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT "U"."KEY", "U".scaler_2, "U".scaler_3, "U".scaler_4, "U".scaler_5, "U".scaler_6, "U".scaler_7, "U".scaler_8, "U".scaler_9, "U".scaler_10, "U".scaler_11 
 FROM (SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_2, "ADS_sca_2_OUT".scaler_3, "ADS_sca_2_OUT".scaler_4, "ADS_sca_2_OUT".scaler_5, "ADS_sca_2_OUT".scaler_6, "ADS_sca_2_OUT".scaler_7, "ADS_sca_2_OUT".scaler_8, "ADS_sca_2_OUT".scaler_9, "ADS_sca_2_OUT".scaler_10, "ADS_sca_2_OUT".scaler_11 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".impter_2 AS BINARY_DOUBLE) - -0.003903374463034205) / 0.9795060640183997 AS scaler_2, (CAST("ADS_imp_1_OUT".impter_3 AS BINARY_DOUBLE) - 0.6152232215702322) / 1.3900807236205235 AS scaler_3, (CAST("ADS_imp_1_OUT".impter_4 AS BINARY_DOUBLE) - 0.042796236914291665) / 1.4962685135870766 AS scaler_4, (CAST("ADS_imp_1_OUT".impter_5 AS BINARY_DOUBLE) - 0.7709819558904074) / 2.3333561060111743 AS scaler_5, (CAST("ADS_imp_1_OUT".impter_6 AS BINARY_DOUBLE) - -0.43300733624893334) / 1.4029757772648748 AS scaler_6, (CAST("ADS_imp_1_OUT".impter_7 AS BINARY_DOUBLE) - -0.0424956965794036) / 0.9558091076873229 AS scaler_7, (CAST("ADS_imp_1_OUT".impter_8 AS BINARY_DOUBLE) - -0.29809080119845455) / 1.017013180721433 AS scaler_8, (CAST("ADS_imp_1_OUT".impter_9 AS BINARY_DOUBLE) - 0.14672241507251663) / 1.600798539929603 AS scaler_9, (CAST("ADS_imp_1_OUT".impter_10 AS BINARY_DOUBLE) - 0.01746942384662034) / 1.1487296361671415 AS scaler_10, (CAST("ADS_imp_1_OUT".impter_11 AS BINARY_DOUBLE) - 0.11507331415602866) / 0.9690911857336224 AS scaler_11 
-FROM "DEGEN_CT87GO_ADS_IMP_1_OUT" "ADS_imp_1_OUT") "ADS_sca_2_OUT") "U"
+FROM "20180602_2D4_ADS_IMP_1_OUT" "ADS_imp_1_OUT") "ADS_sca_2_OUT") "U"
 
--- Code For temporary table CODEGEN_S71DSB_HL_1_RELU_1 part 1. Create 
+-- Code For temporary table P_20180602_CE2_HL_1_RELU_1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "CODEGEN_S71DSB_HL_1_RELU_1" (
+CREATE GLOBAL TEMPORARY TABLE "P_20180602_CE2_HL_1_RELU_1" (
 	"KEY" NUMBER(19), 
 	"NEUR_1_1" BINARY_DOUBLE, 
 	"NEUR_1_2" BINARY_DOUBLE, 
@@ -74,12 +74,12 @@ CREATE GLOBAL TEMPORARY TABLE "CODEGEN_S71DSB_HL_1_RELU_1" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table CODEGEN_S71DSB_HL_1_RELU_1 part 2. Populate
+-- Code For temporary table P_20180602_CE2_HL_1_RELU_1 part 2. Populate
 
-INSERT INTO "CODEGEN_S71DSB_HL_1_RELU_1" ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "U"."KEY", "U"."NEUR_1_1", "U"."NEUR_1_2", "U"."NEUR_1_3" 
+INSERT INTO "P_20180602_CE2_HL_1_RELU_1" ("KEY", "NEUR_1_1", "NEUR_1_2", "NEUR_1_3") SELECT "U"."KEY", "U"."NEUR_1_1", "U"."NEUR_1_2", "U"."NEUR_1_3" 
 FROM (WITH "IL" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CAST("ADS_sca_2_OUT".scaler_2 AS BINARY_DOUBLE) AS scaler_2, CAST("ADS_sca_2_OUT".scaler_3 AS BINARY_DOUBLE) AS scaler_3, CAST("ADS_sca_2_OUT".scaler_4 AS BINARY_DOUBLE) AS scaler_4, CAST("ADS_sca_2_OUT".scaler_5 AS BINARY_DOUBLE) AS scaler_5, CAST("ADS_sca_2_OUT".scaler_6 AS BINARY_DOUBLE) AS scaler_6, CAST("ADS_sca_2_OUT".scaler_7 AS BINARY_DOUBLE) AS scaler_7, CAST("ADS_sca_2_OUT".scaler_8 AS BINARY_DOUBLE) AS scaler_8, CAST("ADS_sca_2_OUT".scaler_9 AS BINARY_DOUBLE) AS scaler_9, CAST("ADS_sca_2_OUT".scaler_10 AS BINARY_DOUBLE) AS scaler_10, CAST("ADS_sca_2_OUT".scaler_11 AS BINARY_DOUBLE) AS scaler_11 
-FROM "DEGEN_ID5AR3_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
+FROM "20180602_QVL_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
 "HL_BA_1" AS 
 (SELECT "IL"."KEY" AS "KEY", -0.891420621551592 * "IL".scaler_2 + -3.6213835085294135 * "IL".scaler_3 + -2.438292780916934 * "IL".scaler_4 + -2.7743988662517007 * "IL".scaler_5 + -0.6983234062685576 * "IL".scaler_6 + 0.6734928683172556 * "IL".scaler_7 + 1.2108075918467651 * "IL".scaler_8 + 1.064626681262849 * "IL".scaler_9 + 1.934482119853757 * "IL".scaler_10 + -0.7886056087615796 * "IL".scaler_11 + 0.2688282846034892 AS "NEUR_1_1", -0.9914320658081578 * "IL".scaler_2 + 2.434406802942193 * "IL".scaler_3 + 1.031258702700202 * "IL".scaler_4 + 1.6708046086385788 * "IL".scaler_5 + 0.8265627549631424 * "IL".scaler_6 + 1.969353953904609 * "IL".scaler_7 + -1.0043150271239543 * "IL".scaler_8 + -2.4344029995102354 * "IL".scaler_9 + 1.7923194193175307 * "IL".scaler_10 + -1.6033785125369864 * "IL".scaler_11 + -0.47608020425988345 AS "NEUR_1_2", -1.9859057728804306 * "IL".scaler_2 + -0.6404997784376683 * "IL".scaler_3 + -2.8094693480107162 * "IL".scaler_4 + -2.0240083886171156 * "IL".scaler_5 + -4.455937794772853 * "IL".scaler_6 + 1.022902128176445 * "IL".scaler_7 + 2.4078836308119462 * "IL".scaler_8 + -2.4429986430460646 * "IL".scaler_9 + -0.24786166665154463 * "IL".scaler_10 + 0.33213735224034685 * "IL".scaler_11 + -1.4050078347970443 AS "NEUR_1_3" 
 FROM "IL"), 
@@ -90,10 +90,10 @@ FROM "HL_BA_1")
 FROM (SELECT "HL_1_relu"."KEY" AS "KEY", "HL_1_relu"."NEUR_1_1" AS "NEUR_1_1", "HL_1_relu"."NEUR_1_2" AS "NEUR_1_2", "HL_1_relu"."NEUR_1_3" AS "NEUR_1_3" 
 FROM "HL_1_relu") "HL_1_relu_1") "U"
 
--- Code For temporary table ODEGEN_QSF84W_OL_SOFTMAX_1 part 1. Create 
+-- Code For temporary table _20180602_4RF_OL_SOFTMAX_1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "ODEGEN_QSF84W_OL_SOFTMAX_1" (
+CREATE GLOBAL TEMPORARY TABLE "_20180602_4RF_OL_SOFTMAX_1" (
 	"KEY" NUMBER(19), 
 	"NEUR_3_1" BINARY_DOUBLE, 
 	"NEUR_3_2" BINARY_DOUBLE, 
@@ -103,12 +103,12 @@ CREATE GLOBAL TEMPORARY TABLE "ODEGEN_QSF84W_OL_SOFTMAX_1" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table ODEGEN_QSF84W_OL_SOFTMAX_1 part 2. Populate
+-- Code For temporary table _20180602_4RF_OL_SOFTMAX_1 part 2. Populate
 
-INSERT INTO "ODEGEN_QSF84W_OL_SOFTMAX_1" ("KEY", "NEUR_3_1", "NEUR_3_2", "NEUR_3_3", "NEUR_3_4") SELECT "U"."KEY", "U"."NEUR_3_1", "U"."NEUR_3_2", "U"."NEUR_3_3", "U"."NEUR_3_4" 
+INSERT INTO "_20180602_4RF_OL_SOFTMAX_1" ("KEY", "NEUR_3_1", "NEUR_3_2", "NEUR_3_3", "NEUR_3_4") SELECT "U"."KEY", "U"."NEUR_3_1", "U"."NEUR_3_2", "U"."NEUR_3_3", "U"."NEUR_3_4" 
 FROM (WITH "HL_BA_2" AS 
 (SELECT "HL_1_relu_1"."KEY" AS "KEY", 1.5420738007731059 * "HL_1_relu_1"."NEUR_1_1" + 0.9892187397708667 * "HL_1_relu_1"."NEUR_1_2" + 3.0677247504358 * "HL_1_relu_1"."NEUR_1_3" + -1.2745925487665142 AS "NEUR_2_1", -1.0879469332710787 * "HL_1_relu_1"."NEUR_1_1" + 1.4068826124690863 * "HL_1_relu_1"."NEUR_1_2" + -2.2391749062668853 * "HL_1_relu_1"."NEUR_1_3" + 1.388838447210668 AS "NEUR_2_2", 4.301535046167383 * "HL_1_relu_1"."NEUR_1_1" + 0.53370778730481 * "HL_1_relu_1"."NEUR_1_2" + 1.0085490510958008 * "HL_1_relu_1"."NEUR_1_3" + -3.330554823031546 AS "NEUR_2_3", 0.36761402595006865 * "HL_1_relu_1"."NEUR_1_1" + -0.5047115949623301 * "HL_1_relu_1"."NEUR_1_2" + -1.450028651522304 * "HL_1_relu_1"."NEUR_1_3" + -0.2882486611615313 AS "NEUR_2_4", -0.9414603480949059 * "HL_1_relu_1"."NEUR_1_1" + 0.8828933615863002 * "HL_1_relu_1"."NEUR_1_2" + -1.2962466875038778 * "HL_1_relu_1"."NEUR_1_3" + 1.1832397299783874 AS "NEUR_2_5" 
-FROM "CODEGEN_S71DSB_HL_1_RELU_1" "HL_1_relu_1"), 
+FROM "P_20180602_CE2_HL_1_RELU_1" "HL_1_relu_1"), 
 "HL_2_relu" AS 
 (SELECT "HL_BA_2"."KEY" AS "KEY", greatest("HL_BA_2"."NEUR_2_1", 0) AS "NEUR_2_1", greatest("HL_BA_2"."NEUR_2_2", 0) AS "NEUR_2_2", greatest("HL_BA_2"."NEUR_2_3", 0) AS "NEUR_2_3", greatest("HL_BA_2"."NEUR_2_4", 0) AS "NEUR_2_4", greatest("HL_BA_2"."NEUR_2_5", 0) AS "NEUR_2_5" 
 FROM "HL_BA_2"), 
@@ -126,7 +126,7 @@ FROM "OL_softmax") "OL_softmax_1") "U"
 
 WITH orig_cte AS 
 (SELECT "OL_softmax_1"."KEY" AS "KEY", "OL_softmax_1"."NEUR_3_1" AS "Score_0", "OL_softmax_1"."NEUR_3_2" AS "Score_1", "OL_softmax_1"."NEUR_3_3" AS "Score_2", "OL_softmax_1"."NEUR_3_4" AS "Score_3", CAST(NULL AS BINARY_DOUBLE) AS "Proba_0", CAST(NULL AS BINARY_DOUBLE) AS "Proba_1", CAST(NULL AS BINARY_DOUBLE) AS "Proba_2", CAST(NULL AS BINARY_DOUBLE) AS "Proba_3", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_0", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_1", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_2", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_3", CAST(NULL AS NUMBER(19)) AS "Decision", CAST(NULL AS BINARY_DOUBLE) AS "DecisionProba" 
-FROM "ODEGEN_QSF84W_OL_SOFTMAX_1" "OL_softmax_1"), 
+FROM "_20180602_4RF_OL_SOFTMAX_1" "OL_softmax_1"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

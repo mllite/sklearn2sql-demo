@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table DEGEN_5XU6P2_ADS_IMP_1_OUT part 1. Create 
+-- Code For temporary table 20180602_RZ6_ADS_IMP_1_OUT part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "DEGEN_5XU6P2_ADS_IMP_1_OUT" (
+CREATE GLOBAL TEMPORARY TABLE "20180602_RZ6_ADS_IMP_1_OUT" (
 	"KEY" NUMBER(19), 
 	imputer_output_2 BINARY_DOUBLE, 
 	imputer_output_3 BINARY_DOUBLE, 
@@ -23,17 +23,17 @@ CREATE GLOBAL TEMPORARY TABLE "DEGEN_5XU6P2_ADS_IMP_1_OUT" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table DEGEN_5XU6P2_ADS_IMP_1_OUT part 2. Populate
+-- Code For temporary table 20180602_RZ6_ADS_IMP_1_OUT part 2. Populate
 
-INSERT INTO "DEGEN_5XU6P2_ADS_IMP_1_OUT" ("KEY", imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT "U"."KEY", "U".imputer_output_2, "U".imputer_output_3, "U".imputer_output_4, "U".imputer_output_5 
+INSERT INTO "20180602_RZ6_ADS_IMP_1_OUT" ("KEY", imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT "U"."KEY", "U".imputer_output_2, "U".imputer_output_3, "U".imputer_output_4, "U".imputer_output_5 
 FROM (SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".imputer_output_2, "ADS_imp_1_OUT".imputer_output_3, "ADS_imp_1_OUT".imputer_output_4, "ADS_imp_1_OUT".imputer_output_5 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN 5.8474999999999975 ELSE "ADS"."Feature_0" END AS imputer_output_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 3.0366666666666657 ELSE "ADS"."Feature_1" END AS imputer_output_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 3.8450000000000006 ELSE "ADS"."Feature_2" END AS imputer_output_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 1.245 ELSE "ADS"."Feature_3" END AS imputer_output_5 
 FROM "IRIS" "ADS") "ADS_imp_1_OUT") "U"
 
--- Code For temporary table DEGEN_UMA8MS_ADS_SCA_2_OUT part 1. Create 
+-- Code For temporary table 20180602_9B5_ADS_SCA_2_OUT part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "DEGEN_UMA8MS_ADS_SCA_2_OUT" (
+CREATE GLOBAL TEMPORARY TABLE "20180602_9B5_ADS_SCA_2_OUT" (
 	"KEY" NUMBER(19), 
 	scaler_output_2 BINARY_DOUBLE, 
 	scaler_output_3 BINARY_DOUBLE, 
@@ -43,17 +43,17 @@ CREATE GLOBAL TEMPORARY TABLE "DEGEN_UMA8MS_ADS_SCA_2_OUT" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table DEGEN_UMA8MS_ADS_SCA_2_OUT part 2. Populate
+-- Code For temporary table 20180602_9B5_ADS_SCA_2_OUT part 2. Populate
 
-INSERT INTO "DEGEN_UMA8MS_ADS_SCA_2_OUT" ("KEY", scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT "U"."KEY", "U".scaler_output_2, "U".scaler_output_3, "U".scaler_output_4, "U".scaler_output_5 
+INSERT INTO "20180602_9B5_ADS_SCA_2_OUT" ("KEY", scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT "U"."KEY", "U".scaler_output_2, "U".scaler_output_3, "U".scaler_output_4, "U".scaler_output_5 
 FROM (SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_output_2, "ADS_sca_2_OUT".scaler_output_3, "ADS_sca_2_OUT".scaler_output_4, "ADS_sca_2_OUT".scaler_output_5 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".imputer_output_2 AS BINARY_DOUBLE) - 5.8474999999999975) / 0.827039146594646 AS scaler_output_2, (CAST("ADS_imp_1_OUT".imputer_output_3 AS BINARY_DOUBLE) - 3.0366666666666657) / 0.43625935201691934 AS scaler_output_3, (CAST("ADS_imp_1_OUT".imputer_output_4 AS BINARY_DOUBLE) - 3.8450000000000006) / 1.709817241695732 AS scaler_output_4, (CAST("ADS_imp_1_OUT".imputer_output_5 AS BINARY_DOUBLE) - 1.245) / 0.7498722113355939 AS scaler_output_5 
-FROM "DEGEN_5XU6P2_ADS_IMP_1_OUT" "ADS_imp_1_OUT") "ADS_sca_2_OUT") "U"
+FROM "20180602_RZ6_ADS_IMP_1_OUT" "ADS_imp_1_OUT") "ADS_sca_2_OUT") "U"
 
--- Code For temporary table 0516_CODEGEN_N7NXA6_BAG_B0 part 1. Create 
+-- Code For temporary table TMP_20180602_1SA_BAG_B0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "0516_CODEGEN_N7NXA6_BAG_B0" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_1SA_BAG_B0" (
 	"KEY" NUMBER(19), 
 	"Score_0" BINARY_DOUBLE, 
 	"Proba_0" BINARY_DOUBLE, 
@@ -68,12 +68,12 @@ CREATE GLOBAL TEMPORARY TABLE "0516_CODEGEN_N7NXA6_BAG_B0" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table 0516_CODEGEN_N7NXA6_BAG_B0 part 2. Populate
+-- Code For temporary table TMP_20180602_1SA_BAG_B0 part 2. Populate
 
-INSERT INTO "0516_CODEGEN_N7NXA6_BAG_B0" ("KEY", "Score_0", "Proba_0", "LogProba_0", "Score_1", "Proba_1", "LogProba_1", "Score_2", "Proba_2", "LogProba_2") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."LogProba_0", "U"."Score_1", "U"."Proba_1", "U"."LogProba_1", "U"."Score_2", "U"."Proba_2", "U"."LogProba_2" 
+INSERT INTO "TMP_20180602_1SA_BAG_B0" ("KEY", "Score_0", "Proba_0", "LogProba_0", "Score_1", "Proba_1", "LogProba_1", "Score_2", "Proba_2", "LogProba_2") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."LogProba_0", "U"."Score_1", "U"."Proba_1", "U"."LogProba_1", "U"."Score_2", "U"."Proba_2", "U"."LogProba_2" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.5400919914245605) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.7281479835510254) THEN 2 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.6462678909301758) THEN 4 ELSE 5 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.6734480857849121) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 <= -0.6571015119552612) THEN 8 ELSE 9 END ELSE 10 END END AS node_id_2 
-FROM "DEGEN_UMA8MS_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
+FROM "20180602_9B5_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
 "DT_node_data" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS BINARY_DOUBLE) AS "P_0", CAST("Values"."P_1" AS BINARY_DOUBLE) AS "P_1", CAST("Values"."P_2" AS BINARY_DOUBLE) AS "P_2", CAST("Values"."D" AS BINARY_DOUBLE) AS "D", CAST("Values"."DP" AS BINARY_DOUBLE) AS "DP" 
 FROM (SELECT 2 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 8 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 9 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 10 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL) "Values"), 
@@ -85,7 +85,7 @@ FROM "DT_node_lookup" LEFT OUTER JOIN "DT_node_data" ON "DT_node_lookup".node_id
 FROM "DT_Output"), 
 "DT_node_lookup_1" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= -0.5934344530105591) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.5877821445465088) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.6067700386047363) THEN 4 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= 0.12393608689308167) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.6734480857849121) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.7047536373138428) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= 0.3657625913619995) THEN 11 ELSE 12 END ELSE 13 END ELSE 14 END END END AS node_id_2 
-FROM "DEGEN_UMA8MS_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
+FROM "20180602_9B5_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
 "DT_node_data_1" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS BINARY_DOUBLE) AS "P_0", CAST("Values"."P_1" AS BINARY_DOUBLE) AS "P_1", CAST("Values"."P_2" AS BINARY_DOUBLE) AS "P_2", CAST("Values"."D" AS BINARY_DOUBLE) AS "D", CAST("Values"."DP" AS BINARY_DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 7 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 11 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 12 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 13 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 14 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL) "Values"), 
@@ -97,7 +97,7 @@ FROM "DT_node_lookup_1" LEFT OUTER JOIN "DT_node_data_1" ON "DT_node_lookup_1".n
 FROM "DT_Output_1"), 
 "DT_node_lookup_2" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.529296338558197) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.8158766627311707) THEN 2 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.5400919914245605) THEN 4 ELSE 5 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.273379921913147) THEN 7 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.6734480857849121) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.47341400384902954) THEN 10 ELSE 11 END ELSE 12 END END END AS node_id_2 
-FROM "DEGEN_UMA8MS_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
+FROM "20180602_9B5_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
 "DT_node_data_2" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS BINARY_DOUBLE) AS "P_0", CAST("Values"."P_1" AS BINARY_DOUBLE) AS "P_1", CAST("Values"."P_2" AS BINARY_DOUBLE) AS "P_2", CAST("Values"."D" AS BINARY_DOUBLE) AS "D", CAST("Values"."DP" AS BINARY_DOUBLE) AS "DP" 
 FROM (SELECT 2 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 7 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 10 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 11 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 12 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL) "Values"), 
@@ -109,7 +109,7 @@ FROM "DT_node_lookup_2" LEFT OUTER JOIN "DT_node_data_2" ON "DT_node_lookup_2".n
 FROM "DT_Output_2"), 
 "DT_node_lookup_3" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.8158766627311707) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.6734480857849121) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= -1.0851964950561523) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 <= -1.3447659015655518) THEN 5 ELSE 6 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 <= -1.803208827972412) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= -0.4201735854148865) THEN 9 ELSE 10 END ELSE 11 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.5877821445465088) THEN 13 ELSE 14 END END END AS node_id_2 
-FROM "DEGEN_UMA8MS_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
+FROM "20180602_9B5_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
 "DT_node_data_3" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS BINARY_DOUBLE) AS "P_0", CAST("Values"."P_1" AS BINARY_DOUBLE) AS "P_1", CAST("Values"."P_2" AS BINARY_DOUBLE) AS "P_2", CAST("Values"."D" AS BINARY_DOUBLE) AS "D", CAST("Values"."DP" AS BINARY_DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 9 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 10 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 11 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 13 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 14 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL) "Values"), 
@@ -121,7 +121,7 @@ FROM "DT_node_lookup_3" LEFT OUTER JOIN "DT_node_data_3" ON "DT_node_lookup_3".n
 FROM "DT_Output_3"), 
 "DT_node_lookup_4" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= -0.5934344530105591) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.6462678909301758) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.6067700386047363) THEN 4 ELSE 5 END ELSE 6 END END AS node_id_2 
-FROM "DEGEN_UMA8MS_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
+FROM "20180602_9B5_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
 "DT_node_data_4" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS BINARY_DOUBLE) AS "P_0", CAST("Values"."P_1" AS BINARY_DOUBLE) AS "P_1", CAST("Values"."P_2" AS BINARY_DOUBLE) AS "P_2", CAST("Values"."D" AS BINARY_DOUBLE) AS "D", CAST("Values"."DP" AS BINARY_DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL) "Values"), 
@@ -133,7 +133,7 @@ FROM "DT_node_lookup_4" LEFT OUTER JOIN "DT_node_data_4" ON "DT_node_lookup_4".n
 FROM "DT_Output_4"), 
 "DT_node_lookup_5" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.529296338558197) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= -0.5934344530105591) THEN 2 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.5400919914245605) THEN 4 ELSE 5 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.6462678909301758) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.5400920510292053) THEN 8 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 <= 0.1451735943555832) THEN 10 ELSE 11 END END ELSE 12 END END AS node_id_2 
-FROM "DEGEN_UMA8MS_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
+FROM "20180602_9B5_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
 "DT_node_data_5" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS BINARY_DOUBLE) AS "P_0", CAST("Values"."P_1" AS BINARY_DOUBLE) AS "P_1", CAST("Values"."P_2" AS BINARY_DOUBLE) AS "P_2", CAST("Values"."D" AS BINARY_DOUBLE) AS "D", CAST("Values"."DP" AS BINARY_DOUBLE) AS "DP" 
 FROM (SELECT 2 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 8 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 10 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 11 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 12 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL) "Values"), 
@@ -145,7 +145,7 @@ FROM "DT_node_lookup_5" LEFT OUTER JOIN "DT_node_data_5" ON "DT_node_lookup_5".n
 FROM "DT_Output_5"), 
 "DT_node_lookup_6" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.8158766627311707) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.40673595666885376) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.6755107641220093) THEN 4 ELSE 5 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.5877821445465088) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 <= 0.1451735943555832) THEN 8 ELSE 9 END ELSE 10 END END END AS node_id_2 
-FROM "DEGEN_UMA8MS_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
+FROM "20180602_9B5_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
 "DT_node_data_6" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS BINARY_DOUBLE) AS "P_0", CAST("Values"."P_1" AS BINARY_DOUBLE) AS "P_1", CAST("Values"."P_2" AS BINARY_DOUBLE) AS "P_2", CAST("Values"."D" AS BINARY_DOUBLE) AS "D", CAST("Values"."DP" AS BINARY_DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 8 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 9 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 10 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL) "Values"), 
@@ -157,7 +157,7 @@ FROM "DT_node_lookup_6" LEFT OUTER JOIN "DT_node_data_6" ON "DT_node_lookup_6".n
 FROM "DT_Output_6"), 
 "DT_node_lookup_7" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= -0.5934344530105591) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.5877821445465088) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.5400919914245605) THEN 4 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 <= 0.1451735943555832) THEN 6 ELSE 7 END END ELSE 8 END END AS node_id_2 
-FROM "DEGEN_UMA8MS_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
+FROM "20180602_9B5_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
 "DT_node_data_7" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS BINARY_DOUBLE) AS "P_0", CAST("Values"."P_1" AS BINARY_DOUBLE) AS "P_1", CAST("Values"."P_2" AS BINARY_DOUBLE) AS "P_2", CAST("Values"."D" AS BINARY_DOUBLE) AS "D", CAST("Values"."DP" AS BINARY_DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 7 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 8 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL) "Values"), 
@@ -169,7 +169,7 @@ FROM "DT_node_lookup_7" LEFT OUTER JOIN "DT_node_data_7" ON "DT_node_lookup_7".n
 FROM "DT_Output_7"), 
 "DT_node_lookup_8" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.5877821445465088) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= -0.7267905473709106) THEN 2 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= -1.0851964950561523) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.03216718137264252) THEN 5 ELSE 6 END ELSE 7 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.40673595666885376) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= 0.90987229347229) THEN 10 ELSE 11 END ELSE 12 END END AS node_id_2 
-FROM "DEGEN_UMA8MS_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
+FROM "20180602_9B5_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
 "DT_node_data_8" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS BINARY_DOUBLE) AS "P_0", CAST("Values"."P_1" AS BINARY_DOUBLE) AS "P_1", CAST("Values"."P_2" AS BINARY_DOUBLE) AS "P_2", CAST("Values"."D" AS BINARY_DOUBLE) AS "D", CAST("Values"."DP" AS BINARY_DOUBLE) AS "DP" 
 FROM (SELECT 2 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 7 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 10 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 11 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 12 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL) "Values"), 
@@ -181,7 +181,7 @@ FROM "DT_node_lookup_8" LEFT OUTER JOIN "DT_node_data_8" ON "DT_node_lookup_8".n
 FROM "DT_Output_8"), 
 "DT_node_lookup_9" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.7281479835510254) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.40673595666885376) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.6462678909301758) THEN 4 ELSE 5 END ELSE 6 END END AS node_id_2 
-FROM "DEGEN_UMA8MS_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
+FROM "20180602_9B5_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
 "DT_node_data_9" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS BINARY_DOUBLE) AS "P_0", CAST("Values"."P_1" AS BINARY_DOUBLE) AS "P_1", CAST("Values"."P_2" AS BINARY_DOUBLE) AS "P_2", CAST("Values"."D" AS BINARY_DOUBLE) AS "D", CAST("Values"."DP" AS BINARY_DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL) "Values"), 
@@ -205,10 +205,10 @@ FROM "BAG_Model_7" UNION ALL SELECT "BAG_Model_8"."KEY" AS "KEY", "BAG_Model_8".
 FROM "BAG_Model_8" UNION ALL SELECT "BAG_Model_9"."KEY" AS "KEY", "BAG_Model_9"."Score_0" AS "Score_0", "BAG_Model_9"."Proba_0" AS "Proba_0", "BAG_Model_9"."LogProba_0" AS "LogProba_0", "BAG_Model_9"."Score_1" AS "Score_1", "BAG_Model_9"."Proba_1" AS "Proba_1", "BAG_Model_9"."LogProba_1" AS "LogProba_1", "BAG_Model_9"."Score_2" AS "Score_2", "BAG_Model_9"."Proba_2" AS "Proba_2", "BAG_Model_9"."LogProba_2" AS "LogProba_2" 
 FROM "BAG_Model_9") "BAG_esu_0") "BAG_B0") "U"
 
--- Code For temporary table 0516_CODEGEN_56KPR9_BAG_B1 part 1. Create 
+-- Code For temporary table TMP_20180602_LVX_BAG_B1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "0516_CODEGEN_56KPR9_BAG_B1" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_LVX_BAG_B1" (
 	"KEY" NUMBER(19), 
 	"Score_0" BINARY_DOUBLE, 
 	"Proba_0" BINARY_DOUBLE, 
@@ -223,12 +223,12 @@ CREATE GLOBAL TEMPORARY TABLE "0516_CODEGEN_56KPR9_BAG_B1" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table 0516_CODEGEN_56KPR9_BAG_B1 part 2. Populate
+-- Code For temporary table TMP_20180602_LVX_BAG_B1 part 2. Populate
 
-INSERT INTO "0516_CODEGEN_56KPR9_BAG_B1" ("KEY", "Score_0", "Proba_0", "LogProba_0", "Score_1", "Proba_1", "LogProba_1", "Score_2", "Proba_2", "LogProba_2") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."LogProba_0", "U"."Score_1", "U"."Proba_1", "U"."LogProba_1", "U"."Score_2", "U"."Proba_2", "U"."LogProba_2" 
+INSERT INTO "TMP_20180602_LVX_BAG_B1" ("KEY", "Score_0", "Proba_0", "LogProba_0", "Score_1", "Proba_1", "LogProba_1", "Score_2", "Proba_2", "LogProba_2") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."LogProba_0", "U"."Score_1", "U"."Proba_1", "U"."LogProba_1", "U"."Score_2", "U"."Proba_2", "U"."LogProba_2" 
 FROM (WITH "DT_node_lookup_10" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.7281479835510254) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.40673595666885376) THEN 3 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.5877821445465088) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 <= 0.1451735943555832) THEN 6 ELSE 7 END ELSE 8 END END END AS node_id_2 
-FROM "DEGEN_UMA8MS_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
+FROM "20180602_9B5_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
 "DT_node_data_10" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS BINARY_DOUBLE) AS "P_0", CAST("Values"."P_1" AS BINARY_DOUBLE) AS "P_1", CAST("Values"."P_2" AS BINARY_DOUBLE) AS "P_2", CAST("Values"."D" AS BINARY_DOUBLE) AS "D", CAST("Values"."DP" AS BINARY_DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 3 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 7 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 8 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL) "Values"), 
@@ -240,7 +240,7 @@ FROM "DT_node_lookup_10" LEFT OUTER JOIN "DT_node_data_10" ON "DT_node_lookup_10
 FROM "DT_Output_10"), 
 "DT_node_lookup_11" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.6462678909301758) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.8158766627311707) THEN 2 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.8734821677207947) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= -1.0851964950561523) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.03216718137264252) THEN 6 ELSE 7 END ELSE 8 END ELSE 9 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.7047536373138428) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= 0.7889590263366699) THEN 12 ELSE 13 END ELSE 14 END END AS node_id_2 
-FROM "DEGEN_UMA8MS_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
+FROM "20180602_9B5_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
 "DT_node_data_11" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS BINARY_DOUBLE) AS "P_0", CAST("Values"."P_1" AS BINARY_DOUBLE) AS "P_1", CAST("Values"."P_2" AS BINARY_DOUBLE) AS "P_2", CAST("Values"."D" AS BINARY_DOUBLE) AS "D", CAST("Values"."DP" AS BINARY_DOUBLE) AS "DP" 
 FROM (SELECT 2 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 7 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 8 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 9 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 12 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 13 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 14 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL) "Values"), 
@@ -252,7 +252,7 @@ FROM "DT_node_lookup_11" LEFT OUTER JOIN "DT_node_data_11" ON "DT_node_lookup_11
 FROM "DT_Output_11"), 
 "DT_node_lookup_12" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.8158766627311707) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.5400919914245605) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.6462678909301758) THEN 4 ELSE 5 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.6734480857849121) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 <= -0.6571015119552612) THEN 8 ELSE 9 END ELSE 10 END END END AS node_id_2 
-FROM "DEGEN_UMA8MS_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
+FROM "20180602_9B5_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
 "DT_node_data_12" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS BINARY_DOUBLE) AS "P_0", CAST("Values"."P_1" AS BINARY_DOUBLE) AS "P_1", CAST("Values"."P_2" AS BINARY_DOUBLE) AS "P_2", CAST("Values"."D" AS BINARY_DOUBLE) AS "D", CAST("Values"."DP" AS BINARY_DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 8 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 9 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 10 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL) "Values"), 
@@ -264,7 +264,7 @@ FROM "DT_node_lookup_12" LEFT OUTER JOIN "DT_node_data_12" ON "DT_node_lookup_12
 FROM "DT_Output_12"), 
 "DT_node_lookup_13" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.5877821445465088) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= -0.5934344530105591) THEN 2 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= -1.0851964950561523) THEN 4 ELSE 5 END END ELSE 6 END AS node_id_2 
-FROM "DEGEN_UMA8MS_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
+FROM "20180602_9B5_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
 "DT_node_data_13" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS BINARY_DOUBLE) AS "P_0", CAST("Values"."P_1" AS BINARY_DOUBLE) AS "P_1", CAST("Values"."P_2" AS BINARY_DOUBLE) AS "P_2", CAST("Values"."D" AS BINARY_DOUBLE) AS "D", CAST("Values"."DP" AS BINARY_DOUBLE) AS "DP" 
 FROM (SELECT 2 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL) "Values"), 
@@ -276,7 +276,7 @@ FROM "DT_node_lookup_13" LEFT OUTER JOIN "DT_node_data_13" ON "DT_node_lookup_13
 FROM "DT_Output_13"), 
 "DT_node_lookup_14" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.8158766627311707) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.6462678909301758) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.6067700386047363) THEN 4 ELSE 5 END ELSE 6 END END AS node_id_2 
-FROM "DEGEN_UMA8MS_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
+FROM "20180602_9B5_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
 "DT_node_data_14" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS BINARY_DOUBLE) AS "P_0", CAST("Values"."P_1" AS BINARY_DOUBLE) AS "P_1", CAST("Values"."P_2" AS BINARY_DOUBLE) AS "P_2", CAST("Values"."D" AS BINARY_DOUBLE) AS "D", CAST("Values"."DP" AS BINARY_DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL) "Values"), 
@@ -288,7 +288,7 @@ FROM "DT_node_lookup_14" LEFT OUTER JOIN "DT_node_data_14" ON "DT_node_lookup_14
 FROM "DT_Output_14"), 
 "DT_node_lookup_15" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.8158766627311707) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.6734480857849121) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.8509681224822998) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= -1.0851964950561523) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.1400238573551178) THEN 6 ELSE 7 END ELSE 8 END ELSE 9 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.5877821445465088) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= 0.12393608689308167) THEN 12 ELSE 13 END ELSE 14 END END END AS node_id_2 
-FROM "DEGEN_UMA8MS_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
+FROM "20180602_9B5_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
 "DT_node_data_15" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS BINARY_DOUBLE) AS "P_0", CAST("Values"."P_1" AS BINARY_DOUBLE) AS "P_1", CAST("Values"."P_2" AS BINARY_DOUBLE) AS "P_2", CAST("Values"."D" AS BINARY_DOUBLE) AS "D", CAST("Values"."DP" AS BINARY_DOUBLE) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 7 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 8 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 9 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 12 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 13 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL UNION ALL SELECT 14 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM DUAL) "Values"), 
@@ -308,10 +308,10 @@ FROM "BAG_Model_13" UNION ALL SELECT "BAG_Model_14"."KEY" AS "KEY", "BAG_Model_1
 FROM "BAG_Model_14" UNION ALL SELECT "BAG_Model_15"."KEY" AS "KEY", "BAG_Model_15"."Score_0" AS "Score_0", "BAG_Model_15"."Proba_0" AS "Proba_0", "BAG_Model_15"."LogProba_0" AS "LogProba_0", "BAG_Model_15"."Score_1" AS "Score_1", "BAG_Model_15"."Proba_1" AS "Proba_1", "BAG_Model_15"."LogProba_1" AS "LogProba_1", "BAG_Model_15"."Score_2" AS "Score_2", "BAG_Model_15"."Proba_2" AS "Proba_2", "BAG_Model_15"."LogProba_2" AS "LogProba_2" 
 FROM "BAG_Model_15") "BAG_esu_1") "BAG_B1") "U"
 
--- Code For temporary table 516_CODEGEN_V49J7D_BAG_AVG part 1. Create 
+-- Code For temporary table TMP_20180602_HGH_BAG_AVG part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "516_CODEGEN_V49J7D_BAG_AVG" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_HGH_BAG_AVG" (
 	"KEY" NUMBER(19), 
 	"Score_0" BINARY_DOUBLE, 
 	"Proba_0" BINARY_DOUBLE, 
@@ -326,14 +326,14 @@ CREATE GLOBAL TEMPORARY TABLE "516_CODEGEN_V49J7D_BAG_AVG" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table 516_CODEGEN_V49J7D_BAG_AVG part 2. Populate
+-- Code For temporary table TMP_20180602_HGH_BAG_AVG part 2. Populate
 
-INSERT INTO "516_CODEGEN_V49J7D_BAG_AVG" ("KEY", "Score_0", "Proba_0", "LogProba_0", "Score_1", "Proba_1", "LogProba_1", "Score_2", "Proba_2", "LogProba_2") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."LogProba_0", "U"."Score_1", "U"."Proba_1", "U"."LogProba_1", "U"."Score_2", "U"."Proba_2", "U"."LogProba_2" 
+INSERT INTO "TMP_20180602_HGH_BAG_AVG" ("KEY", "Score_0", "Proba_0", "LogProba_0", "Score_1", "Proba_1", "LogProba_1", "Score_2", "Proba_2", "LogProba_2") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."LogProba_0", "U"."Score_1", "U"."Proba_1", "U"."LogProba_1", "U"."Score_2", "U"."Proba_2", "U"."LogProba_2" 
 FROM (WITH "BAG_Union" AS 
 (SELECT "BAG_EnsembleUnion"."KEY" AS "KEY", "BAG_EnsembleUnion"."Score_0" AS "Score_0", "BAG_EnsembleUnion"."Proba_0" AS "Proba_0", "BAG_EnsembleUnion"."LogProba_0" AS "LogProba_0", "BAG_EnsembleUnion"."Score_1" AS "Score_1", "BAG_EnsembleUnion"."Proba_1" AS "Proba_1", "BAG_EnsembleUnion"."LogProba_1" AS "LogProba_1", "BAG_EnsembleUnion"."Score_2" AS "Score_2", "BAG_EnsembleUnion"."Proba_2" AS "Proba_2", "BAG_EnsembleUnion"."LogProba_2" AS "LogProba_2" 
 FROM (SELECT "BAG_B0"."KEY" AS "KEY", "BAG_B0"."Score_0" AS "Score_0", "BAG_B0"."Proba_0" AS "Proba_0", "BAG_B0"."LogProba_0" AS "LogProba_0", "BAG_B0"."Score_1" AS "Score_1", "BAG_B0"."Proba_1" AS "Proba_1", "BAG_B0"."LogProba_1" AS "LogProba_1", "BAG_B0"."Score_2" AS "Score_2", "BAG_B0"."Proba_2" AS "Proba_2", "BAG_B0"."LogProba_2" AS "LogProba_2" 
-FROM "0516_CODEGEN_N7NXA6_BAG_B0" "BAG_B0" UNION ALL SELECT "BAG_B1"."KEY" AS "KEY", "BAG_B1"."Score_0" AS "Score_0", "BAG_B1"."Proba_0" AS "Proba_0", "BAG_B1"."LogProba_0" AS "LogProba_0", "BAG_B1"."Score_1" AS "Score_1", "BAG_B1"."Proba_1" AS "Proba_1", "BAG_B1"."LogProba_1" AS "LogProba_1", "BAG_B1"."Score_2" AS "Score_2", "BAG_B1"."Proba_2" AS "Proba_2", "BAG_B1"."LogProba_2" AS "LogProba_2" 
-FROM "0516_CODEGEN_56KPR9_BAG_B1" "BAG_B1") "BAG_EnsembleUnion")
+FROM "TMP_20180602_1SA_BAG_B0" "BAG_B0" UNION ALL SELECT "BAG_B1"."KEY" AS "KEY", "BAG_B1"."Score_0" AS "Score_0", "BAG_B1"."Proba_0" AS "Proba_0", "BAG_B1"."LogProba_0" AS "LogProba_0", "BAG_B1"."Score_1" AS "Score_1", "BAG_B1"."Proba_1" AS "Proba_1", "BAG_B1"."LogProba_1" AS "LogProba_1", "BAG_B1"."Score_2" AS "Score_2", "BAG_B1"."Proba_2" AS "Proba_2", "BAG_B1"."LogProba_2" AS "LogProba_2" 
+FROM "TMP_20180602_LVX_BAG_B1" "BAG_B1") "BAG_EnsembleUnion")
  SELECT "BAG_avg"."KEY", "BAG_avg"."Score_0", "BAG_avg"."Proba_0", "BAG_avg"."LogProba_0", "BAG_avg"."Score_1", "BAG_avg"."Proba_1", "BAG_avg"."LogProba_1", "BAG_avg"."Score_2", "BAG_avg"."Proba_2", "BAG_avg"."LogProba_2" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Score_0" AS BINARY_DOUBLE) AS "Score_0", CAST("T"."Proba_0" AS BINARY_DOUBLE) AS "Proba_0", CAST("T"."LogProba_0" AS BINARY_DOUBLE) AS "LogProba_0", CAST("T"."Score_1" AS BINARY_DOUBLE) AS "Score_1", CAST("T"."Proba_1" AS BINARY_DOUBLE) AS "Proba_1", CAST("T"."LogProba_1" AS BINARY_DOUBLE) AS "LogProba_1", CAST("T"."Score_2" AS BINARY_DOUBLE) AS "Score_2", CAST("T"."Proba_2" AS BINARY_DOUBLE) AS "Proba_2", CAST("T"."LogProba_2" AS BINARY_DOUBLE) AS "LogProba_2" 
 FROM (SELECT "BAG_Union"."KEY" AS "KEY", avg(CAST("BAG_Union"."Score_0" AS BINARY_DOUBLE)) AS "Score_0", avg(CAST("BAG_Union"."Proba_0" AS BINARY_DOUBLE)) AS "Proba_0", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_0", avg(CAST("BAG_Union"."Score_1" AS BINARY_DOUBLE)) AS "Score_1", avg(CAST("BAG_Union"."Proba_1" AS BINARY_DOUBLE)) AS "Proba_1", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_1", avg(CAST("BAG_Union"."Score_2" AS BINARY_DOUBLE)) AS "Score_2", avg(CAST("BAG_Union"."Proba_2" AS BINARY_DOUBLE)) AS "Proba_2", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_2" 
@@ -343,7 +343,7 @@ FROM "BAG_Union" GROUP BY "BAG_Union"."KEY") "T") "BAG_avg") "U"
 
 WITH orig_cte AS 
 (SELECT "BAG_avg"."KEY" AS "KEY", "BAG_avg"."Score_0" AS "Score_0", "BAG_avg"."Score_1" AS "Score_1", "BAG_avg"."Score_2" AS "Score_2", "BAG_avg"."Proba_0" AS "Proba_0", "BAG_avg"."Proba_1" AS "Proba_1", "BAG_avg"."Proba_2" AS "Proba_2", "BAG_avg"."LogProba_0" AS "LogProba_0", "BAG_avg"."LogProba_1" AS "LogProba_1", "BAG_avg"."LogProba_2" AS "LogProba_2", CAST(NULL AS NUMBER(19)) AS "Decision", CAST(NULL AS BINARY_DOUBLE) AS "DecisionProba" 
-FROM "516_CODEGEN_V49J7D_BAG_AVG" "BAG_avg"), 
+FROM "TMP_20180602_HGH_BAG_AVG" "BAG_avg"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

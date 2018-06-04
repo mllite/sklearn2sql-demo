@@ -10,19 +10,19 @@
 
 
 
--- Code For temporary table 0516_CODEGEN_P6I317_XGB_B0 part 1. Create 
+-- Code For temporary table TMP_20180602_VUH_XGB_B0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "0516_CODEGEN_P6I317_XGB_B0" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_VUH_XGB_B0" (
 	"KEY" NUMBER(19), 
 	"Estimator" BINARY_DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table 0516_CODEGEN_P6I317_XGB_B0 part 2. Populate
+-- Code For temporary table TMP_20180602_VUH_XGB_B0 part 2. Populate
 
-INSERT INTO "0516_CODEGEN_P6I317_XGB_B0" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO "TMP_20180602_VUH_XGB_B0" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_8" < 0.0007076415931805968) THEN CASE WHEN ("ADS"."Feature_2" < 0.0061888848431408405) THEN CASE WHEN ("ADS"."Feature_6" < 0.021027816459536552) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_2" < 0.047145746648311615) THEN CASE WHEN ("ADS"."Feature_2" < -0.021834230050444603) THEN 9 ELSE 10 END ELSE 6 END END AS node_id_2 
 FROM "DIABETES" "ADS"), 
@@ -157,19 +157,19 @@ FROM "XGB_Model_7" UNION ALL SELECT "XGB_Model_8"."KEY" AS "KEY", "XGB_Model_8".
 FROM "XGB_Model_8" UNION ALL SELECT "XGB_Model_9"."KEY" AS "KEY", "XGB_Model_9"."Estimator" AS "Estimator" 
 FROM "XGB_Model_9") "XGB_esu_0") "XGB_B0") "U"
 
--- Code For temporary table 0516_CODEGEN_31JK19_XGB_B1 part 1. Create 
+-- Code For temporary table TMP_20180602_HPL_XGB_B1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "0516_CODEGEN_31JK19_XGB_B1" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_HPL_XGB_B1" (
 	"KEY" NUMBER(19), 
 	"Estimator" BINARY_DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table 0516_CODEGEN_31JK19_XGB_B1 part 2. Populate
+-- Code For temporary table TMP_20180602_HPL_XGB_B1 part 2. Populate
 
-INSERT INTO "0516_CODEGEN_31JK19_XGB_B1" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO "TMP_20180602_HPL_XGB_B1" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "DT_node_lookup_10" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" < 0.009422320872545242) THEN CASE WHEN ("ADS"."Feature_7" < 0.03061874583363533) THEN CASE WHEN ("ADS"."Feature_5" < -0.047346703708171844) THEN 7 ELSE 8 END ELSE CASE WHEN ("ADS"."Feature_6" < -0.05260493978857994) THEN 9 ELSE 10 END END ELSE CASE WHEN ("ADS"."Feature_3" < 0.02359379082918167) THEN CASE WHEN ("ADS"."Feature_9" < 0.029988106340169907) THEN 11 ELSE 12 END ELSE CASE WHEN ("ADS"."Feature_2" < 0.04660683870315552) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM "DIABETES" "ADS"), 
@@ -252,24 +252,24 @@ FROM "XGB_Model_13" UNION ALL SELECT "XGB_Model_14"."KEY" AS "KEY", "XGB_Model_1
 FROM "XGB_Model_14" UNION ALL SELECT "XGB_Model_15"."KEY" AS "KEY", "XGB_Model_15"."Estimator" AS "Estimator" 
 FROM "XGB_Model_15") "XGB_esu_1") "XGB_B1") "U"
 
--- Code For temporary table 516_CODEGEN_OGMLV6_XGB_SUM part 1. Create 
+-- Code For temporary table TMP_20180602_081_XGB_SUM part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "516_CODEGEN_OGMLV6_XGB_SUM" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_081_XGB_SUM" (
 	"KEY" NUMBER(19), 
 	"Estimator" BINARY_DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table 516_CODEGEN_OGMLV6_XGB_SUM part 2. Populate
+-- Code For temporary table TMP_20180602_081_XGB_SUM part 2. Populate
 
-INSERT INTO "516_CODEGEN_OGMLV6_XGB_SUM" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO "TMP_20180602_081_XGB_SUM" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "XGB_Union" AS 
 (SELECT "XGB_EnsembleUnion"."KEY" AS "KEY", "XGB_EnsembleUnion"."Estimator" AS "Estimator" 
 FROM (SELECT "XGB_B0"."KEY" AS "KEY", "XGB_B0"."Estimator" AS "Estimator" 
-FROM "0516_CODEGEN_P6I317_XGB_B0" "XGB_B0" UNION ALL SELECT "XGB_B1"."KEY" AS "KEY", "XGB_B1"."Estimator" AS "Estimator" 
-FROM "0516_CODEGEN_31JK19_XGB_B1" "XGB_B1") "XGB_EnsembleUnion")
+FROM "TMP_20180602_VUH_XGB_B0" "XGB_B0" UNION ALL SELECT "XGB_B1"."KEY" AS "KEY", "XGB_B1"."Estimator" AS "Estimator" 
+FROM "TMP_20180602_HPL_XGB_B1" "XGB_B1") "XGB_EnsembleUnion")
  SELECT "XGB_sum"."KEY", "XGB_sum"."Estimator" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Estimator" AS BINARY_DOUBLE) AS "Estimator" 
 FROM (SELECT "XGB_Union"."KEY" AS "KEY", sum("XGB_Union"."Estimator") AS "Estimator" 
@@ -278,4 +278,4 @@ FROM "XGB_Union" GROUP BY "XGB_Union"."KEY") "T") "XGB_sum") "U"
 -- Model deployment code
 
 SELECT "XGB_sum"."KEY" AS "KEY", "XGB_sum"."Estimator" + 0.5 AS "Estimator" 
-FROM "516_CODEGEN_OGMLV6_XGB_SUM" "XGB_sum"
+FROM "TMP_20180602_081_XGB_SUM" "XGB_sum"
