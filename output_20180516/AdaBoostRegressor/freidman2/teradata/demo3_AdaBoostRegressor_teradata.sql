@@ -10,19 +10,19 @@
 
 
 
--- Code For temporary table tmp_20180516121114_codegen_mz2vp7_quantiles part 1. Create 
+-- Code For temporary table tmp_20180602151556_vey_quantiles part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516121114_codegen_mz2vp7_quantiles  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602151556_vey_quantiles  (
 	"KEY" BIGINT, 
 	"Quantile" DOUBLE PRECISION
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516121114_codegen_mz2vp7_quantiles part 2. Populate
+-- Code For temporary table tmp_20180602151556_vey_quantiles part 2. Populate
 
-INSERT INTO tmp_20180516121114_codegen_mz2vp7_quantiles ("KEY", "Quantile") SELECT "U"."KEY", "U"."Quantile" 
+INSERT INTO tmp_20180602151556_vey_quantiles ("KEY", "Quantile") SELECT "U"."KEY", "U"."Quantile" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= CAST(0.574011564254761 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_2" <= CAST(0.203485444188118 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_2" <= CAST(0.115773275494576 AS DOUBLE PRECISION)) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_1" <= CAST(1435.0573730468748 AS DOUBLE PRECISION)) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_1" <= CAST(989.6936645507814 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_3" <= CAST(7.547978401184082 AS DOUBLE PRECISION)) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_2" <= CAST(0.627507627010346 AS DOUBLE PRECISION)) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM freidman2 AS "ADS"), 
@@ -408,4 +408,4 @@ WHERE "Cumulative_Frequencies".cum_weight >= CAST(0.5 AS DOUBLE PRECISION) GROUP
 -- Model deployment code
 
 SELECT "Quantiles"."KEY" AS "KEY", "Quantiles"."Quantile" AS "Estimator" 
-FROM tmp_20180516121114_codegen_mz2vp7_quantiles AS "Quantiles"
+FROM tmp_20180602151556_vey_quantiles AS "Quantiles"

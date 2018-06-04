@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180516111121_codegen_h1xr46_rf_b0 part 1. Create 
+-- Code For temporary table tmp_20180602141955_ks0_rf_b0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516111121_codegen_h1xr46_rf_b0  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602141955_ks0_rf_b0  (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Proba_0" DOUBLE PRECISION, 
@@ -25,9 +25,9 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516111121_codegen_h1xr46_rf_b0  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516111121_codegen_h1xr46_rf_b0 part 2. Populate
+-- Code For temporary table tmp_20180602141955_ks0_rf_b0 part 2. Populate
 
-INSERT INTO tmp_20180516111121_codegen_h1xr46_rf_b0 ("KEY", "Score_0", "Proba_0", "LogProba_0", "Score_1", "Proba_1", "LogProba_1") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."LogProba_0", "U"."Score_1", "U"."Proba_1", "U"."LogProba_1" 
+INSERT INTO tmp_20180602141955_ks0_rf_b0 ("KEY", "Score_0", "Proba_0", "LogProba_0", "Score_1", "Proba_1", "LogProba_1") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."LogProba_0", "U"."Score_1", "U"."Proba_1", "U"."LogProba_1" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_16" <= CAST(-0.521168649196625 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_45" <= CAST(0.616055905818939 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_59" <= CAST(1.156575202941894 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_10" <= CAST(2.19019079208374 AS DOUBLE PRECISION)) THEN 4 ELSE 5 END ELSE 6 END ELSE 7 END ELSE CASE WHEN ("ADS"."Feature_94" <= CAST(0.527724385261536 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_4" <= CAST(-0.954082608222961 AS DOUBLE PRECISION)) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_50" <= CAST(0.070807382464409 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_98" <= CAST(0.849256753921509 AS DOUBLE PRECISION)) THEN 14 ELSE 15 END ELSE CASE WHEN ("ADS"."Feature_69" <= CAST(-0.161534816026688 AS DOUBLE PRECISION)) THEN 17 ELSE 18 END END END END AS node_id_2 
 FROM "BinaryClass_100" AS "ADS"), 
@@ -287,10 +287,10 @@ FROM "RF_Model_7" UNION ALL SELECT "RF_Model_8"."KEY" AS "KEY", "RF_Model_8"."Sc
 FROM "RF_Model_8" UNION ALL SELECT "RF_Model_9"."KEY" AS "KEY", "RF_Model_9"."Score_0" AS "Score_0", "RF_Model_9"."Proba_0" AS "Proba_0", "RF_Model_9"."LogProba_0" AS "LogProba_0", "RF_Model_9"."Score_1" AS "Score_1", "RF_Model_9"."Proba_1" AS "Proba_1", "RF_Model_9"."LogProba_1" AS "LogProba_1" 
 FROM "RF_Model_9") AS "RF_esu_0") AS "RF_B0") AS "U"
 
--- Code For temporary table tmp_20180516111121_codegen_5zjm8y_rf_b1 part 1. Create 
+-- Code For temporary table tmp_20180602141955_63g_rf_b1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516111121_codegen_5zjm8y_rf_b1  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602141955_63g_rf_b1  (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Proba_0" DOUBLE PRECISION, 
@@ -302,9 +302,9 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516111121_codegen_5zjm8y_rf_b1  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516111121_codegen_5zjm8y_rf_b1 part 2. Populate
+-- Code For temporary table tmp_20180602141955_63g_rf_b1 part 2. Populate
 
-INSERT INTO tmp_20180516111121_codegen_5zjm8y_rf_b1 ("KEY", "Score_0", "Proba_0", "LogProba_0", "Score_1", "Proba_1", "LogProba_1") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."LogProba_0", "U"."Score_1", "U"."Proba_1", "U"."LogProba_1" 
+INSERT INTO tmp_20180602141955_63g_rf_b1 ("KEY", "Score_0", "Proba_0", "LogProba_0", "Score_1", "Proba_1", "LogProba_1") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."LogProba_0", "U"."Score_1", "U"."Proba_1", "U"."LogProba_1" 
 FROM (WITH "DT_node_lookup_10" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_77" <= CAST(0.034455347806215 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_73" <= CAST(1.644922256469726 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_18" <= CAST(1.077163457870483 AS DOUBLE PRECISION)) THEN 3 ELSE CASE WHEN ("ADS"."Feature_17" <= CAST(-0.545759677886963 AS DOUBLE PRECISION)) THEN 5 ELSE 6 END END ELSE 7 END ELSE CASE WHEN ("ADS"."Feature_69" <= CAST(-0.463868856430054 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_6" <= CAST(0.38862419128418 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_94" <= CAST(1.260204195976257 AS DOUBLE PRECISION)) THEN 11 ELSE 12 END ELSE 13 END ELSE CASE WHEN ("ADS"."Feature_8" <= CAST(1.268911123275757 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_84" <= CAST(1.679848909378052 AS DOUBLE PRECISION)) THEN 16 ELSE CASE WHEN ("ADS"."Feature_5" <= CAST(0.468414068222046 AS DOUBLE PRECISION)) THEN 18 ELSE 19 END END ELSE CASE WHEN ("ADS"."Feature_96" <= CAST(0.224258974194527 AS DOUBLE PRECISION)) THEN 21 ELSE 22 END END END END AS node_id_2 
 FROM "BinaryClass_100" AS "ADS"), 
@@ -461,10 +461,10 @@ FROM "RF_Model_13" UNION ALL SELECT "RF_Model_14"."KEY" AS "KEY", "RF_Model_14".
 FROM "RF_Model_14" UNION ALL SELECT "RF_Model_15"."KEY" AS "KEY", "RF_Model_15"."Score_0" AS "Score_0", "RF_Model_15"."Proba_0" AS "Proba_0", "RF_Model_15"."LogProba_0" AS "LogProba_0", "RF_Model_15"."Score_1" AS "Score_1", "RF_Model_15"."Proba_1" AS "Proba_1", "RF_Model_15"."LogProba_1" AS "LogProba_1" 
 FROM "RF_Model_15") AS "RF_esu_1") AS "RF_B1") AS "U"
 
--- Code For temporary table tmp_20180516111121_codegen_k1qnet_rf_avg part 1. Create 
+-- Code For temporary table tmp_20180602141955_4zc_rf_avg part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516111121_codegen_k1qnet_rf_avg  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602141955_4zc_rf_avg  (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Proba_0" DOUBLE PRECISION, 
@@ -476,14 +476,14 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516111121_codegen_k1qnet_rf_avg  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516111121_codegen_k1qnet_rf_avg part 2. Populate
+-- Code For temporary table tmp_20180602141955_4zc_rf_avg part 2. Populate
 
-INSERT INTO tmp_20180516111121_codegen_k1qnet_rf_avg ("KEY", "Score_0", "Proba_0", "LogProba_0", "Score_1", "Proba_1", "LogProba_1") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."LogProba_0", "U"."Score_1", "U"."Proba_1", "U"."LogProba_1" 
+INSERT INTO tmp_20180602141955_4zc_rf_avg ("KEY", "Score_0", "Proba_0", "LogProba_0", "Score_1", "Proba_1", "LogProba_1") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."LogProba_0", "U"."Score_1", "U"."Proba_1", "U"."LogProba_1" 
 FROM (WITH "RF_Union" AS 
 (SELECT "RF_EnsembleUnion"."KEY" AS "KEY", "RF_EnsembleUnion"."Score_0" AS "Score_0", "RF_EnsembleUnion"."Proba_0" AS "Proba_0", "RF_EnsembleUnion"."LogProba_0" AS "LogProba_0", "RF_EnsembleUnion"."Score_1" AS "Score_1", "RF_EnsembleUnion"."Proba_1" AS "Proba_1", "RF_EnsembleUnion"."LogProba_1" AS "LogProba_1" 
 FROM (SELECT "RF_B0"."KEY" AS "KEY", "RF_B0"."Score_0" AS "Score_0", "RF_B0"."Proba_0" AS "Proba_0", "RF_B0"."LogProba_0" AS "LogProba_0", "RF_B0"."Score_1" AS "Score_1", "RF_B0"."Proba_1" AS "Proba_1", "RF_B0"."LogProba_1" AS "LogProba_1" 
-FROM tmp_20180516111121_codegen_h1xr46_rf_b0 AS "RF_B0" UNION ALL SELECT "RF_B1"."KEY" AS "KEY", "RF_B1"."Score_0" AS "Score_0", "RF_B1"."Proba_0" AS "Proba_0", "RF_B1"."LogProba_0" AS "LogProba_0", "RF_B1"."Score_1" AS "Score_1", "RF_B1"."Proba_1" AS "Proba_1", "RF_B1"."LogProba_1" AS "LogProba_1" 
-FROM tmp_20180516111121_codegen_5zjm8y_rf_b1 AS "RF_B1") AS "RF_EnsembleUnion")
+FROM tmp_20180602141955_ks0_rf_b0 AS "RF_B0" UNION ALL SELECT "RF_B1"."KEY" AS "KEY", "RF_B1"."Score_0" AS "Score_0", "RF_B1"."Proba_0" AS "Proba_0", "RF_B1"."LogProba_0" AS "LogProba_0", "RF_B1"."Score_1" AS "Score_1", "RF_B1"."Proba_1" AS "Proba_1", "RF_B1"."LogProba_1" AS "LogProba_1" 
+FROM tmp_20180602141955_63g_rf_b1 AS "RF_B1") AS "RF_EnsembleUnion")
  SELECT "RF_avg"."KEY", "RF_avg"."Score_0", "RF_avg"."Proba_0", "RF_avg"."LogProba_0", "RF_avg"."Score_1", "RF_avg"."Proba_1", "RF_avg"."LogProba_1" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Score_0" AS DOUBLE PRECISION) AS "Score_0", CAST("T"."Proba_0" AS DOUBLE PRECISION) AS "Proba_0", CAST("T"."LogProba_0" AS DOUBLE PRECISION) AS "LogProba_0", CAST("T"."Score_1" AS DOUBLE PRECISION) AS "Score_1", CAST("T"."Proba_1" AS DOUBLE PRECISION) AS "Proba_1", CAST("T"."LogProba_1" AS DOUBLE PRECISION) AS "LogProba_1" 
 FROM (SELECT "RF_Union"."KEY" AS "KEY", avg(CAST("RF_Union"."Score_0" AS DOUBLE PRECISION)) AS "Score_0", avg(CAST("RF_Union"."Proba_0" AS DOUBLE PRECISION)) AS "Proba_0", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_0", avg(CAST("RF_Union"."Score_1" AS DOUBLE PRECISION)) AS "Score_1", avg(CAST("RF_Union"."Proba_1" AS DOUBLE PRECISION)) AS "Proba_1", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_1" 
@@ -493,7 +493,7 @@ FROM "RF_Union" GROUP BY "RF_Union"."KEY") AS "T") AS "RF_avg") AS "U"
 
 WITH orig_cte AS 
 (SELECT "RF_avg"."KEY" AS "KEY", "RF_avg"."Score_0" AS "Score_0", "RF_avg"."Score_1" AS "Score_1", "RF_avg"."Proba_0" AS "Proba_0", "RF_avg"."Proba_1" AS "Proba_1", "RF_avg"."LogProba_0" AS "LogProba_0", "RF_avg"."LogProba_1" AS "LogProba_1", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba" 
-FROM tmp_20180516111121_codegen_k1qnet_rf_avg AS "RF_avg"), 
+FROM tmp_20180602141955_4zc_rf_avg AS "RF_avg"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu."class" AS "class", scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS "class", orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

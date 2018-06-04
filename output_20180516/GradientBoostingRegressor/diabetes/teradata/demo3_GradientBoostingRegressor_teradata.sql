@@ -10,19 +10,19 @@
 
 
 
--- Code For temporary table tmp_20180516115309_codegen_kh946q_gb_b0 part 1. Create 
+-- Code For temporary table tmp_20180602145908_wiz_gb_b0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516115309_codegen_kh946q_gb_b0  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602145908_wiz_gb_b0  (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE PRECISION
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516115309_codegen_kh946q_gb_b0 part 2. Populate
+-- Code For temporary table tmp_20180602145908_wiz_gb_b0 part 2. Populate
 
-INSERT INTO tmp_20180516115309_codegen_kh946q_gb_b0 ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO tmp_20180602145908_wiz_gb_b0 ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_8" <= CAST(0.000707641593181 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_2" <= CAST(0.006188884843141 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_5" <= CAST(0.112672165036201 AS DOUBLE PRECISION)) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_0" <= CAST(-0.083614125847816 AS DOUBLE PRECISION)) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_2" <= CAST(0.055768236517906 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_3" <= CAST(0.037365272641182 AS DOUBLE PRECISION)) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_5" <= CAST(0.02248540520668 AS DOUBLE PRECISION)) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM diabetes AS "ADS"), 
@@ -257,19 +257,19 @@ FROM "GB_Model_7_0" UNION ALL SELECT "GB_Model_8_0"."KEY" AS "KEY", "GB_Model_8_
 FROM "GB_Model_8_0" UNION ALL SELECT "GB_Model_9_0"."KEY" AS "KEY", "GB_Model_9_0"."Estimator" AS "Estimator" 
 FROM "GB_Model_9_0") AS "GB_esu_0") AS "GB_B0") AS "U"
 
--- Code For temporary table tmp_20180516115309_codegen_ul6s6e_gb_b1 part 1. Create 
+-- Code For temporary table tmp_20180602145908_i56_gb_b1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516115309_codegen_ul6s6e_gb_b1  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602145908_i56_gb_b1  (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE PRECISION
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516115309_codegen_ul6s6e_gb_b1 part 2. Populate
+-- Code For temporary table tmp_20180602145908_i56_gb_b1 part 2. Populate
 
-INSERT INTO tmp_20180516115309_codegen_ul6s6e_gb_b1 ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO tmp_20180602145908_i56_gb_b1 ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "DT_node_lookup_10" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= CAST(0.009422320872545 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_7" <= CAST(0.030618745833635 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_8" <= CAST(0.027040982618928 AS DOUBLE PRECISION)) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_3" <= CAST(-0.041246943175793 AS DOUBLE PRECISION)) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_3" <= CAST(0.023593790829182 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_9" <= CAST(0.02998810634017 AS DOUBLE PRECISION)) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_8" <= CAST(-0.031999997794628 AS DOUBLE PRECISION)) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM diabetes AS "ADS"), 
@@ -412,24 +412,24 @@ FROM "GB_Model_13_0" UNION ALL SELECT "GB_Model_14_0"."KEY" AS "KEY", "GB_Model_
 FROM "GB_Model_14_0" UNION ALL SELECT "GB_Model_15_0"."KEY" AS "KEY", "GB_Model_15_0"."Estimator" AS "Estimator" 
 FROM "GB_Model_15_0") AS "GB_esu_1") AS "GB_B1") AS "U"
 
--- Code For temporary table tmp_20180516115309_codegen_fyqx9a_gb_sum part 1. Create 
+-- Code For temporary table tmp_20180602145908_pha_gb_sum part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516115309_codegen_fyqx9a_gb_sum  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602145908_pha_gb_sum  (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE PRECISION
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516115309_codegen_fyqx9a_gb_sum part 2. Populate
+-- Code For temporary table tmp_20180602145908_pha_gb_sum part 2. Populate
 
-INSERT INTO tmp_20180516115309_codegen_fyqx9a_gb_sum ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO tmp_20180602145908_pha_gb_sum ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "GB_Union" AS 
 (SELECT "GB_EnsembleUnion"."KEY" AS "KEY", "GB_EnsembleUnion"."Estimator" AS "Estimator" 
 FROM (SELECT "GB_B0"."KEY" AS "KEY", "GB_B0"."Estimator" AS "Estimator" 
-FROM tmp_20180516115309_codegen_kh946q_gb_b0 AS "GB_B0" UNION ALL SELECT "GB_B1"."KEY" AS "KEY", "GB_B1"."Estimator" AS "Estimator" 
-FROM tmp_20180516115309_codegen_ul6s6e_gb_b1 AS "GB_B1") AS "GB_EnsembleUnion")
+FROM tmp_20180602145908_wiz_gb_b0 AS "GB_B0" UNION ALL SELECT "GB_B1"."KEY" AS "KEY", "GB_B1"."Estimator" AS "Estimator" 
+FROM tmp_20180602145908_i56_gb_b1 AS "GB_B1") AS "GB_EnsembleUnion")
  SELECT "GB_sum"."KEY", "GB_sum"."Estimator" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Estimator" AS DOUBLE PRECISION) AS "Estimator" 
 FROM (SELECT "GB_Union"."KEY" AS "KEY", sum("GB_Union"."Estimator") AS "Estimator" 
@@ -438,4 +438,4 @@ FROM "GB_Union" GROUP BY "GB_Union"."KEY") AS "T") AS "GB_sum") AS "U"
 -- Model deployment code
 
 SELECT "GB_sum"."KEY" AS "KEY", CAST(154.07365439093485 AS DOUBLE PRECISION) + CAST(0.1 AS DOUBLE PRECISION) * "GB_sum"."Estimator" AS "Estimator" 
-FROM tmp_20180516115309_codegen_fyqx9a_gb_sum AS "GB_sum"
+FROM tmp_20180602145908_pha_gb_sum AS "GB_sum"

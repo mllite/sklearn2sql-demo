@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180516122143_codegen_ptwmsg_ads_imp_1_out part 1. Create 
+-- Code For temporary table tmp_20180602152529_6hc_ads_imp_1_out part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516122143_codegen_ptwmsg_ads_imp_1_out  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602152529_6hc_ads_imp_1_out  (
 	"KEY" BIGINT, 
 	imputer_output_2 DOUBLE PRECISION, 
 	imputer_output_3 DOUBLE PRECISION, 
@@ -23,17 +23,17 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516122143_codegen_ptwmsg_ads_imp_1_out  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516122143_codegen_ptwmsg_ads_imp_1_out part 2. Populate
+-- Code For temporary table tmp_20180602152529_6hc_ads_imp_1_out part 2. Populate
 
-INSERT INTO tmp_20180516122143_codegen_ptwmsg_ads_imp_1_out ("KEY", imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT "U"."KEY", "U".imputer_output_2, "U".imputer_output_3, "U".imputer_output_4, "U".imputer_output_5 
+INSERT INTO tmp_20180602152529_6hc_ads_imp_1_out ("KEY", imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT "U"."KEY", "U".imputer_output_2, "U".imputer_output_3, "U".imputer_output_4, "U".imputer_output_5 
 FROM (SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".imputer_output_2, "ADS_imp_1_OUT".imputer_output_3, "ADS_imp_1_OUT".imputer_output_4, "ADS_imp_1_OUT".imputer_output_5 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN 43.79128122207401 ELSE "ADS"."Feature_0" END AS imputer_output_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 945.9672833084396 ELSE "ADS"."Feature_1" END AS imputer_output_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 0.5310009099975209 ELSE "ADS"."Feature_2" END AS imputer_output_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 6.139967152050499 ELSE "ADS"."Feature_3" END AS imputer_output_5 
 FROM freidman3 AS "ADS") AS "ADS_imp_1_OUT") AS "U"
 
--- Code For temporary table tmp_20180516122143_codegen_torevd_ads_sca_2_out part 1. Create 
+-- Code For temporary table tmp_20180602152529_5rq_ads_sca_2_out part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516122143_codegen_torevd_ads_sca_2_out  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602152529_5rq_ads_sca_2_out  (
 	"KEY" BIGINT, 
 	scaler_output_2 DOUBLE PRECISION, 
 	scaler_output_3 DOUBLE PRECISION, 
@@ -43,29 +43,29 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516122143_codegen_torevd_ads_sca_2_out  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516122143_codegen_torevd_ads_sca_2_out part 2. Populate
+-- Code For temporary table tmp_20180602152529_5rq_ads_sca_2_out part 2. Populate
 
-INSERT INTO tmp_20180516122143_codegen_torevd_ads_sca_2_out ("KEY", scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT "U"."KEY", "U".scaler_output_2, "U".scaler_output_3, "U".scaler_output_4, "U".scaler_output_5 
+INSERT INTO tmp_20180602152529_5rq_ads_sca_2_out ("KEY", scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT "U"."KEY", "U".scaler_output_2, "U".scaler_output_3, "U".scaler_output_4, "U".scaler_output_5 
 FROM (SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_output_2, "ADS_sca_2_OUT".scaler_output_3, "ADS_sca_2_OUT".scaler_output_4, "ADS_sca_2_OUT".scaler_output_5 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".imputer_output_2 AS DOUBLE PRECISION) - CAST(43.79128122207402 AS DOUBLE PRECISION)) / CAST(26.03562357622511 AS DOUBLE PRECISION) AS scaler_output_2, (CAST("ADS_imp_1_OUT".imputer_output_3 AS DOUBLE PRECISION) - CAST(945.9672833084397 AS DOUBLE PRECISION)) / CAST(461.4552766146446 AS DOUBLE PRECISION) AS scaler_output_3, (CAST("ADS_imp_1_OUT".imputer_output_4 AS DOUBLE PRECISION) - CAST(0.531000909997521 AS DOUBLE PRECISION)) / CAST(0.290186328214479 AS DOUBLE PRECISION) AS scaler_output_4, (CAST("ADS_imp_1_OUT".imputer_output_5 AS DOUBLE PRECISION) - CAST(6.139967152050499 AS DOUBLE PRECISION)) / CAST(3.072917242564058 AS DOUBLE PRECISION) AS scaler_output_5 
-FROM tmp_20180516122143_codegen_ptwmsg_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
+FROM tmp_20180602152529_6hc_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
 
--- Code For temporary table tmp_20180516122143_codegen_dlmpik_xgb_b0 part 1. Create 
+-- Code For temporary table tmp_20180602152529_1o2_xgb_b0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516122143_codegen_dlmpik_xgb_b0  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602152529_1o2_xgb_b0  (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE PRECISION
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516122143_codegen_dlmpik_xgb_b0 part 2. Populate
+-- Code For temporary table tmp_20180602152529_1o2_xgb_b0 part 2. Populate
 
-INSERT INTO tmp_20180516122143_codegen_dlmpik_xgb_b0 ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO tmp_20180602152529_1o2_xgb_b0 ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < CAST(-1.43090009689331 AS DOUBLE PRECISION)) THEN 1 ELSE 2 END AS node_id_2 
-FROM tmp_20180516122143_codegen_torevd_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180602152529_5rq_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 dummy_cte AS 
 (SELECT CAST(0.0 AS DOUBLE PRECISION) AS "X"), 
 "DT_node_data" AS 
@@ -81,7 +81,7 @@ FROM "DT_node_lookup" LEFT OUTER JOIN "DT_node_data" ON "DT_node_lookup".node_id
 FROM "DT_Output"), 
 "DT_node_lookup_1" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < CAST(-1.43090009689331 AS DOUBLE PRECISION)) THEN 1 ELSE 2 END AS node_id_2 
-FROM tmp_20180516122143_codegen_torevd_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180602152529_5rq_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_1" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Estimator" AS DOUBLE PRECISION) AS "Estimator" 
 FROM (SELECT 1 AS nid, CAST(0.030045310035348 AS DOUBLE PRECISION) AS "Estimator" 
@@ -95,7 +95,7 @@ FROM "DT_node_lookup_1" LEFT OUTER JOIN "DT_node_data_1" ON "DT_node_lookup_1".n
 FROM "DT_Output_1"), 
 "DT_node_lookup_2" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < CAST(-1.43090009689331 AS DOUBLE PRECISION)) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 < CAST(1.102112770080566 AS DOUBLE PRECISION)) THEN 3 ELSE 4 END END AS node_id_2 
-FROM tmp_20180516122143_codegen_torevd_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180602152529_5rq_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_2" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Estimator" AS DOUBLE PRECISION) AS "Estimator" 
 FROM (SELECT 1 AS nid, CAST(0.027313916012645 AS DOUBLE PRECISION) AS "Estimator" 
@@ -110,7 +110,7 @@ FROM "DT_node_lookup_2" LEFT OUTER JOIN "DT_node_data_2" ON "DT_node_lookup_2".n
 FROM "DT_Output_2"), 
 "DT_node_lookup_3" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < CAST(-1.43090009689331 AS DOUBLE PRECISION)) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 < CAST(0.68163388967514 AS DOUBLE PRECISION)) THEN 3 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 < CAST(-0.203755870461464 AS DOUBLE PRECISION)) THEN 5 ELSE 6 END END END AS node_id_2 
-FROM tmp_20180516122143_codegen_torevd_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180602152529_5rq_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_3" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Estimator" AS DOUBLE PRECISION) AS "Estimator" 
 FROM (SELECT 1 AS nid, CAST(0.024830834940076 AS DOUBLE PRECISION) AS "Estimator" 
@@ -126,7 +126,7 @@ FROM "DT_node_lookup_3" LEFT OUTER JOIN "DT_node_data_3" ON "DT_node_lookup_3".n
 FROM "DT_Output_3"), 
 "DT_node_lookup_4" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < CAST(-0.983869314193726 AS DOUBLE PRECISION)) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 < CAST(-1.336119413375854 AS DOUBLE PRECISION)) THEN 3 ELSE 4 END END AS node_id_2 
-FROM tmp_20180516122143_codegen_torevd_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180602152529_5rq_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_4" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Estimator" AS DOUBLE PRECISION) AS "Estimator" 
 FROM (SELECT 1 AS nid, CAST(0.03082768432796 AS DOUBLE PRECISION) AS "Estimator" 
@@ -141,7 +141,7 @@ FROM "DT_node_lookup_4" LEFT OUTER JOIN "DT_node_data_4" ON "DT_node_lookup_4".n
 FROM "DT_Output_4"), 
 "DT_node_lookup_5" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < CAST(-1.43090009689331 AS DOUBLE PRECISION)) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 < CAST(0.68163388967514 AS DOUBLE PRECISION)) THEN 3 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 < CAST(-0.203755870461464 AS DOUBLE PRECISION)) THEN 5 ELSE 6 END END END AS node_id_2 
-FROM tmp_20180516122143_codegen_torevd_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180602152529_5rq_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_5" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Estimator" AS DOUBLE PRECISION) AS "Estimator" 
 FROM (SELECT 1 AS nid, CAST(0.019770970568061 AS DOUBLE PRECISION) AS "Estimator" 
@@ -157,7 +157,7 @@ FROM "DT_node_lookup_5" LEFT OUTER JOIN "DT_node_data_5" ON "DT_node_lookup_5".n
 FROM "DT_Output_5"), 
 "DT_node_lookup_6" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < CAST(-1.128638505935669 AS DOUBLE PRECISION)) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 < CAST(-0.349178671836853 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 < CAST(0.19130240380764 AS DOUBLE PRECISION)) THEN 5 ELSE 6 END ELSE 4 END END AS node_id_2 
-FROM tmp_20180516122143_codegen_torevd_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180602152529_5rq_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_6" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Estimator" AS DOUBLE PRECISION) AS "Estimator" 
 FROM (SELECT 1 AS nid, CAST(0.022354198619723 AS DOUBLE PRECISION) AS "Estimator" 
@@ -173,7 +173,7 @@ FROM "DT_node_lookup_6" LEFT OUTER JOIN "DT_node_data_6" ON "DT_node_lookup_6".n
 FROM "DT_Output_6"), 
 "DT_node_lookup_7" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < CAST(-1.43090009689331 AS DOUBLE PRECISION)) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 < CAST(0.208998054265976 AS DOUBLE PRECISION)) THEN 3 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 < CAST(-0.403401613235474 AS DOUBLE PRECISION)) THEN 5 ELSE 6 END END END AS node_id_2 
-FROM tmp_20180516122143_codegen_torevd_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180602152529_5rq_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_7" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Estimator" AS DOUBLE PRECISION) AS "Estimator" 
 FROM (SELECT 1 AS nid, CAST(0.015941409394145 AS DOUBLE PRECISION) AS "Estimator" 
@@ -189,7 +189,7 @@ FROM "DT_node_lookup_7" LEFT OUTER JOIN "DT_node_data_7" ON "DT_node_lookup_7".n
 FROM "DT_Output_7"), 
 "DT_node_lookup_8" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < CAST(-1.128638505935669 AS DOUBLE PRECISION)) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 < CAST(-0.349178671836853 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 < CAST(0.19130240380764 AS DOUBLE PRECISION)) THEN 5 ELSE 6 END ELSE 4 END END AS node_id_2 
-FROM tmp_20180516122143_codegen_torevd_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180602152529_5rq_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_8" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Estimator" AS DOUBLE PRECISION) AS "Estimator" 
 FROM (SELECT 1 AS nid, CAST(0.01801361143589 AS DOUBLE PRECISION) AS "Estimator" 
@@ -205,7 +205,7 @@ FROM "DT_node_lookup_8" LEFT OUTER JOIN "DT_node_data_8" ON "DT_node_lookup_8".n
 FROM "DT_Output_8"), 
 "DT_node_lookup_9" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < CAST(-1.128638505935669 AS DOUBLE PRECISION)) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 < CAST(-1.336119413375854 AS DOUBLE PRECISION)) THEN 3 ELSE 4 END END AS node_id_2 
-FROM tmp_20180516122143_codegen_torevd_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180602152529_5rq_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_9" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Estimator" AS DOUBLE PRECISION) AS "Estimator" 
 FROM (SELECT 1 AS nid, CAST(0.016332341358066 AS DOUBLE PRECISION) AS "Estimator" 
@@ -232,22 +232,22 @@ FROM "XGB_Model_7" UNION ALL SELECT "XGB_Model_8"."KEY" AS "KEY", "XGB_Model_8".
 FROM "XGB_Model_8" UNION ALL SELECT "XGB_Model_9"."KEY" AS "KEY", "XGB_Model_9"."Estimator" AS "Estimator" 
 FROM "XGB_Model_9") AS "XGB_esu_0") AS "XGB_B0") AS "U"
 
--- Code For temporary table tmp_20180516122143_codegen_3ax35w_xgb_b1 part 1. Create 
+-- Code For temporary table tmp_20180602152529_ebk_xgb_b1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516122143_codegen_3ax35w_xgb_b1  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602152529_ebk_xgb_b1  (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE PRECISION
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516122143_codegen_3ax35w_xgb_b1 part 2. Populate
+-- Code For temporary table tmp_20180602152529_ebk_xgb_b1 part 2. Populate
 
-INSERT INTO tmp_20180516122143_codegen_3ax35w_xgb_b1 ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO tmp_20180602152529_ebk_xgb_b1 ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "DT_node_lookup_10" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < CAST(-0.946339011192322 AS DOUBLE PRECISION)) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 < CAST(-1.336119413375854 AS DOUBLE PRECISION)) THEN 3 ELSE 4 END END AS node_id_2 
-FROM tmp_20180516122143_codegen_torevd_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180602152529_5rq_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 dummy_cte AS 
 (SELECT CAST(0.0 AS DOUBLE PRECISION) AS "X"), 
 "DT_node_data_10" AS 
@@ -264,7 +264,7 @@ FROM "DT_node_lookup_10" LEFT OUTER JOIN "DT_node_data_10" ON "DT_node_lookup_10
 FROM "DT_Output_10"), 
 "DT_node_lookup_11" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 < CAST(-0.271342635154724 AS DOUBLE PRECISION)) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < CAST(-0.983869314193726 AS DOUBLE PRECISION)) THEN 3 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 < CAST(-0.349178671836853 AS DOUBLE PRECISION)) THEN 5 ELSE 6 END END END AS node_id_2 
-FROM tmp_20180516122143_codegen_torevd_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180602152529_5rq_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_11" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Estimator" AS DOUBLE PRECISION) AS "Estimator" 
 FROM (SELECT 1 AS nid, CAST(0.03643549606204 AS DOUBLE PRECISION) AS "Estimator" 
@@ -280,7 +280,7 @@ FROM "DT_node_lookup_11" LEFT OUTER JOIN "DT_node_data_11" ON "DT_node_lookup_11
 FROM "DT_Output_11"), 
 "DT_node_lookup_12" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 < CAST(-0.271342635154724 AS DOUBLE PRECISION)) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < CAST(-0.983869314193726 AS DOUBLE PRECISION)) THEN 3 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 < CAST(-0.349178671836853 AS DOUBLE PRECISION)) THEN 5 ELSE 6 END END END AS node_id_2 
-FROM tmp_20180516122143_codegen_torevd_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180602152529_5rq_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_12" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Estimator" AS DOUBLE PRECISION) AS "Estimator" 
 FROM (SELECT 1 AS nid, CAST(0.032902359962463 AS DOUBLE PRECISION) AS "Estimator" 
@@ -296,7 +296,7 @@ FROM "DT_node_lookup_12" LEFT OUTER JOIN "DT_node_data_12" ON "DT_node_lookup_12
 FROM "DT_Output_12"), 
 "DT_node_lookup_13" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < CAST(-1.43090009689331 AS DOUBLE PRECISION)) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 < CAST(1.165229797363281 AS DOUBLE PRECISION)) THEN 3 ELSE 4 END END AS node_id_2 
-FROM tmp_20180516122143_codegen_torevd_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180602152529_5rq_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_13" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Estimator" AS DOUBLE PRECISION) AS "Estimator" 
 FROM (SELECT 1 AS nid, CAST(0.006589339580387 AS DOUBLE PRECISION) AS "Estimator" 
@@ -311,7 +311,7 @@ FROM "DT_node_lookup_13" LEFT OUTER JOIN "DT_node_data_13" ON "DT_node_lookup_13
 FROM "DT_Output_13"), 
 "DT_node_lookup_14" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 < CAST(-0.271342635154724 AS DOUBLE PRECISION)) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < CAST(-0.983869314193726 AS DOUBLE PRECISION)) THEN 3 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 < CAST(-0.349178671836853 AS DOUBLE PRECISION)) THEN 5 ELSE 6 END END END AS node_id_2 
-FROM tmp_20180516122143_codegen_torevd_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180602152529_5rq_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_14" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Estimator" AS DOUBLE PRECISION) AS "Estimator" 
 FROM (SELECT 1 AS nid, CAST(0.027468154206872 AS DOUBLE PRECISION) AS "Estimator" 
@@ -327,7 +327,7 @@ FROM "DT_node_lookup_14" LEFT OUTER JOIN "DT_node_data_14" ON "DT_node_lookup_14
 FROM "DT_Output_14"), 
 "DT_node_lookup_15" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 < CAST(-0.271342635154724 AS DOUBLE PRECISION)) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < CAST(-1.037949681282044 AS DOUBLE PRECISION)) THEN 3 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 < CAST(-0.349178671836853 AS DOUBLE PRECISION)) THEN 5 ELSE 6 END END END AS node_id_2 
-FROM tmp_20180516122143_codegen_torevd_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180602152529_5rq_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "DT_node_data_15" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Estimator" AS DOUBLE PRECISION) AS "Estimator" 
 FROM (SELECT 1 AS nid, CAST(0.024804571643472 AS DOUBLE PRECISION) AS "Estimator" 
@@ -351,24 +351,24 @@ FROM "XGB_Model_13" UNION ALL SELECT "XGB_Model_14"."KEY" AS "KEY", "XGB_Model_1
 FROM "XGB_Model_14" UNION ALL SELECT "XGB_Model_15"."KEY" AS "KEY", "XGB_Model_15"."Estimator" AS "Estimator" 
 FROM "XGB_Model_15") AS "XGB_esu_1") AS "XGB_B1") AS "U"
 
--- Code For temporary table tmp_20180516122143_codegen_vfiry2_xgb_sum part 1. Create 
+-- Code For temporary table tmp_20180602152529_wy2_xgb_sum part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516122143_codegen_vfiry2_xgb_sum  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602152529_wy2_xgb_sum  (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE PRECISION
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516122143_codegen_vfiry2_xgb_sum part 2. Populate
+-- Code For temporary table tmp_20180602152529_wy2_xgb_sum part 2. Populate
 
-INSERT INTO tmp_20180516122143_codegen_vfiry2_xgb_sum ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO tmp_20180602152529_wy2_xgb_sum ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "XGB_Union" AS 
 (SELECT "XGB_EnsembleUnion"."KEY" AS "KEY", "XGB_EnsembleUnion"."Estimator" AS "Estimator" 
 FROM (SELECT "XGB_B0"."KEY" AS "KEY", "XGB_B0"."Estimator" AS "Estimator" 
-FROM tmp_20180516122143_codegen_dlmpik_xgb_b0 AS "XGB_B0" UNION ALL SELECT "XGB_B1"."KEY" AS "KEY", "XGB_B1"."Estimator" AS "Estimator" 
-FROM tmp_20180516122143_codegen_3ax35w_xgb_b1 AS "XGB_B1") AS "XGB_EnsembleUnion")
+FROM tmp_20180602152529_1o2_xgb_b0 AS "XGB_B0" UNION ALL SELECT "XGB_B1"."KEY" AS "KEY", "XGB_B1"."Estimator" AS "Estimator" 
+FROM tmp_20180602152529_ebk_xgb_b1 AS "XGB_B1") AS "XGB_EnsembleUnion")
  SELECT "XGB_sum"."KEY", "XGB_sum"."Estimator" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Estimator" AS DOUBLE PRECISION) AS "Estimator" 
 FROM (SELECT "XGB_Union"."KEY" AS "KEY", sum("XGB_Union"."Estimator") AS "Estimator" 
@@ -377,4 +377,4 @@ FROM "XGB_Union" GROUP BY "XGB_Union"."KEY") AS "T") AS "XGB_sum") AS "U"
 -- Model deployment code
 
 SELECT "XGB_sum"."KEY" AS "KEY", "XGB_sum"."Estimator" + CAST(0.5 AS DOUBLE PRECISION) AS "Estimator" 
-FROM tmp_20180516122143_codegen_vfiry2_xgb_sum AS "XGB_sum"
+FROM tmp_20180602152529_wy2_xgb_sum AS "XGB_sum"

@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180516112523_codegen_b92nx0_ads_imp_1_out part 1. Create 
+-- Code For temporary table tmp_20180602143320_c6g_ads_imp_1_out part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516112523_codegen_b92nx0_ads_imp_1_out  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602143320_c6g_ads_imp_1_out  (
 	"KEY" BIGINT, 
 	impter_2 DOUBLE PRECISION, 
 	impter_3 DOUBLE PRECISION, 
@@ -29,17 +29,17 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516112523_codegen_b92nx0_ads_imp_1_out  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516112523_codegen_b92nx0_ads_imp_1_out part 2. Populate
+-- Code For temporary table tmp_20180602143320_c6g_ads_imp_1_out part 2. Populate
 
-INSERT INTO tmp_20180516112523_codegen_b92nx0_ads_imp_1_out ("KEY", impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT "U"."KEY", "U".impter_2, "U".impter_3, "U".impter_4, "U".impter_5, "U".impter_6, "U".impter_7, "U".impter_8, "U".impter_9, "U".impter_10, "U".impter_11 
+INSERT INTO tmp_20180602143320_c6g_ads_imp_1_out ("KEY", impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT "U"."KEY", "U".impter_2, "U".impter_3, "U".impter_4, "U".impter_5, "U".impter_6, "U".impter_7, "U".impter_8, "U".impter_9, "U".impter_10, "U".impter_11 
 FROM (SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".impter_2, "ADS_imp_1_OUT".impter_3, "ADS_imp_1_OUT".impter_4, "ADS_imp_1_OUT".impter_5, "ADS_imp_1_OUT".impter_6, "ADS_imp_1_OUT".impter_7, "ADS_imp_1_OUT".impter_8, "ADS_imp_1_OUT".impter_9, "ADS_imp_1_OUT".impter_10, "ADS_imp_1_OUT".impter_11 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN -0.003903374463034205 ELSE "ADS"."Feature_0" END AS impter_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 0.6152232215702322 ELSE "ADS"."Feature_1" END AS impter_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 0.042796236914291665 ELSE "ADS"."Feature_2" END AS impter_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 0.7709819558904074 ELSE "ADS"."Feature_3" END AS impter_5, CASE WHEN ("ADS"."Feature_4" IS NULL) THEN -0.43300733624893334 ELSE "ADS"."Feature_4" END AS impter_6, CASE WHEN ("ADS"."Feature_5" IS NULL) THEN -0.0424956965794036 ELSE "ADS"."Feature_5" END AS impter_7, CASE WHEN ("ADS"."Feature_6" IS NULL) THEN -0.29809080119845455 ELSE "ADS"."Feature_6" END AS impter_8, CASE WHEN ("ADS"."Feature_7" IS NULL) THEN 0.14672241507251663 ELSE "ADS"."Feature_7" END AS impter_9, CASE WHEN ("ADS"."Feature_8" IS NULL) THEN 0.01746942384662034 ELSE "ADS"."Feature_8" END AS impter_10, CASE WHEN ("ADS"."Feature_9" IS NULL) THEN 0.11507331415602866 ELSE "ADS"."Feature_9" END AS impter_11 
 FROM "FourClass_10" AS "ADS") AS "ADS_imp_1_OUT") AS "U"
 
--- Code For temporary table tmp_20180516112523_codegen_rqgv6v_ads_sca_2_out part 1. Create 
+-- Code For temporary table tmp_20180602143320_g8x_ads_sca_2_out part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516112523_codegen_rqgv6v_ads_sca_2_out  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602143320_g8x_ads_sca_2_out  (
 	"KEY" BIGINT, 
 	scaler_2 DOUBLE PRECISION, 
 	scaler_3 DOUBLE PRECISION, 
@@ -55,18 +55,18 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516112523_codegen_rqgv6v_ads_sca_2_out  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516112523_codegen_rqgv6v_ads_sca_2_out part 2. Populate
+-- Code For temporary table tmp_20180602143320_g8x_ads_sca_2_out part 2. Populate
 
-INSERT INTO tmp_20180516112523_codegen_rqgv6v_ads_sca_2_out ("KEY", scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT "U"."KEY", "U".scaler_2, "U".scaler_3, "U".scaler_4, "U".scaler_5, "U".scaler_6, "U".scaler_7, "U".scaler_8, "U".scaler_9, "U".scaler_10, "U".scaler_11 
+INSERT INTO tmp_20180602143320_g8x_ads_sca_2_out ("KEY", scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT "U"."KEY", "U".scaler_2, "U".scaler_3, "U".scaler_4, "U".scaler_5, "U".scaler_6, "U".scaler_7, "U".scaler_8, "U".scaler_9, "U".scaler_10, "U".scaler_11 
 FROM (SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_2, "ADS_sca_2_OUT".scaler_3, "ADS_sca_2_OUT".scaler_4, "ADS_sca_2_OUT".scaler_5, "ADS_sca_2_OUT".scaler_6, "ADS_sca_2_OUT".scaler_7, "ADS_sca_2_OUT".scaler_8, "ADS_sca_2_OUT".scaler_9, "ADS_sca_2_OUT".scaler_10, "ADS_sca_2_OUT".scaler_11 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".impter_2 AS DOUBLE PRECISION) - CAST(-0.003903374463034 AS DOUBLE PRECISION)) / CAST(0.9795060640184 AS DOUBLE PRECISION) AS scaler_2, (CAST("ADS_imp_1_OUT".impter_3 AS DOUBLE PRECISION) - CAST(0.615223221570232 AS DOUBLE PRECISION)) / CAST(1.390080723620524 AS DOUBLE PRECISION) AS scaler_3, (CAST("ADS_imp_1_OUT".impter_4 AS DOUBLE PRECISION) - CAST(0.042796236914292 AS DOUBLE PRECISION)) / CAST(1.496268513587076 AS DOUBLE PRECISION) AS scaler_4, (CAST("ADS_imp_1_OUT".impter_5 AS DOUBLE PRECISION) - CAST(0.770981955890407 AS DOUBLE PRECISION)) / CAST(2.333356106011174 AS DOUBLE PRECISION) AS scaler_5, (CAST("ADS_imp_1_OUT".impter_6 AS DOUBLE PRECISION) - CAST(-0.433007336248933 AS DOUBLE PRECISION)) / CAST(1.402975777264875 AS DOUBLE PRECISION) AS scaler_6, (CAST("ADS_imp_1_OUT".impter_7 AS DOUBLE PRECISION) - CAST(-0.042495696579404 AS DOUBLE PRECISION)) / CAST(0.955809107687323 AS DOUBLE PRECISION) AS scaler_7, (CAST("ADS_imp_1_OUT".impter_8 AS DOUBLE PRECISION) - CAST(-0.298090801198455 AS DOUBLE PRECISION)) / CAST(1.017013180721433 AS DOUBLE PRECISION) AS scaler_8, (CAST("ADS_imp_1_OUT".impter_9 AS DOUBLE PRECISION) - CAST(0.146722415072517 AS DOUBLE PRECISION)) / CAST(1.600798539929603 AS DOUBLE PRECISION) AS scaler_9, (CAST("ADS_imp_1_OUT".impter_10 AS DOUBLE PRECISION) - CAST(0.01746942384662 AS DOUBLE PRECISION)) / CAST(1.148729636167142 AS DOUBLE PRECISION) AS scaler_10, (CAST("ADS_imp_1_OUT".impter_11 AS DOUBLE PRECISION) - CAST(0.115073314156029 AS DOUBLE PRECISION)) / CAST(0.969091185733622 AS DOUBLE PRECISION) AS scaler_11 
-FROM tmp_20180516112523_codegen_b92nx0_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
+FROM tmp_20180602143320_c6g_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
 
 -- Model deployment code
 
 WITH linear_input AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CAST("ADS_sca_2_OUT".scaler_2 AS DOUBLE PRECISION) AS scaler_2, CAST("ADS_sca_2_OUT".scaler_3 AS DOUBLE PRECISION) AS scaler_3, CAST("ADS_sca_2_OUT".scaler_4 AS DOUBLE PRECISION) AS scaler_4, CAST("ADS_sca_2_OUT".scaler_5 AS DOUBLE PRECISION) AS scaler_5, CAST("ADS_sca_2_OUT".scaler_6 AS DOUBLE PRECISION) AS scaler_6, CAST("ADS_sca_2_OUT".scaler_7 AS DOUBLE PRECISION) AS scaler_7, CAST("ADS_sca_2_OUT".scaler_8 AS DOUBLE PRECISION) AS scaler_8, CAST("ADS_sca_2_OUT".scaler_9 AS DOUBLE PRECISION) AS scaler_9, CAST("ADS_sca_2_OUT".scaler_10 AS DOUBLE PRECISION) AS scaler_10, CAST("ADS_sca_2_OUT".scaler_11 AS DOUBLE PRECISION) AS scaler_11 
-FROM tmp_20180516112523_codegen_rqgv6v_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180602143320_g8x_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 linear_model_cte AS 
 (SELECT linear_input."KEY" AS "KEY", CAST(0.102923448926226 AS DOUBLE PRECISION) * linear_input.scaler_2 + CAST(-0.161288798149075 AS DOUBLE PRECISION) * linear_input.scaler_3 + CAST(-0.016595188655311 AS DOUBLE PRECISION) * linear_input.scaler_4 + CAST(-0.08197797950089 AS DOUBLE PRECISION) * linear_input.scaler_5 + CAST(0.279498503189558 AS DOUBLE PRECISION) * linear_input.scaler_6 + CAST(-0.094413899388207 AS DOUBLE PRECISION) * linear_input.scaler_7 + CAST(0.066409022901028 AS DOUBLE PRECISION) * linear_input.scaler_8 + CAST(0.146473714692304 AS DOUBLE PRECISION) * linear_input.scaler_9 + CAST(0.133220223779781 AS DOUBLE PRECISION) * linear_input.scaler_10 + CAST(0.021794692001736 AS DOUBLE PRECISION) * linear_input.scaler_11 + CAST(-0.55 AS DOUBLE PRECISION) AS "Score_0", CAST(-0.01625399141134 AS DOUBLE PRECISION) * linear_input.scaler_2 + CAST(0.025836013334246 AS DOUBLE PRECISION) * linear_input.scaler_3 + CAST(0.167650356490424 AS DOUBLE PRECISION) * linear_input.scaler_4 + CAST(0.135305224561499 AS DOUBLE PRECISION) * linear_input.scaler_5 + CAST(0.130361214447547 AS DOUBLE PRECISION) * linear_input.scaler_6 + CAST(-0.029555027453144 AS DOUBLE PRECISION) * linear_input.scaler_7 + CAST(-0.132766068315994 AS DOUBLE PRECISION) * linear_input.scaler_8 + CAST(0.111839602210274 AS DOUBLE PRECISION) * linear_input.scaler_9 + CAST(-0.087837451283606 AS DOUBLE PRECISION) * linear_input.scaler_10 + CAST(0.030081452459964 AS DOUBLE PRECISION) * linear_input.scaler_11 + CAST(-0.5 AS DOUBLE PRECISION) AS "Score_1", CAST(-0.055034959342428 AS DOUBLE PRECISION) * linear_input.scaler_2 + CAST(-0.246282365655989 AS DOUBLE PRECISION) * linear_input.scaler_3 + CAST(-0.24675054936025 AS DOUBLE PRECISION) * linear_input.scaler_4 + CAST(-0.145539579871298 AS DOUBLE PRECISION) * linear_input.scaler_5 + CAST(-0.289717846086926 AS DOUBLE PRECISION) * linear_input.scaler_6 + CAST(6.4578780121e-05 AS DOUBLE PRECISION) * linear_input.scaler_7 + CAST(0.06281000919981 AS DOUBLE PRECISION) * linear_input.scaler_8 + CAST(0.205259687690472 AS DOUBLE PRECISION) * linear_input.scaler_9 + CAST(0.124551628237356 AS DOUBLE PRECISION) * linear_input.scaler_10 + CAST(0.022640261593939 AS DOUBLE PRECISION) * linear_input.scaler_11 + CAST(-0.5 AS DOUBLE PRECISION) AS "Score_2", CAST(-0.031634498172458 AS DOUBLE PRECISION) * linear_input.scaler_2 + CAST(0.381735150470821 AS DOUBLE PRECISION) * linear_input.scaler_3 + CAST(0.095695381525142 AS DOUBLE PRECISION) * linear_input.scaler_4 + CAST(0.092212334810683 AS DOUBLE PRECISION) * linear_input.scaler_5 + CAST(-0.12014187155018 AS DOUBLE PRECISION) * linear_input.scaler_6 + CAST(0.12390434806123 AS DOUBLE PRECISION) * linear_input.scaler_7 + CAST(0.003547036215157 AS DOUBLE PRECISION) * linear_input.scaler_8 + CAST(-0.463573004593046 AS DOUBLE PRECISION) * linear_input.scaler_9 + CAST(-0.169934400733531 AS DOUBLE PRECISION) * linear_input.scaler_10 + CAST(-0.07451640605564 AS DOUBLE PRECISION) * linear_input.scaler_11 + CAST(-0.45 AS DOUBLE PRECISION) AS "Score_3" 
 FROM linear_input), 

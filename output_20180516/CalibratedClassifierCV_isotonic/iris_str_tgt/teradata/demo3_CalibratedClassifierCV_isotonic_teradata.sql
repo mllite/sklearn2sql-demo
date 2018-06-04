@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180516130435_codegen_0j2i1k_calprob_b0 part 1. Create 
+-- Code For temporary table tmp_20180602160151_z5s_calprob_b0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516130435_codegen_0j2i1k_calprob_b0  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602160151_z5s_calprob_b0  (
 	"KEY" BIGINT, 
 	"Proba_CLASS_0" DOUBLE PRECISION, 
 	"Proba_CLASS_1" DOUBLE PRECISION, 
@@ -22,9 +22,9 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516130435_codegen_0j2i1k_calprob_b0  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516130435_codegen_0j2i1k_calprob_b0 part 2. Populate
+-- Code For temporary table tmp_20180602160151_z5s_calprob_b0 part 2. Populate
 
-INSERT INTO tmp_20180516130435_codegen_0j2i1k_calprob_b0 ("KEY", "Proba_CLASS_0", "Proba_CLASS_1", "Proba_CLASS_2") SELECT "U"."KEY", "U"."Proba_CLASS_0", "U"."Proba_CLASS_1", "U"."Proba_CLASS_2" 
+INSERT INTO tmp_20180602160151_z5s_calprob_b0 ("KEY", "Proba_CLASS_0", "Proba_CLASS_1", "Proba_CLASS_2") SELECT "U"."KEY", "U"."Proba_CLASS_0", "U"."Proba_CLASS_1", "U"."Proba_CLASS_2" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_3" <= CAST(0.75 AS DOUBLE PRECISION)) THEN 1 ELSE CASE WHEN ("ADS"."Feature_2" <= CAST(4.75 AS DOUBLE PRECISION)) THEN 3 ELSE CASE WHEN ("ADS"."Feature_2" <= CAST(5.050000190734863 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_1" <= CAST(3.049999952316284 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_3" <= CAST(1.75 AS DOUBLE PRECISION)) THEN 7 ELSE 8 END ELSE 9 END ELSE 10 END END END AS node_id_2 
 FROM iris_str_tgt AS "ADS"), 
@@ -139,10 +139,10 @@ FROM "Normalized_Probas_1" UNION ALL SELECT "Normalized_Probas_2"."KEY" AS "KEY"
 FROM "Normalized_Probas_2" UNION ALL SELECT "Normalized_Probas_3"."KEY" AS "KEY", "Normalized_Probas_3"."Proba_CLASS_0" AS "Proba_CLASS_0", "Normalized_Probas_3"."Proba_CLASS_1" AS "Proba_CLASS_1", "Normalized_Probas_3"."Proba_CLASS_2" AS "Proba_CLASS_2" 
 FROM "Normalized_Probas_3") AS "CalProb_esu_0") AS "CalProb_B0") AS "U"
 
--- Code For temporary table tmp_20180516130435_codegen_fxj0kj_calprob_avg part 1. Create 
+-- Code For temporary table tmp_20180602160151_5qx_calprob_avg part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516130435_codegen_fxj0kj_calprob_avg  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602160151_5qx_calprob_avg  (
 	"KEY" BIGINT, 
 	"Proba_CLASS_0" DOUBLE PRECISION, 
 	"Proba_CLASS_1" DOUBLE PRECISION, 
@@ -151,13 +151,13 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516130435_codegen_fxj0kj_calprob_avg  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516130435_codegen_fxj0kj_calprob_avg part 2. Populate
+-- Code For temporary table tmp_20180602160151_5qx_calprob_avg part 2. Populate
 
-INSERT INTO tmp_20180516130435_codegen_fxj0kj_calprob_avg ("KEY", "Proba_CLASS_0", "Proba_CLASS_1", "Proba_CLASS_2") SELECT "U"."KEY", "U"."Proba_CLASS_0", "U"."Proba_CLASS_1", "U"."Proba_CLASS_2" 
+INSERT INTO tmp_20180602160151_5qx_calprob_avg ("KEY", "Proba_CLASS_0", "Proba_CLASS_1", "Proba_CLASS_2") SELECT "U"."KEY", "U"."Proba_CLASS_0", "U"."Proba_CLASS_1", "U"."Proba_CLASS_2" 
 FROM (WITH "CalProb_Union" AS 
 (SELECT "CalProb_EnsembleUnion"."KEY" AS "KEY", "CalProb_EnsembleUnion"."Proba_CLASS_0" AS "Proba_CLASS_0", "CalProb_EnsembleUnion"."Proba_CLASS_1" AS "Proba_CLASS_1", "CalProb_EnsembleUnion"."Proba_CLASS_2" AS "Proba_CLASS_2" 
 FROM (SELECT "CalProb_B0"."KEY" AS "KEY", "CalProb_B0"."Proba_CLASS_0" AS "Proba_CLASS_0", "CalProb_B0"."Proba_CLASS_1" AS "Proba_CLASS_1", "CalProb_B0"."Proba_CLASS_2" AS "Proba_CLASS_2" 
-FROM tmp_20180516130435_codegen_0j2i1k_calprob_b0 AS "CalProb_B0") AS "CalProb_EnsembleUnion")
+FROM tmp_20180602160151_z5s_calprob_b0 AS "CalProb_B0") AS "CalProb_EnsembleUnion")
  SELECT "CalProb_avg"."KEY", "CalProb_avg"."Proba_CLASS_0", "CalProb_avg"."Proba_CLASS_1", "CalProb_avg"."Proba_CLASS_2" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Proba_CLASS_0" AS DOUBLE PRECISION) AS "Proba_CLASS_0", CAST("T"."Proba_CLASS_1" AS DOUBLE PRECISION) AS "Proba_CLASS_1", CAST("T"."Proba_CLASS_2" AS DOUBLE PRECISION) AS "Proba_CLASS_2" 
 FROM (SELECT "CalProb_Union"."KEY" AS "KEY", avg(CAST("CalProb_Union"."Proba_CLASS_0" AS DOUBLE PRECISION)) AS "Proba_CLASS_0", avg(CAST("CalProb_Union"."Proba_CLASS_1" AS DOUBLE PRECISION)) AS "Proba_CLASS_1", avg(CAST("CalProb_Union"."Proba_CLASS_2" AS DOUBLE PRECISION)) AS "Proba_CLASS_2" 
@@ -167,7 +167,7 @@ FROM "CalProb_Union" GROUP BY "CalProb_Union"."KEY") AS "T") AS "CalProb_avg") A
 
 WITH orig_cte AS 
 (SELECT "CalProb_avg"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_1", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_2", "CalProb_avg"."Proba_CLASS_0" AS "Proba_CLASS_0", "CalProb_avg"."Proba_CLASS_1" AS "Proba_CLASS_1", "CalProb_avg"."Proba_CLASS_2" AS "Proba_CLASS_2", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_CLASS_0", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_CLASS_1", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_CLASS_2", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba" 
-FROM tmp_20180516130435_codegen_fxj0kj_calprob_avg AS "CalProb_avg"), 
+FROM tmp_20180602160151_5qx_calprob_avg AS "CalProb_avg"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu."class" AS "class", scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 'CLASS_0' AS "class", orig_cte."LogProba_CLASS_0" AS "LogProba", orig_cte."Proba_CLASS_0" AS "Proba", orig_cte."Score_CLASS_0" AS "Score" 

@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180516111650_codegen_bs1zem_gb_b0 part 1. Create 
+-- Code For temporary table tmp_20180602142509_6o7_gb_b0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516111650_codegen_bs1zem_gb_b0  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602142509_6o7_gb_b0  (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION
@@ -21,9 +21,9 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516111650_codegen_bs1zem_gb_b0  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516111650_codegen_bs1zem_gb_b0 part 2. Populate
+-- Code For temporary table tmp_20180602142509_6o7_gb_b0 part 2. Populate
 
-INSERT INTO tmp_20180516111650_codegen_bs1zem_gb_b0 ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
+INSERT INTO tmp_20180602142509_6o7_gb_b0 ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_27" <= CAST(0.145449995994568 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_23" <= CAST(961.550048828125 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_10" <= CAST(1.047549962997436 AS DOUBLE PRECISION)) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_24" <= CAST(0.087980002164841 AS DOUBLE PRECISION)) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_16" <= CAST(0.135650008916855 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_26" <= CAST(0.203400000929832 AS DOUBLE PRECISION)) THEN 10 ELSE 11 END ELSE 12 END END AS node_id_2 
 FROM "BreastCancer" AS "ADS"), 
@@ -157,10 +157,10 @@ FROM "GB_Model_3_1" UNION ALL SELECT "GB_Model_4_0"."KEY" AS "KEY", "GB_Model_4_
 FROM "GB_Model_4_0" UNION ALL SELECT "GB_Model_4_1"."KEY" AS "KEY", "GB_Model_4_1"."Score_0" AS "Score_0", "GB_Model_4_1"."Score_1" AS "Score_1" 
 FROM "GB_Model_4_1") AS "GB_esu_0") AS "GB_B0") AS "U"
 
--- Code For temporary table tmp_20180516111650_codegen_cksmen_gb_b1 part 1. Create 
+-- Code For temporary table tmp_20180602142509_2er_gb_b1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516111650_codegen_cksmen_gb_b1  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602142509_2er_gb_b1  (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION
@@ -168,9 +168,9 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516111650_codegen_cksmen_gb_b1  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516111650_codegen_cksmen_gb_b1 part 2. Populate
+-- Code For temporary table tmp_20180602142509_2er_gb_b1 part 2. Populate
 
-INSERT INTO tmp_20180516111650_codegen_cksmen_gb_b1 ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
+INSERT INTO tmp_20180602142509_2er_gb_b1 ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
 FROM (WITH "DT_node_lookup_5" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_27" <= CAST(0.145449995994568 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_23" <= CAST(961.550048828125 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_27" <= CAST(0.122299998998642 AS DOUBLE PRECISION)) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_26" <= CAST(0.190699994564056 AS DOUBLE PRECISION)) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_16" <= CAST(0.135650008916855 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_26" <= CAST(0.203400000929832 AS DOUBLE PRECISION)) THEN 10 ELSE 11 END ELSE 12 END END AS node_id_2 
 FROM "BreastCancer" AS "ADS"), 
@@ -306,10 +306,10 @@ FROM "GB_Model_8_1" UNION ALL SELECT "GB_Model_9_0"."KEY" AS "KEY", "GB_Model_9_
 FROM "GB_Model_9_0" UNION ALL SELECT "GB_Model_9_1"."KEY" AS "KEY", "GB_Model_9_1"."Score_0" AS "Score_0", "GB_Model_9_1"."Score_1" AS "Score_1" 
 FROM "GB_Model_9_1") AS "GB_esu_1") AS "GB_B1") AS "U"
 
--- Code For temporary table tmp_20180516111650_codegen_puil90_gb_b2 part 1. Create 
+-- Code For temporary table tmp_20180602142509_31r_gb_b2 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516111650_codegen_puil90_gb_b2  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602142509_31r_gb_b2  (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION
@@ -317,9 +317,9 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516111650_codegen_puil90_gb_b2  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516111650_codegen_puil90_gb_b2 part 2. Populate
+-- Code For temporary table tmp_20180602142509_31r_gb_b2 part 2. Populate
 
-INSERT INTO tmp_20180516111650_codegen_puil90_gb_b2 ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
+INSERT INTO tmp_20180602142509_31r_gb_b2 ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
 FROM (WITH "DT_node_lookup_10" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_22" <= CAST(113.14999389648438 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_27" <= CAST(0.135800004005432 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_13" <= CAST(38.60499954223633 AS DOUBLE PRECISION)) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_27" <= CAST(0.139050006866455 AS DOUBLE PRECISION)) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_23" <= CAST(810.25 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_5" <= CAST(0.190799996256828 AS DOUBLE PRECISION)) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_22" <= CAST(113.25 AS DOUBLE PRECISION)) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM "BreastCancer" AS "ADS"), 
@@ -458,10 +458,10 @@ FROM "GB_Model_13_1" UNION ALL SELECT "GB_Model_14_0"."KEY" AS "KEY", "GB_Model_
 FROM "GB_Model_14_0" UNION ALL SELECT "GB_Model_14_1"."KEY" AS "KEY", "GB_Model_14_1"."Score_0" AS "Score_0", "GB_Model_14_1"."Score_1" AS "Score_1" 
 FROM "GB_Model_14_1") AS "GB_esu_2") AS "GB_B2") AS "U"
 
--- Code For temporary table tmp_20180516111650_codegen_xf1v79_gb_b3 part 1. Create 
+-- Code For temporary table tmp_20180602142509_akz_gb_b3 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516111650_codegen_xf1v79_gb_b3  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602142509_akz_gb_b3  (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION
@@ -469,9 +469,9 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516111650_codegen_xf1v79_gb_b3  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516111650_codegen_xf1v79_gb_b3 part 2. Populate
+-- Code For temporary table tmp_20180602142509_akz_gb_b3 part 2. Populate
 
-INSERT INTO tmp_20180516111650_codegen_xf1v79_gb_b3 ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
+INSERT INTO tmp_20180602142509_akz_gb_b3 ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
 FROM (WITH "DT_node_lookup_15" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_22" <= CAST(113.14999389648438 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_27" <= CAST(0.160299986600876 AS DOUBLE PRECISION)) THEN CASE WHEN ("ADS"."Feature_27" <= CAST(0.158500000834465 AS DOUBLE PRECISION)) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_15" <= CAST(0.080320000648499 AS DOUBLE PRECISION)) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_22" <= CAST(113.25 AS DOUBLE PRECISION)) THEN 9 ELSE CASE WHEN ("ADS"."Feature_7" <= CAST(0.050085000693798 AS DOUBLE PRECISION)) THEN 11 ELSE 12 END END END AS node_id_2 
 FROM "BreastCancer" AS "ADS"), 
@@ -502,10 +502,10 @@ FROM (SELECT "GB_Model_15_0"."KEY" AS "KEY", "GB_Model_15_0"."Score_0" AS "Score
 FROM "GB_Model_15_0" UNION ALL SELECT "GB_Model_15_1"."KEY" AS "KEY", "GB_Model_15_1"."Score_0" AS "Score_0", "GB_Model_15_1"."Score_1" AS "Score_1" 
 FROM "GB_Model_15_1") AS "GB_esu_3") AS "GB_B3") AS "U"
 
--- Code For temporary table tmp_20180516111650_codegen_4oh5lm_gb_sum part 1. Create 
+-- Code For temporary table tmp_20180602142509_kl3_gb_sum part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516111650_codegen_4oh5lm_gb_sum  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602142509_kl3_gb_sum  (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION
@@ -513,16 +513,16 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516111650_codegen_4oh5lm_gb_sum  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516111650_codegen_4oh5lm_gb_sum part 2. Populate
+-- Code For temporary table tmp_20180602142509_kl3_gb_sum part 2. Populate
 
-INSERT INTO tmp_20180516111650_codegen_4oh5lm_gb_sum ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
+INSERT INTO tmp_20180602142509_kl3_gb_sum ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
 FROM (WITH "GB_Union" AS 
 (SELECT "GB_EnsembleUnion"."KEY" AS "KEY", "GB_EnsembleUnion"."Score_0" AS "Score_0", "GB_EnsembleUnion"."Score_1" AS "Score_1" 
 FROM (SELECT "GB_B0"."KEY" AS "KEY", "GB_B0"."Score_0" AS "Score_0", "GB_B0"."Score_1" AS "Score_1" 
-FROM tmp_20180516111650_codegen_bs1zem_gb_b0 AS "GB_B0" UNION ALL SELECT "GB_B1"."KEY" AS "KEY", "GB_B1"."Score_0" AS "Score_0", "GB_B1"."Score_1" AS "Score_1" 
-FROM tmp_20180516111650_codegen_cksmen_gb_b1 AS "GB_B1" UNION ALL SELECT "GB_B2"."KEY" AS "KEY", "GB_B2"."Score_0" AS "Score_0", "GB_B2"."Score_1" AS "Score_1" 
-FROM tmp_20180516111650_codegen_puil90_gb_b2 AS "GB_B2" UNION ALL SELECT "GB_B3"."KEY" AS "KEY", "GB_B3"."Score_0" AS "Score_0", "GB_B3"."Score_1" AS "Score_1" 
-FROM tmp_20180516111650_codegen_xf1v79_gb_b3 AS "GB_B3") AS "GB_EnsembleUnion")
+FROM tmp_20180602142509_6o7_gb_b0 AS "GB_B0" UNION ALL SELECT "GB_B1"."KEY" AS "KEY", "GB_B1"."Score_0" AS "Score_0", "GB_B1"."Score_1" AS "Score_1" 
+FROM tmp_20180602142509_2er_gb_b1 AS "GB_B1" UNION ALL SELECT "GB_B2"."KEY" AS "KEY", "GB_B2"."Score_0" AS "Score_0", "GB_B2"."Score_1" AS "Score_1" 
+FROM tmp_20180602142509_31r_gb_b2 AS "GB_B2" UNION ALL SELECT "GB_B3"."KEY" AS "KEY", "GB_B3"."Score_0" AS "Score_0", "GB_B3"."Score_1" AS "Score_1" 
+FROM tmp_20180602142509_akz_gb_b3 AS "GB_B3") AS "GB_EnsembleUnion")
  SELECT "GB_sum"."KEY", "GB_sum"."Score_0", "GB_sum"."Score_1" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Score_0" AS DOUBLE PRECISION) AS "Score_0", CAST("T"."Score_1" AS DOUBLE PRECISION) AS "Score_1" 
 FROM (SELECT "GB_Union"."KEY" AS "KEY", sum("GB_Union"."Score_0") AS "Score_0", sum("GB_Union"."Score_1") AS "Score_1" 
@@ -532,7 +532,7 @@ FROM "GB_Union" GROUP BY "GB_Union"."KEY") AS "T") AS "GB_sum") AS "U"
 
 WITH orig_cte AS 
 (SELECT "GB_sum"."KEY" AS "KEY", -(CAST(0.611801541105993 AS DOUBLE PRECISION) + CAST(0.1 AS DOUBLE PRECISION) * "GB_sum"."Score_1") AS "Score_0", CAST(0.611801541105993 AS DOUBLE PRECISION) + CAST(0.1 AS DOUBLE PRECISION) * "GB_sum"."Score_1" AS "Score_1", CAST(1.0 AS DOUBLE PRECISION) - CAST(1.0 AS DOUBLE PRECISION) / (CAST(1.0 AS DOUBLE PRECISION) + exp(least(greatest(-CAST(100.0 AS DOUBLE PRECISION), -(CAST(0.611801541105993 AS DOUBLE PRECISION) + CAST(0.1 AS DOUBLE PRECISION) * "GB_sum"."Score_1")), CAST(100.0 AS DOUBLE PRECISION)))) AS "Proba_0", CAST(1.0 AS DOUBLE PRECISION) / (CAST(1.0 AS DOUBLE PRECISION) + exp(least(greatest(-CAST(100.0 AS DOUBLE PRECISION), -(CAST(0.611801541105993 AS DOUBLE PRECISION) + CAST(0.1 AS DOUBLE PRECISION) * "GB_sum"."Score_1")), CAST(100.0 AS DOUBLE PRECISION)))) AS "Proba_1", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_0", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_1", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba" 
-FROM tmp_20180516111650_codegen_4oh5lm_gb_sum AS "GB_sum"), 
+FROM tmp_20180602142509_kl3_gb_sum AS "GB_sum"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu."class" AS "class", scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS "class", orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 
