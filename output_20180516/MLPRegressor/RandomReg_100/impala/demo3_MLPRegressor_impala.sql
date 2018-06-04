@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180516114257_codegen_dyzilu_hl_1_relu_1 part 1. Create 
+-- Code For temporary table tmp_20180602144936_6dn_hl_1_relu_1 part 1. Create 
 
 
-CREATE TABLE tmp_20180516114257_codegen_dyzilu_hl_1_relu_1 (
+CREATE TABLE tmp_20180602144936_6dn_hl_1_relu_1 (
 	`KEY` BIGINT, 
 	`NEUR_1_1` DOUBLE, 
 	`NEUR_1_2` DOUBLE, 
@@ -22,7 +22,7 @@ CREATE TABLE tmp_20180516114257_codegen_dyzilu_hl_1_relu_1 (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516114257_codegen_dyzilu_hl_1_relu_1 part 2. Populate
+-- Code For temporary table tmp_20180602144936_6dn_hl_1_relu_1 part 2. Populate
 
 WITH `IL` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CAST(`ADS`.`Feature_0` AS DOUBLE) AS `Feature_0`, CAST(`ADS`.`Feature_1` AS DOUBLE) AS `Feature_1`, CAST(`ADS`.`Feature_2` AS DOUBLE) AS `Feature_2`, CAST(`ADS`.`Feature_3` AS DOUBLE) AS `Feature_3`, CAST(`ADS`.`Feature_4` AS DOUBLE) AS `Feature_4`, CAST(`ADS`.`Feature_5` AS DOUBLE) AS `Feature_5`, CAST(`ADS`.`Feature_6` AS DOUBLE) AS `Feature_6`, CAST(`ADS`.`Feature_7` AS DOUBLE) AS `Feature_7`, CAST(`ADS`.`Feature_8` AS DOUBLE) AS `Feature_8`, CAST(`ADS`.`Feature_9` AS DOUBLE) AS `Feature_9`, CAST(`ADS`.`Feature_10` AS DOUBLE) AS `Feature_10`, CAST(`ADS`.`Feature_11` AS DOUBLE) AS `Feature_11`, CAST(`ADS`.`Feature_12` AS DOUBLE) AS `Feature_12`, CAST(`ADS`.`Feature_13` AS DOUBLE) AS `Feature_13`, CAST(`ADS`.`Feature_14` AS DOUBLE) AS `Feature_14`, CAST(`ADS`.`Feature_15` AS DOUBLE) AS `Feature_15`, CAST(`ADS`.`Feature_16` AS DOUBLE) AS `Feature_16`, CAST(`ADS`.`Feature_17` AS DOUBLE) AS `Feature_17`, CAST(`ADS`.`Feature_18` AS DOUBLE) AS `Feature_18`, CAST(`ADS`.`Feature_19` AS DOUBLE) AS `Feature_19`, CAST(`ADS`.`Feature_20` AS DOUBLE) AS `Feature_20`, CAST(`ADS`.`Feature_21` AS DOUBLE) AS `Feature_21`, CAST(`ADS`.`Feature_22` AS DOUBLE) AS `Feature_22`, CAST(`ADS`.`Feature_23` AS DOUBLE) AS `Feature_23`, CAST(`ADS`.`Feature_24` AS DOUBLE) AS `Feature_24`, CAST(`ADS`.`Feature_25` AS DOUBLE) AS `Feature_25`, CAST(`ADS`.`Feature_26` AS DOUBLE) AS `Feature_26`, CAST(`ADS`.`Feature_27` AS DOUBLE) AS `Feature_27`, CAST(`ADS`.`Feature_28` AS DOUBLE) AS `Feature_28`, CAST(`ADS`.`Feature_29` AS DOUBLE) AS `Feature_29`, CAST(`ADS`.`Feature_30` AS DOUBLE) AS `Feature_30`, CAST(`ADS`.`Feature_31` AS DOUBLE) AS `Feature_31`, CAST(`ADS`.`Feature_32` AS DOUBLE) AS `Feature_32`, CAST(`ADS`.`Feature_33` AS DOUBLE) AS `Feature_33`, CAST(`ADS`.`Feature_34` AS DOUBLE) AS `Feature_34`, CAST(`ADS`.`Feature_35` AS DOUBLE) AS `Feature_35`, CAST(`ADS`.`Feature_36` AS DOUBLE) AS `Feature_36`, CAST(`ADS`.`Feature_37` AS DOUBLE) AS `Feature_37`, CAST(`ADS`.`Feature_38` AS DOUBLE) AS `Feature_38`, CAST(`ADS`.`Feature_39` AS DOUBLE) AS `Feature_39`, CAST(`ADS`.`Feature_40` AS DOUBLE) AS `Feature_40`, CAST(`ADS`.`Feature_41` AS DOUBLE) AS `Feature_41`, CAST(`ADS`.`Feature_42` AS DOUBLE) AS `Feature_42`, CAST(`ADS`.`Feature_43` AS DOUBLE) AS `Feature_43`, CAST(`ADS`.`Feature_44` AS DOUBLE) AS `Feature_44`, CAST(`ADS`.`Feature_45` AS DOUBLE) AS `Feature_45`, CAST(`ADS`.`Feature_46` AS DOUBLE) AS `Feature_46`, CAST(`ADS`.`Feature_47` AS DOUBLE) AS `Feature_47`, CAST(`ADS`.`Feature_48` AS DOUBLE) AS `Feature_48`, CAST(`ADS`.`Feature_49` AS DOUBLE) AS `Feature_49`, CAST(`ADS`.`Feature_50` AS DOUBLE) AS `Feature_50`, CAST(`ADS`.`Feature_51` AS DOUBLE) AS `Feature_51`, CAST(`ADS`.`Feature_52` AS DOUBLE) AS `Feature_52`, CAST(`ADS`.`Feature_53` AS DOUBLE) AS `Feature_53`, CAST(`ADS`.`Feature_54` AS DOUBLE) AS `Feature_54`, CAST(`ADS`.`Feature_55` AS DOUBLE) AS `Feature_55`, CAST(`ADS`.`Feature_56` AS DOUBLE) AS `Feature_56`, CAST(`ADS`.`Feature_57` AS DOUBLE) AS `Feature_57`, CAST(`ADS`.`Feature_58` AS DOUBLE) AS `Feature_58`, CAST(`ADS`.`Feature_59` AS DOUBLE) AS `Feature_59`, CAST(`ADS`.`Feature_60` AS DOUBLE) AS `Feature_60`, CAST(`ADS`.`Feature_61` AS DOUBLE) AS `Feature_61`, CAST(`ADS`.`Feature_62` AS DOUBLE) AS `Feature_62`, CAST(`ADS`.`Feature_63` AS DOUBLE) AS `Feature_63`, CAST(`ADS`.`Feature_64` AS DOUBLE) AS `Feature_64`, CAST(`ADS`.`Feature_65` AS DOUBLE) AS `Feature_65`, CAST(`ADS`.`Feature_66` AS DOUBLE) AS `Feature_66`, CAST(`ADS`.`Feature_67` AS DOUBLE) AS `Feature_67`, CAST(`ADS`.`Feature_68` AS DOUBLE) AS `Feature_68`, CAST(`ADS`.`Feature_69` AS DOUBLE) AS `Feature_69`, CAST(`ADS`.`Feature_70` AS DOUBLE) AS `Feature_70`, CAST(`ADS`.`Feature_71` AS DOUBLE) AS `Feature_71`, CAST(`ADS`.`Feature_72` AS DOUBLE) AS `Feature_72`, CAST(`ADS`.`Feature_73` AS DOUBLE) AS `Feature_73`, CAST(`ADS`.`Feature_74` AS DOUBLE) AS `Feature_74`, CAST(`ADS`.`Feature_75` AS DOUBLE) AS `Feature_75`, CAST(`ADS`.`Feature_76` AS DOUBLE) AS `Feature_76`, CAST(`ADS`.`Feature_77` AS DOUBLE) AS `Feature_77`, CAST(`ADS`.`Feature_78` AS DOUBLE) AS `Feature_78`, CAST(`ADS`.`Feature_79` AS DOUBLE) AS `Feature_79`, CAST(`ADS`.`Feature_80` AS DOUBLE) AS `Feature_80`, CAST(`ADS`.`Feature_81` AS DOUBLE) AS `Feature_81`, CAST(`ADS`.`Feature_82` AS DOUBLE) AS `Feature_82`, CAST(`ADS`.`Feature_83` AS DOUBLE) AS `Feature_83`, CAST(`ADS`.`Feature_84` AS DOUBLE) AS `Feature_84`, CAST(`ADS`.`Feature_85` AS DOUBLE) AS `Feature_85`, CAST(`ADS`.`Feature_86` AS DOUBLE) AS `Feature_86`, CAST(`ADS`.`Feature_87` AS DOUBLE) AS `Feature_87`, CAST(`ADS`.`Feature_88` AS DOUBLE) AS `Feature_88`, CAST(`ADS`.`Feature_89` AS DOUBLE) AS `Feature_89`, CAST(`ADS`.`Feature_90` AS DOUBLE) AS `Feature_90`, CAST(`ADS`.`Feature_91` AS DOUBLE) AS `Feature_91`, CAST(`ADS`.`Feature_92` AS DOUBLE) AS `Feature_92`, CAST(`ADS`.`Feature_93` AS DOUBLE) AS `Feature_93`, CAST(`ADS`.`Feature_94` AS DOUBLE) AS `Feature_94`, CAST(`ADS`.`Feature_95` AS DOUBLE) AS `Feature_95`, CAST(`ADS`.`Feature_96` AS DOUBLE) AS `Feature_96`, CAST(`ADS`.`Feature_97` AS DOUBLE) AS `Feature_97`, CAST(`ADS`.`Feature_98` AS DOUBLE) AS `Feature_98`, CAST(`ADS`.`Feature_99` AS DOUBLE) AS `Feature_99` 
@@ -33,25 +33,25 @@ FROM `IL`),
 `HL_1_relu` AS 
 (SELECT `HL_BA_1`.`KEY` AS `KEY`, CASE WHEN (`HL_BA_1`.`NEUR_1_1` <= 0) THEN 0 ELSE `HL_BA_1`.`NEUR_1_1` END AS `NEUR_1_1`, CASE WHEN (`HL_BA_1`.`NEUR_1_2` <= 0) THEN 0 ELSE `HL_BA_1`.`NEUR_1_2` END AS `NEUR_1_2`, CASE WHEN (`HL_BA_1`.`NEUR_1_3` <= 0) THEN 0 ELSE `HL_BA_1`.`NEUR_1_3` END AS `NEUR_1_3` 
 FROM `HL_BA_1`)
- INSERT INTO tmp_20180516114257_codegen_dyzilu_hl_1_relu_1 (`KEY`, `NEUR_1_1`, `NEUR_1_2`, `NEUR_1_3`) SELECT `HL_1_relu_1`.`KEY`, `HL_1_relu_1`.`NEUR_1_1`, `HL_1_relu_1`.`NEUR_1_2`, `HL_1_relu_1`.`NEUR_1_3` 
+ INSERT INTO tmp_20180602144936_6dn_hl_1_relu_1 (`KEY`, `NEUR_1_1`, `NEUR_1_2`, `NEUR_1_3`) SELECT `HL_1_relu_1`.`KEY`, `HL_1_relu_1`.`NEUR_1_1`, `HL_1_relu_1`.`NEUR_1_2`, `HL_1_relu_1`.`NEUR_1_3` 
 FROM (SELECT `HL_1_relu`.`KEY` AS `KEY`, `HL_1_relu`.`NEUR_1_1` AS `NEUR_1_1`, `HL_1_relu`.`NEUR_1_2` AS `NEUR_1_2`, `HL_1_relu`.`NEUR_1_3` AS `NEUR_1_3` 
 FROM `HL_1_relu`) AS `HL_1_relu_1`
 
--- Code For temporary table tmp_20180516114257_codegen_bxphgp_ol_identity_1 part 1. Create 
+-- Code For temporary table tmp_20180602144936_mft_ol_identity_1 part 1. Create 
 
 
-CREATE TABLE tmp_20180516114257_codegen_bxphgp_ol_identity_1 (
+CREATE TABLE tmp_20180602144936_mft_ol_identity_1 (
 	`KEY` BIGINT, 
 	`NEUR_3_1` DOUBLE
 )
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516114257_codegen_bxphgp_ol_identity_1 part 2. Populate
+-- Code For temporary table tmp_20180602144936_mft_ol_identity_1 part 2. Populate
 
 WITH `HL_BA_2` AS 
 (SELECT `HL_1_relu_1`.`KEY` AS `KEY`, -2.4078942705955395 * `HL_1_relu_1`.`NEUR_1_1` + 1.9046982270613309 * `HL_1_relu_1`.`NEUR_1_2` + 6.7552328405466096 * `HL_1_relu_1`.`NEUR_1_3` + -1.09410343277604 AS `NEUR_2_1`, 0.299660439075888 * `HL_1_relu_1`.`NEUR_1_1` + -0.11898745824284299 * `HL_1_relu_1`.`NEUR_1_2` + -7.712848484385972 * `HL_1_relu_1`.`NEUR_1_3` + 13.252876337239904 AS `NEUR_2_2`, 4.149634810181686 * `HL_1_relu_1`.`NEUR_1_1` + 4.7906677341775055 * `HL_1_relu_1`.`NEUR_1_2` + 5.880771569316317 * `HL_1_relu_1`.`NEUR_1_3` + -3.4062475603356224 AS `NEUR_2_3`, -0.27402567825305824 * `HL_1_relu_1`.`NEUR_1_1` + 6.331942556211917 * `HL_1_relu_1`.`NEUR_1_2` + 3.6914847526060415 * `HL_1_relu_1`.`NEUR_1_3` + 7.194710136229631 AS `NEUR_2_4`, -0.6093467240610312 * `HL_1_relu_1`.`NEUR_1_1` + -0.37766844283696677 * `HL_1_relu_1`.`NEUR_1_2` + -0.6730015831968268 * `HL_1_relu_1`.`NEUR_1_3` + -0.01807831622698608 AS `NEUR_2_5` 
-FROM tmp_20180516114257_codegen_dyzilu_hl_1_relu_1 AS `HL_1_relu_1`), 
+FROM tmp_20180602144936_6dn_hl_1_relu_1 AS `HL_1_relu_1`), 
 `HL_2_relu` AS 
 (SELECT `HL_BA_2`.`KEY` AS `KEY`, CASE WHEN (`HL_BA_2`.`NEUR_2_1` <= 0) THEN 0 ELSE `HL_BA_2`.`NEUR_2_1` END AS `NEUR_2_1`, CASE WHEN (`HL_BA_2`.`NEUR_2_2` <= 0) THEN 0 ELSE `HL_BA_2`.`NEUR_2_2` END AS `NEUR_2_2`, CASE WHEN (`HL_BA_2`.`NEUR_2_3` <= 0) THEN 0 ELSE `HL_BA_2`.`NEUR_2_3` END AS `NEUR_2_3`, CASE WHEN (`HL_BA_2`.`NEUR_2_4` <= 0) THEN 0 ELSE `HL_BA_2`.`NEUR_2_4` END AS `NEUR_2_4`, CASE WHEN (`HL_BA_2`.`NEUR_2_5` <= 0) THEN 0 ELSE `HL_BA_2`.`NEUR_2_5` END AS `NEUR_2_5` 
 FROM `HL_BA_2`), 
@@ -61,11 +61,11 @@ FROM `HL_2_relu`),
 `OL_identity` AS 
 (SELECT `OL_BA`.`KEY` AS `KEY`, `OL_BA`.`NEUR_3_1` AS `NEUR_3_1` 
 FROM `OL_BA`)
- INSERT INTO tmp_20180516114257_codegen_bxphgp_ol_identity_1 (`KEY`, `NEUR_3_1`) SELECT `OL_identity_1`.`KEY`, `OL_identity_1`.`NEUR_3_1` 
+ INSERT INTO tmp_20180602144936_mft_ol_identity_1 (`KEY`, `NEUR_3_1`) SELECT `OL_identity_1`.`KEY`, `OL_identity_1`.`NEUR_3_1` 
 FROM (SELECT `OL_identity`.`KEY` AS `KEY`, `OL_identity`.`NEUR_3_1` AS `NEUR_3_1` 
 FROM `OL_identity`) AS `OL_identity_1`
 
 -- Model deployment code
 
 SELECT `OL_identity_1`.`KEY` AS `KEY`, `OL_identity_1`.`NEUR_3_1` AS `Estimator` 
-FROM tmp_20180516114257_codegen_bxphgp_ol_identity_1 AS `OL_identity_1`
+FROM tmp_20180602144936_mft_ol_identity_1 AS `OL_identity_1`

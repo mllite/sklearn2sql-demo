@@ -10,17 +10,17 @@
 
 
 
--- Code For temporary table tmp_20180516115128_codegen_v23nqy_quantiles part 1. Create 
+-- Code For temporary table tmp_20180602145736_nl7_quantiles part 1. Create 
 
 
-CREATE TABLE tmp_20180516115128_codegen_v23nqy_quantiles (
+CREATE TABLE tmp_20180602145736_nl7_quantiles (
 	`KEY` BIGINT, 
 	`Quantile` DOUBLE
 )
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516115128_codegen_v23nqy_quantiles part 2. Populate
+-- Code For temporary table tmp_20180602145736_nl7_quantiles part 2. Populate
 
 WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_8` <= -0.005612778477370739) THEN CASE WHEN (`ADS`.`Feature_2` <= 0.0061888848431408405) THEN CASE WHEN (`ADS`.`Feature_8` <= -0.04327875375747681) THEN 3 ELSE 4 END ELSE CASE WHEN (`ADS`.`Feature_6` <= -0.061809033155441284) THEN 6 ELSE 7 END END ELSE CASE WHEN (`ADS`.`Feature_2` <= 0.06654636561870575) THEN CASE WHEN (`ADS`.`Feature_2` <= -0.00782267190515995) THEN 10 ELSE 11 END ELSE CASE WHEN (`ADS`.`Feature_5` <= 0.02671290934085846) THEN 13 ELSE 14 END END END AS node_id_2 
@@ -238,7 +238,7 @@ FROM `ADB_Model_15`) AS ensemble_score_union),
 FROM (SELECT u1.`KEY` AS `KEY`, u1.`Estimator` AS `Estimator`, u1.`Weight` AS `Weight`, u1.est_index AS est_index, sum(u2.`Weight`) AS cum_weight 
 FROM `WE` AS u1, `WE` AS u2 
 WHERE u1.`Estimator` >= u2.`Estimator` AND u1.`KEY` = u2.`KEY` GROUP BY u1.`KEY`, u1.est_index, u1.`Estimator`, u1.`Weight`) AS `CW`)
- INSERT INTO tmp_20180516115128_codegen_v23nqy_quantiles (`KEY`, `Quantile`) SELECT `Quantiles`.`KEY`, `Quantiles`.`Quantile` 
+ INSERT INTO tmp_20180602145736_nl7_quantiles (`KEY`, `Quantile`) SELECT `Quantiles`.`KEY`, `Quantiles`.`Quantile` 
 FROM (SELECT `CW2`.`KEY` AS `KEY`, `CW2`.`Quantile` AS `Quantile` 
 FROM (SELECT `Cumulative_Frequencies`.`KEY` AS `KEY`, min(`Cumulative_Frequencies`.`Estimator`) AS `Quantile` 
 FROM `Cumulative_Frequencies` 
@@ -247,4 +247,4 @@ WHERE `Cumulative_Frequencies`.cum_weight >= 0.5 GROUP BY `Cumulative_Frequencie
 -- Model deployment code
 
 SELECT `Quantiles`.`KEY` AS `KEY`, `Quantiles`.`Quantile` AS `Estimator` 
-FROM tmp_20180516115128_codegen_v23nqy_quantiles AS `Quantiles`
+FROM tmp_20180602145736_nl7_quantiles AS `Quantiles`

@@ -10,17 +10,17 @@
 
 
 
--- Code For temporary table tmp_20180516121831_codegen_go9vp0_lgbm_b0 part 1. Create 
+-- Code For temporary table tmp_20180602152239_43q_lgbm_b0 part 1. Create 
 
 
-CREATE TABLE tmp_20180516121831_codegen_go9vp0_lgbm_b0 (
+CREATE TABLE tmp_20180602152239_43q_lgbm_b0 (
 	`KEY` BIGINT, 
 	`Estimator` DOUBLE
 )
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516121831_codegen_go9vp0_lgbm_b0 part 2. Populate
+-- Code For temporary table tmp_20180602152239_43q_lgbm_b0 part 2. Populate
 
 WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` <= 0.3052070585017281) THEN 2 ELSE CASE WHEN (`ADS`.`Feature_1` <= 821.2744087124171) THEN 6 ELSE 7 END END AS node_id_2 
@@ -142,7 +142,7 @@ FROM `DT_node_lookup_9` LEFT OUTER JOIN `DT_node_data_9` ON `DT_node_lookup_9`.n
 `LGBM_Model_9` AS 
 (SELECT `DT_Output_9`.`KEY` AS `KEY`, `DT_Output_9`.`Estimator` AS `Estimator` 
 FROM `DT_Output_9`)
- INSERT INTO tmp_20180516121831_codegen_go9vp0_lgbm_b0 (`KEY`, `Estimator`) SELECT `LGBM_B0`.`KEY`, `LGBM_B0`.`Estimator` 
+ INSERT INTO tmp_20180602152239_43q_lgbm_b0 (`KEY`, `Estimator`) SELECT `LGBM_B0`.`KEY`, `LGBM_B0`.`Estimator` 
 FROM (SELECT `LGBM_esu_0`.`KEY` AS `KEY`, `LGBM_esu_0`.`Estimator` AS `Estimator` 
 FROM (SELECT `LGBM_Model_0`.`KEY` AS `KEY`, `LGBM_Model_0`.`Estimator` AS `Estimator` 
 FROM `LGBM_Model_0` UNION ALL SELECT `LGBM_Model_1`.`KEY` AS `KEY`, `LGBM_Model_1`.`Estimator` AS `Estimator` 
@@ -156,17 +156,17 @@ FROM `LGBM_Model_7` UNION ALL SELECT `LGBM_Model_8`.`KEY` AS `KEY`, `LGBM_Model_
 FROM `LGBM_Model_8` UNION ALL SELECT `LGBM_Model_9`.`KEY` AS `KEY`, `LGBM_Model_9`.`Estimator` AS `Estimator` 
 FROM `LGBM_Model_9`) AS `LGBM_esu_0`) AS `LGBM_B0`
 
--- Code For temporary table tmp_20180516121831_codegen_bz9aap_lgbm_b1 part 1. Create 
+-- Code For temporary table tmp_20180602152239_yxc_lgbm_b1 part 1. Create 
 
 
-CREATE TABLE tmp_20180516121831_codegen_bz9aap_lgbm_b1 (
+CREATE TABLE tmp_20180602152239_yxc_lgbm_b1 (
 	`KEY` BIGINT, 
 	`Estimator` DOUBLE
 )
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516121831_codegen_bz9aap_lgbm_b1 part 2. Populate
+-- Code For temporary table tmp_20180602152239_yxc_lgbm_b1 part 2. Populate
 
 WITH `DT_node_lookup_10` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` <= 0.3052070585017281) THEN 2 ELSE CASE WHEN (`ADS`.`Feature_0` <= 49.232675914117046) THEN 6 ELSE 7 END END AS node_id_2 
@@ -240,7 +240,7 @@ FROM `DT_node_lookup_15` LEFT OUTER JOIN `DT_node_data_15` ON `DT_node_lookup_15
 `LGBM_Model_15` AS 
 (SELECT `DT_Output_15`.`KEY` AS `KEY`, `DT_Output_15`.`Estimator` AS `Estimator` 
 FROM `DT_Output_15`)
- INSERT INTO tmp_20180516121831_codegen_bz9aap_lgbm_b1 (`KEY`, `Estimator`) SELECT `LGBM_B1`.`KEY`, `LGBM_B1`.`Estimator` 
+ INSERT INTO tmp_20180602152239_yxc_lgbm_b1 (`KEY`, `Estimator`) SELECT `LGBM_B1`.`KEY`, `LGBM_B1`.`Estimator` 
 FROM (SELECT `LGBM_esu_1`.`KEY` AS `KEY`, `LGBM_esu_1`.`Estimator` AS `Estimator` 
 FROM (SELECT `LGBM_Model_10`.`KEY` AS `KEY`, `LGBM_Model_10`.`Estimator` AS `Estimator` 
 FROM `LGBM_Model_10` UNION ALL SELECT `LGBM_Model_11`.`KEY` AS `KEY`, `LGBM_Model_11`.`Estimator` AS `Estimator` 
@@ -250,24 +250,24 @@ FROM `LGBM_Model_13` UNION ALL SELECT `LGBM_Model_14`.`KEY` AS `KEY`, `LGBM_Mode
 FROM `LGBM_Model_14` UNION ALL SELECT `LGBM_Model_15`.`KEY` AS `KEY`, `LGBM_Model_15`.`Estimator` AS `Estimator` 
 FROM `LGBM_Model_15`) AS `LGBM_esu_1`) AS `LGBM_B1`
 
--- Code For temporary table tmp_20180516121831_codegen_l552mx_lgbm_sum part 1. Create 
+-- Code For temporary table tmp_20180602152239_8zl_lgbm_sum part 1. Create 
 
 
-CREATE TABLE tmp_20180516121831_codegen_l552mx_lgbm_sum (
+CREATE TABLE tmp_20180602152239_8zl_lgbm_sum (
 	`KEY` BIGINT, 
 	`Estimator` DOUBLE
 )
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516121831_codegen_l552mx_lgbm_sum part 2. Populate
+-- Code For temporary table tmp_20180602152239_8zl_lgbm_sum part 2. Populate
 
 WITH `LGBM_Union` AS 
 (SELECT `LGBM_EnsembleUnion`.`KEY` AS `KEY`, `LGBM_EnsembleUnion`.`Estimator` AS `Estimator` 
 FROM (SELECT `LGBM_B0`.`KEY` AS `KEY`, `LGBM_B0`.`Estimator` AS `Estimator` 
-FROM tmp_20180516121831_codegen_go9vp0_lgbm_b0 AS `LGBM_B0` UNION ALL SELECT `LGBM_B1`.`KEY` AS `KEY`, `LGBM_B1`.`Estimator` AS `Estimator` 
-FROM tmp_20180516121831_codegen_bz9aap_lgbm_b1 AS `LGBM_B1`) AS `LGBM_EnsembleUnion`)
- INSERT INTO tmp_20180516121831_codegen_l552mx_lgbm_sum (`KEY`, `Estimator`) SELECT `LGBM_sum`.`KEY`, `LGBM_sum`.`Estimator` 
+FROM tmp_20180602152239_43q_lgbm_b0 AS `LGBM_B0` UNION ALL SELECT `LGBM_B1`.`KEY` AS `KEY`, `LGBM_B1`.`Estimator` AS `Estimator` 
+FROM tmp_20180602152239_yxc_lgbm_b1 AS `LGBM_B1`) AS `LGBM_EnsembleUnion`)
+ INSERT INTO tmp_20180602152239_8zl_lgbm_sum (`KEY`, `Estimator`) SELECT `LGBM_sum`.`KEY`, `LGBM_sum`.`Estimator` 
 FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT `LGBM_Union`.`KEY` AS `KEY`, sum(`LGBM_Union`.`Estimator`) AS `Estimator` 
 FROM `LGBM_Union` GROUP BY `LGBM_Union`.`KEY`) AS `T`) AS `LGBM_sum`
@@ -275,4 +275,4 @@ FROM `LGBM_Union` GROUP BY `LGBM_Union`.`KEY`) AS `T`) AS `LGBM_sum`
 -- Model deployment code
 
 SELECT `LGBM_sum`.`KEY` AS `KEY`, `LGBM_sum`.`Estimator` AS `Estimator` 
-FROM tmp_20180516121831_codegen_l552mx_lgbm_sum AS `LGBM_sum`
+FROM tmp_20180602152239_8zl_lgbm_sum AS `LGBM_sum`

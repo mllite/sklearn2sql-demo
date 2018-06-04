@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180516123732_codegen_70ebh2_ads_imp_1_out part 1. Create 
+-- Code For temporary table tmp_20180602153456_vne_ads_imp_1_out part 1. Create 
 
 
-CREATE TABLE tmp_20180516123732_codegen_70ebh2_ads_imp_1_out (
+CREATE TABLE tmp_20180602153456_vne_ads_imp_1_out (
 	`KEY` BIGINT, 
 	imputer_output_2 DOUBLE, 
 	imputer_output_3 DOUBLE, 
@@ -23,16 +23,16 @@ CREATE TABLE tmp_20180516123732_codegen_70ebh2_ads_imp_1_out (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516123732_codegen_70ebh2_ads_imp_1_out part 2. Populate
+-- Code For temporary table tmp_20180602153456_vne_ads_imp_1_out part 2. Populate
 
-INSERT INTO tmp_20180516123732_codegen_70ebh2_ads_imp_1_out (`KEY`, imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT `ADS_imp_1_OUT`.`KEY`, `ADS_imp_1_OUT`.imputer_output_2, `ADS_imp_1_OUT`.imputer_output_3, `ADS_imp_1_OUT`.imputer_output_4, `ADS_imp_1_OUT`.imputer_output_5 
+INSERT INTO tmp_20180602153456_vne_ads_imp_1_out (`KEY`, imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT `ADS_imp_1_OUT`.`KEY`, `ADS_imp_1_OUT`.imputer_output_2, `ADS_imp_1_OUT`.imputer_output_3, `ADS_imp_1_OUT`.imputer_output_4, `ADS_imp_1_OUT`.imputer_output_5 
 FROM (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_0` IS NULL) THEN 5.8474999999999975 ELSE `ADS`.`Feature_0` END AS imputer_output_2, CASE WHEN (`ADS`.`Feature_1` IS NULL) THEN 3.0366666666666657 ELSE `ADS`.`Feature_1` END AS imputer_output_3, CASE WHEN (`ADS`.`Feature_2` IS NULL) THEN 3.8450000000000006 ELSE `ADS`.`Feature_2` END AS imputer_output_4, CASE WHEN (`ADS`.`Feature_3` IS NULL) THEN 1.245 ELSE `ADS`.`Feature_3` END AS imputer_output_5 
 FROM iris_date_tgt AS `ADS`) AS `ADS_imp_1_OUT`
 
--- Code For temporary table tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out part 1. Create 
+-- Code For temporary table tmp_20180602153456_5ii_ads_sca_2_out part 1. Create 
 
 
-CREATE TABLE tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out (
+CREATE TABLE tmp_20180602153456_5ii_ads_sca_2_out (
 	`KEY` BIGINT, 
 	scaler_output_2 DOUBLE, 
 	scaler_output_3 DOUBLE, 
@@ -42,16 +42,16 @@ CREATE TABLE tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out part 2. Populate
+-- Code For temporary table tmp_20180602153456_5ii_ads_sca_2_out part 2. Populate
 
-INSERT INTO tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out (`KEY`, scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT `ADS_sca_2_OUT`.`KEY`, `ADS_sca_2_OUT`.scaler_output_2, `ADS_sca_2_OUT`.scaler_output_3, `ADS_sca_2_OUT`.scaler_output_4, `ADS_sca_2_OUT`.scaler_output_5 
+INSERT INTO tmp_20180602153456_5ii_ads_sca_2_out (`KEY`, scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT `ADS_sca_2_OUT`.`KEY`, `ADS_sca_2_OUT`.scaler_output_2, `ADS_sca_2_OUT`.scaler_output_3, `ADS_sca_2_OUT`.scaler_output_4, `ADS_sca_2_OUT`.scaler_output_5 
 FROM (SELECT `ADS_imp_1_OUT`.`KEY` AS `KEY`, (CAST(`ADS_imp_1_OUT`.imputer_output_2 AS DOUBLE) - 5.8474999999999975) / 0.827039146594646 AS scaler_output_2, (CAST(`ADS_imp_1_OUT`.imputer_output_3 AS DOUBLE) - 3.0366666666666657) / 0.43625935201691934 AS scaler_output_3, (CAST(`ADS_imp_1_OUT`.imputer_output_4 AS DOUBLE) - 3.8450000000000006) / 1.709817241695732 AS scaler_output_4, (CAST(`ADS_imp_1_OUT`.imputer_output_5 AS DOUBLE) - 1.245) / 0.7498722113355939 AS scaler_output_5 
-FROM tmp_20180516123732_codegen_70ebh2_ads_imp_1_out AS `ADS_imp_1_OUT`) AS `ADS_sca_2_OUT`
+FROM tmp_20180602153456_vne_ads_imp_1_out AS `ADS_imp_1_OUT`) AS `ADS_sca_2_OUT`
 
--- Code For temporary table tmp_20180516123733_codegen_m0ln4y_lgbm_b0 part 1. Create 
+-- Code For temporary table tmp_20180602153456_hrs_lgbm_b0 part 1. Create 
 
 
-CREATE TABLE tmp_20180516123733_codegen_m0ln4y_lgbm_b0 (
+CREATE TABLE tmp_20180602153456_hrs_lgbm_b0 (
 	`KEY` BIGINT, 
 	`Score_1789-07-14T00:00:00.000000000` DOUBLE, 
 	`Score_1789-08-14T00:00:00.000000000` DOUBLE, 
@@ -60,11 +60,11 @@ CREATE TABLE tmp_20180516123733_codegen_m0ln4y_lgbm_b0 (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516123733_codegen_m0ln4y_lgbm_b0 part 2. Populate
+-- Code For temporary table tmp_20180602153456_hrs_lgbm_b0 part 2. Populate
 
 WITH `DT_node_lookup` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 2 ELSE 3 END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, 0.07203947529441823 AS `Score` UNION ALL SELECT 3 AS nid, -0.037500000838190314 AS `Score`) AS `Values`), 
@@ -76,7 +76,7 @@ FROM `DT_node_lookup` LEFT OUTER JOIN `DT_node_data` ON `DT_node_lookup`.node_id
 FROM `DT_Output`), 
 `DT_node_lookup_1` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.7047536839697125) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.2733799131386338) THEN 10 ELSE 11 END END ELSE 3 END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_1` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, -0.037500000838190314 AS `Score` UNION ALL SELECT 4 AS nid, -0.034539474456227924 AS `Score` UNION ALL SELECT 10 AS nid, 0.0750000016763806 AS `Score` UNION ALL SELECT 11 AS nid, 0.03214285786130598 AS `Score`) AS `Values`), 
@@ -88,7 +88,7 @@ FROM `DT_node_lookup_1` LEFT OUTER JOIN `DT_node_data_1` ON `DT_node_lookup_1`.n
 FROM `DT_Output_1`), 
 `DT_node_lookup_2` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.587782118165611) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.2368674207533056) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.9401601890865214) THEN 6 ELSE 7 END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_2` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.037500000838190314 AS `Score` UNION ALL SELECT 5 AS nid, -0.026785714884421653 AS `Score` UNION ALL SELECT 6 AS nid, 0.058125001299194956 AS `Score` UNION ALL SELECT 7 AS nid, 0.07500000167638063 AS `Score`) AS `Values`), 
@@ -100,7 +100,7 @@ FROM `DT_node_lookup_2` LEFT OUTER JOIN `DT_node_data_2` ON `DT_node_lookup_2`.n
 FROM `DT_Output_2`), 
 `DT_node_lookup_3` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.587782118165611) THEN 6 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.9971825984799667) THEN 14 ELSE 15 END END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_3` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, 0.06701547810003368 AS `Score` UNION ALL SELECT 6 AS nid, -0.036848632741197096 AS `Score` UNION ALL SELECT 14 AS nid, -0.03670404798470327 AS `Score` UNION ALL SELECT 15 AS nid, -0.0368327525233922 AS `Score`) AS `Values`), 
@@ -112,7 +112,7 @@ FROM `DT_node_lookup_3` LEFT OUTER JOIN `DT_node_data_3` ON `DT_node_lookup_3`.n
 FROM `DT_Output_3`), 
 `DT_node_lookup_4` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -1.1960342603469403) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.587782118165611) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_2 <= -0.11789042925169398) THEN 12 ELSE 13 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.9401601890865214) THEN 14 ELSE 15 END END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_4` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, -0.036851095375791836 AS `Score` UNION ALL SELECT 12 AS nid, 0.054726691217795456 AS `Score` UNION ALL SELECT 13 AS nid, 0.06549057703567883 AS `Score` UNION ALL SELECT 14 AS nid, -0.020188733800116543 AS `Score` UNION ALL SELECT 15 AS nid, -0.036870097433291504 AS `Score`) AS `Values`), 
@@ -124,7 +124,7 @@ FROM `DT_node_lookup_4` LEFT OUTER JOIN `DT_node_data_4` ON `DT_node_lookup_4`.n
 FROM `DT_Output_4`), 
 `DT_node_lookup_5` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.587782118165611) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.2368674207533056) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -1.1960342603469403) THEN 8 ELSE 9 END ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.9401601890865214) THEN 6 ELSE 7 END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_5` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 5 AS nid, -0.02622212698462553 AS `Score` UNION ALL SELECT 6 AS nid, 0.05457018345983418 AS `Score` UNION ALL SELECT 7 AS nid, 0.06981288130366067 AS `Score` UNION ALL SELECT 8 AS nid, -0.03679952520131128 AS `Score` UNION ALL SELECT 9 AS nid, -0.03681136968887196 AS `Score`) AS `Values`), 
@@ -136,7 +136,7 @@ FROM `DT_node_lookup_5` LEFT OUTER JOIN `DT_node_data_5` ON `DT_node_lookup_5`.n
 FROM `DT_Output_5`), 
 `DT_node_lookup_6` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.587782118165611) THEN 6 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.9971825984799667) THEN 14 ELSE 15 END END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_6` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, 0.06281458522520018 AS `Score` UNION ALL SELECT 6 AS nid, -0.036215807029371924 AS `Score` UNION ALL SELECT 14 AS nid, -0.03606264378577669 AS `Score` UNION ALL SELECT 15 AS nid, -0.03617370952044912 AS `Score`) AS `Values`), 
@@ -148,7 +148,7 @@ FROM `DT_node_lookup_6` LEFT OUTER JOIN `DT_node_data_6` ON `DT_node_lookup_6`.n
 FROM `DT_Output_6`), 
 `DT_node_lookup_7` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.7047536839697125) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.2733799131386338) THEN 10 ELSE 11 END END ELSE 3 END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_7` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, -0.036280900253370184 AS `Score` UNION ALL SELECT 4 AS nid, -0.03322111214566169 AS `Score` UNION ALL SELECT 10 AS nid, 0.0657364736991334 AS `Score` UNION ALL SELECT 11 AS nid, 0.029282983521502687 AS `Score`) AS `Values`), 
@@ -160,7 +160,7 @@ FROM `DT_node_lookup_7` LEFT OUTER JOIN `DT_node_data_7` ON `DT_node_lookup_7`.n
 FROM `DT_Output_7`), 
 `DT_node_lookup_8` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.587782118165611) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.2368674207533056) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_2 <= -0.8433699938775219) THEN 8 ELSE 9 END ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.9401601890865214) THEN 6 ELSE 7 END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_8` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 5 AS nid, -0.025549988903108962 AS `Score` UNION ALL SELECT 6 AS nid, 0.051282971320200404 AS `Score` UNION ALL SELECT 7 AS nid, 0.06528030718477533 AS `Score` UNION ALL SELECT 8 AS nid, -0.03612251598152511 AS `Score` UNION ALL SELECT 9 AS nid, -0.0362001212446578 AS `Score`) AS `Values`), 
@@ -172,7 +172,7 @@ FROM `DT_node_lookup_8` LEFT OUTER JOIN `DT_node_data_8` ON `DT_node_lookup_8`.n
 FROM `DT_Output_8`), 
 `DT_node_lookup_9` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.587782118165611) THEN 6 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.9971825984799667) THEN 14 ELSE 15 END END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_9` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, 0.05910111908188287 AS `Score` UNION ALL SELECT 6 AS nid, -0.03563786208887245 AS `Score` UNION ALL SELECT 14 AS nid, -0.0353889479653156 AS `Score` UNION ALL SELECT 15 AS nid, -0.03558226847632769 AS `Score`) AS `Values`), 
@@ -182,7 +182,7 @@ FROM `DT_node_lookup_9` LEFT OUTER JOIN `DT_node_data_9` ON `DT_node_lookup_9`.n
 `LGBM_Model_0_3` AS 
 (SELECT `DT_Output_9`.`KEY` AS `KEY`, `DT_Output_9`.`Score` AS `Score_1789-07-14T00:00:00.000000000`, 0.0 AS `Score_1789-08-14T00:00:00.000000000`, 0.0 AS `Score_1789-09-14T00:00:00.000000000` 
 FROM `DT_Output_9`)
- INSERT INTO tmp_20180516123733_codegen_m0ln4y_lgbm_b0 (`KEY`, `Score_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000`) SELECT `LGBM_B0`.`KEY`, `LGBM_B0`.`Score_1789-07-14T00:00:00.000000000`, `LGBM_B0`.`Score_1789-08-14T00:00:00.000000000`, `LGBM_B0`.`Score_1789-09-14T00:00:00.000000000` 
+ INSERT INTO tmp_20180602153456_hrs_lgbm_b0 (`KEY`, `Score_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000`) SELECT `LGBM_B0`.`KEY`, `LGBM_B0`.`Score_1789-07-14T00:00:00.000000000`, `LGBM_B0`.`Score_1789-08-14T00:00:00.000000000`, `LGBM_B0`.`Score_1789-09-14T00:00:00.000000000` 
 FROM (SELECT `LGBM_esu_0`.`KEY` AS `KEY`, `LGBM_esu_0`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_esu_0`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_esu_0`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
 FROM (SELECT `LGBM_Model_0_0`.`KEY` AS `KEY`, `LGBM_Model_0_0`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_Model_0_0`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_Model_0_0`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
 FROM `LGBM_Model_0_0` UNION ALL SELECT `LGBM_Model_1_0`.`KEY` AS `KEY`, `LGBM_Model_1_0`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_Model_1_0`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_Model_1_0`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
@@ -196,10 +196,10 @@ FROM `LGBM_Model_1_2` UNION ALL SELECT `LGBM_Model_2_2`.`KEY` AS `KEY`, `LGBM_Mo
 FROM `LGBM_Model_2_2` UNION ALL SELECT `LGBM_Model_0_3`.`KEY` AS `KEY`, `LGBM_Model_0_3`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_Model_0_3`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_Model_0_3`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
 FROM `LGBM_Model_0_3`) AS `LGBM_esu_0`) AS `LGBM_B0`
 
--- Code For temporary table tmp_20180516123733_codegen_t8u7en_lgbm_b1 part 1. Create 
+-- Code For temporary table tmp_20180602153456_cdn_lgbm_b1 part 1. Create 
 
 
-CREATE TABLE tmp_20180516123733_codegen_t8u7en_lgbm_b1 (
+CREATE TABLE tmp_20180602153456_cdn_lgbm_b1 (
 	`KEY` BIGINT, 
 	`Score_1789-07-14T00:00:00.000000000` DOUBLE, 
 	`Score_1789-08-14T00:00:00.000000000` DOUBLE, 
@@ -208,11 +208,11 @@ CREATE TABLE tmp_20180516123733_codegen_t8u7en_lgbm_b1 (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516123733_codegen_t8u7en_lgbm_b1 part 2. Populate
+-- Code For temporary table tmp_20180602153456_cdn_lgbm_b1 part 2. Populate
 
 WITH `DT_node_lookup_10` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= -1.0601806387571413) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.587782118165611) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_2 <= -0.11789042925169398) THEN 12 ELSE 13 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.9401601890865214) THEN 14 ELSE 15 END END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_10` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, -0.03568571838579767 AS `Score` UNION ALL SELECT 12 AS nid, 0.04925256245474603 AS `Score` UNION ALL SELECT 13 AS nid, 0.05818923981588722 AS `Score` UNION ALL SELECT 14 AS nid, -0.019163599112394018 AS `Score` UNION ALL SELECT 15 AS nid, -0.03564417082512684 AS `Score`) AS `Values`), 
@@ -224,7 +224,7 @@ FROM `DT_node_lookup_10` LEFT OUTER JOIN `DT_node_data_10` ON `DT_node_lookup_10
 FROM `DT_Output_10`), 
 `DT_node_lookup_11` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.587782118165611) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.2368674207533056) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_2 <= -0.8433699938775219) THEN 8 ELSE 9 END ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.9401601890865214) THEN 6 ELSE 7 END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_11` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 5 AS nid, -0.024999601267443654 AS `Score` UNION ALL SELECT 6 AS nid, 0.04850454336800479 AS `Score` UNION ALL SELECT 7 AS nid, 0.06150092082979343 AS `Score` UNION ALL SELECT 8 AS nid, -0.035507048490941856 AS `Score` UNION ALL SELECT 9 AS nid, -0.03558639418888121 AS `Score`) AS `Values`), 
@@ -236,7 +236,7 @@ FROM `DT_node_lookup_11` LEFT OUTER JOIN `DT_node_data_11` ON `DT_node_lookup_11
 FROM `DT_Output_11`), 
 `DT_node_lookup_12` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.587782118165611) THEN 6 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.9971825984799667) THEN 14 ELSE 15 END END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_12` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, 0.055934436910049824 AS `Score` UNION ALL SELECT 6 AS nid, -0.03507529231629651 AS `Score` UNION ALL SELECT 14 AS nid, -0.03483294958726266 AS `Score` UNION ALL SELECT 15 AS nid, -0.034999792257628 AS `Score`) AS `Values`), 
@@ -248,7 +248,7 @@ FROM `DT_node_lookup_12` LEFT OUTER JOIN `DT_node_data_12` ON `DT_node_lookup_12
 FROM `DT_Output_12`), 
 `DT_node_lookup_13` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.7047536839697125) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.2733799131386338) THEN 10 ELSE 11 END END ELSE 3 END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_13` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, -0.03518961465308414 AS `Score` UNION ALL SELECT 4 AS nid, -0.03200418588727933 AS `Score` UNION ALL SELECT 10 AS nid, 0.05879711625774097 AS `Score` UNION ALL SELECT 11 AS nid, 0.02689209452194967 AS `Score`) AS `Values`), 
@@ -260,7 +260,7 @@ FROM `DT_node_lookup_13` LEFT OUTER JOIN `DT_node_data_13` ON `DT_node_lookup_13
 FROM `DT_Output_13`), 
 `DT_node_lookup_14` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.587782118165611) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.2368674207533056) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_2 <= -0.8433699938775219) THEN 8 ELSE 9 END ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.9401601890865214) THEN 6 ELSE 7 END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_14` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 5 AS nid, -0.02434911094173155 AS `Score` UNION ALL SELECT 6 AS nid, 0.04588954856581376 AS `Score` UNION ALL SELECT 7 AS nid, 0.05812476064175043 AS `Score` UNION ALL SELECT 8 AS nid, -0.03491639329356793 AS `Score` UNION ALL SELECT 9 AS nid, -0.0350397693836978 AS `Score`) AS `Values`), 
@@ -272,7 +272,7 @@ FROM `DT_node_lookup_14` LEFT OUTER JOIN `DT_node_data_14` ON `DT_node_lookup_14
 FROM `DT_Output_14`), 
 `DT_node_lookup_15` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.587782118165611) THEN 6 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.9971825984799667) THEN 14 ELSE 15 END END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_15` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, 0.05308955525012964 AS `Score` UNION ALL SELECT 6 AS nid, -0.034562076322525156 AS `Score` UNION ALL SELECT 14 AS nid, -0.03425658866598605 AS `Score` UNION ALL SELECT 15 AS nid, -0.034475408698114295 AS `Score`) AS `Values`), 
@@ -284,7 +284,7 @@ FROM `DT_node_lookup_15` LEFT OUTER JOIN `DT_node_data_15` ON `DT_node_lookup_15
 FROM `DT_Output_15`), 
 `DT_node_lookup_16` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.7047536839697125) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.2733799131386338) THEN 10 ELSE 11 END END ELSE 3 END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_16` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, -0.03465565742423588 AS `Score` UNION ALL SELECT 4 AS nid, -0.031408276567353226 AS `Score` UNION ALL SELECT 10 AS nid, 0.05583503002823799 AS `Score` UNION ALL SELECT 11 AS nid, 0.025727909610459284 AS `Score`) AS `Values`), 
@@ -296,7 +296,7 @@ FROM `DT_node_lookup_16` LEFT OUTER JOIN `DT_node_data_16` ON `DT_node_lookup_16
 FROM `DT_Output_16`), 
 `DT_node_lookup_17` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.587782118165611) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.2368674207533056) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_2 <= -0.8433699938775219) THEN 8 ELSE 9 END ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.9401601890865214) THEN 6 ELSE 7 END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_17` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 5 AS nid, -0.023812322866902713 AS `Score` UNION ALL SELECT 6 AS nid, 0.04365325456171853 AS `Score` UNION ALL SELECT 7 AS nid, 0.055267865001404064 AS `Score` UNION ALL SELECT 8 AS nid, -0.0343742195206776 AS `Score` UNION ALL SELECT 9 AS nid, -0.03449365159738576 AS `Score`) AS `Values`), 
@@ -308,7 +308,7 @@ FROM `DT_node_lookup_17` LEFT OUTER JOIN `DT_node_data_17` ON `DT_node_lookup_17
 FROM `DT_Output_17`), 
 `DT_node_lookup_18` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.587782118165611) THEN 6 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.9971825984799667) THEN 14 ELSE 15 END END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_18` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, 0.050575414375806295 AS `Score` UNION ALL SELECT 6 AS nid, -0.03407924847800788 AS `Score` UNION ALL SELECT 14 AS nid, -0.03372440809135498 AS `Score` UNION ALL SELECT 15 AS nid, -0.033980149791297876 AS `Score`) AS `Values`), 
@@ -320,7 +320,7 @@ FROM `DT_node_lookup_18` LEFT OUTER JOIN `DT_node_data_18` ON `DT_node_lookup_18
 FROM `DT_Output_18`), 
 `DT_node_lookup_19` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.7047536839697125) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= -1.0601806387571413) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.2733799131386338) THEN 10 ELSE 11 END END ELSE 3 END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_19` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, -0.034151628107487036 AS `Score` UNION ALL SELECT 4 AS nid, -0.0340987109512769 AS `Score` UNION ALL SELECT 10 AS nid, 0.049076619987162784 AS `Score` UNION ALL SELECT 11 AS nid, 0.02464480416547266 AS `Score`) AS `Values`), 
@@ -330,7 +330,7 @@ FROM `DT_node_lookup_19` LEFT OUTER JOIN `DT_node_data_19` ON `DT_node_lookup_19
 `LGBM_Model_1_6` AS 
 (SELECT `DT_Output_19`.`KEY` AS `KEY`, 0.0 AS `Score_1789-07-14T00:00:00.000000000`, `DT_Output_19`.`Score` AS `Score_1789-08-14T00:00:00.000000000`, 0.0 AS `Score_1789-09-14T00:00:00.000000000` 
 FROM `DT_Output_19`)
- INSERT INTO tmp_20180516123733_codegen_t8u7en_lgbm_b1 (`KEY`, `Score_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000`) SELECT `LGBM_B1`.`KEY`, `LGBM_B1`.`Score_1789-07-14T00:00:00.000000000`, `LGBM_B1`.`Score_1789-08-14T00:00:00.000000000`, `LGBM_B1`.`Score_1789-09-14T00:00:00.000000000` 
+ INSERT INTO tmp_20180602153456_cdn_lgbm_b1 (`KEY`, `Score_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000`) SELECT `LGBM_B1`.`KEY`, `LGBM_B1`.`Score_1789-07-14T00:00:00.000000000`, `LGBM_B1`.`Score_1789-08-14T00:00:00.000000000`, `LGBM_B1`.`Score_1789-09-14T00:00:00.000000000` 
 FROM (SELECT `LGBM_esu_1`.`KEY` AS `KEY`, `LGBM_esu_1`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_esu_1`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_esu_1`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
 FROM (SELECT `LGBM_Model_1_3`.`KEY` AS `KEY`, `LGBM_Model_1_3`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_Model_1_3`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_Model_1_3`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
 FROM `LGBM_Model_1_3` UNION ALL SELECT `LGBM_Model_2_3`.`KEY` AS `KEY`, `LGBM_Model_2_3`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_Model_2_3`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_Model_2_3`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
@@ -344,10 +344,10 @@ FROM `LGBM_Model_2_5` UNION ALL SELECT `LGBM_Model_0_6`.`KEY` AS `KEY`, `LGBM_Mo
 FROM `LGBM_Model_0_6` UNION ALL SELECT `LGBM_Model_1_6`.`KEY` AS `KEY`, `LGBM_Model_1_6`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_Model_1_6`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_Model_1_6`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
 FROM `LGBM_Model_1_6`) AS `LGBM_esu_1`) AS `LGBM_B1`
 
--- Code For temporary table tmp_20180516123733_codegen_klu6zw_lgbm_b2 part 1. Create 
+-- Code For temporary table tmp_20180602153456_ift_lgbm_b2 part 1. Create 
 
 
-CREATE TABLE tmp_20180516123733_codegen_klu6zw_lgbm_b2 (
+CREATE TABLE tmp_20180602153456_ift_lgbm_b2 (
 	`KEY` BIGINT, 
 	`Score_1789-07-14T00:00:00.000000000` DOUBLE, 
 	`Score_1789-08-14T00:00:00.000000000` DOUBLE, 
@@ -356,11 +356,11 @@ CREATE TABLE tmp_20180516123733_codegen_klu6zw_lgbm_b2 (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516123733_codegen_klu6zw_lgbm_b2 part 2. Populate
+-- Code For temporary table tmp_20180602153456_ift_lgbm_b2 part 2. Populate
 
 WITH `DT_node_lookup_20` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.540092023517789) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_2 <= 0.12393609229024888) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 8 ELSE 9 END ELSE 5 END ELSE 3 END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_20` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.051095324794412644 AS `Score` UNION ALL SELECT 5 AS nid, -0.015702191957559963 AS `Score` UNION ALL SELECT 8 AS nid, -0.033861130334129456 AS `Score` UNION ALL SELECT 9 AS nid, -0.034240081056300053 AS `Score`) AS `Values`), 
@@ -372,7 +372,7 @@ FROM `DT_node_lookup_20` LEFT OUTER JOIN `DT_node_data_20` ON `DT_node_lookup_20
 FROM `DT_Output_20`), 
 `DT_node_lookup_21` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.9401601890865214) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.2733799131386338) THEN 12 ELSE 13 END ELSE 7 END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_21` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, 0.048395087047550245 AS `Score` UNION ALL SELECT 7 AS nid, -0.03330773776313299 AS `Score` UNION ALL SELECT 12 AS nid, -0.03341670408594755 AS `Score` UNION ALL SELECT 13 AS nid, -0.03370764565371379 AS `Score`) AS `Values`), 
@@ -384,7 +384,7 @@ FROM `DT_node_lookup_21` LEFT OUTER JOIN `DT_node_data_21` ON `DT_node_lookup_21
 FROM `DT_Output_21`), 
 `DT_node_lookup_22` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.7047536839697125) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -1.1960342603469403) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.2733799131386338) THEN 10 ELSE 11 END END ELSE 3 END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_22` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, -0.033696100613114316 AS `Score` UNION ALL SELECT 4 AS nid, -0.03365685440258453 AS `Score` UNION ALL SELECT 10 AS nid, 0.04719909591790056 AS `Score` UNION ALL SELECT 11 AS nid, 0.023685425365166476 AS `Score`) AS `Values`), 
@@ -396,7 +396,7 @@ FROM `DT_node_lookup_22` LEFT OUTER JOIN `DT_node_data_22` ON `DT_node_lookup_22
 FROM `DT_Output_22`), 
 `DT_node_lookup_23` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.540092023517789) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_2 <= 0.12393609229024888) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 8 ELSE 9 END ELSE 5 END ELSE 3 END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_23` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.04889929966265169 AS `Score` UNION ALL SELECT 5 AS nid, -0.015370612266282278 AS `Score` UNION ALL SELECT 8 AS nid, -0.033372544903161286 AS `Score` UNION ALL SELECT 9 AS nid, -0.03378177416030432 AS `Score`) AS `Values`), 
@@ -408,7 +408,7 @@ FROM `DT_node_lookup_23` LEFT OUTER JOIN `DT_node_data_23` ON `DT_node_lookup_23
 FROM `DT_Output_23`), 
 `DT_node_lookup_24` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.9401601890865214) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.2733799131386338) THEN 12 ELSE 13 END ELSE 7 END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_24` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, 0.04644046716785488 AS `Score` UNION ALL SELECT 7 AS nid, -0.03285240381799122 AS `Score` UNION ALL SELECT 12 AS nid, -0.03297917716650251 AS `Score` UNION ALL SELECT 13 AS nid, -0.033301765360594635 AS `Score`) AS `Values`), 
@@ -420,7 +420,7 @@ FROM `DT_node_lookup_24` LEFT OUTER JOIN `DT_node_data_24` ON `DT_node_lookup_24
 FROM `DT_Output_24`), 
 `DT_node_lookup_25` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.7047536839697125) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= -1.0601806387571413) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.2733799131386338) THEN 10 ELSE 11 END END ELSE 3 END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_25` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, -0.03326756702881541 AS `Score` UNION ALL SELECT 4 AS nid, -0.03319571269597437 AS `Score` UNION ALL SELECT 10 AS nid, 0.04533698683363785 AS `Score` UNION ALL SELECT 11 AS nid, 0.022786461392573454 AS `Score`) AS `Values`), 
@@ -432,7 +432,7 @@ FROM `DT_node_lookup_25` LEFT OUTER JOIN `DT_node_data_25` ON `DT_node_lookup_25
 FROM `DT_Output_25`), 
 `DT_node_lookup_26` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.587782118165611) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.2368674207533056) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_2 <= -0.8433699938775219) THEN 8 ELSE 9 END ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.9971825984799667) THEN 6 ELSE 7 END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_26` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 5 AS nid, -0.02272049059071822 AS `Score` UNION ALL SELECT 6 AS nid, 0.03936808638573665 AS `Score` UNION ALL SELECT 7 AS nid, 0.0493361571431335 AS `Score` UNION ALL SELECT 8 AS nid, -0.03291372489830675 AS `Score` UNION ALL SELECT 9 AS nid, -0.03308336225702606 AS `Score`) AS `Values`), 
@@ -444,7 +444,7 @@ FROM `DT_node_lookup_26` LEFT OUTER JOIN `DT_node_data_26` ON `DT_node_lookup_26
 FROM `DT_Output_26`), 
 `DT_node_lookup_27` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.9401601890865214) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.2733799131386338) THEN 12 ELSE 13 END ELSE 7 END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_27` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, 0.0446829157058487 AS `Score` UNION ALL SELECT 7 AS nid, -0.03243295312805455 AS `Score` UNION ALL SELECT 12 AS nid, -0.03255748883414271 AS `Score` UNION ALL SELECT 13 AS nid, -0.032911925867644486 AS `Score`) AS `Values`), 
@@ -456,7 +456,7 @@ FROM `DT_node_lookup_27` LEFT OUTER JOIN `DT_node_data_27` ON `DT_node_lookup_27
 FROM `DT_Output_27`), 
 `DT_node_lookup_28` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.6462679010676619) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -1.1960342603469403) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.3538389865574075) THEN 10 ELSE 11 END END ELSE 3 END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_28` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, -0.029981658051287177 AS `Score` UNION ALL SELECT 4 AS nid, -0.0328061423100395 AS `Score` UNION ALL SELECT 10 AS nid, 0.04329095996722942 AS `Score` UNION ALL SELECT 11 AS nid, 0.032289767027802854 AS `Score`) AS `Values`), 
@@ -468,7 +468,7 @@ FROM `DT_node_lookup_28` LEFT OUTER JOIN `DT_node_data_28` ON `DT_node_lookup_28
 FROM `DT_Output_28`), 
 `DT_node_lookup_29` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.540092023517789) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_2 <= 0.12393609229024888) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 8 ELSE 9 END ELSE 5 END ELSE 3 END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_29` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.04540530948762556 AS `Score` UNION ALL SELECT 5 AS nid, -0.015072265692651632 AS `Score` UNION ALL SELECT 8 AS nid, -0.03248482588037635 AS `Score` UNION ALL SELECT 9 AS nid, -0.03295882311835557 AS `Score`) AS `Values`), 
@@ -478,7 +478,7 @@ FROM `DT_node_lookup_29` LEFT OUTER JOIN `DT_node_data_29` ON `DT_node_lookup_29
 `LGBM_Model_2_9` AS 
 (SELECT `DT_Output_29`.`KEY` AS `KEY`, 0.0 AS `Score_1789-07-14T00:00:00.000000000`, 0.0 AS `Score_1789-08-14T00:00:00.000000000`, `DT_Output_29`.`Score` AS `Score_1789-09-14T00:00:00.000000000` 
 FROM `DT_Output_29`)
- INSERT INTO tmp_20180516123733_codegen_klu6zw_lgbm_b2 (`KEY`, `Score_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000`) SELECT `LGBM_B2`.`KEY`, `LGBM_B2`.`Score_1789-07-14T00:00:00.000000000`, `LGBM_B2`.`Score_1789-08-14T00:00:00.000000000`, `LGBM_B2`.`Score_1789-09-14T00:00:00.000000000` 
+ INSERT INTO tmp_20180602153456_ift_lgbm_b2 (`KEY`, `Score_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000`) SELECT `LGBM_B2`.`KEY`, `LGBM_B2`.`Score_1789-07-14T00:00:00.000000000`, `LGBM_B2`.`Score_1789-08-14T00:00:00.000000000`, `LGBM_B2`.`Score_1789-09-14T00:00:00.000000000` 
 FROM (SELECT `LGBM_esu_2`.`KEY` AS `KEY`, `LGBM_esu_2`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_esu_2`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_esu_2`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
 FROM (SELECT `LGBM_Model_2_6`.`KEY` AS `KEY`, `LGBM_Model_2_6`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_Model_2_6`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_Model_2_6`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
 FROM `LGBM_Model_2_6` UNION ALL SELECT `LGBM_Model_0_7`.`KEY` AS `KEY`, `LGBM_Model_0_7`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_Model_0_7`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_Model_0_7`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
@@ -492,10 +492,10 @@ FROM `LGBM_Model_0_9` UNION ALL SELECT `LGBM_Model_1_9`.`KEY` AS `KEY`, `LGBM_Mo
 FROM `LGBM_Model_1_9` UNION ALL SELECT `LGBM_Model_2_9`.`KEY` AS `KEY`, `LGBM_Model_2_9`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_Model_2_9`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_Model_2_9`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
 FROM `LGBM_Model_2_9`) AS `LGBM_esu_2`) AS `LGBM_B2`
 
--- Code For temporary table tmp_20180516123733_codegen_g8bcpf_lgbm_b3 part 1. Create 
+-- Code For temporary table tmp_20180602153456_gcs_lgbm_b3 part 1. Create 
 
 
-CREATE TABLE tmp_20180516123733_codegen_g8bcpf_lgbm_b3 (
+CREATE TABLE tmp_20180602153456_gcs_lgbm_b3 (
 	`KEY` BIGINT, 
 	`Score_1789-07-14T00:00:00.000000000` DOUBLE, 
 	`Score_1789-08-14T00:00:00.000000000` DOUBLE, 
@@ -504,11 +504,11 @@ CREATE TABLE tmp_20180516123733_codegen_g8bcpf_lgbm_b3 (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516123733_codegen_g8bcpf_lgbm_b3 part 2. Populate
+-- Code For temporary table tmp_20180602153456_gcs_lgbm_b3 part 2. Populate
 
 WITH `DT_node_lookup_30` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.540092023517789) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.14002385794905625) THEN 12 ELSE 13 END ELSE 7 END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_30` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, 0.04309157219184433 AS `Score` UNION ALL SELECT 7 AS nid, -0.032102468770169715 AS `Score` UNION ALL SELECT 12 AS nid, -0.032172024702284 AS `Score` UNION ALL SELECT 13 AS nid, -0.03269095688766959 AS `Score`) AS `Values`), 
@@ -520,7 +520,7 @@ FROM `DT_node_lookup_30` LEFT OUTER JOIN `DT_node_data_30` ON `DT_node_lookup_30
 FROM `DT_Output_30`), 
 `DT_node_lookup_31` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.7047536839697125) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= -1.0601806387571413) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.2733799131386338) THEN 10 ELSE 11 END END ELSE 3 END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_31` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, -0.032477012807808875 AS `Score` UNION ALL SELECT 4 AS nid, -0.03239250501627685 AS `Score` UNION ALL SELECT 10 AS nid, 0.04232613398334018 AS `Score` UNION ALL SELECT 11 AS nid, 0.02112344906031286 AS `Score`) AS `Values`), 
@@ -532,7 +532,7 @@ FROM `DT_node_lookup_31` LEFT OUTER JOIN `DT_node_data_31` ON `DT_node_lookup_31
 FROM `DT_Output_31`), 
 `DT_node_lookup_32` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.587782118165611) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.2368674207533056) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_2 <= -0.8433699938775219) THEN 8 ELSE 9 END ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.9401601890865214) THEN 6 ELSE 7 END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_32` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 5 AS nid, -0.02192068352715347 AS `Score` UNION ALL SELECT 6 AS nid, 0.03578464276635291 AS `Score` UNION ALL SELECT 7 AS nid, 0.04536024877211253 AS `Score` UNION ALL SELECT 8 AS nid, -0.032078917872632645 AS `Score` UNION ALL SELECT 9 AS nid, -0.03227169375635002 AS `Score`) AS `Values`), 
@@ -544,7 +544,7 @@ FROM `DT_node_lookup_32` LEFT OUTER JOIN `DT_node_data_32` ON `DT_node_lookup_32
 FROM `DT_Output_32`), 
 `DT_node_lookup_33` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.540092023517789) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.14002385794905625) THEN 12 ELSE 13 END ELSE 7 END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_33` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, 0.041648679740140394 AS `Score` UNION ALL SELECT 7 AS nid, -0.03173763194462144 AS `Score` UNION ALL SELECT 12 AS nid, -0.0317964121567206 AS `Score` UNION ALL SELECT 13 AS nid, -0.03234593133672061 AS `Score`) AS `Values`), 
@@ -556,7 +556,7 @@ FROM `DT_node_lookup_33` LEFT OUTER JOIN `DT_node_data_33` ON `DT_node_lookup_33
 FROM `DT_Output_33`), 
 `DT_node_lookup_34` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.540092023517789) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -1.1960342603469403) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_2 <= 0.12393609229024888) THEN 10 ELSE 11 END END ELSE 3 END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_34` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, -0.0276735527461119 AS `Score` UNION ALL SELECT 4 AS nid, -0.03204980581769173 AS `Score` UNION ALL SELECT 10 AS nid, 0.04066472711086899 AS `Score` UNION ALL SELECT 11 AS nid, 0.035987534977893386 AS `Score`) AS `Values`), 
@@ -568,7 +568,7 @@ FROM `DT_node_lookup_34` LEFT OUTER JOIN `DT_node_data_34` ON `DT_node_lookup_34
 FROM `DT_Output_34`), 
 `DT_node_lookup_35` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.540092023517789) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_2 <= 0.12393609229024888) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 8 ELSE 9 END ELSE 5 END ELSE 3 END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_35` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.042530182093048235 AS `Score` UNION ALL SELECT 5 AS nid, -0.014764050438561922 AS `Score` UNION ALL SELECT 8 AS nid, -0.03170237252831367 AS `Score` UNION ALL SELECT 9 AS nid, -0.03221293335228762 AS `Score`) AS `Values`), 
@@ -580,7 +580,7 @@ FROM `DT_node_lookup_35` LEFT OUTER JOIN `DT_node_data_35` ON `DT_node_lookup_35
 FROM `DT_Output_35`), 
 `DT_node_lookup_36` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.9401601890865214) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.2733799131386338) THEN 12 ELSE 13 END ELSE 7 END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_36` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, 0.0403312051227808 AS `Score` UNION ALL SELECT 7 AS nid, -0.031282810309940866 AS `Score` UNION ALL SELECT 12 AS nid, -0.031462382507507276 AS `Score` UNION ALL SELECT 13 AS nid, -0.03187195381175211 AS `Score`) AS `Values`), 
@@ -592,7 +592,7 @@ FROM `DT_node_lookup_36` LEFT OUTER JOIN `DT_node_data_36` ON `DT_node_lookup_36
 FROM `DT_Output_36`), 
 `DT_node_lookup_37` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.7047536839697125) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -1.1960342603469403) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.2733799131386338) THEN 10 ELSE 11 END END ELSE 3 END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_37` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, -0.031844856858439616 AS `Score` UNION ALL SELECT 4 AS nid, -0.031678476487483176 AS `Score` UNION ALL SELECT 10 AS nid, 0.03982425788862459 AS `Score` UNION ALL SELECT 11 AS nid, 0.019952331232842777 AS `Score`) AS `Values`), 
@@ -604,7 +604,7 @@ FROM `DT_node_lookup_37` LEFT OUTER JOIN `DT_node_data_37` ON `DT_node_lookup_37
 FROM `DT_Output_37`), 
 `DT_node_lookup_38` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.52929633526356) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_3 <= -0.657101481816596) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_2 <= -0.6620001027210645) THEN 10 ELSE 11 END END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.8802110326758651) THEN 6 ELSE 7 END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_38` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.024613794616943786 AS `Score` UNION ALL SELECT 6 AS nid, 0.02896917696717415 AS `Score` UNION ALL SELECT 7 AS nid, 0.04319829737107023 AS `Score` UNION ALL SELECT 10 AS nid, -0.03135992152848637 AS `Score` UNION ALL SELECT 11 AS nid, -0.03263372957519394 AS `Score`) AS `Values`), 
@@ -616,7 +616,7 @@ FROM `DT_node_lookup_38` LEFT OUTER JOIN `DT_node_data_38` ON `DT_node_lookup_38
 FROM `DT_Output_38`), 
 `DT_node_lookup_39` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.9401601890865214) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.2733799131386338) THEN 12 ELSE 13 END ELSE 7 END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_39` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, 0.039129023898422474 AS `Score` UNION ALL SELECT 7 AS nid, -0.030955208621465554 AS `Score` UNION ALL SELECT 12 AS nid, -0.031124065909043836 AS `Score` UNION ALL SELECT 13 AS nid, -0.031567846327522575 AS `Score`) AS `Values`), 
@@ -626,7 +626,7 @@ FROM `DT_node_lookup_39` LEFT OUTER JOIN `DT_node_data_39` ON `DT_node_lookup_39
 `LGBM_Model_0_13` AS 
 (SELECT `DT_Output_39`.`KEY` AS `KEY`, `DT_Output_39`.`Score` AS `Score_1789-07-14T00:00:00.000000000`, 0.0 AS `Score_1789-08-14T00:00:00.000000000`, 0.0 AS `Score_1789-09-14T00:00:00.000000000` 
 FROM `DT_Output_39`)
- INSERT INTO tmp_20180516123733_codegen_g8bcpf_lgbm_b3 (`KEY`, `Score_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000`) SELECT `LGBM_B3`.`KEY`, `LGBM_B3`.`Score_1789-07-14T00:00:00.000000000`, `LGBM_B3`.`Score_1789-08-14T00:00:00.000000000`, `LGBM_B3`.`Score_1789-09-14T00:00:00.000000000` 
+ INSERT INTO tmp_20180602153456_gcs_lgbm_b3 (`KEY`, `Score_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000`) SELECT `LGBM_B3`.`KEY`, `LGBM_B3`.`Score_1789-07-14T00:00:00.000000000`, `LGBM_B3`.`Score_1789-08-14T00:00:00.000000000`, `LGBM_B3`.`Score_1789-09-14T00:00:00.000000000` 
 FROM (SELECT `LGBM_esu_3`.`KEY` AS `KEY`, `LGBM_esu_3`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_esu_3`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_esu_3`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
 FROM (SELECT `LGBM_Model_0_10`.`KEY` AS `KEY`, `LGBM_Model_0_10`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_Model_0_10`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_Model_0_10`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
 FROM `LGBM_Model_0_10` UNION ALL SELECT `LGBM_Model_1_10`.`KEY` AS `KEY`, `LGBM_Model_1_10`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_Model_1_10`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_Model_1_10`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
@@ -640,10 +640,10 @@ FROM `LGBM_Model_1_12` UNION ALL SELECT `LGBM_Model_2_12`.`KEY` AS `KEY`, `LGBM_
 FROM `LGBM_Model_2_12` UNION ALL SELECT `LGBM_Model_0_13`.`KEY` AS `KEY`, `LGBM_Model_0_13`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_Model_0_13`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_Model_0_13`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
 FROM `LGBM_Model_0_13`) AS `LGBM_esu_3`) AS `LGBM_B3`
 
--- Code For temporary table tmp_20180516123733_codegen_qzmtls_lgbm_b4 part 1. Create 
+-- Code For temporary table tmp_20180602153456_a4n_lgbm_b4 part 1. Create 
 
 
-CREATE TABLE tmp_20180516123733_codegen_qzmtls_lgbm_b4 (
+CREATE TABLE tmp_20180602153456_a4n_lgbm_b4 (
 	`KEY` BIGINT, 
 	`Score_1789-07-14T00:00:00.000000000` DOUBLE, 
 	`Score_1789-08-14T00:00:00.000000000` DOUBLE, 
@@ -652,11 +652,11 @@ CREATE TABLE tmp_20180516123733_codegen_qzmtls_lgbm_b4 (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516123733_codegen_qzmtls_lgbm_b4 part 2. Populate
+-- Code For temporary table tmp_20180602153456_a4n_lgbm_b4 part 2. Populate
 
 WITH `DT_node_lookup_40` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.540092023517789) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= -1.0601806387571413) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_2 <= 0.12393609229024888) THEN 10 ELSE 11 END END ELSE 3 END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_40` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, -0.026844521797435295 AS `Score` UNION ALL SELECT 4 AS nid, -0.031377254379556574 AS `Score` UNION ALL SELECT 10 AS nid, 0.03837399317480616 AS `Score` UNION ALL SELECT 11 AS nid, 0.03369128319463142 AS `Score`) AS `Values`), 
@@ -668,7 +668,7 @@ FROM `DT_node_lookup_40` LEFT OUTER JOIN `DT_node_data_40` ON `DT_node_lookup_40
 FROM `DT_Output_40`), 
 `DT_node_lookup_41` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.540092023517789) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_2 <= 0.12393609229024888) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 8 ELSE 9 END ELSE 5 END ELSE 3 END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_41` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.03992866306278911 AS `Score` UNION ALL SELECT 5 AS nid, -0.014165172018767998 AS `Score` UNION ALL SELECT 8 AS nid, -0.031011173303837694 AS `Score` UNION ALL SELECT 9 AS nid, -0.03154298734664896 AS `Score`) AS `Values`), 
@@ -680,7 +680,7 @@ FROM `DT_node_lookup_41` LEFT OUTER JOIN `DT_node_data_41` ON `DT_node_lookup_41
 FROM `DT_Output_41`), 
 `DT_node_lookup_42` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.9401601890865214) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.2733799131386338) THEN 12 ELSE 13 END ELSE 7 END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_42` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, 0.03802152390407221 AS `Score` UNION ALL SELECT 7 AS nid, -0.03063853183211392 AS `Score` UNION ALL SELECT 12 AS nid, -0.03081863775642479 AS `Score` UNION ALL SELECT 13 AS nid, -0.03126836088891469 AS `Score`) AS `Values`), 
@@ -692,7 +692,7 @@ FROM `DT_node_lookup_42` LEFT OUTER JOIN `DT_node_data_42` ON `DT_node_lookup_42
 FROM `DT_Output_42`), 
 `DT_node_lookup_43` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.7047536839697125) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= -1.0601806387571413) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.2733799131386338) THEN 10 ELSE 11 END END ELSE 3 END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_43` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, -0.03128737834716705 AS `Score` UNION ALL SELECT 4 AS nid, -0.031044526065586376 AS `Score` UNION ALL SELECT 10 AS nid, 0.03775527093233315 AS `Score` UNION ALL SELECT 11 AS nid, 0.018882453691262378 AS `Score`) AS `Values`), 
@@ -704,7 +704,7 @@ FROM `DT_node_lookup_43` LEFT OUTER JOIN `DT_node_data_43` ON `DT_node_lookup_43
 FROM `DT_Output_43`), 
 `DT_node_lookup_44` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.587782118165611) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.2368674207533056) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_2 <= -0.8433699938775219) THEN 8 ELSE 9 END ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.9971825984799667) THEN 6 ELSE 7 END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_44` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 5 AS nid, -0.02055684580595688 AS `Score` UNION ALL SELECT 6 AS nid, 0.03193610952686271 AS `Score` UNION ALL SELECT 7 AS nid, 0.04106016032050676 AS `Score` UNION ALL SELECT 8 AS nid, -0.030696312336704043 AS `Score` UNION ALL SELECT 9 AS nid, -0.030916683069578434 AS `Score`) AS `Values`), 
@@ -716,7 +716,7 @@ FROM `DT_node_lookup_44` LEFT OUTER JOIN `DT_node_data_44` ON `DT_node_lookup_44
 FROM `DT_Output_44`), 
 `DT_node_lookup_45` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -0.4064761911692538) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.9401601890865214) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.2733799131386338) THEN 12 ELSE 13 END ELSE 7 END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_45` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, 0.03700278940942407 AS `Score` UNION ALL SELECT 7 AS nid, -0.030346639340281974 AS `Score` UNION ALL SELECT 12 AS nid, -0.030519890506395447 AS `Score` UNION ALL SELECT 13 AS nid, -0.030993262083417406 AS `Score`) AS `Values`), 
@@ -728,7 +728,7 @@ FROM `DT_node_lookup_45` LEFT OUTER JOIN `DT_node_data_45` ON `DT_node_lookup_45
 FROM `DT_Output_45`), 
 `DT_node_lookup_46` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.7047536839697125) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= -1.1960342603469403) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_5 <= 0.2733799131386338) THEN 10 ELSE 11 END END ELSE 3 END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_46` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, -0.030969960624712814 AS `Score` UNION ALL SELECT 4 AS nid, -0.03077799257956071 AS `Score` UNION ALL SELECT 10 AS nid, 0.036893363308531726 AS `Score` UNION ALL SELECT 11 AS nid, 0.01819939419695562 AS `Score`) AS `Values`), 
@@ -740,7 +740,7 @@ FROM `DT_node_lookup_46` LEFT OUTER JOIN `DT_node_data_46` ON `DT_node_lookup_46
 FROM `DT_Output_46`), 
 `DT_node_lookup_47` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.52929633526356) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_output_3 <= -0.657101481816596) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_2 <= -0.6620001027210645) THEN 10 ELSE 11 END END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_output_4 <= 0.8802110326758651) THEN 6 ELSE 7 END END AS node_id_2 
-FROM tmp_20180516123732_codegen_lxrpdh_ads_sca_2_out AS `ADS_sca_2_OUT`), 
+FROM tmp_20180602153456_5ii_ads_sca_2_out AS `ADS_sca_2_OUT`), 
 `DT_node_data_47` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.02318550502590008 AS `Score` UNION ALL SELECT 6 AS nid, 0.026223214015916235 AS `Score` UNION ALL SELECT 7 AS nid, 0.03986657062270415 AS `Score` UNION ALL SELECT 10 AS nid, -0.0304111345638241 AS `Score` UNION ALL SELECT 11 AS nid, -0.03175758983255726 AS `Score`) AS `Values`), 
@@ -750,7 +750,7 @@ FROM `DT_node_lookup_47` LEFT OUTER JOIN `DT_node_data_47` ON `DT_node_lookup_47
 `LGBM_Model_2_15` AS 
 (SELECT `DT_Output_47`.`KEY` AS `KEY`, 0.0 AS `Score_1789-07-14T00:00:00.000000000`, 0.0 AS `Score_1789-08-14T00:00:00.000000000`, `DT_Output_47`.`Score` AS `Score_1789-09-14T00:00:00.000000000` 
 FROM `DT_Output_47`)
- INSERT INTO tmp_20180516123733_codegen_qzmtls_lgbm_b4 (`KEY`, `Score_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000`) SELECT `LGBM_B4`.`KEY`, `LGBM_B4`.`Score_1789-07-14T00:00:00.000000000`, `LGBM_B4`.`Score_1789-08-14T00:00:00.000000000`, `LGBM_B4`.`Score_1789-09-14T00:00:00.000000000` 
+ INSERT INTO tmp_20180602153456_a4n_lgbm_b4 (`KEY`, `Score_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000`) SELECT `LGBM_B4`.`KEY`, `LGBM_B4`.`Score_1789-07-14T00:00:00.000000000`, `LGBM_B4`.`Score_1789-08-14T00:00:00.000000000`, `LGBM_B4`.`Score_1789-09-14T00:00:00.000000000` 
 FROM (SELECT `LGBM_esu_4`.`KEY` AS `KEY`, `LGBM_esu_4`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_esu_4`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_esu_4`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
 FROM (SELECT `LGBM_Model_1_13`.`KEY` AS `KEY`, `LGBM_Model_1_13`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_Model_1_13`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_Model_1_13`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
 FROM `LGBM_Model_1_13` UNION ALL SELECT `LGBM_Model_2_13`.`KEY` AS `KEY`, `LGBM_Model_2_13`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_Model_2_13`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_Model_2_13`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
@@ -762,10 +762,10 @@ FROM `LGBM_Model_0_15` UNION ALL SELECT `LGBM_Model_1_15`.`KEY` AS `KEY`, `LGBM_
 FROM `LGBM_Model_1_15` UNION ALL SELECT `LGBM_Model_2_15`.`KEY` AS `KEY`, `LGBM_Model_2_15`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_Model_2_15`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_Model_2_15`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
 FROM `LGBM_Model_2_15`) AS `LGBM_esu_4`) AS `LGBM_B4`
 
--- Code For temporary table tmp_20180516123733_codegen_6rx13z_lgbm_sum part 1. Create 
+-- Code For temporary table tmp_20180602153456_k5g_lgbm_sum part 1. Create 
 
 
-CREATE TABLE tmp_20180516123733_codegen_6rx13z_lgbm_sum (
+CREATE TABLE tmp_20180602153456_k5g_lgbm_sum (
 	`KEY` BIGINT, 
 	`Score_1789-07-14T00:00:00.000000000` DOUBLE, 
 	`Score_1789-08-14T00:00:00.000000000` DOUBLE, 
@@ -774,17 +774,17 @@ CREATE TABLE tmp_20180516123733_codegen_6rx13z_lgbm_sum (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516123733_codegen_6rx13z_lgbm_sum part 2. Populate
+-- Code For temporary table tmp_20180602153456_k5g_lgbm_sum part 2. Populate
 
 WITH `LGBM_Union` AS 
 (SELECT `LGBM_EnsembleUnion`.`KEY` AS `KEY`, `LGBM_EnsembleUnion`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_EnsembleUnion`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_EnsembleUnion`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
 FROM (SELECT `LGBM_B0`.`KEY` AS `KEY`, `LGBM_B0`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_B0`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_B0`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
-FROM tmp_20180516123733_codegen_m0ln4y_lgbm_b0 AS `LGBM_B0` UNION ALL SELECT `LGBM_B1`.`KEY` AS `KEY`, `LGBM_B1`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_B1`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_B1`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
-FROM tmp_20180516123733_codegen_t8u7en_lgbm_b1 AS `LGBM_B1` UNION ALL SELECT `LGBM_B2`.`KEY` AS `KEY`, `LGBM_B2`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_B2`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_B2`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
-FROM tmp_20180516123733_codegen_klu6zw_lgbm_b2 AS `LGBM_B2` UNION ALL SELECT `LGBM_B3`.`KEY` AS `KEY`, `LGBM_B3`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_B3`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_B3`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
-FROM tmp_20180516123733_codegen_g8bcpf_lgbm_b3 AS `LGBM_B3` UNION ALL SELECT `LGBM_B4`.`KEY` AS `KEY`, `LGBM_B4`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_B4`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_B4`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
-FROM tmp_20180516123733_codegen_qzmtls_lgbm_b4 AS `LGBM_B4`) AS `LGBM_EnsembleUnion`)
- INSERT INTO tmp_20180516123733_codegen_6rx13z_lgbm_sum (`KEY`, `Score_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000`) SELECT `LGBM_sum`.`KEY`, `LGBM_sum`.`Score_1789-07-14T00:00:00.000000000`, `LGBM_sum`.`Score_1789-08-14T00:00:00.000000000`, `LGBM_sum`.`Score_1789-09-14T00:00:00.000000000` 
+FROM tmp_20180602153456_hrs_lgbm_b0 AS `LGBM_B0` UNION ALL SELECT `LGBM_B1`.`KEY` AS `KEY`, `LGBM_B1`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_B1`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_B1`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
+FROM tmp_20180602153456_cdn_lgbm_b1 AS `LGBM_B1` UNION ALL SELECT `LGBM_B2`.`KEY` AS `KEY`, `LGBM_B2`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_B2`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_B2`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
+FROM tmp_20180602153456_ift_lgbm_b2 AS `LGBM_B2` UNION ALL SELECT `LGBM_B3`.`KEY` AS `KEY`, `LGBM_B3`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_B3`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_B3`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
+FROM tmp_20180602153456_gcs_lgbm_b3 AS `LGBM_B3` UNION ALL SELECT `LGBM_B4`.`KEY` AS `KEY`, `LGBM_B4`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_B4`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_B4`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000` 
+FROM tmp_20180602153456_a4n_lgbm_b4 AS `LGBM_B4`) AS `LGBM_EnsembleUnion`)
+ INSERT INTO tmp_20180602153456_k5g_lgbm_sum (`KEY`, `Score_1789-07-14T00:00:00.000000000`, `Score_1789-08-14T00:00:00.000000000`, `Score_1789-09-14T00:00:00.000000000`) SELECT `LGBM_sum`.`KEY`, `LGBM_sum`.`Score_1789-07-14T00:00:00.000000000`, `LGBM_sum`.`Score_1789-08-14T00:00:00.000000000`, `LGBM_sum`.`Score_1789-09-14T00:00:00.000000000` 
 FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Score_1789-07-14T00:00:00.000000000` AS DOUBLE) AS `Score_1789-07-14T00:00:00.000000000`, CAST(`T`.`Score_1789-08-14T00:00:00.000000000` AS DOUBLE) AS `Score_1789-08-14T00:00:00.000000000`, CAST(`T`.`Score_1789-09-14T00:00:00.000000000` AS DOUBLE) AS `Score_1789-09-14T00:00:00.000000000` 
 FROM (SELECT `LGBM_Union`.`KEY` AS `KEY`, sum(`LGBM_Union`.`Score_1789-07-14T00:00:00.000000000`) AS `Score_1789-07-14T00:00:00.000000000`, sum(`LGBM_Union`.`Score_1789-08-14T00:00:00.000000000`) AS `Score_1789-08-14T00:00:00.000000000`, sum(`LGBM_Union`.`Score_1789-09-14T00:00:00.000000000`) AS `Score_1789-09-14T00:00:00.000000000` 
 FROM `LGBM_Union` GROUP BY `LGBM_Union`.`KEY`) AS `T`) AS `LGBM_sum`
@@ -793,7 +793,7 @@ FROM `LGBM_Union` GROUP BY `LGBM_Union`.`KEY`) AS `T`) AS `LGBM_sum`
 
 WITH orig_cte AS 
 (SELECT `LGBM_sum`.`KEY` AS `KEY`, `LGBM_sum`.`Score_1789-07-14T00:00:00.000000000` AS `Score_1789-07-14T00:00:00.000000000`, `LGBM_sum`.`Score_1789-08-14T00:00:00.000000000` AS `Score_1789-08-14T00:00:00.000000000`, `LGBM_sum`.`Score_1789-09-14T00:00:00.000000000` AS `Score_1789-09-14T00:00:00.000000000`, CAST(NULL AS DOUBLE) AS `Proba_1789-07-14T00:00:00.000000000`, CAST(NULL AS DOUBLE) AS `Proba_1789-08-14T00:00:00.000000000`, CAST(NULL AS DOUBLE) AS `Proba_1789-09-14T00:00:00.000000000`, CAST(NULL AS DOUBLE) AS `LogProba_1789-07-14T00:00:00.000000000`, CAST(NULL AS DOUBLE) AS `LogProba_1789-08-14T00:00:00.000000000`, CAST(NULL AS DOUBLE) AS `LogProba_1789-09-14T00:00:00.000000000`, CAST(NULL AS BIGINT) AS `Decision`, CAST(NULL AS DOUBLE) AS `DecisionProba` 
-FROM tmp_20180516123733_codegen_6rx13z_lgbm_sum AS `LGBM_sum`), 
+FROM tmp_20180602153456_k5g_lgbm_sum AS `LGBM_sum`), 
 score_class_union AS 
 (SELECT scu.`KEY_u` AS `KEY_u`, scu.`class` AS `class`, scu.`LogProba` AS `LogProba`, scu.`Proba` AS `Proba`, scu.`Score` AS `Score` 
 FROM (SELECT orig_cte.`KEY` AS `KEY_u`, '1789-07-14T00:00:00.000000000' AS `class`, orig_cte.`LogProba_1789-07-14T00:00:00.000000000` AS `LogProba`, orig_cte.`Proba_1789-07-14T00:00:00.000000000` AS `Proba`, orig_cte.`Score_1789-07-14T00:00:00.000000000` AS `Score` 

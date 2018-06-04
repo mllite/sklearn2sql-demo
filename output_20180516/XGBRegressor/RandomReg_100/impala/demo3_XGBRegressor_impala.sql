@@ -10,17 +10,17 @@
 
 
 
--- Code For temporary table tmp_20180516114546_codegen_j7bqd6_xgb_b0 part 1. Create 
+-- Code For temporary table tmp_20180602145214_9np_xgb_b0 part 1. Create 
 
 
-CREATE TABLE tmp_20180516114546_codegen_j7bqd6_xgb_b0 (
+CREATE TABLE tmp_20180602145214_9np_xgb_b0 (
 	`KEY` BIGINT, 
 	`Estimator` DOUBLE
 )
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516114546_codegen_j7bqd6_xgb_b0 part 2. Populate
+-- Code For temporary table tmp_20180602145214_9np_xgb_b0 part 2. Populate
 
 WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_80` < -0.20716172456741333) THEN CASE WHEN (`ADS`.`Feature_41` < -0.5217077136039734) THEN 3 ELSE 4 END ELSE CASE WHEN (`ADS`.`Feature_39` < 0.45573797821998596) THEN CASE WHEN (`ADS`.`Feature_1` < -0.20646128058433533) THEN 7 ELSE 8 END ELSE 6 END END AS node_id_2 
@@ -142,7 +142,7 @@ FROM `DT_node_lookup_9` LEFT OUTER JOIN `DT_node_data_9` ON `DT_node_lookup_9`.n
 `XGB_Model_9` AS 
 (SELECT `DT_Output_9`.`KEY` AS `KEY`, `DT_Output_9`.`Estimator` AS `Estimator` 
 FROM `DT_Output_9`)
- INSERT INTO tmp_20180516114546_codegen_j7bqd6_xgb_b0 (`KEY`, `Estimator`) SELECT `XGB_B0`.`KEY`, `XGB_B0`.`Estimator` 
+ INSERT INTO tmp_20180602145214_9np_xgb_b0 (`KEY`, `Estimator`) SELECT `XGB_B0`.`KEY`, `XGB_B0`.`Estimator` 
 FROM (SELECT `XGB_esu_0`.`KEY` AS `KEY`, `XGB_esu_0`.`Estimator` AS `Estimator` 
 FROM (SELECT `XGB_Model_0`.`KEY` AS `KEY`, `XGB_Model_0`.`Estimator` AS `Estimator` 
 FROM `XGB_Model_0` UNION ALL SELECT `XGB_Model_1`.`KEY` AS `KEY`, `XGB_Model_1`.`Estimator` AS `Estimator` 
@@ -156,17 +156,17 @@ FROM `XGB_Model_7` UNION ALL SELECT `XGB_Model_8`.`KEY` AS `KEY`, `XGB_Model_8`.
 FROM `XGB_Model_8` UNION ALL SELECT `XGB_Model_9`.`KEY` AS `KEY`, `XGB_Model_9`.`Estimator` AS `Estimator` 
 FROM `XGB_Model_9`) AS `XGB_esu_0`) AS `XGB_B0`
 
--- Code For temporary table tmp_20180516114546_codegen_0p7jfk_xgb_b1 part 1. Create 
+-- Code For temporary table tmp_20180602145214_e31_xgb_b1 part 1. Create 
 
 
-CREATE TABLE tmp_20180516114546_codegen_0p7jfk_xgb_b1 (
+CREATE TABLE tmp_20180602145214_e31_xgb_b1 (
 	`KEY` BIGINT, 
 	`Estimator` DOUBLE
 )
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516114546_codegen_0p7jfk_xgb_b1 part 2. Populate
+-- Code For temporary table tmp_20180602145214_e31_xgb_b1 part 2. Populate
 
 WITH `DT_node_lookup_10` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_95` < -0.2972280979156494) THEN CASE WHEN (`ADS`.`Feature_80` < -0.2714426815509796) THEN 3 ELSE 4 END ELSE CASE WHEN (`ADS`.`Feature_39` < 0.6278812289237976) THEN CASE WHEN (`ADS`.`Feature_80` < 0.679784893989563) THEN 7 ELSE 8 END ELSE 6 END END AS node_id_2 
@@ -240,7 +240,7 @@ FROM `DT_node_lookup_15` LEFT OUTER JOIN `DT_node_data_15` ON `DT_node_lookup_15
 `XGB_Model_15` AS 
 (SELECT `DT_Output_15`.`KEY` AS `KEY`, `DT_Output_15`.`Estimator` AS `Estimator` 
 FROM `DT_Output_15`)
- INSERT INTO tmp_20180516114546_codegen_0p7jfk_xgb_b1 (`KEY`, `Estimator`) SELECT `XGB_B1`.`KEY`, `XGB_B1`.`Estimator` 
+ INSERT INTO tmp_20180602145214_e31_xgb_b1 (`KEY`, `Estimator`) SELECT `XGB_B1`.`KEY`, `XGB_B1`.`Estimator` 
 FROM (SELECT `XGB_esu_1`.`KEY` AS `KEY`, `XGB_esu_1`.`Estimator` AS `Estimator` 
 FROM (SELECT `XGB_Model_10`.`KEY` AS `KEY`, `XGB_Model_10`.`Estimator` AS `Estimator` 
 FROM `XGB_Model_10` UNION ALL SELECT `XGB_Model_11`.`KEY` AS `KEY`, `XGB_Model_11`.`Estimator` AS `Estimator` 
@@ -250,24 +250,24 @@ FROM `XGB_Model_13` UNION ALL SELECT `XGB_Model_14`.`KEY` AS `KEY`, `XGB_Model_1
 FROM `XGB_Model_14` UNION ALL SELECT `XGB_Model_15`.`KEY` AS `KEY`, `XGB_Model_15`.`Estimator` AS `Estimator` 
 FROM `XGB_Model_15`) AS `XGB_esu_1`) AS `XGB_B1`
 
--- Code For temporary table tmp_20180516114546_codegen_sixrlm_xgb_sum part 1. Create 
+-- Code For temporary table tmp_20180602145214_ppp_xgb_sum part 1. Create 
 
 
-CREATE TABLE tmp_20180516114546_codegen_sixrlm_xgb_sum (
+CREATE TABLE tmp_20180602145214_ppp_xgb_sum (
 	`KEY` BIGINT, 
 	`Estimator` DOUBLE
 )
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516114546_codegen_sixrlm_xgb_sum part 2. Populate
+-- Code For temporary table tmp_20180602145214_ppp_xgb_sum part 2. Populate
 
 WITH `XGB_Union` AS 
 (SELECT `XGB_EnsembleUnion`.`KEY` AS `KEY`, `XGB_EnsembleUnion`.`Estimator` AS `Estimator` 
 FROM (SELECT `XGB_B0`.`KEY` AS `KEY`, `XGB_B0`.`Estimator` AS `Estimator` 
-FROM tmp_20180516114546_codegen_j7bqd6_xgb_b0 AS `XGB_B0` UNION ALL SELECT `XGB_B1`.`KEY` AS `KEY`, `XGB_B1`.`Estimator` AS `Estimator` 
-FROM tmp_20180516114546_codegen_0p7jfk_xgb_b1 AS `XGB_B1`) AS `XGB_EnsembleUnion`)
- INSERT INTO tmp_20180516114546_codegen_sixrlm_xgb_sum (`KEY`, `Estimator`) SELECT `XGB_sum`.`KEY`, `XGB_sum`.`Estimator` 
+FROM tmp_20180602145214_9np_xgb_b0 AS `XGB_B0` UNION ALL SELECT `XGB_B1`.`KEY` AS `KEY`, `XGB_B1`.`Estimator` AS `Estimator` 
+FROM tmp_20180602145214_e31_xgb_b1 AS `XGB_B1`) AS `XGB_EnsembleUnion`)
+ INSERT INTO tmp_20180602145214_ppp_xgb_sum (`KEY`, `Estimator`) SELECT `XGB_sum`.`KEY`, `XGB_sum`.`Estimator` 
 FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT `XGB_Union`.`KEY` AS `KEY`, sum(`XGB_Union`.`Estimator`) AS `Estimator` 
 FROM `XGB_Union` GROUP BY `XGB_Union`.`KEY`) AS `T`) AS `XGB_sum`
@@ -275,4 +275,4 @@ FROM `XGB_Union` GROUP BY `XGB_Union`.`KEY`) AS `T`) AS `XGB_sum`
 -- Model deployment code
 
 SELECT `XGB_sum`.`KEY` AS `KEY`, `XGB_sum`.`Estimator` + 0.5 AS `Estimator` 
-FROM tmp_20180516114546_codegen_sixrlm_xgb_sum AS `XGB_sum`
+FROM tmp_20180602145214_ppp_xgb_sum AS `XGB_sum`

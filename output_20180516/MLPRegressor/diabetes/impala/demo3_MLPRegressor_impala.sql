@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180516115347_codegen_dhg6fc_hl_1_relu_1 part 1. Create 
+-- Code For temporary table tmp_20180602145946_hbh_hl_1_relu_1 part 1. Create 
 
 
-CREATE TABLE tmp_20180516115347_codegen_dhg6fc_hl_1_relu_1 (
+CREATE TABLE tmp_20180602145946_hbh_hl_1_relu_1 (
 	`KEY` BIGINT, 
 	`NEUR_1_1` DOUBLE, 
 	`NEUR_1_2` DOUBLE, 
@@ -22,7 +22,7 @@ CREATE TABLE tmp_20180516115347_codegen_dhg6fc_hl_1_relu_1 (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516115347_codegen_dhg6fc_hl_1_relu_1 part 2. Populate
+-- Code For temporary table tmp_20180602145946_hbh_hl_1_relu_1 part 2. Populate
 
 WITH `IL` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CAST(`ADS`.`Feature_0` AS DOUBLE) AS `Feature_0`, CAST(`ADS`.`Feature_1` AS DOUBLE) AS `Feature_1`, CAST(`ADS`.`Feature_2` AS DOUBLE) AS `Feature_2`, CAST(`ADS`.`Feature_3` AS DOUBLE) AS `Feature_3`, CAST(`ADS`.`Feature_4` AS DOUBLE) AS `Feature_4`, CAST(`ADS`.`Feature_5` AS DOUBLE) AS `Feature_5`, CAST(`ADS`.`Feature_6` AS DOUBLE) AS `Feature_6`, CAST(`ADS`.`Feature_7` AS DOUBLE) AS `Feature_7`, CAST(`ADS`.`Feature_8` AS DOUBLE) AS `Feature_8`, CAST(`ADS`.`Feature_9` AS DOUBLE) AS `Feature_9` 
@@ -33,25 +33,25 @@ FROM `IL`),
 `HL_1_relu` AS 
 (SELECT `HL_BA_1`.`KEY` AS `KEY`, CASE WHEN (`HL_BA_1`.`NEUR_1_1` <= 0) THEN 0 ELSE `HL_BA_1`.`NEUR_1_1` END AS `NEUR_1_1`, CASE WHEN (`HL_BA_1`.`NEUR_1_2` <= 0) THEN 0 ELSE `HL_BA_1`.`NEUR_1_2` END AS `NEUR_1_2`, CASE WHEN (`HL_BA_1`.`NEUR_1_3` <= 0) THEN 0 ELSE `HL_BA_1`.`NEUR_1_3` END AS `NEUR_1_3` 
 FROM `HL_BA_1`)
- INSERT INTO tmp_20180516115347_codegen_dhg6fc_hl_1_relu_1 (`KEY`, `NEUR_1_1`, `NEUR_1_2`, `NEUR_1_3`) SELECT `HL_1_relu_1`.`KEY`, `HL_1_relu_1`.`NEUR_1_1`, `HL_1_relu_1`.`NEUR_1_2`, `HL_1_relu_1`.`NEUR_1_3` 
+ INSERT INTO tmp_20180602145946_hbh_hl_1_relu_1 (`KEY`, `NEUR_1_1`, `NEUR_1_2`, `NEUR_1_3`) SELECT `HL_1_relu_1`.`KEY`, `HL_1_relu_1`.`NEUR_1_1`, `HL_1_relu_1`.`NEUR_1_2`, `HL_1_relu_1`.`NEUR_1_3` 
 FROM (SELECT `HL_1_relu`.`KEY` AS `KEY`, `HL_1_relu`.`NEUR_1_1` AS `NEUR_1_1`, `HL_1_relu`.`NEUR_1_2` AS `NEUR_1_2`, `HL_1_relu`.`NEUR_1_3` AS `NEUR_1_3` 
 FROM `HL_1_relu`) AS `HL_1_relu_1`
 
--- Code For temporary table tmp_20180516115347_codegen_shjzuz_ol_identity_1 part 1. Create 
+-- Code For temporary table tmp_20180602145946_yz9_ol_identity_1 part 1. Create 
 
 
-CREATE TABLE tmp_20180516115347_codegen_shjzuz_ol_identity_1 (
+CREATE TABLE tmp_20180602145946_yz9_ol_identity_1 (
 	`KEY` BIGINT, 
 	`NEUR_3_1` DOUBLE
 )
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516115347_codegen_shjzuz_ol_identity_1 part 2. Populate
+-- Code For temporary table tmp_20180602145946_yz9_ol_identity_1 part 2. Populate
 
 WITH `HL_BA_2` AS 
 (SELECT `HL_1_relu_1`.`KEY` AS `KEY`, -0.7406266314274963 * `HL_1_relu_1`.`NEUR_1_1` + 0.5914624628458883 * `HL_1_relu_1`.`NEUR_1_2` + -0.07609467427374014 * `HL_1_relu_1`.`NEUR_1_3` + -0.2703387923227537 AS `NEUR_2_1`, -0.14939287998847917 * `HL_1_relu_1`.`NEUR_1_1` + 0.6651798218035635 * `HL_1_relu_1`.`NEUR_1_2` + -1.0153050387399647 * `HL_1_relu_1`.`NEUR_1_3` + -11.793370461844614 AS `NEUR_2_2`, 0.0033451177956580896 * `HL_1_relu_1`.`NEUR_1_1` + 0.4577680578691893 * `HL_1_relu_1`.`NEUR_1_2` + 7.680687163269137 * `HL_1_relu_1`.`NEUR_1_3` + 10.939461717287147 AS `NEUR_2_3`, 0.1110895592445846 * `HL_1_relu_1`.`NEUR_1_1` + -0.5047390334656465 * `HL_1_relu_1`.`NEUR_1_2` + -0.4066287638345377 * `HL_1_relu_1`.`NEUR_1_3` + -0.7964330424336139 AS `NEUR_2_4`, -0.6221508250552439 * `HL_1_relu_1`.`NEUR_1_1` + 0.4332117223794061 * `HL_1_relu_1`.`NEUR_1_2` + -0.6588746866292823 * `HL_1_relu_1`.`NEUR_1_3` + -0.5537916280920224 AS `NEUR_2_5` 
-FROM tmp_20180516115347_codegen_dhg6fc_hl_1_relu_1 AS `HL_1_relu_1`), 
+FROM tmp_20180602145946_hbh_hl_1_relu_1 AS `HL_1_relu_1`), 
 `HL_2_relu` AS 
 (SELECT `HL_BA_2`.`KEY` AS `KEY`, CASE WHEN (`HL_BA_2`.`NEUR_2_1` <= 0) THEN 0 ELSE `HL_BA_2`.`NEUR_2_1` END AS `NEUR_2_1`, CASE WHEN (`HL_BA_2`.`NEUR_2_2` <= 0) THEN 0 ELSE `HL_BA_2`.`NEUR_2_2` END AS `NEUR_2_2`, CASE WHEN (`HL_BA_2`.`NEUR_2_3` <= 0) THEN 0 ELSE `HL_BA_2`.`NEUR_2_3` END AS `NEUR_2_3`, CASE WHEN (`HL_BA_2`.`NEUR_2_4` <= 0) THEN 0 ELSE `HL_BA_2`.`NEUR_2_4` END AS `NEUR_2_4`, CASE WHEN (`HL_BA_2`.`NEUR_2_5` <= 0) THEN 0 ELSE `HL_BA_2`.`NEUR_2_5` END AS `NEUR_2_5` 
 FROM `HL_BA_2`), 
@@ -61,11 +61,11 @@ FROM `HL_2_relu`),
 `OL_identity` AS 
 (SELECT `OL_BA`.`KEY` AS `KEY`, `OL_BA`.`NEUR_3_1` AS `NEUR_3_1` 
 FROM `OL_BA`)
- INSERT INTO tmp_20180516115347_codegen_shjzuz_ol_identity_1 (`KEY`, `NEUR_3_1`) SELECT `OL_identity_1`.`KEY`, `OL_identity_1`.`NEUR_3_1` 
+ INSERT INTO tmp_20180602145946_yz9_ol_identity_1 (`KEY`, `NEUR_3_1`) SELECT `OL_identity_1`.`KEY`, `OL_identity_1`.`NEUR_3_1` 
 FROM (SELECT `OL_identity`.`KEY` AS `KEY`, `OL_identity`.`NEUR_3_1` AS `NEUR_3_1` 
 FROM `OL_identity`) AS `OL_identity_1`
 
 -- Model deployment code
 
 SELECT `OL_identity_1`.`KEY` AS `KEY`, `OL_identity_1`.`NEUR_3_1` AS `Estimator` 
-FROM tmp_20180516115347_codegen_shjzuz_ol_identity_1 AS `OL_identity_1`
+FROM tmp_20180602145946_yz9_ol_identity_1 AS `OL_identity_1`

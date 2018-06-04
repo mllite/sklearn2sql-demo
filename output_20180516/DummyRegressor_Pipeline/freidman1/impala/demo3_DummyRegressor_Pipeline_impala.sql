@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180516120718_codegen_ml2c1c_ads_imp_1_out part 1. Create 
+-- Code For temporary table tmp_20180602151221_nds_ads_imp_1_out part 1. Create 
 
 
-CREATE TABLE tmp_20180516120718_codegen_ml2c1c_ads_imp_1_out (
+CREATE TABLE tmp_20180602151221_nds_ads_imp_1_out (
 	`KEY` BIGINT, 
 	impter_2 DOUBLE, 
 	impter_3 DOUBLE, 
@@ -29,16 +29,16 @@ CREATE TABLE tmp_20180516120718_codegen_ml2c1c_ads_imp_1_out (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516120718_codegen_ml2c1c_ads_imp_1_out part 2. Populate
+-- Code For temporary table tmp_20180602151221_nds_ads_imp_1_out part 2. Populate
 
-INSERT INTO tmp_20180516120718_codegen_ml2c1c_ads_imp_1_out (`KEY`, impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT `ADS_imp_1_OUT`.`KEY`, `ADS_imp_1_OUT`.impter_2, `ADS_imp_1_OUT`.impter_3, `ADS_imp_1_OUT`.impter_4, `ADS_imp_1_OUT`.impter_5, `ADS_imp_1_OUT`.impter_6, `ADS_imp_1_OUT`.impter_7, `ADS_imp_1_OUT`.impter_8, `ADS_imp_1_OUT`.impter_9, `ADS_imp_1_OUT`.impter_10, `ADS_imp_1_OUT`.impter_11 
+INSERT INTO tmp_20180602151221_nds_ads_imp_1_out (`KEY`, impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT `ADS_imp_1_OUT`.`KEY`, `ADS_imp_1_OUT`.impter_2, `ADS_imp_1_OUT`.impter_3, `ADS_imp_1_OUT`.impter_4, `ADS_imp_1_OUT`.impter_5, `ADS_imp_1_OUT`.impter_6, `ADS_imp_1_OUT`.impter_7, `ADS_imp_1_OUT`.impter_8, `ADS_imp_1_OUT`.impter_9, `ADS_imp_1_OUT`.impter_10, `ADS_imp_1_OUT`.impter_11 
 FROM (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_0` IS NULL) THEN 0.5629846484809591 ELSE `ADS`.`Feature_0` END AS impter_2, CASE WHEN (`ADS`.`Feature_1` IS NULL) THEN 0.45606442423375926 ELSE `ADS`.`Feature_1` END AS impter_3, CASE WHEN (`ADS`.`Feature_2` IS NULL) THEN 0.47113817481474773 ELSE `ADS`.`Feature_2` END AS impter_4, CASE WHEN (`ADS`.`Feature_3` IS NULL) THEN 0.533968020094518 ELSE `ADS`.`Feature_3` END AS impter_5, CASE WHEN (`ADS`.`Feature_4` IS NULL) THEN 0.4780936262373869 ELSE `ADS`.`Feature_4` END AS impter_6, CASE WHEN (`ADS`.`Feature_5` IS NULL) THEN 0.5682849224172329 ELSE `ADS`.`Feature_5` END AS impter_7, CASE WHEN (`ADS`.`Feature_6` IS NULL) THEN 0.47914374714280494 ELSE `ADS`.`Feature_6` END AS impter_8, CASE WHEN (`ADS`.`Feature_7` IS NULL) THEN 0.4594152477223205 ELSE `ADS`.`Feature_7` END AS impter_9, CASE WHEN (`ADS`.`Feature_8` IS NULL) THEN 0.4901106996809651 ELSE `ADS`.`Feature_8` END AS impter_10, CASE WHEN (`ADS`.`Feature_9` IS NULL) THEN 0.5378806933707533 ELSE `ADS`.`Feature_9` END AS impter_11 
 FROM freidman1 AS `ADS`) AS `ADS_imp_1_OUT`
 
--- Code For temporary table tmp_20180516120718_codegen_nhmjye_ads_sca_2_out part 1. Create 
+-- Code For temporary table tmp_20180602151221_smt_ads_sca_2_out part 1. Create 
 
 
-CREATE TABLE tmp_20180516120718_codegen_nhmjye_ads_sca_2_out (
+CREATE TABLE tmp_20180602151221_smt_ads_sca_2_out (
 	`KEY` BIGINT, 
 	scaler_2 DOUBLE, 
 	scaler_3 DOUBLE, 
@@ -54,16 +54,16 @@ CREATE TABLE tmp_20180516120718_codegen_nhmjye_ads_sca_2_out (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516120718_codegen_nhmjye_ads_sca_2_out part 2. Populate
+-- Code For temporary table tmp_20180602151221_smt_ads_sca_2_out part 2. Populate
 
-INSERT INTO tmp_20180516120718_codegen_nhmjye_ads_sca_2_out (`KEY`, scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT `ADS_sca_2_OUT`.`KEY`, `ADS_sca_2_OUT`.scaler_2, `ADS_sca_2_OUT`.scaler_3, `ADS_sca_2_OUT`.scaler_4, `ADS_sca_2_OUT`.scaler_5, `ADS_sca_2_OUT`.scaler_6, `ADS_sca_2_OUT`.scaler_7, `ADS_sca_2_OUT`.scaler_8, `ADS_sca_2_OUT`.scaler_9, `ADS_sca_2_OUT`.scaler_10, `ADS_sca_2_OUT`.scaler_11 
+INSERT INTO tmp_20180602151221_smt_ads_sca_2_out (`KEY`, scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT `ADS_sca_2_OUT`.`KEY`, `ADS_sca_2_OUT`.scaler_2, `ADS_sca_2_OUT`.scaler_3, `ADS_sca_2_OUT`.scaler_4, `ADS_sca_2_OUT`.scaler_5, `ADS_sca_2_OUT`.scaler_6, `ADS_sca_2_OUT`.scaler_7, `ADS_sca_2_OUT`.scaler_8, `ADS_sca_2_OUT`.scaler_9, `ADS_sca_2_OUT`.scaler_10, `ADS_sca_2_OUT`.scaler_11 
 FROM (SELECT `ADS_imp_1_OUT`.`KEY` AS `KEY`, (CAST(`ADS_imp_1_OUT`.impter_2 AS DOUBLE) - 0.5629846484809591) / 0.2583714683396337 AS scaler_2, (CAST(`ADS_imp_1_OUT`.impter_3 AS DOUBLE) - 0.45606442423375926) / 0.2878721730712705 AS scaler_3, (CAST(`ADS_imp_1_OUT`.impter_4 AS DOUBLE) - 0.47113817481474773) / 0.3109216791553051 AS scaler_4, (CAST(`ADS_imp_1_OUT`.impter_5 AS DOUBLE) - 0.533968020094518) / 0.2826199867400281 AS scaler_5, (CAST(`ADS_imp_1_OUT`.impter_6 AS DOUBLE) - 0.4780936262373869) / 0.286140491317745 AS scaler_6, (CAST(`ADS_imp_1_OUT`.impter_7 AS DOUBLE) - 0.5682849224172329) / 0.29767408106451737 AS scaler_7, (CAST(`ADS_imp_1_OUT`.impter_8 AS DOUBLE) - 0.47914374714280494) / 0.2735314971431575 AS scaler_8, (CAST(`ADS_imp_1_OUT`.impter_9 AS DOUBLE) - 0.4594152477223205) / 0.28721149346998975 AS scaler_9, (CAST(`ADS_imp_1_OUT`.impter_10 AS DOUBLE) - 0.4901106996809651) / 0.2790486717322703 AS scaler_10, (CAST(`ADS_imp_1_OUT`.impter_11 AS DOUBLE) - 0.5378806933707533) / 0.2958192296543193 AS scaler_11 
-FROM tmp_20180516120718_codegen_ml2c1c_ads_imp_1_out AS `ADS_imp_1_OUT`) AS `ADS_sca_2_OUT`
+FROM tmp_20180602151221_nds_ads_imp_1_out AS `ADS_imp_1_OUT`) AS `ADS_sca_2_OUT`
 
 -- Model deployment code
 
 WITH dummy_class_reg_cte AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, 15.3537633818605 AS `Constant` 
-FROM tmp_20180516120718_codegen_nhmjye_ads_sca_2_out AS `ADS_sca_2_OUT`)
+FROM tmp_20180602151221_smt_ads_sca_2_out AS `ADS_sca_2_OUT`)
  SELECT dummy_class_reg_cte.`KEY` AS `KEY`, dummy_class_reg_cte.`Constant` AS `Estimator` 
 FROM dummy_class_reg_cte

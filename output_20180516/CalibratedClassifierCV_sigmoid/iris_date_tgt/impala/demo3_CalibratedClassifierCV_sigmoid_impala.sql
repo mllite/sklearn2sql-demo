@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180516122920_codegen_vq4w0c_calprob_b0 part 1. Create 
+-- Code For temporary table tmp_20180602153235_pvn_calprob_b0 part 1. Create 
 
 
-CREATE TABLE tmp_20180516122920_codegen_vq4w0c_calprob_b0 (
+CREATE TABLE tmp_20180602153235_pvn_calprob_b0 (
 	`KEY` BIGINT, 
 	`Proba_1789-07-14T00:00:00.000000000` DOUBLE, 
 	`Proba_1789-08-14T00:00:00.000000000` DOUBLE, 
@@ -22,7 +22,7 @@ CREATE TABLE tmp_20180516122920_codegen_vq4w0c_calprob_b0 (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516122920_codegen_vq4w0c_calprob_b0 part 2. Populate
+-- Code For temporary table tmp_20180602153235_pvn_calprob_b0 part 2. Populate
 
 WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_3` <= 0.75) THEN 1 ELSE CASE WHEN (`ADS`.`Feature_2` <= 4.75) THEN 3 ELSE CASE WHEN (`ADS`.`Feature_2` <= 5.050000190734863) THEN CASE WHEN (`ADS`.`Feature_1` <= 3.049999952316284) THEN CASE WHEN (`ADS`.`Feature_3` <= 1.75) THEN 7 ELSE 8 END ELSE 9 END ELSE 10 END END END AS node_id_2 
@@ -96,7 +96,7 @@ FROM `Calibrated_Model_3`),
 `Normalized_Probas_3` AS 
 (SELECT sigmoid_calibration_3.`KEY` AS `KEY`, sigmoid_calibration_3.`Proba_1789-07-14T00:00:00.000000000` / (sigmoid_calibration_3.`Proba_1789-07-14T00:00:00.000000000` + sigmoid_calibration_3.`Proba_1789-08-14T00:00:00.000000000` + sigmoid_calibration_3.`Proba_1789-09-14T00:00:00.000000000`) AS `Proba_1789-07-14T00:00:00.000000000`, sigmoid_calibration_3.`Proba_1789-08-14T00:00:00.000000000` / (sigmoid_calibration_3.`Proba_1789-07-14T00:00:00.000000000` + sigmoid_calibration_3.`Proba_1789-08-14T00:00:00.000000000` + sigmoid_calibration_3.`Proba_1789-09-14T00:00:00.000000000`) AS `Proba_1789-08-14T00:00:00.000000000`, sigmoid_calibration_3.`Proba_1789-09-14T00:00:00.000000000` / (sigmoid_calibration_3.`Proba_1789-07-14T00:00:00.000000000` + sigmoid_calibration_3.`Proba_1789-08-14T00:00:00.000000000` + sigmoid_calibration_3.`Proba_1789-09-14T00:00:00.000000000`) AS `Proba_1789-09-14T00:00:00.000000000` 
 FROM sigmoid_calibration_3)
- INSERT INTO tmp_20180516122920_codegen_vq4w0c_calprob_b0 (`KEY`, `Proba_1789-07-14T00:00:00.000000000`, `Proba_1789-08-14T00:00:00.000000000`, `Proba_1789-09-14T00:00:00.000000000`) SELECT `CalProb_B0`.`KEY`, `CalProb_B0`.`Proba_1789-07-14T00:00:00.000000000`, `CalProb_B0`.`Proba_1789-08-14T00:00:00.000000000`, `CalProb_B0`.`Proba_1789-09-14T00:00:00.000000000` 
+ INSERT INTO tmp_20180602153235_pvn_calprob_b0 (`KEY`, `Proba_1789-07-14T00:00:00.000000000`, `Proba_1789-08-14T00:00:00.000000000`, `Proba_1789-09-14T00:00:00.000000000`) SELECT `CalProb_B0`.`KEY`, `CalProb_B0`.`Proba_1789-07-14T00:00:00.000000000`, `CalProb_B0`.`Proba_1789-08-14T00:00:00.000000000`, `CalProb_B0`.`Proba_1789-09-14T00:00:00.000000000` 
 FROM (SELECT `CalProb_esu_0`.`KEY` AS `KEY`, `CalProb_esu_0`.`Proba_1789-07-14T00:00:00.000000000` AS `Proba_1789-07-14T00:00:00.000000000`, `CalProb_esu_0`.`Proba_1789-08-14T00:00:00.000000000` AS `Proba_1789-08-14T00:00:00.000000000`, `CalProb_esu_0`.`Proba_1789-09-14T00:00:00.000000000` AS `Proba_1789-09-14T00:00:00.000000000` 
 FROM (SELECT `Normalized_Probas`.`KEY` AS `KEY`, `Normalized_Probas`.`Proba_1789-07-14T00:00:00.000000000` AS `Proba_1789-07-14T00:00:00.000000000`, `Normalized_Probas`.`Proba_1789-08-14T00:00:00.000000000` AS `Proba_1789-08-14T00:00:00.000000000`, `Normalized_Probas`.`Proba_1789-09-14T00:00:00.000000000` AS `Proba_1789-09-14T00:00:00.000000000` 
 FROM `Normalized_Probas` UNION ALL SELECT `Normalized_Probas_1`.`KEY` AS `KEY`, `Normalized_Probas_1`.`Proba_1789-07-14T00:00:00.000000000` AS `Proba_1789-07-14T00:00:00.000000000`, `Normalized_Probas_1`.`Proba_1789-08-14T00:00:00.000000000` AS `Proba_1789-08-14T00:00:00.000000000`, `Normalized_Probas_1`.`Proba_1789-09-14T00:00:00.000000000` AS `Proba_1789-09-14T00:00:00.000000000` 
@@ -104,10 +104,10 @@ FROM `Normalized_Probas_1` UNION ALL SELECT `Normalized_Probas_2`.`KEY` AS `KEY`
 FROM `Normalized_Probas_2` UNION ALL SELECT `Normalized_Probas_3`.`KEY` AS `KEY`, `Normalized_Probas_3`.`Proba_1789-07-14T00:00:00.000000000` AS `Proba_1789-07-14T00:00:00.000000000`, `Normalized_Probas_3`.`Proba_1789-08-14T00:00:00.000000000` AS `Proba_1789-08-14T00:00:00.000000000`, `Normalized_Probas_3`.`Proba_1789-09-14T00:00:00.000000000` AS `Proba_1789-09-14T00:00:00.000000000` 
 FROM `Normalized_Probas_3`) AS `CalProb_esu_0`) AS `CalProb_B0`
 
--- Code For temporary table tmp_20180516122920_codegen_mucarc_calprob_avg part 1. Create 
+-- Code For temporary table tmp_20180602153235_cnl_calprob_avg part 1. Create 
 
 
-CREATE TABLE tmp_20180516122920_codegen_mucarc_calprob_avg (
+CREATE TABLE tmp_20180602153235_cnl_calprob_avg (
 	`KEY` BIGINT, 
 	`Proba_1789-07-14T00:00:00.000000000` DOUBLE, 
 	`Proba_1789-08-14T00:00:00.000000000` DOUBLE, 
@@ -116,13 +116,13 @@ CREATE TABLE tmp_20180516122920_codegen_mucarc_calprob_avg (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516122920_codegen_mucarc_calprob_avg part 2. Populate
+-- Code For temporary table tmp_20180602153235_cnl_calprob_avg part 2. Populate
 
 WITH `CalProb_Union` AS 
 (SELECT `CalProb_EnsembleUnion`.`KEY` AS `KEY`, `CalProb_EnsembleUnion`.`Proba_1789-07-14T00:00:00.000000000` AS `Proba_1789-07-14T00:00:00.000000000`, `CalProb_EnsembleUnion`.`Proba_1789-08-14T00:00:00.000000000` AS `Proba_1789-08-14T00:00:00.000000000`, `CalProb_EnsembleUnion`.`Proba_1789-09-14T00:00:00.000000000` AS `Proba_1789-09-14T00:00:00.000000000` 
 FROM (SELECT `CalProb_B0`.`KEY` AS `KEY`, `CalProb_B0`.`Proba_1789-07-14T00:00:00.000000000` AS `Proba_1789-07-14T00:00:00.000000000`, `CalProb_B0`.`Proba_1789-08-14T00:00:00.000000000` AS `Proba_1789-08-14T00:00:00.000000000`, `CalProb_B0`.`Proba_1789-09-14T00:00:00.000000000` AS `Proba_1789-09-14T00:00:00.000000000` 
-FROM tmp_20180516122920_codegen_vq4w0c_calprob_b0 AS `CalProb_B0`) AS `CalProb_EnsembleUnion`)
- INSERT INTO tmp_20180516122920_codegen_mucarc_calprob_avg (`KEY`, `Proba_1789-07-14T00:00:00.000000000`, `Proba_1789-08-14T00:00:00.000000000`, `Proba_1789-09-14T00:00:00.000000000`) SELECT `CalProb_avg`.`KEY`, `CalProb_avg`.`Proba_1789-07-14T00:00:00.000000000`, `CalProb_avg`.`Proba_1789-08-14T00:00:00.000000000`, `CalProb_avg`.`Proba_1789-09-14T00:00:00.000000000` 
+FROM tmp_20180602153235_pvn_calprob_b0 AS `CalProb_B0`) AS `CalProb_EnsembleUnion`)
+ INSERT INTO tmp_20180602153235_cnl_calprob_avg (`KEY`, `Proba_1789-07-14T00:00:00.000000000`, `Proba_1789-08-14T00:00:00.000000000`, `Proba_1789-09-14T00:00:00.000000000`) SELECT `CalProb_avg`.`KEY`, `CalProb_avg`.`Proba_1789-07-14T00:00:00.000000000`, `CalProb_avg`.`Proba_1789-08-14T00:00:00.000000000`, `CalProb_avg`.`Proba_1789-09-14T00:00:00.000000000` 
 FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Proba_1789-07-14T00:00:00.000000000` AS DOUBLE) AS `Proba_1789-07-14T00:00:00.000000000`, CAST(`T`.`Proba_1789-08-14T00:00:00.000000000` AS DOUBLE) AS `Proba_1789-08-14T00:00:00.000000000`, CAST(`T`.`Proba_1789-09-14T00:00:00.000000000` AS DOUBLE) AS `Proba_1789-09-14T00:00:00.000000000` 
 FROM (SELECT `CalProb_Union`.`KEY` AS `KEY`, avg(CAST(`CalProb_Union`.`Proba_1789-07-14T00:00:00.000000000` AS DOUBLE)) AS `Proba_1789-07-14T00:00:00.000000000`, avg(CAST(`CalProb_Union`.`Proba_1789-08-14T00:00:00.000000000` AS DOUBLE)) AS `Proba_1789-08-14T00:00:00.000000000`, avg(CAST(`CalProb_Union`.`Proba_1789-09-14T00:00:00.000000000` AS DOUBLE)) AS `Proba_1789-09-14T00:00:00.000000000` 
 FROM `CalProb_Union` GROUP BY `CalProb_Union`.`KEY`) AS `T`) AS `CalProb_avg`
@@ -131,7 +131,7 @@ FROM `CalProb_Union` GROUP BY `CalProb_Union`.`KEY`) AS `T`) AS `CalProb_avg`
 
 WITH orig_cte AS 
 (SELECT `CalProb_avg`.`KEY` AS `KEY`, CAST(NULL AS DOUBLE) AS `Score_1789-07-14T00:00:00.000000000`, CAST(NULL AS DOUBLE) AS `Score_1789-08-14T00:00:00.000000000`, CAST(NULL AS DOUBLE) AS `Score_1789-09-14T00:00:00.000000000`, `CalProb_avg`.`Proba_1789-07-14T00:00:00.000000000` AS `Proba_1789-07-14T00:00:00.000000000`, `CalProb_avg`.`Proba_1789-08-14T00:00:00.000000000` AS `Proba_1789-08-14T00:00:00.000000000`, `CalProb_avg`.`Proba_1789-09-14T00:00:00.000000000` AS `Proba_1789-09-14T00:00:00.000000000`, CAST(NULL AS DOUBLE) AS `LogProba_1789-07-14T00:00:00.000000000`, CAST(NULL AS DOUBLE) AS `LogProba_1789-08-14T00:00:00.000000000`, CAST(NULL AS DOUBLE) AS `LogProba_1789-09-14T00:00:00.000000000`, CAST(NULL AS BIGINT) AS `Decision`, CAST(NULL AS DOUBLE) AS `DecisionProba` 
-FROM tmp_20180516122920_codegen_mucarc_calprob_avg AS `CalProb_avg`), 
+FROM tmp_20180602153235_cnl_calprob_avg AS `CalProb_avg`), 
 score_class_union AS 
 (SELECT scu.`KEY_u` AS `KEY_u`, scu.`class` AS `class`, scu.`LogProba` AS `LogProba`, scu.`Proba` AS `Proba`, scu.`Score` AS `Score` 
 FROM (SELECT orig_cte.`KEY` AS `KEY_u`, '1789-07-14T00:00:00.000000000' AS `class`, orig_cte.`LogProba_1789-07-14T00:00:00.000000000` AS `LogProba`, orig_cte.`Proba_1789-07-14T00:00:00.000000000` AS `Proba`, orig_cte.`Score_1789-07-14T00:00:00.000000000` AS `Score` 

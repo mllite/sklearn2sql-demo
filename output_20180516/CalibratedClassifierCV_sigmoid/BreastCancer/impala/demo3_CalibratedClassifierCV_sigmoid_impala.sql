@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180516111449_codegen_nkl01m_calprob_b0 part 1. Create 
+-- Code For temporary table tmp_20180602142313_1sd_calprob_b0 part 1. Create 
 
 
-CREATE TABLE tmp_20180516111449_codegen_nkl01m_calprob_b0 (
+CREATE TABLE tmp_20180602142313_1sd_calprob_b0 (
 	`KEY` BIGINT, 
 	`Proba_1` DOUBLE, 
 	`Proba_0` DOUBLE
@@ -21,7 +21,7 @@ CREATE TABLE tmp_20180516111449_codegen_nkl01m_calprob_b0 (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516111449_codegen_nkl01m_calprob_b0 part 2. Populate
+-- Code For temporary table tmp_20180602142313_1sd_calprob_b0 part 2. Populate
 
 WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_27` <= 0.14695000648498535) THEN CASE WHEN (`ADS`.`Feature_23` <= 953.9500122070312) THEN CASE WHEN (`ADS`.`Feature_27` <= 0.12229999899864197) THEN CASE WHEN (`ADS`.`Feature_10` <= 0.6431000232696533) THEN 4 ELSE CASE WHEN (`ADS`.`Feature_1` <= 18.934999465942383) THEN 6 ELSE 7 END END ELSE CASE WHEN (`ADS`.`Feature_10` <= 0.40389999747276306) THEN CASE WHEN (`ADS`.`Feature_21` <= 33.915000915527344) THEN 10 ELSE 11 END ELSE CASE WHEN (`ADS`.`Feature_7` <= 0.06902500241994858) THEN 13 ELSE 14 END END END ELSE CASE WHEN (`ADS`.`Feature_26` <= 0.1906999945640564) THEN CASE WHEN (`ADS`.`Feature_22` <= 122.05000305175781) THEN 17 ELSE 18 END ELSE 19 END END ELSE CASE WHEN (`ADS`.`Feature_0` <= 10.405500411987305) THEN 21 ELSE CASE WHEN (`ADS`.`Feature_26` <= 0.20340000092983246) THEN 23 ELSE CASE WHEN (`ADS`.`Feature_7` <= 0.05634000152349472) THEN CASE WHEN (`ADS`.`Feature_7` <= 0.054854996502399445) THEN 26 ELSE 27 END ELSE 28 END END END END AS node_id_2 
@@ -95,7 +95,7 @@ FROM `Calibrated_Model_3`),
 `Normalized_Probas_3` AS 
 (SELECT sigmoid_calibration_3.`KEY` AS `KEY`, sigmoid_calibration_3.`Proba_1` / (sigmoid_calibration_3.`Proba_0` + sigmoid_calibration_3.`Proba_1`) AS `Proba_1`, sigmoid_calibration_3.`Proba_0` / (sigmoid_calibration_3.`Proba_0` + sigmoid_calibration_3.`Proba_1`) AS `Proba_0` 
 FROM sigmoid_calibration_3)
- INSERT INTO tmp_20180516111449_codegen_nkl01m_calprob_b0 (`KEY`, `Proba_1`, `Proba_0`) SELECT `CalProb_B0`.`KEY`, `CalProb_B0`.`Proba_1`, `CalProb_B0`.`Proba_0` 
+ INSERT INTO tmp_20180602142313_1sd_calprob_b0 (`KEY`, `Proba_1`, `Proba_0`) SELECT `CalProb_B0`.`KEY`, `CalProb_B0`.`Proba_1`, `CalProb_B0`.`Proba_0` 
 FROM (SELECT `CalProb_esu_0`.`KEY` AS `KEY`, `CalProb_esu_0`.`Proba_1` AS `Proba_1`, `CalProb_esu_0`.`Proba_0` AS `Proba_0` 
 FROM (SELECT `Normalized_Probas`.`KEY` AS `KEY`, `Normalized_Probas`.`Proba_1` AS `Proba_1`, `Normalized_Probas`.`Proba_0` AS `Proba_0` 
 FROM `Normalized_Probas` UNION ALL SELECT `Normalized_Probas_1`.`KEY` AS `KEY`, `Normalized_Probas_1`.`Proba_1` AS `Proba_1`, `Normalized_Probas_1`.`Proba_0` AS `Proba_0` 
@@ -103,10 +103,10 @@ FROM `Normalized_Probas_1` UNION ALL SELECT `Normalized_Probas_2`.`KEY` AS `KEY`
 FROM `Normalized_Probas_2` UNION ALL SELECT `Normalized_Probas_3`.`KEY` AS `KEY`, `Normalized_Probas_3`.`Proba_1` AS `Proba_1`, `Normalized_Probas_3`.`Proba_0` AS `Proba_0` 
 FROM `Normalized_Probas_3`) AS `CalProb_esu_0`) AS `CalProb_B0`
 
--- Code For temporary table tmp_20180516111449_codegen_niarcd_calprob_avg part 1. Create 
+-- Code For temporary table tmp_20180602142313_bqu_calprob_avg part 1. Create 
 
 
-CREATE TABLE tmp_20180516111449_codegen_niarcd_calprob_avg (
+CREATE TABLE tmp_20180602142313_bqu_calprob_avg (
 	`KEY` BIGINT, 
 	`Proba_1` DOUBLE, 
 	`Proba_0` DOUBLE
@@ -114,13 +114,13 @@ CREATE TABLE tmp_20180516111449_codegen_niarcd_calprob_avg (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516111449_codegen_niarcd_calprob_avg part 2. Populate
+-- Code For temporary table tmp_20180602142313_bqu_calprob_avg part 2. Populate
 
 WITH `CalProb_Union` AS 
 (SELECT `CalProb_EnsembleUnion`.`KEY` AS `KEY`, `CalProb_EnsembleUnion`.`Proba_1` AS `Proba_1`, `CalProb_EnsembleUnion`.`Proba_0` AS `Proba_0` 
 FROM (SELECT `CalProb_B0`.`KEY` AS `KEY`, `CalProb_B0`.`Proba_1` AS `Proba_1`, `CalProb_B0`.`Proba_0` AS `Proba_0` 
-FROM tmp_20180516111449_codegen_nkl01m_calprob_b0 AS `CalProb_B0`) AS `CalProb_EnsembleUnion`)
- INSERT INTO tmp_20180516111449_codegen_niarcd_calprob_avg (`KEY`, `Proba_1`, `Proba_0`) SELECT `CalProb_avg`.`KEY`, `CalProb_avg`.`Proba_1`, `CalProb_avg`.`Proba_0` 
+FROM tmp_20180602142313_1sd_calprob_b0 AS `CalProb_B0`) AS `CalProb_EnsembleUnion`)
+ INSERT INTO tmp_20180602142313_bqu_calprob_avg (`KEY`, `Proba_1`, `Proba_0`) SELECT `CalProb_avg`.`KEY`, `CalProb_avg`.`Proba_1`, `CalProb_avg`.`Proba_0` 
 FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Proba_1` AS DOUBLE) AS `Proba_1`, CAST(`T`.`Proba_0` AS DOUBLE) AS `Proba_0` 
 FROM (SELECT `CalProb_Union`.`KEY` AS `KEY`, avg(CAST(`CalProb_Union`.`Proba_1` AS DOUBLE)) AS `Proba_1`, avg(CAST(`CalProb_Union`.`Proba_0` AS DOUBLE)) AS `Proba_0` 
 FROM `CalProb_Union` GROUP BY `CalProb_Union`.`KEY`) AS `T`) AS `CalProb_avg`
@@ -129,7 +129,7 @@ FROM `CalProb_Union` GROUP BY `CalProb_Union`.`KEY`) AS `T`) AS `CalProb_avg`
 
 WITH orig_cte AS 
 (SELECT `CalProb_avg`.`KEY` AS `KEY`, CAST(NULL AS DOUBLE) AS `Score_0`, CAST(NULL AS DOUBLE) AS `Score_1`, `CalProb_avg`.`Proba_0` AS `Proba_0`, `CalProb_avg`.`Proba_1` AS `Proba_1`, CAST(NULL AS DOUBLE) AS `LogProba_0`, CAST(NULL AS DOUBLE) AS `LogProba_1`, CAST(NULL AS BIGINT) AS `Decision`, CAST(NULL AS DOUBLE) AS `DecisionProba` 
-FROM tmp_20180516111449_codegen_niarcd_calprob_avg AS `CalProb_avg`), 
+FROM tmp_20180602142313_bqu_calprob_avg AS `CalProb_avg`), 
 score_class_union AS 
 (SELECT scu.`KEY_u` AS `KEY_u`, scu.`class` AS `class`, scu.`LogProba` AS `LogProba`, scu.`Proba` AS `Proba`, scu.`Score` AS `Score` 
 FROM (SELECT orig_cte.`KEY` AS `KEY_u`, 0 AS `class`, orig_cte.`LogProba_0` AS `LogProba`, orig_cte.`Proba_0` AS `Proba`, orig_cte.`Score_0` AS `Score` 

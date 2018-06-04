@@ -10,20 +10,20 @@
 
 
 
--- Code For temporary table tmp_20180516112655_codegen_jn67wv_kernagg_b0 part 1. Create 
+-- Code For temporary table tmp_20180602143446_rq2_kernagg_b0 part 1. Create 
 
 
-CREATE TABLE tmp_20180516112655_codegen_jn67wv_kernagg_b0 (
+CREATE TABLE tmp_20180602143446_rq2_kernagg_b0 (
 	`KEY` BIGINT, 
 	`OVO_Class1` BIGINT, 
 	`OVO_Class2` BIGINT, 
 	`OVO_Decision` BIGINT, 
-	`OVO_Confidence` DOUBLE
+	`OVO_Conf` DOUBLE
 )
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516112655_codegen_jn67wv_kernagg_b0 part 2. Populate
+-- Code For temporary table tmp_20180602143446_rq2_kernagg_b0 part 2. Populate
 
 WITH kernel_input AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CAST(`ADS`.`Feature_0` AS DOUBLE) AS `Feature_0`, CAST(`ADS`.`Feature_1` AS DOUBLE) AS `Feature_1`, CAST(`ADS`.`Feature_2` AS DOUBLE) AS `Feature_2`, CAST(`ADS`.`Feature_3` AS DOUBLE) AS `Feature_3`, CAST(`ADS`.`Feature_4` AS DOUBLE) AS `Feature_4`, CAST(`ADS`.`Feature_5` AS DOUBLE) AS `Feature_5`, CAST(`ADS`.`Feature_6` AS DOUBLE) AS `Feature_6`, CAST(`ADS`.`Feature_7` AS DOUBLE) AS `Feature_7`, CAST(`ADS`.`Feature_8` AS DOUBLE) AS `Feature_8`, CAST(`ADS`.`Feature_9` AS DOUBLE) AS `Feature_9`, CAST(`ADS`.`TGT` AS DOUBLE) AS `TGT` 
@@ -37,27 +37,27 @@ FROM (SELECT full_join_data_sv.`KEY` AS `KEY`, sum(CAST(full_join_data_sv.dot_pr
 FROM (SELECT kernel_input.`KEY` AS `KEY`, `SV_data_0_1`.dual_coeff * power(0.1 * (kernel_input.`Feature_0` * `SV_data_0_1`.sv_0 + kernel_input.`Feature_1` * `SV_data_0_1`.sv_1 + kernel_input.`Feature_2` * `SV_data_0_1`.sv_2 + kernel_input.`Feature_3` * `SV_data_0_1`.sv_3 + kernel_input.`Feature_4` * `SV_data_0_1`.sv_4 + kernel_input.`Feature_5` * `SV_data_0_1`.sv_5 + kernel_input.`Feature_6` * `SV_data_0_1`.sv_6 + kernel_input.`Feature_7` * `SV_data_0_1`.sv_7 + kernel_input.`Feature_8` * `SV_data_0_1`.sv_8 + kernel_input.`Feature_9` * `SV_data_0_1`.sv_9) + 0.0, 3) AS dot_prod1 
 FROM kernel_input, `SV_data_0_1`) AS full_join_data_sv GROUP BY full_join_data_sv.`KEY`) AS t), 
 kernel_cte_0_1 AS 
-(SELECT kernel_dp_0_1.`KEY` AS `KEY`, 0 AS `OVO_Class1`, 1 AS `OVO_Class2`, CASE WHEN (-kernel_dp_0_1.dot_product >= 0.0) THEN 1 ELSE 0 END AS `OVO_Decision`, coalesce(-kernel_dp_0_1.dot_product, 1.0 / (1.0 + exp(CASE WHEN (CASE WHEN (-100.0 <= -(-((-kernel_dp_0_1.dot_product) * -0.6938756223186324 + -0.19578846939911074))) THEN -(-((-kernel_dp_0_1.dot_product) * -0.6938756223186324 + -0.19578846939911074)) ELSE -100.0 END <= 100.0) THEN CASE WHEN (-100.0 <= -(-((-kernel_dp_0_1.dot_product) * -0.6938756223186324 + -0.19578846939911074))) THEN -(-((-kernel_dp_0_1.dot_product) * -0.6938756223186324 + -0.19578846939911074)) ELSE -100.0 END ELSE 100.0 END))) AS `OVO_Confidence` 
+(SELECT kernel_dp_0_1.`KEY` AS `KEY`, 0 AS `OVO_Class1`, 1 AS `OVO_Class2`, CASE WHEN (-kernel_dp_0_1.dot_product >= 0.0) THEN 1 ELSE 0 END AS `OVO_Decision`, coalesce(-kernel_dp_0_1.dot_product, 1.0 / (1.0 + exp(CASE WHEN (CASE WHEN (-100.0 <= -(-((-kernel_dp_0_1.dot_product) * -0.6311043266407186 + -0.1860004873318276))) THEN -(-((-kernel_dp_0_1.dot_product) * -0.6311043266407186 + -0.1860004873318276)) ELSE -100.0 END <= 100.0) THEN CASE WHEN (-100.0 <= -(-((-kernel_dp_0_1.dot_product) * -0.6311043266407186 + -0.1860004873318276))) THEN -(-((-kernel_dp_0_1.dot_product) * -0.6311043266407186 + -0.1860004873318276)) ELSE -100.0 END ELSE 100.0 END))) AS `OVO_Conf` 
 FROM kernel_dp_0_1)
- INSERT INTO tmp_20180516112655_codegen_jn67wv_kernagg_b0 (`KEY`, `OVO_Class1`, `OVO_Class2`, `OVO_Decision`, `OVO_Confidence`) SELECT `KernAgg_B0`.`KEY`, `KernAgg_B0`.`OVO_Class1`, `KernAgg_B0`.`OVO_Class2`, `KernAgg_B0`.`OVO_Decision`, `KernAgg_B0`.`OVO_Confidence` 
-FROM (SELECT `KernAgg_esu_0`.`KEY` AS `KEY`, `KernAgg_esu_0`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_esu_0`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_esu_0`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_esu_0`.`OVO_Confidence` AS `OVO_Confidence` 
-FROM (SELECT kernel_cte_0_1.`KEY` AS `KEY`, kernel_cte_0_1.`OVO_Class1` AS `OVO_Class1`, kernel_cte_0_1.`OVO_Class2` AS `OVO_Class2`, kernel_cte_0_1.`OVO_Decision` AS `OVO_Decision`, kernel_cte_0_1.`OVO_Confidence` AS `OVO_Confidence` 
+ INSERT INTO tmp_20180602143446_rq2_kernagg_b0 (`KEY`, `OVO_Class1`, `OVO_Class2`, `OVO_Decision`, `OVO_Conf`) SELECT `KernAgg_B0`.`KEY`, `KernAgg_B0`.`OVO_Class1`, `KernAgg_B0`.`OVO_Class2`, `KernAgg_B0`.`OVO_Decision`, `KernAgg_B0`.`OVO_Conf` 
+FROM (SELECT `KernAgg_esu_0`.`KEY` AS `KEY`, `KernAgg_esu_0`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_esu_0`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_esu_0`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_esu_0`.`OVO_Conf` AS `OVO_Conf` 
+FROM (SELECT kernel_cte_0_1.`KEY` AS `KEY`, kernel_cte_0_1.`OVO_Class1` AS `OVO_Class1`, kernel_cte_0_1.`OVO_Class2` AS `OVO_Class2`, kernel_cte_0_1.`OVO_Decision` AS `OVO_Decision`, kernel_cte_0_1.`OVO_Conf` AS `OVO_Conf` 
 FROM kernel_cte_0_1) AS `KernAgg_esu_0`) AS `KernAgg_B0`
 
--- Code For temporary table tmp_20180516112655_codegen_ehm8ht_kernagg_b1 part 1. Create 
+-- Code For temporary table tmp_20180602143446_wv3_kernagg_b1 part 1. Create 
 
 
-CREATE TABLE tmp_20180516112655_codegen_ehm8ht_kernagg_b1 (
+CREATE TABLE tmp_20180602143446_wv3_kernagg_b1 (
 	`KEY` BIGINT, 
 	`OVO_Class1` BIGINT, 
 	`OVO_Class2` BIGINT, 
 	`OVO_Decision` BIGINT, 
-	`OVO_Confidence` DOUBLE
+	`OVO_Conf` DOUBLE
 )
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516112655_codegen_ehm8ht_kernagg_b1 part 2. Populate
+-- Code For temporary table tmp_20180602143446_wv3_kernagg_b1 part 2. Populate
 
 WITH kernel_input AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CAST(`ADS`.`Feature_0` AS DOUBLE) AS `Feature_0`, CAST(`ADS`.`Feature_1` AS DOUBLE) AS `Feature_1`, CAST(`ADS`.`Feature_2` AS DOUBLE) AS `Feature_2`, CAST(`ADS`.`Feature_3` AS DOUBLE) AS `Feature_3`, CAST(`ADS`.`Feature_4` AS DOUBLE) AS `Feature_4`, CAST(`ADS`.`Feature_5` AS DOUBLE) AS `Feature_5`, CAST(`ADS`.`Feature_6` AS DOUBLE) AS `Feature_6`, CAST(`ADS`.`Feature_7` AS DOUBLE) AS `Feature_7`, CAST(`ADS`.`Feature_8` AS DOUBLE) AS `Feature_8`, CAST(`ADS`.`Feature_9` AS DOUBLE) AS `Feature_9`, CAST(`ADS`.`TGT` AS DOUBLE) AS `TGT` 
@@ -71,27 +71,27 @@ FROM (SELECT full_join_data_sv_1.`KEY` AS `KEY`, sum(CAST(full_join_data_sv_1.do
 FROM (SELECT kernel_input.`KEY` AS `KEY`, `SV_data_0_2`.dual_coeff * power(0.1 * (kernel_input.`Feature_0` * `SV_data_0_2`.sv_0 + kernel_input.`Feature_1` * `SV_data_0_2`.sv_1 + kernel_input.`Feature_2` * `SV_data_0_2`.sv_2 + kernel_input.`Feature_3` * `SV_data_0_2`.sv_3 + kernel_input.`Feature_4` * `SV_data_0_2`.sv_4 + kernel_input.`Feature_5` * `SV_data_0_2`.sv_5 + kernel_input.`Feature_6` * `SV_data_0_2`.sv_6 + kernel_input.`Feature_7` * `SV_data_0_2`.sv_7 + kernel_input.`Feature_8` * `SV_data_0_2`.sv_8 + kernel_input.`Feature_9` * `SV_data_0_2`.sv_9) + 0.0, 3) AS dot_prod1 
 FROM kernel_input, `SV_data_0_2`) AS full_join_data_sv_1 GROUP BY full_join_data_sv_1.`KEY`) AS t_1), 
 kernel_cte_0_2 AS 
-(SELECT kernel_dp_0_2.`KEY` AS `KEY`, 0 AS `OVO_Class1`, 2 AS `OVO_Class2`, CASE WHEN (-kernel_dp_0_2.dot_product >= 0.0) THEN 1 ELSE 0 END AS `OVO_Decision`, coalesce(-kernel_dp_0_2.dot_product, 1.0 / (1.0 + exp(CASE WHEN (CASE WHEN (-100.0 <= -(-((-kernel_dp_0_2.dot_product) * -0.03559958822785923 + 0.12633814168872953))) THEN -(-((-kernel_dp_0_2.dot_product) * -0.03559958822785923 + 0.12633814168872953)) ELSE -100.0 END <= 100.0) THEN CASE WHEN (-100.0 <= -(-((-kernel_dp_0_2.dot_product) * -0.03559958822785923 + 0.12633814168872953))) THEN -(-((-kernel_dp_0_2.dot_product) * -0.03559958822785923 + 0.12633814168872953)) ELSE -100.0 END ELSE 100.0 END))) AS `OVO_Confidence` 
+(SELECT kernel_dp_0_2.`KEY` AS `KEY`, 0 AS `OVO_Class1`, 2 AS `OVO_Class2`, CASE WHEN (-kernel_dp_0_2.dot_product >= 0.0) THEN 1 ELSE 0 END AS `OVO_Decision`, coalesce(-kernel_dp_0_2.dot_product, 1.0 / (1.0 + exp(CASE WHEN (CASE WHEN (-100.0 <= -(-((-kernel_dp_0_2.dot_product) * -0.15579087564617883 + 0.18825983896350545))) THEN -(-((-kernel_dp_0_2.dot_product) * -0.15579087564617883 + 0.18825983896350545)) ELSE -100.0 END <= 100.0) THEN CASE WHEN (-100.0 <= -(-((-kernel_dp_0_2.dot_product) * -0.15579087564617883 + 0.18825983896350545))) THEN -(-((-kernel_dp_0_2.dot_product) * -0.15579087564617883 + 0.18825983896350545)) ELSE -100.0 END ELSE 100.0 END))) AS `OVO_Conf` 
 FROM kernel_dp_0_2)
- INSERT INTO tmp_20180516112655_codegen_ehm8ht_kernagg_b1 (`KEY`, `OVO_Class1`, `OVO_Class2`, `OVO_Decision`, `OVO_Confidence`) SELECT `KernAgg_B1`.`KEY`, `KernAgg_B1`.`OVO_Class1`, `KernAgg_B1`.`OVO_Class2`, `KernAgg_B1`.`OVO_Decision`, `KernAgg_B1`.`OVO_Confidence` 
-FROM (SELECT `KernAgg_esu_1`.`KEY` AS `KEY`, `KernAgg_esu_1`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_esu_1`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_esu_1`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_esu_1`.`OVO_Confidence` AS `OVO_Confidence` 
-FROM (SELECT kernel_cte_0_2.`KEY` AS `KEY`, kernel_cte_0_2.`OVO_Class1` AS `OVO_Class1`, kernel_cte_0_2.`OVO_Class2` AS `OVO_Class2`, kernel_cte_0_2.`OVO_Decision` AS `OVO_Decision`, kernel_cte_0_2.`OVO_Confidence` AS `OVO_Confidence` 
+ INSERT INTO tmp_20180602143446_wv3_kernagg_b1 (`KEY`, `OVO_Class1`, `OVO_Class2`, `OVO_Decision`, `OVO_Conf`) SELECT `KernAgg_B1`.`KEY`, `KernAgg_B1`.`OVO_Class1`, `KernAgg_B1`.`OVO_Class2`, `KernAgg_B1`.`OVO_Decision`, `KernAgg_B1`.`OVO_Conf` 
+FROM (SELECT `KernAgg_esu_1`.`KEY` AS `KEY`, `KernAgg_esu_1`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_esu_1`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_esu_1`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_esu_1`.`OVO_Conf` AS `OVO_Conf` 
+FROM (SELECT kernel_cte_0_2.`KEY` AS `KEY`, kernel_cte_0_2.`OVO_Class1` AS `OVO_Class1`, kernel_cte_0_2.`OVO_Class2` AS `OVO_Class2`, kernel_cte_0_2.`OVO_Decision` AS `OVO_Decision`, kernel_cte_0_2.`OVO_Conf` AS `OVO_Conf` 
 FROM kernel_cte_0_2) AS `KernAgg_esu_1`) AS `KernAgg_B1`
 
--- Code For temporary table tmp_20180516112655_codegen_3exjw4_kernagg_b2 part 1. Create 
+-- Code For temporary table tmp_20180602143446_ilr_kernagg_b2 part 1. Create 
 
 
-CREATE TABLE tmp_20180516112655_codegen_3exjw4_kernagg_b2 (
+CREATE TABLE tmp_20180602143446_ilr_kernagg_b2 (
 	`KEY` BIGINT, 
 	`OVO_Class1` BIGINT, 
 	`OVO_Class2` BIGINT, 
 	`OVO_Decision` BIGINT, 
-	`OVO_Confidence` DOUBLE
+	`OVO_Conf` DOUBLE
 )
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516112655_codegen_3exjw4_kernagg_b2 part 2. Populate
+-- Code For temporary table tmp_20180602143446_ilr_kernagg_b2 part 2. Populate
 
 WITH kernel_input AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CAST(`ADS`.`Feature_0` AS DOUBLE) AS `Feature_0`, CAST(`ADS`.`Feature_1` AS DOUBLE) AS `Feature_1`, CAST(`ADS`.`Feature_2` AS DOUBLE) AS `Feature_2`, CAST(`ADS`.`Feature_3` AS DOUBLE) AS `Feature_3`, CAST(`ADS`.`Feature_4` AS DOUBLE) AS `Feature_4`, CAST(`ADS`.`Feature_5` AS DOUBLE) AS `Feature_5`, CAST(`ADS`.`Feature_6` AS DOUBLE) AS `Feature_6`, CAST(`ADS`.`Feature_7` AS DOUBLE) AS `Feature_7`, CAST(`ADS`.`Feature_8` AS DOUBLE) AS `Feature_8`, CAST(`ADS`.`Feature_9` AS DOUBLE) AS `Feature_9`, CAST(`ADS`.`TGT` AS DOUBLE) AS `TGT` 
@@ -105,27 +105,27 @@ FROM (SELECT full_join_data_sv_2.`KEY` AS `KEY`, sum(CAST(full_join_data_sv_2.do
 FROM (SELECT kernel_input.`KEY` AS `KEY`, `SV_data_0_3`.dual_coeff * power(0.1 * (kernel_input.`Feature_0` * `SV_data_0_3`.sv_0 + kernel_input.`Feature_1` * `SV_data_0_3`.sv_1 + kernel_input.`Feature_2` * `SV_data_0_3`.sv_2 + kernel_input.`Feature_3` * `SV_data_0_3`.sv_3 + kernel_input.`Feature_4` * `SV_data_0_3`.sv_4 + kernel_input.`Feature_5` * `SV_data_0_3`.sv_5 + kernel_input.`Feature_6` * `SV_data_0_3`.sv_6 + kernel_input.`Feature_7` * `SV_data_0_3`.sv_7 + kernel_input.`Feature_8` * `SV_data_0_3`.sv_8 + kernel_input.`Feature_9` * `SV_data_0_3`.sv_9) + 0.0, 3) AS dot_prod1 
 FROM kernel_input, `SV_data_0_3`) AS full_join_data_sv_2 GROUP BY full_join_data_sv_2.`KEY`) AS t_2), 
 kernel_cte_0_3 AS 
-(SELECT kernel_dp_0_3.`KEY` AS `KEY`, 0 AS `OVO_Class1`, 3 AS `OVO_Class2`, CASE WHEN (-kernel_dp_0_3.dot_product >= 0.0) THEN 1 ELSE 0 END AS `OVO_Decision`, coalesce(-kernel_dp_0_3.dot_product, 1.0 / (1.0 + exp(CASE WHEN (CASE WHEN (-100.0 <= -(-((-kernel_dp_0_3.dot_product) * -2.2526844481641812 + 0.4817598215138555))) THEN -(-((-kernel_dp_0_3.dot_product) * -2.2526844481641812 + 0.4817598215138555)) ELSE -100.0 END <= 100.0) THEN CASE WHEN (-100.0 <= -(-((-kernel_dp_0_3.dot_product) * -2.2526844481641812 + 0.4817598215138555))) THEN -(-((-kernel_dp_0_3.dot_product) * -2.2526844481641812 + 0.4817598215138555)) ELSE -100.0 END ELSE 100.0 END))) AS `OVO_Confidence` 
+(SELECT kernel_dp_0_3.`KEY` AS `KEY`, 0 AS `OVO_Class1`, 3 AS `OVO_Class2`, CASE WHEN (-kernel_dp_0_3.dot_product >= 0.0) THEN 1 ELSE 0 END AS `OVO_Decision`, coalesce(-kernel_dp_0_3.dot_product, 1.0 / (1.0 + exp(CASE WHEN (CASE WHEN (-100.0 <= -(-((-kernel_dp_0_3.dot_product) * -1.9775378665464947 + 0.4095369184403113))) THEN -(-((-kernel_dp_0_3.dot_product) * -1.9775378665464947 + 0.4095369184403113)) ELSE -100.0 END <= 100.0) THEN CASE WHEN (-100.0 <= -(-((-kernel_dp_0_3.dot_product) * -1.9775378665464947 + 0.4095369184403113))) THEN -(-((-kernel_dp_0_3.dot_product) * -1.9775378665464947 + 0.4095369184403113)) ELSE -100.0 END ELSE 100.0 END))) AS `OVO_Conf` 
 FROM kernel_dp_0_3)
- INSERT INTO tmp_20180516112655_codegen_3exjw4_kernagg_b2 (`KEY`, `OVO_Class1`, `OVO_Class2`, `OVO_Decision`, `OVO_Confidence`) SELECT `KernAgg_B2`.`KEY`, `KernAgg_B2`.`OVO_Class1`, `KernAgg_B2`.`OVO_Class2`, `KernAgg_B2`.`OVO_Decision`, `KernAgg_B2`.`OVO_Confidence` 
-FROM (SELECT `KernAgg_esu_2`.`KEY` AS `KEY`, `KernAgg_esu_2`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_esu_2`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_esu_2`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_esu_2`.`OVO_Confidence` AS `OVO_Confidence` 
-FROM (SELECT kernel_cte_0_3.`KEY` AS `KEY`, kernel_cte_0_3.`OVO_Class1` AS `OVO_Class1`, kernel_cte_0_3.`OVO_Class2` AS `OVO_Class2`, kernel_cte_0_3.`OVO_Decision` AS `OVO_Decision`, kernel_cte_0_3.`OVO_Confidence` AS `OVO_Confidence` 
+ INSERT INTO tmp_20180602143446_ilr_kernagg_b2 (`KEY`, `OVO_Class1`, `OVO_Class2`, `OVO_Decision`, `OVO_Conf`) SELECT `KernAgg_B2`.`KEY`, `KernAgg_B2`.`OVO_Class1`, `KernAgg_B2`.`OVO_Class2`, `KernAgg_B2`.`OVO_Decision`, `KernAgg_B2`.`OVO_Conf` 
+FROM (SELECT `KernAgg_esu_2`.`KEY` AS `KEY`, `KernAgg_esu_2`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_esu_2`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_esu_2`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_esu_2`.`OVO_Conf` AS `OVO_Conf` 
+FROM (SELECT kernel_cte_0_3.`KEY` AS `KEY`, kernel_cte_0_3.`OVO_Class1` AS `OVO_Class1`, kernel_cte_0_3.`OVO_Class2` AS `OVO_Class2`, kernel_cte_0_3.`OVO_Decision` AS `OVO_Decision`, kernel_cte_0_3.`OVO_Conf` AS `OVO_Conf` 
 FROM kernel_cte_0_3) AS `KernAgg_esu_2`) AS `KernAgg_B2`
 
--- Code For temporary table tmp_20180516112655_codegen_0cskjo_kernagg_b3 part 1. Create 
+-- Code For temporary table tmp_20180602143446_jqj_kernagg_b3 part 1. Create 
 
 
-CREATE TABLE tmp_20180516112655_codegen_0cskjo_kernagg_b3 (
+CREATE TABLE tmp_20180602143446_jqj_kernagg_b3 (
 	`KEY` BIGINT, 
 	`OVO_Class1` BIGINT, 
 	`OVO_Class2` BIGINT, 
 	`OVO_Decision` BIGINT, 
-	`OVO_Confidence` DOUBLE
+	`OVO_Conf` DOUBLE
 )
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516112655_codegen_0cskjo_kernagg_b3 part 2. Populate
+-- Code For temporary table tmp_20180602143446_jqj_kernagg_b3 part 2. Populate
 
 WITH kernel_input AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CAST(`ADS`.`Feature_0` AS DOUBLE) AS `Feature_0`, CAST(`ADS`.`Feature_1` AS DOUBLE) AS `Feature_1`, CAST(`ADS`.`Feature_2` AS DOUBLE) AS `Feature_2`, CAST(`ADS`.`Feature_3` AS DOUBLE) AS `Feature_3`, CAST(`ADS`.`Feature_4` AS DOUBLE) AS `Feature_4`, CAST(`ADS`.`Feature_5` AS DOUBLE) AS `Feature_5`, CAST(`ADS`.`Feature_6` AS DOUBLE) AS `Feature_6`, CAST(`ADS`.`Feature_7` AS DOUBLE) AS `Feature_7`, CAST(`ADS`.`Feature_8` AS DOUBLE) AS `Feature_8`, CAST(`ADS`.`Feature_9` AS DOUBLE) AS `Feature_9`, CAST(`ADS`.`TGT` AS DOUBLE) AS `TGT` 
@@ -139,27 +139,27 @@ FROM (SELECT full_join_data_sv_3.`KEY` AS `KEY`, sum(CAST(full_join_data_sv_3.do
 FROM (SELECT kernel_input.`KEY` AS `KEY`, `SV_data_1_2`.dual_coeff * power(0.1 * (kernel_input.`Feature_0` * `SV_data_1_2`.sv_0 + kernel_input.`Feature_1` * `SV_data_1_2`.sv_1 + kernel_input.`Feature_2` * `SV_data_1_2`.sv_2 + kernel_input.`Feature_3` * `SV_data_1_2`.sv_3 + kernel_input.`Feature_4` * `SV_data_1_2`.sv_4 + kernel_input.`Feature_5` * `SV_data_1_2`.sv_5 + kernel_input.`Feature_6` * `SV_data_1_2`.sv_6 + kernel_input.`Feature_7` * `SV_data_1_2`.sv_7 + kernel_input.`Feature_8` * `SV_data_1_2`.sv_8 + kernel_input.`Feature_9` * `SV_data_1_2`.sv_9) + 0.0, 3) AS dot_prod1 
 FROM kernel_input, `SV_data_1_2`) AS full_join_data_sv_3 GROUP BY full_join_data_sv_3.`KEY`) AS t_3), 
 kernel_cte_1_2 AS 
-(SELECT kernel_dp_1_2.`KEY` AS `KEY`, 1 AS `OVO_Class1`, 2 AS `OVO_Class2`, CASE WHEN (-kernel_dp_1_2.dot_product >= 0.0) THEN 1 ELSE 0 END AS `OVO_Decision`, coalesce(-kernel_dp_1_2.dot_product, 1.0 / (1.0 + exp(CASE WHEN (CASE WHEN (-100.0 <= -(-((-kernel_dp_1_2.dot_product) * -0.4228766671712857 + 0.38594739126468486))) THEN -(-((-kernel_dp_1_2.dot_product) * -0.4228766671712857 + 0.38594739126468486)) ELSE -100.0 END <= 100.0) THEN CASE WHEN (-100.0 <= -(-((-kernel_dp_1_2.dot_product) * -0.4228766671712857 + 0.38594739126468486))) THEN -(-((-kernel_dp_1_2.dot_product) * -0.4228766671712857 + 0.38594739126468486)) ELSE -100.0 END ELSE 100.0 END))) AS `OVO_Confidence` 
+(SELECT kernel_dp_1_2.`KEY` AS `KEY`, 1 AS `OVO_Class1`, 2 AS `OVO_Class2`, CASE WHEN (-kernel_dp_1_2.dot_product >= 0.0) THEN 1 ELSE 0 END AS `OVO_Decision`, coalesce(-kernel_dp_1_2.dot_product, 1.0 / (1.0 + exp(CASE WHEN (CASE WHEN (-100.0 <= -(-((-kernel_dp_1_2.dot_product) * -0.2922345892705013 + 0.3183059555779065))) THEN -(-((-kernel_dp_1_2.dot_product) * -0.2922345892705013 + 0.3183059555779065)) ELSE -100.0 END <= 100.0) THEN CASE WHEN (-100.0 <= -(-((-kernel_dp_1_2.dot_product) * -0.2922345892705013 + 0.3183059555779065))) THEN -(-((-kernel_dp_1_2.dot_product) * -0.2922345892705013 + 0.3183059555779065)) ELSE -100.0 END ELSE 100.0 END))) AS `OVO_Conf` 
 FROM kernel_dp_1_2)
- INSERT INTO tmp_20180516112655_codegen_0cskjo_kernagg_b3 (`KEY`, `OVO_Class1`, `OVO_Class2`, `OVO_Decision`, `OVO_Confidence`) SELECT `KernAgg_B3`.`KEY`, `KernAgg_B3`.`OVO_Class1`, `KernAgg_B3`.`OVO_Class2`, `KernAgg_B3`.`OVO_Decision`, `KernAgg_B3`.`OVO_Confidence` 
-FROM (SELECT `KernAgg_esu_3`.`KEY` AS `KEY`, `KernAgg_esu_3`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_esu_3`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_esu_3`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_esu_3`.`OVO_Confidence` AS `OVO_Confidence` 
-FROM (SELECT kernel_cte_1_2.`KEY` AS `KEY`, kernel_cte_1_2.`OVO_Class1` AS `OVO_Class1`, kernel_cte_1_2.`OVO_Class2` AS `OVO_Class2`, kernel_cte_1_2.`OVO_Decision` AS `OVO_Decision`, kernel_cte_1_2.`OVO_Confidence` AS `OVO_Confidence` 
+ INSERT INTO tmp_20180602143446_jqj_kernagg_b3 (`KEY`, `OVO_Class1`, `OVO_Class2`, `OVO_Decision`, `OVO_Conf`) SELECT `KernAgg_B3`.`KEY`, `KernAgg_B3`.`OVO_Class1`, `KernAgg_B3`.`OVO_Class2`, `KernAgg_B3`.`OVO_Decision`, `KernAgg_B3`.`OVO_Conf` 
+FROM (SELECT `KernAgg_esu_3`.`KEY` AS `KEY`, `KernAgg_esu_3`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_esu_3`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_esu_3`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_esu_3`.`OVO_Conf` AS `OVO_Conf` 
+FROM (SELECT kernel_cte_1_2.`KEY` AS `KEY`, kernel_cte_1_2.`OVO_Class1` AS `OVO_Class1`, kernel_cte_1_2.`OVO_Class2` AS `OVO_Class2`, kernel_cte_1_2.`OVO_Decision` AS `OVO_Decision`, kernel_cte_1_2.`OVO_Conf` AS `OVO_Conf` 
 FROM kernel_cte_1_2) AS `KernAgg_esu_3`) AS `KernAgg_B3`
 
--- Code For temporary table tmp_20180516112655_codegen_3r6085_kernagg_b4 part 1. Create 
+-- Code For temporary table tmp_20180602143446_0qp_kernagg_b4 part 1. Create 
 
 
-CREATE TABLE tmp_20180516112655_codegen_3r6085_kernagg_b4 (
+CREATE TABLE tmp_20180602143446_0qp_kernagg_b4 (
 	`KEY` BIGINT, 
 	`OVO_Class1` BIGINT, 
 	`OVO_Class2` BIGINT, 
 	`OVO_Decision` BIGINT, 
-	`OVO_Confidence` DOUBLE
+	`OVO_Conf` DOUBLE
 )
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516112655_codegen_3r6085_kernagg_b4 part 2. Populate
+-- Code For temporary table tmp_20180602143446_0qp_kernagg_b4 part 2. Populate
 
 WITH kernel_input AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CAST(`ADS`.`Feature_0` AS DOUBLE) AS `Feature_0`, CAST(`ADS`.`Feature_1` AS DOUBLE) AS `Feature_1`, CAST(`ADS`.`Feature_2` AS DOUBLE) AS `Feature_2`, CAST(`ADS`.`Feature_3` AS DOUBLE) AS `Feature_3`, CAST(`ADS`.`Feature_4` AS DOUBLE) AS `Feature_4`, CAST(`ADS`.`Feature_5` AS DOUBLE) AS `Feature_5`, CAST(`ADS`.`Feature_6` AS DOUBLE) AS `Feature_6`, CAST(`ADS`.`Feature_7` AS DOUBLE) AS `Feature_7`, CAST(`ADS`.`Feature_8` AS DOUBLE) AS `Feature_8`, CAST(`ADS`.`Feature_9` AS DOUBLE) AS `Feature_9`, CAST(`ADS`.`TGT` AS DOUBLE) AS `TGT` 
@@ -173,27 +173,27 @@ FROM (SELECT full_join_data_sv_4.`KEY` AS `KEY`, sum(CAST(full_join_data_sv_4.do
 FROM (SELECT kernel_input.`KEY` AS `KEY`, `SV_data_1_3`.dual_coeff * power(0.1 * (kernel_input.`Feature_0` * `SV_data_1_3`.sv_0 + kernel_input.`Feature_1` * `SV_data_1_3`.sv_1 + kernel_input.`Feature_2` * `SV_data_1_3`.sv_2 + kernel_input.`Feature_3` * `SV_data_1_3`.sv_3 + kernel_input.`Feature_4` * `SV_data_1_3`.sv_4 + kernel_input.`Feature_5` * `SV_data_1_3`.sv_5 + kernel_input.`Feature_6` * `SV_data_1_3`.sv_6 + kernel_input.`Feature_7` * `SV_data_1_3`.sv_7 + kernel_input.`Feature_8` * `SV_data_1_3`.sv_8 + kernel_input.`Feature_9` * `SV_data_1_3`.sv_9) + 0.0, 3) AS dot_prod1 
 FROM kernel_input, `SV_data_1_3`) AS full_join_data_sv_4 GROUP BY full_join_data_sv_4.`KEY`) AS t_4), 
 kernel_cte_1_3 AS 
-(SELECT kernel_dp_1_3.`KEY` AS `KEY`, 1 AS `OVO_Class1`, 3 AS `OVO_Class2`, CASE WHEN (-kernel_dp_1_3.dot_product >= 0.0) THEN 1 ELSE 0 END AS `OVO_Decision`, coalesce(-kernel_dp_1_3.dot_product, 1.0 / (1.0 + exp(CASE WHEN (CASE WHEN (-100.0 <= -(-((-kernel_dp_1_3.dot_product) * -1.0653258937542973 + -0.07251000091640925))) THEN -(-((-kernel_dp_1_3.dot_product) * -1.0653258937542973 + -0.07251000091640925)) ELSE -100.0 END <= 100.0) THEN CASE WHEN (-100.0 <= -(-((-kernel_dp_1_3.dot_product) * -1.0653258937542973 + -0.07251000091640925))) THEN -(-((-kernel_dp_1_3.dot_product) * -1.0653258937542973 + -0.07251000091640925)) ELSE -100.0 END ELSE 100.0 END))) AS `OVO_Confidence` 
+(SELECT kernel_dp_1_3.`KEY` AS `KEY`, 1 AS `OVO_Class1`, 3 AS `OVO_Class2`, CASE WHEN (-kernel_dp_1_3.dot_product >= 0.0) THEN 1 ELSE 0 END AS `OVO_Decision`, coalesce(-kernel_dp_1_3.dot_product, 1.0 / (1.0 + exp(CASE WHEN (CASE WHEN (-100.0 <= -(-((-kernel_dp_1_3.dot_product) * -0.6388765426000913 + 0.08011756577115753))) THEN -(-((-kernel_dp_1_3.dot_product) * -0.6388765426000913 + 0.08011756577115753)) ELSE -100.0 END <= 100.0) THEN CASE WHEN (-100.0 <= -(-((-kernel_dp_1_3.dot_product) * -0.6388765426000913 + 0.08011756577115753))) THEN -(-((-kernel_dp_1_3.dot_product) * -0.6388765426000913 + 0.08011756577115753)) ELSE -100.0 END ELSE 100.0 END))) AS `OVO_Conf` 
 FROM kernel_dp_1_3)
- INSERT INTO tmp_20180516112655_codegen_3r6085_kernagg_b4 (`KEY`, `OVO_Class1`, `OVO_Class2`, `OVO_Decision`, `OVO_Confidence`) SELECT `KernAgg_B4`.`KEY`, `KernAgg_B4`.`OVO_Class1`, `KernAgg_B4`.`OVO_Class2`, `KernAgg_B4`.`OVO_Decision`, `KernAgg_B4`.`OVO_Confidence` 
-FROM (SELECT `KernAgg_esu_4`.`KEY` AS `KEY`, `KernAgg_esu_4`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_esu_4`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_esu_4`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_esu_4`.`OVO_Confidence` AS `OVO_Confidence` 
-FROM (SELECT kernel_cte_1_3.`KEY` AS `KEY`, kernel_cte_1_3.`OVO_Class1` AS `OVO_Class1`, kernel_cte_1_3.`OVO_Class2` AS `OVO_Class2`, kernel_cte_1_3.`OVO_Decision` AS `OVO_Decision`, kernel_cte_1_3.`OVO_Confidence` AS `OVO_Confidence` 
+ INSERT INTO tmp_20180602143446_0qp_kernagg_b4 (`KEY`, `OVO_Class1`, `OVO_Class2`, `OVO_Decision`, `OVO_Conf`) SELECT `KernAgg_B4`.`KEY`, `KernAgg_B4`.`OVO_Class1`, `KernAgg_B4`.`OVO_Class2`, `KernAgg_B4`.`OVO_Decision`, `KernAgg_B4`.`OVO_Conf` 
+FROM (SELECT `KernAgg_esu_4`.`KEY` AS `KEY`, `KernAgg_esu_4`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_esu_4`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_esu_4`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_esu_4`.`OVO_Conf` AS `OVO_Conf` 
+FROM (SELECT kernel_cte_1_3.`KEY` AS `KEY`, kernel_cte_1_3.`OVO_Class1` AS `OVO_Class1`, kernel_cte_1_3.`OVO_Class2` AS `OVO_Class2`, kernel_cte_1_3.`OVO_Decision` AS `OVO_Decision`, kernel_cte_1_3.`OVO_Conf` AS `OVO_Conf` 
 FROM kernel_cte_1_3) AS `KernAgg_esu_4`) AS `KernAgg_B4`
 
--- Code For temporary table tmp_20180516112655_codegen_ui0bio_kernagg_b5 part 1. Create 
+-- Code For temporary table tmp_20180602143446_rr6_kernagg_b5 part 1. Create 
 
 
-CREATE TABLE tmp_20180516112655_codegen_ui0bio_kernagg_b5 (
+CREATE TABLE tmp_20180602143446_rr6_kernagg_b5 (
 	`KEY` BIGINT, 
 	`OVO_Class1` BIGINT, 
 	`OVO_Class2` BIGINT, 
 	`OVO_Decision` BIGINT, 
-	`OVO_Confidence` DOUBLE
+	`OVO_Conf` DOUBLE
 )
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516112655_codegen_ui0bio_kernagg_b5 part 2. Populate
+-- Code For temporary table tmp_20180602143446_rr6_kernagg_b5 part 2. Populate
 
 WITH kernel_input AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CAST(`ADS`.`Feature_0` AS DOUBLE) AS `Feature_0`, CAST(`ADS`.`Feature_1` AS DOUBLE) AS `Feature_1`, CAST(`ADS`.`Feature_2` AS DOUBLE) AS `Feature_2`, CAST(`ADS`.`Feature_3` AS DOUBLE) AS `Feature_3`, CAST(`ADS`.`Feature_4` AS DOUBLE) AS `Feature_4`, CAST(`ADS`.`Feature_5` AS DOUBLE) AS `Feature_5`, CAST(`ADS`.`Feature_6` AS DOUBLE) AS `Feature_6`, CAST(`ADS`.`Feature_7` AS DOUBLE) AS `Feature_7`, CAST(`ADS`.`Feature_8` AS DOUBLE) AS `Feature_8`, CAST(`ADS`.`Feature_9` AS DOUBLE) AS `Feature_9`, CAST(`ADS`.`TGT` AS DOUBLE) AS `TGT` 
@@ -207,17 +207,17 @@ FROM (SELECT full_join_data_sv_5.`KEY` AS `KEY`, sum(CAST(full_join_data_sv_5.do
 FROM (SELECT kernel_input.`KEY` AS `KEY`, `SV_data_2_3`.dual_coeff * power(0.1 * (kernel_input.`Feature_0` * `SV_data_2_3`.sv_0 + kernel_input.`Feature_1` * `SV_data_2_3`.sv_1 + kernel_input.`Feature_2` * `SV_data_2_3`.sv_2 + kernel_input.`Feature_3` * `SV_data_2_3`.sv_3 + kernel_input.`Feature_4` * `SV_data_2_3`.sv_4 + kernel_input.`Feature_5` * `SV_data_2_3`.sv_5 + kernel_input.`Feature_6` * `SV_data_2_3`.sv_6 + kernel_input.`Feature_7` * `SV_data_2_3`.sv_7 + kernel_input.`Feature_8` * `SV_data_2_3`.sv_8 + kernel_input.`Feature_9` * `SV_data_2_3`.sv_9) + 0.0, 3) AS dot_prod1 
 FROM kernel_input, `SV_data_2_3`) AS full_join_data_sv_5 GROUP BY full_join_data_sv_5.`KEY`) AS t_5), 
 kernel_cte_2_3 AS 
-(SELECT kernel_dp_2_3.`KEY` AS `KEY`, 2 AS `OVO_Class1`, 3 AS `OVO_Class2`, CASE WHEN (-kernel_dp_2_3.dot_product >= 0.0) THEN 1 ELSE 0 END AS `OVO_Decision`, coalesce(-kernel_dp_2_3.dot_product, 1.0 / (1.0 + exp(CASE WHEN (CASE WHEN (-100.0 <= -(-((-kernel_dp_2_3.dot_product) * -0.16754260652200767 + -0.08768822928885206))) THEN -(-((-kernel_dp_2_3.dot_product) * -0.16754260652200767 + -0.08768822928885206)) ELSE -100.0 END <= 100.0) THEN CASE WHEN (-100.0 <= -(-((-kernel_dp_2_3.dot_product) * -0.16754260652200767 + -0.08768822928885206))) THEN -(-((-kernel_dp_2_3.dot_product) * -0.16754260652200767 + -0.08768822928885206)) ELSE -100.0 END ELSE 100.0 END))) AS `OVO_Confidence` 
+(SELECT kernel_dp_2_3.`KEY` AS `KEY`, 2 AS `OVO_Class1`, 3 AS `OVO_Class2`, CASE WHEN (-kernel_dp_2_3.dot_product >= 0.0) THEN 1 ELSE 0 END AS `OVO_Decision`, coalesce(-kernel_dp_2_3.dot_product, 1.0 / (1.0 + exp(CASE WHEN (CASE WHEN (-100.0 <= -(-((-kernel_dp_2_3.dot_product) * -0.22452999745039579 + -0.14099105417130656))) THEN -(-((-kernel_dp_2_3.dot_product) * -0.22452999745039579 + -0.14099105417130656)) ELSE -100.0 END <= 100.0) THEN CASE WHEN (-100.0 <= -(-((-kernel_dp_2_3.dot_product) * -0.22452999745039579 + -0.14099105417130656))) THEN -(-((-kernel_dp_2_3.dot_product) * -0.22452999745039579 + -0.14099105417130656)) ELSE -100.0 END ELSE 100.0 END))) AS `OVO_Conf` 
 FROM kernel_dp_2_3)
- INSERT INTO tmp_20180516112655_codegen_ui0bio_kernagg_b5 (`KEY`, `OVO_Class1`, `OVO_Class2`, `OVO_Decision`, `OVO_Confidence`) SELECT `KernAgg_B5`.`KEY`, `KernAgg_B5`.`OVO_Class1`, `KernAgg_B5`.`OVO_Class2`, `KernAgg_B5`.`OVO_Decision`, `KernAgg_B5`.`OVO_Confidence` 
-FROM (SELECT `KernAgg_esu_5`.`KEY` AS `KEY`, `KernAgg_esu_5`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_esu_5`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_esu_5`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_esu_5`.`OVO_Confidence` AS `OVO_Confidence` 
-FROM (SELECT kernel_cte_2_3.`KEY` AS `KEY`, kernel_cte_2_3.`OVO_Class1` AS `OVO_Class1`, kernel_cte_2_3.`OVO_Class2` AS `OVO_Class2`, kernel_cte_2_3.`OVO_Decision` AS `OVO_Decision`, kernel_cte_2_3.`OVO_Confidence` AS `OVO_Confidence` 
+ INSERT INTO tmp_20180602143446_rr6_kernagg_b5 (`KEY`, `OVO_Class1`, `OVO_Class2`, `OVO_Decision`, `OVO_Conf`) SELECT `KernAgg_B5`.`KEY`, `KernAgg_B5`.`OVO_Class1`, `KernAgg_B5`.`OVO_Class2`, `KernAgg_B5`.`OVO_Decision`, `KernAgg_B5`.`OVO_Conf` 
+FROM (SELECT `KernAgg_esu_5`.`KEY` AS `KEY`, `KernAgg_esu_5`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_esu_5`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_esu_5`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_esu_5`.`OVO_Conf` AS `OVO_Conf` 
+FROM (SELECT kernel_cte_2_3.`KEY` AS `KEY`, kernel_cte_2_3.`OVO_Class1` AS `OVO_Class1`, kernel_cte_2_3.`OVO_Class2` AS `OVO_Class2`, kernel_cte_2_3.`OVO_Decision` AS `OVO_Decision`, kernel_cte_2_3.`OVO_Conf` AS `OVO_Conf` 
 FROM kernel_cte_2_3) AS `KernAgg_esu_5`) AS `KernAgg_B5`
 
--- Code For temporary table tmp_20180516112655_codegen_s69th9_kernagg part 1. Create 
+-- Code For temporary table tmp_20180602143446_kn3_kernagg_agg part 1. Create 
 
 
-CREATE TABLE tmp_20180516112655_codegen_s69th9_kernagg (
+CREATE TABLE tmp_20180602143446_kn3_kernagg_agg (
 	`KEY` BIGINT, 
 	`OVO_Vote_0` BIGINT, 
 	`OVO_SumConfidence_0` DOUBLE, 
@@ -237,20 +237,20 @@ CREATE TABLE tmp_20180516112655_codegen_s69th9_kernagg (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516112655_codegen_s69th9_kernagg part 2. Populate
+-- Code For temporary table tmp_20180602143446_kn3_kernagg_agg part 2. Populate
 
 WITH `KernAgg_Union` AS 
-(SELECT `KernAgg_EnsembleUnion`.`KEY` AS `KEY`, `KernAgg_EnsembleUnion`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_EnsembleUnion`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_EnsembleUnion`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_EnsembleUnion`.`OVO_Confidence` AS `OVO_Confidence` 
-FROM (SELECT `KernAgg_B0`.`KEY` AS `KEY`, `KernAgg_B0`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_B0`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_B0`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_B0`.`OVO_Confidence` AS `OVO_Confidence` 
-FROM tmp_20180516112655_codegen_jn67wv_kernagg_b0 AS `KernAgg_B0` UNION ALL SELECT `KernAgg_B1`.`KEY` AS `KEY`, `KernAgg_B1`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_B1`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_B1`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_B1`.`OVO_Confidence` AS `OVO_Confidence` 
-FROM tmp_20180516112655_codegen_ehm8ht_kernagg_b1 AS `KernAgg_B1` UNION ALL SELECT `KernAgg_B2`.`KEY` AS `KEY`, `KernAgg_B2`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_B2`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_B2`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_B2`.`OVO_Confidence` AS `OVO_Confidence` 
-FROM tmp_20180516112655_codegen_3exjw4_kernagg_b2 AS `KernAgg_B2` UNION ALL SELECT `KernAgg_B3`.`KEY` AS `KEY`, `KernAgg_B3`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_B3`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_B3`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_B3`.`OVO_Confidence` AS `OVO_Confidence` 
-FROM tmp_20180516112655_codegen_0cskjo_kernagg_b3 AS `KernAgg_B3` UNION ALL SELECT `KernAgg_B4`.`KEY` AS `KEY`, `KernAgg_B4`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_B4`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_B4`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_B4`.`OVO_Confidence` AS `OVO_Confidence` 
-FROM tmp_20180516112655_codegen_3r6085_kernagg_b4 AS `KernAgg_B4` UNION ALL SELECT `KernAgg_B5`.`KEY` AS `KEY`, `KernAgg_B5`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_B5`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_B5`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_B5`.`OVO_Confidence` AS `OVO_Confidence` 
-FROM tmp_20180516112655_codegen_ui0bio_kernagg_b5 AS `KernAgg_B5`) AS `KernAgg_EnsembleUnion`), 
+(SELECT `KernAgg_EnsembleUnion`.`KEY` AS `KEY`, `KernAgg_EnsembleUnion`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_EnsembleUnion`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_EnsembleUnion`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_EnsembleUnion`.`OVO_Conf` AS `OVO_Conf` 
+FROM (SELECT `KernAgg_B0`.`KEY` AS `KEY`, `KernAgg_B0`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_B0`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_B0`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_B0`.`OVO_Conf` AS `OVO_Conf` 
+FROM tmp_20180602143446_rq2_kernagg_b0 AS `KernAgg_B0` UNION ALL SELECT `KernAgg_B1`.`KEY` AS `KEY`, `KernAgg_B1`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_B1`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_B1`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_B1`.`OVO_Conf` AS `OVO_Conf` 
+FROM tmp_20180602143446_wv3_kernagg_b1 AS `KernAgg_B1` UNION ALL SELECT `KernAgg_B2`.`KEY` AS `KEY`, `KernAgg_B2`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_B2`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_B2`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_B2`.`OVO_Conf` AS `OVO_Conf` 
+FROM tmp_20180602143446_ilr_kernagg_b2 AS `KernAgg_B2` UNION ALL SELECT `KernAgg_B3`.`KEY` AS `KEY`, `KernAgg_B3`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_B3`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_B3`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_B3`.`OVO_Conf` AS `OVO_Conf` 
+FROM tmp_20180602143446_jqj_kernagg_b3 AS `KernAgg_B3` UNION ALL SELECT `KernAgg_B4`.`KEY` AS `KEY`, `KernAgg_B4`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_B4`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_B4`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_B4`.`OVO_Conf` AS `OVO_Conf` 
+FROM tmp_20180602143446_0qp_kernagg_b4 AS `KernAgg_B4` UNION ALL SELECT `KernAgg_B5`.`KEY` AS `KEY`, `KernAgg_B5`.`OVO_Class1` AS `OVO_Class1`, `KernAgg_B5`.`OVO_Class2` AS `OVO_Class2`, `KernAgg_B5`.`OVO_Decision` AS `OVO_Decision`, `KernAgg_B5`.`OVO_Conf` AS `OVO_Conf` 
+FROM tmp_20180602143446_rr6_kernagg_b5 AS `KernAgg_B5`) AS `KernAgg_EnsembleUnion`), 
 `OVO_Votes` AS 
 (SELECT `Votes_Sel`.`KEY` AS `KEY`, `Votes_Sel`.`OVO_Vote_0` AS `OVO_Vote_0`, `Votes_Sel`.`OVO_SumConfidence_0` AS `OVO_SumConfidence_0`, `Votes_Sel`.`OVO_Vote_1` AS `OVO_Vote_1`, `Votes_Sel`.`OVO_SumConfidence_1` AS `OVO_SumConfidence_1`, `Votes_Sel`.`OVO_Vote_2` AS `OVO_Vote_2`, `Votes_Sel`.`OVO_SumConfidence_2` AS `OVO_SumConfidence_2`, `Votes_Sel`.`OVO_Vote_3` AS `OVO_Vote_3`, `Votes_Sel`.`OVO_SumConfidence_3` AS `OVO_SumConfidence_3` 
-FROM (SELECT `KernAgg_Union`.`KEY` AS `KEY`, sum(CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 0 OR `KernAgg_Union`.`OVO_Class2` = 0) THEN 1 ELSE 0 END * (CASE WHEN (`KernAgg_Union`.`OVO_Decision` = 0 AND `KernAgg_Union`.`OVO_Class1` = 0) THEN 1 ELSE 0 END + CASE WHEN (`KernAgg_Union`.`OVO_Decision` = 1 AND `KernAgg_Union`.`OVO_Class2` = 0) THEN 1 ELSE 0 END)) AS `OVO_Vote_0`, sum(CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 0 OR `KernAgg_Union`.`OVO_Class2` = 0) THEN 1 ELSE 0 END * `KernAgg_Union`.`OVO_Confidence` * (-CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 0) THEN 1 ELSE 0 END + CASE WHEN (`KernAgg_Union`.`OVO_Class2` = 0) THEN 1 ELSE 0 END)) AS `OVO_SumConfidence_0`, sum(CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 1 OR `KernAgg_Union`.`OVO_Class2` = 1) THEN 1 ELSE 0 END * (CASE WHEN (`KernAgg_Union`.`OVO_Decision` = 0 AND `KernAgg_Union`.`OVO_Class1` = 1) THEN 1 ELSE 0 END + CASE WHEN (`KernAgg_Union`.`OVO_Decision` = 1 AND `KernAgg_Union`.`OVO_Class2` = 1) THEN 1 ELSE 0 END)) AS `OVO_Vote_1`, sum(CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 1 OR `KernAgg_Union`.`OVO_Class2` = 1) THEN 1 ELSE 0 END * `KernAgg_Union`.`OVO_Confidence` * (-CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 1) THEN 1 ELSE 0 END + CASE WHEN (`KernAgg_Union`.`OVO_Class2` = 1) THEN 1 ELSE 0 END)) AS `OVO_SumConfidence_1`, sum(CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 2 OR `KernAgg_Union`.`OVO_Class2` = 2) THEN 1 ELSE 0 END * (CASE WHEN (`KernAgg_Union`.`OVO_Decision` = 0 AND `KernAgg_Union`.`OVO_Class1` = 2) THEN 1 ELSE 0 END + CASE WHEN (`KernAgg_Union`.`OVO_Decision` = 1 AND `KernAgg_Union`.`OVO_Class2` = 2) THEN 1 ELSE 0 END)) AS `OVO_Vote_2`, sum(CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 2 OR `KernAgg_Union`.`OVO_Class2` = 2) THEN 1 ELSE 0 END * `KernAgg_Union`.`OVO_Confidence` * (-CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 2) THEN 1 ELSE 0 END + CASE WHEN (`KernAgg_Union`.`OVO_Class2` = 2) THEN 1 ELSE 0 END)) AS `OVO_SumConfidence_2`, sum(CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 3 OR `KernAgg_Union`.`OVO_Class2` = 3) THEN 1 ELSE 0 END * (CASE WHEN (`KernAgg_Union`.`OVO_Decision` = 0 AND `KernAgg_Union`.`OVO_Class1` = 3) THEN 1 ELSE 0 END + CASE WHEN (`KernAgg_Union`.`OVO_Decision` = 1 AND `KernAgg_Union`.`OVO_Class2` = 3) THEN 1 ELSE 0 END)) AS `OVO_Vote_3`, sum(CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 3 OR `KernAgg_Union`.`OVO_Class2` = 3) THEN 1 ELSE 0 END * `KernAgg_Union`.`OVO_Confidence` * (-CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 3) THEN 1 ELSE 0 END + CASE WHEN (`KernAgg_Union`.`OVO_Class2` = 3) THEN 1 ELSE 0 END)) AS `OVO_SumConfidence_3` 
+FROM (SELECT `KernAgg_Union`.`KEY` AS `KEY`, sum(CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 0 OR `KernAgg_Union`.`OVO_Class2` = 0) THEN 1 ELSE 0 END * (CASE WHEN (`KernAgg_Union`.`OVO_Decision` = 0 AND `KernAgg_Union`.`OVO_Class1` = 0) THEN 1 ELSE 0 END + CASE WHEN (`KernAgg_Union`.`OVO_Decision` = 1 AND `KernAgg_Union`.`OVO_Class2` = 0) THEN 1 ELSE 0 END)) AS `OVO_Vote_0`, sum(CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 0 OR `KernAgg_Union`.`OVO_Class2` = 0) THEN 1 ELSE 0 END * `KernAgg_Union`.`OVO_Conf` * (-CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 0) THEN 1 ELSE 0 END + CASE WHEN (`KernAgg_Union`.`OVO_Class2` = 0) THEN 1 ELSE 0 END)) AS `OVO_SumConfidence_0`, sum(CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 1 OR `KernAgg_Union`.`OVO_Class2` = 1) THEN 1 ELSE 0 END * (CASE WHEN (`KernAgg_Union`.`OVO_Decision` = 0 AND `KernAgg_Union`.`OVO_Class1` = 1) THEN 1 ELSE 0 END + CASE WHEN (`KernAgg_Union`.`OVO_Decision` = 1 AND `KernAgg_Union`.`OVO_Class2` = 1) THEN 1 ELSE 0 END)) AS `OVO_Vote_1`, sum(CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 1 OR `KernAgg_Union`.`OVO_Class2` = 1) THEN 1 ELSE 0 END * `KernAgg_Union`.`OVO_Conf` * (-CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 1) THEN 1 ELSE 0 END + CASE WHEN (`KernAgg_Union`.`OVO_Class2` = 1) THEN 1 ELSE 0 END)) AS `OVO_SumConfidence_1`, sum(CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 2 OR `KernAgg_Union`.`OVO_Class2` = 2) THEN 1 ELSE 0 END * (CASE WHEN (`KernAgg_Union`.`OVO_Decision` = 0 AND `KernAgg_Union`.`OVO_Class1` = 2) THEN 1 ELSE 0 END + CASE WHEN (`KernAgg_Union`.`OVO_Decision` = 1 AND `KernAgg_Union`.`OVO_Class2` = 2) THEN 1 ELSE 0 END)) AS `OVO_Vote_2`, sum(CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 2 OR `KernAgg_Union`.`OVO_Class2` = 2) THEN 1 ELSE 0 END * `KernAgg_Union`.`OVO_Conf` * (-CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 2) THEN 1 ELSE 0 END + CASE WHEN (`KernAgg_Union`.`OVO_Class2` = 2) THEN 1 ELSE 0 END)) AS `OVO_SumConfidence_2`, sum(CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 3 OR `KernAgg_Union`.`OVO_Class2` = 3) THEN 1 ELSE 0 END * (CASE WHEN (`KernAgg_Union`.`OVO_Decision` = 0 AND `KernAgg_Union`.`OVO_Class1` = 3) THEN 1 ELSE 0 END + CASE WHEN (`KernAgg_Union`.`OVO_Decision` = 1 AND `KernAgg_Union`.`OVO_Class2` = 3) THEN 1 ELSE 0 END)) AS `OVO_Vote_3`, sum(CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 3 OR `KernAgg_Union`.`OVO_Class2` = 3) THEN 1 ELSE 0 END * `KernAgg_Union`.`OVO_Conf` * (-CASE WHEN (`KernAgg_Union`.`OVO_Class1` = 3) THEN 1 ELSE 0 END + CASE WHEN (`KernAgg_Union`.`OVO_Class2` = 3) THEN 1 ELSE 0 END)) AS `OVO_SumConfidence_3` 
 FROM `KernAgg_Union` GROUP BY `KernAgg_Union`.`KEY`) AS `Votes_Sel`), 
 `OVO_SumConf_CTE` AS 
 (SELECT `Values`.`KEY` AS `KEY`, CAST(`Values`.`OVO_SumConfidence` AS DOUBLE) AS `OVO_SumConfidence` 
@@ -265,15 +265,15 @@ FROM `OVO_SumConf_CTE`),
 `OVO_Votes_WithScale` AS 
 (SELECT `OVO_Votes`.`KEY` AS `KEY`, `OVO_Votes`.`OVO_Vote_0` AS `OVO_Vote_0`, `OVO_Votes`.`OVO_SumConfidence_0` AS `OVO_SumConfidence_0`, `OVO_Votes`.`OVO_Vote_1` AS `OVO_Vote_1`, `OVO_Votes`.`OVO_SumConfidence_1` AS `OVO_SumConfidence_1`, `OVO_Votes`.`OVO_Vote_2` AS `OVO_Vote_2`, `OVO_Votes`.`OVO_SumConfidence_2` AS `OVO_SumConfidence_2`, `OVO_Votes`.`OVO_Vote_3` AS `OVO_Vote_3`, `OVO_Votes`.`OVO_SumConfidence_3` AS `OVO_SumConfidence_3`, CAST(CASE WHEN (abs(`MinMaxConf`.`OVO_min_conf`) >= abs(`MinMaxConf`.`OVO_max_conf`)) THEN abs(`MinMaxConf`.`OVO_min_conf`) ELSE abs(`MinMaxConf`.`OVO_max_conf`) END AS DOUBLE) AS max_abs_confidence, CASE WHEN (`MinMaxConf`.`OVO_max_conf` - `MinMaxConf`.`OVO_min_conf` <= 0.0) THEN 0.0 ELSE 0.4999999999999998 / CAST(CASE WHEN (abs(`MinMaxConf`.`OVO_min_conf`) >= abs(`MinMaxConf`.`OVO_max_conf`)) THEN abs(`MinMaxConf`.`OVO_min_conf`) ELSE abs(`MinMaxConf`.`OVO_max_conf`) END AS DOUBLE) END AS `OVO_Scale` 
 FROM `OVO_Votes`, `MinMaxConf`)
- INSERT INTO tmp_20180516112655_codegen_s69th9_kernagg (`KEY`, `OVO_Vote_0`, `OVO_SumConfidence_0`, `OVO_Vote_1`, `OVO_SumConfidence_1`, `OVO_Vote_2`, `OVO_SumConfidence_2`, `OVO_Vote_3`, `OVO_SumConfidence_3`, max_abs_confidence, `OVO_Scale`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `KernAgg`.`KEY`, `KernAgg`.`OVO_Vote_0`, `KernAgg`.`OVO_SumConfidence_0`, `KernAgg`.`OVO_Vote_1`, `KernAgg`.`OVO_SumConfidence_1`, `KernAgg`.`OVO_Vote_2`, `KernAgg`.`OVO_SumConfidence_2`, `KernAgg`.`OVO_Vote_3`, `KernAgg`.`OVO_SumConfidence_3`, `KernAgg`.max_abs_confidence, `KernAgg`.`OVO_Scale`, `KernAgg`.`Score_0`, `KernAgg`.`Score_1`, `KernAgg`.`Score_2`, `KernAgg`.`Score_3` 
+ INSERT INTO tmp_20180602143446_kn3_kernagg_agg (`KEY`, `OVO_Vote_0`, `OVO_SumConfidence_0`, `OVO_Vote_1`, `OVO_SumConfidence_1`, `OVO_Vote_2`, `OVO_SumConfidence_2`, `OVO_Vote_3`, `OVO_SumConfidence_3`, max_abs_confidence, `OVO_Scale`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `KernAgg_agg`.`KEY`, `KernAgg_agg`.`OVO_Vote_0`, `KernAgg_agg`.`OVO_SumConfidence_0`, `KernAgg_agg`.`OVO_Vote_1`, `KernAgg_agg`.`OVO_SumConfidence_1`, `KernAgg_agg`.`OVO_Vote_2`, `KernAgg_agg`.`OVO_SumConfidence_2`, `KernAgg_agg`.`OVO_Vote_3`, `KernAgg_agg`.`OVO_SumConfidence_3`, `KernAgg_agg`.max_abs_confidence, `KernAgg_agg`.`OVO_Scale`, `KernAgg_agg`.`Score_0`, `KernAgg_agg`.`Score_1`, `KernAgg_agg`.`Score_2`, `KernAgg_agg`.`Score_3` 
 FROM (SELECT `OVO_Votes_WithScale`.`KEY` AS `KEY`, `OVO_Votes_WithScale`.`OVO_Vote_0` AS `OVO_Vote_0`, `OVO_Votes_WithScale`.`OVO_SumConfidence_0` AS `OVO_SumConfidence_0`, `OVO_Votes_WithScale`.`OVO_Vote_1` AS `OVO_Vote_1`, `OVO_Votes_WithScale`.`OVO_SumConfidence_1` AS `OVO_SumConfidence_1`, `OVO_Votes_WithScale`.`OVO_Vote_2` AS `OVO_Vote_2`, `OVO_Votes_WithScale`.`OVO_SumConfidence_2` AS `OVO_SumConfidence_2`, `OVO_Votes_WithScale`.`OVO_Vote_3` AS `OVO_Vote_3`, `OVO_Votes_WithScale`.`OVO_SumConfidence_3` AS `OVO_SumConfidence_3`, `OVO_Votes_WithScale`.max_abs_confidence AS max_abs_confidence, `OVO_Votes_WithScale`.`OVO_Scale` AS `OVO_Scale`, `OVO_Votes_WithScale`.`OVO_Vote_0` + `OVO_Votes_WithScale`.`OVO_Scale` * `OVO_Votes_WithScale`.`OVO_SumConfidence_0` AS `Score_0`, `OVO_Votes_WithScale`.`OVO_Vote_1` + `OVO_Votes_WithScale`.`OVO_Scale` * `OVO_Votes_WithScale`.`OVO_SumConfidence_1` AS `Score_1`, `OVO_Votes_WithScale`.`OVO_Vote_2` + `OVO_Votes_WithScale`.`OVO_Scale` * `OVO_Votes_WithScale`.`OVO_SumConfidence_2` AS `Score_2`, `OVO_Votes_WithScale`.`OVO_Vote_3` + `OVO_Votes_WithScale`.`OVO_Scale` * `OVO_Votes_WithScale`.`OVO_SumConfidence_3` AS `Score_3` 
-FROM `OVO_Votes_WithScale`) AS `KernAgg`
+FROM `OVO_Votes_WithScale`) AS `KernAgg_agg`
 
 -- Model deployment code
 
 WITH orig_cte AS 
-(SELECT `KernAgg`.`KEY` AS `KEY`, `KernAgg`.`Score_0` AS `Score_0`, `KernAgg`.`Score_1` AS `Score_1`, `KernAgg`.`Score_2` AS `Score_2`, `KernAgg`.`Score_3` AS `Score_3`, CAST(NULL AS DOUBLE) AS `Proba_0`, CAST(NULL AS DOUBLE) AS `Proba_1`, CAST(NULL AS DOUBLE) AS `Proba_2`, CAST(NULL AS DOUBLE) AS `Proba_3`, CAST(NULL AS DOUBLE) AS `LogProba_0`, CAST(NULL AS DOUBLE) AS `LogProba_1`, CAST(NULL AS DOUBLE) AS `LogProba_2`, CAST(NULL AS DOUBLE) AS `LogProba_3`, CAST(NULL AS BIGINT) AS `Decision`, CAST(NULL AS DOUBLE) AS `DecisionProba` 
-FROM tmp_20180516112655_codegen_s69th9_kernagg AS `KernAgg`), 
+(SELECT `KernAgg_agg`.`KEY` AS `KEY`, `KernAgg_agg`.`Score_0` AS `Score_0`, `KernAgg_agg`.`Score_1` AS `Score_1`, `KernAgg_agg`.`Score_2` AS `Score_2`, `KernAgg_agg`.`Score_3` AS `Score_3`, CAST(NULL AS DOUBLE) AS `Proba_0`, CAST(NULL AS DOUBLE) AS `Proba_1`, CAST(NULL AS DOUBLE) AS `Proba_2`, CAST(NULL AS DOUBLE) AS `Proba_3`, CAST(NULL AS DOUBLE) AS `LogProba_0`, CAST(NULL AS DOUBLE) AS `LogProba_1`, CAST(NULL AS DOUBLE) AS `LogProba_2`, CAST(NULL AS DOUBLE) AS `LogProba_3`, CAST(NULL AS BIGINT) AS `Decision`, CAST(NULL AS DOUBLE) AS `DecisionProba` 
+FROM tmp_20180602143446_kn3_kernagg_agg AS `KernAgg_agg`), 
 score_class_union AS 
 (SELECT scu.`KEY_u` AS `KEY_u`, scu.`class` AS `class`, scu.`LogProba` AS `LogProba`, scu.`Proba` AS `Proba`, scu.`Score` AS `Score` 
 FROM (SELECT orig_cte.`KEY` AS `KEY_u`, 0 AS `class`, orig_cte.`LogProba_0` AS `LogProba`, orig_cte.`Proba_0` AS `Proba`, orig_cte.`Score_0` AS `Score` 

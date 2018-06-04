@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180516130356_codegen_7xqbtp_bag_b0 part 1. Create 
+-- Code For temporary table tmp_20180602160115_mck_bag_b0 part 1. Create 
 
 
-CREATE TABLE tmp_20180516130356_codegen_7xqbtp_bag_b0 (
+CREATE TABLE tmp_20180602160115_mck_bag_b0 (
 	`KEY` BIGINT, 
 	`Score_CLASS_0` DOUBLE, 
 	`Proba_CLASS_0` DOUBLE, 
@@ -28,7 +28,7 @@ CREATE TABLE tmp_20180516130356_codegen_7xqbtp_bag_b0 (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516130356_codegen_7xqbtp_bag_b0 part 2. Populate
+-- Code For temporary table tmp_20180602160115_mck_bag_b0 part 2. Populate
 
 WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_3` <= 1.6500000953674316) THEN CASE WHEN (`ADS`.`Feature_2` <= 2.5999999046325684) THEN 2 ELSE CASE WHEN (`ADS`.`Feature_2` <= 4.949999809265137) THEN 4 ELSE 5 END END ELSE CASE WHEN (`ADS`.`Feature_3` <= 1.75) THEN CASE WHEN (`ADS`.`Feature_1` <= 2.75) THEN 8 ELSE 9 END ELSE 10 END END AS node_id_2 
@@ -150,7 +150,7 @@ FROM `DT_node_lookup_9` LEFT OUTER JOIN `DT_node_data_9` ON `DT_node_lookup_9`.n
 `BAG_Model_9` AS 
 (SELECT `DT_Output_9`.`KEY` AS `KEY`, CAST(NULL AS DOUBLE) AS `Score_CLASS_0`, `DT_Output_9`.`P_0` AS `Proba_CLASS_0`, CASE WHEN (`DT_Output_9`.`P_0` IS NULL OR `DT_Output_9`.`P_0` > 0.0) THEN ln(`DT_Output_9`.`P_0`) ELSE -1.79769313486231e+308 END AS `LogProba_CLASS_0`, CAST(NULL AS DOUBLE) AS `Score_CLASS_1`, `DT_Output_9`.`P_1` AS `Proba_CLASS_1`, CASE WHEN (`DT_Output_9`.`P_1` IS NULL OR `DT_Output_9`.`P_1` > 0.0) THEN ln(`DT_Output_9`.`P_1`) ELSE -1.79769313486231e+308 END AS `LogProba_CLASS_1`, CAST(NULL AS DOUBLE) AS `Score_CLASS_2`, `DT_Output_9`.`P_2` AS `Proba_CLASS_2`, CASE WHEN (`DT_Output_9`.`P_2` IS NULL OR `DT_Output_9`.`P_2` > 0.0) THEN ln(`DT_Output_9`.`P_2`) ELSE -1.79769313486231e+308 END AS `LogProba_CLASS_2` 
 FROM `DT_Output_9`)
- INSERT INTO tmp_20180516130356_codegen_7xqbtp_bag_b0 (`KEY`, `Score_CLASS_0`, `Proba_CLASS_0`, `LogProba_CLASS_0`, `Score_CLASS_1`, `Proba_CLASS_1`, `LogProba_CLASS_1`, `Score_CLASS_2`, `Proba_CLASS_2`, `LogProba_CLASS_2`) SELECT `BAG_B0`.`KEY`, `BAG_B0`.`Score_CLASS_0`, `BAG_B0`.`Proba_CLASS_0`, `BAG_B0`.`LogProba_CLASS_0`, `BAG_B0`.`Score_CLASS_1`, `BAG_B0`.`Proba_CLASS_1`, `BAG_B0`.`LogProba_CLASS_1`, `BAG_B0`.`Score_CLASS_2`, `BAG_B0`.`Proba_CLASS_2`, `BAG_B0`.`LogProba_CLASS_2` 
+ INSERT INTO tmp_20180602160115_mck_bag_b0 (`KEY`, `Score_CLASS_0`, `Proba_CLASS_0`, `LogProba_CLASS_0`, `Score_CLASS_1`, `Proba_CLASS_1`, `LogProba_CLASS_1`, `Score_CLASS_2`, `Proba_CLASS_2`, `LogProba_CLASS_2`) SELECT `BAG_B0`.`KEY`, `BAG_B0`.`Score_CLASS_0`, `BAG_B0`.`Proba_CLASS_0`, `BAG_B0`.`LogProba_CLASS_0`, `BAG_B0`.`Score_CLASS_1`, `BAG_B0`.`Proba_CLASS_1`, `BAG_B0`.`LogProba_CLASS_1`, `BAG_B0`.`Score_CLASS_2`, `BAG_B0`.`Proba_CLASS_2`, `BAG_B0`.`LogProba_CLASS_2` 
 FROM (SELECT `BAG_esu_0`.`KEY` AS `KEY`, `BAG_esu_0`.`Score_CLASS_0` AS `Score_CLASS_0`, `BAG_esu_0`.`Proba_CLASS_0` AS `Proba_CLASS_0`, `BAG_esu_0`.`LogProba_CLASS_0` AS `LogProba_CLASS_0`, `BAG_esu_0`.`Score_CLASS_1` AS `Score_CLASS_1`, `BAG_esu_0`.`Proba_CLASS_1` AS `Proba_CLASS_1`, `BAG_esu_0`.`LogProba_CLASS_1` AS `LogProba_CLASS_1`, `BAG_esu_0`.`Score_CLASS_2` AS `Score_CLASS_2`, `BAG_esu_0`.`Proba_CLASS_2` AS `Proba_CLASS_2`, `BAG_esu_0`.`LogProba_CLASS_2` AS `LogProba_CLASS_2` 
 FROM (SELECT `BAG_Model_0`.`KEY` AS `KEY`, `BAG_Model_0`.`Score_CLASS_0` AS `Score_CLASS_0`, `BAG_Model_0`.`Proba_CLASS_0` AS `Proba_CLASS_0`, `BAG_Model_0`.`LogProba_CLASS_0` AS `LogProba_CLASS_0`, `BAG_Model_0`.`Score_CLASS_1` AS `Score_CLASS_1`, `BAG_Model_0`.`Proba_CLASS_1` AS `Proba_CLASS_1`, `BAG_Model_0`.`LogProba_CLASS_1` AS `LogProba_CLASS_1`, `BAG_Model_0`.`Score_CLASS_2` AS `Score_CLASS_2`, `BAG_Model_0`.`Proba_CLASS_2` AS `Proba_CLASS_2`, `BAG_Model_0`.`LogProba_CLASS_2` AS `LogProba_CLASS_2` 
 FROM `BAG_Model_0` UNION ALL SELECT `BAG_Model_1`.`KEY` AS `KEY`, `BAG_Model_1`.`Score_CLASS_0` AS `Score_CLASS_0`, `BAG_Model_1`.`Proba_CLASS_0` AS `Proba_CLASS_0`, `BAG_Model_1`.`LogProba_CLASS_0` AS `LogProba_CLASS_0`, `BAG_Model_1`.`Score_CLASS_1` AS `Score_CLASS_1`, `BAG_Model_1`.`Proba_CLASS_1` AS `Proba_CLASS_1`, `BAG_Model_1`.`LogProba_CLASS_1` AS `LogProba_CLASS_1`, `BAG_Model_1`.`Score_CLASS_2` AS `Score_CLASS_2`, `BAG_Model_1`.`Proba_CLASS_2` AS `Proba_CLASS_2`, `BAG_Model_1`.`LogProba_CLASS_2` AS `LogProba_CLASS_2` 
@@ -164,10 +164,10 @@ FROM `BAG_Model_7` UNION ALL SELECT `BAG_Model_8`.`KEY` AS `KEY`, `BAG_Model_8`.
 FROM `BAG_Model_8` UNION ALL SELECT `BAG_Model_9`.`KEY` AS `KEY`, `BAG_Model_9`.`Score_CLASS_0` AS `Score_CLASS_0`, `BAG_Model_9`.`Proba_CLASS_0` AS `Proba_CLASS_0`, `BAG_Model_9`.`LogProba_CLASS_0` AS `LogProba_CLASS_0`, `BAG_Model_9`.`Score_CLASS_1` AS `Score_CLASS_1`, `BAG_Model_9`.`Proba_CLASS_1` AS `Proba_CLASS_1`, `BAG_Model_9`.`LogProba_CLASS_1` AS `LogProba_CLASS_1`, `BAG_Model_9`.`Score_CLASS_2` AS `Score_CLASS_2`, `BAG_Model_9`.`Proba_CLASS_2` AS `Proba_CLASS_2`, `BAG_Model_9`.`LogProba_CLASS_2` AS `LogProba_CLASS_2` 
 FROM `BAG_Model_9`) AS `BAG_esu_0`) AS `BAG_B0`
 
--- Code For temporary table tmp_20180516130356_codegen_0dkjx7_bag_b1 part 1. Create 
+-- Code For temporary table tmp_20180602160115_v9a_bag_b1 part 1. Create 
 
 
-CREATE TABLE tmp_20180516130356_codegen_0dkjx7_bag_b1 (
+CREATE TABLE tmp_20180602160115_v9a_bag_b1 (
 	`KEY` BIGINT, 
 	`Score_CLASS_0` DOUBLE, 
 	`Proba_CLASS_0` DOUBLE, 
@@ -182,7 +182,7 @@ CREATE TABLE tmp_20180516130356_codegen_0dkjx7_bag_b1 (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516130356_codegen_0dkjx7_bag_b1 part 2. Populate
+-- Code For temporary table tmp_20180602160115_v9a_bag_b1 part 2. Populate
 
 WITH `DT_node_lookup_10` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` <= 2.5999999046325684) THEN 1 ELSE CASE WHEN (`ADS`.`Feature_3` <= 1.5499999523162842) THEN 3 ELSE CASE WHEN (`ADS`.`Feature_2` <= 4.850000381469727) THEN CASE WHEN (`ADS`.`Feature_1` <= 3.0999999046325684) THEN 6 ELSE 7 END ELSE 8 END END END AS node_id_2 
@@ -256,7 +256,7 @@ FROM `DT_node_lookup_15` LEFT OUTER JOIN `DT_node_data_15` ON `DT_node_lookup_15
 `BAG_Model_15` AS 
 (SELECT `DT_Output_15`.`KEY` AS `KEY`, CAST(NULL AS DOUBLE) AS `Score_CLASS_0`, `DT_Output_15`.`P_0` AS `Proba_CLASS_0`, CASE WHEN (`DT_Output_15`.`P_0` IS NULL OR `DT_Output_15`.`P_0` > 0.0) THEN ln(`DT_Output_15`.`P_0`) ELSE -1.79769313486231e+308 END AS `LogProba_CLASS_0`, CAST(NULL AS DOUBLE) AS `Score_CLASS_1`, `DT_Output_15`.`P_1` AS `Proba_CLASS_1`, CASE WHEN (`DT_Output_15`.`P_1` IS NULL OR `DT_Output_15`.`P_1` > 0.0) THEN ln(`DT_Output_15`.`P_1`) ELSE -1.79769313486231e+308 END AS `LogProba_CLASS_1`, CAST(NULL AS DOUBLE) AS `Score_CLASS_2`, `DT_Output_15`.`P_2` AS `Proba_CLASS_2`, CASE WHEN (`DT_Output_15`.`P_2` IS NULL OR `DT_Output_15`.`P_2` > 0.0) THEN ln(`DT_Output_15`.`P_2`) ELSE -1.79769313486231e+308 END AS `LogProba_CLASS_2` 
 FROM `DT_Output_15`)
- INSERT INTO tmp_20180516130356_codegen_0dkjx7_bag_b1 (`KEY`, `Score_CLASS_0`, `Proba_CLASS_0`, `LogProba_CLASS_0`, `Score_CLASS_1`, `Proba_CLASS_1`, `LogProba_CLASS_1`, `Score_CLASS_2`, `Proba_CLASS_2`, `LogProba_CLASS_2`) SELECT `BAG_B1`.`KEY`, `BAG_B1`.`Score_CLASS_0`, `BAG_B1`.`Proba_CLASS_0`, `BAG_B1`.`LogProba_CLASS_0`, `BAG_B1`.`Score_CLASS_1`, `BAG_B1`.`Proba_CLASS_1`, `BAG_B1`.`LogProba_CLASS_1`, `BAG_B1`.`Score_CLASS_2`, `BAG_B1`.`Proba_CLASS_2`, `BAG_B1`.`LogProba_CLASS_2` 
+ INSERT INTO tmp_20180602160115_v9a_bag_b1 (`KEY`, `Score_CLASS_0`, `Proba_CLASS_0`, `LogProba_CLASS_0`, `Score_CLASS_1`, `Proba_CLASS_1`, `LogProba_CLASS_1`, `Score_CLASS_2`, `Proba_CLASS_2`, `LogProba_CLASS_2`) SELECT `BAG_B1`.`KEY`, `BAG_B1`.`Score_CLASS_0`, `BAG_B1`.`Proba_CLASS_0`, `BAG_B1`.`LogProba_CLASS_0`, `BAG_B1`.`Score_CLASS_1`, `BAG_B1`.`Proba_CLASS_1`, `BAG_B1`.`LogProba_CLASS_1`, `BAG_B1`.`Score_CLASS_2`, `BAG_B1`.`Proba_CLASS_2`, `BAG_B1`.`LogProba_CLASS_2` 
 FROM (SELECT `BAG_esu_1`.`KEY` AS `KEY`, `BAG_esu_1`.`Score_CLASS_0` AS `Score_CLASS_0`, `BAG_esu_1`.`Proba_CLASS_0` AS `Proba_CLASS_0`, `BAG_esu_1`.`LogProba_CLASS_0` AS `LogProba_CLASS_0`, `BAG_esu_1`.`Score_CLASS_1` AS `Score_CLASS_1`, `BAG_esu_1`.`Proba_CLASS_1` AS `Proba_CLASS_1`, `BAG_esu_1`.`LogProba_CLASS_1` AS `LogProba_CLASS_1`, `BAG_esu_1`.`Score_CLASS_2` AS `Score_CLASS_2`, `BAG_esu_1`.`Proba_CLASS_2` AS `Proba_CLASS_2`, `BAG_esu_1`.`LogProba_CLASS_2` AS `LogProba_CLASS_2` 
 FROM (SELECT `BAG_Model_10`.`KEY` AS `KEY`, `BAG_Model_10`.`Score_CLASS_0` AS `Score_CLASS_0`, `BAG_Model_10`.`Proba_CLASS_0` AS `Proba_CLASS_0`, `BAG_Model_10`.`LogProba_CLASS_0` AS `LogProba_CLASS_0`, `BAG_Model_10`.`Score_CLASS_1` AS `Score_CLASS_1`, `BAG_Model_10`.`Proba_CLASS_1` AS `Proba_CLASS_1`, `BAG_Model_10`.`LogProba_CLASS_1` AS `LogProba_CLASS_1`, `BAG_Model_10`.`Score_CLASS_2` AS `Score_CLASS_2`, `BAG_Model_10`.`Proba_CLASS_2` AS `Proba_CLASS_2`, `BAG_Model_10`.`LogProba_CLASS_2` AS `LogProba_CLASS_2` 
 FROM `BAG_Model_10` UNION ALL SELECT `BAG_Model_11`.`KEY` AS `KEY`, `BAG_Model_11`.`Score_CLASS_0` AS `Score_CLASS_0`, `BAG_Model_11`.`Proba_CLASS_0` AS `Proba_CLASS_0`, `BAG_Model_11`.`LogProba_CLASS_0` AS `LogProba_CLASS_0`, `BAG_Model_11`.`Score_CLASS_1` AS `Score_CLASS_1`, `BAG_Model_11`.`Proba_CLASS_1` AS `Proba_CLASS_1`, `BAG_Model_11`.`LogProba_CLASS_1` AS `LogProba_CLASS_1`, `BAG_Model_11`.`Score_CLASS_2` AS `Score_CLASS_2`, `BAG_Model_11`.`Proba_CLASS_2` AS `Proba_CLASS_2`, `BAG_Model_11`.`LogProba_CLASS_2` AS `LogProba_CLASS_2` 
@@ -266,10 +266,10 @@ FROM `BAG_Model_13` UNION ALL SELECT `BAG_Model_14`.`KEY` AS `KEY`, `BAG_Model_1
 FROM `BAG_Model_14` UNION ALL SELECT `BAG_Model_15`.`KEY` AS `KEY`, `BAG_Model_15`.`Score_CLASS_0` AS `Score_CLASS_0`, `BAG_Model_15`.`Proba_CLASS_0` AS `Proba_CLASS_0`, `BAG_Model_15`.`LogProba_CLASS_0` AS `LogProba_CLASS_0`, `BAG_Model_15`.`Score_CLASS_1` AS `Score_CLASS_1`, `BAG_Model_15`.`Proba_CLASS_1` AS `Proba_CLASS_1`, `BAG_Model_15`.`LogProba_CLASS_1` AS `LogProba_CLASS_1`, `BAG_Model_15`.`Score_CLASS_2` AS `Score_CLASS_2`, `BAG_Model_15`.`Proba_CLASS_2` AS `Proba_CLASS_2`, `BAG_Model_15`.`LogProba_CLASS_2` AS `LogProba_CLASS_2` 
 FROM `BAG_Model_15`) AS `BAG_esu_1`) AS `BAG_B1`
 
--- Code For temporary table tmp_20180516130356_codegen_9669wd_bag_avg part 1. Create 
+-- Code For temporary table tmp_20180602160115_2nk_bag_avg part 1. Create 
 
 
-CREATE TABLE tmp_20180516130356_codegen_9669wd_bag_avg (
+CREATE TABLE tmp_20180602160115_2nk_bag_avg (
 	`KEY` BIGINT, 
 	`Score_CLASS_0` DOUBLE, 
 	`Proba_CLASS_0` DOUBLE, 
@@ -284,14 +284,14 @@ CREATE TABLE tmp_20180516130356_codegen_9669wd_bag_avg (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516130356_codegen_9669wd_bag_avg part 2. Populate
+-- Code For temporary table tmp_20180602160115_2nk_bag_avg part 2. Populate
 
 WITH `BAG_Union` AS 
 (SELECT `BAG_EnsembleUnion`.`KEY` AS `KEY`, `BAG_EnsembleUnion`.`Score_CLASS_0` AS `Score_CLASS_0`, `BAG_EnsembleUnion`.`Proba_CLASS_0` AS `Proba_CLASS_0`, `BAG_EnsembleUnion`.`LogProba_CLASS_0` AS `LogProba_CLASS_0`, `BAG_EnsembleUnion`.`Score_CLASS_1` AS `Score_CLASS_1`, `BAG_EnsembleUnion`.`Proba_CLASS_1` AS `Proba_CLASS_1`, `BAG_EnsembleUnion`.`LogProba_CLASS_1` AS `LogProba_CLASS_1`, `BAG_EnsembleUnion`.`Score_CLASS_2` AS `Score_CLASS_2`, `BAG_EnsembleUnion`.`Proba_CLASS_2` AS `Proba_CLASS_2`, `BAG_EnsembleUnion`.`LogProba_CLASS_2` AS `LogProba_CLASS_2` 
 FROM (SELECT `BAG_B0`.`KEY` AS `KEY`, `BAG_B0`.`Score_CLASS_0` AS `Score_CLASS_0`, `BAG_B0`.`Proba_CLASS_0` AS `Proba_CLASS_0`, `BAG_B0`.`LogProba_CLASS_0` AS `LogProba_CLASS_0`, `BAG_B0`.`Score_CLASS_1` AS `Score_CLASS_1`, `BAG_B0`.`Proba_CLASS_1` AS `Proba_CLASS_1`, `BAG_B0`.`LogProba_CLASS_1` AS `LogProba_CLASS_1`, `BAG_B0`.`Score_CLASS_2` AS `Score_CLASS_2`, `BAG_B0`.`Proba_CLASS_2` AS `Proba_CLASS_2`, `BAG_B0`.`LogProba_CLASS_2` AS `LogProba_CLASS_2` 
-FROM tmp_20180516130356_codegen_7xqbtp_bag_b0 AS `BAG_B0` UNION ALL SELECT `BAG_B1`.`KEY` AS `KEY`, `BAG_B1`.`Score_CLASS_0` AS `Score_CLASS_0`, `BAG_B1`.`Proba_CLASS_0` AS `Proba_CLASS_0`, `BAG_B1`.`LogProba_CLASS_0` AS `LogProba_CLASS_0`, `BAG_B1`.`Score_CLASS_1` AS `Score_CLASS_1`, `BAG_B1`.`Proba_CLASS_1` AS `Proba_CLASS_1`, `BAG_B1`.`LogProba_CLASS_1` AS `LogProba_CLASS_1`, `BAG_B1`.`Score_CLASS_2` AS `Score_CLASS_2`, `BAG_B1`.`Proba_CLASS_2` AS `Proba_CLASS_2`, `BAG_B1`.`LogProba_CLASS_2` AS `LogProba_CLASS_2` 
-FROM tmp_20180516130356_codegen_0dkjx7_bag_b1 AS `BAG_B1`) AS `BAG_EnsembleUnion`)
- INSERT INTO tmp_20180516130356_codegen_9669wd_bag_avg (`KEY`, `Score_CLASS_0`, `Proba_CLASS_0`, `LogProba_CLASS_0`, `Score_CLASS_1`, `Proba_CLASS_1`, `LogProba_CLASS_1`, `Score_CLASS_2`, `Proba_CLASS_2`, `LogProba_CLASS_2`) SELECT `BAG_avg`.`KEY`, `BAG_avg`.`Score_CLASS_0`, `BAG_avg`.`Proba_CLASS_0`, `BAG_avg`.`LogProba_CLASS_0`, `BAG_avg`.`Score_CLASS_1`, `BAG_avg`.`Proba_CLASS_1`, `BAG_avg`.`LogProba_CLASS_1`, `BAG_avg`.`Score_CLASS_2`, `BAG_avg`.`Proba_CLASS_2`, `BAG_avg`.`LogProba_CLASS_2` 
+FROM tmp_20180602160115_mck_bag_b0 AS `BAG_B0` UNION ALL SELECT `BAG_B1`.`KEY` AS `KEY`, `BAG_B1`.`Score_CLASS_0` AS `Score_CLASS_0`, `BAG_B1`.`Proba_CLASS_0` AS `Proba_CLASS_0`, `BAG_B1`.`LogProba_CLASS_0` AS `LogProba_CLASS_0`, `BAG_B1`.`Score_CLASS_1` AS `Score_CLASS_1`, `BAG_B1`.`Proba_CLASS_1` AS `Proba_CLASS_1`, `BAG_B1`.`LogProba_CLASS_1` AS `LogProba_CLASS_1`, `BAG_B1`.`Score_CLASS_2` AS `Score_CLASS_2`, `BAG_B1`.`Proba_CLASS_2` AS `Proba_CLASS_2`, `BAG_B1`.`LogProba_CLASS_2` AS `LogProba_CLASS_2` 
+FROM tmp_20180602160115_v9a_bag_b1 AS `BAG_B1`) AS `BAG_EnsembleUnion`)
+ INSERT INTO tmp_20180602160115_2nk_bag_avg (`KEY`, `Score_CLASS_0`, `Proba_CLASS_0`, `LogProba_CLASS_0`, `Score_CLASS_1`, `Proba_CLASS_1`, `LogProba_CLASS_1`, `Score_CLASS_2`, `Proba_CLASS_2`, `LogProba_CLASS_2`) SELECT `BAG_avg`.`KEY`, `BAG_avg`.`Score_CLASS_0`, `BAG_avg`.`Proba_CLASS_0`, `BAG_avg`.`LogProba_CLASS_0`, `BAG_avg`.`Score_CLASS_1`, `BAG_avg`.`Proba_CLASS_1`, `BAG_avg`.`LogProba_CLASS_1`, `BAG_avg`.`Score_CLASS_2`, `BAG_avg`.`Proba_CLASS_2`, `BAG_avg`.`LogProba_CLASS_2` 
 FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Score_CLASS_0` AS DOUBLE) AS `Score_CLASS_0`, CAST(`T`.`Proba_CLASS_0` AS DOUBLE) AS `Proba_CLASS_0`, CAST(`T`.`LogProba_CLASS_0` AS DOUBLE) AS `LogProba_CLASS_0`, CAST(`T`.`Score_CLASS_1` AS DOUBLE) AS `Score_CLASS_1`, CAST(`T`.`Proba_CLASS_1` AS DOUBLE) AS `Proba_CLASS_1`, CAST(`T`.`LogProba_CLASS_1` AS DOUBLE) AS `LogProba_CLASS_1`, CAST(`T`.`Score_CLASS_2` AS DOUBLE) AS `Score_CLASS_2`, CAST(`T`.`Proba_CLASS_2` AS DOUBLE) AS `Proba_CLASS_2`, CAST(`T`.`LogProba_CLASS_2` AS DOUBLE) AS `LogProba_CLASS_2` 
 FROM (SELECT `BAG_Union`.`KEY` AS `KEY`, avg(CAST(`BAG_Union`.`Score_CLASS_0` AS DOUBLE)) AS `Score_CLASS_0`, avg(CAST(`BAG_Union`.`Proba_CLASS_0` AS DOUBLE)) AS `Proba_CLASS_0`, CAST(NULL AS DOUBLE) AS `LogProba_CLASS_0`, avg(CAST(`BAG_Union`.`Score_CLASS_1` AS DOUBLE)) AS `Score_CLASS_1`, avg(CAST(`BAG_Union`.`Proba_CLASS_1` AS DOUBLE)) AS `Proba_CLASS_1`, CAST(NULL AS DOUBLE) AS `LogProba_CLASS_1`, avg(CAST(`BAG_Union`.`Score_CLASS_2` AS DOUBLE)) AS `Score_CLASS_2`, avg(CAST(`BAG_Union`.`Proba_CLASS_2` AS DOUBLE)) AS `Proba_CLASS_2`, CAST(NULL AS DOUBLE) AS `LogProba_CLASS_2` 
 FROM `BAG_Union` GROUP BY `BAG_Union`.`KEY`) AS `T`) AS `BAG_avg`
@@ -300,7 +300,7 @@ FROM `BAG_Union` GROUP BY `BAG_Union`.`KEY`) AS `T`) AS `BAG_avg`
 
 WITH orig_cte AS 
 (SELECT `BAG_avg`.`KEY` AS `KEY`, `BAG_avg`.`Score_CLASS_0` AS `Score_CLASS_0`, `BAG_avg`.`Score_CLASS_1` AS `Score_CLASS_1`, `BAG_avg`.`Score_CLASS_2` AS `Score_CLASS_2`, `BAG_avg`.`Proba_CLASS_0` AS `Proba_CLASS_0`, `BAG_avg`.`Proba_CLASS_1` AS `Proba_CLASS_1`, `BAG_avg`.`Proba_CLASS_2` AS `Proba_CLASS_2`, `BAG_avg`.`LogProba_CLASS_0` AS `LogProba_CLASS_0`, `BAG_avg`.`LogProba_CLASS_1` AS `LogProba_CLASS_1`, `BAG_avg`.`LogProba_CLASS_2` AS `LogProba_CLASS_2`, CAST(NULL AS BIGINT) AS `Decision`, CAST(NULL AS DOUBLE) AS `DecisionProba` 
-FROM tmp_20180516130356_codegen_9669wd_bag_avg AS `BAG_avg`), 
+FROM tmp_20180602160115_2nk_bag_avg AS `BAG_avg`), 
 score_class_union AS 
 (SELECT scu.`KEY_u` AS `KEY_u`, scu.`class` AS `class`, scu.`LogProba` AS `LogProba`, scu.`Proba` AS `Proba`, scu.`Score` AS `Score` 
 FROM (SELECT orig_cte.`KEY` AS `KEY_u`, 'CLASS_0' AS `class`, orig_cte.`LogProba_CLASS_0` AS `LogProba`, orig_cte.`Proba_CLASS_0` AS `Proba`, orig_cte.`Score_CLASS_0` AS `Score` 
