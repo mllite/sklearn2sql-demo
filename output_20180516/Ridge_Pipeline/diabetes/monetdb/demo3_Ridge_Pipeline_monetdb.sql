@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180516115439_codegen_guzoh5_ads_imp_1_out part 1. Create 
+-- Code For temporary table tmp_20180602150037_tic_ads_imp_1_out part 1. Create 
 
 
-CREATE TEMPORARY TABLE tmp_20180516115439_codegen_guzoh5_ads_imp_1_out (
+CREATE TEMPORARY TABLE tmp_20180602150037_tic_ads_imp_1_out (
 	"KEY" BIGINT, 
 	impter_2 DOUBLE, 
 	impter_3 DOUBLE, 
@@ -29,17 +29,17 @@ CREATE TEMPORARY TABLE tmp_20180516115439_codegen_guzoh5_ads_imp_1_out (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516115439_codegen_guzoh5_ads_imp_1_out part 2. Populate
+-- Code For temporary table tmp_20180602150037_tic_ads_imp_1_out part 2. Populate
 
-INSERT INTO tmp_20180516115439_codegen_guzoh5_ads_imp_1_out ("KEY", impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT "U"."KEY", "U".impter_2, "U".impter_3, "U".impter_4, "U".impter_5, "U".impter_6, "U".impter_7, "U".impter_8, "U".impter_9, "U".impter_10, "U".impter_11 
+INSERT INTO tmp_20180602150037_tic_ads_imp_1_out ("KEY", impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT "U"."KEY", "U".impter_2, "U".impter_3, "U".impter_4, "U".impter_5, "U".impter_6, "U".impter_7, "U".impter_8, "U".impter_9, "U".impter_10, "U".impter_11 
 FROM (SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".impter_2, "ADS_imp_1_OUT".impter_3, "ADS_imp_1_OUT".impter_4, "ADS_imp_1_OUT".impter_5, "ADS_imp_1_OUT".impter_6, "ADS_imp_1_OUT".impter_7, "ADS_imp_1_OUT".impter_8, "ADS_imp_1_OUT".impter_9, "ADS_imp_1_OUT".impter_10, "ADS_imp_1_OUT".impter_11 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN 0.0002686932066652995 ELSE "ADS"."Feature_0" END AS impter_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 0.0007239580580639441 ELSE "ADS"."Feature_1" END AS impter_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 0.0007280719825586765 ELSE "ADS"."Feature_2" END AS impter_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 0.001013565221084393 ELSE "ADS"."Feature_3" END AS impter_5, CASE WHEN ("ADS"."Feature_4" IS NULL) THEN 0.0009763580732882109 ELSE "ADS"."Feature_4" END AS impter_6, CASE WHEN ("ADS"."Feature_5" IS NULL) THEN 0.0017643808242337245 ELSE "ADS"."Feature_5" END AS impter_7, CASE WHEN ("ADS"."Feature_6" IS NULL) THEN -0.0016512815450565026 ELSE "ADS"."Feature_6" END AS impter_8, CASE WHEN ("ADS"."Feature_7" IS NULL) THEN 0.0013905501983388136 ELSE "ADS"."Feature_7" END AS impter_9, CASE WHEN ("ADS"."Feature_8" IS NULL) THEN 0.0012726482548090939 ELSE "ADS"."Feature_8" END AS impter_10, CASE WHEN ("ADS"."Feature_9" IS NULL) THEN 0.001034425005681627 ELSE "ADS"."Feature_9" END AS impter_11 
 FROM diabetes AS "ADS") AS "ADS_imp_1_OUT") AS "U"
 
--- Code For temporary table tmp_20180516115439_codegen_04zt73_ads_sca_2_out part 1. Create 
+-- Code For temporary table tmp_20180602150037_xds_ads_sca_2_out part 1. Create 
 
 
-CREATE TEMPORARY TABLE tmp_20180516115439_codegen_04zt73_ads_sca_2_out (
+CREATE TEMPORARY TABLE tmp_20180602150037_xds_ads_sca_2_out (
 	"KEY" BIGINT, 
 	scaler_2 DOUBLE, 
 	scaler_3 DOUBLE, 
@@ -55,18 +55,18 @@ CREATE TEMPORARY TABLE tmp_20180516115439_codegen_04zt73_ads_sca_2_out (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516115439_codegen_04zt73_ads_sca_2_out part 2. Populate
+-- Code For temporary table tmp_20180602150037_xds_ads_sca_2_out part 2. Populate
 
-INSERT INTO tmp_20180516115439_codegen_04zt73_ads_sca_2_out ("KEY", scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT "U"."KEY", "U".scaler_2, "U".scaler_3, "U".scaler_4, "U".scaler_5, "U".scaler_6, "U".scaler_7, "U".scaler_8, "U".scaler_9, "U".scaler_10, "U".scaler_11 
+INSERT INTO tmp_20180602150037_xds_ads_sca_2_out ("KEY", scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT "U"."KEY", "U".scaler_2, "U".scaler_3, "U".scaler_4, "U".scaler_5, "U".scaler_6, "U".scaler_7, "U".scaler_8, "U".scaler_9, "U".scaler_10, "U".scaler_11 
 FROM (SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_2, "ADS_sca_2_OUT".scaler_3, "ADS_sca_2_OUT".scaler_4, "ADS_sca_2_OUT".scaler_5, "ADS_sca_2_OUT".scaler_6, "ADS_sca_2_OUT".scaler_7, "ADS_sca_2_OUT".scaler_8, "ADS_sca_2_OUT".scaler_9, "ADS_sca_2_OUT".scaler_10, "ADS_sca_2_OUT".scaler_11 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".impter_2 AS DOUBLE) - 0.0002686932066652995) / 0.04724209583653783 AS scaler_2, (CAST("ADS_imp_1_OUT".impter_3 AS DOUBLE) - 0.0007239580580639441) / 0.047605576685038974 AS scaler_3, (CAST("ADS_imp_1_OUT".impter_4 AS DOUBLE) - 0.0007280719825586765) / 0.04693591143936869 AS scaler_4, (CAST("ADS_imp_1_OUT".impter_5 AS DOUBLE) - 0.001013565221084393) / 0.0483352719489719 AS scaler_5, (CAST("ADS_imp_1_OUT".impter_6 AS DOUBLE) - 0.0009763580732882109) / 0.048050762009702486 AS scaler_6, (CAST("ADS_imp_1_OUT".impter_7 AS DOUBLE) - 0.0017643808242337245) / 0.04806080873154401 AS scaler_7, (CAST("ADS_imp_1_OUT".impter_8 AS DOUBLE) - -0.0016512815450565026) / 0.04620240378043046 AS scaler_8, (CAST("ADS_imp_1_OUT".impter_9 AS DOUBLE) - 0.0013905501983388136) / 0.047363093040531656 AS scaler_9, (CAST("ADS_imp_1_OUT".impter_10 AS DOUBLE) - 0.0012726482548090939) / 0.04589286131364784 AS scaler_10, (CAST("ADS_imp_1_OUT".impter_11 AS DOUBLE) - 0.001034425005681627) / 0.04776158519570627 AS scaler_11 
-FROM tmp_20180516115439_codegen_guzoh5_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
+FROM tmp_20180602150037_tic_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
 
 -- Model deployment code
 
 WITH linear_input AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CAST("ADS_sca_2_OUT".scaler_2 AS DOUBLE) AS scaler_2, CAST("ADS_sca_2_OUT".scaler_3 AS DOUBLE) AS scaler_3, CAST("ADS_sca_2_OUT".scaler_4 AS DOUBLE) AS scaler_4, CAST("ADS_sca_2_OUT".scaler_5 AS DOUBLE) AS scaler_5, CAST("ADS_sca_2_OUT".scaler_6 AS DOUBLE) AS scaler_6, CAST("ADS_sca_2_OUT".scaler_7 AS DOUBLE) AS scaler_7, CAST("ADS_sca_2_OUT".scaler_8 AS DOUBLE) AS scaler_8, CAST("ADS_sca_2_OUT".scaler_9 AS DOUBLE) AS scaler_9, CAST("ADS_sca_2_OUT".scaler_10 AS DOUBLE) AS scaler_10, CAST("ADS_sca_2_OUT".scaler_11 AS DOUBLE) AS scaler_11 
-FROM tmp_20180516115439_codegen_04zt73_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180602150037_xds_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 linear_model_cte AS 
 (SELECT linear_input."KEY" AS "KEY", -0.6079395648662999 * linear_input.scaler_2 + -10.876895255552196 * linear_input.scaler_3 + 23.789968160154114 * linear_input.scaler_4 + 14.807141589954835 * linear_input.scaler_5 + -11.736389468352947 * linear_input.scaler_6 + 1.8416063430142193 * linear_input.scaler_7 + -8.652930577312823 * linear_input.scaler_8 + 3.0102356703739828 * linear_input.scaler_9 + 26.15109157565191 * linear_input.scaler_10 + 4.022578178122655 * linear_input.scaler_11 + 154.07365439093485 AS "Estimator" 
 FROM linear_input)
