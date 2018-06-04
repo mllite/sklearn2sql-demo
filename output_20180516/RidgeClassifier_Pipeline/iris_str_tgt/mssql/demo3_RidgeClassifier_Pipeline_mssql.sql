@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table ##TMP_20180516131340_CODEGEN_E2MADR_ADS_imp_1_OUT part 1. Create 
+-- Code For temporary table ##TMP_20180602160502_Q24_ADS_imp_1_OUT part 1. Create 
 
 
-CREATE TABLE ##TMP_20180516131340_CODEGEN_E2MADR_ADS_imp_1_OUT (
+CREATE TABLE ##TMP_20180602160502_Q24_ADS_imp_1_OUT (
 	[KEY] BIGINT NULL, 
 	imputer_output_2 FLOAT(53) NULL, 
 	imputer_output_3 FLOAT(53) NULL, 
@@ -23,16 +23,16 @@ CREATE TABLE ##TMP_20180516131340_CODEGEN_E2MADR_ADS_imp_1_OUT (
 
 
 
--- Code For temporary table ##TMP_20180516131340_CODEGEN_E2MADR_ADS_imp_1_OUT part 2. Populate
+-- Code For temporary table ##TMP_20180602160502_Q24_ADS_imp_1_OUT part 2. Populate
 
-INSERT INTO ##TMP_20180516131340_CODEGEN_E2MADR_ADS_imp_1_OUT ([KEY], imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT [ADS_imp_1_OUT].[KEY], [ADS_imp_1_OUT].imputer_output_2, [ADS_imp_1_OUT].imputer_output_3, [ADS_imp_1_OUT].imputer_output_4, [ADS_imp_1_OUT].imputer_output_5 
+INSERT INTO ##TMP_20180602160502_Q24_ADS_imp_1_OUT ([KEY], imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT [ADS_imp_1_OUT].[KEY], [ADS_imp_1_OUT].imputer_output_2, [ADS_imp_1_OUT].imputer_output_3, [ADS_imp_1_OUT].imputer_output_4, [ADS_imp_1_OUT].imputer_output_5 
 FROM (SELECT [ADS].[KEY] AS [KEY], CASE WHEN ([ADS].[Feature_0] IS NULL) THEN 5.8474999999999975 ELSE [ADS].[Feature_0] END AS imputer_output_2, CASE WHEN ([ADS].[Feature_1] IS NULL) THEN 3.0366666666666657 ELSE [ADS].[Feature_1] END AS imputer_output_3, CASE WHEN ([ADS].[Feature_2] IS NULL) THEN 3.8450000000000006 ELSE [ADS].[Feature_2] END AS imputer_output_4, CASE WHEN ([ADS].[Feature_3] IS NULL) THEN 1.245 ELSE [ADS].[Feature_3] END AS imputer_output_5 
 FROM iris_str_tgt AS [ADS]) AS [ADS_imp_1_OUT]
 
--- Code For temporary table ##TMP_20180516131340_CODEGEN_24IDWF_ADS_sca_2_OUT part 1. Create 
+-- Code For temporary table ##TMP_20180602160502_KV4_ADS_sca_2_OUT part 1. Create 
 
 
-CREATE TABLE ##TMP_20180516131340_CODEGEN_24IDWF_ADS_sca_2_OUT (
+CREATE TABLE ##TMP_20180602160502_KV4_ADS_sca_2_OUT (
 	[KEY] BIGINT NULL, 
 	scaler_output_2 FLOAT NULL, 
 	scaler_output_3 FLOAT NULL, 
@@ -42,17 +42,17 @@ CREATE TABLE ##TMP_20180516131340_CODEGEN_24IDWF_ADS_sca_2_OUT (
 
 
 
--- Code For temporary table ##TMP_20180516131340_CODEGEN_24IDWF_ADS_sca_2_OUT part 2. Populate
+-- Code For temporary table ##TMP_20180602160502_KV4_ADS_sca_2_OUT part 2. Populate
 
-INSERT INTO ##TMP_20180516131340_CODEGEN_24IDWF_ADS_sca_2_OUT ([KEY], scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT [ADS_sca_2_OUT].[KEY], [ADS_sca_2_OUT].scaler_output_2, [ADS_sca_2_OUT].scaler_output_3, [ADS_sca_2_OUT].scaler_output_4, [ADS_sca_2_OUT].scaler_output_5 
+INSERT INTO ##TMP_20180602160502_KV4_ADS_sca_2_OUT ([KEY], scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT [ADS_sca_2_OUT].[KEY], [ADS_sca_2_OUT].scaler_output_2, [ADS_sca_2_OUT].scaler_output_3, [ADS_sca_2_OUT].scaler_output_4, [ADS_sca_2_OUT].scaler_output_5 
 FROM (SELECT [ADS_imp_1_OUT].[KEY] AS [KEY], (CAST([ADS_imp_1_OUT].imputer_output_2 AS FLOAT(53)) - 5.8474999999999975) / 0.827039146594646 AS scaler_output_2, (CAST([ADS_imp_1_OUT].imputer_output_3 AS FLOAT(53)) - 3.0366666666666657) / 0.43625935201691934 AS scaler_output_3, (CAST([ADS_imp_1_OUT].imputer_output_4 AS FLOAT(53)) - 3.8450000000000006) / 1.709817241695732 AS scaler_output_4, (CAST([ADS_imp_1_OUT].imputer_output_5 AS FLOAT(53)) - 1.245) / 0.7498722113355939 AS scaler_output_5 
-FROM ##TMP_20180516131340_CODEGEN_E2MADR_ADS_imp_1_OUT AS [ADS_imp_1_OUT]) AS [ADS_sca_2_OUT]
+FROM ##TMP_20180602160502_Q24_ADS_imp_1_OUT AS [ADS_imp_1_OUT]) AS [ADS_sca_2_OUT]
 
 -- Model deployment code
 
 WITH linear_input AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CAST([ADS_sca_2_OUT].scaler_output_2 AS FLOAT(53)) AS scaler_output_2, CAST([ADS_sca_2_OUT].scaler_output_3 AS FLOAT(53)) AS scaler_output_3, CAST([ADS_sca_2_OUT].scaler_output_4 AS FLOAT(53)) AS scaler_output_4, CAST([ADS_sca_2_OUT].scaler_output_5 AS FLOAT(53)) AS scaler_output_5 
-FROM ##TMP_20180516131340_CODEGEN_24IDWF_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180602160502_KV4_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 linear_model_cte AS 
 (SELECT linear_input.[KEY] AS [KEY], 0.04902526586186135 * linear_input.scaler_output_2 + 0.23258226657287756 * linear_input.scaler_output_3 + -0.6617920365460979 * linear_input.scaler_output_4 + -0.13957440677755487 * linear_input.scaler_output_5 + -0.38333333333333425 AS [Score_CLASS_0], 0.0886306707385939 * linear_input.scaler_output_2 + -0.4115503870698435 * linear_input.scaler_output_3 + 0.4660812728575237 * linear_input.scaler_output_4 + -0.5763815228752289 * linear_input.scaler_output_5 + -0.33333333333333265 AS [Score_CLASS_1], -0.13765593660045333 * linear_input.scaler_output_2 + 0.17896812049696517 * linear_input.scaler_output_3 + 0.19571076368857368 * linear_input.scaler_output_4 + 0.7159559296527818 * linear_input.scaler_output_5 + -0.28333333333333305 AS [Score_CLASS_2] 
 FROM linear_input), 

@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table ##TMP_20180516112453_CODEGEN_G6TYFL_RF_B0 part 1. Create 
+-- Code For temporary table ##TMP_20180602143251_7NE_RF_B0 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180516112453_CODEGEN_G6TYFL_RF_B0 (
+CREATE TABLE ##TMP_20180602143251_7NE_RF_B0 (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Proba_0] FLOAT(53) NULL, 
@@ -31,7 +31,7 @@ CREATE TABLE ##TMP_20180516112453_CODEGEN_G6TYFL_RF_B0 (
 
 
 
--- Code For temporary table ##TMP_20180516112453_CODEGEN_G6TYFL_RF_B0 part 2. Populate
+-- Code For temporary table ##TMP_20180602143251_7NE_RF_B0 part 2. Populate
 
 WITH [DT_node_lookup] AS 
 (SELECT [ADS].[KEY] AS [KEY], CASE WHEN ([ADS].[Feature_3] <= 0.6375722885131836) THEN CASE WHEN ([ADS].[Feature_4] <= -0.7205710411071777) THEN CASE WHEN ([ADS].[Feature_1] <= -0.3766303062438965) THEN 3 ELSE CASE WHEN ([ADS].[Feature_2] <= -2.3242909908294678) THEN 5 ELSE 6 END END ELSE CASE WHEN ([ADS].[Feature_5] <= 0.4350510239601135) THEN CASE WHEN ([ADS].[Feature_2] <= 0.6566844582557678) THEN CASE WHEN ([ADS].[Feature_3] <= -2.228487968444824) THEN 10 ELSE CASE WHEN ([ADS].[Feature_8] <= 0.027076072990894318) THEN CASE WHEN ([ADS].[Feature_2] <= -0.7908840775489807) THEN 13 ELSE 14 END ELSE 15 END END ELSE 16 END ELSE 17 END END ELSE CASE WHEN ([ADS].[Feature_4] <= 0.5321277976036072) THEN CASE WHEN ([ADS].[Feature_6] <= -0.30175986886024475) THEN CASE WHEN ([ADS].[Feature_7] <= 1.7358007431030273) THEN CASE WHEN ([ADS].[Feature_2] <= 0.286959171295166) THEN 22 ELSE CASE WHEN ([ADS].[Feature_0] <= 0.9448466300964355) THEN 24 ELSE CASE WHEN ([ADS].[Feature_8] <= -2.721081256866455) THEN 26 ELSE 27 END END END ELSE CASE WHEN ([ADS].[Feature_5] <= -0.11045998334884644) THEN 29 ELSE 30 END END ELSE 31 END ELSE CASE WHEN ([ADS].[Feature_1] <= -0.6816645860671997) THEN 33 ELSE 34 END END END AS node_id_2 
@@ -153,7 +153,7 @@ FROM [DT_node_lookup_9] LEFT OUTER JOIN [DT_node_data_9] ON [DT_node_lookup_9].n
 [RF_Model_9] AS 
 (SELECT [DT_Output_9].[KEY] AS [KEY], CAST(NULL AS FLOAT(53)) AS [Score_0], [DT_Output_9].[P_0.0] AS [Proba_0], CASE WHEN ([DT_Output_9].[P_0.0] IS NULL OR [DT_Output_9].[P_0.0] > 0.0) THEN log([DT_Output_9].[P_0.0]) ELSE -1.79769313486231e+308 END AS [LogProba_0], CAST(NULL AS FLOAT(53)) AS [Score_1], [DT_Output_9].[P_1.0] AS [Proba_1], CASE WHEN ([DT_Output_9].[P_1.0] IS NULL OR [DT_Output_9].[P_1.0] > 0.0) THEN log([DT_Output_9].[P_1.0]) ELSE -1.79769313486231e+308 END AS [LogProba_1], CAST(NULL AS FLOAT(53)) AS [Score_2], [DT_Output_9].[P_2.0] AS [Proba_2], CASE WHEN ([DT_Output_9].[P_2.0] IS NULL OR [DT_Output_9].[P_2.0] > 0.0) THEN log([DT_Output_9].[P_2.0]) ELSE -1.79769313486231e+308 END AS [LogProba_2], CAST(NULL AS FLOAT(53)) AS [Score_3], [DT_Output_9].[P_3.0] AS [Proba_3], CASE WHEN ([DT_Output_9].[P_3.0] IS NULL OR [DT_Output_9].[P_3.0] > 0.0) THEN log([DT_Output_9].[P_3.0]) ELSE -1.79769313486231e+308 END AS [LogProba_3] 
 FROM [DT_Output_9])
- INSERT INTO ##TMP_20180516112453_CODEGEN_G6TYFL_RF_B0 ([KEY], [Score_0], [Proba_0], [LogProba_0], [Score_1], [Proba_1], [LogProba_1], [Score_2], [Proba_2], [LogProba_2], [Score_3], [Proba_3], [LogProba_3]) SELECT [RF_B0].[KEY], [RF_B0].[Score_0], [RF_B0].[Proba_0], [RF_B0].[LogProba_0], [RF_B0].[Score_1], [RF_B0].[Proba_1], [RF_B0].[LogProba_1], [RF_B0].[Score_2], [RF_B0].[Proba_2], [RF_B0].[LogProba_2], [RF_B0].[Score_3], [RF_B0].[Proba_3], [RF_B0].[LogProba_3] 
+ INSERT INTO ##TMP_20180602143251_7NE_RF_B0 ([KEY], [Score_0], [Proba_0], [LogProba_0], [Score_1], [Proba_1], [LogProba_1], [Score_2], [Proba_2], [LogProba_2], [Score_3], [Proba_3], [LogProba_3]) SELECT [RF_B0].[KEY], [RF_B0].[Score_0], [RF_B0].[Proba_0], [RF_B0].[LogProba_0], [RF_B0].[Score_1], [RF_B0].[Proba_1], [RF_B0].[LogProba_1], [RF_B0].[Score_2], [RF_B0].[Proba_2], [RF_B0].[LogProba_2], [RF_B0].[Score_3], [RF_B0].[Proba_3], [RF_B0].[LogProba_3] 
 FROM (SELECT [RF_esu_0].[KEY] AS [KEY], [RF_esu_0].[Score_0] AS [Score_0], [RF_esu_0].[Proba_0] AS [Proba_0], [RF_esu_0].[LogProba_0] AS [LogProba_0], [RF_esu_0].[Score_1] AS [Score_1], [RF_esu_0].[Proba_1] AS [Proba_1], [RF_esu_0].[LogProba_1] AS [LogProba_1], [RF_esu_0].[Score_2] AS [Score_2], [RF_esu_0].[Proba_2] AS [Proba_2], [RF_esu_0].[LogProba_2] AS [LogProba_2], [RF_esu_0].[Score_3] AS [Score_3], [RF_esu_0].[Proba_3] AS [Proba_3], [RF_esu_0].[LogProba_3] AS [LogProba_3] 
 FROM (SELECT [RF_Model_0].[KEY] AS [KEY], [RF_Model_0].[Score_0] AS [Score_0], [RF_Model_0].[Proba_0] AS [Proba_0], [RF_Model_0].[LogProba_0] AS [LogProba_0], [RF_Model_0].[Score_1] AS [Score_1], [RF_Model_0].[Proba_1] AS [Proba_1], [RF_Model_0].[LogProba_1] AS [LogProba_1], [RF_Model_0].[Score_2] AS [Score_2], [RF_Model_0].[Proba_2] AS [Proba_2], [RF_Model_0].[LogProba_2] AS [LogProba_2], [RF_Model_0].[Score_3] AS [Score_3], [RF_Model_0].[Proba_3] AS [Proba_3], [RF_Model_0].[LogProba_3] AS [LogProba_3] 
 FROM [RF_Model_0] UNION ALL SELECT [RF_Model_1].[KEY] AS [KEY], [RF_Model_1].[Score_0] AS [Score_0], [RF_Model_1].[Proba_0] AS [Proba_0], [RF_Model_1].[LogProba_0] AS [LogProba_0], [RF_Model_1].[Score_1] AS [Score_1], [RF_Model_1].[Proba_1] AS [Proba_1], [RF_Model_1].[LogProba_1] AS [LogProba_1], [RF_Model_1].[Score_2] AS [Score_2], [RF_Model_1].[Proba_2] AS [Proba_2], [RF_Model_1].[LogProba_2] AS [LogProba_2], [RF_Model_1].[Score_3] AS [Score_3], [RF_Model_1].[Proba_3] AS [Proba_3], [RF_Model_1].[LogProba_3] AS [LogProba_3] 
@@ -167,10 +167,10 @@ FROM [RF_Model_7] UNION ALL SELECT [RF_Model_8].[KEY] AS [KEY], [RF_Model_8].[Sc
 FROM [RF_Model_8] UNION ALL SELECT [RF_Model_9].[KEY] AS [KEY], [RF_Model_9].[Score_0] AS [Score_0], [RF_Model_9].[Proba_0] AS [Proba_0], [RF_Model_9].[LogProba_0] AS [LogProba_0], [RF_Model_9].[Score_1] AS [Score_1], [RF_Model_9].[Proba_1] AS [Proba_1], [RF_Model_9].[LogProba_1] AS [LogProba_1], [RF_Model_9].[Score_2] AS [Score_2], [RF_Model_9].[Proba_2] AS [Proba_2], [RF_Model_9].[LogProba_2] AS [LogProba_2], [RF_Model_9].[Score_3] AS [Score_3], [RF_Model_9].[Proba_3] AS [Proba_3], [RF_Model_9].[LogProba_3] AS [LogProba_3] 
 FROM [RF_Model_9]) AS [RF_esu_0]) AS [RF_B0]
 
--- Code For temporary table ##TMP_20180516112453_CODEGEN_8R9Q9L_RF_B1 part 1. Create 
+-- Code For temporary table ##TMP_20180602143251_G4D_RF_B1 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180516112453_CODEGEN_8R9Q9L_RF_B1 (
+CREATE TABLE ##TMP_20180602143251_G4D_RF_B1 (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Proba_0] FLOAT(53) NULL, 
@@ -188,7 +188,7 @@ CREATE TABLE ##TMP_20180516112453_CODEGEN_8R9Q9L_RF_B1 (
 
 
 
--- Code For temporary table ##TMP_20180516112453_CODEGEN_8R9Q9L_RF_B1 part 2. Populate
+-- Code For temporary table ##TMP_20180602143251_G4D_RF_B1 part 2. Populate
 
 WITH [DT_node_lookup_10] AS 
 (SELECT [ADS].[KEY] AS [KEY], CASE WHEN ([ADS].[Feature_1] <= -0.18501365184783936) THEN CASE WHEN ([ADS].[Feature_2] <= -0.4758684039115906) THEN CASE WHEN ([ADS].[Feature_7] <= -0.30184680223464966) THEN 3 ELSE CASE WHEN ([ADS].[Feature_9] <= 0.48823487758636475) THEN 5 ELSE 6 END END ELSE CASE WHEN ([ADS].[Feature_3] <= -2.357828378677368) THEN 8 ELSE CASE WHEN ([ADS].[Feature_2] <= 2.4494805335998535) THEN 10 ELSE 11 END END END ELSE CASE WHEN ([ADS].[Feature_7] <= 0.362348735332489) THEN CASE WHEN ([ADS].[Feature_8] <= 0.6027734875679016) THEN CASE WHEN ([ADS].[Feature_5] <= -1.2919886112213135) THEN CASE WHEN ([ADS].[Feature_3] <= -0.7561548352241516) THEN 16 ELSE 17 END ELSE 18 END ELSE CASE WHEN ([ADS].[Feature_6] <= -0.4988042116165161) THEN 20 ELSE CASE WHEN ([ADS].[Feature_1] <= 1.5552623271942139) THEN CASE WHEN ([ADS].[Feature_3] <= -0.24176281690597534) THEN 23 ELSE 24 END ELSE 25 END END END ELSE CASE WHEN ([ADS].[Feature_9] <= 0.0133257657289505) THEN CASE WHEN ([ADS].[Feature_5] <= 0.9273337721824646) THEN 28 ELSE 29 END ELSE CASE WHEN ([ADS].[Feature_8] <= -0.7475364208221436) THEN 31 ELSE CASE WHEN ([ADS].[Feature_7] <= 0.6157610416412354) THEN 33 ELSE 34 END END END END END AS node_id_2 
@@ -262,7 +262,7 @@ FROM [DT_node_lookup_15] LEFT OUTER JOIN [DT_node_data_15] ON [DT_node_lookup_15
 [RF_Model_15] AS 
 (SELECT [DT_Output_15].[KEY] AS [KEY], CAST(NULL AS FLOAT(53)) AS [Score_0], [DT_Output_15].[P_0.0] AS [Proba_0], CASE WHEN ([DT_Output_15].[P_0.0] IS NULL OR [DT_Output_15].[P_0.0] > 0.0) THEN log([DT_Output_15].[P_0.0]) ELSE -1.79769313486231e+308 END AS [LogProba_0], CAST(NULL AS FLOAT(53)) AS [Score_1], [DT_Output_15].[P_1.0] AS [Proba_1], CASE WHEN ([DT_Output_15].[P_1.0] IS NULL OR [DT_Output_15].[P_1.0] > 0.0) THEN log([DT_Output_15].[P_1.0]) ELSE -1.79769313486231e+308 END AS [LogProba_1], CAST(NULL AS FLOAT(53)) AS [Score_2], [DT_Output_15].[P_2.0] AS [Proba_2], CASE WHEN ([DT_Output_15].[P_2.0] IS NULL OR [DT_Output_15].[P_2.0] > 0.0) THEN log([DT_Output_15].[P_2.0]) ELSE -1.79769313486231e+308 END AS [LogProba_2], CAST(NULL AS FLOAT(53)) AS [Score_3], [DT_Output_15].[P_3.0] AS [Proba_3], CASE WHEN ([DT_Output_15].[P_3.0] IS NULL OR [DT_Output_15].[P_3.0] > 0.0) THEN log([DT_Output_15].[P_3.0]) ELSE -1.79769313486231e+308 END AS [LogProba_3] 
 FROM [DT_Output_15])
- INSERT INTO ##TMP_20180516112453_CODEGEN_8R9Q9L_RF_B1 ([KEY], [Score_0], [Proba_0], [LogProba_0], [Score_1], [Proba_1], [LogProba_1], [Score_2], [Proba_2], [LogProba_2], [Score_3], [Proba_3], [LogProba_3]) SELECT [RF_B1].[KEY], [RF_B1].[Score_0], [RF_B1].[Proba_0], [RF_B1].[LogProba_0], [RF_B1].[Score_1], [RF_B1].[Proba_1], [RF_B1].[LogProba_1], [RF_B1].[Score_2], [RF_B1].[Proba_2], [RF_B1].[LogProba_2], [RF_B1].[Score_3], [RF_B1].[Proba_3], [RF_B1].[LogProba_3] 
+ INSERT INTO ##TMP_20180602143251_G4D_RF_B1 ([KEY], [Score_0], [Proba_0], [LogProba_0], [Score_1], [Proba_1], [LogProba_1], [Score_2], [Proba_2], [LogProba_2], [Score_3], [Proba_3], [LogProba_3]) SELECT [RF_B1].[KEY], [RF_B1].[Score_0], [RF_B1].[Proba_0], [RF_B1].[LogProba_0], [RF_B1].[Score_1], [RF_B1].[Proba_1], [RF_B1].[LogProba_1], [RF_B1].[Score_2], [RF_B1].[Proba_2], [RF_B1].[LogProba_2], [RF_B1].[Score_3], [RF_B1].[Proba_3], [RF_B1].[LogProba_3] 
 FROM (SELECT [RF_esu_1].[KEY] AS [KEY], [RF_esu_1].[Score_0] AS [Score_0], [RF_esu_1].[Proba_0] AS [Proba_0], [RF_esu_1].[LogProba_0] AS [LogProba_0], [RF_esu_1].[Score_1] AS [Score_1], [RF_esu_1].[Proba_1] AS [Proba_1], [RF_esu_1].[LogProba_1] AS [LogProba_1], [RF_esu_1].[Score_2] AS [Score_2], [RF_esu_1].[Proba_2] AS [Proba_2], [RF_esu_1].[LogProba_2] AS [LogProba_2], [RF_esu_1].[Score_3] AS [Score_3], [RF_esu_1].[Proba_3] AS [Proba_3], [RF_esu_1].[LogProba_3] AS [LogProba_3] 
 FROM (SELECT [RF_Model_10].[KEY] AS [KEY], [RF_Model_10].[Score_0] AS [Score_0], [RF_Model_10].[Proba_0] AS [Proba_0], [RF_Model_10].[LogProba_0] AS [LogProba_0], [RF_Model_10].[Score_1] AS [Score_1], [RF_Model_10].[Proba_1] AS [Proba_1], [RF_Model_10].[LogProba_1] AS [LogProba_1], [RF_Model_10].[Score_2] AS [Score_2], [RF_Model_10].[Proba_2] AS [Proba_2], [RF_Model_10].[LogProba_2] AS [LogProba_2], [RF_Model_10].[Score_3] AS [Score_3], [RF_Model_10].[Proba_3] AS [Proba_3], [RF_Model_10].[LogProba_3] AS [LogProba_3] 
 FROM [RF_Model_10] UNION ALL SELECT [RF_Model_11].[KEY] AS [KEY], [RF_Model_11].[Score_0] AS [Score_0], [RF_Model_11].[Proba_0] AS [Proba_0], [RF_Model_11].[LogProba_0] AS [LogProba_0], [RF_Model_11].[Score_1] AS [Score_1], [RF_Model_11].[Proba_1] AS [Proba_1], [RF_Model_11].[LogProba_1] AS [LogProba_1], [RF_Model_11].[Score_2] AS [Score_2], [RF_Model_11].[Proba_2] AS [Proba_2], [RF_Model_11].[LogProba_2] AS [LogProba_2], [RF_Model_11].[Score_3] AS [Score_3], [RF_Model_11].[Proba_3] AS [Proba_3], [RF_Model_11].[LogProba_3] AS [LogProba_3] 
@@ -272,10 +272,10 @@ FROM [RF_Model_13] UNION ALL SELECT [RF_Model_14].[KEY] AS [KEY], [RF_Model_14].
 FROM [RF_Model_14] UNION ALL SELECT [RF_Model_15].[KEY] AS [KEY], [RF_Model_15].[Score_0] AS [Score_0], [RF_Model_15].[Proba_0] AS [Proba_0], [RF_Model_15].[LogProba_0] AS [LogProba_0], [RF_Model_15].[Score_1] AS [Score_1], [RF_Model_15].[Proba_1] AS [Proba_1], [RF_Model_15].[LogProba_1] AS [LogProba_1], [RF_Model_15].[Score_2] AS [Score_2], [RF_Model_15].[Proba_2] AS [Proba_2], [RF_Model_15].[LogProba_2] AS [LogProba_2], [RF_Model_15].[Score_3] AS [Score_3], [RF_Model_15].[Proba_3] AS [Proba_3], [RF_Model_15].[LogProba_3] AS [LogProba_3] 
 FROM [RF_Model_15]) AS [RF_esu_1]) AS [RF_B1]
 
--- Code For temporary table ##TMP_20180516112453_CODEGEN_R86QA7_RF_avg part 1. Create 
+-- Code For temporary table ##TMP_20180602143251_0V9_RF_avg part 1. Create 
 
 
-CREATE TABLE ##TMP_20180516112453_CODEGEN_R86QA7_RF_avg (
+CREATE TABLE ##TMP_20180602143251_0V9_RF_avg (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Proba_0] FLOAT(53) NULL, 
@@ -293,14 +293,14 @@ CREATE TABLE ##TMP_20180516112453_CODEGEN_R86QA7_RF_avg (
 
 
 
--- Code For temporary table ##TMP_20180516112453_CODEGEN_R86QA7_RF_avg part 2. Populate
+-- Code For temporary table ##TMP_20180602143251_0V9_RF_avg part 2. Populate
 
 WITH [RF_Union] AS 
 (SELECT [RF_EnsembleUnion].[KEY] AS [KEY], [RF_EnsembleUnion].[Score_0] AS [Score_0], [RF_EnsembleUnion].[Proba_0] AS [Proba_0], [RF_EnsembleUnion].[LogProba_0] AS [LogProba_0], [RF_EnsembleUnion].[Score_1] AS [Score_1], [RF_EnsembleUnion].[Proba_1] AS [Proba_1], [RF_EnsembleUnion].[LogProba_1] AS [LogProba_1], [RF_EnsembleUnion].[Score_2] AS [Score_2], [RF_EnsembleUnion].[Proba_2] AS [Proba_2], [RF_EnsembleUnion].[LogProba_2] AS [LogProba_2], [RF_EnsembleUnion].[Score_3] AS [Score_3], [RF_EnsembleUnion].[Proba_3] AS [Proba_3], [RF_EnsembleUnion].[LogProba_3] AS [LogProba_3] 
 FROM (SELECT [RF_B0].[KEY] AS [KEY], [RF_B0].[Score_0] AS [Score_0], [RF_B0].[Proba_0] AS [Proba_0], [RF_B0].[LogProba_0] AS [LogProba_0], [RF_B0].[Score_1] AS [Score_1], [RF_B0].[Proba_1] AS [Proba_1], [RF_B0].[LogProba_1] AS [LogProba_1], [RF_B0].[Score_2] AS [Score_2], [RF_B0].[Proba_2] AS [Proba_2], [RF_B0].[LogProba_2] AS [LogProba_2], [RF_B0].[Score_3] AS [Score_3], [RF_B0].[Proba_3] AS [Proba_3], [RF_B0].[LogProba_3] AS [LogProba_3] 
-FROM ##TMP_20180516112453_CODEGEN_G6TYFL_RF_B0 AS [RF_B0] UNION ALL SELECT [RF_B1].[KEY] AS [KEY], [RF_B1].[Score_0] AS [Score_0], [RF_B1].[Proba_0] AS [Proba_0], [RF_B1].[LogProba_0] AS [LogProba_0], [RF_B1].[Score_1] AS [Score_1], [RF_B1].[Proba_1] AS [Proba_1], [RF_B1].[LogProba_1] AS [LogProba_1], [RF_B1].[Score_2] AS [Score_2], [RF_B1].[Proba_2] AS [Proba_2], [RF_B1].[LogProba_2] AS [LogProba_2], [RF_B1].[Score_3] AS [Score_3], [RF_B1].[Proba_3] AS [Proba_3], [RF_B1].[LogProba_3] AS [LogProba_3] 
-FROM ##TMP_20180516112453_CODEGEN_8R9Q9L_RF_B1 AS [RF_B1]) AS [RF_EnsembleUnion])
- INSERT INTO ##TMP_20180516112453_CODEGEN_R86QA7_RF_avg ([KEY], [Score_0], [Proba_0], [LogProba_0], [Score_1], [Proba_1], [LogProba_1], [Score_2], [Proba_2], [LogProba_2], [Score_3], [Proba_3], [LogProba_3]) SELECT [RF_avg].[KEY], [RF_avg].[Score_0], [RF_avg].[Proba_0], [RF_avg].[LogProba_0], [RF_avg].[Score_1], [RF_avg].[Proba_1], [RF_avg].[LogProba_1], [RF_avg].[Score_2], [RF_avg].[Proba_2], [RF_avg].[LogProba_2], [RF_avg].[Score_3], [RF_avg].[Proba_3], [RF_avg].[LogProba_3] 
+FROM ##TMP_20180602143251_7NE_RF_B0 AS [RF_B0] UNION ALL SELECT [RF_B1].[KEY] AS [KEY], [RF_B1].[Score_0] AS [Score_0], [RF_B1].[Proba_0] AS [Proba_0], [RF_B1].[LogProba_0] AS [LogProba_0], [RF_B1].[Score_1] AS [Score_1], [RF_B1].[Proba_1] AS [Proba_1], [RF_B1].[LogProba_1] AS [LogProba_1], [RF_B1].[Score_2] AS [Score_2], [RF_B1].[Proba_2] AS [Proba_2], [RF_B1].[LogProba_2] AS [LogProba_2], [RF_B1].[Score_3] AS [Score_3], [RF_B1].[Proba_3] AS [Proba_3], [RF_B1].[LogProba_3] AS [LogProba_3] 
+FROM ##TMP_20180602143251_G4D_RF_B1 AS [RF_B1]) AS [RF_EnsembleUnion])
+ INSERT INTO ##TMP_20180602143251_0V9_RF_avg ([KEY], [Score_0], [Proba_0], [LogProba_0], [Score_1], [Proba_1], [LogProba_1], [Score_2], [Proba_2], [LogProba_2], [Score_3], [Proba_3], [LogProba_3]) SELECT [RF_avg].[KEY], [RF_avg].[Score_0], [RF_avg].[Proba_0], [RF_avg].[LogProba_0], [RF_avg].[Score_1], [RF_avg].[Proba_1], [RF_avg].[LogProba_1], [RF_avg].[Score_2], [RF_avg].[Proba_2], [RF_avg].[LogProba_2], [RF_avg].[Score_3], [RF_avg].[Proba_3], [RF_avg].[LogProba_3] 
 FROM (SELECT [T].[KEY] AS [KEY], CAST([T].[Score_0] AS FLOAT(53)) AS [Score_0], CAST([T].[Proba_0] AS FLOAT(53)) AS [Proba_0], CAST([T].[LogProba_0] AS FLOAT(53)) AS [LogProba_0], CAST([T].[Score_1] AS FLOAT(53)) AS [Score_1], CAST([T].[Proba_1] AS FLOAT(53)) AS [Proba_1], CAST([T].[LogProba_1] AS FLOAT(53)) AS [LogProba_1], CAST([T].[Score_2] AS FLOAT(53)) AS [Score_2], CAST([T].[Proba_2] AS FLOAT(53)) AS [Proba_2], CAST([T].[LogProba_2] AS FLOAT(53)) AS [LogProba_2], CAST([T].[Score_3] AS FLOAT(53)) AS [Score_3], CAST([T].[Proba_3] AS FLOAT(53)) AS [Proba_3], CAST([T].[LogProba_3] AS FLOAT(53)) AS [LogProba_3] 
 FROM (SELECT [RF_Union].[KEY] AS [KEY], avg(CAST([RF_Union].[Score_0] AS FLOAT(53))) AS [Score_0], avg(CAST([RF_Union].[Proba_0] AS FLOAT(53))) AS [Proba_0], CAST(NULL AS FLOAT(53)) AS [LogProba_0], avg(CAST([RF_Union].[Score_1] AS FLOAT(53))) AS [Score_1], avg(CAST([RF_Union].[Proba_1] AS FLOAT(53))) AS [Proba_1], CAST(NULL AS FLOAT(53)) AS [LogProba_1], avg(CAST([RF_Union].[Score_2] AS FLOAT(53))) AS [Score_2], avg(CAST([RF_Union].[Proba_2] AS FLOAT(53))) AS [Proba_2], CAST(NULL AS FLOAT(53)) AS [LogProba_2], avg(CAST([RF_Union].[Score_3] AS FLOAT(53))) AS [Score_3], avg(CAST([RF_Union].[Proba_3] AS FLOAT(53))) AS [Proba_3], CAST(NULL AS FLOAT(53)) AS [LogProba_3] 
 FROM [RF_Union] GROUP BY [RF_Union].[KEY]) AS [T]) AS [RF_avg]
@@ -309,7 +309,7 @@ FROM [RF_Union] GROUP BY [RF_Union].[KEY]) AS [T]) AS [RF_avg]
 
 WITH orig_cte AS 
 (SELECT [RF_avg].[KEY] AS [KEY], [RF_avg].[Score_0] AS [Score_0], [RF_avg].[Score_1] AS [Score_1], [RF_avg].[Score_2] AS [Score_2], [RF_avg].[Score_3] AS [Score_3], [RF_avg].[Proba_0] AS [Proba_0], [RF_avg].[Proba_1] AS [Proba_1], [RF_avg].[Proba_2] AS [Proba_2], [RF_avg].[Proba_3] AS [Proba_3], [RF_avg].[LogProba_0] AS [LogProba_0], [RF_avg].[LogProba_1] AS [LogProba_1], [RF_avg].[LogProba_2] AS [LogProba_2], [RF_avg].[LogProba_3] AS [LogProba_3], CAST(NULL AS BIGINT) AS [Decision], CAST(NULL AS FLOAT(53)) AS [DecisionProba] 
-FROM ##TMP_20180516112453_CODEGEN_R86QA7_RF_avg AS [RF_avg]), 
+FROM ##TMP_20180602143251_0V9_RF_avg AS [RF_avg]), 
 score_class_union AS 
 (SELECT scu.[KEY_u] AS [KEY_u], scu.class AS class, scu.[LogProba] AS [LogProba], scu.[Proba] AS [Proba], scu.[Score] AS [Score] 
 FROM (SELECT orig_cte.[KEY] AS [KEY_u], 0 AS class, orig_cte.[LogProba_0] AS [LogProba], orig_cte.[Proba_0] AS [Proba], orig_cte.[Score_0] AS [Score] 

@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table ##TMP_20180516111002_CODEGEN_P110CR_GB_B0 part 1. Create 
+-- Code For temporary table ##TMP_20180602141844_IBE_GB_B0 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180516111002_CODEGEN_P110CR_GB_B0 (
+CREATE TABLE ##TMP_20180602141844_IBE_GB_B0 (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Score_1] FLOAT(53) NULL
@@ -21,7 +21,7 @@ CREATE TABLE ##TMP_20180516111002_CODEGEN_P110CR_GB_B0 (
 
 
 
--- Code For temporary table ##TMP_20180516111002_CODEGEN_P110CR_GB_B0 part 2. Populate
+-- Code For temporary table ##TMP_20180602141844_IBE_GB_B0 part 2. Populate
 
 WITH [DT_node_lookup] AS 
 (SELECT [ADS].[KEY] AS [KEY], CASE WHEN ([ADS].[Feature_57] <= 0.03440605849027634) THEN CASE WHEN ([ADS].[Feature_17] <= 1.086324691772461) THEN CASE WHEN ([ADS].[Feature_9] <= 1.7608928680419922) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS].[Feature_19] <= 0.9697616696357727) THEN 6 ELSE 7 END END ELSE CASE WHEN ([ADS].[Feature_83] <= 2.2875289916992188) THEN CASE WHEN ([ADS].[Feature_70] <= -1.5690407752990723) THEN 10 ELSE 11 END ELSE 12 END END AS node_id_2 
@@ -98,7 +98,7 @@ FROM [DT_Output_4]),
 [GB_Model_4_1] AS 
 (SELECT [DT_Output_4].[KEY] AS [KEY], 0.0 AS [Score_0], [DT_Output_4].[E] AS [Score_1] 
 FROM [DT_Output_4])
- INSERT INTO ##TMP_20180516111002_CODEGEN_P110CR_GB_B0 ([KEY], [Score_0], [Score_1]) SELECT [GB_B0].[KEY], [GB_B0].[Score_0], [GB_B0].[Score_1] 
+ INSERT INTO ##TMP_20180602141844_IBE_GB_B0 ([KEY], [Score_0], [Score_1]) SELECT [GB_B0].[KEY], [GB_B0].[Score_0], [GB_B0].[Score_1] 
 FROM (SELECT [GB_esu_0].[KEY] AS [KEY], [GB_esu_0].[Score_0] AS [Score_0], [GB_esu_0].[Score_1] AS [Score_1] 
 FROM (SELECT [GB_Model_0_0].[KEY] AS [KEY], [GB_Model_0_0].[Score_0] AS [Score_0], [GB_Model_0_0].[Score_1] AS [Score_1] 
 FROM [GB_Model_0_0] UNION ALL SELECT [GB_Model_0_1].[KEY] AS [KEY], [GB_Model_0_1].[Score_0] AS [Score_0], [GB_Model_0_1].[Score_1] AS [Score_1] 
@@ -112,10 +112,10 @@ FROM [GB_Model_3_1] UNION ALL SELECT [GB_Model_4_0].[KEY] AS [KEY], [GB_Model_4_
 FROM [GB_Model_4_0] UNION ALL SELECT [GB_Model_4_1].[KEY] AS [KEY], [GB_Model_4_1].[Score_0] AS [Score_0], [GB_Model_4_1].[Score_1] AS [Score_1] 
 FROM [GB_Model_4_1]) AS [GB_esu_0]) AS [GB_B0]
 
--- Code For temporary table ##TMP_20180516111002_CODEGEN_TVHMHW_GB_B1 part 1. Create 
+-- Code For temporary table ##TMP_20180602141844_UUC_GB_B1 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180516111002_CODEGEN_TVHMHW_GB_B1 (
+CREATE TABLE ##TMP_20180602141844_UUC_GB_B1 (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Score_1] FLOAT(53) NULL
@@ -123,7 +123,7 @@ CREATE TABLE ##TMP_20180516111002_CODEGEN_TVHMHW_GB_B1 (
 
 
 
--- Code For temporary table ##TMP_20180516111002_CODEGEN_TVHMHW_GB_B1 part 2. Populate
+-- Code For temporary table ##TMP_20180602141844_UUC_GB_B1 part 2. Populate
 
 WITH [DT_node_lookup_5] AS 
 (SELECT [ADS].[KEY] AS [KEY], CASE WHEN ([ADS].[Feature_57] <= -0.19605962932109833) THEN CASE WHEN ([ADS].[Feature_60] <= -0.6577232480049133) THEN CASE WHEN ([ADS].[Feature_73] <= 0.050291866064071655) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS].[Feature_17] <= 1.086324691772461) THEN 6 ELSE 7 END END ELSE CASE WHEN ([ADS].[Feature_48] <= 1.5001174211502075) THEN CASE WHEN ([ADS].[Feature_72] <= -1.9872186183929443) THEN 10 ELSE 11 END ELSE CASE WHEN ([ADS].[Feature_18] <= 0.645362913608551) THEN 13 ELSE 14 END END END AS node_id_2 
@@ -200,7 +200,7 @@ FROM [DT_Output_9]),
 [GB_Model_9_1] AS 
 (SELECT [DT_Output_9].[KEY] AS [KEY], 0.0 AS [Score_0], [DT_Output_9].[E] AS [Score_1] 
 FROM [DT_Output_9])
- INSERT INTO ##TMP_20180516111002_CODEGEN_TVHMHW_GB_B1 ([KEY], [Score_0], [Score_1]) SELECT [GB_B1].[KEY], [GB_B1].[Score_0], [GB_B1].[Score_1] 
+ INSERT INTO ##TMP_20180602141844_UUC_GB_B1 ([KEY], [Score_0], [Score_1]) SELECT [GB_B1].[KEY], [GB_B1].[Score_0], [GB_B1].[Score_1] 
 FROM (SELECT [GB_esu_1].[KEY] AS [KEY], [GB_esu_1].[Score_0] AS [Score_0], [GB_esu_1].[Score_1] AS [Score_1] 
 FROM (SELECT [GB_Model_5_0].[KEY] AS [KEY], [GB_Model_5_0].[Score_0] AS [Score_0], [GB_Model_5_0].[Score_1] AS [Score_1] 
 FROM [GB_Model_5_0] UNION ALL SELECT [GB_Model_5_1].[KEY] AS [KEY], [GB_Model_5_1].[Score_0] AS [Score_0], [GB_Model_5_1].[Score_1] AS [Score_1] 
@@ -214,10 +214,10 @@ FROM [GB_Model_8_1] UNION ALL SELECT [GB_Model_9_0].[KEY] AS [KEY], [GB_Model_9_
 FROM [GB_Model_9_0] UNION ALL SELECT [GB_Model_9_1].[KEY] AS [KEY], [GB_Model_9_1].[Score_0] AS [Score_0], [GB_Model_9_1].[Score_1] AS [Score_1] 
 FROM [GB_Model_9_1]) AS [GB_esu_1]) AS [GB_B1]
 
--- Code For temporary table ##TMP_20180516111002_CODEGEN_IZ8L47_GB_B2 part 1. Create 
+-- Code For temporary table ##TMP_20180602141844_F4P_GB_B2 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180516111002_CODEGEN_IZ8L47_GB_B2 (
+CREATE TABLE ##TMP_20180602141844_F4P_GB_B2 (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Score_1] FLOAT(53) NULL
@@ -225,7 +225,7 @@ CREATE TABLE ##TMP_20180516111002_CODEGEN_IZ8L47_GB_B2 (
 
 
 
--- Code For temporary table ##TMP_20180516111002_CODEGEN_IZ8L47_GB_B2 part 2. Populate
+-- Code For temporary table ##TMP_20180602141844_F4P_GB_B2 part 2. Populate
 
 WITH [DT_node_lookup_10] AS 
 (SELECT [ADS].[KEY] AS [KEY], CASE WHEN ([ADS].[Feature_57] <= -0.27291035652160645) THEN CASE WHEN ([ADS].[Feature_17] <= 0.7869232892990112) THEN CASE WHEN ([ADS].[Feature_71] <= -2.182079315185547) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS].[Feature_4] <= 0.991510272026062) THEN 6 ELSE 7 END END ELSE CASE WHEN ([ADS].[Feature_18] <= 2.0082812309265137) THEN CASE WHEN ([ADS].[Feature_84] <= 1.5507421493530273) THEN 10 ELSE 11 END ELSE CASE WHEN ([ADS].[Feature_71] <= 0.25993645191192627) THEN 13 ELSE 14 END END END AS node_id_2 
@@ -302,7 +302,7 @@ FROM [DT_Output_14]),
 [GB_Model_14_1] AS 
 (SELECT [DT_Output_14].[KEY] AS [KEY], 0.0 AS [Score_0], [DT_Output_14].[E] AS [Score_1] 
 FROM [DT_Output_14])
- INSERT INTO ##TMP_20180516111002_CODEGEN_IZ8L47_GB_B2 ([KEY], [Score_0], [Score_1]) SELECT [GB_B2].[KEY], [GB_B2].[Score_0], [GB_B2].[Score_1] 
+ INSERT INTO ##TMP_20180602141844_F4P_GB_B2 ([KEY], [Score_0], [Score_1]) SELECT [GB_B2].[KEY], [GB_B2].[Score_0], [GB_B2].[Score_1] 
 FROM (SELECT [GB_esu_2].[KEY] AS [KEY], [GB_esu_2].[Score_0] AS [Score_0], [GB_esu_2].[Score_1] AS [Score_1] 
 FROM (SELECT [GB_Model_10_0].[KEY] AS [KEY], [GB_Model_10_0].[Score_0] AS [Score_0], [GB_Model_10_0].[Score_1] AS [Score_1] 
 FROM [GB_Model_10_0] UNION ALL SELECT [GB_Model_10_1].[KEY] AS [KEY], [GB_Model_10_1].[Score_0] AS [Score_0], [GB_Model_10_1].[Score_1] AS [Score_1] 
@@ -316,10 +316,10 @@ FROM [GB_Model_13_1] UNION ALL SELECT [GB_Model_14_0].[KEY] AS [KEY], [GB_Model_
 FROM [GB_Model_14_0] UNION ALL SELECT [GB_Model_14_1].[KEY] AS [KEY], [GB_Model_14_1].[Score_0] AS [Score_0], [GB_Model_14_1].[Score_1] AS [Score_1] 
 FROM [GB_Model_14_1]) AS [GB_esu_2]) AS [GB_B2]
 
--- Code For temporary table ##TMP_20180516111002_CODEGEN_38SQMV_GB_B3 part 1. Create 
+-- Code For temporary table ##TMP_20180602141844_D6N_GB_B3 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180516111002_CODEGEN_38SQMV_GB_B3 (
+CREATE TABLE ##TMP_20180602141844_D6N_GB_B3 (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Score_1] FLOAT(53) NULL
@@ -327,7 +327,7 @@ CREATE TABLE ##TMP_20180516111002_CODEGEN_38SQMV_GB_B3 (
 
 
 
--- Code For temporary table ##TMP_20180516111002_CODEGEN_38SQMV_GB_B3 part 2. Populate
+-- Code For temporary table ##TMP_20180602141844_D6N_GB_B3 part 2. Populate
 
 WITH [DT_node_lookup_15] AS 
 (SELECT [ADS].[KEY] AS [KEY], CASE WHEN ([ADS].[Feature_77] <= 0.34157806634902954) THEN CASE WHEN ([ADS].[Feature_59] <= -1.4929250478744507) THEN CASE WHEN ([ADS].[Feature_57] <= -0.30557534098625183) THEN 3 ELSE 4 END ELSE CASE WHEN ([ADS].[Feature_48] <= 1.231797456741333) THEN 6 ELSE 7 END END ELSE CASE WHEN ([ADS].[Feature_63] <= -1.2931482791900635) THEN 9 ELSE CASE WHEN ([ADS].[Feature_10] <= -0.9688628911972046) THEN 11 ELSE 12 END END END AS node_id_2 
@@ -344,16 +344,16 @@ FROM [DT_Output_15]),
 [GB_Model_15_1] AS 
 (SELECT [DT_Output_15].[KEY] AS [KEY], 0.0 AS [Score_0], [DT_Output_15].[E] AS [Score_1] 
 FROM [DT_Output_15])
- INSERT INTO ##TMP_20180516111002_CODEGEN_38SQMV_GB_B3 ([KEY], [Score_0], [Score_1]) SELECT [GB_B3].[KEY], [GB_B3].[Score_0], [GB_B3].[Score_1] 
+ INSERT INTO ##TMP_20180602141844_D6N_GB_B3 ([KEY], [Score_0], [Score_1]) SELECT [GB_B3].[KEY], [GB_B3].[Score_0], [GB_B3].[Score_1] 
 FROM (SELECT [GB_esu_3].[KEY] AS [KEY], [GB_esu_3].[Score_0] AS [Score_0], [GB_esu_3].[Score_1] AS [Score_1] 
 FROM (SELECT [GB_Model_15_0].[KEY] AS [KEY], [GB_Model_15_0].[Score_0] AS [Score_0], [GB_Model_15_0].[Score_1] AS [Score_1] 
 FROM [GB_Model_15_0] UNION ALL SELECT [GB_Model_15_1].[KEY] AS [KEY], [GB_Model_15_1].[Score_0] AS [Score_0], [GB_Model_15_1].[Score_1] AS [Score_1] 
 FROM [GB_Model_15_1]) AS [GB_esu_3]) AS [GB_B3]
 
--- Code For temporary table ##TMP_20180516111002_CODEGEN_BRY4EU_GB_sum part 1. Create 
+-- Code For temporary table ##TMP_20180602141844_7T2_GB_sum part 1. Create 
 
 
-CREATE TABLE ##TMP_20180516111002_CODEGEN_BRY4EU_GB_sum (
+CREATE TABLE ##TMP_20180602141844_7T2_GB_sum (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT(53) NULL, 
 	[Score_1] FLOAT(53) NULL
@@ -361,16 +361,16 @@ CREATE TABLE ##TMP_20180516111002_CODEGEN_BRY4EU_GB_sum (
 
 
 
--- Code For temporary table ##TMP_20180516111002_CODEGEN_BRY4EU_GB_sum part 2. Populate
+-- Code For temporary table ##TMP_20180602141844_7T2_GB_sum part 2. Populate
 
 WITH [GB_Union] AS 
 (SELECT [GB_EnsembleUnion].[KEY] AS [KEY], [GB_EnsembleUnion].[Score_0] AS [Score_0], [GB_EnsembleUnion].[Score_1] AS [Score_1] 
 FROM (SELECT [GB_B0].[KEY] AS [KEY], [GB_B0].[Score_0] AS [Score_0], [GB_B0].[Score_1] AS [Score_1] 
-FROM ##TMP_20180516111002_CODEGEN_P110CR_GB_B0 AS [GB_B0] UNION ALL SELECT [GB_B1].[KEY] AS [KEY], [GB_B1].[Score_0] AS [Score_0], [GB_B1].[Score_1] AS [Score_1] 
-FROM ##TMP_20180516111002_CODEGEN_TVHMHW_GB_B1 AS [GB_B1] UNION ALL SELECT [GB_B2].[KEY] AS [KEY], [GB_B2].[Score_0] AS [Score_0], [GB_B2].[Score_1] AS [Score_1] 
-FROM ##TMP_20180516111002_CODEGEN_IZ8L47_GB_B2 AS [GB_B2] UNION ALL SELECT [GB_B3].[KEY] AS [KEY], [GB_B3].[Score_0] AS [Score_0], [GB_B3].[Score_1] AS [Score_1] 
-FROM ##TMP_20180516111002_CODEGEN_38SQMV_GB_B3 AS [GB_B3]) AS [GB_EnsembleUnion])
- INSERT INTO ##TMP_20180516111002_CODEGEN_BRY4EU_GB_sum ([KEY], [Score_0], [Score_1]) SELECT [GB_sum].[KEY], [GB_sum].[Score_0], [GB_sum].[Score_1] 
+FROM ##TMP_20180602141844_IBE_GB_B0 AS [GB_B0] UNION ALL SELECT [GB_B1].[KEY] AS [KEY], [GB_B1].[Score_0] AS [Score_0], [GB_B1].[Score_1] AS [Score_1] 
+FROM ##TMP_20180602141844_UUC_GB_B1 AS [GB_B1] UNION ALL SELECT [GB_B2].[KEY] AS [KEY], [GB_B2].[Score_0] AS [Score_0], [GB_B2].[Score_1] AS [Score_1] 
+FROM ##TMP_20180602141844_F4P_GB_B2 AS [GB_B2] UNION ALL SELECT [GB_B3].[KEY] AS [KEY], [GB_B3].[Score_0] AS [Score_0], [GB_B3].[Score_1] AS [Score_1] 
+FROM ##TMP_20180602141844_D6N_GB_B3 AS [GB_B3]) AS [GB_EnsembleUnion])
+ INSERT INTO ##TMP_20180602141844_7T2_GB_sum ([KEY], [Score_0], [Score_1]) SELECT [GB_sum].[KEY], [GB_sum].[Score_0], [GB_sum].[Score_1] 
 FROM (SELECT [T].[KEY] AS [KEY], CAST([T].[Score_0] AS FLOAT(53)) AS [Score_0], CAST([T].[Score_1] AS FLOAT(53)) AS [Score_1] 
 FROM (SELECT [GB_Union].[KEY] AS [KEY], sum([GB_Union].[Score_0]) AS [Score_0], sum([GB_Union].[Score_1]) AS [Score_1] 
 FROM [GB_Union] GROUP BY [GB_Union].[KEY]) AS [T]) AS [GB_sum]
@@ -379,7 +379,7 @@ FROM [GB_Union] GROUP BY [GB_Union].[KEY]) AS [T]) AS [GB_sum]
 
 WITH orig_cte AS 
 (SELECT [GB_sum].[KEY] AS [KEY], -(-0.10008345855698253 + 0.1 * [GB_sum].[Score_1]) AS [Score_0], -0.10008345855698253 + 0.1 * [GB_sum].[Score_1] AS [Score_1], 1.0 - 1.0 / (1.0 + exp(CASE WHEN (CASE WHEN (-100.0 <= -(-0.10008345855698253 + 0.1 * [GB_sum].[Score_1])) THEN -(-0.10008345855698253 + 0.1 * [GB_sum].[Score_1]) ELSE -100.0 END <= 100.0) THEN CASE WHEN (-100.0 <= -(-0.10008345855698253 + 0.1 * [GB_sum].[Score_1])) THEN -(-0.10008345855698253 + 0.1 * [GB_sum].[Score_1]) ELSE -100.0 END ELSE 100.0 END)) AS [Proba_0], 1.0 / (1.0 + exp(CASE WHEN (CASE WHEN (-100.0 <= -(-0.10008345855698253 + 0.1 * [GB_sum].[Score_1])) THEN -(-0.10008345855698253 + 0.1 * [GB_sum].[Score_1]) ELSE -100.0 END <= 100.0) THEN CASE WHEN (-100.0 <= -(-0.10008345855698253 + 0.1 * [GB_sum].[Score_1])) THEN -(-0.10008345855698253 + 0.1 * [GB_sum].[Score_1]) ELSE -100.0 END ELSE 100.0 END)) AS [Proba_1], CAST(NULL AS FLOAT(53)) AS [LogProba_0], CAST(NULL AS FLOAT(53)) AS [LogProba_1], CAST(NULL AS BIGINT) AS [Decision], CAST(NULL AS FLOAT(53)) AS [DecisionProba] 
-FROM ##TMP_20180516111002_CODEGEN_BRY4EU_GB_sum AS [GB_sum]), 
+FROM ##TMP_20180602141844_7T2_GB_sum AS [GB_sum]), 
 score_class_union AS 
 (SELECT scu.[KEY_u] AS [KEY_u], scu.class AS class, scu.[LogProba] AS [LogProba], scu.[Proba] AS [Proba], scu.[Score] AS [Score] 
 FROM (SELECT orig_cte.[KEY] AS [KEY_u], 0 AS class, orig_cte.[LogProba_0] AS [LogProba], orig_cte.[Proba_0] AS [Proba], orig_cte.[Score_0] AS [Score] 

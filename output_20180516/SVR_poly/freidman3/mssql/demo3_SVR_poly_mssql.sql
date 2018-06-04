@@ -21,7 +21,7 @@ FROM (SELECT 0 AS sv_idx, 4.588854026500651e-13 AS dual_coeff, 54.38834102865398
 kernel_dp AS 
 (SELECT t.[KEY] AS [KEY], t.dot_product AS dot_product 
 FROM (SELECT full_join_data_sv.[KEY] AS [KEY], sum(CAST(full_join_data_sv.dot_prod1 AS FLOAT(53))) + -22.040528884035563 AS dot_product 
-FROM (SELECT kernel_input.[KEY] AS [KEY], [SV_data].dual_coeff * power(0.25 * (kernel_input.[Feature_0] * [SV_data].sv_0 + kernel_input.[Feature_1] * [SV_data].sv_1 + kernel_input.[Feature_2] * [SV_data].sv_2 + kernel_input.[Feature_3] * [SV_data].sv_3) + 0.0, 3) AS dot_prod1 
+FROM (SELECT kernel_input.[KEY] AS [KEY], [SV_data].dual_coeff * power(CAST(0.25 * (kernel_input.[Feature_0] * [SV_data].sv_0 + kernel_input.[Feature_1] * [SV_data].sv_1 + kernel_input.[Feature_2] * [SV_data].sv_2 + kernel_input.[Feature_3] * [SV_data].sv_3) + 0.0 AS FLOAT(53)), 3) AS dot_prod1 
 FROM kernel_input, [SV_data]) AS full_join_data_sv GROUP BY full_join_data_sv.[KEY]) AS t)
  SELECT kernel_dp.[KEY] AS [KEY], kernel_dp.dot_product AS [Estimator] 
 FROM kernel_dp

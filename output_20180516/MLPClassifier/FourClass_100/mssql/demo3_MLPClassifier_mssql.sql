@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table ##TMP_20180516113126_CODEGEN_B4BB6V_HL_1_relu_1 part 1. Create 
+-- Code For temporary table ##TMP_20180602143904_SEK_HL_1_relu_1 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180516113126_CODEGEN_B4BB6V_HL_1_relu_1 (
+CREATE TABLE ##TMP_20180602143904_SEK_HL_1_relu_1 (
 	[KEY] BIGINT NULL, 
 	[NEUR_1_1] FLOAT NULL, 
 	[NEUR_1_2] FLOAT NULL, 
@@ -22,7 +22,7 @@ CREATE TABLE ##TMP_20180516113126_CODEGEN_B4BB6V_HL_1_relu_1 (
 
 
 
--- Code For temporary table ##TMP_20180516113126_CODEGEN_B4BB6V_HL_1_relu_1 part 2. Populate
+-- Code For temporary table ##TMP_20180602143904_SEK_HL_1_relu_1 part 2. Populate
 
 WITH [IL] AS 
 (SELECT [ADS].[KEY] AS [KEY], CAST([ADS].[Feature_0] AS FLOAT(53)) AS [Feature_0], CAST([ADS].[Feature_1] AS FLOAT(53)) AS [Feature_1], CAST([ADS].[Feature_2] AS FLOAT(53)) AS [Feature_2], CAST([ADS].[Feature_3] AS FLOAT(53)) AS [Feature_3], CAST([ADS].[Feature_4] AS FLOAT(53)) AS [Feature_4], CAST([ADS].[Feature_5] AS FLOAT(53)) AS [Feature_5], CAST([ADS].[Feature_6] AS FLOAT(53)) AS [Feature_6], CAST([ADS].[Feature_7] AS FLOAT(53)) AS [Feature_7], CAST([ADS].[Feature_8] AS FLOAT(53)) AS [Feature_8], CAST([ADS].[Feature_9] AS FLOAT(53)) AS [Feature_9], CAST([ADS].[Feature_10] AS FLOAT(53)) AS [Feature_10], CAST([ADS].[Feature_11] AS FLOAT(53)) AS [Feature_11], CAST([ADS].[Feature_12] AS FLOAT(53)) AS [Feature_12], CAST([ADS].[Feature_13] AS FLOAT(53)) AS [Feature_13], CAST([ADS].[Feature_14] AS FLOAT(53)) AS [Feature_14], CAST([ADS].[Feature_15] AS FLOAT(53)) AS [Feature_15], CAST([ADS].[Feature_16] AS FLOAT(53)) AS [Feature_16], CAST([ADS].[Feature_17] AS FLOAT(53)) AS [Feature_17], CAST([ADS].[Feature_18] AS FLOAT(53)) AS [Feature_18], CAST([ADS].[Feature_19] AS FLOAT(53)) AS [Feature_19], CAST([ADS].[Feature_20] AS FLOAT(53)) AS [Feature_20], CAST([ADS].[Feature_21] AS FLOAT(53)) AS [Feature_21], CAST([ADS].[Feature_22] AS FLOAT(53)) AS [Feature_22], CAST([ADS].[Feature_23] AS FLOAT(53)) AS [Feature_23], CAST([ADS].[Feature_24] AS FLOAT(53)) AS [Feature_24], CAST([ADS].[Feature_25] AS FLOAT(53)) AS [Feature_25], CAST([ADS].[Feature_26] AS FLOAT(53)) AS [Feature_26], CAST([ADS].[Feature_27] AS FLOAT(53)) AS [Feature_27], CAST([ADS].[Feature_28] AS FLOAT(53)) AS [Feature_28], CAST([ADS].[Feature_29] AS FLOAT(53)) AS [Feature_29], CAST([ADS].[Feature_30] AS FLOAT(53)) AS [Feature_30], CAST([ADS].[Feature_31] AS FLOAT(53)) AS [Feature_31], CAST([ADS].[Feature_32] AS FLOAT(53)) AS [Feature_32], CAST([ADS].[Feature_33] AS FLOAT(53)) AS [Feature_33], CAST([ADS].[Feature_34] AS FLOAT(53)) AS [Feature_34], CAST([ADS].[Feature_35] AS FLOAT(53)) AS [Feature_35], CAST([ADS].[Feature_36] AS FLOAT(53)) AS [Feature_36], CAST([ADS].[Feature_37] AS FLOAT(53)) AS [Feature_37], CAST([ADS].[Feature_38] AS FLOAT(53)) AS [Feature_38], CAST([ADS].[Feature_39] AS FLOAT(53)) AS [Feature_39], CAST([ADS].[Feature_40] AS FLOAT(53)) AS [Feature_40], CAST([ADS].[Feature_41] AS FLOAT(53)) AS [Feature_41], CAST([ADS].[Feature_42] AS FLOAT(53)) AS [Feature_42], CAST([ADS].[Feature_43] AS FLOAT(53)) AS [Feature_43], CAST([ADS].[Feature_44] AS FLOAT(53)) AS [Feature_44], CAST([ADS].[Feature_45] AS FLOAT(53)) AS [Feature_45], CAST([ADS].[Feature_46] AS FLOAT(53)) AS [Feature_46], CAST([ADS].[Feature_47] AS FLOAT(53)) AS [Feature_47], CAST([ADS].[Feature_48] AS FLOAT(53)) AS [Feature_48], CAST([ADS].[Feature_49] AS FLOAT(53)) AS [Feature_49], CAST([ADS].[Feature_50] AS FLOAT(53)) AS [Feature_50], CAST([ADS].[Feature_51] AS FLOAT(53)) AS [Feature_51], CAST([ADS].[Feature_52] AS FLOAT(53)) AS [Feature_52], CAST([ADS].[Feature_53] AS FLOAT(53)) AS [Feature_53], CAST([ADS].[Feature_54] AS FLOAT(53)) AS [Feature_54], CAST([ADS].[Feature_55] AS FLOAT(53)) AS [Feature_55], CAST([ADS].[Feature_56] AS FLOAT(53)) AS [Feature_56], CAST([ADS].[Feature_57] AS FLOAT(53)) AS [Feature_57], CAST([ADS].[Feature_58] AS FLOAT(53)) AS [Feature_58], CAST([ADS].[Feature_59] AS FLOAT(53)) AS [Feature_59], CAST([ADS].[Feature_60] AS FLOAT(53)) AS [Feature_60], CAST([ADS].[Feature_61] AS FLOAT(53)) AS [Feature_61], CAST([ADS].[Feature_62] AS FLOAT(53)) AS [Feature_62], CAST([ADS].[Feature_63] AS FLOAT(53)) AS [Feature_63], CAST([ADS].[Feature_64] AS FLOAT(53)) AS [Feature_64], CAST([ADS].[Feature_65] AS FLOAT(53)) AS [Feature_65], CAST([ADS].[Feature_66] AS FLOAT(53)) AS [Feature_66], CAST([ADS].[Feature_67] AS FLOAT(53)) AS [Feature_67], CAST([ADS].[Feature_68] AS FLOAT(53)) AS [Feature_68], CAST([ADS].[Feature_69] AS FLOAT(53)) AS [Feature_69], CAST([ADS].[Feature_70] AS FLOAT(53)) AS [Feature_70], CAST([ADS].[Feature_71] AS FLOAT(53)) AS [Feature_71], CAST([ADS].[Feature_72] AS FLOAT(53)) AS [Feature_72], CAST([ADS].[Feature_73] AS FLOAT(53)) AS [Feature_73], CAST([ADS].[Feature_74] AS FLOAT(53)) AS [Feature_74], CAST([ADS].[Feature_75] AS FLOAT(53)) AS [Feature_75], CAST([ADS].[Feature_76] AS FLOAT(53)) AS [Feature_76], CAST([ADS].[Feature_77] AS FLOAT(53)) AS [Feature_77], CAST([ADS].[Feature_78] AS FLOAT(53)) AS [Feature_78], CAST([ADS].[Feature_79] AS FLOAT(53)) AS [Feature_79], CAST([ADS].[Feature_80] AS FLOAT(53)) AS [Feature_80], CAST([ADS].[Feature_81] AS FLOAT(53)) AS [Feature_81], CAST([ADS].[Feature_82] AS FLOAT(53)) AS [Feature_82], CAST([ADS].[Feature_83] AS FLOAT(53)) AS [Feature_83], CAST([ADS].[Feature_84] AS FLOAT(53)) AS [Feature_84], CAST([ADS].[Feature_85] AS FLOAT(53)) AS [Feature_85], CAST([ADS].[Feature_86] AS FLOAT(53)) AS [Feature_86], CAST([ADS].[Feature_87] AS FLOAT(53)) AS [Feature_87], CAST([ADS].[Feature_88] AS FLOAT(53)) AS [Feature_88], CAST([ADS].[Feature_89] AS FLOAT(53)) AS [Feature_89], CAST([ADS].[Feature_90] AS FLOAT(53)) AS [Feature_90], CAST([ADS].[Feature_91] AS FLOAT(53)) AS [Feature_91], CAST([ADS].[Feature_92] AS FLOAT(53)) AS [Feature_92], CAST([ADS].[Feature_93] AS FLOAT(53)) AS [Feature_93], CAST([ADS].[Feature_94] AS FLOAT(53)) AS [Feature_94], CAST([ADS].[Feature_95] AS FLOAT(53)) AS [Feature_95], CAST([ADS].[Feature_96] AS FLOAT(53)) AS [Feature_96], CAST([ADS].[Feature_97] AS FLOAT(53)) AS [Feature_97], CAST([ADS].[Feature_98] AS FLOAT(53)) AS [Feature_98], CAST([ADS].[Feature_99] AS FLOAT(53)) AS [Feature_99] 
@@ -33,14 +33,14 @@ FROM [IL]),
 [HL_1_relu] AS 
 (SELECT [HL_BA_1].[KEY] AS [KEY], CASE WHEN ([HL_BA_1].[NEUR_1_1] <= 0) THEN 0 ELSE [HL_BA_1].[NEUR_1_1] END AS [NEUR_1_1], CASE WHEN ([HL_BA_1].[NEUR_1_2] <= 0) THEN 0 ELSE [HL_BA_1].[NEUR_1_2] END AS [NEUR_1_2], CASE WHEN ([HL_BA_1].[NEUR_1_3] <= 0) THEN 0 ELSE [HL_BA_1].[NEUR_1_3] END AS [NEUR_1_3] 
 FROM [HL_BA_1])
- INSERT INTO ##TMP_20180516113126_CODEGEN_B4BB6V_HL_1_relu_1 ([KEY], [NEUR_1_1], [NEUR_1_2], [NEUR_1_3]) SELECT [HL_1_relu_1].[KEY], [HL_1_relu_1].[NEUR_1_1], [HL_1_relu_1].[NEUR_1_2], [HL_1_relu_1].[NEUR_1_3] 
+ INSERT INTO ##TMP_20180602143904_SEK_HL_1_relu_1 ([KEY], [NEUR_1_1], [NEUR_1_2], [NEUR_1_3]) SELECT [HL_1_relu_1].[KEY], [HL_1_relu_1].[NEUR_1_1], [HL_1_relu_1].[NEUR_1_2], [HL_1_relu_1].[NEUR_1_3] 
 FROM (SELECT [HL_1_relu].[KEY] AS [KEY], [HL_1_relu].[NEUR_1_1] AS [NEUR_1_1], [HL_1_relu].[NEUR_1_2] AS [NEUR_1_2], [HL_1_relu].[NEUR_1_3] AS [NEUR_1_3] 
 FROM [HL_1_relu]) AS [HL_1_relu_1]
 
--- Code For temporary table ##TMP_20180516113126_CODEGEN_4O8PBL_OL_softmax_1 part 1. Create 
+-- Code For temporary table ##TMP_20180602143904_5BG_OL_softmax_1 part 1. Create 
 
 
-CREATE TABLE ##TMP_20180516113126_CODEGEN_4O8PBL_OL_softmax_1 (
+CREATE TABLE ##TMP_20180602143904_5BG_OL_softmax_1 (
 	[KEY] BIGINT NULL, 
 	[NEUR_3_1] FLOAT NULL, 
 	[NEUR_3_2] FLOAT NULL, 
@@ -50,11 +50,11 @@ CREATE TABLE ##TMP_20180516113126_CODEGEN_4O8PBL_OL_softmax_1 (
 
 
 
--- Code For temporary table ##TMP_20180516113126_CODEGEN_4O8PBL_OL_softmax_1 part 2. Populate
+-- Code For temporary table ##TMP_20180602143904_5BG_OL_softmax_1 part 2. Populate
 
 WITH [HL_BA_2] AS 
 (SELECT [HL_1_relu_1].[KEY] AS [KEY], 0.40850400024197087 * [HL_1_relu_1].[NEUR_1_1] + -0.3724854879085448 * [HL_1_relu_1].[NEUR_1_2] + 3.3318906201565635 * [HL_1_relu_1].[NEUR_1_3] + -1.5632332564550018 AS [NEUR_2_1], -2.762339357200178 * [HL_1_relu_1].[NEUR_1_1] + -2.5926459360642204 * [HL_1_relu_1].[NEUR_1_2] + 1.1938936236490711 * [HL_1_relu_1].[NEUR_1_3] + 4.414871798715717 AS [NEUR_2_2], -1.0959572451235382 * [HL_1_relu_1].[NEUR_1_1] + 1.0889889482527488 * [HL_1_relu_1].[NEUR_1_2] + 0.5322912426271365 * [HL_1_relu_1].[NEUR_1_3] + -1.8292351276529497 AS [NEUR_2_3], -0.16573869802078015 * [HL_1_relu_1].[NEUR_1_1] + 3.8662513683140896 * [HL_1_relu_1].[NEUR_1_2] + -1.5657067269338925 * [HL_1_relu_1].[NEUR_1_3] + 1.8982459372321105 AS [NEUR_2_4], -0.609304507588836 * [HL_1_relu_1].[NEUR_1_1] + -0.3776422773901093 * [HL_1_relu_1].[NEUR_1_2] + -0.6729549566187693 * [HL_1_relu_1].[NEUR_1_3] + -0.01807831622698608 AS [NEUR_2_5] 
-FROM ##TMP_20180516113126_CODEGEN_B4BB6V_HL_1_relu_1 AS [HL_1_relu_1]), 
+FROM ##TMP_20180602143904_SEK_HL_1_relu_1 AS [HL_1_relu_1]), 
 [HL_2_relu] AS 
 (SELECT [HL_BA_2].[KEY] AS [KEY], CASE WHEN ([HL_BA_2].[NEUR_2_1] <= 0) THEN 0 ELSE [HL_BA_2].[NEUR_2_1] END AS [NEUR_2_1], CASE WHEN ([HL_BA_2].[NEUR_2_2] <= 0) THEN 0 ELSE [HL_BA_2].[NEUR_2_2] END AS [NEUR_2_2], CASE WHEN ([HL_BA_2].[NEUR_2_3] <= 0) THEN 0 ELSE [HL_BA_2].[NEUR_2_3] END AS [NEUR_2_3], CASE WHEN ([HL_BA_2].[NEUR_2_4] <= 0) THEN 0 ELSE [HL_BA_2].[NEUR_2_4] END AS [NEUR_2_4], CASE WHEN ([HL_BA_2].[NEUR_2_5] <= 0) THEN 0 ELSE [HL_BA_2].[NEUR_2_5] END AS [NEUR_2_5] 
 FROM [HL_BA_2]), 
@@ -64,7 +64,7 @@ FROM [HL_2_relu]),
 [OL_softmax] AS 
 (SELECT [OL_BA].[KEY] AS [KEY], [OL_BA].[NEUR_3_1] AS [NEUR_3_1], [OL_BA].[NEUR_3_2] AS [NEUR_3_2], [OL_BA].[NEUR_3_3] AS [NEUR_3_3], [OL_BA].[NEUR_3_4] AS [NEUR_3_4] 
 FROM [OL_BA])
- INSERT INTO ##TMP_20180516113126_CODEGEN_4O8PBL_OL_softmax_1 ([KEY], [NEUR_3_1], [NEUR_3_2], [NEUR_3_3], [NEUR_3_4]) SELECT [OL_softmax_1].[KEY], [OL_softmax_1].[NEUR_3_1], [OL_softmax_1].[NEUR_3_2], [OL_softmax_1].[NEUR_3_3], [OL_softmax_1].[NEUR_3_4] 
+ INSERT INTO ##TMP_20180602143904_5BG_OL_softmax_1 ([KEY], [NEUR_3_1], [NEUR_3_2], [NEUR_3_3], [NEUR_3_4]) SELECT [OL_softmax_1].[KEY], [OL_softmax_1].[NEUR_3_1], [OL_softmax_1].[NEUR_3_2], [OL_softmax_1].[NEUR_3_3], [OL_softmax_1].[NEUR_3_4] 
 FROM (SELECT [OL_softmax].[KEY] AS [KEY], [OL_softmax].[NEUR_3_1] AS [NEUR_3_1], [OL_softmax].[NEUR_3_2] AS [NEUR_3_2], [OL_softmax].[NEUR_3_3] AS [NEUR_3_3], [OL_softmax].[NEUR_3_4] AS [NEUR_3_4] 
 FROM [OL_softmax]) AS [OL_softmax_1]
 
@@ -72,7 +72,7 @@ FROM [OL_softmax]) AS [OL_softmax_1]
 
 WITH orig_cte AS 
 (SELECT [OL_softmax_1].[KEY] AS [KEY], [OL_softmax_1].[NEUR_3_1] AS [Score_0], [OL_softmax_1].[NEUR_3_2] AS [Score_1], [OL_softmax_1].[NEUR_3_3] AS [Score_2], [OL_softmax_1].[NEUR_3_4] AS [Score_3], CAST(NULL AS FLOAT(53)) AS [Proba_0], CAST(NULL AS FLOAT(53)) AS [Proba_1], CAST(NULL AS FLOAT(53)) AS [Proba_2], CAST(NULL AS FLOAT(53)) AS [Proba_3], CAST(NULL AS FLOAT(53)) AS [LogProba_0], CAST(NULL AS FLOAT(53)) AS [LogProba_1], CAST(NULL AS FLOAT(53)) AS [LogProba_2], CAST(NULL AS FLOAT(53)) AS [LogProba_3], CAST(NULL AS BIGINT) AS [Decision], CAST(NULL AS FLOAT(53)) AS [DecisionProba] 
-FROM ##TMP_20180516113126_CODEGEN_4O8PBL_OL_softmax_1 AS [OL_softmax_1]), 
+FROM ##TMP_20180602143904_5BG_OL_softmax_1 AS [OL_softmax_1]), 
 score_class_union AS 
 (SELECT scu.[KEY_u] AS [KEY_u], scu.class AS class, scu.[LogProba] AS [LogProba], scu.[Proba] AS [Proba], scu.[Score] AS [Score] 
 FROM (SELECT orig_cte.[KEY] AS [KEY_u], 0 AS class, orig_cte.[LogProba_0] AS [LogProba], orig_cte.[Proba_0] AS [Proba], orig_cte.[Score_0] AS [Score] 

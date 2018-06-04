@@ -21,7 +21,7 @@ FROM (SELECT 0 AS sv_idx, 0.1 AS dual_coeff, 0.0707687524926 AS sv_0, -0.0446416
 kernel_dp AS 
 (SELECT t.[KEY] AS [KEY], t.dot_product AS dot_product 
 FROM (SELECT full_join_data_sv.[KEY] AS [KEY], sum(CAST(full_join_data_sv.dot_prod1 AS FLOAT(53))) + 135.49999999846688 AS dot_product 
-FROM (SELECT kernel_input.[KEY] AS [KEY], [SV_data].dual_coeff * power(0.1 * (kernel_input.[Feature_0] * [SV_data].sv_0 + kernel_input.[Feature_1] * [SV_data].sv_1 + kernel_input.[Feature_2] * [SV_data].sv_2 + kernel_input.[Feature_3] * [SV_data].sv_3 + kernel_input.[Feature_4] * [SV_data].sv_4 + kernel_input.[Feature_5] * [SV_data].sv_5 + kernel_input.[Feature_6] * [SV_data].sv_6 + kernel_input.[Feature_7] * [SV_data].sv_7 + kernel_input.[Feature_8] * [SV_data].sv_8 + kernel_input.[Feature_9] * [SV_data].sv_9) + 0.0, 3) AS dot_prod1 
+FROM (SELECT kernel_input.[KEY] AS [KEY], [SV_data].dual_coeff * power(CAST(0.1 * (kernel_input.[Feature_0] * [SV_data].sv_0 + kernel_input.[Feature_1] * [SV_data].sv_1 + kernel_input.[Feature_2] * [SV_data].sv_2 + kernel_input.[Feature_3] * [SV_data].sv_3 + kernel_input.[Feature_4] * [SV_data].sv_4 + kernel_input.[Feature_5] * [SV_data].sv_5 + kernel_input.[Feature_6] * [SV_data].sv_6 + kernel_input.[Feature_7] * [SV_data].sv_7 + kernel_input.[Feature_8] * [SV_data].sv_8 + kernel_input.[Feature_9] * [SV_data].sv_9) + 0.0 AS FLOAT(53)), 3) AS dot_prod1 
 FROM kernel_input, [SV_data]) AS full_join_data_sv GROUP BY full_join_data_sv.[KEY]) AS t)
  SELECT kernel_dp.[KEY] AS [KEY], kernel_dp.dot_product AS [Estimator] 
 FROM kernel_dp
