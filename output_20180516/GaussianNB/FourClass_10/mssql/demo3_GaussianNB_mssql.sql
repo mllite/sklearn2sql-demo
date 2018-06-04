@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table ##TMP_20180516112312_CODEGEN_AKDSLS_NaiveBayes_Scores part 1. Create 
+-- Code For temporary table ##TMP_20180602143115_IP2_NaiveBayes_Scores part 1. Create 
 
 
-CREATE TABLE ##TMP_20180516112312_CODEGEN_AKDSLS_NaiveBayes_Scores (
+CREATE TABLE ##TMP_20180602143115_IP2_NaiveBayes_Scores (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT NULL, 
 	[Score_1] FLOAT NULL, 
@@ -23,7 +23,7 @@ CREATE TABLE ##TMP_20180516112312_CODEGEN_AKDSLS_NaiveBayes_Scores (
 
 
 
--- Code For temporary table ##TMP_20180516112312_CODEGEN_AKDSLS_NaiveBayes_Scores part 2. Populate
+-- Code For temporary table ##TMP_20180602143115_IP2_NaiveBayes_Scores part 2. Populate
 
 WITH centered_data AS 
 (SELECT [ADS].[KEY] AS [KEY], CAST([ADS].[Feature_0] AS FLOAT(53)) - 0.12197232402085767 AS [Feature_0_0], CAST([ADS].[Feature_1] AS FLOAT(53)) - -0.2042090641433511 AS [Feature_1_0], CAST([ADS].[Feature_2] AS FLOAT(53)) - -0.17866802296600057 AS [Feature_2_0], CAST([ADS].[Feature_3] AS FLOAT(53)) - -0.33848916280925834 AS [Feature_3_0], CAST([ADS].[Feature_4] AS FLOAT(53)) - 0.692046433348698 AS [Feature_4_0], CAST([ADS].[Feature_5] AS FLOAT(53)) - -0.2328895438714148 AS [Feature_5_0], CAST([ADS].[Feature_6] AS FLOAT(53)) - 0.14890501454364152 AS [Feature_6_0], CAST([ADS].[Feature_7] AS FLOAT(53)) - 0.3442614656998575 AS [Feature_7_0], CAST([ADS].[Feature_8] AS FLOAT(53)) - 0.48106253993680564 AS [Feature_8_0], CAST([ADS].[Feature_9] AS FLOAT(53)) - 0.21072572298483708 AS [Feature_9_0], CAST([ADS].[Feature_0] AS FLOAT(53)) - -0.05580445711365931 AS [Feature_0_1], CAST([ADS].[Feature_1] AS FLOAT(53)) - 1.1164241563456594 AS [Feature_1_1], CAST([ADS].[Feature_2] AS FLOAT(53)) - 1.232091266694883 AS [Feature_2_1], CAST([ADS].[Feature_3] AS FLOAT(53)) - 2.8562011764091926 AS [Feature_3_1], CAST([ADS].[Feature_4] AS FLOAT(53)) - -0.1946777354077039 AS [Feature_4_1], CAST([ADS].[Feature_5] AS FLOAT(53)) - -0.30885979017841814 AS [Feature_5_1], CAST([ADS].[Feature_6] AS FLOAT(53)) - -1.2090009093244745 AS [Feature_6_1], CAST([ADS].[Feature_7] AS FLOAT(53)) - 1.2254337694197592 AS [Feature_7_1], CAST([ADS].[Feature_8] AS FLOAT(53)) - -0.2168859340616714 AS [Feature_8_1], CAST([ADS].[Feature_9] AS FLOAT(53)) - 0.046430005146285355 AS [Feature_9_1], CAST([ADS].[Feature_0] AS FLOAT(53)) - 0.040527414301684696 AS [Feature_0_2], CAST([ADS].[Feature_1] AS FLOAT(53)) - -0.20169636688948053 AS [Feature_1_2], CAST([ADS].[Feature_2] AS FLOAT(53)) - -1.065660222353177 AS [Feature_2_2], CAST([ADS].[Feature_3] AS FLOAT(53)) - -0.9339519751932575 AS [Feature_3_2], CAST([ADS].[Feature_4] AS FLOAT(53)) - -0.9273853948833596 AS [Feature_4_2], CAST([ADS].[Feature_5] AS FLOAT(53)) - 0.18075085383747674 AS [Feature_5_2], CAST([ADS].[Feature_6] AS FLOAT(53)) - 0.3367308034182364 AS [Feature_6_2], CAST([ADS].[Feature_7] AS FLOAT(53)) - -0.04097908155884643 AS [Feature_7_2], CAST([ADS].[Feature_8] AS FLOAT(53)) - 0.26965800608399576 AS [Feature_8_2], CAST([ADS].[Feature_9] AS FLOAT(53)) - 0.14187498063568335 AS [Feature_9_2], CAST([ADS].[Feature_0] AS FLOAT(53)) - -0.10010140605357654 AS [Feature_0_3], CAST([ADS].[Feature_1] AS FLOAT(53)) - 1.5726847768670615 AS [Feature_1_3], CAST([ADS].[Feature_2] AS FLOAT(53)) - 0.1505046581680554 AS [Feature_2_3], CAST([ADS].[Feature_3] AS FLOAT(53)) - 1.3330171535218418 AS [Feature_3_3], CAST([ADS].[Feature_4] AS FLOAT(53)) - -1.120734549744089 AS [Feature_4_3], CAST([ADS].[Feature_5] AS FLOAT(53)) - 0.15247885409781847 AS [Feature_5_3], CAST([ADS].[Feature_6] AS FLOAT(53)) - -0.41282510179714293 AS [Feature_6_3], CAST([ADS].[Feature_7] AS FLOAT(53)) - -0.824909406091562 AS [Feature_7_3], CAST([ADS].[Feature_8] AS FLOAT(53)) - -0.3780460568899708 AS [Feature_8_3], CAST([ADS].[Feature_9] AS FLOAT(53)) - 0.07485010923253889 AS [Feature_9_3] 
@@ -41,7 +41,7 @@ FROM centered_data UNION ALL SELECT centered_data.[KEY] AS [KEY], 7 AS [Feature]
 FROM centered_data UNION ALL SELECT centered_data.[KEY] AS [KEY], 8 AS [Feature], -0.5 * 1.9784045837791924 - (0.5 * centered_data.[Feature_8_0] * centered_data.[Feature_8_0]) / 1.150880748340327 AS log_proba_0, -0.5 * 1.9522235753361836 - (0.5 * centered_data.[Feature_8_1] * centered_data.[Feature_8_1]) / 1.121140542791448 AS log_proba_1, -0.5 * 1.1156882289715433 - (0.5 * centered_data.[Feature_8_2] * centered_data.[Feature_8_2]) / 0.48568799956621594 AS log_proba_2, -0.5 * 2.5088130000211453 - (0.5 * centered_data.[Feature_8_3] * centered_data.[Feature_8_3]) / 1.9560672132251689 AS log_proba_3 
 FROM centered_data UNION ALL SELECT centered_data.[KEY] AS [KEY], 9 AS [Feature], -0.5 * 2.01066944059928 - (0.5 * centered_data.[Feature_9_0] * centered_data.[Feature_9_0]) / 1.1886192914192353 AS log_proba_0, -0.5 * 1.6318807066510728 - (0.5 * centered_data.[Feature_9_1] * centered_data.[Feature_9_1]) / 0.8138360388374362 AS log_proba_1, -0.5 * 1.7774903574721328 - (0.5 * centered_data.[Feature_9_2] * centered_data.[Feature_9_2]) / 0.9414004152308103 AS log_proba_2, -0.5 * 1.6549510383945059 - (0.5 * centered_data.[Feature_9_3] * centered_data.[Feature_9_3]) / 0.8328297595291985 AS log_proba_3 
 FROM centered_data) AS [Values])
- INSERT INTO ##TMP_20180516112312_CODEGEN_AKDSLS_NaiveBayes_Scores ([KEY], [Score_0], [Score_1], [Score_2], [Score_3]) SELECT [NaiveBayes_Scores].[KEY], [NaiveBayes_Scores].[Score_0], [NaiveBayes_Scores].[Score_1], [NaiveBayes_Scores].[Score_2], [NaiveBayes_Scores].[Score_3] 
+ INSERT INTO ##TMP_20180602143115_IP2_NaiveBayes_Scores ([KEY], [Score_0], [Score_1], [Score_2], [Score_3]) SELECT [NaiveBayes_Scores].[KEY], [NaiveBayes_Scores].[Score_0], [NaiveBayes_Scores].[Score_1], [NaiveBayes_Scores].[Score_2], [NaiveBayes_Scores].[Score_3] 
 FROM (SELECT nb_sums.[KEY] AS [KEY], nb_sums.[Score_0] AS [Score_0], nb_sums.[Score_1] AS [Score_1], nb_sums.[Score_2] AS [Score_2], nb_sums.[Score_3] AS [Score_3] 
 FROM (SELECT [NaiveBayes_data].[KEY] AS [KEY], -1.491654876777717 + sum([NaiveBayes_data].log_proba_0) AS [Score_0], -1.3862943611198906 + sum([NaiveBayes_data].log_proba_1) AS [Score_1], -1.3862943611198906 + sum([NaiveBayes_data].log_proba_2) AS [Score_2], -1.2909841813155656 + sum([NaiveBayes_data].log_proba_3) AS [Score_3] 
 FROM [NaiveBayes_data] GROUP BY [NaiveBayes_data].[KEY]) AS nb_sums) AS [NaiveBayes_Scores]
@@ -50,7 +50,7 @@ FROM [NaiveBayes_data] GROUP BY [NaiveBayes_data].[KEY]) AS nb_sums) AS [NaiveBa
 
 WITH orig_cte AS 
 (SELECT [NaiveBayes_Scores].[KEY] AS [KEY], [NaiveBayes_Scores].[Score_0] AS [Score_0], [NaiveBayes_Scores].[Score_1] AS [Score_1], [NaiveBayes_Scores].[Score_2] AS [Score_2], [NaiveBayes_Scores].[Score_3] AS [Score_3], CAST(NULL AS FLOAT(53)) AS [Proba_0], CAST(NULL AS FLOAT(53)) AS [Proba_1], CAST(NULL AS FLOAT(53)) AS [Proba_2], CAST(NULL AS FLOAT(53)) AS [Proba_3], CAST(NULL AS FLOAT(53)) AS [LogProba_0], CAST(NULL AS FLOAT(53)) AS [LogProba_1], CAST(NULL AS FLOAT(53)) AS [LogProba_2], CAST(NULL AS FLOAT(53)) AS [LogProba_3], CAST(NULL AS BIGINT) AS [Decision], CAST(NULL AS FLOAT(53)) AS [DecisionProba] 
-FROM ##TMP_20180516112312_CODEGEN_AKDSLS_NaiveBayes_Scores AS [NaiveBayes_Scores]), 
+FROM ##TMP_20180602143115_IP2_NaiveBayes_Scores AS [NaiveBayes_Scores]), 
 score_class_union AS 
 (SELECT scu.[KEY_u] AS [KEY_u], scu.class AS class, scu.[LogProba] AS [LogProba], scu.[Proba] AS [Proba], scu.[Score] AS [Score] 
 FROM (SELECT orig_cte.[KEY] AS [KEY_u], 0 AS class, orig_cte.[LogProba_0] AS [LogProba], orig_cte.[Proba_0] AS [Proba], orig_cte.[Score_0] AS [Score] 

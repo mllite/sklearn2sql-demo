@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180516122413_codegen_az42n2_naivebayes_scores part 1. Create 
+-- Code For temporary table tmp_20180602152749_4jx_naivebayes_scores part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516122413_codegen_az42n2_naivebayes_scores  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602152749_4jx_naivebayes_scores  (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -22,9 +22,9 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516122413_codegen_az42n2_naivebayes_score
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516122413_codegen_az42n2_naivebayes_scores part 2. Populate
+-- Code For temporary table tmp_20180602152749_4jx_naivebayes_scores part 2. Populate
 
-INSERT INTO tmp_20180516122413_codegen_az42n2_naivebayes_scores ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
+INSERT INTO tmp_20180602152749_4jx_naivebayes_scores ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
 FROM (WITH centered_data AS 
 (SELECT "ADS"."KEY" AS "KEY", CAST("ADS"."Feature_0" AS DOUBLE PRECISION) - CAST(4.95945945945946 AS DOUBLE PRECISION) AS "Feature_0_0", CAST("ADS"."Feature_1" AS DOUBLE PRECISION) - CAST(3.416216216216216 AS DOUBLE PRECISION) AS "Feature_1_0", CAST("ADS"."Feature_2" AS DOUBLE PRECISION) - CAST(1.486486486486486 AS DOUBLE PRECISION) AS "Feature_2_0", CAST("ADS"."Feature_3" AS DOUBLE PRECISION) - CAST(0.259459459459459 AS DOUBLE PRECISION) AS "Feature_3_0", CAST("ADS"."Feature_0" AS DOUBLE PRECISION) - CAST(5.914999999999999 AS DOUBLE PRECISION) AS "Feature_0_1", CAST("ADS"."Feature_1" AS DOUBLE PRECISION) - CAST(2.76 AS DOUBLE PRECISION) AS "Feature_1_1", CAST("ADS"."Feature_2" AS DOUBLE PRECISION) - CAST(4.245 AS DOUBLE PRECISION) AS "Feature_2_1", CAST("ADS"."Feature_3" AS DOUBLE PRECISION) - CAST(1.325 AS DOUBLE PRECISION) AS "Feature_3_1", CAST("ADS"."Feature_0" AS DOUBLE PRECISION) - CAST(6.548837209302325 AS DOUBLE PRECISION) AS "Feature_0_2", CAST("ADS"."Feature_1" AS DOUBLE PRECISION) - CAST(2.967441860465116 AS DOUBLE PRECISION) AS "Feature_1_2", CAST("ADS"."Feature_2" AS DOUBLE PRECISION) - CAST(5.502325581395348 AS DOUBLE PRECISION) AS "Feature_2_2", CAST("ADS"."Feature_3" AS DOUBLE PRECISION) - CAST(2.01860465116279 AS DOUBLE PRECISION) AS "Feature_3_2" 
 FROM iris AS "ADS"), 
@@ -46,7 +46,7 @@ FROM "NaiveBayes_data" GROUP BY "NaiveBayes_data"."KEY") AS nb_sums) AS "NaiveBa
 
 WITH orig_cte AS 
 (SELECT "NaiveBayes_Scores"."KEY" AS "KEY", "NaiveBayes_Scores"."Score_0" AS "Score_0", "NaiveBayes_Scores"."Score_1" AS "Score_1", "NaiveBayes_Scores"."Score_2" AS "Score_2", CAST(NULL AS DOUBLE PRECISION) AS "Proba_0", CAST(NULL AS DOUBLE PRECISION) AS "Proba_1", CAST(NULL AS DOUBLE PRECISION) AS "Proba_2", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_0", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_1", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_2", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba" 
-FROM tmp_20180516122413_codegen_az42n2_naivebayes_scores AS "NaiveBayes_Scores"), 
+FROM tmp_20180602152749_4jx_naivebayes_scores AS "NaiveBayes_Scores"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu."class" AS "class", scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS "class", orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180516122428_codegen_d1cv9d_ads_imp_1_out part 1. Create 
+-- Code For temporary table tmp_20180602152803_gsb_ads_imp_1_out part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516122428_codegen_d1cv9d_ads_imp_1_out (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602152803_gsb_ads_imp_1_out (
 	"KEY" BIGINT, 
 	imputer_output_2 DOUBLE, 
 	imputer_output_3 DOUBLE, 
@@ -23,16 +23,16 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516122428_codegen_d1cv9d_ads_imp_1_out (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516122428_codegen_d1cv9d_ads_imp_1_out part 2. Populate
+-- Code For temporary table tmp_20180602152803_gsb_ads_imp_1_out part 2. Populate
 
-INSERT INTO tmp_20180516122428_codegen_d1cv9d_ads_imp_1_out SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".imputer_output_2, "ADS_imp_1_OUT".imputer_output_3, "ADS_imp_1_OUT".imputer_output_4, "ADS_imp_1_OUT".imputer_output_5 
+INSERT INTO tmp_20180602152803_gsb_ads_imp_1_out SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".imputer_output_2, "ADS_imp_1_OUT".imputer_output_3, "ADS_imp_1_OUT".imputer_output_4, "ADS_imp_1_OUT".imputer_output_5 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN 5.8474999999999975 ELSE "ADS"."Feature_0" END AS imputer_output_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 3.0366666666666657 ELSE "ADS"."Feature_1" END AS imputer_output_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 3.8450000000000006 ELSE "ADS"."Feature_2" END AS imputer_output_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 1.245 ELSE "ADS"."Feature_3" END AS imputer_output_5 
 FROM "IRIS" AS "ADS") AS "ADS_imp_1_OUT"
 
--- Code For temporary table tmp_20180516122428_codegen_1zgrwi_ads_sca_2_out part 1. Create 
+-- Code For temporary table tmp_20180602152803_zxe_ads_sca_2_out part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516122428_codegen_1zgrwi_ads_sca_2_out (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602152803_zxe_ads_sca_2_out (
 	"KEY" BIGINT, 
 	scaler_output_2 DOUBLE, 
 	scaler_output_3 DOUBLE, 
@@ -42,16 +42,16 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516122428_codegen_1zgrwi_ads_sca_2_out (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516122428_codegen_1zgrwi_ads_sca_2_out part 2. Populate
+-- Code For temporary table tmp_20180602152803_zxe_ads_sca_2_out part 2. Populate
 
-INSERT INTO tmp_20180516122428_codegen_1zgrwi_ads_sca_2_out SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_output_2, "ADS_sca_2_OUT".scaler_output_3, "ADS_sca_2_OUT".scaler_output_4, "ADS_sca_2_OUT".scaler_output_5 
+INSERT INTO tmp_20180602152803_zxe_ads_sca_2_out SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_output_2, "ADS_sca_2_OUT".scaler_output_3, "ADS_sca_2_OUT".scaler_output_4, "ADS_sca_2_OUT".scaler_output_5 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".imputer_output_2 AS DOUBLE) - 5.8474999999999975) / 0.827039146594646 AS scaler_output_2, (CAST("ADS_imp_1_OUT".imputer_output_3 AS DOUBLE) - 3.0366666666666657) / 0.43625935201691934 AS scaler_output_3, (CAST("ADS_imp_1_OUT".imputer_output_4 AS DOUBLE) - 3.8450000000000006) / 1.709817241695732 AS scaler_output_4, (CAST("ADS_imp_1_OUT".imputer_output_5 AS DOUBLE) - 1.245) / 0.7498722113355939 AS scaler_output_5 
-FROM tmp_20180516122428_codegen_d1cv9d_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT"
+FROM tmp_20180602152803_gsb_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT"
 
--- Code For temporary table tmp_20180516122428_codegen_ua2p8d_naivebayes_scores part 1. Create 
+-- Code For temporary table tmp_20180602152803_d5f_naivebayes_scores part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516122428_codegen_ua2p8d_naivebayes_scores (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602152803_d5f_naivebayes_scores (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE, 
 	"Score_1" DOUBLE, 
@@ -60,11 +60,11 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516122428_codegen_ua2p8d_naivebayes_score
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516122428_codegen_ua2p8d_naivebayes_scores part 2. Populate
+-- Code For temporary table tmp_20180602152803_d5f_naivebayes_scores part 2. Populate
 
-INSERT INTO tmp_20180516122428_codegen_ua2p8d_naivebayes_scores WITH centered_data AS 
+INSERT INTO tmp_20180602152803_d5f_naivebayes_scores WITH centered_data AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CAST("ADS_sca_2_OUT".scaler_output_2 AS DOUBLE) - -1.0737587745357238 AS scaler_output_2_0, CAST("ADS_sca_2_OUT".scaler_output_3 AS DOUBLE) - 0.870008970111042 AS scaler_output_3_0, CAST("ADS_sca_2_OUT".scaler_output_4 AS DOUBLE) - -1.3793950932290453 AS scaler_output_4_0, CAST("ADS_sca_2_OUT".scaler_output_5 AS DOUBLE) - -1.3142779871589043 AS scaler_output_5_0, CAST("ADS_sca_2_OUT".scaler_output_2 AS DOUBLE) - 0.08161645102040865 AS scaler_output_2_1, CAST("ADS_sca_2_OUT".scaler_output_3 AS DOUBLE) - -0.6341793371020635 AS scaler_output_3_1, CAST("ADS_sca_2_OUT".scaler_output_4 AS DOUBLE) - 0.23394313160820315 AS scaler_output_4_1, CAST("ADS_sca_2_OUT".scaler_output_5 AS DOUBLE) - 0.10668484415166186 AS scaler_output_5_1, CAST("ADS_sca_2_OUT".scaler_output_2 AS DOUBLE) - 0.8480096887675768 AS scaler_output_2_2, CAST("ADS_sca_2_OUT".scaler_output_3 AS DOUBLE) - -0.15867810255873832 AS scaler_output_3_2, CAST("ADS_sca_2_OUT".scaler_output_4 AS DOUBLE) - 0.9692998415150353 AS scaler_output_4_2, CAST("ADS_sca_2_OUT".scaler_output_5 AS DOUBLE) - 1.0316486455537892 AS scaler_output_5_2 
-FROM tmp_20180516122428_codegen_1zgrwi_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180602152803_zxe_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 "NaiveBayes_data" AS 
 (SELECT "Values"."KEY" AS "KEY", CAST("Values"."Feature" AS DOUBLE) AS "Feature", CAST("Values".log_proba_0 AS DOUBLE) AS log_proba_0, CAST("Values".log_proba_1 AS DOUBLE) AS log_proba_1, CAST("Values".log_proba_2 AS DOUBLE) AS log_proba_2 
 FROM (SELECT centered_data."KEY" AS "KEY", 0 AS "Feature", -0.5 * 0.10397266098536322 - (0.5 * centered_data.scaler_output_2_0 * centered_data.scaler_output_2_0) / 0.17659356929665943 AS log_proba_0, -0.5 * 0.9876234284885649 - (0.5 * centered_data.scaler_output_2_1 * centered_data.scaler_output_2_1) / 0.4273065370611847 AS log_proba_1, -0.5 * 1.1913340818433376 - (0.5 * centered_data.scaler_output_2_2 * centered_data.scaler_output_2_2) / 0.5238536201393055 AS log_proba_2 
@@ -81,7 +81,7 @@ FROM "NaiveBayes_data" GROUP BY "NaiveBayes_data"."KEY") AS nb_sums) AS "NaiveBa
 
 WITH orig_cte AS 
 (SELECT "NaiveBayes_Scores"."KEY" AS "KEY", "NaiveBayes_Scores"."Score_0" AS "Score_0", "NaiveBayes_Scores"."Score_1" AS "Score_1", "NaiveBayes_Scores"."Score_2" AS "Score_2", CAST(NULL AS DOUBLE) AS "Proba_0", CAST(NULL AS DOUBLE) AS "Proba_1", CAST(NULL AS DOUBLE) AS "Proba_2", CAST(NULL AS DOUBLE) AS "LogProba_0", CAST(NULL AS DOUBLE) AS "LogProba_1", CAST(NULL AS DOUBLE) AS "LogProba_2", NULL AS "Decision", CAST(NULL AS DOUBLE) AS "DecisionProba" 
-FROM tmp_20180516122428_codegen_ua2p8d_naivebayes_scores AS "NaiveBayes_Scores"), 
+FROM tmp_20180602152803_d5f_naivebayes_scores AS "NaiveBayes_Scores"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

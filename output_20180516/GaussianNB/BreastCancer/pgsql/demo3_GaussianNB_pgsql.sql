@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180516111629_CODEGEN_OJ1HZ2_NaiveBayes_Scores part 1. Create 
+-- Code For temporary table TMP_20180602142447_YGM_NaiveBayes_Scores part 1. Create 
 
 
-CREATE TEMPORARY TABLE "TMP_20180516111629_CODEGEN_OJ1HZ2_NaiveBayes_Scores" (
+CREATE TEMPORARY TABLE "TMP_20180602142447_YGM_NaiveBayes_Scores" (
 	"KEY" BIGINT NOT NULL, 
 	"Score_0" FLOAT, 
 	"Score_1" FLOAT, 
@@ -22,7 +22,7 @@ CREATE TEMPORARY TABLE "TMP_20180516111629_CODEGEN_OJ1HZ2_NaiveBayes_Scores" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516111629_CODEGEN_OJ1HZ2_NaiveBayes_Scores part 2. Populate
+-- Code For temporary table TMP_20180602142447_YGM_NaiveBayes_Scores part 2. Populate
 
 WITH centered_data AS 
 (SELECT "ADS"."KEY" AS "KEY", CAST("ADS"."Feature_0" AS FLOAT) - 17.640437500000008 AS "Feature_0_0", CAST("ADS"."Feature_1" AS FLOAT) - 21.23356249999999 AS "Feature_1_0", CAST("ADS"."Feature_2" AS FLOAT) - 116.71625000000002 AS "Feature_2_0", CAST("ADS"."Feature_3" AS FLOAT) - 997.9731250000001 AS "Feature_3_0", CAST("ADS"."Feature_4" AS FLOAT) - 0.10367662500000004 AS "Feature_4_0", CAST("ADS"."Feature_5" AS FLOAT) - 0.14956893750000003 AS "Feature_5_0", CAST("ADS"."Feature_6" AS FLOAT) - 0.16609156250000007 AS "Feature_6_0", CAST("ADS"."Feature_7" AS FLOAT) - 0.09101468749999998 AS "Feature_7_0", CAST("ADS"."Feature_8" AS FLOAT) - 0.19494124999999993 AS "Feature_8_0", CAST("ADS"."Feature_9" AS FLOAT) - 0.06299824999999996 AS "Feature_9_0", CAST("ADS"."Feature_10" AS FLOAT) - 0.6418068749999999 AS "Feature_10_0", CAST("ADS"."Feature_11" AS FLOAT) - 1.23094 AS "Feature_11_0", CAST("ADS"."Feature_12" AS FLOAT) - 4.582681250000002 AS "Feature_12_0", CAST("ADS"."Feature_13" AS FLOAT) - 77.180875 AS "Feature_13_0", CAST("ADS"."Feature_14" AS FLOAT) - 0.0068303437500000005 AS "Feature_14_0", CAST("ADS"."Feature_15" AS FLOAT) - 0.033086856250000005 AS "Feature_15_0", CAST("ADS"."Feature_16" AS FLOAT) - 0.042250062500000005 AS "Feature_16_0", CAST("ADS"."Feature_17" AS FLOAT) - 0.015666206250000002 AS "Feature_17_0", CAST("ADS"."Feature_18" AS FLOAT) - 0.0213653875 AS "Feature_18_0", CAST("ADS"."Feature_19" AS FLOAT) - 0.0041392562500000025 AS "Feature_19_0", CAST("ADS"."Feature_20" AS FLOAT) - 21.339374999999993 AS "Feature_20_0", CAST("ADS"."Feature_21" AS FLOAT) - 28.707562499999995 AS "Feature_21_0", CAST("ADS"."Feature_22" AS FLOAT) - 143.08187499999994 AS "Feature_22_0", CAST("ADS"."Feature_23" AS FLOAT) - 1445.1737500000002 AS "Feature_23_0", CAST("ADS"."Feature_24" AS FLOAT) - 0.14505743749999986 AS "Feature_24_0", CAST("ADS"."Feature_25" AS FLOAT) - 0.37679406249999975 AS "Feature_25_0", CAST("ADS"."Feature_26" AS FLOAT) - 0.44977674999999967 AS "Feature_26_0", CAST("ADS"."Feature_27" AS FLOAT) - 0.18633093750000013 AS "Feature_27_0", CAST("ADS"."Feature_28" AS FLOAT) - 0.32580749999999986 AS "Feature_28_0", CAST("ADS"."Feature_29" AS FLOAT) - 0.09126924999999997 AS "Feature_29_0", CAST("ADS"."Feature_0" AS FLOAT) - 12.145386440677964 AS "Feature_0_1", CAST("ADS"."Feature_1" AS FLOAT) - 17.84881355932203 AS "Feature_1_1", CAST("ADS"."Feature_2" AS FLOAT) - 78.0729152542372 AS "Feature_2_1", CAST("ADS"."Feature_3" AS FLOAT) - 462.7613559322033 AS "Feature_3_1", CAST("ADS"."Feature_4" AS FLOAT) - 0.09248705084745759 AS "Feature_4_1", CAST("ADS"."Feature_5" AS FLOAT) - 0.07992647457627115 AS "Feature_5_1", CAST("ADS"."Feature_6" AS FLOAT) - 0.04604985999999998 AS "Feature_6_1", CAST("ADS"."Feature_7" AS FLOAT) - 0.025466481355932213 AS "Feature_7_1", CAST("ADS"."Feature_8" AS FLOAT) - 0.1743464406779661 AS "Feature_8_1", CAST("ADS"."Feature_9" AS FLOAT) - 0.06290888135593216 AS "Feature_9_1", CAST("ADS"."Feature_10" AS FLOAT) - 0.284146779661017 AS "Feature_10_1", CAST("ADS"."Feature_11" AS FLOAT) - 1.2095464406779655 AS "Feature_11_1", CAST("ADS"."Feature_12" AS FLOAT) - 1.9954552542372879 AS "Feature_12_1", CAST("ADS"."Feature_13" AS FLOAT) - 21.19121355932202 AS "Feature_13_1", CAST("ADS"."Feature_14" AS FLOAT) - 0.007178345762711861 AS "Feature_14_1", CAST("ADS"."Feature_15" AS FLOAT) - 0.021489715254237294 AS "Feature_15_1", CAST("ADS"."Feature_16" AS FLOAT) - 0.026439496949152534 AS "Feature_16_1", CAST("ADS"."Feature_17" AS FLOAT) - 0.00996893220338983 AS "Feature_17_1", CAST("ADS"."Feature_18" AS FLOAT) - 0.020641725423728836 AS "Feature_18_1", CAST("ADS"."Feature_19" AS FLOAT) - 0.0036877969491525436 AS "Feature_19_1", CAST("ADS"."Feature_20" AS FLOAT) - 13.378247457627124 AS "Feature_20_1", CAST("ADS"."Feature_21" AS FLOAT) - 23.397932203389832 AS "Feature_21_1", CAST("ADS"."Feature_22" AS FLOAT) - 86.93901694915259 AS "Feature_22_1", CAST("ADS"."Feature_23" AS FLOAT) - 559.3738983050844 AS "Feature_23_1", CAST("ADS"."Feature_24" AS FLOAT) - 0.12465203389830506 AS "Feature_24_1", CAST("ADS"."Feature_25" AS FLOAT) - 0.18110396610169477 AS "Feature_25_1", CAST("ADS"."Feature_26" AS FLOAT) - 0.16549405084745772 AS "Feature_26_1", CAST("ADS"."Feature_27" AS FLOAT) - 0.07397993559322037 AS "Feature_27_1", CAST("ADS"."Feature_28" AS FLOAT) - 0.27025220338983036 AS "Feature_28_1", CAST("ADS"."Feature_29" AS FLOAT) - 0.07950433898305088 AS "Feature_29_1" 
@@ -60,20 +60,20 @@ FROM centered_data UNION ALL SELECT centered_data."KEY" AS "KEY", 27 AS "Feature
 FROM centered_data UNION ALL SELECT centered_data."KEY" AS "KEY", 28 AS "Feature", -0.5 * -3.2488521824643195 - (0.5 * centered_data."Feature_28_0" * centered_data."Feature_28_0") / 0.0061781942122640186 AS log_proba_0, -0.5 * -4.362958819109133 - (0.5 * centered_data."Feature_28_1" * centered_data."Feature_28_1") / 0.002027734973404855 AS log_proba_1 
 FROM centered_data UNION ALL SELECT centered_data."KEY" AS "KEY", 29 AS "Feature", -0.5 * -5.388172426262818 - (0.5 * centered_data."Feature_29_0" * centered_data."Feature_29_0") / 0.0007273887492015202 AS log_proba_0, -0.5 * -5.759377683054396 - (0.5 * centered_data."Feature_29_1" * centered_data."Feature_29_1") / 0.000501827185534704 AS log_proba_1 
 FROM centered_data) AS "Values")
- INSERT INTO "TMP_20180516111629_CODEGEN_OJ1HZ2_NaiveBayes_Scores" ("KEY", "Score_0", "Score_1") SELECT "NaiveBayes_Scores"."KEY", "NaiveBayes_Scores"."Score_0", "NaiveBayes_Scores"."Score_1" 
+ INSERT INTO "TMP_20180602142447_YGM_NaiveBayes_Scores" ("KEY", "Score_0", "Score_1") SELECT "NaiveBayes_Scores"."KEY", "NaiveBayes_Scores"."Score_0", "NaiveBayes_Scores"."Score_1" 
 FROM (SELECT nb_sums."KEY" AS "KEY", nb_sums."Score_0" AS "Score_0", nb_sums."Score_1" AS "Score_1" 
 FROM (SELECT "NaiveBayes_data"."KEY" AS "KEY", -1.0451236037171234 + sum("NaiveBayes_data".log_proba_0) AS "Score_0", -0.43332206261113054 + sum("NaiveBayes_data".log_proba_1) AS "Score_1" 
 FROM "NaiveBayes_data" GROUP BY "NaiveBayes_data"."KEY") AS nb_sums) AS "NaiveBayes_Scores"
 
--- Code For temporary table TMP_20180516111629_CODEGEN_OJ1HZ2_NaiveBayes_Scores part 3. Create Index 
+-- Code For temporary table TMP_20180602142447_YGM_NaiveBayes_Scores part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180516111629_CODEGEN_OJ1HZ2_NaiveBayes_Scores_KEY" ON "TMP_20180516111629_CODEGEN_OJ1HZ2_NaiveBayes_Scores" ("KEY")
+CREATE INDEX "ix_TMP_20180602142447_YGM_NaiveBayes_Scores_KEY" ON "TMP_20180602142447_YGM_NaiveBayes_Scores" ("KEY")
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT "NaiveBayes_Scores"."KEY" AS "KEY", "NaiveBayes_Scores"."Score_0" AS "Score_0", "NaiveBayes_Scores"."Score_1" AS "Score_1", CAST(NULL AS FLOAT) AS "Proba_0", CAST(NULL AS FLOAT) AS "Proba_1", CAST(NULL AS FLOAT) AS "LogProba_0", CAST(NULL AS FLOAT) AS "LogProba_1", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS FLOAT) AS "DecisionProba" 
-FROM "TMP_20180516111629_CODEGEN_OJ1HZ2_NaiveBayes_Scores" AS "NaiveBayes_Scores"), 
+FROM "TMP_20180602142447_YGM_NaiveBayes_Scores" AS "NaiveBayes_Scores"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

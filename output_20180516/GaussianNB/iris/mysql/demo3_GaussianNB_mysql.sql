@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180516122412_CODEGEN_MXC4Z5_NaiveBayes_Scores part 1. Create 
+-- Code For temporary table TMP_20180602152748_IUI_NaiveBayes_Scores part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516122412_CODEGEN_MXC4Z5_NaiveBayes_Scores` (
+CREATE TEMPORARY TABLE `TMP_20180602152748_IUI_NaiveBayes_Scores` (
 	`KEY` BIGINT NOT NULL, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -23,9 +23,9 @@ CREATE TEMPORARY TABLE `TMP_20180516122412_CODEGEN_MXC4Z5_NaiveBayes_Scores` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516122412_CODEGEN_MXC4Z5_NaiveBayes_Scores part 2. Populate
+-- Code For temporary table TMP_20180602152748_IUI_NaiveBayes_Scores part 2. Populate
 
-INSERT INTO `TMP_20180516122412_CODEGEN_MXC4Z5_NaiveBayes_Scores` (`KEY`, `Score_0`, `Score_1`, `Score_2`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2` 
+INSERT INTO `TMP_20180602152748_IUI_NaiveBayes_Scores` (`KEY`, `Score_0`, `Score_1`, `Score_2`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2` 
 FROM (WITH centered_data AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CAST(`ADS`.`Feature_0` AS DOUBLE) - 4.95945945945946 AS `Feature_0_0`, CAST(`ADS`.`Feature_1` AS DOUBLE) - 3.4162162162162164 AS `Feature_1_0`, CAST(`ADS`.`Feature_2` AS DOUBLE) - 1.4864864864864862 AS `Feature_2_0`, CAST(`ADS`.`Feature_3` AS DOUBLE) - 0.2594594594594595 AS `Feature_3_0`, CAST(`ADS`.`Feature_0` AS DOUBLE) - 5.914999999999999 AS `Feature_0_1`, CAST(`ADS`.`Feature_1` AS DOUBLE) - 2.7600000000000007 AS `Feature_1_1`, CAST(`ADS`.`Feature_2` AS DOUBLE) - 4.245 AS `Feature_2_1`, CAST(`ADS`.`Feature_3` AS DOUBLE) - 1.325 AS `Feature_3_1`, CAST(`ADS`.`Feature_0` AS DOUBLE) - 6.548837209302325 AS `Feature_0_2`, CAST(`ADS`.`Feature_1` AS DOUBLE) - 2.9674418604651165 AS `Feature_1_2`, CAST(`ADS`.`Feature_2` AS DOUBLE) - 5.502325581395348 AS `Feature_2_2`, CAST(`ADS`.`Feature_3` AS DOUBLE) - 2.01860465116279 AS `Feature_3_2` 
 FROM iris AS `ADS`), 
@@ -41,15 +41,15 @@ FROM (SELECT nb_sums.`KEY` AS `KEY`, nb_sums.`Score_0` AS `Score_0`, nb_sums.`Sc
 FROM (SELECT `NaiveBayes_data`.`KEY` AS `KEY`, -1.1765738301378215 + sum(`NaiveBayes_data`.log_proba_0) AS `Score_0`, -1.0986122886681098 + sum(`NaiveBayes_data`.log_proba_1) AS `Score_1`, -1.0262916270884836 + sum(`NaiveBayes_data`.log_proba_2) AS `Score_2` 
 FROM `NaiveBayes_data` GROUP BY `NaiveBayes_data`.`KEY`) AS nb_sums) AS `NaiveBayes_Scores`) AS `U`
 
--- Code For temporary table TMP_20180516122412_CODEGEN_MXC4Z5_NaiveBayes_Scores part 3. Create Index 
+-- Code For temporary table TMP_20180602152748_IUI_NaiveBayes_Scores part 3. Create Index 
 
-CREATE INDEX `ix_TMP_20180516122412_CODEGEN_MXC4Z5_NaiveBayes_Scores_KEY` ON `TMP_20180516122412_CODEGEN_MXC4Z5_NaiveBayes_Scores` (`KEY`)
+CREATE INDEX `ix_TMP_20180602152748_IUI_NaiveBayes_Scores_KEY` ON `TMP_20180602152748_IUI_NaiveBayes_Scores` (`KEY`)
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT `NaiveBayes_Scores`.`KEY` AS `KEY`, `NaiveBayes_Scores`.`Score_0` AS `Score_0`, `NaiveBayes_Scores`.`Score_1` AS `Score_1`, `NaiveBayes_Scores`.`Score_2` AS `Score_2`, NULL AS `Proba_0`, NULL AS `Proba_1`, NULL AS `Proba_2`, NULL AS `LogProba_0`, NULL AS `LogProba_1`, NULL AS `LogProba_2`, CAST(NULL AS SIGNED INTEGER) AS `Decision`, NULL AS `DecisionProba` 
-FROM `TMP_20180516122412_CODEGEN_MXC4Z5_NaiveBayes_Scores` AS `NaiveBayes_Scores`), 
+FROM `TMP_20180602152748_IUI_NaiveBayes_Scores` AS `NaiveBayes_Scores`), 
 score_class_union AS 
 (SELECT scu.`KEY_u` AS `KEY_u`, scu.class AS class, scu.`LogProba` AS `LogProba`, scu.`Proba` AS `Proba`, scu.`Score` AS `Score` 
 FROM (SELECT orig_cte.`KEY` AS `KEY_u`, 0 AS class, orig_cte.`LogProba_0` AS `LogProba`, orig_cte.`Proba_0` AS `Proba`, orig_cte.`Score_0` AS `Score` 

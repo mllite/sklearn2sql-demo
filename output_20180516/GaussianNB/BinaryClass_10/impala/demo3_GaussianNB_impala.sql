@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180516110314_codegen_ryg7d9_naivebayes_scores part 1. Create 
+-- Code For temporary table tmp_20180602141230_qld_naivebayes_scores part 1. Create 
 
 
-CREATE TABLE tmp_20180516110314_codegen_ryg7d9_naivebayes_scores (
+CREATE TABLE tmp_20180602141230_qld_naivebayes_scores (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE
@@ -21,7 +21,7 @@ CREATE TABLE tmp_20180516110314_codegen_ryg7d9_naivebayes_scores (
 
  CACHED IN 'one_gig_pool'
 
--- Code For temporary table tmp_20180516110314_codegen_ryg7d9_naivebayes_scores part 2. Populate
+-- Code For temporary table tmp_20180602141230_qld_naivebayes_scores part 2. Populate
 
 WITH centered_data AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CAST(`ADS`.`Feature_0` AS DOUBLE) - 0.8736540997238669 AS `Feature_0_0`, CAST(`ADS`.`Feature_1` AS DOUBLE) - 0.22417823322532193 AS `Feature_1_0`, CAST(`ADS`.`Feature_2` AS DOUBLE) - 0.05238040173285245 AS `Feature_2_0`, CAST(`ADS`.`Feature_3` AS DOUBLE) - 0.008194292112152635 AS `Feature_3_0`, CAST(`ADS`.`Feature_4` AS DOUBLE) - 0.04244853351408695 AS `Feature_4_0`, CAST(`ADS`.`Feature_5` AS DOUBLE) - -0.011775929294600088 AS `Feature_5_0`, CAST(`ADS`.`Feature_6` AS DOUBLE) - 0.3850522853640051 AS `Feature_6_0`, CAST(`ADS`.`Feature_7` AS DOUBLE) - 0.34626546901416927 AS `Feature_7_0`, CAST(`ADS`.`Feature_8` AS DOUBLE) - -0.11404947981156924 AS `Feature_8_0`, CAST(`ADS`.`Feature_9` AS DOUBLE) - -0.8981761455859457 AS `Feature_9_0`, CAST(`ADS`.`Feature_0` AS DOUBLE) - -0.7499956892475977 AS `Feature_0_1`, CAST(`ADS`.`Feature_1` AS DOUBLE) - 0.12987104211834458 AS `Feature_1_1`, CAST(`ADS`.`Feature_2` AS DOUBLE) - 0.03038729836521653 AS `Feature_2_1`, CAST(`ADS`.`Feature_3` AS DOUBLE) - 0.2530186440047904 AS `Feature_3_1`, CAST(`ADS`.`Feature_4` AS DOUBLE) - -0.16156474295374862 AS `Feature_4_1`, CAST(`ADS`.`Feature_5` AS DOUBLE) - -0.08608225044561162 AS `Feature_5_1`, CAST(`ADS`.`Feature_6` AS DOUBLE) - -0.0030163281297424945 AS `Feature_6_1`, CAST(`ADS`.`Feature_7` AS DOUBLE) - -0.3021662755488199 AS `Feature_7_1`, CAST(`ADS`.`Feature_8` AS DOUBLE) - -0.0014101482567108082 AS `Feature_8_1`, CAST(`ADS`.`Feature_9` AS DOUBLE) - 0.7930769614818811 AS `Feature_9_1` 
@@ -39,7 +39,7 @@ FROM centered_data UNION ALL SELECT centered_data.`KEY` AS `KEY`, 7 AS `Feature`
 FROM centered_data UNION ALL SELECT centered_data.`KEY` AS `KEY`, 8 AS `Feature`, -0.5 * 1.7950563371592299 - (0.5 * centered_data.`Feature_8_0` * centered_data.`Feature_8_0`) / 0.9580831309538496 AS log_proba_0, -0.5 * 2.1020484871647827 - (0.5 * centered_data.`Feature_8_1` * centered_data.`Feature_8_1`) / 1.302351427232641 AS log_proba_1 
 FROM centered_data UNION ALL SELECT centered_data.`KEY` AS `KEY`, 9 AS `Feature`, -0.5 * 0.6647622291855276 - (0.5 * centered_data.`Feature_9_0` * centered_data.`Feature_9_0`) / 0.3094017028245138 AS log_proba_0, -0.5 * 2.0685056235146035 - (0.5 * centered_data.`Feature_9_1` * centered_data.`Feature_9_1`) / 1.2593913605868818 AS log_proba_1 
 FROM centered_data) AS `Values`)
- INSERT INTO tmp_20180516110314_codegen_ryg7d9_naivebayes_scores (`KEY`, `Score_0`, `Score_1`) SELECT `NaiveBayes_Scores`.`KEY`, `NaiveBayes_Scores`.`Score_0`, `NaiveBayes_Scores`.`Score_1` 
+ INSERT INTO tmp_20180602141230_qld_naivebayes_scores (`KEY`, `Score_0`, `Score_1`) SELECT `NaiveBayes_Scores`.`KEY`, `NaiveBayes_Scores`.`Score_0`, `NaiveBayes_Scores`.`Score_1` 
 FROM (SELECT nb_sums.`KEY` AS `KEY`, nb_sums.`Score_0` AS `Score_0`, nb_sums.`Score_1` AS `Score_1` 
 FROM (SELECT `NaiveBayes_data`.`KEY` AS `KEY`, -0.6931471805599453 + sum(`NaiveBayes_data`.log_proba_0) AS `Score_0`, -0.6931471805599453 + sum(`NaiveBayes_data`.log_proba_1) AS `Score_1` 
 FROM `NaiveBayes_data` GROUP BY `NaiveBayes_data`.`KEY`) AS nb_sums) AS `NaiveBayes_Scores`
@@ -48,7 +48,7 @@ FROM `NaiveBayes_data` GROUP BY `NaiveBayes_data`.`KEY`) AS nb_sums) AS `NaiveBa
 
 WITH orig_cte AS 
 (SELECT `NaiveBayes_Scores`.`KEY` AS `KEY`, `NaiveBayes_Scores`.`Score_0` AS `Score_0`, `NaiveBayes_Scores`.`Score_1` AS `Score_1`, CAST(NULL AS DOUBLE) AS `Proba_0`, CAST(NULL AS DOUBLE) AS `Proba_1`, CAST(NULL AS DOUBLE) AS `LogProba_0`, CAST(NULL AS DOUBLE) AS `LogProba_1`, CAST(NULL AS BIGINT) AS `Decision`, CAST(NULL AS DOUBLE) AS `DecisionProba` 
-FROM tmp_20180516110314_codegen_ryg7d9_naivebayes_scores AS `NaiveBayes_Scores`), 
+FROM tmp_20180602141230_qld_naivebayes_scores AS `NaiveBayes_Scores`), 
 score_class_union AS 
 (SELECT scu.`KEY_u` AS `KEY_u`, scu.`class` AS `class`, scu.`LogProba` AS `LogProba`, scu.`Proba` AS `Proba`, scu.`Score` AS `Score` 
 FROM (SELECT orig_cte.`KEY` AS `KEY_u`, 0 AS `class`, orig_cte.`LogProba_0` AS `LogProba`, orig_cte.`Proba_0` AS `Proba`, orig_cte.`Score_0` AS `Score` 

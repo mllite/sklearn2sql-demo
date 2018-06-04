@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table N_XDDCHA_NAIVEBAYES_SCORES part 1. Create 
+-- Code For temporary table 0602_7EK_NAIVEBAYES_SCORES part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "N_XDDCHA_NAIVEBAYES_SCORES" (
+CREATE GLOBAL TEMPORARY TABLE "0602_7EK_NAIVEBAYES_SCORES" (
 	"KEY" NUMBER(19), 
 	"Score_0" BINARY_DOUBLE, 
 	"Score_1" BINARY_DOUBLE
@@ -21,9 +21,9 @@ CREATE GLOBAL TEMPORARY TABLE "N_XDDCHA_NAIVEBAYES_SCORES" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table N_XDDCHA_NAIVEBAYES_SCORES part 2. Populate
+-- Code For temporary table 0602_7EK_NAIVEBAYES_SCORES part 2. Populate
 
-INSERT INTO "N_XDDCHA_NAIVEBAYES_SCORES" ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
+INSERT INTO "0602_7EK_NAIVEBAYES_SCORES" ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
 FROM (WITH centered_data AS 
 (SELECT "ADS"."KEY" AS "KEY", CAST("ADS"."Feature_0" AS BINARY_DOUBLE) - 0.8736540997238669 AS "Feature_0_0", CAST("ADS"."Feature_1" AS BINARY_DOUBLE) - 0.22417823322532193 AS "Feature_1_0", CAST("ADS"."Feature_2" AS BINARY_DOUBLE) - 0.05238040173285245 AS "Feature_2_0", CAST("ADS"."Feature_3" AS BINARY_DOUBLE) - 0.008194292112152635 AS "Feature_3_0", CAST("ADS"."Feature_4" AS BINARY_DOUBLE) - 0.04244853351408695 AS "Feature_4_0", CAST("ADS"."Feature_5" AS BINARY_DOUBLE) - -0.011775929294600088 AS "Feature_5_0", CAST("ADS"."Feature_6" AS BINARY_DOUBLE) - 0.3850522853640051 AS "Feature_6_0", CAST("ADS"."Feature_7" AS BINARY_DOUBLE) - 0.34626546901416927 AS "Feature_7_0", CAST("ADS"."Feature_8" AS BINARY_DOUBLE) - -0.11404947981156924 AS "Feature_8_0", CAST("ADS"."Feature_9" AS BINARY_DOUBLE) - -0.8981761455859457 AS "Feature_9_0", CAST("ADS"."Feature_0" AS BINARY_DOUBLE) - -0.7499956892475977 AS "Feature_0_1", CAST("ADS"."Feature_1" AS BINARY_DOUBLE) - 0.12987104211834458 AS "Feature_1_1", CAST("ADS"."Feature_2" AS BINARY_DOUBLE) - 0.03038729836521653 AS "Feature_2_1", CAST("ADS"."Feature_3" AS BINARY_DOUBLE) - 0.2530186440047904 AS "Feature_3_1", CAST("ADS"."Feature_4" AS BINARY_DOUBLE) - -0.16156474295374862 AS "Feature_4_1", CAST("ADS"."Feature_5" AS BINARY_DOUBLE) - -0.08608225044561162 AS "Feature_5_1", CAST("ADS"."Feature_6" AS BINARY_DOUBLE) - -0.0030163281297424945 AS "Feature_6_1", CAST("ADS"."Feature_7" AS BINARY_DOUBLE) - -0.3021662755488199 AS "Feature_7_1", CAST("ADS"."Feature_8" AS BINARY_DOUBLE) - -0.0014101482567108082 AS "Feature_8_1", CAST("ADS"."Feature_9" AS BINARY_DOUBLE) - 0.7930769614818811 AS "Feature_9_1" 
 FROM "BINARYCLASS_10" "ADS"), 
@@ -49,7 +49,7 @@ FROM "NaiveBayes_data" GROUP BY "NaiveBayes_data"."KEY") nb_sums) "NaiveBayes_Sc
 
 WITH orig_cte AS 
 (SELECT "NaiveBayes_Scores"."KEY" AS "KEY", "NaiveBayes_Scores"."Score_0" AS "Score_0", "NaiveBayes_Scores"."Score_1" AS "Score_1", CAST(NULL AS BINARY_DOUBLE) AS "Proba_0", CAST(NULL AS BINARY_DOUBLE) AS "Proba_1", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_0", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_1", CAST(NULL AS NUMBER(19)) AS "Decision", CAST(NULL AS BINARY_DOUBLE) AS "DecisionProba" 
-FROM "N_XDDCHA_NAIVEBAYES_SCORES" "NaiveBayes_Scores"), 
+FROM "0602_7EK_NAIVEBAYES_SCORES" "NaiveBayes_Scores"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

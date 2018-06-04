@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180516112312_CODEGEN_NTGUWN_NaiveBayes_Scores part 1. Create 
+-- Code For temporary table TMP_20180602143114_A3A_NaiveBayes_Scores part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516112312_CODEGEN_NTGUWN_NaiveBayes_Scores` (
+CREATE TEMPORARY TABLE `TMP_20180602143114_A3A_NaiveBayes_Scores` (
 	`KEY` BIGINT NOT NULL, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -24,9 +24,9 @@ CREATE TEMPORARY TABLE `TMP_20180516112312_CODEGEN_NTGUWN_NaiveBayes_Scores` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516112312_CODEGEN_NTGUWN_NaiveBayes_Scores part 2. Populate
+-- Code For temporary table TMP_20180602143114_A3A_NaiveBayes_Scores part 2. Populate
 
-INSERT INTO `TMP_20180516112312_CODEGEN_NTGUWN_NaiveBayes_Scores` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
+INSERT INTO `TMP_20180602143114_A3A_NaiveBayes_Scores` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
 FROM (WITH centered_data AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CAST(`ADS`.`Feature_0` AS DOUBLE) - 0.12197232402085767 AS `Feature_0_0`, CAST(`ADS`.`Feature_1` AS DOUBLE) - -0.2042090641433511 AS `Feature_1_0`, CAST(`ADS`.`Feature_2` AS DOUBLE) - -0.17866802296600057 AS `Feature_2_0`, CAST(`ADS`.`Feature_3` AS DOUBLE) - -0.33848916280925834 AS `Feature_3_0`, CAST(`ADS`.`Feature_4` AS DOUBLE) - 0.692046433348698 AS `Feature_4_0`, CAST(`ADS`.`Feature_5` AS DOUBLE) - -0.2328895438714148 AS `Feature_5_0`, CAST(`ADS`.`Feature_6` AS DOUBLE) - 0.14890501454364152 AS `Feature_6_0`, CAST(`ADS`.`Feature_7` AS DOUBLE) - 0.3442614656998575 AS `Feature_7_0`, CAST(`ADS`.`Feature_8` AS DOUBLE) - 0.48106253993680564 AS `Feature_8_0`, CAST(`ADS`.`Feature_9` AS DOUBLE) - 0.21072572298483708 AS `Feature_9_0`, CAST(`ADS`.`Feature_0` AS DOUBLE) - -0.05580445711365931 AS `Feature_0_1`, CAST(`ADS`.`Feature_1` AS DOUBLE) - 1.1164241563456594 AS `Feature_1_1`, CAST(`ADS`.`Feature_2` AS DOUBLE) - 1.232091266694883 AS `Feature_2_1`, CAST(`ADS`.`Feature_3` AS DOUBLE) - 2.8562011764091926 AS `Feature_3_1`, CAST(`ADS`.`Feature_4` AS DOUBLE) - -0.1946777354077039 AS `Feature_4_1`, CAST(`ADS`.`Feature_5` AS DOUBLE) - -0.30885979017841814 AS `Feature_5_1`, CAST(`ADS`.`Feature_6` AS DOUBLE) - -1.2090009093244745 AS `Feature_6_1`, CAST(`ADS`.`Feature_7` AS DOUBLE) - 1.2254337694197592 AS `Feature_7_1`, CAST(`ADS`.`Feature_8` AS DOUBLE) - -0.2168859340616714 AS `Feature_8_1`, CAST(`ADS`.`Feature_9` AS DOUBLE) - 0.046430005146285355 AS `Feature_9_1`, CAST(`ADS`.`Feature_0` AS DOUBLE) - 0.040527414301684696 AS `Feature_0_2`, CAST(`ADS`.`Feature_1` AS DOUBLE) - -0.20169636688948053 AS `Feature_1_2`, CAST(`ADS`.`Feature_2` AS DOUBLE) - -1.065660222353177 AS `Feature_2_2`, CAST(`ADS`.`Feature_3` AS DOUBLE) - -0.9339519751932575 AS `Feature_3_2`, CAST(`ADS`.`Feature_4` AS DOUBLE) - -0.9273853948833596 AS `Feature_4_2`, CAST(`ADS`.`Feature_5` AS DOUBLE) - 0.18075085383747674 AS `Feature_5_2`, CAST(`ADS`.`Feature_6` AS DOUBLE) - 0.3367308034182364 AS `Feature_6_2`, CAST(`ADS`.`Feature_7` AS DOUBLE) - -0.04097908155884643 AS `Feature_7_2`, CAST(`ADS`.`Feature_8` AS DOUBLE) - 0.26965800608399576 AS `Feature_8_2`, CAST(`ADS`.`Feature_9` AS DOUBLE) - 0.14187498063568335 AS `Feature_9_2`, CAST(`ADS`.`Feature_0` AS DOUBLE) - -0.10010140605357654 AS `Feature_0_3`, CAST(`ADS`.`Feature_1` AS DOUBLE) - 1.5726847768670615 AS `Feature_1_3`, CAST(`ADS`.`Feature_2` AS DOUBLE) - 0.1505046581680554 AS `Feature_2_3`, CAST(`ADS`.`Feature_3` AS DOUBLE) - 1.3330171535218418 AS `Feature_3_3`, CAST(`ADS`.`Feature_4` AS DOUBLE) - -1.120734549744089 AS `Feature_4_3`, CAST(`ADS`.`Feature_5` AS DOUBLE) - 0.15247885409781847 AS `Feature_5_3`, CAST(`ADS`.`Feature_6` AS DOUBLE) - -0.41282510179714293 AS `Feature_6_3`, CAST(`ADS`.`Feature_7` AS DOUBLE) - -0.824909406091562 AS `Feature_7_3`, CAST(`ADS`.`Feature_8` AS DOUBLE) - -0.3780460568899708 AS `Feature_8_3`, CAST(`ADS`.`Feature_9` AS DOUBLE) - 0.07485010923253889 AS `Feature_9_3` 
 FROM `FourClass_10` AS `ADS`), 
@@ -48,15 +48,15 @@ FROM (SELECT nb_sums.`KEY` AS `KEY`, nb_sums.`Score_0` AS `Score_0`, nb_sums.`Sc
 FROM (SELECT `NaiveBayes_data`.`KEY` AS `KEY`, -1.491654876777717 + sum(`NaiveBayes_data`.log_proba_0) AS `Score_0`, -1.3862943611198906 + sum(`NaiveBayes_data`.log_proba_1) AS `Score_1`, -1.3862943611198906 + sum(`NaiveBayes_data`.log_proba_2) AS `Score_2`, -1.2909841813155656 + sum(`NaiveBayes_data`.log_proba_3) AS `Score_3` 
 FROM `NaiveBayes_data` GROUP BY `NaiveBayes_data`.`KEY`) AS nb_sums) AS `NaiveBayes_Scores`) AS `U`
 
--- Code For temporary table TMP_20180516112312_CODEGEN_NTGUWN_NaiveBayes_Scores part 3. Create Index 
+-- Code For temporary table TMP_20180602143114_A3A_NaiveBayes_Scores part 3. Create Index 
 
-CREATE INDEX `ix_TMP_20180516112312_CODEGEN_NTGUWN_NaiveBayes_Scores_KEY` ON `TMP_20180516112312_CODEGEN_NTGUWN_NaiveBayes_Scores` (`KEY`)
+CREATE INDEX `ix_TMP_20180602143114_A3A_NaiveBayes_Scores_KEY` ON `TMP_20180602143114_A3A_NaiveBayes_Scores` (`KEY`)
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT `NaiveBayes_Scores`.`KEY` AS `KEY`, `NaiveBayes_Scores`.`Score_0` AS `Score_0`, `NaiveBayes_Scores`.`Score_1` AS `Score_1`, `NaiveBayes_Scores`.`Score_2` AS `Score_2`, `NaiveBayes_Scores`.`Score_3` AS `Score_3`, NULL AS `Proba_0`, NULL AS `Proba_1`, NULL AS `Proba_2`, NULL AS `Proba_3`, NULL AS `LogProba_0`, NULL AS `LogProba_1`, NULL AS `LogProba_2`, NULL AS `LogProba_3`, CAST(NULL AS SIGNED INTEGER) AS `Decision`, NULL AS `DecisionProba` 
-FROM `TMP_20180516112312_CODEGEN_NTGUWN_NaiveBayes_Scores` AS `NaiveBayes_Scores`), 
+FROM `TMP_20180602143114_A3A_NaiveBayes_Scores` AS `NaiveBayes_Scores`), 
 score_class_union AS 
 (SELECT scu.`KEY_u` AS `KEY_u`, scu.class AS class, scu.`LogProba` AS `LogProba`, scu.`Proba` AS `Proba`, scu.`Score` AS `Score` 
 FROM (SELECT orig_cte.`KEY` AS `KEY_u`, 0 AS class, orig_cte.`LogProba_0` AS `LogProba`, orig_cte.`Proba_0` AS `Proba`, orig_cte.`Score_0` AS `Score` 

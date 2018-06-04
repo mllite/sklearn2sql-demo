@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180516_CODEGEN_0V5LZ4_NAI part 1. Create 
+-- Code For temporary table TMP_20180602_V54_NAIVEBAYES_SCO part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_0V5LZ4_NAI" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_V54_NAIVEBAYES_SCO" (
 	"KEY" BIGINT NOT NULL, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -23,9 +23,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_0V5LZ4_NAI" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_0V5LZ4_NAI part 2. Populate
+-- Code For temporary table TMP_20180602_V54_NAIVEBAYES_SCO part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_0V5LZ4_NAI" ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
+INSERT INTO "TMP_20180602_V54_NAIVEBAYES_SCO" ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
 FROM (WITH centered_data AS 
 (SELECT "ADS"."KEY" AS "KEY", CAST("ADS"."Feature_0" AS DOUBLE PRECISION) - 4.95945945945946 AS "Feature_0_0", CAST("ADS"."Feature_1" AS DOUBLE PRECISION) - 3.4162162162162164 AS "Feature_1_0", CAST("ADS"."Feature_2" AS DOUBLE PRECISION) - 1.4864864864864862 AS "Feature_2_0", CAST("ADS"."Feature_3" AS DOUBLE PRECISION) - 0.2594594594594595 AS "Feature_3_0", CAST("ADS"."Feature_0" AS DOUBLE PRECISION) - 5.914999999999999 AS "Feature_0_1", CAST("ADS"."Feature_1" AS DOUBLE PRECISION) - 2.7600000000000007 AS "Feature_1_1", CAST("ADS"."Feature_2" AS DOUBLE PRECISION) - 4.245 AS "Feature_2_1", CAST("ADS"."Feature_3" AS DOUBLE PRECISION) - 1.325 AS "Feature_3_1", CAST("ADS"."Feature_0" AS DOUBLE PRECISION) - 6.548837209302325 AS "Feature_0_2", CAST("ADS"."Feature_1" AS DOUBLE PRECISION) - 2.9674418604651165 AS "Feature_1_2", CAST("ADS"."Feature_2" AS DOUBLE PRECISION) - 5.502325581395348 AS "Feature_2_2", CAST("ADS"."Feature_3" AS DOUBLE PRECISION) - 2.01860465116279 AS "Feature_3_2" 
 FROM iris AS "ADS"), 
@@ -41,15 +41,15 @@ FROM (SELECT nb_sums."KEY" AS "KEY", nb_sums."Score_0" AS "Score_0", nb_sums."Sc
 FROM (SELECT "NaiveBayes_data"."KEY" AS "KEY", -1.1765738301378215 + sum("NaiveBayes_data".log_proba_0) AS "Score_0", -1.0986122886681098 + sum("NaiveBayes_data".log_proba_1) AS "Score_1", -1.0262916270884836 + sum("NaiveBayes_data".log_proba_2) AS "Score_2" 
 FROM "NaiveBayes_data" GROUP BY "NaiveBayes_data"."KEY") AS nb_sums) AS "NaiveBayes_Scores") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_0V5LZ4_NAI part 3. Create Index 
+-- Code For temporary table TMP_20180602_V54_NAIVEBAYES_SCO part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180516_CODEGEN_2552" ON "TMP_20180516_CODEGEN_0V5LZ4_NAI" ("KEY")
+CREATE INDEX "ix_TMP_20180602_V54_NAI_130d" ON "TMP_20180602_V54_NAIVEBAYES_SCO" ("KEY")
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT "NaiveBayes_Scores"."KEY" AS "KEY", "NaiveBayes_Scores"."Score_0" AS "Score_0", "NaiveBayes_Scores"."Score_1" AS "Score_1", "NaiveBayes_Scores"."Score_2" AS "Score_2", CAST(NULL AS DOUBLE PRECISION) AS "Proba_0", CAST(NULL AS DOUBLE PRECISION) AS "Proba_1", CAST(NULL AS DOUBLE PRECISION) AS "Proba_2", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_0", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_1", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_2", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba" 
-FROM "TMP_20180516_CODEGEN_0V5LZ4_NAI" AS "NaiveBayes_Scores"), 
+FROM "TMP_20180602_V54_NAIVEBAYES_SCO" AS "NaiveBayes_Scores"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

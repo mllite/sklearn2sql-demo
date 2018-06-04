@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table ##TMP_20180516122422_CODEGEN_RRZM4B_ADS_imp_1_OUT part 1. Create 
+-- Code For temporary table ##TMP_20180602152758_K7K_ADS_imp_1_OUT part 1. Create 
 
 
-CREATE TABLE ##TMP_20180516122422_CODEGEN_RRZM4B_ADS_imp_1_OUT (
+CREATE TABLE ##TMP_20180602152758_K7K_ADS_imp_1_OUT (
 	[KEY] BIGINT NULL, 
 	imputer_output_2 FLOAT(53) NULL, 
 	imputer_output_3 FLOAT(53) NULL, 
@@ -23,16 +23,16 @@ CREATE TABLE ##TMP_20180516122422_CODEGEN_RRZM4B_ADS_imp_1_OUT (
 
 
 
--- Code For temporary table ##TMP_20180516122422_CODEGEN_RRZM4B_ADS_imp_1_OUT part 2. Populate
+-- Code For temporary table ##TMP_20180602152758_K7K_ADS_imp_1_OUT part 2. Populate
 
-INSERT INTO ##TMP_20180516122422_CODEGEN_RRZM4B_ADS_imp_1_OUT ([KEY], imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT [ADS_imp_1_OUT].[KEY], [ADS_imp_1_OUT].imputer_output_2, [ADS_imp_1_OUT].imputer_output_3, [ADS_imp_1_OUT].imputer_output_4, [ADS_imp_1_OUT].imputer_output_5 
+INSERT INTO ##TMP_20180602152758_K7K_ADS_imp_1_OUT ([KEY], imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT [ADS_imp_1_OUT].[KEY], [ADS_imp_1_OUT].imputer_output_2, [ADS_imp_1_OUT].imputer_output_3, [ADS_imp_1_OUT].imputer_output_4, [ADS_imp_1_OUT].imputer_output_5 
 FROM (SELECT [ADS].[KEY] AS [KEY], CASE WHEN ([ADS].[Feature_0] IS NULL) THEN 5.8474999999999975 ELSE [ADS].[Feature_0] END AS imputer_output_2, CASE WHEN ([ADS].[Feature_1] IS NULL) THEN 3.0366666666666657 ELSE [ADS].[Feature_1] END AS imputer_output_3, CASE WHEN ([ADS].[Feature_2] IS NULL) THEN 3.8450000000000006 ELSE [ADS].[Feature_2] END AS imputer_output_4, CASE WHEN ([ADS].[Feature_3] IS NULL) THEN 1.245 ELSE [ADS].[Feature_3] END AS imputer_output_5 
 FROM iris AS [ADS]) AS [ADS_imp_1_OUT]
 
--- Code For temporary table ##TMP_20180516122422_CODEGEN_YTQ1SL_ADS_sca_2_OUT part 1. Create 
+-- Code For temporary table ##TMP_20180602152758_JMD_ADS_sca_2_OUT part 1. Create 
 
 
-CREATE TABLE ##TMP_20180516122422_CODEGEN_YTQ1SL_ADS_sca_2_OUT (
+CREATE TABLE ##TMP_20180602152758_JMD_ADS_sca_2_OUT (
 	[KEY] BIGINT NULL, 
 	scaler_output_2 FLOAT NULL, 
 	scaler_output_3 FLOAT NULL, 
@@ -42,16 +42,16 @@ CREATE TABLE ##TMP_20180516122422_CODEGEN_YTQ1SL_ADS_sca_2_OUT (
 
 
 
--- Code For temporary table ##TMP_20180516122422_CODEGEN_YTQ1SL_ADS_sca_2_OUT part 2. Populate
+-- Code For temporary table ##TMP_20180602152758_JMD_ADS_sca_2_OUT part 2. Populate
 
-INSERT INTO ##TMP_20180516122422_CODEGEN_YTQ1SL_ADS_sca_2_OUT ([KEY], scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT [ADS_sca_2_OUT].[KEY], [ADS_sca_2_OUT].scaler_output_2, [ADS_sca_2_OUT].scaler_output_3, [ADS_sca_2_OUT].scaler_output_4, [ADS_sca_2_OUT].scaler_output_5 
+INSERT INTO ##TMP_20180602152758_JMD_ADS_sca_2_OUT ([KEY], scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT [ADS_sca_2_OUT].[KEY], [ADS_sca_2_OUT].scaler_output_2, [ADS_sca_2_OUT].scaler_output_3, [ADS_sca_2_OUT].scaler_output_4, [ADS_sca_2_OUT].scaler_output_5 
 FROM (SELECT [ADS_imp_1_OUT].[KEY] AS [KEY], (CAST([ADS_imp_1_OUT].imputer_output_2 AS FLOAT(53)) - 5.8474999999999975) / 0.827039146594646 AS scaler_output_2, (CAST([ADS_imp_1_OUT].imputer_output_3 AS FLOAT(53)) - 3.0366666666666657) / 0.43625935201691934 AS scaler_output_3, (CAST([ADS_imp_1_OUT].imputer_output_4 AS FLOAT(53)) - 3.8450000000000006) / 1.709817241695732 AS scaler_output_4, (CAST([ADS_imp_1_OUT].imputer_output_5 AS FLOAT(53)) - 1.245) / 0.7498722113355939 AS scaler_output_5 
-FROM ##TMP_20180516122422_CODEGEN_RRZM4B_ADS_imp_1_OUT AS [ADS_imp_1_OUT]) AS [ADS_sca_2_OUT]
+FROM ##TMP_20180602152758_K7K_ADS_imp_1_OUT AS [ADS_imp_1_OUT]) AS [ADS_sca_2_OUT]
 
--- Code For temporary table ##TMP_20180516122422_CODEGEN_JNXUUX_NaiveBayes_Scores part 1. Create 
+-- Code For temporary table ##TMP_20180602152758_3R5_NaiveBayes_Scores part 1. Create 
 
 
-CREATE TABLE ##TMP_20180516122422_CODEGEN_JNXUUX_NaiveBayes_Scores (
+CREATE TABLE ##TMP_20180602152758_3R5_NaiveBayes_Scores (
 	[KEY] BIGINT NULL, 
 	[Score_0] FLOAT NULL, 
 	[Score_1] FLOAT NULL, 
@@ -60,11 +60,11 @@ CREATE TABLE ##TMP_20180516122422_CODEGEN_JNXUUX_NaiveBayes_Scores (
 
 
 
--- Code For temporary table ##TMP_20180516122422_CODEGEN_JNXUUX_NaiveBayes_Scores part 2. Populate
+-- Code For temporary table ##TMP_20180602152758_3R5_NaiveBayes_Scores part 2. Populate
 
 WITH centered_data AS 
 (SELECT [ADS_sca_2_OUT].[KEY] AS [KEY], CAST([ADS_sca_2_OUT].scaler_output_2 AS FLOAT(53)) - -1.0737587745357238 AS scaler_output_2_0, CAST([ADS_sca_2_OUT].scaler_output_3 AS FLOAT(53)) - 0.870008970111042 AS scaler_output_3_0, CAST([ADS_sca_2_OUT].scaler_output_4 AS FLOAT(53)) - -1.3793950932290453 AS scaler_output_4_0, CAST([ADS_sca_2_OUT].scaler_output_5 AS FLOAT(53)) - -1.3142779871589043 AS scaler_output_5_0, CAST([ADS_sca_2_OUT].scaler_output_2 AS FLOAT(53)) - 0.08161645102040865 AS scaler_output_2_1, CAST([ADS_sca_2_OUT].scaler_output_3 AS FLOAT(53)) - -0.6341793371020635 AS scaler_output_3_1, CAST([ADS_sca_2_OUT].scaler_output_4 AS FLOAT(53)) - 0.23394313160820315 AS scaler_output_4_1, CAST([ADS_sca_2_OUT].scaler_output_5 AS FLOAT(53)) - 0.10668484415166186 AS scaler_output_5_1, CAST([ADS_sca_2_OUT].scaler_output_2 AS FLOAT(53)) - 0.8480096887675768 AS scaler_output_2_2, CAST([ADS_sca_2_OUT].scaler_output_3 AS FLOAT(53)) - -0.15867810255873832 AS scaler_output_3_2, CAST([ADS_sca_2_OUT].scaler_output_4 AS FLOAT(53)) - 0.9692998415150353 AS scaler_output_4_2, CAST([ADS_sca_2_OUT].scaler_output_5 AS FLOAT(53)) - 1.0316486455537892 AS scaler_output_5_2 
-FROM ##TMP_20180516122422_CODEGEN_YTQ1SL_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
+FROM ##TMP_20180602152758_JMD_ADS_sca_2_OUT AS [ADS_sca_2_OUT]), 
 [NaiveBayes_data] AS 
 (SELECT [Values].[KEY] AS [KEY], CAST([Values].[Feature] AS FLOAT(53)) AS [Feature], CAST([Values].log_proba_0 AS FLOAT(53)) AS log_proba_0, CAST([Values].log_proba_1 AS FLOAT(53)) AS log_proba_1, CAST([Values].log_proba_2 AS FLOAT(53)) AS log_proba_2 
 FROM (SELECT centered_data.[KEY] AS [KEY], 0 AS [Feature], -0.5 * 0.10397266098536322 - (0.5 * centered_data.scaler_output_2_0 * centered_data.scaler_output_2_0) / 0.17659356929665943 AS log_proba_0, -0.5 * 0.9876234284885649 - (0.5 * centered_data.scaler_output_2_1 * centered_data.scaler_output_2_1) / 0.4273065370611847 AS log_proba_1, -0.5 * 1.1913340818433376 - (0.5 * centered_data.scaler_output_2_2 * centered_data.scaler_output_2_2) / 0.5238536201393055 AS log_proba_2 
@@ -72,7 +72,7 @@ FROM centered_data UNION ALL SELECT centered_data.[KEY] AS [KEY], 1 AS [Feature]
 FROM centered_data UNION ALL SELECT centered_data.[KEY] AS [KEY], 2 AS [Feature], -0.5 * -2.8627124529802606 - (0.5 * centered_data.scaler_output_4_0 * centered_data.scaler_output_4_0) / 0.009089916839634978 AS log_proba_0, -0.5 * -0.704680569700576 - (0.5 * centered_data.scaler_output_4_1 * centered_data.scaler_output_4_1) / 0.0786649459713098 AS log_proba_1, -0.5 * -0.6630042730802398 - (0.5 * centered_data.scaler_output_4_2 * centered_data.scaler_output_4_2) / 0.08201268574388819 AS log_proba_2 
 FROM centered_data UNION ALL SELECT centered_data.[KEY] AS [KEY], 3 AS [Feature], -0.5 * -1.9540850615939565 - (0.5 * centered_data.scaler_output_5_0 * centered_data.scaler_output_5_0) / 0.022551309855470963 AS log_proba_0, -0.5 * -0.7476146898927448 - (0.5 * centered_data.scaler_output_5_1 * centered_data.scaler_output_5_1) / 0.07535901221863746 AS log_proba_1, -0.5 * -0.1282298413813872 - (0.5 * centered_data.scaler_output_5_2 * centered_data.scaler_output_5_2) / 0.14000083280397102 AS log_proba_2 
 FROM centered_data) AS [Values])
- INSERT INTO ##TMP_20180516122422_CODEGEN_JNXUUX_NaiveBayes_Scores ([KEY], [Score_0], [Score_1], [Score_2]) SELECT [NaiveBayes_Scores].[KEY], [NaiveBayes_Scores].[Score_0], [NaiveBayes_Scores].[Score_1], [NaiveBayes_Scores].[Score_2] 
+ INSERT INTO ##TMP_20180602152758_3R5_NaiveBayes_Scores ([KEY], [Score_0], [Score_1], [Score_2]) SELECT [NaiveBayes_Scores].[KEY], [NaiveBayes_Scores].[Score_0], [NaiveBayes_Scores].[Score_1], [NaiveBayes_Scores].[Score_2] 
 FROM (SELECT nb_sums.[KEY] AS [KEY], nb_sums.[Score_0] AS [Score_0], nb_sums.[Score_1] AS [Score_1], nb_sums.[Score_2] AS [Score_2] 
 FROM (SELECT [NaiveBayes_data].[KEY] AS [KEY], -1.1765738301378215 + sum([NaiveBayes_data].log_proba_0) AS [Score_0], -1.0986122886681098 + sum([NaiveBayes_data].log_proba_1) AS [Score_1], -1.0262916270884836 + sum([NaiveBayes_data].log_proba_2) AS [Score_2] 
 FROM [NaiveBayes_data] GROUP BY [NaiveBayes_data].[KEY]) AS nb_sums) AS [NaiveBayes_Scores]
@@ -81,7 +81,7 @@ FROM [NaiveBayes_data] GROUP BY [NaiveBayes_data].[KEY]) AS nb_sums) AS [NaiveBa
 
 WITH orig_cte AS 
 (SELECT [NaiveBayes_Scores].[KEY] AS [KEY], [NaiveBayes_Scores].[Score_0] AS [Score_0], [NaiveBayes_Scores].[Score_1] AS [Score_1], [NaiveBayes_Scores].[Score_2] AS [Score_2], CAST(NULL AS FLOAT(53)) AS [Proba_0], CAST(NULL AS FLOAT(53)) AS [Proba_1], CAST(NULL AS FLOAT(53)) AS [Proba_2], CAST(NULL AS FLOAT(53)) AS [LogProba_0], CAST(NULL AS FLOAT(53)) AS [LogProba_1], CAST(NULL AS FLOAT(53)) AS [LogProba_2], CAST(NULL AS BIGINT) AS [Decision], CAST(NULL AS FLOAT(53)) AS [DecisionProba] 
-FROM ##TMP_20180516122422_CODEGEN_JNXUUX_NaiveBayes_Scores AS [NaiveBayes_Scores]), 
+FROM ##TMP_20180602152758_3R5_NaiveBayes_Scores AS [NaiveBayes_Scores]), 
 score_class_union AS 
 (SELECT scu.[KEY_u] AS [KEY_u], scu.class AS class, scu.[LogProba] AS [LogProba], scu.[Proba] AS [Proba], scu.[Score] AS [Score] 
 FROM (SELECT orig_cte.[KEY] AS [KEY_u], 0 AS class, orig_cte.[LogProba_0] AS [LogProba], orig_cte.[Proba_0] AS [Proba], orig_cte.[Score_0] AS [Score] 

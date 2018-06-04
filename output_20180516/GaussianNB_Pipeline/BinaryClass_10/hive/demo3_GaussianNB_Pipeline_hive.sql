@@ -10,31 +10,31 @@
 
 
 
--- Code For temporary table tmp_20180516110325_codegen_2o3ak3_ads_imp_1_out part 1. Create 
+-- Code For temporary table tmp_20180602141239_et6_ads_imp_1_out part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180516110325_codegen_2o3ak3_ads_imp_1_out` STORED AS ORC AS SELECT `ADS_imp_1_OUT`.`KEY`, `ADS_imp_1_OUT`.`impter_2`, `ADS_imp_1_OUT`.`impter_3`, `ADS_imp_1_OUT`.`impter_4`, `ADS_imp_1_OUT`.`impter_5`, `ADS_imp_1_OUT`.`impter_6`, `ADS_imp_1_OUT`.`impter_7`, `ADS_imp_1_OUT`.`impter_8`, `ADS_imp_1_OUT`.`impter_9`, `ADS_imp_1_OUT`.`impter_10`, `ADS_imp_1_OUT`.`impter_11` 
+CREATE TEMPORARY TABLE `tmp_20180602141239_et6_ads_imp_1_out` STORED AS ORC AS SELECT `ADS_imp_1_OUT`.`KEY`, `ADS_imp_1_OUT`.`impter_2`, `ADS_imp_1_OUT`.`impter_3`, `ADS_imp_1_OUT`.`impter_4`, `ADS_imp_1_OUT`.`impter_5`, `ADS_imp_1_OUT`.`impter_6`, `ADS_imp_1_OUT`.`impter_7`, `ADS_imp_1_OUT`.`impter_8`, `ADS_imp_1_OUT`.`impter_9`, `ADS_imp_1_OUT`.`impter_10`, `ADS_imp_1_OUT`.`impter_11` 
 FROM (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_0` IS NULL) THEN 0.061829205238134496 ELSE `ADS`.`Feature_0` END AS `impter_2`, CASE WHEN (`ADS`.`Feature_1` IS NULL) THEN 0.17702463767183324 ELSE `ADS`.`Feature_1` END AS `impter_3`, CASE WHEN (`ADS`.`Feature_2` IS NULL) THEN 0.04138385004903454 ELSE `ADS`.`Feature_2` END AS `impter_4`, CASE WHEN (`ADS`.`Feature_3` IS NULL) THEN 0.13060646805847148 ELSE `ADS`.`Feature_3` END AS `impter_5`, CASE WHEN (`ADS`.`Feature_4` IS NULL) THEN -0.05955810471983082 ELSE `ADS`.`Feature_4` END AS `impter_6`, CASE WHEN (`ADS`.`Feature_5` IS NULL) THEN -0.04892908987010584 ELSE `ADS`.`Feature_5` END AS `impter_7`, CASE WHEN (`ADS`.`Feature_6` IS NULL) THEN 0.19101797861713127 ELSE `ADS`.`Feature_6` END AS `impter_8`, CASE WHEN (`ADS`.`Feature_7` IS NULL) THEN 0.02204959673267471 ELSE `ADS`.`Feature_7` END AS `impter_9`, CASE WHEN (`ADS`.`Feature_8` IS NULL) THEN -0.057729814034140035 ELSE `ADS`.`Feature_8` END AS `impter_10`, CASE WHEN (`ADS`.`Feature_9` IS NULL) THEN -0.05254959205203237 ELSE `ADS`.`Feature_9` END AS `impter_11` 
 FROM `BinaryClass_10` AS `ADS`) AS `ADS_imp_1_OUT`
 
--- Code For temporary table tmp_20180516110325_codegen_2o3ak3_ads_imp_1_out part 2. Populate
+-- Code For temporary table tmp_20180602141239_et6_ads_imp_1_out part 2. Populate
 
-SELECT * FROM `tmp_20180516110325_codegen_2o3ak3_ads_imp_1_out`
+SELECT * FROM `tmp_20180602141239_et6_ads_imp_1_out`
 
--- Code For temporary table tmp_20180516110325_codegen_bod2zu_ads_sca_2_out part 1. Create 
+-- Code For temporary table tmp_20180602141239_j8n_ads_sca_2_out part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180516110325_codegen_bod2zu_ads_sca_2_out` STORED AS ORC AS SELECT `ADS_sca_2_OUT`.`KEY`, `ADS_sca_2_OUT`.`scaler_2`, `ADS_sca_2_OUT`.`scaler_3`, `ADS_sca_2_OUT`.`scaler_4`, `ADS_sca_2_OUT`.`scaler_5`, `ADS_sca_2_OUT`.`scaler_6`, `ADS_sca_2_OUT`.`scaler_7`, `ADS_sca_2_OUT`.`scaler_8`, `ADS_sca_2_OUT`.`scaler_9`, `ADS_sca_2_OUT`.`scaler_10`, `ADS_sca_2_OUT`.`scaler_11` 
+CREATE TEMPORARY TABLE `tmp_20180602141239_j8n_ads_sca_2_out` STORED AS ORC AS SELECT `ADS_sca_2_OUT`.`KEY`, `ADS_sca_2_OUT`.`scaler_2`, `ADS_sca_2_OUT`.`scaler_3`, `ADS_sca_2_OUT`.`scaler_4`, `ADS_sca_2_OUT`.`scaler_5`, `ADS_sca_2_OUT`.`scaler_6`, `ADS_sca_2_OUT`.`scaler_7`, `ADS_sca_2_OUT`.`scaler_8`, `ADS_sca_2_OUT`.`scaler_9`, `ADS_sca_2_OUT`.`scaler_10`, `ADS_sca_2_OUT`.`scaler_11` 
 FROM (SELECT `ADS_imp_1_OUT`.`KEY` AS `KEY`, (CAST(`ADS_imp_1_OUT`.`impter_2` AS DOUBLE) - 0.061829205238134496) / 1.2283839562090673 AS `scaler_2`, (CAST(`ADS_imp_1_OUT`.`impter_3` AS DOUBLE) - 0.17702463767183324) / 0.940821656314017 AS `scaler_3`, (CAST(`ADS_imp_1_OUT`.`impter_4` AS DOUBLE) - 0.04138385004903454) / 1.0741824888811282 AS `scaler_4`, (CAST(`ADS_imp_1_OUT`.`impter_5` AS DOUBLE) - 0.13060646805847148) / 1.0792244559733761 AS `scaler_5`, (CAST(`ADS_imp_1_OUT`.`impter_6` AS DOUBLE) - -0.05955810471983082) / 1.1095891190508123 AS `scaler_6`, (CAST(`ADS_imp_1_OUT`.`impter_7` AS DOUBLE) - -0.04892908987010584) / 1.3781871812029047 AS `scaler_7`, (CAST(`ADS_imp_1_OUT`.`impter_8` AS DOUBLE) - 0.19101797861713127) / 0.9735285246303208 AS `scaler_8`, (CAST(`ADS_imp_1_OUT`.`impter_9` AS DOUBLE) - 0.02204959673267471) / 0.47460301203797095 AS `scaler_9`, (CAST(`ADS_imp_1_OUT`.`impter_10` AS DOUBLE) - -0.057729814034140035) / 1.064607524840552 AS `scaler_10`, (CAST(`ADS_imp_1_OUT`.`impter_11` AS DOUBLE) - -0.05254959205203237) / 1.2245328896554564 AS `scaler_11` 
-FROM `tmp_20180516110325_codegen_2o3ak3_ads_imp_1_out` AS `ADS_imp_1_OUT`) AS `ADS_sca_2_OUT`
+FROM `tmp_20180602141239_et6_ads_imp_1_out` AS `ADS_imp_1_OUT`) AS `ADS_sca_2_OUT`
 
--- Code For temporary table tmp_20180516110325_codegen_bod2zu_ads_sca_2_out part 2. Populate
+-- Code For temporary table tmp_20180602141239_j8n_ads_sca_2_out part 2. Populate
 
-SELECT * FROM `tmp_20180516110325_codegen_bod2zu_ads_sca_2_out`
+SELECT * FROM `tmp_20180602141239_j8n_ads_sca_2_out`
 
--- Code For temporary table tmp_20180516110325_codegen_4tcbsk_naivebayes_scores part 1. Create 
+-- Code For temporary table tmp_20180602141239_a3w_naivebayes_scores part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180516110325_codegen_4tcbsk_naivebayes_scores` STORED AS ORC AS WITH `centered_data` AS 
+CREATE TEMPORARY TABLE `tmp_20180602141239_a3w_naivebayes_scores` STORED AS ORC AS WITH `centered_data` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CAST(`ADS_sca_2_OUT`.`scaler_2` AS DOUBLE) - 0.6608885522985145 AS `scaler_2_0`, CAST(`ADS_sca_2_OUT`.`scaler_3` AS DOUBLE) - 0.05011958986810387 AS `scaler_3_0`, CAST(`ADS_sca_2_OUT`.`scaler_4` AS DOUBLE) - 0.010237135493869304 AS `scaler_4_0`, CAST(`ADS_sca_2_OUT`.`scaler_5` AS DOUBLE) - -0.1134260581927905 AS `scaler_5_0`, CAST(`ADS_sca_2_OUT`.`scaler_6` AS DOUBLE) - 0.091931902073065 AS `scaler_6_0`, CAST(`ADS_sca_2_OUT`.`scaler_7` AS DOUBLE) - 0.026957993139275754 AS `scaler_7_0`, CAST(`ADS_sca_2_OUT`.`scaler_8` AS DOUBLE) - 0.19931034565274267 AS `scaler_8_0`, CAST(`ADS_sca_2_OUT`.`scaler_9` AS DOUBLE) - 0.6831306672271085 AS `scaler_9_0`, CAST(`ADS_sca_2_OUT`.`scaler_10` AS DOUBLE) - -0.05290181072678812 AS `scaler_10_0`, CAST(`ADS_sca_2_OUT`.`scaler_11` AS DOUBLE) - -0.6905707153132041 AS `scaler_11_0`, CAST(`ADS_sca_2_OUT`.`scaler_2` AS DOUBLE) - -0.6608885522985144 AS `scaler_2_1`, CAST(`ADS_sca_2_OUT`.`scaler_3` AS DOUBLE) - -0.05011958986810381 AS `scaler_3_1`, CAST(`ADS_sca_2_OUT`.`scaler_4` AS DOUBLE) - -0.010237135493869402 AS `scaler_4_1`, CAST(`ADS_sca_2_OUT`.`scaler_5` AS DOUBLE) - 0.11342605819279053 AS `scaler_5_1`, CAST(`ADS_sca_2_OUT`.`scaler_6` AS DOUBLE) - -0.09193190207306502 AS `scaler_6_1`, CAST(`ADS_sca_2_OUT`.`scaler_7` AS DOUBLE) - -0.02695799313927582 AS `scaler_7_1`, CAST(`ADS_sca_2_OUT`.`scaler_8` AS DOUBLE) - -0.19931034565274264 AS `scaler_8_1`, CAST(`ADS_sca_2_OUT`.`scaler_9` AS DOUBLE) - -0.6831306672271085 AS `scaler_9_1`, CAST(`ADS_sca_2_OUT`.`scaler_10` AS DOUBLE) - 0.05290181072678807 AS `scaler_10_1`, CAST(`ADS_sca_2_OUT`.`scaler_11` AS DOUBLE) - 0.6905707153132041 AS `scaler_11_1` 
-FROM `tmp_20180516110325_codegen_bod2zu_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
+FROM `tmp_20180602141239_j8n_ads_sca_2_out` AS `ADS_sca_2_OUT`), 
 `NaiveBayes_data` AS 
 (SELECT `Values`.`KEY` AS `KEY`, CAST(`Values`.`Feature` AS DOUBLE) AS `Feature`, CAST(`Values`.`log_proba_0` AS DOUBLE) AS `log_proba_0`, CAST(`Values`.`log_proba_1` AS DOUBLE) AS `log_proba_1` 
 FROM (SELECT `centered_data`.`KEY` AS `KEY`, 0 AS `Feature`, -0.5 * 0.7545429935238454 - (0.5 * `centered_data`.`scaler_2_0` * `centered_data`.`scaler_2_0`) / 0.33846517479399624 AS `log_proba_0`, -0.5 * 1.599603976254543 - (0.5 * `centered_data`.`scaler_2_1` * `centered_data`.`scaler_2_1`) / 0.7879874700875505 AS `log_proba_1` 
@@ -53,15 +53,15 @@ FROM (SELECT `nb_sums`.`KEY` AS `KEY`, `nb_sums`.`Score_0` AS `Score_0`, `nb_sum
 FROM (SELECT `NaiveBayes_data`.`KEY` AS `KEY`, -0.6931471805599453 + sum(`NaiveBayes_data`.`log_proba_0`) AS `Score_0`, -0.6931471805599453 + sum(`NaiveBayes_data`.`log_proba_1`) AS `Score_1` 
 FROM `NaiveBayes_data` GROUP BY `NaiveBayes_data`.`KEY`) AS `nb_sums`) AS `NaiveBayes_Scores`
 
--- Code For temporary table tmp_20180516110325_codegen_4tcbsk_naivebayes_scores part 2. Populate
+-- Code For temporary table tmp_20180602141239_a3w_naivebayes_scores part 2. Populate
 
-SELECT * FROM `tmp_20180516110325_codegen_4tcbsk_naivebayes_scores`
+SELECT * FROM `tmp_20180602141239_a3w_naivebayes_scores`
 
 -- Model deployment code
 
 WITH `orig_cte` AS 
 (SELECT `NaiveBayes_Scores`.`KEY` AS `KEY`, `NaiveBayes_Scores`.`Score_0` AS `Score_0`, `NaiveBayes_Scores`.`Score_1` AS `Score_1`, CAST(NULL AS DOUBLE) AS `Proba_0`, CAST(NULL AS DOUBLE) AS `Proba_1`, CAST(NULL AS DOUBLE) AS `LogProba_0`, CAST(NULL AS DOUBLE) AS `LogProba_1`, CAST(NULL AS BIGINT) AS `Decision`, CAST(NULL AS DOUBLE) AS `DecisionProba` 
-FROM `tmp_20180516110325_codegen_4tcbsk_naivebayes_scores` AS `NaiveBayes_Scores`), 
+FROM `tmp_20180602141239_a3w_naivebayes_scores` AS `NaiveBayes_Scores`), 
 `score_class_union` AS 
 (SELECT `scu`.`KEY_u` AS `KEY_u`, `scu`.`class` AS `class`, `scu`.`LogProba` AS `LogProba`, `scu`.`Proba` AS `Proba`, `scu`.`Score` AS `Score` 
 FROM (SELECT `orig_cte`.`KEY` AS `KEY_u`, 0 AS `class`, `orig_cte`.`LogProba_0` AS `LogProba`, `orig_cte`.`Proba_0` AS `Proba`, `orig_cte`.`Score_0` AS `Score` 

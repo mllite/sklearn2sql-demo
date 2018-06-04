@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180516122412_codegen_d28f7x_naivebayes_scores part 1. Create 
+-- Code For temporary table tmp_20180602152748_2g1_naivebayes_scores part 1. Create 
 
 
-CREATE TEMPORARY TABLE tmp_20180516122412_codegen_d28f7x_naivebayes_scores (
+CREATE TEMPORARY TABLE tmp_20180602152748_2g1_naivebayes_scores (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE, 
 	"Score_1" DOUBLE, 
@@ -22,9 +22,9 @@ CREATE TEMPORARY TABLE tmp_20180516122412_codegen_d28f7x_naivebayes_scores (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516122412_codegen_d28f7x_naivebayes_scores part 2. Populate
+-- Code For temporary table tmp_20180602152748_2g1_naivebayes_scores part 2. Populate
 
-INSERT INTO tmp_20180516122412_codegen_d28f7x_naivebayes_scores ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
+INSERT INTO tmp_20180602152748_2g1_naivebayes_scores ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
 FROM (WITH centered_data AS 
 (SELECT "ADS"."KEY" AS "KEY", CAST("ADS"."Feature_0" AS DOUBLE) - 4.95945945945946 AS "Feature_0_0", CAST("ADS"."Feature_1" AS DOUBLE) - 3.4162162162162164 AS "Feature_1_0", CAST("ADS"."Feature_2" AS DOUBLE) - 1.4864864864864862 AS "Feature_2_0", CAST("ADS"."Feature_3" AS DOUBLE) - 0.2594594594594595 AS "Feature_3_0", CAST("ADS"."Feature_0" AS DOUBLE) - 5.914999999999999 AS "Feature_0_1", CAST("ADS"."Feature_1" AS DOUBLE) - 2.7600000000000007 AS "Feature_1_1", CAST("ADS"."Feature_2" AS DOUBLE) - 4.245 AS "Feature_2_1", CAST("ADS"."Feature_3" AS DOUBLE) - 1.325 AS "Feature_3_1", CAST("ADS"."Feature_0" AS DOUBLE) - 6.548837209302325 AS "Feature_0_2", CAST("ADS"."Feature_1" AS DOUBLE) - 2.9674418604651165 AS "Feature_1_2", CAST("ADS"."Feature_2" AS DOUBLE) - 5.502325581395348 AS "Feature_2_2", CAST("ADS"."Feature_3" AS DOUBLE) - 2.01860465116279 AS "Feature_3_2" 
 FROM iris AS "ADS"), 
@@ -44,7 +44,7 @@ FROM "NaiveBayes_data" GROUP BY "NaiveBayes_data"."KEY") AS nb_sums) AS "NaiveBa
 
 WITH orig_cte AS 
 (SELECT "NaiveBayes_Scores"."KEY" AS "KEY", "NaiveBayes_Scores"."Score_0" AS "Score_0", "NaiveBayes_Scores"."Score_1" AS "Score_1", "NaiveBayes_Scores"."Score_2" AS "Score_2", CAST(NULL AS DOUBLE) AS "Proba_0", CAST(NULL AS DOUBLE) AS "Proba_1", CAST(NULL AS DOUBLE) AS "Proba_2", CAST(NULL AS DOUBLE) AS "LogProba_0", CAST(NULL AS DOUBLE) AS "LogProba_1", CAST(NULL AS DOUBLE) AS "LogProba_2", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE) AS "DecisionProba" 
-FROM tmp_20180516122412_codegen_d28f7x_naivebayes_scores AS "NaiveBayes_Scores"), 
+FROM tmp_20180602152748_2g1_naivebayes_scores AS "NaiveBayes_Scores"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

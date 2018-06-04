@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180516122423_codegen_bmoog6_ads_imp_1_out part 1. Create 
+-- Code For temporary table tmp_20180602152758_3qk_ads_imp_1_out part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516122423_codegen_bmoog6_ads_imp_1_out  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602152758_3qk_ads_imp_1_out  (
 	"KEY" BIGINT, 
 	imputer_output_2 DOUBLE PRECISION, 
 	imputer_output_3 DOUBLE PRECISION, 
@@ -23,17 +23,17 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516122423_codegen_bmoog6_ads_imp_1_out  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516122423_codegen_bmoog6_ads_imp_1_out part 2. Populate
+-- Code For temporary table tmp_20180602152758_3qk_ads_imp_1_out part 2. Populate
 
-INSERT INTO tmp_20180516122423_codegen_bmoog6_ads_imp_1_out ("KEY", imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT "U"."KEY", "U".imputer_output_2, "U".imputer_output_3, "U".imputer_output_4, "U".imputer_output_5 
+INSERT INTO tmp_20180602152758_3qk_ads_imp_1_out ("KEY", imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT "U"."KEY", "U".imputer_output_2, "U".imputer_output_3, "U".imputer_output_4, "U".imputer_output_5 
 FROM (SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".imputer_output_2, "ADS_imp_1_OUT".imputer_output_3, "ADS_imp_1_OUT".imputer_output_4, "ADS_imp_1_OUT".imputer_output_5 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN 5.8474999999999975 ELSE "ADS"."Feature_0" END AS imputer_output_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 3.0366666666666657 ELSE "ADS"."Feature_1" END AS imputer_output_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 3.8450000000000006 ELSE "ADS"."Feature_2" END AS imputer_output_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 1.245 ELSE "ADS"."Feature_3" END AS imputer_output_5 
 FROM iris AS "ADS") AS "ADS_imp_1_OUT") AS "U"
 
--- Code For temporary table tmp_20180516122423_codegen_sutxjg_ads_sca_2_out part 1. Create 
+-- Code For temporary table tmp_20180602152758_v81_ads_sca_2_out part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516122423_codegen_sutxjg_ads_sca_2_out  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602152758_v81_ads_sca_2_out  (
 	"KEY" BIGINT, 
 	scaler_output_2 DOUBLE PRECISION, 
 	scaler_output_3 DOUBLE PRECISION, 
@@ -43,17 +43,17 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516122423_codegen_sutxjg_ads_sca_2_out  (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516122423_codegen_sutxjg_ads_sca_2_out part 2. Populate
+-- Code For temporary table tmp_20180602152758_v81_ads_sca_2_out part 2. Populate
 
-INSERT INTO tmp_20180516122423_codegen_sutxjg_ads_sca_2_out ("KEY", scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT "U"."KEY", "U".scaler_output_2, "U".scaler_output_3, "U".scaler_output_4, "U".scaler_output_5 
+INSERT INTO tmp_20180602152758_v81_ads_sca_2_out ("KEY", scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT "U"."KEY", "U".scaler_output_2, "U".scaler_output_3, "U".scaler_output_4, "U".scaler_output_5 
 FROM (SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_output_2, "ADS_sca_2_OUT".scaler_output_3, "ADS_sca_2_OUT".scaler_output_4, "ADS_sca_2_OUT".scaler_output_5 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".imputer_output_2 AS DOUBLE PRECISION) - CAST(5.847499999999997 AS DOUBLE PRECISION)) / CAST(0.827039146594646 AS DOUBLE PRECISION) AS scaler_output_2, (CAST("ADS_imp_1_OUT".imputer_output_3 AS DOUBLE PRECISION) - CAST(3.036666666666666 AS DOUBLE PRECISION)) / CAST(0.436259352016919 AS DOUBLE PRECISION) AS scaler_output_3, (CAST("ADS_imp_1_OUT".imputer_output_4 AS DOUBLE PRECISION) - CAST(3.845 AS DOUBLE PRECISION)) / CAST(1.709817241695732 AS DOUBLE PRECISION) AS scaler_output_4, (CAST("ADS_imp_1_OUT".imputer_output_5 AS DOUBLE PRECISION) - CAST(1.245 AS DOUBLE PRECISION)) / CAST(0.749872211335594 AS DOUBLE PRECISION) AS scaler_output_5 
-FROM tmp_20180516122423_codegen_bmoog6_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
+FROM tmp_20180602152758_3qk_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
 
--- Code For temporary table tmp_20180516122423_codegen_9v1qvg_naivebayes_scores part 1. Create 
+-- Code For temporary table tmp_20180602152758_56w_naivebayes_scores part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516122423_codegen_9v1qvg_naivebayes_scores  (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602152758_56w_naivebayes_scores  (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -62,12 +62,12 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516122423_codegen_9v1qvg_naivebayes_score
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516122423_codegen_9v1qvg_naivebayes_scores part 2. Populate
+-- Code For temporary table tmp_20180602152758_56w_naivebayes_scores part 2. Populate
 
-INSERT INTO tmp_20180516122423_codegen_9v1qvg_naivebayes_scores ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
+INSERT INTO tmp_20180602152758_56w_naivebayes_scores ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
 FROM (WITH centered_data AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CAST("ADS_sca_2_OUT".scaler_output_2 AS DOUBLE PRECISION) - CAST(-1.073758774535724 AS DOUBLE PRECISION) AS scaler_output_2_0, CAST("ADS_sca_2_OUT".scaler_output_3 AS DOUBLE PRECISION) - CAST(0.870008970111042 AS DOUBLE PRECISION) AS scaler_output_3_0, CAST("ADS_sca_2_OUT".scaler_output_4 AS DOUBLE PRECISION) - CAST(-1.379395093229045 AS DOUBLE PRECISION) AS scaler_output_4_0, CAST("ADS_sca_2_OUT".scaler_output_5 AS DOUBLE PRECISION) - CAST(-1.314277987158904 AS DOUBLE PRECISION) AS scaler_output_5_0, CAST("ADS_sca_2_OUT".scaler_output_2 AS DOUBLE PRECISION) - CAST(0.081616451020409 AS DOUBLE PRECISION) AS scaler_output_2_1, CAST("ADS_sca_2_OUT".scaler_output_3 AS DOUBLE PRECISION) - CAST(-0.634179337102064 AS DOUBLE PRECISION) AS scaler_output_3_1, CAST("ADS_sca_2_OUT".scaler_output_4 AS DOUBLE PRECISION) - CAST(0.233943131608203 AS DOUBLE PRECISION) AS scaler_output_4_1, CAST("ADS_sca_2_OUT".scaler_output_5 AS DOUBLE PRECISION) - CAST(0.106684844151662 AS DOUBLE PRECISION) AS scaler_output_5_1, CAST("ADS_sca_2_OUT".scaler_output_2 AS DOUBLE PRECISION) - CAST(0.848009688767577 AS DOUBLE PRECISION) AS scaler_output_2_2, CAST("ADS_sca_2_OUT".scaler_output_3 AS DOUBLE PRECISION) - CAST(-0.158678102558738 AS DOUBLE PRECISION) AS scaler_output_3_2, CAST("ADS_sca_2_OUT".scaler_output_4 AS DOUBLE PRECISION) - CAST(0.969299841515035 AS DOUBLE PRECISION) AS scaler_output_4_2, CAST("ADS_sca_2_OUT".scaler_output_5 AS DOUBLE PRECISION) - CAST(1.031648645553789 AS DOUBLE PRECISION) AS scaler_output_5_2 
-FROM tmp_20180516122423_codegen_sutxjg_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180602152758_v81_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 dummy_cte AS 
 (SELECT CAST(0.0 AS DOUBLE PRECISION) AS "X"), 
 "NaiveBayes_data" AS 
@@ -86,7 +86,7 @@ FROM "NaiveBayes_data" GROUP BY "NaiveBayes_data"."KEY") AS nb_sums) AS "NaiveBa
 
 WITH orig_cte AS 
 (SELECT "NaiveBayes_Scores"."KEY" AS "KEY", "NaiveBayes_Scores"."Score_0" AS "Score_0", "NaiveBayes_Scores"."Score_1" AS "Score_1", "NaiveBayes_Scores"."Score_2" AS "Score_2", CAST(NULL AS DOUBLE PRECISION) AS "Proba_0", CAST(NULL AS DOUBLE PRECISION) AS "Proba_1", CAST(NULL AS DOUBLE PRECISION) AS "Proba_2", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_0", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_1", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_2", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba" 
-FROM tmp_20180516122423_codegen_9v1qvg_naivebayes_scores AS "NaiveBayes_Scores"), 
+FROM tmp_20180602152758_56w_naivebayes_scores AS "NaiveBayes_Scores"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu."class" AS "class", scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS "class", orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

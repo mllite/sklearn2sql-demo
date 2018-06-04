@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table DEGEN_KFLF93_ADS_IMP_1_OUT part 1. Create 
+-- Code For temporary table 20180602_JKY_ADS_IMP_1_OUT part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "DEGEN_KFLF93_ADS_IMP_1_OUT" (
+CREATE GLOBAL TEMPORARY TABLE "20180602_JKY_ADS_IMP_1_OUT" (
 	"KEY" NUMBER(19), 
 	impter_2 BINARY_DOUBLE, 
 	impter_3 BINARY_DOUBLE, 
@@ -29,17 +29,17 @@ CREATE GLOBAL TEMPORARY TABLE "DEGEN_KFLF93_ADS_IMP_1_OUT" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table DEGEN_KFLF93_ADS_IMP_1_OUT part 2. Populate
+-- Code For temporary table 20180602_JKY_ADS_IMP_1_OUT part 2. Populate
 
-INSERT INTO "DEGEN_KFLF93_ADS_IMP_1_OUT" ("KEY", impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT "U"."KEY", "U".impter_2, "U".impter_3, "U".impter_4, "U".impter_5, "U".impter_6, "U".impter_7, "U".impter_8, "U".impter_9, "U".impter_10, "U".impter_11 
+INSERT INTO "20180602_JKY_ADS_IMP_1_OUT" ("KEY", impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11) SELECT "U"."KEY", "U".impter_2, "U".impter_3, "U".impter_4, "U".impter_5, "U".impter_6, "U".impter_7, "U".impter_8, "U".impter_9, "U".impter_10, "U".impter_11 
 FROM (SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".impter_2, "ADS_imp_1_OUT".impter_3, "ADS_imp_1_OUT".impter_4, "ADS_imp_1_OUT".impter_5, "ADS_imp_1_OUT".impter_6, "ADS_imp_1_OUT".impter_7, "ADS_imp_1_OUT".impter_8, "ADS_imp_1_OUT".impter_9, "ADS_imp_1_OUT".impter_10, "ADS_imp_1_OUT".impter_11 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN 0.061829205238134496 ELSE "ADS"."Feature_0" END AS impter_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 0.17702463767183324 ELSE "ADS"."Feature_1" END AS impter_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 0.04138385004903454 ELSE "ADS"."Feature_2" END AS impter_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 0.13060646805847148 ELSE "ADS"."Feature_3" END AS impter_5, CASE WHEN ("ADS"."Feature_4" IS NULL) THEN -0.05955810471983082 ELSE "ADS"."Feature_4" END AS impter_6, CASE WHEN ("ADS"."Feature_5" IS NULL) THEN -0.04892908987010584 ELSE "ADS"."Feature_5" END AS impter_7, CASE WHEN ("ADS"."Feature_6" IS NULL) THEN 0.19101797861713127 ELSE "ADS"."Feature_6" END AS impter_8, CASE WHEN ("ADS"."Feature_7" IS NULL) THEN 0.02204959673267471 ELSE "ADS"."Feature_7" END AS impter_9, CASE WHEN ("ADS"."Feature_8" IS NULL) THEN -0.057729814034140035 ELSE "ADS"."Feature_8" END AS impter_10, CASE WHEN ("ADS"."Feature_9" IS NULL) THEN -0.05254959205203237 ELSE "ADS"."Feature_9" END AS impter_11 
 FROM "BINARYCLASS_10" "ADS") "ADS_imp_1_OUT") "U"
 
--- Code For temporary table DEGEN_PHFMTD_ADS_SCA_2_OUT part 1. Create 
+-- Code For temporary table 20180602_01G_ADS_SCA_2_OUT part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "DEGEN_PHFMTD_ADS_SCA_2_OUT" (
+CREATE GLOBAL TEMPORARY TABLE "20180602_01G_ADS_SCA_2_OUT" (
 	"KEY" NUMBER(19), 
 	scaler_2 BINARY_DOUBLE, 
 	scaler_3 BINARY_DOUBLE, 
@@ -55,17 +55,17 @@ CREATE GLOBAL TEMPORARY TABLE "DEGEN_PHFMTD_ADS_SCA_2_OUT" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table DEGEN_PHFMTD_ADS_SCA_2_OUT part 2. Populate
+-- Code For temporary table 20180602_01G_ADS_SCA_2_OUT part 2. Populate
 
-INSERT INTO "DEGEN_PHFMTD_ADS_SCA_2_OUT" ("KEY", scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT "U"."KEY", "U".scaler_2, "U".scaler_3, "U".scaler_4, "U".scaler_5, "U".scaler_6, "U".scaler_7, "U".scaler_8, "U".scaler_9, "U".scaler_10, "U".scaler_11 
+INSERT INTO "20180602_01G_ADS_SCA_2_OUT" ("KEY", scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11) SELECT "U"."KEY", "U".scaler_2, "U".scaler_3, "U".scaler_4, "U".scaler_5, "U".scaler_6, "U".scaler_7, "U".scaler_8, "U".scaler_9, "U".scaler_10, "U".scaler_11 
 FROM (SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_2, "ADS_sca_2_OUT".scaler_3, "ADS_sca_2_OUT".scaler_4, "ADS_sca_2_OUT".scaler_5, "ADS_sca_2_OUT".scaler_6, "ADS_sca_2_OUT".scaler_7, "ADS_sca_2_OUT".scaler_8, "ADS_sca_2_OUT".scaler_9, "ADS_sca_2_OUT".scaler_10, "ADS_sca_2_OUT".scaler_11 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".impter_2 AS BINARY_DOUBLE) - 0.061829205238134496) / 1.2283839562090673 AS scaler_2, (CAST("ADS_imp_1_OUT".impter_3 AS BINARY_DOUBLE) - 0.17702463767183324) / 0.940821656314017 AS scaler_3, (CAST("ADS_imp_1_OUT".impter_4 AS BINARY_DOUBLE) - 0.04138385004903454) / 1.0741824888811282 AS scaler_4, (CAST("ADS_imp_1_OUT".impter_5 AS BINARY_DOUBLE) - 0.13060646805847148) / 1.0792244559733761 AS scaler_5, (CAST("ADS_imp_1_OUT".impter_6 AS BINARY_DOUBLE) - -0.05955810471983082) / 1.1095891190508123 AS scaler_6, (CAST("ADS_imp_1_OUT".impter_7 AS BINARY_DOUBLE) - -0.04892908987010584) / 1.3781871812029047 AS scaler_7, (CAST("ADS_imp_1_OUT".impter_8 AS BINARY_DOUBLE) - 0.19101797861713127) / 0.9735285246303208 AS scaler_8, (CAST("ADS_imp_1_OUT".impter_9 AS BINARY_DOUBLE) - 0.02204959673267471) / 0.47460301203797095 AS scaler_9, (CAST("ADS_imp_1_OUT".impter_10 AS BINARY_DOUBLE) - -0.057729814034140035) / 1.064607524840552 AS scaler_10, (CAST("ADS_imp_1_OUT".impter_11 AS BINARY_DOUBLE) - -0.05254959205203237) / 1.2245328896554564 AS scaler_11 
-FROM "DEGEN_KFLF93_ADS_IMP_1_OUT" "ADS_imp_1_OUT") "ADS_sca_2_OUT") "U"
+FROM "20180602_JKY_ADS_IMP_1_OUT" "ADS_imp_1_OUT") "ADS_sca_2_OUT") "U"
 
--- Code For temporary table N_R8DO1W_NAIVEBAYES_SCORES part 1. Create 
+-- Code For temporary table 0602_VYO_NAIVEBAYES_SCORES part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "N_R8DO1W_NAIVEBAYES_SCORES" (
+CREATE GLOBAL TEMPORARY TABLE "0602_VYO_NAIVEBAYES_SCORES" (
 	"KEY" NUMBER(19), 
 	"Score_0" BINARY_DOUBLE, 
 	"Score_1" BINARY_DOUBLE
@@ -73,12 +73,12 @@ CREATE GLOBAL TEMPORARY TABLE "N_R8DO1W_NAIVEBAYES_SCORES" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table N_R8DO1W_NAIVEBAYES_SCORES part 2. Populate
+-- Code For temporary table 0602_VYO_NAIVEBAYES_SCORES part 2. Populate
 
-INSERT INTO "N_R8DO1W_NAIVEBAYES_SCORES" ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
+INSERT INTO "0602_VYO_NAIVEBAYES_SCORES" ("KEY", "Score_0", "Score_1") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1" 
 FROM (WITH centered_data AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CAST("ADS_sca_2_OUT".scaler_2 AS BINARY_DOUBLE) - 0.6608885522985145 AS scaler_2_0, CAST("ADS_sca_2_OUT".scaler_3 AS BINARY_DOUBLE) - 0.05011958986810387 AS scaler_3_0, CAST("ADS_sca_2_OUT".scaler_4 AS BINARY_DOUBLE) - 0.010237135493869304 AS scaler_4_0, CAST("ADS_sca_2_OUT".scaler_5 AS BINARY_DOUBLE) - -0.1134260581927905 AS scaler_5_0, CAST("ADS_sca_2_OUT".scaler_6 AS BINARY_DOUBLE) - 0.091931902073065 AS scaler_6_0, CAST("ADS_sca_2_OUT".scaler_7 AS BINARY_DOUBLE) - 0.026957993139275754 AS scaler_7_0, CAST("ADS_sca_2_OUT".scaler_8 AS BINARY_DOUBLE) - 0.19931034565274267 AS scaler_8_0, CAST("ADS_sca_2_OUT".scaler_9 AS BINARY_DOUBLE) - 0.6831306672271085 AS scaler_9_0, CAST("ADS_sca_2_OUT".scaler_10 AS BINARY_DOUBLE) - -0.05290181072678812 AS scaler_10_0, CAST("ADS_sca_2_OUT".scaler_11 AS BINARY_DOUBLE) - -0.6905707153132041 AS scaler_11_0, CAST("ADS_sca_2_OUT".scaler_2 AS BINARY_DOUBLE) - -0.6608885522985144 AS scaler_2_1, CAST("ADS_sca_2_OUT".scaler_3 AS BINARY_DOUBLE) - -0.05011958986810381 AS scaler_3_1, CAST("ADS_sca_2_OUT".scaler_4 AS BINARY_DOUBLE) - -0.010237135493869402 AS scaler_4_1, CAST("ADS_sca_2_OUT".scaler_5 AS BINARY_DOUBLE) - 0.11342605819279053 AS scaler_5_1, CAST("ADS_sca_2_OUT".scaler_6 AS BINARY_DOUBLE) - -0.09193190207306502 AS scaler_6_1, CAST("ADS_sca_2_OUT".scaler_7 AS BINARY_DOUBLE) - -0.02695799313927582 AS scaler_7_1, CAST("ADS_sca_2_OUT".scaler_8 AS BINARY_DOUBLE) - -0.19931034565274264 AS scaler_8_1, CAST("ADS_sca_2_OUT".scaler_9 AS BINARY_DOUBLE) - -0.6831306672271085 AS scaler_9_1, CAST("ADS_sca_2_OUT".scaler_10 AS BINARY_DOUBLE) - 0.05290181072678807 AS scaler_10_1, CAST("ADS_sca_2_OUT".scaler_11 AS BINARY_DOUBLE) - 0.6905707153132041 AS scaler_11_1 
-FROM "DEGEN_PHFMTD_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
+FROM "20180602_01G_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
 "NaiveBayes_data" AS 
 (SELECT "Values"."KEY" AS "KEY", CAST("Values"."Feature" AS BINARY_DOUBLE) AS "Feature", CAST("Values".log_proba_0 AS BINARY_DOUBLE) AS log_proba_0, CAST("Values".log_proba_1 AS BINARY_DOUBLE) AS log_proba_1 
 FROM (SELECT centered_data."KEY" AS "KEY", 0 AS "Feature", -0.5 * 0.7545429935238454 - (0.5 * centered_data.scaler_2_0 * centered_data.scaler_2_0) / 0.33846517479399624 AS log_proba_0, -0.5 * 1.599603976254543 - (0.5 * centered_data.scaler_2_1 * centered_data.scaler_2_1) / 0.7879874700875505 AS log_proba_1 
@@ -101,7 +101,7 @@ FROM "NaiveBayes_data" GROUP BY "NaiveBayes_data"."KEY") nb_sums) "NaiveBayes_Sc
 
 WITH orig_cte AS 
 (SELECT "NaiveBayes_Scores"."KEY" AS "KEY", "NaiveBayes_Scores"."Score_0" AS "Score_0", "NaiveBayes_Scores"."Score_1" AS "Score_1", CAST(NULL AS BINARY_DOUBLE) AS "Proba_0", CAST(NULL AS BINARY_DOUBLE) AS "Proba_1", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_0", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_1", CAST(NULL AS NUMBER(19)) AS "Decision", CAST(NULL AS BINARY_DOUBLE) AS "DecisionProba" 
-FROM "N_R8DO1W_NAIVEBAYES_SCORES" "NaiveBayes_Scores"), 
+FROM "0602_VYO_NAIVEBAYES_SCORES" "NaiveBayes_Scores"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

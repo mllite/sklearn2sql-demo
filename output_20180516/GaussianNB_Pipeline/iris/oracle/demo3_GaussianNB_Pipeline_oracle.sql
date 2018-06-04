@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table DEGEN_QJWNZQ_ADS_IMP_1_OUT part 1. Create 
+-- Code For temporary table 20180602_4JJ_ADS_IMP_1_OUT part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "DEGEN_QJWNZQ_ADS_IMP_1_OUT" (
+CREATE GLOBAL TEMPORARY TABLE "20180602_4JJ_ADS_IMP_1_OUT" (
 	"KEY" NUMBER(19), 
 	imputer_output_2 BINARY_DOUBLE, 
 	imputer_output_3 BINARY_DOUBLE, 
@@ -23,17 +23,17 @@ CREATE GLOBAL TEMPORARY TABLE "DEGEN_QJWNZQ_ADS_IMP_1_OUT" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table DEGEN_QJWNZQ_ADS_IMP_1_OUT part 2. Populate
+-- Code For temporary table 20180602_4JJ_ADS_IMP_1_OUT part 2. Populate
 
-INSERT INTO "DEGEN_QJWNZQ_ADS_IMP_1_OUT" ("KEY", imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT "U"."KEY", "U".imputer_output_2, "U".imputer_output_3, "U".imputer_output_4, "U".imputer_output_5 
+INSERT INTO "20180602_4JJ_ADS_IMP_1_OUT" ("KEY", imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT "U"."KEY", "U".imputer_output_2, "U".imputer_output_3, "U".imputer_output_4, "U".imputer_output_5 
 FROM (SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".imputer_output_2, "ADS_imp_1_OUT".imputer_output_3, "ADS_imp_1_OUT".imputer_output_4, "ADS_imp_1_OUT".imputer_output_5 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN 5.8474999999999975 ELSE "ADS"."Feature_0" END AS imputer_output_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 3.0366666666666657 ELSE "ADS"."Feature_1" END AS imputer_output_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 3.8450000000000006 ELSE "ADS"."Feature_2" END AS imputer_output_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 1.245 ELSE "ADS"."Feature_3" END AS imputer_output_5 
 FROM "IRIS" "ADS") "ADS_imp_1_OUT") "U"
 
--- Code For temporary table DEGEN_8L1VT5_ADS_SCA_2_OUT part 1. Create 
+-- Code For temporary table 20180602_HA0_ADS_SCA_2_OUT part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "DEGEN_8L1VT5_ADS_SCA_2_OUT" (
+CREATE GLOBAL TEMPORARY TABLE "20180602_HA0_ADS_SCA_2_OUT" (
 	"KEY" NUMBER(19), 
 	scaler_output_2 BINARY_DOUBLE, 
 	scaler_output_3 BINARY_DOUBLE, 
@@ -43,17 +43,17 @@ CREATE GLOBAL TEMPORARY TABLE "DEGEN_8L1VT5_ADS_SCA_2_OUT" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table DEGEN_8L1VT5_ADS_SCA_2_OUT part 2. Populate
+-- Code For temporary table 20180602_HA0_ADS_SCA_2_OUT part 2. Populate
 
-INSERT INTO "DEGEN_8L1VT5_ADS_SCA_2_OUT" ("KEY", scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT "U"."KEY", "U".scaler_output_2, "U".scaler_output_3, "U".scaler_output_4, "U".scaler_output_5 
+INSERT INTO "20180602_HA0_ADS_SCA_2_OUT" ("KEY", scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT "U"."KEY", "U".scaler_output_2, "U".scaler_output_3, "U".scaler_output_4, "U".scaler_output_5 
 FROM (SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_output_2, "ADS_sca_2_OUT".scaler_output_3, "ADS_sca_2_OUT".scaler_output_4, "ADS_sca_2_OUT".scaler_output_5 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".imputer_output_2 AS BINARY_DOUBLE) - 5.8474999999999975) / 0.827039146594646 AS scaler_output_2, (CAST("ADS_imp_1_OUT".imputer_output_3 AS BINARY_DOUBLE) - 3.0366666666666657) / 0.43625935201691934 AS scaler_output_3, (CAST("ADS_imp_1_OUT".imputer_output_4 AS BINARY_DOUBLE) - 3.8450000000000006) / 1.709817241695732 AS scaler_output_4, (CAST("ADS_imp_1_OUT".imputer_output_5 AS BINARY_DOUBLE) - 1.245) / 0.7498722113355939 AS scaler_output_5 
-FROM "DEGEN_QJWNZQ_ADS_IMP_1_OUT" "ADS_imp_1_OUT") "ADS_sca_2_OUT") "U"
+FROM "20180602_4JJ_ADS_IMP_1_OUT" "ADS_imp_1_OUT") "ADS_sca_2_OUT") "U"
 
--- Code For temporary table N_6VPLCY_NAIVEBAYES_SCORES part 1. Create 
+-- Code For temporary table 0602_AMA_NAIVEBAYES_SCORES part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "N_6VPLCY_NAIVEBAYES_SCORES" (
+CREATE GLOBAL TEMPORARY TABLE "0602_AMA_NAIVEBAYES_SCORES" (
 	"KEY" NUMBER(19), 
 	"Score_0" BINARY_DOUBLE, 
 	"Score_1" BINARY_DOUBLE, 
@@ -62,12 +62,12 @@ CREATE GLOBAL TEMPORARY TABLE "N_6VPLCY_NAIVEBAYES_SCORES" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table N_6VPLCY_NAIVEBAYES_SCORES part 2. Populate
+-- Code For temporary table 0602_AMA_NAIVEBAYES_SCORES part 2. Populate
 
-INSERT INTO "N_6VPLCY_NAIVEBAYES_SCORES" ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
+INSERT INTO "0602_AMA_NAIVEBAYES_SCORES" ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
 FROM (WITH centered_data AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CAST("ADS_sca_2_OUT".scaler_output_2 AS BINARY_DOUBLE) - -1.0737587745357238 AS scaler_output_2_0, CAST("ADS_sca_2_OUT".scaler_output_3 AS BINARY_DOUBLE) - 0.870008970111042 AS scaler_output_3_0, CAST("ADS_sca_2_OUT".scaler_output_4 AS BINARY_DOUBLE) - -1.3793950932290453 AS scaler_output_4_0, CAST("ADS_sca_2_OUT".scaler_output_5 AS BINARY_DOUBLE) - -1.3142779871589043 AS scaler_output_5_0, CAST("ADS_sca_2_OUT".scaler_output_2 AS BINARY_DOUBLE) - 0.08161645102040865 AS scaler_output_2_1, CAST("ADS_sca_2_OUT".scaler_output_3 AS BINARY_DOUBLE) - -0.6341793371020635 AS scaler_output_3_1, CAST("ADS_sca_2_OUT".scaler_output_4 AS BINARY_DOUBLE) - 0.23394313160820315 AS scaler_output_4_1, CAST("ADS_sca_2_OUT".scaler_output_5 AS BINARY_DOUBLE) - 0.10668484415166186 AS scaler_output_5_1, CAST("ADS_sca_2_OUT".scaler_output_2 AS BINARY_DOUBLE) - 0.8480096887675768 AS scaler_output_2_2, CAST("ADS_sca_2_OUT".scaler_output_3 AS BINARY_DOUBLE) - -0.15867810255873832 AS scaler_output_3_2, CAST("ADS_sca_2_OUT".scaler_output_4 AS BINARY_DOUBLE) - 0.9692998415150353 AS scaler_output_4_2, CAST("ADS_sca_2_OUT".scaler_output_5 AS BINARY_DOUBLE) - 1.0316486455537892 AS scaler_output_5_2 
-FROM "DEGEN_8L1VT5_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
+FROM "20180602_HA0_ADS_SCA_2_OUT" "ADS_sca_2_OUT"), 
 "NaiveBayes_data" AS 
 (SELECT "Values"."KEY" AS "KEY", CAST("Values"."Feature" AS BINARY_DOUBLE) AS "Feature", CAST("Values".log_proba_0 AS BINARY_DOUBLE) AS log_proba_0, CAST("Values".log_proba_1 AS BINARY_DOUBLE) AS log_proba_1, CAST("Values".log_proba_2 AS BINARY_DOUBLE) AS log_proba_2 
 FROM (SELECT centered_data."KEY" AS "KEY", 0 AS "Feature", -0.5 * 0.10397266098536322 - (0.5 * centered_data.scaler_output_2_0 * centered_data.scaler_output_2_0) / 0.17659356929665943 AS log_proba_0, -0.5 * 0.9876234284885649 - (0.5 * centered_data.scaler_output_2_1 * centered_data.scaler_output_2_1) / 0.4273065370611847 AS log_proba_1, -0.5 * 1.1913340818433376 - (0.5 * centered_data.scaler_output_2_2 * centered_data.scaler_output_2_2) / 0.5238536201393055 AS log_proba_2 
@@ -84,7 +84,7 @@ FROM "NaiveBayes_data" GROUP BY "NaiveBayes_data"."KEY") nb_sums) "NaiveBayes_Sc
 
 WITH orig_cte AS 
 (SELECT "NaiveBayes_Scores"."KEY" AS "KEY", "NaiveBayes_Scores"."Score_0" AS "Score_0", "NaiveBayes_Scores"."Score_1" AS "Score_1", "NaiveBayes_Scores"."Score_2" AS "Score_2", CAST(NULL AS BINARY_DOUBLE) AS "Proba_0", CAST(NULL AS BINARY_DOUBLE) AS "Proba_1", CAST(NULL AS BINARY_DOUBLE) AS "Proba_2", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_0", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_1", CAST(NULL AS BINARY_DOUBLE) AS "LogProba_2", CAST(NULL AS NUMBER(19)) AS "Decision", CAST(NULL AS BINARY_DOUBLE) AS "DecisionProba" 
-FROM "N_6VPLCY_NAIVEBAYES_SCORES" "NaiveBayes_Scores"), 
+FROM "0602_AMA_NAIVEBAYES_SCORES" "NaiveBayes_Scores"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 
