@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180516_CODEGEN_TMOVQM_ADS part 1. Create 
+-- Code For temporary table TMP_20180602_KH0_ADS_IMP_1_OUT part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_TMOVQM_ADS" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_KH0_ADS_IMP_1_OUT" (
 	"KEY" BIGINT NOT NULL, 
 	imputer_output_2 DOUBLE PRECISION, 
 	imputer_output_3 DOUBLE PRECISION, 
@@ -24,21 +24,21 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_TMOVQM_ADS" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_TMOVQM_ADS part 2. Populate
+-- Code For temporary table TMP_20180602_KH0_ADS_IMP_1_OUT part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_TMOVQM_ADS" ("KEY", imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT "U"."KEY", "U".imputer_output_2, "U".imputer_output_3, "U".imputer_output_4, "U".imputer_output_5 
+INSERT INTO "TMP_20180602_KH0_ADS_IMP_1_OUT" ("KEY", imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT "U"."KEY", "U".imputer_output_2, "U".imputer_output_3, "U".imputer_output_4, "U".imputer_output_5 
 FROM (SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".imputer_output_2, "ADS_imp_1_OUT".imputer_output_3, "ADS_imp_1_OUT".imputer_output_4, "ADS_imp_1_OUT".imputer_output_5 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN 5.8474999999999975 ELSE "ADS"."Feature_0" END AS imputer_output_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 3.0366666666666657 ELSE "ADS"."Feature_1" END AS imputer_output_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 3.8450000000000006 ELSE "ADS"."Feature_2" END AS imputer_output_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 1.245 ELSE "ADS"."Feature_3" END AS imputer_output_5 
 FROM iris AS "ADS") AS "ADS_imp_1_OUT") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_TMOVQM_ADS part 3. Create Index 
+-- Code For temporary table TMP_20180602_KH0_ADS_IMP_1_OUT part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180516_CODEGEN_4516" ON "TMP_20180516_CODEGEN_TMOVQM_ADS" ("KEY")
+CREATE INDEX "ix_TMP_20180602_KH0_ADS_dd9c" ON "TMP_20180602_KH0_ADS_IMP_1_OUT" ("KEY")
 
--- Code For temporary table TMP_20180516_CODEGEN_ZADQW3_ADS part 1. Create 
+-- Code For temporary table TMP_20180602_4QK_ADS_SCA_2_OUT part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_ZADQW3_ADS" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_4QK_ADS_SCA_2_OUT" (
 	"KEY" BIGINT NOT NULL, 
 	scaler_output_2 DOUBLE PRECISION, 
 	scaler_output_3 DOUBLE PRECISION, 
@@ -49,21 +49,21 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_ZADQW3_ADS" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_ZADQW3_ADS part 2. Populate
+-- Code For temporary table TMP_20180602_4QK_ADS_SCA_2_OUT part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_ZADQW3_ADS" ("KEY", scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT "U"."KEY", "U".scaler_output_2, "U".scaler_output_3, "U".scaler_output_4, "U".scaler_output_5 
+INSERT INTO "TMP_20180602_4QK_ADS_SCA_2_OUT" ("KEY", scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT "U"."KEY", "U".scaler_output_2, "U".scaler_output_3, "U".scaler_output_4, "U".scaler_output_5 
 FROM (SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_output_2, "ADS_sca_2_OUT".scaler_output_3, "ADS_sca_2_OUT".scaler_output_4, "ADS_sca_2_OUT".scaler_output_5 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".imputer_output_2 AS DOUBLE PRECISION) - 5.8474999999999975) / 0.827039146594646 AS scaler_output_2, (CAST("ADS_imp_1_OUT".imputer_output_3 AS DOUBLE PRECISION) - 3.0366666666666657) / 0.43625935201691934 AS scaler_output_3, (CAST("ADS_imp_1_OUT".imputer_output_4 AS DOUBLE PRECISION) - 3.8450000000000006) / 1.709817241695732 AS scaler_output_4, (CAST("ADS_imp_1_OUT".imputer_output_5 AS DOUBLE PRECISION) - 1.245) / 0.7498722113355939 AS scaler_output_5 
-FROM "TMP_20180516_CODEGEN_TMOVQM_ADS" AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
+FROM "TMP_20180602_KH0_ADS_IMP_1_OUT" AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_ZADQW3_ADS part 3. Create Index 
+-- Code For temporary table TMP_20180602_4QK_ADS_SCA_2_OUT part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180516_CODEGEN_3e0f" ON "TMP_20180516_CODEGEN_ZADQW3_ADS" ("KEY")
+CREATE INDEX "ix_TMP_20180602_4QK_ADS_ec81" ON "TMP_20180602_4QK_ADS_SCA_2_OUT" ("KEY")
 
--- Code For temporary table TMP_20180516_CODEGEN_3FDKPH_XGB part 1. Create 
+-- Code For temporary table TMP_20180602_532_XGB_B0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_3FDKPH_XGB" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_532_XGB_B0" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -72,12 +72,12 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_3FDKPH_XGB" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_3FDKPH_XGB part 2. Populate
+-- Code For temporary table TMP_20180602_532_XGB_B0 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_3FDKPH_XGB" ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
+INSERT INTO "TMP_20180602_532_XGB_B0" ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, 0.1414012759923935 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, -0.07302054017782211 AS "Score" FROM rdb$database) AS "Values"), 
@@ -89,7 +89,7 @@ FROM "DT_node_lookup" LEFT OUTER JOIN "DT_node_data" ON "DT_node_lookup".node_id
 FROM "DT_Output"), 
 "DT_node_lookup_1" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.5877821445465088) THEN 3 ELSE 4 END END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_1" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, -0.07070064544677734 AS "Score" FROM rdb$database UNION ALL SELECT 3 AS nid, 0.13090908527374268 AS "Score" FROM rdb$database UNION ALL SELECT 4 AS nid, -0.05675676465034485 AS "Score" FROM rdb$database) AS "Values"), 
@@ -101,7 +101,7 @@ FROM "DT_node_lookup_1" LEFT OUTER JOIN "DT_node_data_1" ON "DT_node_lookup_1".n
 FROM "DT_Output_1"), 
 "DT_node_lookup_2" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.5877821445465088) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_2" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, -0.0670926570892334 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, 0.12810811400413513 AS "Score" FROM rdb$database) AS "Values"), 
@@ -113,7 +113,7 @@ FROM "DT_node_lookup_2" LEFT OUTER JOIN "DT_node_data_2" ON "DT_node_lookup_2".n
 FROM "DT_Output_2"), 
 "DT_node_lookup_3" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_3" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, 0.12393698841333389 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, -0.07037719339132309 AS "Score" FROM rdb$database) AS "Values"), 
@@ -125,7 +125,7 @@ FROM "DT_node_lookup_3" LEFT OUTER JOIN "DT_node_data_3" ON "DT_node_lookup_3".n
 FROM "DT_Output_3"), 
 "DT_node_lookup_4" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 < 0.6734480857849121) THEN 3 ELSE 4 END END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_4" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, -0.0680152177810669 AS "Score" FROM rdb$database UNION ALL SELECT 3 AS nid, 0.10619767755270004 AS "Score" FROM rdb$database UNION ALL SELECT 4 AS nid, -0.0635986253619194 AS "Score" FROM rdb$database) AS "Values"), 
@@ -134,10 +134,34 @@ FROM (SELECT 1 AS nid, -0.0680152177810669 AS "Score" FROM rdb$database UNION AL
 FROM "DT_node_lookup_4" LEFT OUTER JOIN "DT_node_data_4" ON "DT_node_lookup_4".node_id_2 = "DT_node_data_4".nid), 
 "XGB_Model_1_1" AS 
 (SELECT "DT_Output_4"."KEY" AS "KEY", 0.0 AS "Score_0", "DT_Output_4"."Score" AS "Score_1", 0.0 AS "Score_2" 
-FROM "DT_Output_4"), 
-"DT_node_lookup_5" AS 
+FROM "DT_Output_4")
+ SELECT "XGB_B0"."KEY", "XGB_B0"."Score_0", "XGB_B0"."Score_1", "XGB_B0"."Score_2" 
+FROM (SELECT "XGB_esu_0"."KEY" AS "KEY", "XGB_esu_0"."Score_0" AS "Score_0", "XGB_esu_0"."Score_1" AS "Score_1", "XGB_esu_0"."Score_2" AS "Score_2" 
+FROM (SELECT "XGB_Model_0_0"."KEY" AS "KEY", "XGB_Model_0_0"."Score_0" AS "Score_0", "XGB_Model_0_0"."Score_1" AS "Score_1", "XGB_Model_0_0"."Score_2" AS "Score_2" 
+FROM "XGB_Model_0_0" UNION ALL SELECT "XGB_Model_1_0"."KEY" AS "KEY", "XGB_Model_1_0"."Score_0" AS "Score_0", "XGB_Model_1_0"."Score_1" AS "Score_1", "XGB_Model_1_0"."Score_2" AS "Score_2" 
+FROM "XGB_Model_1_0" UNION ALL SELECT "XGB_Model_2_0"."KEY" AS "KEY", "XGB_Model_2_0"."Score_0" AS "Score_0", "XGB_Model_2_0"."Score_1" AS "Score_1", "XGB_Model_2_0"."Score_2" AS "Score_2" 
+FROM "XGB_Model_2_0" UNION ALL SELECT "XGB_Model_0_1"."KEY" AS "KEY", "XGB_Model_0_1"."Score_0" AS "Score_0", "XGB_Model_0_1"."Score_1" AS "Score_1", "XGB_Model_0_1"."Score_2" AS "Score_2" 
+FROM "XGB_Model_0_1" UNION ALL SELECT "XGB_Model_1_1"."KEY" AS "KEY", "XGB_Model_1_1"."Score_0" AS "Score_0", "XGB_Model_1_1"."Score_1" AS "Score_1", "XGB_Model_1_1"."Score_2" AS "Score_2" 
+FROM "XGB_Model_1_1") AS "XGB_esu_0") AS "XGB_B0") AS "U"
+
+-- Code For temporary table TMP_20180602_SNH_XGB_B1 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_SNH_XGB_B1" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Score_2" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_SNH_XGB_B1 part 2. Populate
+
+INSERT INTO "TMP_20180602_SNH_XGB_B1" ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
+FROM (WITH "DT_node_lookup_5" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.5877821445465088) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_5" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, -0.06439390033483505 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, 0.11250362545251846 AS "Score" FROM rdb$database) AS "Values"), 
@@ -149,7 +173,7 @@ FROM "DT_node_lookup_5" LEFT OUTER JOIN "DT_node_data_5" ON "DT_node_lookup_5".n
 FROM "DT_Output_5"), 
 "DT_node_lookup_6" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_6" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, 0.11088015884160995 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, -0.06806052476167679 AS "Score" FROM rdb$database) AS "Values"), 
@@ -161,7 +185,7 @@ FROM "DT_node_lookup_6" LEFT OUTER JOIN "DT_node_data_6" ON "DT_node_lookup_6".n
 FROM "DT_Output_6"), 
 "DT_node_lookup_7" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.6462678909301758) THEN 3 ELSE 4 END END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_7" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, -0.06561063975095749 AS "Score" FROM rdb$database UNION ALL SELECT 3 AS nid, 0.09554922580718994 AS "Score" FROM rdb$database UNION ALL SELECT 4 AS nid, -0.06135019287467003 AS "Score" FROM rdb$database) AS "Values"), 
@@ -173,7 +197,7 @@ FROM "DT_node_lookup_7" LEFT OUTER JOIN "DT_node_data_7" ON "DT_node_lookup_7".n
 FROM "DT_Output_7"), 
 "DT_node_lookup_8" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.5877821445465088) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_8" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, -0.062040943652391434 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, 0.10116302967071533 AS "Score" FROM rdb$database) AS "Values"), 
@@ -185,7 +209,7 @@ FROM "DT_node_lookup_8" LEFT OUTER JOIN "DT_node_data_8" ON "DT_node_lookup_8".n
 FROM "DT_Output_8"), 
 "DT_node_lookup_9" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_9" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, 0.10079570859670639 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, -0.06599530577659607 AS "Score" FROM rdb$database) AS "Values"), 
@@ -195,24 +219,19 @@ FROM "DT_node_lookup_9" LEFT OUTER JOIN "DT_node_data_9" ON "DT_node_lookup_9".n
 "XGB_Model_0_3" AS 
 (SELECT "DT_Output_9"."KEY" AS "KEY", "DT_Output_9"."Score" AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2" 
 FROM "DT_Output_9")
- SELECT "XGB_B0"."KEY", "XGB_B0"."Score_0", "XGB_B0"."Score_1", "XGB_B0"."Score_2" 
-FROM (SELECT "XGB_esu_0"."KEY" AS "KEY", "XGB_esu_0"."Score_0" AS "Score_0", "XGB_esu_0"."Score_1" AS "Score_1", "XGB_esu_0"."Score_2" AS "Score_2" 
-FROM (SELECT "XGB_Model_0_0"."KEY" AS "KEY", "XGB_Model_0_0"."Score_0" AS "Score_0", "XGB_Model_0_0"."Score_1" AS "Score_1", "XGB_Model_0_0"."Score_2" AS "Score_2" 
-FROM "XGB_Model_0_0" UNION ALL SELECT "XGB_Model_1_0"."KEY" AS "KEY", "XGB_Model_1_0"."Score_0" AS "Score_0", "XGB_Model_1_0"."Score_1" AS "Score_1", "XGB_Model_1_0"."Score_2" AS "Score_2" 
-FROM "XGB_Model_1_0" UNION ALL SELECT "XGB_Model_2_0"."KEY" AS "KEY", "XGB_Model_2_0"."Score_0" AS "Score_0", "XGB_Model_2_0"."Score_1" AS "Score_1", "XGB_Model_2_0"."Score_2" AS "Score_2" 
-FROM "XGB_Model_2_0" UNION ALL SELECT "XGB_Model_0_1"."KEY" AS "KEY", "XGB_Model_0_1"."Score_0" AS "Score_0", "XGB_Model_0_1"."Score_1" AS "Score_1", "XGB_Model_0_1"."Score_2" AS "Score_2" 
-FROM "XGB_Model_0_1" UNION ALL SELECT "XGB_Model_1_1"."KEY" AS "KEY", "XGB_Model_1_1"."Score_0" AS "Score_0", "XGB_Model_1_1"."Score_1" AS "Score_1", "XGB_Model_1_1"."Score_2" AS "Score_2" 
-FROM "XGB_Model_1_1" UNION ALL SELECT "XGB_Model_2_1"."KEY" AS "KEY", "XGB_Model_2_1"."Score_0" AS "Score_0", "XGB_Model_2_1"."Score_1" AS "Score_1", "XGB_Model_2_1"."Score_2" AS "Score_2" 
+ SELECT "XGB_B1"."KEY", "XGB_B1"."Score_0", "XGB_B1"."Score_1", "XGB_B1"."Score_2" 
+FROM (SELECT "XGB_esu_1"."KEY" AS "KEY", "XGB_esu_1"."Score_0" AS "Score_0", "XGB_esu_1"."Score_1" AS "Score_1", "XGB_esu_1"."Score_2" AS "Score_2" 
+FROM (SELECT "XGB_Model_2_1"."KEY" AS "KEY", "XGB_Model_2_1"."Score_0" AS "Score_0", "XGB_Model_2_1"."Score_1" AS "Score_1", "XGB_Model_2_1"."Score_2" AS "Score_2" 
 FROM "XGB_Model_2_1" UNION ALL SELECT "XGB_Model_0_2"."KEY" AS "KEY", "XGB_Model_0_2"."Score_0" AS "Score_0", "XGB_Model_0_2"."Score_1" AS "Score_1", "XGB_Model_0_2"."Score_2" AS "Score_2" 
 FROM "XGB_Model_0_2" UNION ALL SELECT "XGB_Model_1_2"."KEY" AS "KEY", "XGB_Model_1_2"."Score_0" AS "Score_0", "XGB_Model_1_2"."Score_1" AS "Score_1", "XGB_Model_1_2"."Score_2" AS "Score_2" 
 FROM "XGB_Model_1_2" UNION ALL SELECT "XGB_Model_2_2"."KEY" AS "KEY", "XGB_Model_2_2"."Score_0" AS "Score_0", "XGB_Model_2_2"."Score_1" AS "Score_1", "XGB_Model_2_2"."Score_2" AS "Score_2" 
 FROM "XGB_Model_2_2" UNION ALL SELECT "XGB_Model_0_3"."KEY" AS "KEY", "XGB_Model_0_3"."Score_0" AS "Score_0", "XGB_Model_0_3"."Score_1" AS "Score_1", "XGB_Model_0_3"."Score_2" AS "Score_2" 
-FROM "XGB_Model_0_3") AS "XGB_esu_0") AS "XGB_B0") AS "U"
+FROM "XGB_Model_0_3") AS "XGB_esu_1") AS "XGB_B1") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_6QEDEF_XGB part 1. Create 
+-- Code For temporary table TMP_20180602_XYV_XGB_B2 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_6QEDEF_XGB" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_XYV_XGB_B2" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -221,12 +240,12 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_6QEDEF_XGB" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_6QEDEF_XGB part 2. Populate
+-- Code For temporary table TMP_20180602_XYV_XGB_B2 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_6QEDEF_XGB" ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
+INSERT INTO "TMP_20180602_XYV_XGB_B2" ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
 FROM (WITH "DT_node_lookup_10" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 < 0.6734480857849121) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_10" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 2 AS nid, -0.05997420474886894 AS "Score" FROM rdb$database UNION ALL SELECT 3 AS nid, -0.0634504109621048 AS "Score" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.08801496773958206 AS "Score" FROM rdb$database) AS "Values"), 
@@ -238,7 +257,7 @@ FROM "DT_node_lookup_10" LEFT OUTER JOIN "DT_node_data_10" ON "DT_node_lookup_10
 FROM "DT_Output_10"), 
 "DT_node_lookup_11" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 < 0.5400919914245605) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.23686741292476654) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_11" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 2 AS nid, 0.09809672832489014 AS "Score" FROM rdb$database UNION ALL SELECT 3 AS nid, -0.06529462337493896 AS "Score" FROM rdb$database UNION ALL SELECT 4 AS nid, -0.03151143714785576 AS "Score" FROM rdb$database) AS "Values"), 
@@ -250,7 +269,7 @@ FROM "DT_node_lookup_11" LEFT OUTER JOIN "DT_node_data_11" ON "DT_node_lookup_11
 FROM "DT_Output_11"), 
 "DT_node_lookup_12" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_12" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, 0.09268417209386826 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, -0.06414145231246948 AS "Score" FROM rdb$database) AS "Values"), 
@@ -262,7 +281,7 @@ FROM "DT_node_lookup_12" LEFT OUTER JOIN "DT_node_data_12" ON "DT_node_lookup_12
 FROM "DT_Output_12"), 
 "DT_node_lookup_13" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.7047536373138428) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 3 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.3538389801979065) THEN 5 ELSE 6 END END ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_13" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 2 AS nid, -0.06314491480588913 AS "Score" FROM rdb$database UNION ALL SELECT 3 AS nid, -0.06153131276369095 AS "Score" FROM rdb$database UNION ALL SELECT 5 AS nid, 0.09237594157457352 AS "Score" FROM rdb$database UNION ALL SELECT 6 AS nid, 0.05121312290430069 AS "Score" FROM rdb$database) AS "Values"), 
@@ -274,7 +293,7 @@ FROM "DT_node_lookup_13" LEFT OUTER JOIN "DT_node_data_13" ON "DT_node_lookup_13
 FROM "DT_Output_13"), 
 "DT_node_lookup_14" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.5877821445465088) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_14" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, -0.05801955983042717 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, 0.08526633679866791 AS "Score" FROM rdb$database) AS "Values"), 
@@ -283,10 +302,34 @@ FROM (SELECT 1 AS nid, -0.05801955983042717 AS "Score" FROM rdb$database UNION A
 FROM "DT_node_lookup_14" LEFT OUTER JOIN "DT_node_data_14" ON "DT_node_lookup_14".node_id_2 = "DT_node_data_14".nid), 
 "XGB_Model_2_4" AS 
 (SELECT "DT_Output_14"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", "DT_Output_14"."Score" AS "Score_2" 
-FROM "DT_Output_14"), 
-"DT_node_lookup_15" AS 
+FROM "DT_Output_14")
+ SELECT "XGB_B2"."KEY", "XGB_B2"."Score_0", "XGB_B2"."Score_1", "XGB_B2"."Score_2" 
+FROM (SELECT "XGB_esu_2"."KEY" AS "KEY", "XGB_esu_2"."Score_0" AS "Score_0", "XGB_esu_2"."Score_1" AS "Score_1", "XGB_esu_2"."Score_2" AS "Score_2" 
+FROM (SELECT "XGB_Model_1_3"."KEY" AS "KEY", "XGB_Model_1_3"."Score_0" AS "Score_0", "XGB_Model_1_3"."Score_1" AS "Score_1", "XGB_Model_1_3"."Score_2" AS "Score_2" 
+FROM "XGB_Model_1_3" UNION ALL SELECT "XGB_Model_2_3"."KEY" AS "KEY", "XGB_Model_2_3"."Score_0" AS "Score_0", "XGB_Model_2_3"."Score_1" AS "Score_1", "XGB_Model_2_3"."Score_2" AS "Score_2" 
+FROM "XGB_Model_2_3" UNION ALL SELECT "XGB_Model_0_4"."KEY" AS "KEY", "XGB_Model_0_4"."Score_0" AS "Score_0", "XGB_Model_0_4"."Score_1" AS "Score_1", "XGB_Model_0_4"."Score_2" AS "Score_2" 
+FROM "XGB_Model_0_4" UNION ALL SELECT "XGB_Model_1_4"."KEY" AS "KEY", "XGB_Model_1_4"."Score_0" AS "Score_0", "XGB_Model_1_4"."Score_1" AS "Score_1", "XGB_Model_1_4"."Score_2" AS "Score_2" 
+FROM "XGB_Model_1_4" UNION ALL SELECT "XGB_Model_2_4"."KEY" AS "KEY", "XGB_Model_2_4"."Score_0" AS "Score_0", "XGB_Model_2_4"."Score_1" AS "Score_1", "XGB_Model_2_4"."Score_2" AS "Score_2" 
+FROM "XGB_Model_2_4") AS "XGB_esu_2") AS "XGB_B2") AS "U"
+
+-- Code For temporary table TMP_20180602_NHR_XGB_B3 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_NHR_XGB_B3" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Score_2" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_NHR_XGB_B3 part 2. Populate
+
+INSERT INTO "TMP_20180602_NHR_XGB_B3" ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
+FROM (WITH "DT_node_lookup_15" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_15" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, 0.08624420315027237 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, -0.06252003461122513 AS "Score" FROM rdb$database) AS "Values"), 
@@ -298,7 +341,7 @@ FROM "DT_node_lookup_15" LEFT OUTER JOIN "DT_node_data_15" ON "DT_node_lookup_15
 FROM "DT_Output_15"), 
 "DT_node_lookup_16" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.7047536373138428) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 3 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.3538389801979065) THEN 5 ELSE 6 END END ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_16" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 2 AS nid, -0.06133972480893135 AS "Score" FROM rdb$database UNION ALL SELECT 3 AS nid, -0.05976050719618797 AS "Score" FROM rdb$database UNION ALL SELECT 5 AS nid, 0.08574416488409042 AS "Score" FROM rdb$database UNION ALL SELECT 6 AS nid, 0.04740015044808388 AS "Score" FROM rdb$database) AS "Values"), 
@@ -310,7 +353,7 @@ FROM "DT_node_lookup_16" LEFT OUTER JOIN "DT_node_data_16" ON "DT_node_lookup_16
 FROM "DT_Output_16"), 
 "DT_node_lookup_17" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 < 0.5400919914245605) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.17838163673877716) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_17" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 2 AS nid, 0.0842910185456276 AS "Score" FROM rdb$database UNION ALL SELECT 3 AS nid, -0.06148456409573555 AS "Score" FROM rdb$database UNION ALL SELECT 4 AS nid, -0.032319195568561554 AS "Score" FROM rdb$database) AS "Values"), 
@@ -322,7 +365,7 @@ FROM "DT_node_lookup_17" LEFT OUTER JOIN "DT_node_data_17" ON "DT_node_lookup_17
 FROM "DT_Output_17"), 
 "DT_node_lookup_18" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_18" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, 0.08085564523935318 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, -0.06104201823472977 AS "Score" FROM rdb$database) AS "Values"), 
@@ -334,7 +377,7 @@ FROM "DT_node_lookup_18" LEFT OUTER JOIN "DT_node_data_18" ON "DT_node_lookup_18
 FROM "DT_Output_18"), 
 "DT_node_lookup_19" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 < 0.6734480857849121) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_19" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 2 AS nid, -0.055109769105911255 AS "Score" FROM rdb$database UNION ALL SELECT 3 AS nid, -0.05816714093089104 AS "Score" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.07082244008779526 AS "Score" FROM rdb$database) AS "Values"), 
@@ -344,24 +387,19 @@ FROM "DT_node_lookup_19" LEFT OUTER JOIN "DT_node_data_19" ON "DT_node_lookup_19
 "XGB_Model_1_6" AS 
 (SELECT "DT_Output_19"."KEY" AS "KEY", 0.0 AS "Score_0", "DT_Output_19"."Score" AS "Score_1", 0.0 AS "Score_2" 
 FROM "DT_Output_19")
- SELECT "XGB_B1"."KEY", "XGB_B1"."Score_0", "XGB_B1"."Score_1", "XGB_B1"."Score_2" 
-FROM (SELECT "XGB_esu_1"."KEY" AS "KEY", "XGB_esu_1"."Score_0" AS "Score_0", "XGB_esu_1"."Score_1" AS "Score_1", "XGB_esu_1"."Score_2" AS "Score_2" 
-FROM (SELECT "XGB_Model_1_3"."KEY" AS "KEY", "XGB_Model_1_3"."Score_0" AS "Score_0", "XGB_Model_1_3"."Score_1" AS "Score_1", "XGB_Model_1_3"."Score_2" AS "Score_2" 
-FROM "XGB_Model_1_3" UNION ALL SELECT "XGB_Model_2_3"."KEY" AS "KEY", "XGB_Model_2_3"."Score_0" AS "Score_0", "XGB_Model_2_3"."Score_1" AS "Score_1", "XGB_Model_2_3"."Score_2" AS "Score_2" 
-FROM "XGB_Model_2_3" UNION ALL SELECT "XGB_Model_0_4"."KEY" AS "KEY", "XGB_Model_0_4"."Score_0" AS "Score_0", "XGB_Model_0_4"."Score_1" AS "Score_1", "XGB_Model_0_4"."Score_2" AS "Score_2" 
-FROM "XGB_Model_0_4" UNION ALL SELECT "XGB_Model_1_4"."KEY" AS "KEY", "XGB_Model_1_4"."Score_0" AS "Score_0", "XGB_Model_1_4"."Score_1" AS "Score_1", "XGB_Model_1_4"."Score_2" AS "Score_2" 
-FROM "XGB_Model_1_4" UNION ALL SELECT "XGB_Model_2_4"."KEY" AS "KEY", "XGB_Model_2_4"."Score_0" AS "Score_0", "XGB_Model_2_4"."Score_1" AS "Score_1", "XGB_Model_2_4"."Score_2" AS "Score_2" 
-FROM "XGB_Model_2_4" UNION ALL SELECT "XGB_Model_0_5"."KEY" AS "KEY", "XGB_Model_0_5"."Score_0" AS "Score_0", "XGB_Model_0_5"."Score_1" AS "Score_1", "XGB_Model_0_5"."Score_2" AS "Score_2" 
+ SELECT "XGB_B3"."KEY", "XGB_B3"."Score_0", "XGB_B3"."Score_1", "XGB_B3"."Score_2" 
+FROM (SELECT "XGB_esu_3"."KEY" AS "KEY", "XGB_esu_3"."Score_0" AS "Score_0", "XGB_esu_3"."Score_1" AS "Score_1", "XGB_esu_3"."Score_2" AS "Score_2" 
+FROM (SELECT "XGB_Model_0_5"."KEY" AS "KEY", "XGB_Model_0_5"."Score_0" AS "Score_0", "XGB_Model_0_5"."Score_1" AS "Score_1", "XGB_Model_0_5"."Score_2" AS "Score_2" 
 FROM "XGB_Model_0_5" UNION ALL SELECT "XGB_Model_1_5"."KEY" AS "KEY", "XGB_Model_1_5"."Score_0" AS "Score_0", "XGB_Model_1_5"."Score_1" AS "Score_1", "XGB_Model_1_5"."Score_2" AS "Score_2" 
 FROM "XGB_Model_1_5" UNION ALL SELECT "XGB_Model_2_5"."KEY" AS "KEY", "XGB_Model_2_5"."Score_0" AS "Score_0", "XGB_Model_2_5"."Score_1" AS "Score_1", "XGB_Model_2_5"."Score_2" AS "Score_2" 
 FROM "XGB_Model_2_5" UNION ALL SELECT "XGB_Model_0_6"."KEY" AS "KEY", "XGB_Model_0_6"."Score_0" AS "Score_0", "XGB_Model_0_6"."Score_1" AS "Score_1", "XGB_Model_0_6"."Score_2" AS "Score_2" 
 FROM "XGB_Model_0_6" UNION ALL SELECT "XGB_Model_1_6"."KEY" AS "KEY", "XGB_Model_1_6"."Score_0" AS "Score_0", "XGB_Model_1_6"."Score_1" AS "Score_1", "XGB_Model_1_6"."Score_2" AS "Score_2" 
-FROM "XGB_Model_1_6") AS "XGB_esu_1") AS "XGB_B1") AS "U"
+FROM "XGB_Model_1_6") AS "XGB_esu_3") AS "XGB_B3") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_SAGFJB_XGB part 1. Create 
+-- Code For temporary table TMP_20180602_A0D_XGB_B4 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_SAGFJB_XGB" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_A0D_XGB_B4" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -370,12 +408,12 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_SAGFJB_XGB" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_SAGFJB_XGB part 2. Populate
+-- Code For temporary table TMP_20180602_A0D_XGB_B4 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_SAGFJB_XGB" ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
+INSERT INTO "TMP_20180602_A0D_XGB_B4" ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
 FROM (WITH "DT_node_lookup_20" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.5877821445465088) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_20" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, -0.05457037687301636 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, 0.07431256026029587 AS "Score" FROM rdb$database) AS "Values"), 
@@ -387,7 +425,7 @@ FROM "DT_node_lookup_20" LEFT OUTER JOIN "DT_node_data_20" ON "DT_node_lookup_20
 FROM "DT_Output_20"), 
 "DT_node_lookup_21" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_21" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, 0.07644648104906082 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, -0.059718526899814606 AS "Score" FROM rdb$database) AS "Values"), 
@@ -399,7 +437,7 @@ FROM "DT_node_lookup_21" LEFT OUTER JOIN "DT_node_data_21" ON "DT_node_lookup_21
 FROM "DT_Output_21"), 
 "DT_node_lookup_22" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.7047536373138428) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 3 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.3538389801979065) THEN 5 ELSE 6 END END ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_22" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 2 AS nid, -0.05873280391097069 AS "Score" FROM rdb$database UNION ALL SELECT 3 AS nid, -0.05668582394719124 AS "Score" FROM rdb$database UNION ALL SELECT 5 AS nid, 0.07607046514749527 AS "Score" FROM rdb$database UNION ALL SELECT 6 AS nid, 0.04189909249544144 AS "Score" FROM rdb$database) AS "Values"), 
@@ -411,7 +449,7 @@ FROM "DT_node_lookup_22" LEFT OUTER JOIN "DT_node_data_22" ON "DT_node_lookup_22
 FROM "DT_Output_22"), 
 "DT_node_lookup_23" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.529296338558197) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.8802109956741333) THEN 3 ELSE 4 END END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_23" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, -0.05603765323758125 AS "Score" FROM rdb$database UNION ALL SELECT 3 AS nid, 0.04846012964844704 AS "Score" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.07766570895910263 AS "Score" FROM rdb$database) AS "Values"), 
@@ -423,7 +461,7 @@ FROM "DT_node_lookup_23" LEFT OUTER JOIN "DT_node_data_23" ON "DT_node_lookup_23
 FROM "DT_Output_23"), 
 "DT_node_lookup_24" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_24" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, 0.07267781347036362 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, -0.05852251872420311 AS "Score" FROM rdb$database) AS "Values"), 
@@ -432,10 +470,34 @@ FROM (SELECT 1 AS nid, 0.07267781347036362 AS "Score" FROM rdb$database UNION AL
 FROM "DT_node_lookup_24" LEFT OUTER JOIN "DT_node_data_24" ON "DT_node_lookup_24".node_id_2 = "DT_node_data_24".nid), 
 "XGB_Model_0_8" AS 
 (SELECT "DT_Output_24"."KEY" AS "KEY", "DT_Output_24"."Score" AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2" 
-FROM "DT_Output_24"), 
-"DT_node_lookup_25" AS 
+FROM "DT_Output_24")
+ SELECT "XGB_B4"."KEY", "XGB_B4"."Score_0", "XGB_B4"."Score_1", "XGB_B4"."Score_2" 
+FROM (SELECT "XGB_esu_4"."KEY" AS "KEY", "XGB_esu_4"."Score_0" AS "Score_0", "XGB_esu_4"."Score_1" AS "Score_1", "XGB_esu_4"."Score_2" AS "Score_2" 
+FROM (SELECT "XGB_Model_2_6"."KEY" AS "KEY", "XGB_Model_2_6"."Score_0" AS "Score_0", "XGB_Model_2_6"."Score_1" AS "Score_1", "XGB_Model_2_6"."Score_2" AS "Score_2" 
+FROM "XGB_Model_2_6" UNION ALL SELECT "XGB_Model_0_7"."KEY" AS "KEY", "XGB_Model_0_7"."Score_0" AS "Score_0", "XGB_Model_0_7"."Score_1" AS "Score_1", "XGB_Model_0_7"."Score_2" AS "Score_2" 
+FROM "XGB_Model_0_7" UNION ALL SELECT "XGB_Model_1_7"."KEY" AS "KEY", "XGB_Model_1_7"."Score_0" AS "Score_0", "XGB_Model_1_7"."Score_1" AS "Score_1", "XGB_Model_1_7"."Score_2" AS "Score_2" 
+FROM "XGB_Model_1_7" UNION ALL SELECT "XGB_Model_2_7"."KEY" AS "KEY", "XGB_Model_2_7"."Score_0" AS "Score_0", "XGB_Model_2_7"."Score_1" AS "Score_1", "XGB_Model_2_7"."Score_2" AS "Score_2" 
+FROM "XGB_Model_2_7" UNION ALL SELECT "XGB_Model_0_8"."KEY" AS "KEY", "XGB_Model_0_8"."Score_0" AS "Score_0", "XGB_Model_0_8"."Score_1" AS "Score_1", "XGB_Model_0_8"."Score_2" AS "Score_2" 
+FROM "XGB_Model_0_8") AS "XGB_esu_4") AS "XGB_B4") AS "U"
+
+-- Code For temporary table TMP_20180602_7HI_XGB_B5 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_7HI_XGB_B5" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Score_2" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_7HI_XGB_B5 part 2. Populate
+
+INSERT INTO "TMP_20180602_7HI_XGB_B5" ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
+FROM (WITH "DT_node_lookup_25" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 < 0.6734480857849121) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_25" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 2 AS nid, -0.052464742213487625 AS "Score" FROM rdb$database UNION ALL SELECT 3 AS nid, -0.05532815679907799 AS "Score" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.06313944607973099 AS "Score" FROM rdb$database) AS "Values"), 
@@ -447,7 +509,7 @@ FROM "DT_node_lookup_25" LEFT OUTER JOIN "DT_node_data_25" ON "DT_node_lookup_25
 FROM "DT_Output_25"), 
 "DT_node_lookup_26" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 < 0.5400919914245605) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 < 0.006667803972959518) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_26" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 2 AS nid, 0.07137883454561234 AS "Score" FROM rdb$database UNION ALL SELECT 3 AS nid, -0.057164229452610016 AS "Score" FROM rdb$database UNION ALL SELECT 4 AS nid, -0.02980552613735199 AS "Score" FROM rdb$database) AS "Values"), 
@@ -459,7 +521,7 @@ FROM "DT_node_lookup_26" LEFT OUTER JOIN "DT_node_data_26" ON "DT_node_lookup_26
 FROM "DT_Output_26"), 
 "DT_node_lookup_27" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_27" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, 0.06942778080701828 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, -0.05740775540471077 AS "Score" FROM rdb$database) AS "Values"), 
@@ -471,7 +533,7 @@ FROM "DT_node_lookup_27" LEFT OUTER JOIN "DT_node_data_27" ON "DT_node_lookup_27
 FROM "DT_Output_27"), 
 "DT_node_lookup_28" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.7047536373138428) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.4064761996269226) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_28" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 2 AS nid, -0.056582361459732056 AS "Score" FROM rdb$database UNION ALL SELECT 3 AS nid, -0.04899917170405388 AS "Score" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.054511453956365585 AS "Score" FROM rdb$database) AS "Values"), 
@@ -483,7 +545,7 @@ FROM "DT_node_lookup_28" LEFT OUTER JOIN "DT_node_data_28" ON "DT_node_lookup_28
 FROM "DT_Output_28"), 
 "DT_node_lookup_29" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.5877821445465088) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_29" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, -0.050155963748693466 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, 0.06329286098480225 AS "Score" FROM rdb$database) AS "Values"), 
@@ -493,24 +555,19 @@ FROM "DT_node_lookup_29" LEFT OUTER JOIN "DT_node_data_29" ON "DT_node_lookup_29
 "XGB_Model_2_9" AS 
 (SELECT "DT_Output_29"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", "DT_Output_29"."Score" AS "Score_2" 
 FROM "DT_Output_29")
- SELECT "XGB_B2"."KEY", "XGB_B2"."Score_0", "XGB_B2"."Score_1", "XGB_B2"."Score_2" 
-FROM (SELECT "XGB_esu_2"."KEY" AS "KEY", "XGB_esu_2"."Score_0" AS "Score_0", "XGB_esu_2"."Score_1" AS "Score_1", "XGB_esu_2"."Score_2" AS "Score_2" 
-FROM (SELECT "XGB_Model_2_6"."KEY" AS "KEY", "XGB_Model_2_6"."Score_0" AS "Score_0", "XGB_Model_2_6"."Score_1" AS "Score_1", "XGB_Model_2_6"."Score_2" AS "Score_2" 
-FROM "XGB_Model_2_6" UNION ALL SELECT "XGB_Model_0_7"."KEY" AS "KEY", "XGB_Model_0_7"."Score_0" AS "Score_0", "XGB_Model_0_7"."Score_1" AS "Score_1", "XGB_Model_0_7"."Score_2" AS "Score_2" 
-FROM "XGB_Model_0_7" UNION ALL SELECT "XGB_Model_1_7"."KEY" AS "KEY", "XGB_Model_1_7"."Score_0" AS "Score_0", "XGB_Model_1_7"."Score_1" AS "Score_1", "XGB_Model_1_7"."Score_2" AS "Score_2" 
-FROM "XGB_Model_1_7" UNION ALL SELECT "XGB_Model_2_7"."KEY" AS "KEY", "XGB_Model_2_7"."Score_0" AS "Score_0", "XGB_Model_2_7"."Score_1" AS "Score_1", "XGB_Model_2_7"."Score_2" AS "Score_2" 
-FROM "XGB_Model_2_7" UNION ALL SELECT "XGB_Model_0_8"."KEY" AS "KEY", "XGB_Model_0_8"."Score_0" AS "Score_0", "XGB_Model_0_8"."Score_1" AS "Score_1", "XGB_Model_0_8"."Score_2" AS "Score_2" 
-FROM "XGB_Model_0_8" UNION ALL SELECT "XGB_Model_1_8"."KEY" AS "KEY", "XGB_Model_1_8"."Score_0" AS "Score_0", "XGB_Model_1_8"."Score_1" AS "Score_1", "XGB_Model_1_8"."Score_2" AS "Score_2" 
+ SELECT "XGB_B5"."KEY", "XGB_B5"."Score_0", "XGB_B5"."Score_1", "XGB_B5"."Score_2" 
+FROM (SELECT "XGB_esu_5"."KEY" AS "KEY", "XGB_esu_5"."Score_0" AS "Score_0", "XGB_esu_5"."Score_1" AS "Score_1", "XGB_esu_5"."Score_2" AS "Score_2" 
+FROM (SELECT "XGB_Model_1_8"."KEY" AS "KEY", "XGB_Model_1_8"."Score_0" AS "Score_0", "XGB_Model_1_8"."Score_1" AS "Score_1", "XGB_Model_1_8"."Score_2" AS "Score_2" 
 FROM "XGB_Model_1_8" UNION ALL SELECT "XGB_Model_2_8"."KEY" AS "KEY", "XGB_Model_2_8"."Score_0" AS "Score_0", "XGB_Model_2_8"."Score_1" AS "Score_1", "XGB_Model_2_8"."Score_2" AS "Score_2" 
 FROM "XGB_Model_2_8" UNION ALL SELECT "XGB_Model_0_9"."KEY" AS "KEY", "XGB_Model_0_9"."Score_0" AS "Score_0", "XGB_Model_0_9"."Score_1" AS "Score_1", "XGB_Model_0_9"."Score_2" AS "Score_2" 
 FROM "XGB_Model_0_9" UNION ALL SELECT "XGB_Model_1_9"."KEY" AS "KEY", "XGB_Model_1_9"."Score_0" AS "Score_0", "XGB_Model_1_9"."Score_1" AS "Score_1", "XGB_Model_1_9"."Score_2" AS "Score_2" 
 FROM "XGB_Model_1_9" UNION ALL SELECT "XGB_Model_2_9"."KEY" AS "KEY", "XGB_Model_2_9"."Score_0" AS "Score_0", "XGB_Model_2_9"."Score_1" AS "Score_1", "XGB_Model_2_9"."Score_2" AS "Score_2" 
-FROM "XGB_Model_2_9") AS "XGB_esu_2") AS "XGB_B2") AS "U"
+FROM "XGB_Model_2_9") AS "XGB_esu_5") AS "XGB_B5") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_EJDI5T_XGB part 1. Create 
+-- Code For temporary table TMP_20180602_NU3_XGB_B6 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_EJDI5T_XGB" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_NU3_XGB_B6" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -519,12 +576,12 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_EJDI5T_XGB" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_EJDI5T_XGB part 2. Populate
+-- Code For temporary table TMP_20180602_NU3_XGB_B6 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_EJDI5T_XGB" ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
+INSERT INTO "TMP_20180602_NU3_XGB_B6" ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
 FROM (WITH "DT_node_lookup_30" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_30" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, 0.06673990935087204 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, -0.05642154812812805 AS "Score" FROM rdb$database) AS "Values"), 
@@ -536,7 +593,7 @@ FROM "DT_node_lookup_30" LEFT OUTER JOIN "DT_node_data_30" ON "DT_node_lookup_30
 FROM "DT_Output_30"), 
 "DT_node_lookup_31" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 < 0.6734480857849121) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.26026174426078796) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_31" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 2 AS nid, -0.050051528960466385 AS "Score" FROM rdb$database UNION ALL SELECT 3 AS nid, -0.03871029242873192 AS "Score" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.05577868968248367 AS "Score" FROM rdb$database) AS "Values"), 
@@ -548,7 +605,7 @@ FROM "DT_node_lookup_31" LEFT OUTER JOIN "DT_node_data_31" ON "DT_node_lookup_31
 FROM "DT_Output_31"), 
 "DT_node_lookup_32" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 < 0.5400919914245605) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.061410073190927505) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_32" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 2 AS nid, 0.06537166237831116 AS "Score" FROM rdb$database UNION ALL SELECT 3 AS nid, -0.054450150579214096 AS "Score" FROM rdb$database UNION ALL SELECT 4 AS nid, -0.030339056625962257 AS "Score" FROM rdb$database) AS "Values"), 
@@ -560,7 +617,7 @@ FROM "DT_node_lookup_32" LEFT OUTER JOIN "DT_node_data_32" ON "DT_node_lookup_32
 FROM "DT_Output_32"), 
 "DT_node_lookup_33" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_33" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, 0.06442420929670334 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, -0.05551743134856224 AS "Score" FROM rdb$database) AS "Values"), 
@@ -572,7 +629,7 @@ FROM "DT_node_lookup_33" LEFT OUTER JOIN "DT_node_data_33" ON "DT_node_lookup_33
 FROM "DT_Output_33"), 
 "DT_node_lookup_34" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.6462678909301758) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.26026174426078796) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_34" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 2 AS nid, -0.048996780067682266 AS "Score" FROM rdb$database UNION ALL SELECT 3 AS nid, -0.037283387035131454 AS "Score" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.053909119218587875 AS "Score" FROM rdb$database) AS "Values"), 
@@ -581,10 +638,34 @@ FROM (SELECT 2 AS nid, -0.048996780067682266 AS "Score" FROM rdb$database UNION 
 FROM "DT_node_lookup_34" LEFT OUTER JOIN "DT_node_data_34" ON "DT_node_lookup_34".node_id_2 = "DT_node_data_34".nid), 
 "XGB_Model_1_11" AS 
 (SELECT "DT_Output_34"."KEY" AS "KEY", 0.0 AS "Score_0", "DT_Output_34"."Score" AS "Score_1", 0.0 AS "Score_2" 
-FROM "DT_Output_34"), 
-"DT_node_lookup_35" AS 
+FROM "DT_Output_34")
+ SELECT "XGB_B6"."KEY", "XGB_B6"."Score_0", "XGB_B6"."Score_1", "XGB_B6"."Score_2" 
+FROM (SELECT "XGB_esu_6"."KEY" AS "KEY", "XGB_esu_6"."Score_0" AS "Score_0", "XGB_esu_6"."Score_1" AS "Score_1", "XGB_esu_6"."Score_2" AS "Score_2" 
+FROM (SELECT "XGB_Model_0_10"."KEY" AS "KEY", "XGB_Model_0_10"."Score_0" AS "Score_0", "XGB_Model_0_10"."Score_1" AS "Score_1", "XGB_Model_0_10"."Score_2" AS "Score_2" 
+FROM "XGB_Model_0_10" UNION ALL SELECT "XGB_Model_1_10"."KEY" AS "KEY", "XGB_Model_1_10"."Score_0" AS "Score_0", "XGB_Model_1_10"."Score_1" AS "Score_1", "XGB_Model_1_10"."Score_2" AS "Score_2" 
+FROM "XGB_Model_1_10" UNION ALL SELECT "XGB_Model_2_10"."KEY" AS "KEY", "XGB_Model_2_10"."Score_0" AS "Score_0", "XGB_Model_2_10"."Score_1" AS "Score_1", "XGB_Model_2_10"."Score_2" AS "Score_2" 
+FROM "XGB_Model_2_10" UNION ALL SELECT "XGB_Model_0_11"."KEY" AS "KEY", "XGB_Model_0_11"."Score_0" AS "Score_0", "XGB_Model_0_11"."Score_1" AS "Score_1", "XGB_Model_0_11"."Score_2" AS "Score_2" 
+FROM "XGB_Model_0_11" UNION ALL SELECT "XGB_Model_1_11"."KEY" AS "KEY", "XGB_Model_1_11"."Score_0" AS "Score_0", "XGB_Model_1_11"."Score_1" AS "Score_1", "XGB_Model_1_11"."Score_2" AS "Score_2" 
+FROM "XGB_Model_1_11") AS "XGB_esu_6") AS "XGB_B6") AS "U"
+
+-- Code For temporary table TMP_20180602_TXB_XGB_B7 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_TXB_XGB_B7" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Score_2" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_TXB_XGB_B7 part 2. Populate
+
+INSERT INTO "TMP_20180602_TXB_XGB_B7" ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
+FROM (WITH "DT_node_lookup_35" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.529296338558197) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_35" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, -0.0509064681828022 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, 0.05486814305186272 AS "Score" FROM rdb$database) AS "Values"), 
@@ -596,7 +677,7 @@ FROM "DT_node_lookup_35" LEFT OUTER JOIN "DT_node_data_35" ON "DT_node_lookup_35
 FROM "DT_Output_35"), 
 "DT_node_lookup_36" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_36" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, 0.06240387633442879 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, -0.0546797476708889 AS "Score" FROM rdb$database) AS "Values"), 
@@ -608,7 +689,7 @@ FROM "DT_node_lookup_36" LEFT OUTER JOIN "DT_node_data_36" ON "DT_node_lookup_36
 FROM "DT_Output_36"), 
 "DT_node_lookup_37" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.6462678909301758) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.14329016208648682) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_37" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 2 AS nid, -0.047470416873693466 AS "Score" FROM rdb$database UNION ALL SELECT 3 AS nid, -0.028641605749726295 AS "Score" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.05053430795669556 AS "Score" FROM rdb$database) AS "Values"), 
@@ -620,7 +701,7 @@ FROM "DT_node_lookup_37" LEFT OUTER JOIN "DT_node_data_37" ON "DT_node_lookup_37
 FROM "DT_Output_37"), 
 "DT_node_lookup_38" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 < 0.40673595666885376) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_38" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, -0.045238643884658813 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, 0.05755568668246269 AS "Score" FROM rdb$database) AS "Values"), 
@@ -632,7 +713,7 @@ FROM "DT_node_lookup_38" LEFT OUTER JOIN "DT_node_data_38" ON "DT_node_lookup_38
 FROM "DT_Output_38"), 
 "DT_node_lookup_39" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_39" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, 0.0607040636241436 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, -0.0539247952401638 AS "Score" FROM rdb$database) AS "Values"), 
@@ -642,24 +723,19 @@ FROM "DT_node_lookup_39" LEFT OUTER JOIN "DT_node_data_39" ON "DT_node_lookup_39
 "XGB_Model_0_13" AS 
 (SELECT "DT_Output_39"."KEY" AS "KEY", "DT_Output_39"."Score" AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2" 
 FROM "DT_Output_39")
- SELECT "XGB_B3"."KEY", "XGB_B3"."Score_0", "XGB_B3"."Score_1", "XGB_B3"."Score_2" 
-FROM (SELECT "XGB_esu_3"."KEY" AS "KEY", "XGB_esu_3"."Score_0" AS "Score_0", "XGB_esu_3"."Score_1" AS "Score_1", "XGB_esu_3"."Score_2" AS "Score_2" 
-FROM (SELECT "XGB_Model_0_10"."KEY" AS "KEY", "XGB_Model_0_10"."Score_0" AS "Score_0", "XGB_Model_0_10"."Score_1" AS "Score_1", "XGB_Model_0_10"."Score_2" AS "Score_2" 
-FROM "XGB_Model_0_10" UNION ALL SELECT "XGB_Model_1_10"."KEY" AS "KEY", "XGB_Model_1_10"."Score_0" AS "Score_0", "XGB_Model_1_10"."Score_1" AS "Score_1", "XGB_Model_1_10"."Score_2" AS "Score_2" 
-FROM "XGB_Model_1_10" UNION ALL SELECT "XGB_Model_2_10"."KEY" AS "KEY", "XGB_Model_2_10"."Score_0" AS "Score_0", "XGB_Model_2_10"."Score_1" AS "Score_1", "XGB_Model_2_10"."Score_2" AS "Score_2" 
-FROM "XGB_Model_2_10" UNION ALL SELECT "XGB_Model_0_11"."KEY" AS "KEY", "XGB_Model_0_11"."Score_0" AS "Score_0", "XGB_Model_0_11"."Score_1" AS "Score_1", "XGB_Model_0_11"."Score_2" AS "Score_2" 
-FROM "XGB_Model_0_11" UNION ALL SELECT "XGB_Model_1_11"."KEY" AS "KEY", "XGB_Model_1_11"."Score_0" AS "Score_0", "XGB_Model_1_11"."Score_1" AS "Score_1", "XGB_Model_1_11"."Score_2" AS "Score_2" 
-FROM "XGB_Model_1_11" UNION ALL SELECT "XGB_Model_2_11"."KEY" AS "KEY", "XGB_Model_2_11"."Score_0" AS "Score_0", "XGB_Model_2_11"."Score_1" AS "Score_1", "XGB_Model_2_11"."Score_2" AS "Score_2" 
+ SELECT "XGB_B7"."KEY", "XGB_B7"."Score_0", "XGB_B7"."Score_1", "XGB_B7"."Score_2" 
+FROM (SELECT "XGB_esu_7"."KEY" AS "KEY", "XGB_esu_7"."Score_0" AS "Score_0", "XGB_esu_7"."Score_1" AS "Score_1", "XGB_esu_7"."Score_2" AS "Score_2" 
+FROM (SELECT "XGB_Model_2_11"."KEY" AS "KEY", "XGB_Model_2_11"."Score_0" AS "Score_0", "XGB_Model_2_11"."Score_1" AS "Score_1", "XGB_Model_2_11"."Score_2" AS "Score_2" 
 FROM "XGB_Model_2_11" UNION ALL SELECT "XGB_Model_0_12"."KEY" AS "KEY", "XGB_Model_0_12"."Score_0" AS "Score_0", "XGB_Model_0_12"."Score_1" AS "Score_1", "XGB_Model_0_12"."Score_2" AS "Score_2" 
 FROM "XGB_Model_0_12" UNION ALL SELECT "XGB_Model_1_12"."KEY" AS "KEY", "XGB_Model_1_12"."Score_0" AS "Score_0", "XGB_Model_1_12"."Score_1" AS "Score_1", "XGB_Model_1_12"."Score_2" AS "Score_2" 
 FROM "XGB_Model_1_12" UNION ALL SELECT "XGB_Model_2_12"."KEY" AS "KEY", "XGB_Model_2_12"."Score_0" AS "Score_0", "XGB_Model_2_12"."Score_1" AS "Score_1", "XGB_Model_2_12"."Score_2" AS "Score_2" 
 FROM "XGB_Model_2_12" UNION ALL SELECT "XGB_Model_0_13"."KEY" AS "KEY", "XGB_Model_0_13"."Score_0" AS "Score_0", "XGB_Model_0_13"."Score_1" AS "Score_1", "XGB_Model_0_13"."Score_2" AS "Score_2" 
-FROM "XGB_Model_0_13") AS "XGB_esu_3") AS "XGB_B3") AS "U"
+FROM "XGB_Model_0_13") AS "XGB_esu_7") AS "XGB_B7") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_R6OZD3_XGB part 1. Create 
+-- Code For temporary table TMP_20180602_2P2_XGB_B8 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_R6OZD3_XGB" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_2P2_XGB_B8" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -668,12 +744,12 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_R6OZD3_XGB" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_R6OZD3_XGB part 2. Populate
+-- Code For temporary table TMP_20180602_2P2_XGB_B8 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_R6OZD3_XGB" ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
+INSERT INTO "TMP_20180602_2P2_XGB_B8" ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
 FROM (WITH "DT_node_lookup_40" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 < 0.5400919914245605) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 < -0.26004430651664734) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_40" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 2 AS nid, -0.042723026126623154 AS "Score" FROM rdb$database UNION ALL SELECT 3 AS nid, -0.02494507096707821 AS "Score" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.050232309848070145 AS "Score" FROM rdb$database) AS "Values"), 
@@ -685,7 +761,7 @@ FROM "DT_node_lookup_40" LEFT OUTER JOIN "DT_node_data_40" ON "DT_node_lookup_40
 FROM "DT_Output_40"), 
 "DT_node_lookup_41" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 < 0.40673595666885376) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_41" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, -0.04393680393695831 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, 0.055269259959459305 AS "Score" FROM rdb$database) AS "Values"), 
@@ -697,7 +773,7 @@ FROM "DT_node_lookup_41" LEFT OUTER JOIN "DT_node_data_41" ON "DT_node_lookup_41
 FROM "DT_Output_41"), 
 "DT_node_lookup_42" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_42" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, 0.05919533595442772 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, -0.05322450399398804 AS "Score" FROM rdb$database) AS "Values"), 
@@ -709,7 +785,7 @@ FROM "DT_node_lookup_42" LEFT OUTER JOIN "DT_node_data_42" ON "DT_node_lookup_42
 FROM "DT_Output_42"), 
 "DT_node_lookup_43" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 < 0.5400919914245605) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.0029242895543575287) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_43" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 2 AS nid, -0.04095013439655304 AS "Score" FROM rdb$database UNION ALL SELECT 3 AS nid, -0.020240729674696922 AS "Score" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.046804752200841904 AS "Score" FROM rdb$database) AS "Values"), 
@@ -721,7 +797,7 @@ FROM "DT_node_lookup_43" LEFT OUTER JOIN "DT_node_data_43" ON "DT_node_lookup_43
 FROM "DT_Output_43"), 
 "DT_node_lookup_44" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.5877821445465088) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_44" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, -0.04452041909098625 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, 0.0521852932870388 AS "Score" FROM rdb$database) AS "Values"), 
@@ -730,10 +806,34 @@ FROM (SELECT 1 AS nid, -0.04452041909098625 AS "Score" FROM rdb$database UNION A
 FROM "DT_node_lookup_44" LEFT OUTER JOIN "DT_node_data_44" ON "DT_node_lookup_44".node_id_2 = "DT_node_data_44".nid), 
 "XGB_Model_2_14" AS 
 (SELECT "DT_Output_44"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", "DT_Output_44"."Score" AS "Score_2" 
-FROM "DT_Output_44"), 
-"DT_node_lookup_45" AS 
+FROM "DT_Output_44")
+ SELECT "XGB_B8"."KEY", "XGB_B8"."Score_0", "XGB_B8"."Score_1", "XGB_B8"."Score_2" 
+FROM (SELECT "XGB_esu_8"."KEY" AS "KEY", "XGB_esu_8"."Score_0" AS "Score_0", "XGB_esu_8"."Score_1" AS "Score_1", "XGB_esu_8"."Score_2" AS "Score_2" 
+FROM (SELECT "XGB_Model_1_13"."KEY" AS "KEY", "XGB_Model_1_13"."Score_0" AS "Score_0", "XGB_Model_1_13"."Score_1" AS "Score_1", "XGB_Model_1_13"."Score_2" AS "Score_2" 
+FROM "XGB_Model_1_13" UNION ALL SELECT "XGB_Model_2_13"."KEY" AS "KEY", "XGB_Model_2_13"."Score_0" AS "Score_0", "XGB_Model_2_13"."Score_1" AS "Score_1", "XGB_Model_2_13"."Score_2" AS "Score_2" 
+FROM "XGB_Model_2_13" UNION ALL SELECT "XGB_Model_0_14"."KEY" AS "KEY", "XGB_Model_0_14"."Score_0" AS "Score_0", "XGB_Model_0_14"."Score_1" AS "Score_1", "XGB_Model_0_14"."Score_2" AS "Score_2" 
+FROM "XGB_Model_0_14" UNION ALL SELECT "XGB_Model_1_14"."KEY" AS "KEY", "XGB_Model_1_14"."Score_0" AS "Score_0", "XGB_Model_1_14"."Score_1" AS "Score_1", "XGB_Model_1_14"."Score_2" AS "Score_2" 
+FROM "XGB_Model_1_14" UNION ALL SELECT "XGB_Model_2_14"."KEY" AS "KEY", "XGB_Model_2_14"."Score_0" AS "Score_0", "XGB_Model_2_14"."Score_1" AS "Score_1", "XGB_Model_2_14"."Score_2" AS "Score_2" 
+FROM "XGB_Model_2_14") AS "XGB_esu_8") AS "XGB_B8") AS "U"
+
+-- Code For temporary table TMP_20180602_241_XGB_B9 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_241_XGB_B9" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Score_2" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_241_XGB_B9 part 2. Populate
+
+INSERT INTO "TMP_20180602_241_XGB_B9" ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
+FROM (WITH "DT_node_lookup_45" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < -0.8158766627311707) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_45" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, 0.05784221366047859 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, -0.05257626995444298 AS "Score" FROM rdb$database) AS "Values"), 
@@ -745,7 +845,7 @@ FROM "DT_node_lookup_45" LEFT OUTER JOIN "DT_node_data_45" ON "DT_node_lookup_45
 FROM "DT_Output_45"), 
 "DT_node_lookup_46" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.5877821445465088) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 < -0.3597169518470764) THEN 3 ELSE 4 END ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_46" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 2 AS nid, -0.03470412641763687 AS "Score" FROM rdb$database UNION ALL SELECT 3 AS nid, -0.013176912441849709 AS "Score" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.0513058602809906 AS "Score" FROM rdb$database) AS "Values"), 
@@ -757,7 +857,7 @@ FROM "DT_node_lookup_46" LEFT OUTER JOIN "DT_node_data_46" ON "DT_node_lookup_46
 FROM "DT_Output_46"), 
 "DT_node_lookup_47" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 < 0.6462678909301758) THEN 1 ELSE 2 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_ZADQW3_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_4QK_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_47" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."Score" AS DOUBLE PRECISION) AS "Score" 
 FROM (SELECT 1 AS nid, -0.03766036406159401 AS "Score" FROM rdb$database UNION ALL SELECT 2 AS nid, 0.05682725831866264 AS "Score" FROM rdb$database) AS "Values"), 
@@ -767,22 +867,17 @@ FROM "DT_node_lookup_47" LEFT OUTER JOIN "DT_node_data_47" ON "DT_node_lookup_47
 "XGB_Model_2_15" AS 
 (SELECT "DT_Output_47"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", "DT_Output_47"."Score" AS "Score_2" 
 FROM "DT_Output_47")
- SELECT "XGB_B4"."KEY", "XGB_B4"."Score_0", "XGB_B4"."Score_1", "XGB_B4"."Score_2" 
-FROM (SELECT "XGB_esu_4"."KEY" AS "KEY", "XGB_esu_4"."Score_0" AS "Score_0", "XGB_esu_4"."Score_1" AS "Score_1", "XGB_esu_4"."Score_2" AS "Score_2" 
-FROM (SELECT "XGB_Model_1_13"."KEY" AS "KEY", "XGB_Model_1_13"."Score_0" AS "Score_0", "XGB_Model_1_13"."Score_1" AS "Score_1", "XGB_Model_1_13"."Score_2" AS "Score_2" 
-FROM "XGB_Model_1_13" UNION ALL SELECT "XGB_Model_2_13"."KEY" AS "KEY", "XGB_Model_2_13"."Score_0" AS "Score_0", "XGB_Model_2_13"."Score_1" AS "Score_1", "XGB_Model_2_13"."Score_2" AS "Score_2" 
-FROM "XGB_Model_2_13" UNION ALL SELECT "XGB_Model_0_14"."KEY" AS "KEY", "XGB_Model_0_14"."Score_0" AS "Score_0", "XGB_Model_0_14"."Score_1" AS "Score_1", "XGB_Model_0_14"."Score_2" AS "Score_2" 
-FROM "XGB_Model_0_14" UNION ALL SELECT "XGB_Model_1_14"."KEY" AS "KEY", "XGB_Model_1_14"."Score_0" AS "Score_0", "XGB_Model_1_14"."Score_1" AS "Score_1", "XGB_Model_1_14"."Score_2" AS "Score_2" 
-FROM "XGB_Model_1_14" UNION ALL SELECT "XGB_Model_2_14"."KEY" AS "KEY", "XGB_Model_2_14"."Score_0" AS "Score_0", "XGB_Model_2_14"."Score_1" AS "Score_1", "XGB_Model_2_14"."Score_2" AS "Score_2" 
-FROM "XGB_Model_2_14" UNION ALL SELECT "XGB_Model_0_15"."KEY" AS "KEY", "XGB_Model_0_15"."Score_0" AS "Score_0", "XGB_Model_0_15"."Score_1" AS "Score_1", "XGB_Model_0_15"."Score_2" AS "Score_2" 
+ SELECT "XGB_B9"."KEY", "XGB_B9"."Score_0", "XGB_B9"."Score_1", "XGB_B9"."Score_2" 
+FROM (SELECT "XGB_esu_9"."KEY" AS "KEY", "XGB_esu_9"."Score_0" AS "Score_0", "XGB_esu_9"."Score_1" AS "Score_1", "XGB_esu_9"."Score_2" AS "Score_2" 
+FROM (SELECT "XGB_Model_0_15"."KEY" AS "KEY", "XGB_Model_0_15"."Score_0" AS "Score_0", "XGB_Model_0_15"."Score_1" AS "Score_1", "XGB_Model_0_15"."Score_2" AS "Score_2" 
 FROM "XGB_Model_0_15" UNION ALL SELECT "XGB_Model_1_15"."KEY" AS "KEY", "XGB_Model_1_15"."Score_0" AS "Score_0", "XGB_Model_1_15"."Score_1" AS "Score_1", "XGB_Model_1_15"."Score_2" AS "Score_2" 
 FROM "XGB_Model_1_15" UNION ALL SELECT "XGB_Model_2_15"."KEY" AS "KEY", "XGB_Model_2_15"."Score_0" AS "Score_0", "XGB_Model_2_15"."Score_1" AS "Score_1", "XGB_Model_2_15"."Score_2" AS "Score_2" 
-FROM "XGB_Model_2_15") AS "XGB_esu_4") AS "XGB_B4") AS "U"
+FROM "XGB_Model_2_15") AS "XGB_esu_9") AS "XGB_B9") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_MSMQXV_XGB part 1. Create 
+-- Code For temporary table TMP_20180602_6E1_XGB_SUM part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_MSMQXV_XGB" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_6E1_XGB_SUM" (
 	"KEY" BIGINT NOT NULL, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -792,31 +887,36 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_MSMQXV_XGB" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_MSMQXV_XGB part 2. Populate
+-- Code For temporary table TMP_20180602_6E1_XGB_SUM part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_MSMQXV_XGB" ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
+INSERT INTO "TMP_20180602_6E1_XGB_SUM" ("KEY", "Score_0", "Score_1", "Score_2") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2" 
 FROM (WITH "XGB_Union" AS 
 (SELECT "XGB_EnsembleUnion"."KEY" AS "KEY", "XGB_EnsembleUnion"."Score_0" AS "Score_0", "XGB_EnsembleUnion"."Score_1" AS "Score_1", "XGB_EnsembleUnion"."Score_2" AS "Score_2" 
 FROM (SELECT "XGB_B0"."KEY" AS "KEY", "XGB_B0"."Score_0" AS "Score_0", "XGB_B0"."Score_1" AS "Score_1", "XGB_B0"."Score_2" AS "Score_2" 
-FROM "TMP_20180516_CODEGEN_3FDKPH_XGB" AS "XGB_B0" UNION ALL SELECT "XGB_B1"."KEY" AS "KEY", "XGB_B1"."Score_0" AS "Score_0", "XGB_B1"."Score_1" AS "Score_1", "XGB_B1"."Score_2" AS "Score_2" 
-FROM "TMP_20180516_CODEGEN_6QEDEF_XGB" AS "XGB_B1" UNION ALL SELECT "XGB_B2"."KEY" AS "KEY", "XGB_B2"."Score_0" AS "Score_0", "XGB_B2"."Score_1" AS "Score_1", "XGB_B2"."Score_2" AS "Score_2" 
-FROM "TMP_20180516_CODEGEN_SAGFJB_XGB" AS "XGB_B2" UNION ALL SELECT "XGB_B3"."KEY" AS "KEY", "XGB_B3"."Score_0" AS "Score_0", "XGB_B3"."Score_1" AS "Score_1", "XGB_B3"."Score_2" AS "Score_2" 
-FROM "TMP_20180516_CODEGEN_EJDI5T_XGB" AS "XGB_B3" UNION ALL SELECT "XGB_B4"."KEY" AS "KEY", "XGB_B4"."Score_0" AS "Score_0", "XGB_B4"."Score_1" AS "Score_1", "XGB_B4"."Score_2" AS "Score_2" 
-FROM "TMP_20180516_CODEGEN_R6OZD3_XGB" AS "XGB_B4") AS "XGB_EnsembleUnion")
+FROM "TMP_20180602_532_XGB_B0" AS "XGB_B0" UNION ALL SELECT "XGB_B1"."KEY" AS "KEY", "XGB_B1"."Score_0" AS "Score_0", "XGB_B1"."Score_1" AS "Score_1", "XGB_B1"."Score_2" AS "Score_2" 
+FROM "TMP_20180602_SNH_XGB_B1" AS "XGB_B1" UNION ALL SELECT "XGB_B2"."KEY" AS "KEY", "XGB_B2"."Score_0" AS "Score_0", "XGB_B2"."Score_1" AS "Score_1", "XGB_B2"."Score_2" AS "Score_2" 
+FROM "TMP_20180602_XYV_XGB_B2" AS "XGB_B2" UNION ALL SELECT "XGB_B3"."KEY" AS "KEY", "XGB_B3"."Score_0" AS "Score_0", "XGB_B3"."Score_1" AS "Score_1", "XGB_B3"."Score_2" AS "Score_2" 
+FROM "TMP_20180602_NHR_XGB_B3" AS "XGB_B3" UNION ALL SELECT "XGB_B4"."KEY" AS "KEY", "XGB_B4"."Score_0" AS "Score_0", "XGB_B4"."Score_1" AS "Score_1", "XGB_B4"."Score_2" AS "Score_2" 
+FROM "TMP_20180602_A0D_XGB_B4" AS "XGB_B4" UNION ALL SELECT "XGB_B5"."KEY" AS "KEY", "XGB_B5"."Score_0" AS "Score_0", "XGB_B5"."Score_1" AS "Score_1", "XGB_B5"."Score_2" AS "Score_2" 
+FROM "TMP_20180602_7HI_XGB_B5" AS "XGB_B5" UNION ALL SELECT "XGB_B6"."KEY" AS "KEY", "XGB_B6"."Score_0" AS "Score_0", "XGB_B6"."Score_1" AS "Score_1", "XGB_B6"."Score_2" AS "Score_2" 
+FROM "TMP_20180602_NU3_XGB_B6" AS "XGB_B6" UNION ALL SELECT "XGB_B7"."KEY" AS "KEY", "XGB_B7"."Score_0" AS "Score_0", "XGB_B7"."Score_1" AS "Score_1", "XGB_B7"."Score_2" AS "Score_2" 
+FROM "TMP_20180602_TXB_XGB_B7" AS "XGB_B7" UNION ALL SELECT "XGB_B8"."KEY" AS "KEY", "XGB_B8"."Score_0" AS "Score_0", "XGB_B8"."Score_1" AS "Score_1", "XGB_B8"."Score_2" AS "Score_2" 
+FROM "TMP_20180602_2P2_XGB_B8" AS "XGB_B8" UNION ALL SELECT "XGB_B9"."KEY" AS "KEY", "XGB_B9"."Score_0" AS "Score_0", "XGB_B9"."Score_1" AS "Score_1", "XGB_B9"."Score_2" AS "Score_2" 
+FROM "TMP_20180602_241_XGB_B9" AS "XGB_B9") AS "XGB_EnsembleUnion")
  SELECT "XGB_sum"."KEY", "XGB_sum"."Score_0", "XGB_sum"."Score_1", "XGB_sum"."Score_2" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Score_0" AS DOUBLE PRECISION) AS "Score_0", CAST("T"."Score_1" AS DOUBLE PRECISION) AS "Score_1", CAST("T"."Score_2" AS DOUBLE PRECISION) AS "Score_2" 
 FROM (SELECT "XGB_Union"."KEY" AS "KEY", sum("XGB_Union"."Score_0") AS "Score_0", sum("XGB_Union"."Score_1") AS "Score_1", sum("XGB_Union"."Score_2") AS "Score_2" 
 FROM "XGB_Union" GROUP BY "XGB_Union"."KEY") AS "T") AS "XGB_sum") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_MSMQXV_XGB part 3. Create Index 
+-- Code For temporary table TMP_20180602_6E1_XGB_SUM part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180516_CODEGEN_a294" ON "TMP_20180516_CODEGEN_MSMQXV_XGB" ("KEY")
+CREATE INDEX "ix_TMP_20180602_6E1_XGB_SUM_KEY" ON "TMP_20180602_6E1_XGB_SUM" ("KEY")
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT "XGB_sum"."KEY" AS "KEY", "XGB_sum"."Score_0" AS "Score_0", "XGB_sum"."Score_1" AS "Score_1", "XGB_sum"."Score_2" AS "Score_2", CAST(NULL AS DOUBLE PRECISION) AS "Proba_0", CAST(NULL AS DOUBLE PRECISION) AS "Proba_1", CAST(NULL AS DOUBLE PRECISION) AS "Proba_2", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_0", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_1", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_2", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba" 
-FROM "TMP_20180516_CODEGEN_MSMQXV_XGB" AS "XGB_sum"), 
+FROM "TMP_20180602_6E1_XGB_SUM" AS "XGB_sum"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

@@ -10,19 +10,19 @@
 
 
 
--- Code For temporary table TMP_20180516_CODEGEN_0PQMDW_XGB part 1. Create 
+-- Code For temporary table TMP_20180602_8BX_XGB_B0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_0PQMDW_XGB" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_8BX_XGB_B0" (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE PRECISION
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_0PQMDW_XGB part 2. Populate
+-- Code For temporary table TMP_20180602_8BX_XGB_B0 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_0PQMDW_XGB" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO "TMP_20180602_8BX_XGB_B0" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_12" < 9.725000381469727) THEN CASE WHEN ("ADS"."Feature_5" < 7.140999794006348) THEN CASE WHEN ("ADS"."Feature_5" < 6.541999816894531) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_12" < 15) THEN 5 ELSE CASE WHEN ("ADS"."Feature_4" < 0.6614999771118164) THEN 9 ELSE 10 END END END AS node_id_2 
 FROM boston AS "ADS"), 
@@ -82,8 +82,30 @@ FROM (SELECT 3 AS nid, 2.078160285949707 AS "Estimator" FROM rdb$database UNION 
 FROM "DT_node_lookup_4" LEFT OUTER JOIN "DT_node_data_4" ON "DT_node_lookup_4".node_id_2 = "DT_node_data_4".nid), 
 "XGB_Model_4" AS 
 (SELECT "DT_Output_4"."KEY" AS "KEY", "DT_Output_4"."Estimator" AS "Estimator" 
-FROM "DT_Output_4"), 
-"DT_node_lookup_5" AS 
+FROM "DT_Output_4")
+ SELECT "XGB_B0"."KEY", "XGB_B0"."Estimator" 
+FROM (SELECT "XGB_esu_0"."KEY" AS "KEY", "XGB_esu_0"."Estimator" AS "Estimator" 
+FROM (SELECT "XGB_Model_0"."KEY" AS "KEY", "XGB_Model_0"."Estimator" AS "Estimator" 
+FROM "XGB_Model_0" UNION ALL SELECT "XGB_Model_1"."KEY" AS "KEY", "XGB_Model_1"."Estimator" AS "Estimator" 
+FROM "XGB_Model_1" UNION ALL SELECT "XGB_Model_2"."KEY" AS "KEY", "XGB_Model_2"."Estimator" AS "Estimator" 
+FROM "XGB_Model_2" UNION ALL SELECT "XGB_Model_3"."KEY" AS "KEY", "XGB_Model_3"."Estimator" AS "Estimator" 
+FROM "XGB_Model_3" UNION ALL SELECT "XGB_Model_4"."KEY" AS "KEY", "XGB_Model_4"."Estimator" AS "Estimator" 
+FROM "XGB_Model_4") AS "XGB_esu_0") AS "XGB_B0") AS "U"
+
+-- Code For temporary table TMP_20180602_LKS_XGB_B1 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_LKS_XGB_B1" (
+	"KEY" BIGINT, 
+	"Estimator" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_LKS_XGB_B1 part 2. Populate
+
+INSERT INTO "TMP_20180602_LKS_XGB_B1" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+FROM (WITH "DT_node_lookup_5" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_12" < 9.725000381469727) THEN CASE WHEN ("ADS"."Feature_5" < 7.140999794006348) THEN CASE WHEN ("ADS"."Feature_5" < 6.593999862670898) THEN 7 ELSE 8 END ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_12" < 19.850000381469727) THEN CASE WHEN ("ADS"."Feature_11" < 134.9499969482422) THEN 9 ELSE 10 END ELSE CASE WHEN ("ADS"."Feature_4" < 0.6030000448226929) THEN 11 ELSE 12 END END END AS node_id_2 
 FROM boston AS "ADS"), 
 "DT_node_data_5" AS 
@@ -143,33 +165,28 @@ FROM "DT_node_lookup_9" LEFT OUTER JOIN "DT_node_data_9" ON "DT_node_lookup_9".n
 "XGB_Model_9" AS 
 (SELECT "DT_Output_9"."KEY" AS "KEY", "DT_Output_9"."Estimator" AS "Estimator" 
 FROM "DT_Output_9")
- SELECT "XGB_B0"."KEY", "XGB_B0"."Estimator" 
-FROM (SELECT "XGB_esu_0"."KEY" AS "KEY", "XGB_esu_0"."Estimator" AS "Estimator" 
-FROM (SELECT "XGB_Model_0"."KEY" AS "KEY", "XGB_Model_0"."Estimator" AS "Estimator" 
-FROM "XGB_Model_0" UNION ALL SELECT "XGB_Model_1"."KEY" AS "KEY", "XGB_Model_1"."Estimator" AS "Estimator" 
-FROM "XGB_Model_1" UNION ALL SELECT "XGB_Model_2"."KEY" AS "KEY", "XGB_Model_2"."Estimator" AS "Estimator" 
-FROM "XGB_Model_2" UNION ALL SELECT "XGB_Model_3"."KEY" AS "KEY", "XGB_Model_3"."Estimator" AS "Estimator" 
-FROM "XGB_Model_3" UNION ALL SELECT "XGB_Model_4"."KEY" AS "KEY", "XGB_Model_4"."Estimator" AS "Estimator" 
-FROM "XGB_Model_4" UNION ALL SELECT "XGB_Model_5"."KEY" AS "KEY", "XGB_Model_5"."Estimator" AS "Estimator" 
+ SELECT "XGB_B1"."KEY", "XGB_B1"."Estimator" 
+FROM (SELECT "XGB_esu_1"."KEY" AS "KEY", "XGB_esu_1"."Estimator" AS "Estimator" 
+FROM (SELECT "XGB_Model_5"."KEY" AS "KEY", "XGB_Model_5"."Estimator" AS "Estimator" 
 FROM "XGB_Model_5" UNION ALL SELECT "XGB_Model_6"."KEY" AS "KEY", "XGB_Model_6"."Estimator" AS "Estimator" 
 FROM "XGB_Model_6" UNION ALL SELECT "XGB_Model_7"."KEY" AS "KEY", "XGB_Model_7"."Estimator" AS "Estimator" 
 FROM "XGB_Model_7" UNION ALL SELECT "XGB_Model_8"."KEY" AS "KEY", "XGB_Model_8"."Estimator" AS "Estimator" 
 FROM "XGB_Model_8" UNION ALL SELECT "XGB_Model_9"."KEY" AS "KEY", "XGB_Model_9"."Estimator" AS "Estimator" 
-FROM "XGB_Model_9") AS "XGB_esu_0") AS "XGB_B0") AS "U"
+FROM "XGB_Model_9") AS "XGB_esu_1") AS "XGB_B1") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_5VH5TN_XGB part 1. Create 
+-- Code For temporary table TMP_20180602_U0I_XGB_B2 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_5VH5TN_XGB" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_U0I_XGB_B2" (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE PRECISION
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_5VH5TN_XGB part 2. Populate
+-- Code For temporary table TMP_20180602_U0I_XGB_B2 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_5VH5TN_XGB" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO "TMP_20180602_U0I_XGB_B2" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "DT_node_lookup_10" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_5" < 6.802999973297119) THEN CASE WHEN ("ADS"."Feature_12" < 19.229999542236328) THEN CASE WHEN ("ADS"."Feature_7" < 1.6205999851226807) THEN 7 ELSE 8 END ELSE CASE WHEN ("ADS"."Feature_4" < 0.6030000448226929) THEN 9 ELSE 10 END END ELSE CASE WHEN ("ADS"."Feature_10" < 19.450000762939453) THEN CASE WHEN ("ADS"."Feature_5" < 7.437000274658203) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
 FROM boston AS "ADS"), 
@@ -229,8 +246,30 @@ FROM (SELECT 7 AS nid, 0.5241692662239075 AS "Estimator" FROM rdb$database UNION
 FROM "DT_node_lookup_14" LEFT OUTER JOIN "DT_node_data_14" ON "DT_node_lookup_14".node_id_2 = "DT_node_data_14".nid), 
 "XGB_Model_14" AS 
 (SELECT "DT_Output_14"."KEY" AS "KEY", "DT_Output_14"."Estimator" AS "Estimator" 
-FROM "DT_Output_14"), 
-"DT_node_lookup_15" AS 
+FROM "DT_Output_14")
+ SELECT "XGB_B2"."KEY", "XGB_B2"."Estimator" 
+FROM (SELECT "XGB_esu_2"."KEY" AS "KEY", "XGB_esu_2"."Estimator" AS "Estimator" 
+FROM (SELECT "XGB_Model_10"."KEY" AS "KEY", "XGB_Model_10"."Estimator" AS "Estimator" 
+FROM "XGB_Model_10" UNION ALL SELECT "XGB_Model_11"."KEY" AS "KEY", "XGB_Model_11"."Estimator" AS "Estimator" 
+FROM "XGB_Model_11" UNION ALL SELECT "XGB_Model_12"."KEY" AS "KEY", "XGB_Model_12"."Estimator" AS "Estimator" 
+FROM "XGB_Model_12" UNION ALL SELECT "XGB_Model_13"."KEY" AS "KEY", "XGB_Model_13"."Estimator" AS "Estimator" 
+FROM "XGB_Model_13" UNION ALL SELECT "XGB_Model_14"."KEY" AS "KEY", "XGB_Model_14"."Estimator" AS "Estimator" 
+FROM "XGB_Model_14") AS "XGB_esu_2") AS "XGB_B2") AS "U"
+
+-- Code For temporary table TMP_20180602_JSV_XGB_B3 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_JSV_XGB_B3" (
+	"KEY" BIGINT, 
+	"Estimator" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_JSV_XGB_B3 part 2. Populate
+
+INSERT INTO "TMP_20180602_JSV_XGB_B3" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+FROM (WITH "DT_node_lookup_15" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_5" < 6.531499862670898) THEN CASE WHEN ("ADS"."Feature_12" < 19.229999542236328) THEN CASE WHEN ("ADS"."Feature_7" < 1.6744500398635864) THEN 7 ELSE 8 END ELSE CASE WHEN ("ADS"."Feature_10" < 19.600000381469727) THEN 9 ELSE 10 END END ELSE CASE WHEN ("ADS"."Feature_4" < 0.659000039100647) THEN CASE WHEN ("ADS"."Feature_5" < 7.479499816894531) THEN 11 ELSE 12 END ELSE 6 END END AS node_id_2 
 FROM boston AS "ADS"), 
 "DT_node_data_15" AS 
@@ -242,20 +281,15 @@ FROM "DT_node_lookup_15" LEFT OUTER JOIN "DT_node_data_15" ON "DT_node_lookup_15
 "XGB_Model_15" AS 
 (SELECT "DT_Output_15"."KEY" AS "KEY", "DT_Output_15"."Estimator" AS "Estimator" 
 FROM "DT_Output_15")
- SELECT "XGB_B1"."KEY", "XGB_B1"."Estimator" 
-FROM (SELECT "XGB_esu_1"."KEY" AS "KEY", "XGB_esu_1"."Estimator" AS "Estimator" 
-FROM (SELECT "XGB_Model_10"."KEY" AS "KEY", "XGB_Model_10"."Estimator" AS "Estimator" 
-FROM "XGB_Model_10" UNION ALL SELECT "XGB_Model_11"."KEY" AS "KEY", "XGB_Model_11"."Estimator" AS "Estimator" 
-FROM "XGB_Model_11" UNION ALL SELECT "XGB_Model_12"."KEY" AS "KEY", "XGB_Model_12"."Estimator" AS "Estimator" 
-FROM "XGB_Model_12" UNION ALL SELECT "XGB_Model_13"."KEY" AS "KEY", "XGB_Model_13"."Estimator" AS "Estimator" 
-FROM "XGB_Model_13" UNION ALL SELECT "XGB_Model_14"."KEY" AS "KEY", "XGB_Model_14"."Estimator" AS "Estimator" 
-FROM "XGB_Model_14" UNION ALL SELECT "XGB_Model_15"."KEY" AS "KEY", "XGB_Model_15"."Estimator" AS "Estimator" 
-FROM "XGB_Model_15") AS "XGB_esu_1") AS "XGB_B1") AS "U"
+ SELECT "XGB_B3"."KEY", "XGB_B3"."Estimator" 
+FROM (SELECT "XGB_esu_3"."KEY" AS "KEY", "XGB_esu_3"."Estimator" AS "Estimator" 
+FROM (SELECT "XGB_Model_15"."KEY" AS "KEY", "XGB_Model_15"."Estimator" AS "Estimator" 
+FROM "XGB_Model_15") AS "XGB_esu_3") AS "XGB_B3") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_31YON7_XGB part 1. Create 
+-- Code For temporary table TMP_20180602_EGN_XGB_SUM part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_31YON7_XGB" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_EGN_XGB_SUM" (
 	"KEY" BIGINT NOT NULL, 
 	"Estimator" DOUBLE PRECISION, 
 	PRIMARY KEY ("KEY")
@@ -263,24 +297,26 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_31YON7_XGB" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_31YON7_XGB part 2. Populate
+-- Code For temporary table TMP_20180602_EGN_XGB_SUM part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_31YON7_XGB" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO "TMP_20180602_EGN_XGB_SUM" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "XGB_Union" AS 
 (SELECT "XGB_EnsembleUnion"."KEY" AS "KEY", "XGB_EnsembleUnion"."Estimator" AS "Estimator" 
 FROM (SELECT "XGB_B0"."KEY" AS "KEY", "XGB_B0"."Estimator" AS "Estimator" 
-FROM "TMP_20180516_CODEGEN_0PQMDW_XGB" AS "XGB_B0" UNION ALL SELECT "XGB_B1"."KEY" AS "KEY", "XGB_B1"."Estimator" AS "Estimator" 
-FROM "TMP_20180516_CODEGEN_5VH5TN_XGB" AS "XGB_B1") AS "XGB_EnsembleUnion")
+FROM "TMP_20180602_8BX_XGB_B0" AS "XGB_B0" UNION ALL SELECT "XGB_B1"."KEY" AS "KEY", "XGB_B1"."Estimator" AS "Estimator" 
+FROM "TMP_20180602_LKS_XGB_B1" AS "XGB_B1" UNION ALL SELECT "XGB_B2"."KEY" AS "KEY", "XGB_B2"."Estimator" AS "Estimator" 
+FROM "TMP_20180602_U0I_XGB_B2" AS "XGB_B2" UNION ALL SELECT "XGB_B3"."KEY" AS "KEY", "XGB_B3"."Estimator" AS "Estimator" 
+FROM "TMP_20180602_JSV_XGB_B3" AS "XGB_B3") AS "XGB_EnsembleUnion")
  SELECT "XGB_sum"."KEY", "XGB_sum"."Estimator" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Estimator" AS DOUBLE PRECISION) AS "Estimator" 
 FROM (SELECT "XGB_Union"."KEY" AS "KEY", sum("XGB_Union"."Estimator") AS "Estimator" 
 FROM "XGB_Union" GROUP BY "XGB_Union"."KEY") AS "T") AS "XGB_sum") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_31YON7_XGB part 3. Create Index 
+-- Code For temporary table TMP_20180602_EGN_XGB_SUM part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180516_CODEGEN_cb76" ON "TMP_20180516_CODEGEN_31YON7_XGB" ("KEY")
+CREATE INDEX "ix_TMP_20180602_EGN_XGB_SUM_KEY" ON "TMP_20180602_EGN_XGB_SUM" ("KEY")
 
 -- Model deployment code
 
 SELECT "XGB_sum"."KEY" AS "KEY", "XGB_sum"."Estimator" + 0.5 AS "Estimator" 
-FROM "TMP_20180516_CODEGEN_31YON7_XGB" AS "XGB_sum"
+FROM "TMP_20180602_EGN_XGB_SUM" AS "XGB_sum"

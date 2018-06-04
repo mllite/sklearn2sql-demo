@@ -10,19 +10,19 @@
 
 
 
--- Code For temporary table TMP_20180516_CODEGEN_I7P72I_LGB part 1. Create 
+-- Code For temporary table TMP_20180602_GAA_LGBM_B0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_I7P72I_LGB" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_GAA_LGBM_B0" (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE PRECISION
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_I7P72I_LGB part 2. Populate
+-- Code For temporary table TMP_20180602_GAA_LGBM_B0 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_I7P72I_LGB" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO "TMP_20180602_GAA_LGBM_B0" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 0.3052070585017281) THEN 2 ELSE CASE WHEN ("ADS"."Feature_1" <= 821.2744087124171) THEN 6 ELSE 7 END END AS node_id_2 
 FROM freidman3 AS "ADS"), 
@@ -82,8 +82,30 @@ FROM (SELECT 2 AS nid, -0.01110884565028495 AS "Estimator" FROM rdb$database UNI
 FROM "DT_node_lookup_4" LEFT OUTER JOIN "DT_node_data_4" ON "DT_node_lookup_4".node_id_2 = "DT_node_data_4".nid), 
 "LGBM_Model_4" AS 
 (SELECT "DT_Output_4"."KEY" AS "KEY", "DT_Output_4"."Estimator" AS "Estimator" 
-FROM "DT_Output_4"), 
-"DT_node_lookup_5" AS 
+FROM "DT_Output_4")
+ SELECT "LGBM_B0"."KEY", "LGBM_B0"."Estimator" 
+FROM (SELECT "LGBM_esu_0"."KEY" AS "KEY", "LGBM_esu_0"."Estimator" AS "Estimator" 
+FROM (SELECT "LGBM_Model_0"."KEY" AS "KEY", "LGBM_Model_0"."Estimator" AS "Estimator" 
+FROM "LGBM_Model_0" UNION ALL SELECT "LGBM_Model_1"."KEY" AS "KEY", "LGBM_Model_1"."Estimator" AS "Estimator" 
+FROM "LGBM_Model_1" UNION ALL SELECT "LGBM_Model_2"."KEY" AS "KEY", "LGBM_Model_2"."Estimator" AS "Estimator" 
+FROM "LGBM_Model_2" UNION ALL SELECT "LGBM_Model_3"."KEY" AS "KEY", "LGBM_Model_3"."Estimator" AS "Estimator" 
+FROM "LGBM_Model_3" UNION ALL SELECT "LGBM_Model_4"."KEY" AS "KEY", "LGBM_Model_4"."Estimator" AS "Estimator" 
+FROM "LGBM_Model_4") AS "LGBM_esu_0") AS "LGBM_B0") AS "U"
+
+-- Code For temporary table TMP_20180602_94S_LGBM_B1 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_94S_LGBM_B1" (
+	"KEY" BIGINT, 
+	"Estimator" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_94S_LGBM_B1 part 2. Populate
+
+INSERT INTO "TMP_20180602_94S_LGBM_B1" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+FROM (WITH "DT_node_lookup_5" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 0.3052070585017281) THEN 2 ELSE CASE WHEN ("ADS"."Feature_1" <= 821.2744087124171) THEN 6 ELSE 7 END END AS node_id_2 
 FROM freidman3 AS "ADS"), 
 "DT_node_data_5" AS 
@@ -143,33 +165,28 @@ FROM "DT_node_lookup_9" LEFT OUTER JOIN "DT_node_data_9" ON "DT_node_lookup_9".n
 "LGBM_Model_9" AS 
 (SELECT "DT_Output_9"."KEY" AS "KEY", "DT_Output_9"."Estimator" AS "Estimator" 
 FROM "DT_Output_9")
- SELECT "LGBM_B0"."KEY", "LGBM_B0"."Estimator" 
-FROM (SELECT "LGBM_esu_0"."KEY" AS "KEY", "LGBM_esu_0"."Estimator" AS "Estimator" 
-FROM (SELECT "LGBM_Model_0"."KEY" AS "KEY", "LGBM_Model_0"."Estimator" AS "Estimator" 
-FROM "LGBM_Model_0" UNION ALL SELECT "LGBM_Model_1"."KEY" AS "KEY", "LGBM_Model_1"."Estimator" AS "Estimator" 
-FROM "LGBM_Model_1" UNION ALL SELECT "LGBM_Model_2"."KEY" AS "KEY", "LGBM_Model_2"."Estimator" AS "Estimator" 
-FROM "LGBM_Model_2" UNION ALL SELECT "LGBM_Model_3"."KEY" AS "KEY", "LGBM_Model_3"."Estimator" AS "Estimator" 
-FROM "LGBM_Model_3" UNION ALL SELECT "LGBM_Model_4"."KEY" AS "KEY", "LGBM_Model_4"."Estimator" AS "Estimator" 
-FROM "LGBM_Model_4" UNION ALL SELECT "LGBM_Model_5"."KEY" AS "KEY", "LGBM_Model_5"."Estimator" AS "Estimator" 
+ SELECT "LGBM_B1"."KEY", "LGBM_B1"."Estimator" 
+FROM (SELECT "LGBM_esu_1"."KEY" AS "KEY", "LGBM_esu_1"."Estimator" AS "Estimator" 
+FROM (SELECT "LGBM_Model_5"."KEY" AS "KEY", "LGBM_Model_5"."Estimator" AS "Estimator" 
 FROM "LGBM_Model_5" UNION ALL SELECT "LGBM_Model_6"."KEY" AS "KEY", "LGBM_Model_6"."Estimator" AS "Estimator" 
 FROM "LGBM_Model_6" UNION ALL SELECT "LGBM_Model_7"."KEY" AS "KEY", "LGBM_Model_7"."Estimator" AS "Estimator" 
 FROM "LGBM_Model_7" UNION ALL SELECT "LGBM_Model_8"."KEY" AS "KEY", "LGBM_Model_8"."Estimator" AS "Estimator" 
 FROM "LGBM_Model_8" UNION ALL SELECT "LGBM_Model_9"."KEY" AS "KEY", "LGBM_Model_9"."Estimator" AS "Estimator" 
-FROM "LGBM_Model_9") AS "LGBM_esu_0") AS "LGBM_B0") AS "U"
+FROM "LGBM_Model_9") AS "LGBM_esu_1") AS "LGBM_B1") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_10MQW9_LGB part 1. Create 
+-- Code For temporary table TMP_20180602_R55_LGBM_B2 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_10MQW9_LGB" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_R55_LGBM_B2" (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE PRECISION
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_10MQW9_LGB part 2. Populate
+-- Code For temporary table TMP_20180602_R55_LGBM_B2 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_10MQW9_LGB" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO "TMP_20180602_R55_LGBM_B2" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "DT_node_lookup_10" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 0.3052070585017281) THEN 2 ELSE CASE WHEN ("ADS"."Feature_0" <= 49.232675914117046) THEN 6 ELSE 7 END END AS node_id_2 
 FROM freidman3 AS "ADS"), 
@@ -229,8 +246,30 @@ FROM (SELECT 2 AS nid, -0.007107818481468019 AS "Estimator" FROM rdb$database UN
 FROM "DT_node_lookup_14" LEFT OUTER JOIN "DT_node_data_14" ON "DT_node_lookup_14".node_id_2 = "DT_node_data_14".nid), 
 "LGBM_Model_14" AS 
 (SELECT "DT_Output_14"."KEY" AS "KEY", "DT_Output_14"."Estimator" AS "Estimator" 
-FROM "DT_Output_14"), 
-"DT_node_lookup_15" AS 
+FROM "DT_Output_14")
+ SELECT "LGBM_B2"."KEY", "LGBM_B2"."Estimator" 
+FROM (SELECT "LGBM_esu_2"."KEY" AS "KEY", "LGBM_esu_2"."Estimator" AS "Estimator" 
+FROM (SELECT "LGBM_Model_10"."KEY" AS "KEY", "LGBM_Model_10"."Estimator" AS "Estimator" 
+FROM "LGBM_Model_10" UNION ALL SELECT "LGBM_Model_11"."KEY" AS "KEY", "LGBM_Model_11"."Estimator" AS "Estimator" 
+FROM "LGBM_Model_11" UNION ALL SELECT "LGBM_Model_12"."KEY" AS "KEY", "LGBM_Model_12"."Estimator" AS "Estimator" 
+FROM "LGBM_Model_12" UNION ALL SELECT "LGBM_Model_13"."KEY" AS "KEY", "LGBM_Model_13"."Estimator" AS "Estimator" 
+FROM "LGBM_Model_13" UNION ALL SELECT "LGBM_Model_14"."KEY" AS "KEY", "LGBM_Model_14"."Estimator" AS "Estimator" 
+FROM "LGBM_Model_14") AS "LGBM_esu_2") AS "LGBM_B2") AS "U"
+
+-- Code For temporary table TMP_20180602_VPU_LGBM_B3 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_VPU_LGBM_B3" (
+	"KEY" BIGINT, 
+	"Estimator" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_VPU_LGBM_B3 part 2. Populate
+
+INSERT INTO "TMP_20180602_VPU_LGBM_B3" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+FROM (WITH "DT_node_lookup_15" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 0.3052070585017281) THEN 2 ELSE CASE WHEN ("ADS"."Feature_0" <= 34.446685757025755) THEN 6 ELSE 7 END END AS node_id_2 
 FROM freidman3 AS "ADS"), 
 "DT_node_data_15" AS 
@@ -242,20 +281,15 @@ FROM "DT_node_lookup_15" LEFT OUTER JOIN "DT_node_data_15" ON "DT_node_lookup_15
 "LGBM_Model_15" AS 
 (SELECT "DT_Output_15"."KEY" AS "KEY", "DT_Output_15"."Estimator" AS "Estimator" 
 FROM "DT_Output_15")
- SELECT "LGBM_B1"."KEY", "LGBM_B1"."Estimator" 
-FROM (SELECT "LGBM_esu_1"."KEY" AS "KEY", "LGBM_esu_1"."Estimator" AS "Estimator" 
-FROM (SELECT "LGBM_Model_10"."KEY" AS "KEY", "LGBM_Model_10"."Estimator" AS "Estimator" 
-FROM "LGBM_Model_10" UNION ALL SELECT "LGBM_Model_11"."KEY" AS "KEY", "LGBM_Model_11"."Estimator" AS "Estimator" 
-FROM "LGBM_Model_11" UNION ALL SELECT "LGBM_Model_12"."KEY" AS "KEY", "LGBM_Model_12"."Estimator" AS "Estimator" 
-FROM "LGBM_Model_12" UNION ALL SELECT "LGBM_Model_13"."KEY" AS "KEY", "LGBM_Model_13"."Estimator" AS "Estimator" 
-FROM "LGBM_Model_13" UNION ALL SELECT "LGBM_Model_14"."KEY" AS "KEY", "LGBM_Model_14"."Estimator" AS "Estimator" 
-FROM "LGBM_Model_14" UNION ALL SELECT "LGBM_Model_15"."KEY" AS "KEY", "LGBM_Model_15"."Estimator" AS "Estimator" 
-FROM "LGBM_Model_15") AS "LGBM_esu_1") AS "LGBM_B1") AS "U"
+ SELECT "LGBM_B3"."KEY", "LGBM_B3"."Estimator" 
+FROM (SELECT "LGBM_esu_3"."KEY" AS "KEY", "LGBM_esu_3"."Estimator" AS "Estimator" 
+FROM (SELECT "LGBM_Model_15"."KEY" AS "KEY", "LGBM_Model_15"."Estimator" AS "Estimator" 
+FROM "LGBM_Model_15") AS "LGBM_esu_3") AS "LGBM_B3") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_06K6L8_LGB part 1. Create 
+-- Code For temporary table TMP_20180602_78R_LGBM_SUM part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_06K6L8_LGB" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_78R_LGBM_SUM" (
 	"KEY" BIGINT NOT NULL, 
 	"Estimator" DOUBLE PRECISION, 
 	PRIMARY KEY ("KEY")
@@ -263,24 +297,26 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_06K6L8_LGB" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_06K6L8_LGB part 2. Populate
+-- Code For temporary table TMP_20180602_78R_LGBM_SUM part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_06K6L8_LGB" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO "TMP_20180602_78R_LGBM_SUM" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "LGBM_Union" AS 
 (SELECT "LGBM_EnsembleUnion"."KEY" AS "KEY", "LGBM_EnsembleUnion"."Estimator" AS "Estimator" 
 FROM (SELECT "LGBM_B0"."KEY" AS "KEY", "LGBM_B0"."Estimator" AS "Estimator" 
-FROM "TMP_20180516_CODEGEN_I7P72I_LGB" AS "LGBM_B0" UNION ALL SELECT "LGBM_B1"."KEY" AS "KEY", "LGBM_B1"."Estimator" AS "Estimator" 
-FROM "TMP_20180516_CODEGEN_10MQW9_LGB" AS "LGBM_B1") AS "LGBM_EnsembleUnion")
+FROM "TMP_20180602_GAA_LGBM_B0" AS "LGBM_B0" UNION ALL SELECT "LGBM_B1"."KEY" AS "KEY", "LGBM_B1"."Estimator" AS "Estimator" 
+FROM "TMP_20180602_94S_LGBM_B1" AS "LGBM_B1" UNION ALL SELECT "LGBM_B2"."KEY" AS "KEY", "LGBM_B2"."Estimator" AS "Estimator" 
+FROM "TMP_20180602_R55_LGBM_B2" AS "LGBM_B2" UNION ALL SELECT "LGBM_B3"."KEY" AS "KEY", "LGBM_B3"."Estimator" AS "Estimator" 
+FROM "TMP_20180602_VPU_LGBM_B3" AS "LGBM_B3") AS "LGBM_EnsembleUnion")
  SELECT "LGBM_sum"."KEY", "LGBM_sum"."Estimator" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Estimator" AS DOUBLE PRECISION) AS "Estimator" 
 FROM (SELECT "LGBM_Union"."KEY" AS "KEY", sum("LGBM_Union"."Estimator") AS "Estimator" 
 FROM "LGBM_Union" GROUP BY "LGBM_Union"."KEY") AS "T") AS "LGBM_sum") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_06K6L8_LGB part 3. Create Index 
+-- Code For temporary table TMP_20180602_78R_LGBM_SUM part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180516_CODEGEN_c32a" ON "TMP_20180516_CODEGEN_06K6L8_LGB" ("KEY")
+CREATE INDEX "ix_TMP_20180602_78R_LGB_41a0" ON "TMP_20180602_78R_LGBM_SUM" ("KEY")
 
 -- Model deployment code
 
 SELECT "LGBM_sum"."KEY" AS "KEY", "LGBM_sum"."Estimator" AS "Estimator" 
-FROM "TMP_20180516_CODEGEN_06K6L8_LGB" AS "LGBM_sum"
+FROM "TMP_20180602_78R_LGBM_SUM" AS "LGBM_sum"

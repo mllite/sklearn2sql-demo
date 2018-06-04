@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180516_CODEGEN_1ZTYPS_GB_ part 1. Create 
+-- Code For temporary table TMP_20180602_KO5_GB_B0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_1ZTYPS_GB_" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_KO5_GB_B0" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -29,9 +29,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_1ZTYPS_GB_" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_1ZTYPS_GB_ part 2. Populate
+-- Code For temporary table TMP_20180602_KO5_GB_B0 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_1ZTYPS_GB_" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+INSERT INTO "TMP_20180602_KO5_GB_B0" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_36" <= 0.5) THEN CASE WHEN ("ADS"."Feature_28" <= 4.5) THEN CASE WHEN ("ADS"."Feature_21" <= 0.5) THEN 3 ELSE 4 END ELSE 5 END ELSE CASE WHEN ("ADS"."Feature_36" <= 3.5) THEN CASE WHEN ("ADS"."Feature_52" <= 14.5) THEN 8 ELSE 9 END ELSE 10 END END AS node_id_2 
 FROM digits AS "ADS"), 
@@ -91,8 +91,39 @@ FROM (SELECT 3 AS nid, -0.701575287155163 AS "E" FROM rdb$database UNION ALL SEL
 FROM "DT_node_lookup_4" LEFT OUTER JOIN "DT_node_data_4" ON "DT_node_lookup_4".node_id_2 = "DT_node_data_4".nid), 
 "GB_Model_0_4" AS 
 (SELECT "DT_Output_4"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", "DT_Output_4"."E" AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", 0.0 AS "Score_9" 
-FROM "DT_Output_4"), 
-"DT_node_lookup_5" AS 
+FROM "DT_Output_4")
+ SELECT "GB_B0"."KEY", "GB_B0"."Score_0", "GB_B0"."Score_1", "GB_B0"."Score_2", "GB_B0"."Score_3", "GB_B0"."Score_4", "GB_B0"."Score_5", "GB_B0"."Score_6", "GB_B0"."Score_7", "GB_B0"."Score_8", "GB_B0"."Score_9" 
+FROM (SELECT "GB_esu_0"."KEY" AS "KEY", "GB_esu_0"."Score_0" AS "Score_0", "GB_esu_0"."Score_1" AS "Score_1", "GB_esu_0"."Score_2" AS "Score_2", "GB_esu_0"."Score_3" AS "Score_3", "GB_esu_0"."Score_4" AS "Score_4", "GB_esu_0"."Score_5" AS "Score_5", "GB_esu_0"."Score_6" AS "Score_6", "GB_esu_0"."Score_7" AS "Score_7", "GB_esu_0"."Score_8" AS "Score_8", "GB_esu_0"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_0_0"."KEY" AS "KEY", "GB_Model_0_0"."Score_0" AS "Score_0", "GB_Model_0_0"."Score_1" AS "Score_1", "GB_Model_0_0"."Score_2" AS "Score_2", "GB_Model_0_0"."Score_3" AS "Score_3", "GB_Model_0_0"."Score_4" AS "Score_4", "GB_Model_0_0"."Score_5" AS "Score_5", "GB_Model_0_0"."Score_6" AS "Score_6", "GB_Model_0_0"."Score_7" AS "Score_7", "GB_Model_0_0"."Score_8" AS "Score_8", "GB_Model_0_0"."Score_9" AS "Score_9" 
+FROM "GB_Model_0_0" UNION ALL SELECT "GB_Model_0_1"."KEY" AS "KEY", "GB_Model_0_1"."Score_0" AS "Score_0", "GB_Model_0_1"."Score_1" AS "Score_1", "GB_Model_0_1"."Score_2" AS "Score_2", "GB_Model_0_1"."Score_3" AS "Score_3", "GB_Model_0_1"."Score_4" AS "Score_4", "GB_Model_0_1"."Score_5" AS "Score_5", "GB_Model_0_1"."Score_6" AS "Score_6", "GB_Model_0_1"."Score_7" AS "Score_7", "GB_Model_0_1"."Score_8" AS "Score_8", "GB_Model_0_1"."Score_9" AS "Score_9" 
+FROM "GB_Model_0_1" UNION ALL SELECT "GB_Model_0_2"."KEY" AS "KEY", "GB_Model_0_2"."Score_0" AS "Score_0", "GB_Model_0_2"."Score_1" AS "Score_1", "GB_Model_0_2"."Score_2" AS "Score_2", "GB_Model_0_2"."Score_3" AS "Score_3", "GB_Model_0_2"."Score_4" AS "Score_4", "GB_Model_0_2"."Score_5" AS "Score_5", "GB_Model_0_2"."Score_6" AS "Score_6", "GB_Model_0_2"."Score_7" AS "Score_7", "GB_Model_0_2"."Score_8" AS "Score_8", "GB_Model_0_2"."Score_9" AS "Score_9" 
+FROM "GB_Model_0_2" UNION ALL SELECT "GB_Model_0_3"."KEY" AS "KEY", "GB_Model_0_3"."Score_0" AS "Score_0", "GB_Model_0_3"."Score_1" AS "Score_1", "GB_Model_0_3"."Score_2" AS "Score_2", "GB_Model_0_3"."Score_3" AS "Score_3", "GB_Model_0_3"."Score_4" AS "Score_4", "GB_Model_0_3"."Score_5" AS "Score_5", "GB_Model_0_3"."Score_6" AS "Score_6", "GB_Model_0_3"."Score_7" AS "Score_7", "GB_Model_0_3"."Score_8" AS "Score_8", "GB_Model_0_3"."Score_9" AS "Score_9" 
+FROM "GB_Model_0_3" UNION ALL SELECT "GB_Model_0_4"."KEY" AS "KEY", "GB_Model_0_4"."Score_0" AS "Score_0", "GB_Model_0_4"."Score_1" AS "Score_1", "GB_Model_0_4"."Score_2" AS "Score_2", "GB_Model_0_4"."Score_3" AS "Score_3", "GB_Model_0_4"."Score_4" AS "Score_4", "GB_Model_0_4"."Score_5" AS "Score_5", "GB_Model_0_4"."Score_6" AS "Score_6", "GB_Model_0_4"."Score_7" AS "Score_7", "GB_Model_0_4"."Score_8" AS "Score_8", "GB_Model_0_4"."Score_9" AS "Score_9" 
+FROM "GB_Model_0_4") AS "GB_esu_0") AS "GB_B0") AS "U"
+
+-- Code For temporary table TMP_20180602_0BE_GB_B1 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_0BE_GB_B1" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Score_2" DOUBLE PRECISION, 
+	"Score_3" DOUBLE PRECISION, 
+	"Score_4" DOUBLE PRECISION, 
+	"Score_5" DOUBLE PRECISION, 
+	"Score_6" DOUBLE PRECISION, 
+	"Score_7" DOUBLE PRECISION, 
+	"Score_8" DOUBLE PRECISION, 
+	"Score_9" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_0BE_GB_B1 part 2. Populate
+
+INSERT INTO "TMP_20180602_0BE_GB_B1" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+FROM (WITH "DT_node_lookup_5" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_21" <= 1.5) THEN CASE WHEN ("ADS"."Feature_5" <= 6.5) THEN CASE WHEN ("ADS"."Feature_13" <= 6.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_42" <= 13.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_1" <= 5.0) THEN CASE WHEN ("ADS"."Feature_21" <= 3.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_44" <= 10.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
 "DT_node_data_5" AS 
@@ -152,24 +183,19 @@ FROM "DT_node_lookup_9" LEFT OUTER JOIN "DT_node_data_9" ON "DT_node_lookup_9".n
 "GB_Model_0_9" AS 
 (SELECT "DT_Output_9"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", 0.0 AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", "DT_Output_9"."E" AS "Score_9" 
 FROM "DT_Output_9")
- SELECT "GB_B0"."KEY", "GB_B0"."Score_0", "GB_B0"."Score_1", "GB_B0"."Score_2", "GB_B0"."Score_3", "GB_B0"."Score_4", "GB_B0"."Score_5", "GB_B0"."Score_6", "GB_B0"."Score_7", "GB_B0"."Score_8", "GB_B0"."Score_9" 
-FROM (SELECT "GB_esu_0"."KEY" AS "KEY", "GB_esu_0"."Score_0" AS "Score_0", "GB_esu_0"."Score_1" AS "Score_1", "GB_esu_0"."Score_2" AS "Score_2", "GB_esu_0"."Score_3" AS "Score_3", "GB_esu_0"."Score_4" AS "Score_4", "GB_esu_0"."Score_5" AS "Score_5", "GB_esu_0"."Score_6" AS "Score_6", "GB_esu_0"."Score_7" AS "Score_7", "GB_esu_0"."Score_8" AS "Score_8", "GB_esu_0"."Score_9" AS "Score_9" 
-FROM (SELECT "GB_Model_0_0"."KEY" AS "KEY", "GB_Model_0_0"."Score_0" AS "Score_0", "GB_Model_0_0"."Score_1" AS "Score_1", "GB_Model_0_0"."Score_2" AS "Score_2", "GB_Model_0_0"."Score_3" AS "Score_3", "GB_Model_0_0"."Score_4" AS "Score_4", "GB_Model_0_0"."Score_5" AS "Score_5", "GB_Model_0_0"."Score_6" AS "Score_6", "GB_Model_0_0"."Score_7" AS "Score_7", "GB_Model_0_0"."Score_8" AS "Score_8", "GB_Model_0_0"."Score_9" AS "Score_9" 
-FROM "GB_Model_0_0" UNION ALL SELECT "GB_Model_0_1"."KEY" AS "KEY", "GB_Model_0_1"."Score_0" AS "Score_0", "GB_Model_0_1"."Score_1" AS "Score_1", "GB_Model_0_1"."Score_2" AS "Score_2", "GB_Model_0_1"."Score_3" AS "Score_3", "GB_Model_0_1"."Score_4" AS "Score_4", "GB_Model_0_1"."Score_5" AS "Score_5", "GB_Model_0_1"."Score_6" AS "Score_6", "GB_Model_0_1"."Score_7" AS "Score_7", "GB_Model_0_1"."Score_8" AS "Score_8", "GB_Model_0_1"."Score_9" AS "Score_9" 
-FROM "GB_Model_0_1" UNION ALL SELECT "GB_Model_0_2"."KEY" AS "KEY", "GB_Model_0_2"."Score_0" AS "Score_0", "GB_Model_0_2"."Score_1" AS "Score_1", "GB_Model_0_2"."Score_2" AS "Score_2", "GB_Model_0_2"."Score_3" AS "Score_3", "GB_Model_0_2"."Score_4" AS "Score_4", "GB_Model_0_2"."Score_5" AS "Score_5", "GB_Model_0_2"."Score_6" AS "Score_6", "GB_Model_0_2"."Score_7" AS "Score_7", "GB_Model_0_2"."Score_8" AS "Score_8", "GB_Model_0_2"."Score_9" AS "Score_9" 
-FROM "GB_Model_0_2" UNION ALL SELECT "GB_Model_0_3"."KEY" AS "KEY", "GB_Model_0_3"."Score_0" AS "Score_0", "GB_Model_0_3"."Score_1" AS "Score_1", "GB_Model_0_3"."Score_2" AS "Score_2", "GB_Model_0_3"."Score_3" AS "Score_3", "GB_Model_0_3"."Score_4" AS "Score_4", "GB_Model_0_3"."Score_5" AS "Score_5", "GB_Model_0_3"."Score_6" AS "Score_6", "GB_Model_0_3"."Score_7" AS "Score_7", "GB_Model_0_3"."Score_8" AS "Score_8", "GB_Model_0_3"."Score_9" AS "Score_9" 
-FROM "GB_Model_0_3" UNION ALL SELECT "GB_Model_0_4"."KEY" AS "KEY", "GB_Model_0_4"."Score_0" AS "Score_0", "GB_Model_0_4"."Score_1" AS "Score_1", "GB_Model_0_4"."Score_2" AS "Score_2", "GB_Model_0_4"."Score_3" AS "Score_3", "GB_Model_0_4"."Score_4" AS "Score_4", "GB_Model_0_4"."Score_5" AS "Score_5", "GB_Model_0_4"."Score_6" AS "Score_6", "GB_Model_0_4"."Score_7" AS "Score_7", "GB_Model_0_4"."Score_8" AS "Score_8", "GB_Model_0_4"."Score_9" AS "Score_9" 
-FROM "GB_Model_0_4" UNION ALL SELECT "GB_Model_0_5"."KEY" AS "KEY", "GB_Model_0_5"."Score_0" AS "Score_0", "GB_Model_0_5"."Score_1" AS "Score_1", "GB_Model_0_5"."Score_2" AS "Score_2", "GB_Model_0_5"."Score_3" AS "Score_3", "GB_Model_0_5"."Score_4" AS "Score_4", "GB_Model_0_5"."Score_5" AS "Score_5", "GB_Model_0_5"."Score_6" AS "Score_6", "GB_Model_0_5"."Score_7" AS "Score_7", "GB_Model_0_5"."Score_8" AS "Score_8", "GB_Model_0_5"."Score_9" AS "Score_9" 
+ SELECT "GB_B1"."KEY", "GB_B1"."Score_0", "GB_B1"."Score_1", "GB_B1"."Score_2", "GB_B1"."Score_3", "GB_B1"."Score_4", "GB_B1"."Score_5", "GB_B1"."Score_6", "GB_B1"."Score_7", "GB_B1"."Score_8", "GB_B1"."Score_9" 
+FROM (SELECT "GB_esu_1"."KEY" AS "KEY", "GB_esu_1"."Score_0" AS "Score_0", "GB_esu_1"."Score_1" AS "Score_1", "GB_esu_1"."Score_2" AS "Score_2", "GB_esu_1"."Score_3" AS "Score_3", "GB_esu_1"."Score_4" AS "Score_4", "GB_esu_1"."Score_5" AS "Score_5", "GB_esu_1"."Score_6" AS "Score_6", "GB_esu_1"."Score_7" AS "Score_7", "GB_esu_1"."Score_8" AS "Score_8", "GB_esu_1"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_0_5"."KEY" AS "KEY", "GB_Model_0_5"."Score_0" AS "Score_0", "GB_Model_0_5"."Score_1" AS "Score_1", "GB_Model_0_5"."Score_2" AS "Score_2", "GB_Model_0_5"."Score_3" AS "Score_3", "GB_Model_0_5"."Score_4" AS "Score_4", "GB_Model_0_5"."Score_5" AS "Score_5", "GB_Model_0_5"."Score_6" AS "Score_6", "GB_Model_0_5"."Score_7" AS "Score_7", "GB_Model_0_5"."Score_8" AS "Score_8", "GB_Model_0_5"."Score_9" AS "Score_9" 
 FROM "GB_Model_0_5" UNION ALL SELECT "GB_Model_0_6"."KEY" AS "KEY", "GB_Model_0_6"."Score_0" AS "Score_0", "GB_Model_0_6"."Score_1" AS "Score_1", "GB_Model_0_6"."Score_2" AS "Score_2", "GB_Model_0_6"."Score_3" AS "Score_3", "GB_Model_0_6"."Score_4" AS "Score_4", "GB_Model_0_6"."Score_5" AS "Score_5", "GB_Model_0_6"."Score_6" AS "Score_6", "GB_Model_0_6"."Score_7" AS "Score_7", "GB_Model_0_6"."Score_8" AS "Score_8", "GB_Model_0_6"."Score_9" AS "Score_9" 
 FROM "GB_Model_0_6" UNION ALL SELECT "GB_Model_0_7"."KEY" AS "KEY", "GB_Model_0_7"."Score_0" AS "Score_0", "GB_Model_0_7"."Score_1" AS "Score_1", "GB_Model_0_7"."Score_2" AS "Score_2", "GB_Model_0_7"."Score_3" AS "Score_3", "GB_Model_0_7"."Score_4" AS "Score_4", "GB_Model_0_7"."Score_5" AS "Score_5", "GB_Model_0_7"."Score_6" AS "Score_6", "GB_Model_0_7"."Score_7" AS "Score_7", "GB_Model_0_7"."Score_8" AS "Score_8", "GB_Model_0_7"."Score_9" AS "Score_9" 
 FROM "GB_Model_0_7" UNION ALL SELECT "GB_Model_0_8"."KEY" AS "KEY", "GB_Model_0_8"."Score_0" AS "Score_0", "GB_Model_0_8"."Score_1" AS "Score_1", "GB_Model_0_8"."Score_2" AS "Score_2", "GB_Model_0_8"."Score_3" AS "Score_3", "GB_Model_0_8"."Score_4" AS "Score_4", "GB_Model_0_8"."Score_5" AS "Score_5", "GB_Model_0_8"."Score_6" AS "Score_6", "GB_Model_0_8"."Score_7" AS "Score_7", "GB_Model_0_8"."Score_8" AS "Score_8", "GB_Model_0_8"."Score_9" AS "Score_9" 
 FROM "GB_Model_0_8" UNION ALL SELECT "GB_Model_0_9"."KEY" AS "KEY", "GB_Model_0_9"."Score_0" AS "Score_0", "GB_Model_0_9"."Score_1" AS "Score_1", "GB_Model_0_9"."Score_2" AS "Score_2", "GB_Model_0_9"."Score_3" AS "Score_3", "GB_Model_0_9"."Score_4" AS "Score_4", "GB_Model_0_9"."Score_5" AS "Score_5", "GB_Model_0_9"."Score_6" AS "Score_6", "GB_Model_0_9"."Score_7" AS "Score_7", "GB_Model_0_9"."Score_8" AS "Score_8", "GB_Model_0_9"."Score_9" AS "Score_9" 
-FROM "GB_Model_0_9") AS "GB_esu_0") AS "GB_B0") AS "U"
+FROM "GB_Model_0_9") AS "GB_esu_1") AS "GB_B1") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_6K45M3_GB_ part 1. Create 
+-- Code For temporary table TMP_20180602_KOT_GB_B2 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_6K45M3_GB_" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_KOT_GB_B2" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -185,9 +211,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_6K45M3_GB_" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_6K45M3_GB_ part 2. Populate
+-- Code For temporary table TMP_20180602_KOT_GB_B2 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_6K45M3_GB_" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+INSERT INTO "TMP_20180602_KOT_GB_B2" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
 FROM (WITH "DT_node_lookup_10" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_36" <= 0.5) THEN CASE WHEN ("ADS"."Feature_28" <= 2.5) THEN CASE WHEN ("ADS"."Feature_21" <= 0.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_42" <= 15.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_36" <= 3.5) THEN CASE WHEN ("ADS"."Feature_34" <= 12.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_62" <= 2.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
@@ -247,8 +273,39 @@ FROM (SELECT 3 AS nid, -0.6657583093816167 AS "E" FROM rdb$database UNION ALL SE
 FROM "DT_node_lookup_14" LEFT OUTER JOIN "DT_node_data_14" ON "DT_node_lookup_14".node_id_2 = "DT_node_data_14".nid), 
 "GB_Model_1_4" AS 
 (SELECT "DT_Output_14"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", "DT_Output_14"."E" AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", 0.0 AS "Score_9" 
-FROM "DT_Output_14"), 
-"DT_node_lookup_15" AS 
+FROM "DT_Output_14")
+ SELECT "GB_B2"."KEY", "GB_B2"."Score_0", "GB_B2"."Score_1", "GB_B2"."Score_2", "GB_B2"."Score_3", "GB_B2"."Score_4", "GB_B2"."Score_5", "GB_B2"."Score_6", "GB_B2"."Score_7", "GB_B2"."Score_8", "GB_B2"."Score_9" 
+FROM (SELECT "GB_esu_2"."KEY" AS "KEY", "GB_esu_2"."Score_0" AS "Score_0", "GB_esu_2"."Score_1" AS "Score_1", "GB_esu_2"."Score_2" AS "Score_2", "GB_esu_2"."Score_3" AS "Score_3", "GB_esu_2"."Score_4" AS "Score_4", "GB_esu_2"."Score_5" AS "Score_5", "GB_esu_2"."Score_6" AS "Score_6", "GB_esu_2"."Score_7" AS "Score_7", "GB_esu_2"."Score_8" AS "Score_8", "GB_esu_2"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_1_0"."KEY" AS "KEY", "GB_Model_1_0"."Score_0" AS "Score_0", "GB_Model_1_0"."Score_1" AS "Score_1", "GB_Model_1_0"."Score_2" AS "Score_2", "GB_Model_1_0"."Score_3" AS "Score_3", "GB_Model_1_0"."Score_4" AS "Score_4", "GB_Model_1_0"."Score_5" AS "Score_5", "GB_Model_1_0"."Score_6" AS "Score_6", "GB_Model_1_0"."Score_7" AS "Score_7", "GB_Model_1_0"."Score_8" AS "Score_8", "GB_Model_1_0"."Score_9" AS "Score_9" 
+FROM "GB_Model_1_0" UNION ALL SELECT "GB_Model_1_1"."KEY" AS "KEY", "GB_Model_1_1"."Score_0" AS "Score_0", "GB_Model_1_1"."Score_1" AS "Score_1", "GB_Model_1_1"."Score_2" AS "Score_2", "GB_Model_1_1"."Score_3" AS "Score_3", "GB_Model_1_1"."Score_4" AS "Score_4", "GB_Model_1_1"."Score_5" AS "Score_5", "GB_Model_1_1"."Score_6" AS "Score_6", "GB_Model_1_1"."Score_7" AS "Score_7", "GB_Model_1_1"."Score_8" AS "Score_8", "GB_Model_1_1"."Score_9" AS "Score_9" 
+FROM "GB_Model_1_1" UNION ALL SELECT "GB_Model_1_2"."KEY" AS "KEY", "GB_Model_1_2"."Score_0" AS "Score_0", "GB_Model_1_2"."Score_1" AS "Score_1", "GB_Model_1_2"."Score_2" AS "Score_2", "GB_Model_1_2"."Score_3" AS "Score_3", "GB_Model_1_2"."Score_4" AS "Score_4", "GB_Model_1_2"."Score_5" AS "Score_5", "GB_Model_1_2"."Score_6" AS "Score_6", "GB_Model_1_2"."Score_7" AS "Score_7", "GB_Model_1_2"."Score_8" AS "Score_8", "GB_Model_1_2"."Score_9" AS "Score_9" 
+FROM "GB_Model_1_2" UNION ALL SELECT "GB_Model_1_3"."KEY" AS "KEY", "GB_Model_1_3"."Score_0" AS "Score_0", "GB_Model_1_3"."Score_1" AS "Score_1", "GB_Model_1_3"."Score_2" AS "Score_2", "GB_Model_1_3"."Score_3" AS "Score_3", "GB_Model_1_3"."Score_4" AS "Score_4", "GB_Model_1_3"."Score_5" AS "Score_5", "GB_Model_1_3"."Score_6" AS "Score_6", "GB_Model_1_3"."Score_7" AS "Score_7", "GB_Model_1_3"."Score_8" AS "Score_8", "GB_Model_1_3"."Score_9" AS "Score_9" 
+FROM "GB_Model_1_3" UNION ALL SELECT "GB_Model_1_4"."KEY" AS "KEY", "GB_Model_1_4"."Score_0" AS "Score_0", "GB_Model_1_4"."Score_1" AS "Score_1", "GB_Model_1_4"."Score_2" AS "Score_2", "GB_Model_1_4"."Score_3" AS "Score_3", "GB_Model_1_4"."Score_4" AS "Score_4", "GB_Model_1_4"."Score_5" AS "Score_5", "GB_Model_1_4"."Score_6" AS "Score_6", "GB_Model_1_4"."Score_7" AS "Score_7", "GB_Model_1_4"."Score_8" AS "Score_8", "GB_Model_1_4"."Score_9" AS "Score_9" 
+FROM "GB_Model_1_4") AS "GB_esu_2") AS "GB_B2") AS "U"
+
+-- Code For temporary table TMP_20180602_KI4_GB_B3 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_KI4_GB_B3" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Score_2" DOUBLE PRECISION, 
+	"Score_3" DOUBLE PRECISION, 
+	"Score_4" DOUBLE PRECISION, 
+	"Score_5" DOUBLE PRECISION, 
+	"Score_6" DOUBLE PRECISION, 
+	"Score_7" DOUBLE PRECISION, 
+	"Score_8" DOUBLE PRECISION, 
+	"Score_9" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_KI4_GB_B3 part 2. Populate
+
+INSERT INTO "TMP_20180602_KI4_GB_B3" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+FROM (WITH "DT_node_lookup_15" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_21" <= 1.5) THEN CASE WHEN ("ADS"."Feature_5" <= 6.5) THEN CASE WHEN ("ADS"."Feature_13" <= 9.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_42" <= 8.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_26" <= 15.5) THEN CASE WHEN ("ADS"."Feature_36" <= 0.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_2" <= 12.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
 "DT_node_data_15" AS 
@@ -308,24 +365,19 @@ FROM "DT_node_lookup_19" LEFT OUTER JOIN "DT_node_data_19" ON "DT_node_lookup_19
 "GB_Model_1_9" AS 
 (SELECT "DT_Output_19"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", 0.0 AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", "DT_Output_19"."E" AS "Score_9" 
 FROM "DT_Output_19")
- SELECT "GB_B1"."KEY", "GB_B1"."Score_0", "GB_B1"."Score_1", "GB_B1"."Score_2", "GB_B1"."Score_3", "GB_B1"."Score_4", "GB_B1"."Score_5", "GB_B1"."Score_6", "GB_B1"."Score_7", "GB_B1"."Score_8", "GB_B1"."Score_9" 
-FROM (SELECT "GB_esu_1"."KEY" AS "KEY", "GB_esu_1"."Score_0" AS "Score_0", "GB_esu_1"."Score_1" AS "Score_1", "GB_esu_1"."Score_2" AS "Score_2", "GB_esu_1"."Score_3" AS "Score_3", "GB_esu_1"."Score_4" AS "Score_4", "GB_esu_1"."Score_5" AS "Score_5", "GB_esu_1"."Score_6" AS "Score_6", "GB_esu_1"."Score_7" AS "Score_7", "GB_esu_1"."Score_8" AS "Score_8", "GB_esu_1"."Score_9" AS "Score_9" 
-FROM (SELECT "GB_Model_1_0"."KEY" AS "KEY", "GB_Model_1_0"."Score_0" AS "Score_0", "GB_Model_1_0"."Score_1" AS "Score_1", "GB_Model_1_0"."Score_2" AS "Score_2", "GB_Model_1_0"."Score_3" AS "Score_3", "GB_Model_1_0"."Score_4" AS "Score_4", "GB_Model_1_0"."Score_5" AS "Score_5", "GB_Model_1_0"."Score_6" AS "Score_6", "GB_Model_1_0"."Score_7" AS "Score_7", "GB_Model_1_0"."Score_8" AS "Score_8", "GB_Model_1_0"."Score_9" AS "Score_9" 
-FROM "GB_Model_1_0" UNION ALL SELECT "GB_Model_1_1"."KEY" AS "KEY", "GB_Model_1_1"."Score_0" AS "Score_0", "GB_Model_1_1"."Score_1" AS "Score_1", "GB_Model_1_1"."Score_2" AS "Score_2", "GB_Model_1_1"."Score_3" AS "Score_3", "GB_Model_1_1"."Score_4" AS "Score_4", "GB_Model_1_1"."Score_5" AS "Score_5", "GB_Model_1_1"."Score_6" AS "Score_6", "GB_Model_1_1"."Score_7" AS "Score_7", "GB_Model_1_1"."Score_8" AS "Score_8", "GB_Model_1_1"."Score_9" AS "Score_9" 
-FROM "GB_Model_1_1" UNION ALL SELECT "GB_Model_1_2"."KEY" AS "KEY", "GB_Model_1_2"."Score_0" AS "Score_0", "GB_Model_1_2"."Score_1" AS "Score_1", "GB_Model_1_2"."Score_2" AS "Score_2", "GB_Model_1_2"."Score_3" AS "Score_3", "GB_Model_1_2"."Score_4" AS "Score_4", "GB_Model_1_2"."Score_5" AS "Score_5", "GB_Model_1_2"."Score_6" AS "Score_6", "GB_Model_1_2"."Score_7" AS "Score_7", "GB_Model_1_2"."Score_8" AS "Score_8", "GB_Model_1_2"."Score_9" AS "Score_9" 
-FROM "GB_Model_1_2" UNION ALL SELECT "GB_Model_1_3"."KEY" AS "KEY", "GB_Model_1_3"."Score_0" AS "Score_0", "GB_Model_1_3"."Score_1" AS "Score_1", "GB_Model_1_3"."Score_2" AS "Score_2", "GB_Model_1_3"."Score_3" AS "Score_3", "GB_Model_1_3"."Score_4" AS "Score_4", "GB_Model_1_3"."Score_5" AS "Score_5", "GB_Model_1_3"."Score_6" AS "Score_6", "GB_Model_1_3"."Score_7" AS "Score_7", "GB_Model_1_3"."Score_8" AS "Score_8", "GB_Model_1_3"."Score_9" AS "Score_9" 
-FROM "GB_Model_1_3" UNION ALL SELECT "GB_Model_1_4"."KEY" AS "KEY", "GB_Model_1_4"."Score_0" AS "Score_0", "GB_Model_1_4"."Score_1" AS "Score_1", "GB_Model_1_4"."Score_2" AS "Score_2", "GB_Model_1_4"."Score_3" AS "Score_3", "GB_Model_1_4"."Score_4" AS "Score_4", "GB_Model_1_4"."Score_5" AS "Score_5", "GB_Model_1_4"."Score_6" AS "Score_6", "GB_Model_1_4"."Score_7" AS "Score_7", "GB_Model_1_4"."Score_8" AS "Score_8", "GB_Model_1_4"."Score_9" AS "Score_9" 
-FROM "GB_Model_1_4" UNION ALL SELECT "GB_Model_1_5"."KEY" AS "KEY", "GB_Model_1_5"."Score_0" AS "Score_0", "GB_Model_1_5"."Score_1" AS "Score_1", "GB_Model_1_5"."Score_2" AS "Score_2", "GB_Model_1_5"."Score_3" AS "Score_3", "GB_Model_1_5"."Score_4" AS "Score_4", "GB_Model_1_5"."Score_5" AS "Score_5", "GB_Model_1_5"."Score_6" AS "Score_6", "GB_Model_1_5"."Score_7" AS "Score_7", "GB_Model_1_5"."Score_8" AS "Score_8", "GB_Model_1_5"."Score_9" AS "Score_9" 
+ SELECT "GB_B3"."KEY", "GB_B3"."Score_0", "GB_B3"."Score_1", "GB_B3"."Score_2", "GB_B3"."Score_3", "GB_B3"."Score_4", "GB_B3"."Score_5", "GB_B3"."Score_6", "GB_B3"."Score_7", "GB_B3"."Score_8", "GB_B3"."Score_9" 
+FROM (SELECT "GB_esu_3"."KEY" AS "KEY", "GB_esu_3"."Score_0" AS "Score_0", "GB_esu_3"."Score_1" AS "Score_1", "GB_esu_3"."Score_2" AS "Score_2", "GB_esu_3"."Score_3" AS "Score_3", "GB_esu_3"."Score_4" AS "Score_4", "GB_esu_3"."Score_5" AS "Score_5", "GB_esu_3"."Score_6" AS "Score_6", "GB_esu_3"."Score_7" AS "Score_7", "GB_esu_3"."Score_8" AS "Score_8", "GB_esu_3"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_1_5"."KEY" AS "KEY", "GB_Model_1_5"."Score_0" AS "Score_0", "GB_Model_1_5"."Score_1" AS "Score_1", "GB_Model_1_5"."Score_2" AS "Score_2", "GB_Model_1_5"."Score_3" AS "Score_3", "GB_Model_1_5"."Score_4" AS "Score_4", "GB_Model_1_5"."Score_5" AS "Score_5", "GB_Model_1_5"."Score_6" AS "Score_6", "GB_Model_1_5"."Score_7" AS "Score_7", "GB_Model_1_5"."Score_8" AS "Score_8", "GB_Model_1_5"."Score_9" AS "Score_9" 
 FROM "GB_Model_1_5" UNION ALL SELECT "GB_Model_1_6"."KEY" AS "KEY", "GB_Model_1_6"."Score_0" AS "Score_0", "GB_Model_1_6"."Score_1" AS "Score_1", "GB_Model_1_6"."Score_2" AS "Score_2", "GB_Model_1_6"."Score_3" AS "Score_3", "GB_Model_1_6"."Score_4" AS "Score_4", "GB_Model_1_6"."Score_5" AS "Score_5", "GB_Model_1_6"."Score_6" AS "Score_6", "GB_Model_1_6"."Score_7" AS "Score_7", "GB_Model_1_6"."Score_8" AS "Score_8", "GB_Model_1_6"."Score_9" AS "Score_9" 
 FROM "GB_Model_1_6" UNION ALL SELECT "GB_Model_1_7"."KEY" AS "KEY", "GB_Model_1_7"."Score_0" AS "Score_0", "GB_Model_1_7"."Score_1" AS "Score_1", "GB_Model_1_7"."Score_2" AS "Score_2", "GB_Model_1_7"."Score_3" AS "Score_3", "GB_Model_1_7"."Score_4" AS "Score_4", "GB_Model_1_7"."Score_5" AS "Score_5", "GB_Model_1_7"."Score_6" AS "Score_6", "GB_Model_1_7"."Score_7" AS "Score_7", "GB_Model_1_7"."Score_8" AS "Score_8", "GB_Model_1_7"."Score_9" AS "Score_9" 
 FROM "GB_Model_1_7" UNION ALL SELECT "GB_Model_1_8"."KEY" AS "KEY", "GB_Model_1_8"."Score_0" AS "Score_0", "GB_Model_1_8"."Score_1" AS "Score_1", "GB_Model_1_8"."Score_2" AS "Score_2", "GB_Model_1_8"."Score_3" AS "Score_3", "GB_Model_1_8"."Score_4" AS "Score_4", "GB_Model_1_8"."Score_5" AS "Score_5", "GB_Model_1_8"."Score_6" AS "Score_6", "GB_Model_1_8"."Score_7" AS "Score_7", "GB_Model_1_8"."Score_8" AS "Score_8", "GB_Model_1_8"."Score_9" AS "Score_9" 
 FROM "GB_Model_1_8" UNION ALL SELECT "GB_Model_1_9"."KEY" AS "KEY", "GB_Model_1_9"."Score_0" AS "Score_0", "GB_Model_1_9"."Score_1" AS "Score_1", "GB_Model_1_9"."Score_2" AS "Score_2", "GB_Model_1_9"."Score_3" AS "Score_3", "GB_Model_1_9"."Score_4" AS "Score_4", "GB_Model_1_9"."Score_5" AS "Score_5", "GB_Model_1_9"."Score_6" AS "Score_6", "GB_Model_1_9"."Score_7" AS "Score_7", "GB_Model_1_9"."Score_8" AS "Score_8", "GB_Model_1_9"."Score_9" AS "Score_9" 
-FROM "GB_Model_1_9") AS "GB_esu_1") AS "GB_B1") AS "U"
+FROM "GB_Model_1_9") AS "GB_esu_3") AS "GB_B3") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_OJQ3N8_GB_ part 1. Create 
+-- Code For temporary table TMP_20180602_XFS_GB_B4 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_OJQ3N8_GB_" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_XFS_GB_B4" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -341,9 +393,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_OJQ3N8_GB_" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_OJQ3N8_GB_ part 2. Populate
+-- Code For temporary table TMP_20180602_XFS_GB_B4 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_OJQ3N8_GB_" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+INSERT INTO "TMP_20180602_XFS_GB_B4" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
 FROM (WITH "DT_node_lookup_20" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_36" <= 0.5) THEN CASE WHEN ("ADS"."Feature_28" <= 4.5) THEN CASE WHEN ("ADS"."Feature_21" <= 0.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_29" <= 13.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_36" <= 3.5) THEN CASE WHEN ("ADS"."Feature_27" <= 7.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_33" <= 8.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
@@ -403,8 +455,39 @@ FROM (SELECT 3 AS nid, -0.5768368208076504 AS "E" FROM rdb$database UNION ALL SE
 FROM "DT_node_lookup_24" LEFT OUTER JOIN "DT_node_data_24" ON "DT_node_lookup_24".node_id_2 = "DT_node_data_24".nid), 
 "GB_Model_2_4" AS 
 (SELECT "DT_Output_24"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", "DT_Output_24"."E" AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", 0.0 AS "Score_9" 
-FROM "DT_Output_24"), 
-"DT_node_lookup_25" AS 
+FROM "DT_Output_24")
+ SELECT "GB_B4"."KEY", "GB_B4"."Score_0", "GB_B4"."Score_1", "GB_B4"."Score_2", "GB_B4"."Score_3", "GB_B4"."Score_4", "GB_B4"."Score_5", "GB_B4"."Score_6", "GB_B4"."Score_7", "GB_B4"."Score_8", "GB_B4"."Score_9" 
+FROM (SELECT "GB_esu_4"."KEY" AS "KEY", "GB_esu_4"."Score_0" AS "Score_0", "GB_esu_4"."Score_1" AS "Score_1", "GB_esu_4"."Score_2" AS "Score_2", "GB_esu_4"."Score_3" AS "Score_3", "GB_esu_4"."Score_4" AS "Score_4", "GB_esu_4"."Score_5" AS "Score_5", "GB_esu_4"."Score_6" AS "Score_6", "GB_esu_4"."Score_7" AS "Score_7", "GB_esu_4"."Score_8" AS "Score_8", "GB_esu_4"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_2_0"."KEY" AS "KEY", "GB_Model_2_0"."Score_0" AS "Score_0", "GB_Model_2_0"."Score_1" AS "Score_1", "GB_Model_2_0"."Score_2" AS "Score_2", "GB_Model_2_0"."Score_3" AS "Score_3", "GB_Model_2_0"."Score_4" AS "Score_4", "GB_Model_2_0"."Score_5" AS "Score_5", "GB_Model_2_0"."Score_6" AS "Score_6", "GB_Model_2_0"."Score_7" AS "Score_7", "GB_Model_2_0"."Score_8" AS "Score_8", "GB_Model_2_0"."Score_9" AS "Score_9" 
+FROM "GB_Model_2_0" UNION ALL SELECT "GB_Model_2_1"."KEY" AS "KEY", "GB_Model_2_1"."Score_0" AS "Score_0", "GB_Model_2_1"."Score_1" AS "Score_1", "GB_Model_2_1"."Score_2" AS "Score_2", "GB_Model_2_1"."Score_3" AS "Score_3", "GB_Model_2_1"."Score_4" AS "Score_4", "GB_Model_2_1"."Score_5" AS "Score_5", "GB_Model_2_1"."Score_6" AS "Score_6", "GB_Model_2_1"."Score_7" AS "Score_7", "GB_Model_2_1"."Score_8" AS "Score_8", "GB_Model_2_1"."Score_9" AS "Score_9" 
+FROM "GB_Model_2_1" UNION ALL SELECT "GB_Model_2_2"."KEY" AS "KEY", "GB_Model_2_2"."Score_0" AS "Score_0", "GB_Model_2_2"."Score_1" AS "Score_1", "GB_Model_2_2"."Score_2" AS "Score_2", "GB_Model_2_2"."Score_3" AS "Score_3", "GB_Model_2_2"."Score_4" AS "Score_4", "GB_Model_2_2"."Score_5" AS "Score_5", "GB_Model_2_2"."Score_6" AS "Score_6", "GB_Model_2_2"."Score_7" AS "Score_7", "GB_Model_2_2"."Score_8" AS "Score_8", "GB_Model_2_2"."Score_9" AS "Score_9" 
+FROM "GB_Model_2_2" UNION ALL SELECT "GB_Model_2_3"."KEY" AS "KEY", "GB_Model_2_3"."Score_0" AS "Score_0", "GB_Model_2_3"."Score_1" AS "Score_1", "GB_Model_2_3"."Score_2" AS "Score_2", "GB_Model_2_3"."Score_3" AS "Score_3", "GB_Model_2_3"."Score_4" AS "Score_4", "GB_Model_2_3"."Score_5" AS "Score_5", "GB_Model_2_3"."Score_6" AS "Score_6", "GB_Model_2_3"."Score_7" AS "Score_7", "GB_Model_2_3"."Score_8" AS "Score_8", "GB_Model_2_3"."Score_9" AS "Score_9" 
+FROM "GB_Model_2_3" UNION ALL SELECT "GB_Model_2_4"."KEY" AS "KEY", "GB_Model_2_4"."Score_0" AS "Score_0", "GB_Model_2_4"."Score_1" AS "Score_1", "GB_Model_2_4"."Score_2" AS "Score_2", "GB_Model_2_4"."Score_3" AS "Score_3", "GB_Model_2_4"."Score_4" AS "Score_4", "GB_Model_2_4"."Score_5" AS "Score_5", "GB_Model_2_4"."Score_6" AS "Score_6", "GB_Model_2_4"."Score_7" AS "Score_7", "GB_Model_2_4"."Score_8" AS "Score_8", "GB_Model_2_4"."Score_9" AS "Score_9" 
+FROM "GB_Model_2_4") AS "GB_esu_4") AS "GB_B4") AS "U"
+
+-- Code For temporary table TMP_20180602_8BF_GB_B5 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_8BF_GB_B5" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Score_2" DOUBLE PRECISION, 
+	"Score_3" DOUBLE PRECISION, 
+	"Score_4" DOUBLE PRECISION, 
+	"Score_5" DOUBLE PRECISION, 
+	"Score_6" DOUBLE PRECISION, 
+	"Score_7" DOUBLE PRECISION, 
+	"Score_8" DOUBLE PRECISION, 
+	"Score_9" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_8BF_GB_B5 part 2. Populate
+
+INSERT INTO "TMP_20180602_8BF_GB_B5" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+FROM (WITH "DT_node_lookup_25" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_21" <= 1.5) THEN CASE WHEN ("ADS"."Feature_5" <= 6.5) THEN CASE WHEN ("ADS"."Feature_13" <= 6.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_42" <= 8.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_26" <= 15.5) THEN CASE WHEN ("ADS"."Feature_33" <= 2.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_58" <= 7.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
 "DT_node_data_25" AS 
@@ -464,24 +547,19 @@ FROM "DT_node_lookup_29" LEFT OUTER JOIN "DT_node_data_29" ON "DT_node_lookup_29
 "GB_Model_2_9" AS 
 (SELECT "DT_Output_29"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", 0.0 AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", "DT_Output_29"."E" AS "Score_9" 
 FROM "DT_Output_29")
- SELECT "GB_B2"."KEY", "GB_B2"."Score_0", "GB_B2"."Score_1", "GB_B2"."Score_2", "GB_B2"."Score_3", "GB_B2"."Score_4", "GB_B2"."Score_5", "GB_B2"."Score_6", "GB_B2"."Score_7", "GB_B2"."Score_8", "GB_B2"."Score_9" 
-FROM (SELECT "GB_esu_2"."KEY" AS "KEY", "GB_esu_2"."Score_0" AS "Score_0", "GB_esu_2"."Score_1" AS "Score_1", "GB_esu_2"."Score_2" AS "Score_2", "GB_esu_2"."Score_3" AS "Score_3", "GB_esu_2"."Score_4" AS "Score_4", "GB_esu_2"."Score_5" AS "Score_5", "GB_esu_2"."Score_6" AS "Score_6", "GB_esu_2"."Score_7" AS "Score_7", "GB_esu_2"."Score_8" AS "Score_8", "GB_esu_2"."Score_9" AS "Score_9" 
-FROM (SELECT "GB_Model_2_0"."KEY" AS "KEY", "GB_Model_2_0"."Score_0" AS "Score_0", "GB_Model_2_0"."Score_1" AS "Score_1", "GB_Model_2_0"."Score_2" AS "Score_2", "GB_Model_2_0"."Score_3" AS "Score_3", "GB_Model_2_0"."Score_4" AS "Score_4", "GB_Model_2_0"."Score_5" AS "Score_5", "GB_Model_2_0"."Score_6" AS "Score_6", "GB_Model_2_0"."Score_7" AS "Score_7", "GB_Model_2_0"."Score_8" AS "Score_8", "GB_Model_2_0"."Score_9" AS "Score_9" 
-FROM "GB_Model_2_0" UNION ALL SELECT "GB_Model_2_1"."KEY" AS "KEY", "GB_Model_2_1"."Score_0" AS "Score_0", "GB_Model_2_1"."Score_1" AS "Score_1", "GB_Model_2_1"."Score_2" AS "Score_2", "GB_Model_2_1"."Score_3" AS "Score_3", "GB_Model_2_1"."Score_4" AS "Score_4", "GB_Model_2_1"."Score_5" AS "Score_5", "GB_Model_2_1"."Score_6" AS "Score_6", "GB_Model_2_1"."Score_7" AS "Score_7", "GB_Model_2_1"."Score_8" AS "Score_8", "GB_Model_2_1"."Score_9" AS "Score_9" 
-FROM "GB_Model_2_1" UNION ALL SELECT "GB_Model_2_2"."KEY" AS "KEY", "GB_Model_2_2"."Score_0" AS "Score_0", "GB_Model_2_2"."Score_1" AS "Score_1", "GB_Model_2_2"."Score_2" AS "Score_2", "GB_Model_2_2"."Score_3" AS "Score_3", "GB_Model_2_2"."Score_4" AS "Score_4", "GB_Model_2_2"."Score_5" AS "Score_5", "GB_Model_2_2"."Score_6" AS "Score_6", "GB_Model_2_2"."Score_7" AS "Score_7", "GB_Model_2_2"."Score_8" AS "Score_8", "GB_Model_2_2"."Score_9" AS "Score_9" 
-FROM "GB_Model_2_2" UNION ALL SELECT "GB_Model_2_3"."KEY" AS "KEY", "GB_Model_2_3"."Score_0" AS "Score_0", "GB_Model_2_3"."Score_1" AS "Score_1", "GB_Model_2_3"."Score_2" AS "Score_2", "GB_Model_2_3"."Score_3" AS "Score_3", "GB_Model_2_3"."Score_4" AS "Score_4", "GB_Model_2_3"."Score_5" AS "Score_5", "GB_Model_2_3"."Score_6" AS "Score_6", "GB_Model_2_3"."Score_7" AS "Score_7", "GB_Model_2_3"."Score_8" AS "Score_8", "GB_Model_2_3"."Score_9" AS "Score_9" 
-FROM "GB_Model_2_3" UNION ALL SELECT "GB_Model_2_4"."KEY" AS "KEY", "GB_Model_2_4"."Score_0" AS "Score_0", "GB_Model_2_4"."Score_1" AS "Score_1", "GB_Model_2_4"."Score_2" AS "Score_2", "GB_Model_2_4"."Score_3" AS "Score_3", "GB_Model_2_4"."Score_4" AS "Score_4", "GB_Model_2_4"."Score_5" AS "Score_5", "GB_Model_2_4"."Score_6" AS "Score_6", "GB_Model_2_4"."Score_7" AS "Score_7", "GB_Model_2_4"."Score_8" AS "Score_8", "GB_Model_2_4"."Score_9" AS "Score_9" 
-FROM "GB_Model_2_4" UNION ALL SELECT "GB_Model_2_5"."KEY" AS "KEY", "GB_Model_2_5"."Score_0" AS "Score_0", "GB_Model_2_5"."Score_1" AS "Score_1", "GB_Model_2_5"."Score_2" AS "Score_2", "GB_Model_2_5"."Score_3" AS "Score_3", "GB_Model_2_5"."Score_4" AS "Score_4", "GB_Model_2_5"."Score_5" AS "Score_5", "GB_Model_2_5"."Score_6" AS "Score_6", "GB_Model_2_5"."Score_7" AS "Score_7", "GB_Model_2_5"."Score_8" AS "Score_8", "GB_Model_2_5"."Score_9" AS "Score_9" 
+ SELECT "GB_B5"."KEY", "GB_B5"."Score_0", "GB_B5"."Score_1", "GB_B5"."Score_2", "GB_B5"."Score_3", "GB_B5"."Score_4", "GB_B5"."Score_5", "GB_B5"."Score_6", "GB_B5"."Score_7", "GB_B5"."Score_8", "GB_B5"."Score_9" 
+FROM (SELECT "GB_esu_5"."KEY" AS "KEY", "GB_esu_5"."Score_0" AS "Score_0", "GB_esu_5"."Score_1" AS "Score_1", "GB_esu_5"."Score_2" AS "Score_2", "GB_esu_5"."Score_3" AS "Score_3", "GB_esu_5"."Score_4" AS "Score_4", "GB_esu_5"."Score_5" AS "Score_5", "GB_esu_5"."Score_6" AS "Score_6", "GB_esu_5"."Score_7" AS "Score_7", "GB_esu_5"."Score_8" AS "Score_8", "GB_esu_5"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_2_5"."KEY" AS "KEY", "GB_Model_2_5"."Score_0" AS "Score_0", "GB_Model_2_5"."Score_1" AS "Score_1", "GB_Model_2_5"."Score_2" AS "Score_2", "GB_Model_2_5"."Score_3" AS "Score_3", "GB_Model_2_5"."Score_4" AS "Score_4", "GB_Model_2_5"."Score_5" AS "Score_5", "GB_Model_2_5"."Score_6" AS "Score_6", "GB_Model_2_5"."Score_7" AS "Score_7", "GB_Model_2_5"."Score_8" AS "Score_8", "GB_Model_2_5"."Score_9" AS "Score_9" 
 FROM "GB_Model_2_5" UNION ALL SELECT "GB_Model_2_6"."KEY" AS "KEY", "GB_Model_2_6"."Score_0" AS "Score_0", "GB_Model_2_6"."Score_1" AS "Score_1", "GB_Model_2_6"."Score_2" AS "Score_2", "GB_Model_2_6"."Score_3" AS "Score_3", "GB_Model_2_6"."Score_4" AS "Score_4", "GB_Model_2_6"."Score_5" AS "Score_5", "GB_Model_2_6"."Score_6" AS "Score_6", "GB_Model_2_6"."Score_7" AS "Score_7", "GB_Model_2_6"."Score_8" AS "Score_8", "GB_Model_2_6"."Score_9" AS "Score_9" 
 FROM "GB_Model_2_6" UNION ALL SELECT "GB_Model_2_7"."KEY" AS "KEY", "GB_Model_2_7"."Score_0" AS "Score_0", "GB_Model_2_7"."Score_1" AS "Score_1", "GB_Model_2_7"."Score_2" AS "Score_2", "GB_Model_2_7"."Score_3" AS "Score_3", "GB_Model_2_7"."Score_4" AS "Score_4", "GB_Model_2_7"."Score_5" AS "Score_5", "GB_Model_2_7"."Score_6" AS "Score_6", "GB_Model_2_7"."Score_7" AS "Score_7", "GB_Model_2_7"."Score_8" AS "Score_8", "GB_Model_2_7"."Score_9" AS "Score_9" 
 FROM "GB_Model_2_7" UNION ALL SELECT "GB_Model_2_8"."KEY" AS "KEY", "GB_Model_2_8"."Score_0" AS "Score_0", "GB_Model_2_8"."Score_1" AS "Score_1", "GB_Model_2_8"."Score_2" AS "Score_2", "GB_Model_2_8"."Score_3" AS "Score_3", "GB_Model_2_8"."Score_4" AS "Score_4", "GB_Model_2_8"."Score_5" AS "Score_5", "GB_Model_2_8"."Score_6" AS "Score_6", "GB_Model_2_8"."Score_7" AS "Score_7", "GB_Model_2_8"."Score_8" AS "Score_8", "GB_Model_2_8"."Score_9" AS "Score_9" 
 FROM "GB_Model_2_8" UNION ALL SELECT "GB_Model_2_9"."KEY" AS "KEY", "GB_Model_2_9"."Score_0" AS "Score_0", "GB_Model_2_9"."Score_1" AS "Score_1", "GB_Model_2_9"."Score_2" AS "Score_2", "GB_Model_2_9"."Score_3" AS "Score_3", "GB_Model_2_9"."Score_4" AS "Score_4", "GB_Model_2_9"."Score_5" AS "Score_5", "GB_Model_2_9"."Score_6" AS "Score_6", "GB_Model_2_9"."Score_7" AS "Score_7", "GB_Model_2_9"."Score_8" AS "Score_8", "GB_Model_2_9"."Score_9" AS "Score_9" 
-FROM "GB_Model_2_9") AS "GB_esu_2") AS "GB_B2") AS "U"
+FROM "GB_Model_2_9") AS "GB_esu_5") AS "GB_B5") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_QJSGW8_GB_ part 1. Create 
+-- Code For temporary table TMP_20180602_CD0_GB_B6 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_QJSGW8_GB_" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_CD0_GB_B6" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -497,9 +575,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_QJSGW8_GB_" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_QJSGW8_GB_ part 2. Populate
+-- Code For temporary table TMP_20180602_CD0_GB_B6 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_QJSGW8_GB_" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+INSERT INTO "TMP_20180602_CD0_GB_B6" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
 FROM (WITH "DT_node_lookup_30" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_36" <= 0.5) THEN CASE WHEN ("ADS"."Feature_28" <= 2.5) THEN CASE WHEN ("ADS"."Feature_21" <= 3.0) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_42" <= 13.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_28" <= 0.5) THEN CASE WHEN ("ADS"."Feature_21" <= 15.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_21" <= 4.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
@@ -559,8 +637,39 @@ FROM (SELECT 3 AS nid, -0.5430817711131302 AS "E" FROM rdb$database UNION ALL SE
 FROM "DT_node_lookup_34" LEFT OUTER JOIN "DT_node_data_34" ON "DT_node_lookup_34".node_id_2 = "DT_node_data_34".nid), 
 "GB_Model_3_4" AS 
 (SELECT "DT_Output_34"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", "DT_Output_34"."E" AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", 0.0 AS "Score_9" 
-FROM "DT_Output_34"), 
-"DT_node_lookup_35" AS 
+FROM "DT_Output_34")
+ SELECT "GB_B6"."KEY", "GB_B6"."Score_0", "GB_B6"."Score_1", "GB_B6"."Score_2", "GB_B6"."Score_3", "GB_B6"."Score_4", "GB_B6"."Score_5", "GB_B6"."Score_6", "GB_B6"."Score_7", "GB_B6"."Score_8", "GB_B6"."Score_9" 
+FROM (SELECT "GB_esu_6"."KEY" AS "KEY", "GB_esu_6"."Score_0" AS "Score_0", "GB_esu_6"."Score_1" AS "Score_1", "GB_esu_6"."Score_2" AS "Score_2", "GB_esu_6"."Score_3" AS "Score_3", "GB_esu_6"."Score_4" AS "Score_4", "GB_esu_6"."Score_5" AS "Score_5", "GB_esu_6"."Score_6" AS "Score_6", "GB_esu_6"."Score_7" AS "Score_7", "GB_esu_6"."Score_8" AS "Score_8", "GB_esu_6"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_3_0"."KEY" AS "KEY", "GB_Model_3_0"."Score_0" AS "Score_0", "GB_Model_3_0"."Score_1" AS "Score_1", "GB_Model_3_0"."Score_2" AS "Score_2", "GB_Model_3_0"."Score_3" AS "Score_3", "GB_Model_3_0"."Score_4" AS "Score_4", "GB_Model_3_0"."Score_5" AS "Score_5", "GB_Model_3_0"."Score_6" AS "Score_6", "GB_Model_3_0"."Score_7" AS "Score_7", "GB_Model_3_0"."Score_8" AS "Score_8", "GB_Model_3_0"."Score_9" AS "Score_9" 
+FROM "GB_Model_3_0" UNION ALL SELECT "GB_Model_3_1"."KEY" AS "KEY", "GB_Model_3_1"."Score_0" AS "Score_0", "GB_Model_3_1"."Score_1" AS "Score_1", "GB_Model_3_1"."Score_2" AS "Score_2", "GB_Model_3_1"."Score_3" AS "Score_3", "GB_Model_3_1"."Score_4" AS "Score_4", "GB_Model_3_1"."Score_5" AS "Score_5", "GB_Model_3_1"."Score_6" AS "Score_6", "GB_Model_3_1"."Score_7" AS "Score_7", "GB_Model_3_1"."Score_8" AS "Score_8", "GB_Model_3_1"."Score_9" AS "Score_9" 
+FROM "GB_Model_3_1" UNION ALL SELECT "GB_Model_3_2"."KEY" AS "KEY", "GB_Model_3_2"."Score_0" AS "Score_0", "GB_Model_3_2"."Score_1" AS "Score_1", "GB_Model_3_2"."Score_2" AS "Score_2", "GB_Model_3_2"."Score_3" AS "Score_3", "GB_Model_3_2"."Score_4" AS "Score_4", "GB_Model_3_2"."Score_5" AS "Score_5", "GB_Model_3_2"."Score_6" AS "Score_6", "GB_Model_3_2"."Score_7" AS "Score_7", "GB_Model_3_2"."Score_8" AS "Score_8", "GB_Model_3_2"."Score_9" AS "Score_9" 
+FROM "GB_Model_3_2" UNION ALL SELECT "GB_Model_3_3"."KEY" AS "KEY", "GB_Model_3_3"."Score_0" AS "Score_0", "GB_Model_3_3"."Score_1" AS "Score_1", "GB_Model_3_3"."Score_2" AS "Score_2", "GB_Model_3_3"."Score_3" AS "Score_3", "GB_Model_3_3"."Score_4" AS "Score_4", "GB_Model_3_3"."Score_5" AS "Score_5", "GB_Model_3_3"."Score_6" AS "Score_6", "GB_Model_3_3"."Score_7" AS "Score_7", "GB_Model_3_3"."Score_8" AS "Score_8", "GB_Model_3_3"."Score_9" AS "Score_9" 
+FROM "GB_Model_3_3" UNION ALL SELECT "GB_Model_3_4"."KEY" AS "KEY", "GB_Model_3_4"."Score_0" AS "Score_0", "GB_Model_3_4"."Score_1" AS "Score_1", "GB_Model_3_4"."Score_2" AS "Score_2", "GB_Model_3_4"."Score_3" AS "Score_3", "GB_Model_3_4"."Score_4" AS "Score_4", "GB_Model_3_4"."Score_5" AS "Score_5", "GB_Model_3_4"."Score_6" AS "Score_6", "GB_Model_3_4"."Score_7" AS "Score_7", "GB_Model_3_4"."Score_8" AS "Score_8", "GB_Model_3_4"."Score_9" AS "Score_9" 
+FROM "GB_Model_3_4") AS "GB_esu_6") AS "GB_B6") AS "U"
+
+-- Code For temporary table TMP_20180602_MYT_GB_B7 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_MYT_GB_B7" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Score_2" DOUBLE PRECISION, 
+	"Score_3" DOUBLE PRECISION, 
+	"Score_4" DOUBLE PRECISION, 
+	"Score_5" DOUBLE PRECISION, 
+	"Score_6" DOUBLE PRECISION, 
+	"Score_7" DOUBLE PRECISION, 
+	"Score_8" DOUBLE PRECISION, 
+	"Score_9" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_MYT_GB_B7 part 2. Populate
+
+INSERT INTO "TMP_20180602_MYT_GB_B7" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+FROM (WITH "DT_node_lookup_35" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_21" <= 0.5) THEN CASE WHEN ("ADS"."Feature_5" <= 6.5) THEN CASE WHEN ("ADS"."Feature_13" <= 9.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_42" <= 13.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_21" <= 2.5) THEN CASE WHEN ("ADS"."Feature_6" <= 2.0) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_1" <= 5.0) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
 "DT_node_data_35" AS 
@@ -620,24 +729,19 @@ FROM "DT_node_lookup_39" LEFT OUTER JOIN "DT_node_data_39" ON "DT_node_lookup_39
 "GB_Model_3_9" AS 
 (SELECT "DT_Output_39"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", 0.0 AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", "DT_Output_39"."E" AS "Score_9" 
 FROM "DT_Output_39")
- SELECT "GB_B3"."KEY", "GB_B3"."Score_0", "GB_B3"."Score_1", "GB_B3"."Score_2", "GB_B3"."Score_3", "GB_B3"."Score_4", "GB_B3"."Score_5", "GB_B3"."Score_6", "GB_B3"."Score_7", "GB_B3"."Score_8", "GB_B3"."Score_9" 
-FROM (SELECT "GB_esu_3"."KEY" AS "KEY", "GB_esu_3"."Score_0" AS "Score_0", "GB_esu_3"."Score_1" AS "Score_1", "GB_esu_3"."Score_2" AS "Score_2", "GB_esu_3"."Score_3" AS "Score_3", "GB_esu_3"."Score_4" AS "Score_4", "GB_esu_3"."Score_5" AS "Score_5", "GB_esu_3"."Score_6" AS "Score_6", "GB_esu_3"."Score_7" AS "Score_7", "GB_esu_3"."Score_8" AS "Score_8", "GB_esu_3"."Score_9" AS "Score_9" 
-FROM (SELECT "GB_Model_3_0"."KEY" AS "KEY", "GB_Model_3_0"."Score_0" AS "Score_0", "GB_Model_3_0"."Score_1" AS "Score_1", "GB_Model_3_0"."Score_2" AS "Score_2", "GB_Model_3_0"."Score_3" AS "Score_3", "GB_Model_3_0"."Score_4" AS "Score_4", "GB_Model_3_0"."Score_5" AS "Score_5", "GB_Model_3_0"."Score_6" AS "Score_6", "GB_Model_3_0"."Score_7" AS "Score_7", "GB_Model_3_0"."Score_8" AS "Score_8", "GB_Model_3_0"."Score_9" AS "Score_9" 
-FROM "GB_Model_3_0" UNION ALL SELECT "GB_Model_3_1"."KEY" AS "KEY", "GB_Model_3_1"."Score_0" AS "Score_0", "GB_Model_3_1"."Score_1" AS "Score_1", "GB_Model_3_1"."Score_2" AS "Score_2", "GB_Model_3_1"."Score_3" AS "Score_3", "GB_Model_3_1"."Score_4" AS "Score_4", "GB_Model_3_1"."Score_5" AS "Score_5", "GB_Model_3_1"."Score_6" AS "Score_6", "GB_Model_3_1"."Score_7" AS "Score_7", "GB_Model_3_1"."Score_8" AS "Score_8", "GB_Model_3_1"."Score_9" AS "Score_9" 
-FROM "GB_Model_3_1" UNION ALL SELECT "GB_Model_3_2"."KEY" AS "KEY", "GB_Model_3_2"."Score_0" AS "Score_0", "GB_Model_3_2"."Score_1" AS "Score_1", "GB_Model_3_2"."Score_2" AS "Score_2", "GB_Model_3_2"."Score_3" AS "Score_3", "GB_Model_3_2"."Score_4" AS "Score_4", "GB_Model_3_2"."Score_5" AS "Score_5", "GB_Model_3_2"."Score_6" AS "Score_6", "GB_Model_3_2"."Score_7" AS "Score_7", "GB_Model_3_2"."Score_8" AS "Score_8", "GB_Model_3_2"."Score_9" AS "Score_9" 
-FROM "GB_Model_3_2" UNION ALL SELECT "GB_Model_3_3"."KEY" AS "KEY", "GB_Model_3_3"."Score_0" AS "Score_0", "GB_Model_3_3"."Score_1" AS "Score_1", "GB_Model_3_3"."Score_2" AS "Score_2", "GB_Model_3_3"."Score_3" AS "Score_3", "GB_Model_3_3"."Score_4" AS "Score_4", "GB_Model_3_3"."Score_5" AS "Score_5", "GB_Model_3_3"."Score_6" AS "Score_6", "GB_Model_3_3"."Score_7" AS "Score_7", "GB_Model_3_3"."Score_8" AS "Score_8", "GB_Model_3_3"."Score_9" AS "Score_9" 
-FROM "GB_Model_3_3" UNION ALL SELECT "GB_Model_3_4"."KEY" AS "KEY", "GB_Model_3_4"."Score_0" AS "Score_0", "GB_Model_3_4"."Score_1" AS "Score_1", "GB_Model_3_4"."Score_2" AS "Score_2", "GB_Model_3_4"."Score_3" AS "Score_3", "GB_Model_3_4"."Score_4" AS "Score_4", "GB_Model_3_4"."Score_5" AS "Score_5", "GB_Model_3_4"."Score_6" AS "Score_6", "GB_Model_3_4"."Score_7" AS "Score_7", "GB_Model_3_4"."Score_8" AS "Score_8", "GB_Model_3_4"."Score_9" AS "Score_9" 
-FROM "GB_Model_3_4" UNION ALL SELECT "GB_Model_3_5"."KEY" AS "KEY", "GB_Model_3_5"."Score_0" AS "Score_0", "GB_Model_3_5"."Score_1" AS "Score_1", "GB_Model_3_5"."Score_2" AS "Score_2", "GB_Model_3_5"."Score_3" AS "Score_3", "GB_Model_3_5"."Score_4" AS "Score_4", "GB_Model_3_5"."Score_5" AS "Score_5", "GB_Model_3_5"."Score_6" AS "Score_6", "GB_Model_3_5"."Score_7" AS "Score_7", "GB_Model_3_5"."Score_8" AS "Score_8", "GB_Model_3_5"."Score_9" AS "Score_9" 
+ SELECT "GB_B7"."KEY", "GB_B7"."Score_0", "GB_B7"."Score_1", "GB_B7"."Score_2", "GB_B7"."Score_3", "GB_B7"."Score_4", "GB_B7"."Score_5", "GB_B7"."Score_6", "GB_B7"."Score_7", "GB_B7"."Score_8", "GB_B7"."Score_9" 
+FROM (SELECT "GB_esu_7"."KEY" AS "KEY", "GB_esu_7"."Score_0" AS "Score_0", "GB_esu_7"."Score_1" AS "Score_1", "GB_esu_7"."Score_2" AS "Score_2", "GB_esu_7"."Score_3" AS "Score_3", "GB_esu_7"."Score_4" AS "Score_4", "GB_esu_7"."Score_5" AS "Score_5", "GB_esu_7"."Score_6" AS "Score_6", "GB_esu_7"."Score_7" AS "Score_7", "GB_esu_7"."Score_8" AS "Score_8", "GB_esu_7"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_3_5"."KEY" AS "KEY", "GB_Model_3_5"."Score_0" AS "Score_0", "GB_Model_3_5"."Score_1" AS "Score_1", "GB_Model_3_5"."Score_2" AS "Score_2", "GB_Model_3_5"."Score_3" AS "Score_3", "GB_Model_3_5"."Score_4" AS "Score_4", "GB_Model_3_5"."Score_5" AS "Score_5", "GB_Model_3_5"."Score_6" AS "Score_6", "GB_Model_3_5"."Score_7" AS "Score_7", "GB_Model_3_5"."Score_8" AS "Score_8", "GB_Model_3_5"."Score_9" AS "Score_9" 
 FROM "GB_Model_3_5" UNION ALL SELECT "GB_Model_3_6"."KEY" AS "KEY", "GB_Model_3_6"."Score_0" AS "Score_0", "GB_Model_3_6"."Score_1" AS "Score_1", "GB_Model_3_6"."Score_2" AS "Score_2", "GB_Model_3_6"."Score_3" AS "Score_3", "GB_Model_3_6"."Score_4" AS "Score_4", "GB_Model_3_6"."Score_5" AS "Score_5", "GB_Model_3_6"."Score_6" AS "Score_6", "GB_Model_3_6"."Score_7" AS "Score_7", "GB_Model_3_6"."Score_8" AS "Score_8", "GB_Model_3_6"."Score_9" AS "Score_9" 
 FROM "GB_Model_3_6" UNION ALL SELECT "GB_Model_3_7"."KEY" AS "KEY", "GB_Model_3_7"."Score_0" AS "Score_0", "GB_Model_3_7"."Score_1" AS "Score_1", "GB_Model_3_7"."Score_2" AS "Score_2", "GB_Model_3_7"."Score_3" AS "Score_3", "GB_Model_3_7"."Score_4" AS "Score_4", "GB_Model_3_7"."Score_5" AS "Score_5", "GB_Model_3_7"."Score_6" AS "Score_6", "GB_Model_3_7"."Score_7" AS "Score_7", "GB_Model_3_7"."Score_8" AS "Score_8", "GB_Model_3_7"."Score_9" AS "Score_9" 
 FROM "GB_Model_3_7" UNION ALL SELECT "GB_Model_3_8"."KEY" AS "KEY", "GB_Model_3_8"."Score_0" AS "Score_0", "GB_Model_3_8"."Score_1" AS "Score_1", "GB_Model_3_8"."Score_2" AS "Score_2", "GB_Model_3_8"."Score_3" AS "Score_3", "GB_Model_3_8"."Score_4" AS "Score_4", "GB_Model_3_8"."Score_5" AS "Score_5", "GB_Model_3_8"."Score_6" AS "Score_6", "GB_Model_3_8"."Score_7" AS "Score_7", "GB_Model_3_8"."Score_8" AS "Score_8", "GB_Model_3_8"."Score_9" AS "Score_9" 
 FROM "GB_Model_3_8" UNION ALL SELECT "GB_Model_3_9"."KEY" AS "KEY", "GB_Model_3_9"."Score_0" AS "Score_0", "GB_Model_3_9"."Score_1" AS "Score_1", "GB_Model_3_9"."Score_2" AS "Score_2", "GB_Model_3_9"."Score_3" AS "Score_3", "GB_Model_3_9"."Score_4" AS "Score_4", "GB_Model_3_9"."Score_5" AS "Score_5", "GB_Model_3_9"."Score_6" AS "Score_6", "GB_Model_3_9"."Score_7" AS "Score_7", "GB_Model_3_9"."Score_8" AS "Score_8", "GB_Model_3_9"."Score_9" AS "Score_9" 
-FROM "GB_Model_3_9") AS "GB_esu_3") AS "GB_B3") AS "U"
+FROM "GB_Model_3_9") AS "GB_esu_7") AS "GB_B7") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_P7IE62_GB_ part 1. Create 
+-- Code For temporary table TMP_20180602_BDV_GB_B8 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_P7IE62_GB_" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_BDV_GB_B8" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -653,9 +757,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_P7IE62_GB_" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_P7IE62_GB_ part 2. Populate
+-- Code For temporary table TMP_20180602_BDV_GB_B8 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_P7IE62_GB_" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+INSERT INTO "TMP_20180602_BDV_GB_B8" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
 FROM (WITH "DT_node_lookup_40" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_36" <= 0.5) THEN CASE WHEN ("ADS"."Feature_28" <= 2.5) THEN CASE WHEN ("ADS"."Feature_13" <= 1.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_42" <= 13.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_28" <= 0.5) THEN CASE WHEN ("ADS"."Feature_21" <= 12.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_33" <= 8.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
@@ -715,8 +819,39 @@ FROM (SELECT 3 AS nid, 1.0536692616357657 AS "E" FROM rdb$database UNION ALL SEL
 FROM "DT_node_lookup_44" LEFT OUTER JOIN "DT_node_data_44" ON "DT_node_lookup_44".node_id_2 = "DT_node_data_44".nid), 
 "GB_Model_4_4" AS 
 (SELECT "DT_Output_44"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", "DT_Output_44"."E" AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", 0.0 AS "Score_9" 
-FROM "DT_Output_44"), 
-"DT_node_lookup_45" AS 
+FROM "DT_Output_44")
+ SELECT "GB_B8"."KEY", "GB_B8"."Score_0", "GB_B8"."Score_1", "GB_B8"."Score_2", "GB_B8"."Score_3", "GB_B8"."Score_4", "GB_B8"."Score_5", "GB_B8"."Score_6", "GB_B8"."Score_7", "GB_B8"."Score_8", "GB_B8"."Score_9" 
+FROM (SELECT "GB_esu_8"."KEY" AS "KEY", "GB_esu_8"."Score_0" AS "Score_0", "GB_esu_8"."Score_1" AS "Score_1", "GB_esu_8"."Score_2" AS "Score_2", "GB_esu_8"."Score_3" AS "Score_3", "GB_esu_8"."Score_4" AS "Score_4", "GB_esu_8"."Score_5" AS "Score_5", "GB_esu_8"."Score_6" AS "Score_6", "GB_esu_8"."Score_7" AS "Score_7", "GB_esu_8"."Score_8" AS "Score_8", "GB_esu_8"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_4_0"."KEY" AS "KEY", "GB_Model_4_0"."Score_0" AS "Score_0", "GB_Model_4_0"."Score_1" AS "Score_1", "GB_Model_4_0"."Score_2" AS "Score_2", "GB_Model_4_0"."Score_3" AS "Score_3", "GB_Model_4_0"."Score_4" AS "Score_4", "GB_Model_4_0"."Score_5" AS "Score_5", "GB_Model_4_0"."Score_6" AS "Score_6", "GB_Model_4_0"."Score_7" AS "Score_7", "GB_Model_4_0"."Score_8" AS "Score_8", "GB_Model_4_0"."Score_9" AS "Score_9" 
+FROM "GB_Model_4_0" UNION ALL SELECT "GB_Model_4_1"."KEY" AS "KEY", "GB_Model_4_1"."Score_0" AS "Score_0", "GB_Model_4_1"."Score_1" AS "Score_1", "GB_Model_4_1"."Score_2" AS "Score_2", "GB_Model_4_1"."Score_3" AS "Score_3", "GB_Model_4_1"."Score_4" AS "Score_4", "GB_Model_4_1"."Score_5" AS "Score_5", "GB_Model_4_1"."Score_6" AS "Score_6", "GB_Model_4_1"."Score_7" AS "Score_7", "GB_Model_4_1"."Score_8" AS "Score_8", "GB_Model_4_1"."Score_9" AS "Score_9" 
+FROM "GB_Model_4_1" UNION ALL SELECT "GB_Model_4_2"."KEY" AS "KEY", "GB_Model_4_2"."Score_0" AS "Score_0", "GB_Model_4_2"."Score_1" AS "Score_1", "GB_Model_4_2"."Score_2" AS "Score_2", "GB_Model_4_2"."Score_3" AS "Score_3", "GB_Model_4_2"."Score_4" AS "Score_4", "GB_Model_4_2"."Score_5" AS "Score_5", "GB_Model_4_2"."Score_6" AS "Score_6", "GB_Model_4_2"."Score_7" AS "Score_7", "GB_Model_4_2"."Score_8" AS "Score_8", "GB_Model_4_2"."Score_9" AS "Score_9" 
+FROM "GB_Model_4_2" UNION ALL SELECT "GB_Model_4_3"."KEY" AS "KEY", "GB_Model_4_3"."Score_0" AS "Score_0", "GB_Model_4_3"."Score_1" AS "Score_1", "GB_Model_4_3"."Score_2" AS "Score_2", "GB_Model_4_3"."Score_3" AS "Score_3", "GB_Model_4_3"."Score_4" AS "Score_4", "GB_Model_4_3"."Score_5" AS "Score_5", "GB_Model_4_3"."Score_6" AS "Score_6", "GB_Model_4_3"."Score_7" AS "Score_7", "GB_Model_4_3"."Score_8" AS "Score_8", "GB_Model_4_3"."Score_9" AS "Score_9" 
+FROM "GB_Model_4_3" UNION ALL SELECT "GB_Model_4_4"."KEY" AS "KEY", "GB_Model_4_4"."Score_0" AS "Score_0", "GB_Model_4_4"."Score_1" AS "Score_1", "GB_Model_4_4"."Score_2" AS "Score_2", "GB_Model_4_4"."Score_3" AS "Score_3", "GB_Model_4_4"."Score_4" AS "Score_4", "GB_Model_4_4"."Score_5" AS "Score_5", "GB_Model_4_4"."Score_6" AS "Score_6", "GB_Model_4_4"."Score_7" AS "Score_7", "GB_Model_4_4"."Score_8" AS "Score_8", "GB_Model_4_4"."Score_9" AS "Score_9" 
+FROM "GB_Model_4_4") AS "GB_esu_8") AS "GB_B8") AS "U"
+
+-- Code For temporary table TMP_20180602_FYR_GB_B9 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_FYR_GB_B9" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Score_2" DOUBLE PRECISION, 
+	"Score_3" DOUBLE PRECISION, 
+	"Score_4" DOUBLE PRECISION, 
+	"Score_5" DOUBLE PRECISION, 
+	"Score_6" DOUBLE PRECISION, 
+	"Score_7" DOUBLE PRECISION, 
+	"Score_8" DOUBLE PRECISION, 
+	"Score_9" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_FYR_GB_B9 part 2. Populate
+
+INSERT INTO "TMP_20180602_FYR_GB_B9" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+FROM (WITH "DT_node_lookup_45" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_21" <= 0.5) THEN CASE WHEN ("ADS"."Feature_5" <= 6.5) THEN CASE WHEN ("ADS"."Feature_43" <= 0.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_2" <= 1.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_21" <= 2.5) THEN CASE WHEN ("ADS"."Feature_6" <= 2.0) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_36" <= 1.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
 "DT_node_data_45" AS 
@@ -776,24 +911,19 @@ FROM "DT_node_lookup_49" LEFT OUTER JOIN "DT_node_data_49" ON "DT_node_lookup_49
 "GB_Model_4_9" AS 
 (SELECT "DT_Output_49"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", 0.0 AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", "DT_Output_49"."E" AS "Score_9" 
 FROM "DT_Output_49")
- SELECT "GB_B4"."KEY", "GB_B4"."Score_0", "GB_B4"."Score_1", "GB_B4"."Score_2", "GB_B4"."Score_3", "GB_B4"."Score_4", "GB_B4"."Score_5", "GB_B4"."Score_6", "GB_B4"."Score_7", "GB_B4"."Score_8", "GB_B4"."Score_9" 
-FROM (SELECT "GB_esu_4"."KEY" AS "KEY", "GB_esu_4"."Score_0" AS "Score_0", "GB_esu_4"."Score_1" AS "Score_1", "GB_esu_4"."Score_2" AS "Score_2", "GB_esu_4"."Score_3" AS "Score_3", "GB_esu_4"."Score_4" AS "Score_4", "GB_esu_4"."Score_5" AS "Score_5", "GB_esu_4"."Score_6" AS "Score_6", "GB_esu_4"."Score_7" AS "Score_7", "GB_esu_4"."Score_8" AS "Score_8", "GB_esu_4"."Score_9" AS "Score_9" 
-FROM (SELECT "GB_Model_4_0"."KEY" AS "KEY", "GB_Model_4_0"."Score_0" AS "Score_0", "GB_Model_4_0"."Score_1" AS "Score_1", "GB_Model_4_0"."Score_2" AS "Score_2", "GB_Model_4_0"."Score_3" AS "Score_3", "GB_Model_4_0"."Score_4" AS "Score_4", "GB_Model_4_0"."Score_5" AS "Score_5", "GB_Model_4_0"."Score_6" AS "Score_6", "GB_Model_4_0"."Score_7" AS "Score_7", "GB_Model_4_0"."Score_8" AS "Score_8", "GB_Model_4_0"."Score_9" AS "Score_9" 
-FROM "GB_Model_4_0" UNION ALL SELECT "GB_Model_4_1"."KEY" AS "KEY", "GB_Model_4_1"."Score_0" AS "Score_0", "GB_Model_4_1"."Score_1" AS "Score_1", "GB_Model_4_1"."Score_2" AS "Score_2", "GB_Model_4_1"."Score_3" AS "Score_3", "GB_Model_4_1"."Score_4" AS "Score_4", "GB_Model_4_1"."Score_5" AS "Score_5", "GB_Model_4_1"."Score_6" AS "Score_6", "GB_Model_4_1"."Score_7" AS "Score_7", "GB_Model_4_1"."Score_8" AS "Score_8", "GB_Model_4_1"."Score_9" AS "Score_9" 
-FROM "GB_Model_4_1" UNION ALL SELECT "GB_Model_4_2"."KEY" AS "KEY", "GB_Model_4_2"."Score_0" AS "Score_0", "GB_Model_4_2"."Score_1" AS "Score_1", "GB_Model_4_2"."Score_2" AS "Score_2", "GB_Model_4_2"."Score_3" AS "Score_3", "GB_Model_4_2"."Score_4" AS "Score_4", "GB_Model_4_2"."Score_5" AS "Score_5", "GB_Model_4_2"."Score_6" AS "Score_6", "GB_Model_4_2"."Score_7" AS "Score_7", "GB_Model_4_2"."Score_8" AS "Score_8", "GB_Model_4_2"."Score_9" AS "Score_9" 
-FROM "GB_Model_4_2" UNION ALL SELECT "GB_Model_4_3"."KEY" AS "KEY", "GB_Model_4_3"."Score_0" AS "Score_0", "GB_Model_4_3"."Score_1" AS "Score_1", "GB_Model_4_3"."Score_2" AS "Score_2", "GB_Model_4_3"."Score_3" AS "Score_3", "GB_Model_4_3"."Score_4" AS "Score_4", "GB_Model_4_3"."Score_5" AS "Score_5", "GB_Model_4_3"."Score_6" AS "Score_6", "GB_Model_4_3"."Score_7" AS "Score_7", "GB_Model_4_3"."Score_8" AS "Score_8", "GB_Model_4_3"."Score_9" AS "Score_9" 
-FROM "GB_Model_4_3" UNION ALL SELECT "GB_Model_4_4"."KEY" AS "KEY", "GB_Model_4_4"."Score_0" AS "Score_0", "GB_Model_4_4"."Score_1" AS "Score_1", "GB_Model_4_4"."Score_2" AS "Score_2", "GB_Model_4_4"."Score_3" AS "Score_3", "GB_Model_4_4"."Score_4" AS "Score_4", "GB_Model_4_4"."Score_5" AS "Score_5", "GB_Model_4_4"."Score_6" AS "Score_6", "GB_Model_4_4"."Score_7" AS "Score_7", "GB_Model_4_4"."Score_8" AS "Score_8", "GB_Model_4_4"."Score_9" AS "Score_9" 
-FROM "GB_Model_4_4" UNION ALL SELECT "GB_Model_4_5"."KEY" AS "KEY", "GB_Model_4_5"."Score_0" AS "Score_0", "GB_Model_4_5"."Score_1" AS "Score_1", "GB_Model_4_5"."Score_2" AS "Score_2", "GB_Model_4_5"."Score_3" AS "Score_3", "GB_Model_4_5"."Score_4" AS "Score_4", "GB_Model_4_5"."Score_5" AS "Score_5", "GB_Model_4_5"."Score_6" AS "Score_6", "GB_Model_4_5"."Score_7" AS "Score_7", "GB_Model_4_5"."Score_8" AS "Score_8", "GB_Model_4_5"."Score_9" AS "Score_9" 
+ SELECT "GB_B9"."KEY", "GB_B9"."Score_0", "GB_B9"."Score_1", "GB_B9"."Score_2", "GB_B9"."Score_3", "GB_B9"."Score_4", "GB_B9"."Score_5", "GB_B9"."Score_6", "GB_B9"."Score_7", "GB_B9"."Score_8", "GB_B9"."Score_9" 
+FROM (SELECT "GB_esu_9"."KEY" AS "KEY", "GB_esu_9"."Score_0" AS "Score_0", "GB_esu_9"."Score_1" AS "Score_1", "GB_esu_9"."Score_2" AS "Score_2", "GB_esu_9"."Score_3" AS "Score_3", "GB_esu_9"."Score_4" AS "Score_4", "GB_esu_9"."Score_5" AS "Score_5", "GB_esu_9"."Score_6" AS "Score_6", "GB_esu_9"."Score_7" AS "Score_7", "GB_esu_9"."Score_8" AS "Score_8", "GB_esu_9"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_4_5"."KEY" AS "KEY", "GB_Model_4_5"."Score_0" AS "Score_0", "GB_Model_4_5"."Score_1" AS "Score_1", "GB_Model_4_5"."Score_2" AS "Score_2", "GB_Model_4_5"."Score_3" AS "Score_3", "GB_Model_4_5"."Score_4" AS "Score_4", "GB_Model_4_5"."Score_5" AS "Score_5", "GB_Model_4_5"."Score_6" AS "Score_6", "GB_Model_4_5"."Score_7" AS "Score_7", "GB_Model_4_5"."Score_8" AS "Score_8", "GB_Model_4_5"."Score_9" AS "Score_9" 
 FROM "GB_Model_4_5" UNION ALL SELECT "GB_Model_4_6"."KEY" AS "KEY", "GB_Model_4_6"."Score_0" AS "Score_0", "GB_Model_4_6"."Score_1" AS "Score_1", "GB_Model_4_6"."Score_2" AS "Score_2", "GB_Model_4_6"."Score_3" AS "Score_3", "GB_Model_4_6"."Score_4" AS "Score_4", "GB_Model_4_6"."Score_5" AS "Score_5", "GB_Model_4_6"."Score_6" AS "Score_6", "GB_Model_4_6"."Score_7" AS "Score_7", "GB_Model_4_6"."Score_8" AS "Score_8", "GB_Model_4_6"."Score_9" AS "Score_9" 
 FROM "GB_Model_4_6" UNION ALL SELECT "GB_Model_4_7"."KEY" AS "KEY", "GB_Model_4_7"."Score_0" AS "Score_0", "GB_Model_4_7"."Score_1" AS "Score_1", "GB_Model_4_7"."Score_2" AS "Score_2", "GB_Model_4_7"."Score_3" AS "Score_3", "GB_Model_4_7"."Score_4" AS "Score_4", "GB_Model_4_7"."Score_5" AS "Score_5", "GB_Model_4_7"."Score_6" AS "Score_6", "GB_Model_4_7"."Score_7" AS "Score_7", "GB_Model_4_7"."Score_8" AS "Score_8", "GB_Model_4_7"."Score_9" AS "Score_9" 
 FROM "GB_Model_4_7" UNION ALL SELECT "GB_Model_4_8"."KEY" AS "KEY", "GB_Model_4_8"."Score_0" AS "Score_0", "GB_Model_4_8"."Score_1" AS "Score_1", "GB_Model_4_8"."Score_2" AS "Score_2", "GB_Model_4_8"."Score_3" AS "Score_3", "GB_Model_4_8"."Score_4" AS "Score_4", "GB_Model_4_8"."Score_5" AS "Score_5", "GB_Model_4_8"."Score_6" AS "Score_6", "GB_Model_4_8"."Score_7" AS "Score_7", "GB_Model_4_8"."Score_8" AS "Score_8", "GB_Model_4_8"."Score_9" AS "Score_9" 
 FROM "GB_Model_4_8" UNION ALL SELECT "GB_Model_4_9"."KEY" AS "KEY", "GB_Model_4_9"."Score_0" AS "Score_0", "GB_Model_4_9"."Score_1" AS "Score_1", "GB_Model_4_9"."Score_2" AS "Score_2", "GB_Model_4_9"."Score_3" AS "Score_3", "GB_Model_4_9"."Score_4" AS "Score_4", "GB_Model_4_9"."Score_5" AS "Score_5", "GB_Model_4_9"."Score_6" AS "Score_6", "GB_Model_4_9"."Score_7" AS "Score_7", "GB_Model_4_9"."Score_8" AS "Score_8", "GB_Model_4_9"."Score_9" AS "Score_9" 
-FROM "GB_Model_4_9") AS "GB_esu_4") AS "GB_B4") AS "U"
+FROM "GB_Model_4_9") AS "GB_esu_9") AS "GB_B9") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_NO3JPX_GB_ part 1. Create 
+-- Code For temporary table TMP_20180602_R4I_GB_B10 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_NO3JPX_GB_" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_R4I_GB_B10" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -809,9 +939,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_NO3JPX_GB_" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_NO3JPX_GB_ part 2. Populate
+-- Code For temporary table TMP_20180602_R4I_GB_B10 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_NO3JPX_GB_" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+INSERT INTO "TMP_20180602_R4I_GB_B10" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
 FROM (WITH "DT_node_lookup_50" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_36" <= 0.5) THEN CASE WHEN ("ADS"."Feature_28" <= 2.5) THEN CASE WHEN ("ADS"."Feature_43" <= 9.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_42" <= 13.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_28" <= 0.5) THEN CASE WHEN ("ADS"."Feature_21" <= 12.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_21" <= 4.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
@@ -871,8 +1001,39 @@ FROM (SELECT 3 AS nid, -0.7868483651824159 AS "E" FROM rdb$database UNION ALL SE
 FROM "DT_node_lookup_54" LEFT OUTER JOIN "DT_node_data_54" ON "DT_node_lookup_54".node_id_2 = "DT_node_data_54".nid), 
 "GB_Model_5_4" AS 
 (SELECT "DT_Output_54"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", "DT_Output_54"."E" AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", 0.0 AS "Score_9" 
-FROM "DT_Output_54"), 
-"DT_node_lookup_55" AS 
+FROM "DT_Output_54")
+ SELECT "GB_B10"."KEY", "GB_B10"."Score_0", "GB_B10"."Score_1", "GB_B10"."Score_2", "GB_B10"."Score_3", "GB_B10"."Score_4", "GB_B10"."Score_5", "GB_B10"."Score_6", "GB_B10"."Score_7", "GB_B10"."Score_8", "GB_B10"."Score_9" 
+FROM (SELECT "GB_esu_10"."KEY" AS "KEY", "GB_esu_10"."Score_0" AS "Score_0", "GB_esu_10"."Score_1" AS "Score_1", "GB_esu_10"."Score_2" AS "Score_2", "GB_esu_10"."Score_3" AS "Score_3", "GB_esu_10"."Score_4" AS "Score_4", "GB_esu_10"."Score_5" AS "Score_5", "GB_esu_10"."Score_6" AS "Score_6", "GB_esu_10"."Score_7" AS "Score_7", "GB_esu_10"."Score_8" AS "Score_8", "GB_esu_10"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_5_0"."KEY" AS "KEY", "GB_Model_5_0"."Score_0" AS "Score_0", "GB_Model_5_0"."Score_1" AS "Score_1", "GB_Model_5_0"."Score_2" AS "Score_2", "GB_Model_5_0"."Score_3" AS "Score_3", "GB_Model_5_0"."Score_4" AS "Score_4", "GB_Model_5_0"."Score_5" AS "Score_5", "GB_Model_5_0"."Score_6" AS "Score_6", "GB_Model_5_0"."Score_7" AS "Score_7", "GB_Model_5_0"."Score_8" AS "Score_8", "GB_Model_5_0"."Score_9" AS "Score_9" 
+FROM "GB_Model_5_0" UNION ALL SELECT "GB_Model_5_1"."KEY" AS "KEY", "GB_Model_5_1"."Score_0" AS "Score_0", "GB_Model_5_1"."Score_1" AS "Score_1", "GB_Model_5_1"."Score_2" AS "Score_2", "GB_Model_5_1"."Score_3" AS "Score_3", "GB_Model_5_1"."Score_4" AS "Score_4", "GB_Model_5_1"."Score_5" AS "Score_5", "GB_Model_5_1"."Score_6" AS "Score_6", "GB_Model_5_1"."Score_7" AS "Score_7", "GB_Model_5_1"."Score_8" AS "Score_8", "GB_Model_5_1"."Score_9" AS "Score_9" 
+FROM "GB_Model_5_1" UNION ALL SELECT "GB_Model_5_2"."KEY" AS "KEY", "GB_Model_5_2"."Score_0" AS "Score_0", "GB_Model_5_2"."Score_1" AS "Score_1", "GB_Model_5_2"."Score_2" AS "Score_2", "GB_Model_5_2"."Score_3" AS "Score_3", "GB_Model_5_2"."Score_4" AS "Score_4", "GB_Model_5_2"."Score_5" AS "Score_5", "GB_Model_5_2"."Score_6" AS "Score_6", "GB_Model_5_2"."Score_7" AS "Score_7", "GB_Model_5_2"."Score_8" AS "Score_8", "GB_Model_5_2"."Score_9" AS "Score_9" 
+FROM "GB_Model_5_2" UNION ALL SELECT "GB_Model_5_3"."KEY" AS "KEY", "GB_Model_5_3"."Score_0" AS "Score_0", "GB_Model_5_3"."Score_1" AS "Score_1", "GB_Model_5_3"."Score_2" AS "Score_2", "GB_Model_5_3"."Score_3" AS "Score_3", "GB_Model_5_3"."Score_4" AS "Score_4", "GB_Model_5_3"."Score_5" AS "Score_5", "GB_Model_5_3"."Score_6" AS "Score_6", "GB_Model_5_3"."Score_7" AS "Score_7", "GB_Model_5_3"."Score_8" AS "Score_8", "GB_Model_5_3"."Score_9" AS "Score_9" 
+FROM "GB_Model_5_3" UNION ALL SELECT "GB_Model_5_4"."KEY" AS "KEY", "GB_Model_5_4"."Score_0" AS "Score_0", "GB_Model_5_4"."Score_1" AS "Score_1", "GB_Model_5_4"."Score_2" AS "Score_2", "GB_Model_5_4"."Score_3" AS "Score_3", "GB_Model_5_4"."Score_4" AS "Score_4", "GB_Model_5_4"."Score_5" AS "Score_5", "GB_Model_5_4"."Score_6" AS "Score_6", "GB_Model_5_4"."Score_7" AS "Score_7", "GB_Model_5_4"."Score_8" AS "Score_8", "GB_Model_5_4"."Score_9" AS "Score_9" 
+FROM "GB_Model_5_4") AS "GB_esu_10") AS "GB_B10") AS "U"
+
+-- Code For temporary table TMP_20180602_JR8_GB_B11 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_JR8_GB_B11" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Score_2" DOUBLE PRECISION, 
+	"Score_3" DOUBLE PRECISION, 
+	"Score_4" DOUBLE PRECISION, 
+	"Score_5" DOUBLE PRECISION, 
+	"Score_6" DOUBLE PRECISION, 
+	"Score_7" DOUBLE PRECISION, 
+	"Score_8" DOUBLE PRECISION, 
+	"Score_9" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_JR8_GB_B11 part 2. Populate
+
+INSERT INTO "TMP_20180602_JR8_GB_B11" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+FROM (WITH "DT_node_lookup_55" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_21" <= 0.5) THEN CASE WHEN ("ADS"."Feature_5" <= 6.5) THEN CASE WHEN ("ADS"."Feature_42" <= 0.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_42" <= 13.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_21" <= 3.5) THEN CASE WHEN ("ADS"."Feature_43" <= 0.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_1" <= 5.0) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
 "DT_node_data_55" AS 
@@ -932,24 +1093,19 @@ FROM "DT_node_lookup_59" LEFT OUTER JOIN "DT_node_data_59" ON "DT_node_lookup_59
 "GB_Model_5_9" AS 
 (SELECT "DT_Output_59"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", 0.0 AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", "DT_Output_59"."E" AS "Score_9" 
 FROM "DT_Output_59")
- SELECT "GB_B5"."KEY", "GB_B5"."Score_0", "GB_B5"."Score_1", "GB_B5"."Score_2", "GB_B5"."Score_3", "GB_B5"."Score_4", "GB_B5"."Score_5", "GB_B5"."Score_6", "GB_B5"."Score_7", "GB_B5"."Score_8", "GB_B5"."Score_9" 
-FROM (SELECT "GB_esu_5"."KEY" AS "KEY", "GB_esu_5"."Score_0" AS "Score_0", "GB_esu_5"."Score_1" AS "Score_1", "GB_esu_5"."Score_2" AS "Score_2", "GB_esu_5"."Score_3" AS "Score_3", "GB_esu_5"."Score_4" AS "Score_4", "GB_esu_5"."Score_5" AS "Score_5", "GB_esu_5"."Score_6" AS "Score_6", "GB_esu_5"."Score_7" AS "Score_7", "GB_esu_5"."Score_8" AS "Score_8", "GB_esu_5"."Score_9" AS "Score_9" 
-FROM (SELECT "GB_Model_5_0"."KEY" AS "KEY", "GB_Model_5_0"."Score_0" AS "Score_0", "GB_Model_5_0"."Score_1" AS "Score_1", "GB_Model_5_0"."Score_2" AS "Score_2", "GB_Model_5_0"."Score_3" AS "Score_3", "GB_Model_5_0"."Score_4" AS "Score_4", "GB_Model_5_0"."Score_5" AS "Score_5", "GB_Model_5_0"."Score_6" AS "Score_6", "GB_Model_5_0"."Score_7" AS "Score_7", "GB_Model_5_0"."Score_8" AS "Score_8", "GB_Model_5_0"."Score_9" AS "Score_9" 
-FROM "GB_Model_5_0" UNION ALL SELECT "GB_Model_5_1"."KEY" AS "KEY", "GB_Model_5_1"."Score_0" AS "Score_0", "GB_Model_5_1"."Score_1" AS "Score_1", "GB_Model_5_1"."Score_2" AS "Score_2", "GB_Model_5_1"."Score_3" AS "Score_3", "GB_Model_5_1"."Score_4" AS "Score_4", "GB_Model_5_1"."Score_5" AS "Score_5", "GB_Model_5_1"."Score_6" AS "Score_6", "GB_Model_5_1"."Score_7" AS "Score_7", "GB_Model_5_1"."Score_8" AS "Score_8", "GB_Model_5_1"."Score_9" AS "Score_9" 
-FROM "GB_Model_5_1" UNION ALL SELECT "GB_Model_5_2"."KEY" AS "KEY", "GB_Model_5_2"."Score_0" AS "Score_0", "GB_Model_5_2"."Score_1" AS "Score_1", "GB_Model_5_2"."Score_2" AS "Score_2", "GB_Model_5_2"."Score_3" AS "Score_3", "GB_Model_5_2"."Score_4" AS "Score_4", "GB_Model_5_2"."Score_5" AS "Score_5", "GB_Model_5_2"."Score_6" AS "Score_6", "GB_Model_5_2"."Score_7" AS "Score_7", "GB_Model_5_2"."Score_8" AS "Score_8", "GB_Model_5_2"."Score_9" AS "Score_9" 
-FROM "GB_Model_5_2" UNION ALL SELECT "GB_Model_5_3"."KEY" AS "KEY", "GB_Model_5_3"."Score_0" AS "Score_0", "GB_Model_5_3"."Score_1" AS "Score_1", "GB_Model_5_3"."Score_2" AS "Score_2", "GB_Model_5_3"."Score_3" AS "Score_3", "GB_Model_5_3"."Score_4" AS "Score_4", "GB_Model_5_3"."Score_5" AS "Score_5", "GB_Model_5_3"."Score_6" AS "Score_6", "GB_Model_5_3"."Score_7" AS "Score_7", "GB_Model_5_3"."Score_8" AS "Score_8", "GB_Model_5_3"."Score_9" AS "Score_9" 
-FROM "GB_Model_5_3" UNION ALL SELECT "GB_Model_5_4"."KEY" AS "KEY", "GB_Model_5_4"."Score_0" AS "Score_0", "GB_Model_5_4"."Score_1" AS "Score_1", "GB_Model_5_4"."Score_2" AS "Score_2", "GB_Model_5_4"."Score_3" AS "Score_3", "GB_Model_5_4"."Score_4" AS "Score_4", "GB_Model_5_4"."Score_5" AS "Score_5", "GB_Model_5_4"."Score_6" AS "Score_6", "GB_Model_5_4"."Score_7" AS "Score_7", "GB_Model_5_4"."Score_8" AS "Score_8", "GB_Model_5_4"."Score_9" AS "Score_9" 
-FROM "GB_Model_5_4" UNION ALL SELECT "GB_Model_5_5"."KEY" AS "KEY", "GB_Model_5_5"."Score_0" AS "Score_0", "GB_Model_5_5"."Score_1" AS "Score_1", "GB_Model_5_5"."Score_2" AS "Score_2", "GB_Model_5_5"."Score_3" AS "Score_3", "GB_Model_5_5"."Score_4" AS "Score_4", "GB_Model_5_5"."Score_5" AS "Score_5", "GB_Model_5_5"."Score_6" AS "Score_6", "GB_Model_5_5"."Score_7" AS "Score_7", "GB_Model_5_5"."Score_8" AS "Score_8", "GB_Model_5_5"."Score_9" AS "Score_9" 
+ SELECT "GB_B11"."KEY", "GB_B11"."Score_0", "GB_B11"."Score_1", "GB_B11"."Score_2", "GB_B11"."Score_3", "GB_B11"."Score_4", "GB_B11"."Score_5", "GB_B11"."Score_6", "GB_B11"."Score_7", "GB_B11"."Score_8", "GB_B11"."Score_9" 
+FROM (SELECT "GB_esu_11"."KEY" AS "KEY", "GB_esu_11"."Score_0" AS "Score_0", "GB_esu_11"."Score_1" AS "Score_1", "GB_esu_11"."Score_2" AS "Score_2", "GB_esu_11"."Score_3" AS "Score_3", "GB_esu_11"."Score_4" AS "Score_4", "GB_esu_11"."Score_5" AS "Score_5", "GB_esu_11"."Score_6" AS "Score_6", "GB_esu_11"."Score_7" AS "Score_7", "GB_esu_11"."Score_8" AS "Score_8", "GB_esu_11"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_5_5"."KEY" AS "KEY", "GB_Model_5_5"."Score_0" AS "Score_0", "GB_Model_5_5"."Score_1" AS "Score_1", "GB_Model_5_5"."Score_2" AS "Score_2", "GB_Model_5_5"."Score_3" AS "Score_3", "GB_Model_5_5"."Score_4" AS "Score_4", "GB_Model_5_5"."Score_5" AS "Score_5", "GB_Model_5_5"."Score_6" AS "Score_6", "GB_Model_5_5"."Score_7" AS "Score_7", "GB_Model_5_5"."Score_8" AS "Score_8", "GB_Model_5_5"."Score_9" AS "Score_9" 
 FROM "GB_Model_5_5" UNION ALL SELECT "GB_Model_5_6"."KEY" AS "KEY", "GB_Model_5_6"."Score_0" AS "Score_0", "GB_Model_5_6"."Score_1" AS "Score_1", "GB_Model_5_6"."Score_2" AS "Score_2", "GB_Model_5_6"."Score_3" AS "Score_3", "GB_Model_5_6"."Score_4" AS "Score_4", "GB_Model_5_6"."Score_5" AS "Score_5", "GB_Model_5_6"."Score_6" AS "Score_6", "GB_Model_5_6"."Score_7" AS "Score_7", "GB_Model_5_6"."Score_8" AS "Score_8", "GB_Model_5_6"."Score_9" AS "Score_9" 
 FROM "GB_Model_5_6" UNION ALL SELECT "GB_Model_5_7"."KEY" AS "KEY", "GB_Model_5_7"."Score_0" AS "Score_0", "GB_Model_5_7"."Score_1" AS "Score_1", "GB_Model_5_7"."Score_2" AS "Score_2", "GB_Model_5_7"."Score_3" AS "Score_3", "GB_Model_5_7"."Score_4" AS "Score_4", "GB_Model_5_7"."Score_5" AS "Score_5", "GB_Model_5_7"."Score_6" AS "Score_6", "GB_Model_5_7"."Score_7" AS "Score_7", "GB_Model_5_7"."Score_8" AS "Score_8", "GB_Model_5_7"."Score_9" AS "Score_9" 
 FROM "GB_Model_5_7" UNION ALL SELECT "GB_Model_5_8"."KEY" AS "KEY", "GB_Model_5_8"."Score_0" AS "Score_0", "GB_Model_5_8"."Score_1" AS "Score_1", "GB_Model_5_8"."Score_2" AS "Score_2", "GB_Model_5_8"."Score_3" AS "Score_3", "GB_Model_5_8"."Score_4" AS "Score_4", "GB_Model_5_8"."Score_5" AS "Score_5", "GB_Model_5_8"."Score_6" AS "Score_6", "GB_Model_5_8"."Score_7" AS "Score_7", "GB_Model_5_8"."Score_8" AS "Score_8", "GB_Model_5_8"."Score_9" AS "Score_9" 
 FROM "GB_Model_5_8" UNION ALL SELECT "GB_Model_5_9"."KEY" AS "KEY", "GB_Model_5_9"."Score_0" AS "Score_0", "GB_Model_5_9"."Score_1" AS "Score_1", "GB_Model_5_9"."Score_2" AS "Score_2", "GB_Model_5_9"."Score_3" AS "Score_3", "GB_Model_5_9"."Score_4" AS "Score_4", "GB_Model_5_9"."Score_5" AS "Score_5", "GB_Model_5_9"."Score_6" AS "Score_6", "GB_Model_5_9"."Score_7" AS "Score_7", "GB_Model_5_9"."Score_8" AS "Score_8", "GB_Model_5_9"."Score_9" AS "Score_9" 
-FROM "GB_Model_5_9") AS "GB_esu_5") AS "GB_B5") AS "U"
+FROM "GB_Model_5_9") AS "GB_esu_11") AS "GB_B11") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_3098MD_GB_ part 1. Create 
+-- Code For temporary table TMP_20180602_UVN_GB_B12 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_3098MD_GB_" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_UVN_GB_B12" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -965,9 +1121,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_3098MD_GB_" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_3098MD_GB_ part 2. Populate
+-- Code For temporary table TMP_20180602_UVN_GB_B12 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_3098MD_GB_" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+INSERT INTO "TMP_20180602_UVN_GB_B12" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
 FROM (WITH "DT_node_lookup_60" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_36" <= 0.5) THEN CASE WHEN ("ADS"."Feature_28" <= 2.5) THEN CASE WHEN ("ADS"."Feature_13" <= 1.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_42" <= 13.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_28" <= 0.5) THEN CASE WHEN ("ADS"."Feature_21" <= 12.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_21" <= 4.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
@@ -1027,8 +1183,39 @@ FROM (SELECT 3 AS nid, 0.7124546257042664 AS "E" FROM rdb$database UNION ALL SEL
 FROM "DT_node_lookup_64" LEFT OUTER JOIN "DT_node_data_64" ON "DT_node_lookup_64".node_id_2 = "DT_node_data_64".nid), 
 "GB_Model_6_4" AS 
 (SELECT "DT_Output_64"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", "DT_Output_64"."E" AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", 0.0 AS "Score_9" 
-FROM "DT_Output_64"), 
-"DT_node_lookup_65" AS 
+FROM "DT_Output_64")
+ SELECT "GB_B12"."KEY", "GB_B12"."Score_0", "GB_B12"."Score_1", "GB_B12"."Score_2", "GB_B12"."Score_3", "GB_B12"."Score_4", "GB_B12"."Score_5", "GB_B12"."Score_6", "GB_B12"."Score_7", "GB_B12"."Score_8", "GB_B12"."Score_9" 
+FROM (SELECT "GB_esu_12"."KEY" AS "KEY", "GB_esu_12"."Score_0" AS "Score_0", "GB_esu_12"."Score_1" AS "Score_1", "GB_esu_12"."Score_2" AS "Score_2", "GB_esu_12"."Score_3" AS "Score_3", "GB_esu_12"."Score_4" AS "Score_4", "GB_esu_12"."Score_5" AS "Score_5", "GB_esu_12"."Score_6" AS "Score_6", "GB_esu_12"."Score_7" AS "Score_7", "GB_esu_12"."Score_8" AS "Score_8", "GB_esu_12"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_6_0"."KEY" AS "KEY", "GB_Model_6_0"."Score_0" AS "Score_0", "GB_Model_6_0"."Score_1" AS "Score_1", "GB_Model_6_0"."Score_2" AS "Score_2", "GB_Model_6_0"."Score_3" AS "Score_3", "GB_Model_6_0"."Score_4" AS "Score_4", "GB_Model_6_0"."Score_5" AS "Score_5", "GB_Model_6_0"."Score_6" AS "Score_6", "GB_Model_6_0"."Score_7" AS "Score_7", "GB_Model_6_0"."Score_8" AS "Score_8", "GB_Model_6_0"."Score_9" AS "Score_9" 
+FROM "GB_Model_6_0" UNION ALL SELECT "GB_Model_6_1"."KEY" AS "KEY", "GB_Model_6_1"."Score_0" AS "Score_0", "GB_Model_6_1"."Score_1" AS "Score_1", "GB_Model_6_1"."Score_2" AS "Score_2", "GB_Model_6_1"."Score_3" AS "Score_3", "GB_Model_6_1"."Score_4" AS "Score_4", "GB_Model_6_1"."Score_5" AS "Score_5", "GB_Model_6_1"."Score_6" AS "Score_6", "GB_Model_6_1"."Score_7" AS "Score_7", "GB_Model_6_1"."Score_8" AS "Score_8", "GB_Model_6_1"."Score_9" AS "Score_9" 
+FROM "GB_Model_6_1" UNION ALL SELECT "GB_Model_6_2"."KEY" AS "KEY", "GB_Model_6_2"."Score_0" AS "Score_0", "GB_Model_6_2"."Score_1" AS "Score_1", "GB_Model_6_2"."Score_2" AS "Score_2", "GB_Model_6_2"."Score_3" AS "Score_3", "GB_Model_6_2"."Score_4" AS "Score_4", "GB_Model_6_2"."Score_5" AS "Score_5", "GB_Model_6_2"."Score_6" AS "Score_6", "GB_Model_6_2"."Score_7" AS "Score_7", "GB_Model_6_2"."Score_8" AS "Score_8", "GB_Model_6_2"."Score_9" AS "Score_9" 
+FROM "GB_Model_6_2" UNION ALL SELECT "GB_Model_6_3"."KEY" AS "KEY", "GB_Model_6_3"."Score_0" AS "Score_0", "GB_Model_6_3"."Score_1" AS "Score_1", "GB_Model_6_3"."Score_2" AS "Score_2", "GB_Model_6_3"."Score_3" AS "Score_3", "GB_Model_6_3"."Score_4" AS "Score_4", "GB_Model_6_3"."Score_5" AS "Score_5", "GB_Model_6_3"."Score_6" AS "Score_6", "GB_Model_6_3"."Score_7" AS "Score_7", "GB_Model_6_3"."Score_8" AS "Score_8", "GB_Model_6_3"."Score_9" AS "Score_9" 
+FROM "GB_Model_6_3" UNION ALL SELECT "GB_Model_6_4"."KEY" AS "KEY", "GB_Model_6_4"."Score_0" AS "Score_0", "GB_Model_6_4"."Score_1" AS "Score_1", "GB_Model_6_4"."Score_2" AS "Score_2", "GB_Model_6_4"."Score_3" AS "Score_3", "GB_Model_6_4"."Score_4" AS "Score_4", "GB_Model_6_4"."Score_5" AS "Score_5", "GB_Model_6_4"."Score_6" AS "Score_6", "GB_Model_6_4"."Score_7" AS "Score_7", "GB_Model_6_4"."Score_8" AS "Score_8", "GB_Model_6_4"."Score_9" AS "Score_9" 
+FROM "GB_Model_6_4") AS "GB_esu_12") AS "GB_B12") AS "U"
+
+-- Code For temporary table TMP_20180602_TFK_GB_B13 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_TFK_GB_B13" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Score_2" DOUBLE PRECISION, 
+	"Score_3" DOUBLE PRECISION, 
+	"Score_4" DOUBLE PRECISION, 
+	"Score_5" DOUBLE PRECISION, 
+	"Score_6" DOUBLE PRECISION, 
+	"Score_7" DOUBLE PRECISION, 
+	"Score_8" DOUBLE PRECISION, 
+	"Score_9" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_TFK_GB_B13 part 2. Populate
+
+INSERT INTO "TMP_20180602_TFK_GB_B13" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+FROM (WITH "DT_node_lookup_65" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_21" <= 0.5) THEN CASE WHEN ("ADS"."Feature_5" <= 3.5) THEN CASE WHEN ("ADS"."Feature_9" <= 13.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_42" <= 10.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_21" <= 3.5) THEN CASE WHEN ("ADS"."Feature_35" <= 1.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_36" <= 0.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
 "DT_node_data_65" AS 
@@ -1088,24 +1275,19 @@ FROM "DT_node_lookup_69" LEFT OUTER JOIN "DT_node_data_69" ON "DT_node_lookup_69
 "GB_Model_6_9" AS 
 (SELECT "DT_Output_69"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", 0.0 AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", "DT_Output_69"."E" AS "Score_9" 
 FROM "DT_Output_69")
- SELECT "GB_B6"."KEY", "GB_B6"."Score_0", "GB_B6"."Score_1", "GB_B6"."Score_2", "GB_B6"."Score_3", "GB_B6"."Score_4", "GB_B6"."Score_5", "GB_B6"."Score_6", "GB_B6"."Score_7", "GB_B6"."Score_8", "GB_B6"."Score_9" 
-FROM (SELECT "GB_esu_6"."KEY" AS "KEY", "GB_esu_6"."Score_0" AS "Score_0", "GB_esu_6"."Score_1" AS "Score_1", "GB_esu_6"."Score_2" AS "Score_2", "GB_esu_6"."Score_3" AS "Score_3", "GB_esu_6"."Score_4" AS "Score_4", "GB_esu_6"."Score_5" AS "Score_5", "GB_esu_6"."Score_6" AS "Score_6", "GB_esu_6"."Score_7" AS "Score_7", "GB_esu_6"."Score_8" AS "Score_8", "GB_esu_6"."Score_9" AS "Score_9" 
-FROM (SELECT "GB_Model_6_0"."KEY" AS "KEY", "GB_Model_6_0"."Score_0" AS "Score_0", "GB_Model_6_0"."Score_1" AS "Score_1", "GB_Model_6_0"."Score_2" AS "Score_2", "GB_Model_6_0"."Score_3" AS "Score_3", "GB_Model_6_0"."Score_4" AS "Score_4", "GB_Model_6_0"."Score_5" AS "Score_5", "GB_Model_6_0"."Score_6" AS "Score_6", "GB_Model_6_0"."Score_7" AS "Score_7", "GB_Model_6_0"."Score_8" AS "Score_8", "GB_Model_6_0"."Score_9" AS "Score_9" 
-FROM "GB_Model_6_0" UNION ALL SELECT "GB_Model_6_1"."KEY" AS "KEY", "GB_Model_6_1"."Score_0" AS "Score_0", "GB_Model_6_1"."Score_1" AS "Score_1", "GB_Model_6_1"."Score_2" AS "Score_2", "GB_Model_6_1"."Score_3" AS "Score_3", "GB_Model_6_1"."Score_4" AS "Score_4", "GB_Model_6_1"."Score_5" AS "Score_5", "GB_Model_6_1"."Score_6" AS "Score_6", "GB_Model_6_1"."Score_7" AS "Score_7", "GB_Model_6_1"."Score_8" AS "Score_8", "GB_Model_6_1"."Score_9" AS "Score_9" 
-FROM "GB_Model_6_1" UNION ALL SELECT "GB_Model_6_2"."KEY" AS "KEY", "GB_Model_6_2"."Score_0" AS "Score_0", "GB_Model_6_2"."Score_1" AS "Score_1", "GB_Model_6_2"."Score_2" AS "Score_2", "GB_Model_6_2"."Score_3" AS "Score_3", "GB_Model_6_2"."Score_4" AS "Score_4", "GB_Model_6_2"."Score_5" AS "Score_5", "GB_Model_6_2"."Score_6" AS "Score_6", "GB_Model_6_2"."Score_7" AS "Score_7", "GB_Model_6_2"."Score_8" AS "Score_8", "GB_Model_6_2"."Score_9" AS "Score_9" 
-FROM "GB_Model_6_2" UNION ALL SELECT "GB_Model_6_3"."KEY" AS "KEY", "GB_Model_6_3"."Score_0" AS "Score_0", "GB_Model_6_3"."Score_1" AS "Score_1", "GB_Model_6_3"."Score_2" AS "Score_2", "GB_Model_6_3"."Score_3" AS "Score_3", "GB_Model_6_3"."Score_4" AS "Score_4", "GB_Model_6_3"."Score_5" AS "Score_5", "GB_Model_6_3"."Score_6" AS "Score_6", "GB_Model_6_3"."Score_7" AS "Score_7", "GB_Model_6_3"."Score_8" AS "Score_8", "GB_Model_6_3"."Score_9" AS "Score_9" 
-FROM "GB_Model_6_3" UNION ALL SELECT "GB_Model_6_4"."KEY" AS "KEY", "GB_Model_6_4"."Score_0" AS "Score_0", "GB_Model_6_4"."Score_1" AS "Score_1", "GB_Model_6_4"."Score_2" AS "Score_2", "GB_Model_6_4"."Score_3" AS "Score_3", "GB_Model_6_4"."Score_4" AS "Score_4", "GB_Model_6_4"."Score_5" AS "Score_5", "GB_Model_6_4"."Score_6" AS "Score_6", "GB_Model_6_4"."Score_7" AS "Score_7", "GB_Model_6_4"."Score_8" AS "Score_8", "GB_Model_6_4"."Score_9" AS "Score_9" 
-FROM "GB_Model_6_4" UNION ALL SELECT "GB_Model_6_5"."KEY" AS "KEY", "GB_Model_6_5"."Score_0" AS "Score_0", "GB_Model_6_5"."Score_1" AS "Score_1", "GB_Model_6_5"."Score_2" AS "Score_2", "GB_Model_6_5"."Score_3" AS "Score_3", "GB_Model_6_5"."Score_4" AS "Score_4", "GB_Model_6_5"."Score_5" AS "Score_5", "GB_Model_6_5"."Score_6" AS "Score_6", "GB_Model_6_5"."Score_7" AS "Score_7", "GB_Model_6_5"."Score_8" AS "Score_8", "GB_Model_6_5"."Score_9" AS "Score_9" 
+ SELECT "GB_B13"."KEY", "GB_B13"."Score_0", "GB_B13"."Score_1", "GB_B13"."Score_2", "GB_B13"."Score_3", "GB_B13"."Score_4", "GB_B13"."Score_5", "GB_B13"."Score_6", "GB_B13"."Score_7", "GB_B13"."Score_8", "GB_B13"."Score_9" 
+FROM (SELECT "GB_esu_13"."KEY" AS "KEY", "GB_esu_13"."Score_0" AS "Score_0", "GB_esu_13"."Score_1" AS "Score_1", "GB_esu_13"."Score_2" AS "Score_2", "GB_esu_13"."Score_3" AS "Score_3", "GB_esu_13"."Score_4" AS "Score_4", "GB_esu_13"."Score_5" AS "Score_5", "GB_esu_13"."Score_6" AS "Score_6", "GB_esu_13"."Score_7" AS "Score_7", "GB_esu_13"."Score_8" AS "Score_8", "GB_esu_13"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_6_5"."KEY" AS "KEY", "GB_Model_6_5"."Score_0" AS "Score_0", "GB_Model_6_5"."Score_1" AS "Score_1", "GB_Model_6_5"."Score_2" AS "Score_2", "GB_Model_6_5"."Score_3" AS "Score_3", "GB_Model_6_5"."Score_4" AS "Score_4", "GB_Model_6_5"."Score_5" AS "Score_5", "GB_Model_6_5"."Score_6" AS "Score_6", "GB_Model_6_5"."Score_7" AS "Score_7", "GB_Model_6_5"."Score_8" AS "Score_8", "GB_Model_6_5"."Score_9" AS "Score_9" 
 FROM "GB_Model_6_5" UNION ALL SELECT "GB_Model_6_6"."KEY" AS "KEY", "GB_Model_6_6"."Score_0" AS "Score_0", "GB_Model_6_6"."Score_1" AS "Score_1", "GB_Model_6_6"."Score_2" AS "Score_2", "GB_Model_6_6"."Score_3" AS "Score_3", "GB_Model_6_6"."Score_4" AS "Score_4", "GB_Model_6_6"."Score_5" AS "Score_5", "GB_Model_6_6"."Score_6" AS "Score_6", "GB_Model_6_6"."Score_7" AS "Score_7", "GB_Model_6_6"."Score_8" AS "Score_8", "GB_Model_6_6"."Score_9" AS "Score_9" 
 FROM "GB_Model_6_6" UNION ALL SELECT "GB_Model_6_7"."KEY" AS "KEY", "GB_Model_6_7"."Score_0" AS "Score_0", "GB_Model_6_7"."Score_1" AS "Score_1", "GB_Model_6_7"."Score_2" AS "Score_2", "GB_Model_6_7"."Score_3" AS "Score_3", "GB_Model_6_7"."Score_4" AS "Score_4", "GB_Model_6_7"."Score_5" AS "Score_5", "GB_Model_6_7"."Score_6" AS "Score_6", "GB_Model_6_7"."Score_7" AS "Score_7", "GB_Model_6_7"."Score_8" AS "Score_8", "GB_Model_6_7"."Score_9" AS "Score_9" 
 FROM "GB_Model_6_7" UNION ALL SELECT "GB_Model_6_8"."KEY" AS "KEY", "GB_Model_6_8"."Score_0" AS "Score_0", "GB_Model_6_8"."Score_1" AS "Score_1", "GB_Model_6_8"."Score_2" AS "Score_2", "GB_Model_6_8"."Score_3" AS "Score_3", "GB_Model_6_8"."Score_4" AS "Score_4", "GB_Model_6_8"."Score_5" AS "Score_5", "GB_Model_6_8"."Score_6" AS "Score_6", "GB_Model_6_8"."Score_7" AS "Score_7", "GB_Model_6_8"."Score_8" AS "Score_8", "GB_Model_6_8"."Score_9" AS "Score_9" 
 FROM "GB_Model_6_8" UNION ALL SELECT "GB_Model_6_9"."KEY" AS "KEY", "GB_Model_6_9"."Score_0" AS "Score_0", "GB_Model_6_9"."Score_1" AS "Score_1", "GB_Model_6_9"."Score_2" AS "Score_2", "GB_Model_6_9"."Score_3" AS "Score_3", "GB_Model_6_9"."Score_4" AS "Score_4", "GB_Model_6_9"."Score_5" AS "Score_5", "GB_Model_6_9"."Score_6" AS "Score_6", "GB_Model_6_9"."Score_7" AS "Score_7", "GB_Model_6_9"."Score_8" AS "Score_8", "GB_Model_6_9"."Score_9" AS "Score_9" 
-FROM "GB_Model_6_9") AS "GB_esu_6") AS "GB_B6") AS "U"
+FROM "GB_Model_6_9") AS "GB_esu_13") AS "GB_B13") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_GDYHRR_GB_ part 1. Create 
+-- Code For temporary table TMP_20180602_GHO_GB_B14 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_GDYHRR_GB_" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_GHO_GB_B14" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -1121,9 +1303,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_GDYHRR_GB_" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_GDYHRR_GB_ part 2. Populate
+-- Code For temporary table TMP_20180602_GHO_GB_B14 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_GDYHRR_GB_" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+INSERT INTO "TMP_20180602_GHO_GB_B14" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
 FROM (WITH "DT_node_lookup_70" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_36" <= 0.5) THEN CASE WHEN ("ADS"."Feature_28" <= 4.5) THEN CASE WHEN ("ADS"."Feature_13" <= 2.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_42" <= 13.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_28" <= 0.5) THEN CASE WHEN ("ADS"."Feature_21" <= 12.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_18" <= 6.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
@@ -1183,8 +1365,39 @@ FROM (SELECT 3 AS nid, -0.8441412073335544 AS "E" FROM rdb$database UNION ALL SE
 FROM "DT_node_lookup_74" LEFT OUTER JOIN "DT_node_data_74" ON "DT_node_lookup_74".node_id_2 = "DT_node_data_74".nid), 
 "GB_Model_7_4" AS 
 (SELECT "DT_Output_74"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", "DT_Output_74"."E" AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", 0.0 AS "Score_9" 
-FROM "DT_Output_74"), 
-"DT_node_lookup_75" AS 
+FROM "DT_Output_74")
+ SELECT "GB_B14"."KEY", "GB_B14"."Score_0", "GB_B14"."Score_1", "GB_B14"."Score_2", "GB_B14"."Score_3", "GB_B14"."Score_4", "GB_B14"."Score_5", "GB_B14"."Score_6", "GB_B14"."Score_7", "GB_B14"."Score_8", "GB_B14"."Score_9" 
+FROM (SELECT "GB_esu_14"."KEY" AS "KEY", "GB_esu_14"."Score_0" AS "Score_0", "GB_esu_14"."Score_1" AS "Score_1", "GB_esu_14"."Score_2" AS "Score_2", "GB_esu_14"."Score_3" AS "Score_3", "GB_esu_14"."Score_4" AS "Score_4", "GB_esu_14"."Score_5" AS "Score_5", "GB_esu_14"."Score_6" AS "Score_6", "GB_esu_14"."Score_7" AS "Score_7", "GB_esu_14"."Score_8" AS "Score_8", "GB_esu_14"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_7_0"."KEY" AS "KEY", "GB_Model_7_0"."Score_0" AS "Score_0", "GB_Model_7_0"."Score_1" AS "Score_1", "GB_Model_7_0"."Score_2" AS "Score_2", "GB_Model_7_0"."Score_3" AS "Score_3", "GB_Model_7_0"."Score_4" AS "Score_4", "GB_Model_7_0"."Score_5" AS "Score_5", "GB_Model_7_0"."Score_6" AS "Score_6", "GB_Model_7_0"."Score_7" AS "Score_7", "GB_Model_7_0"."Score_8" AS "Score_8", "GB_Model_7_0"."Score_9" AS "Score_9" 
+FROM "GB_Model_7_0" UNION ALL SELECT "GB_Model_7_1"."KEY" AS "KEY", "GB_Model_7_1"."Score_0" AS "Score_0", "GB_Model_7_1"."Score_1" AS "Score_1", "GB_Model_7_1"."Score_2" AS "Score_2", "GB_Model_7_1"."Score_3" AS "Score_3", "GB_Model_7_1"."Score_4" AS "Score_4", "GB_Model_7_1"."Score_5" AS "Score_5", "GB_Model_7_1"."Score_6" AS "Score_6", "GB_Model_7_1"."Score_7" AS "Score_7", "GB_Model_7_1"."Score_8" AS "Score_8", "GB_Model_7_1"."Score_9" AS "Score_9" 
+FROM "GB_Model_7_1" UNION ALL SELECT "GB_Model_7_2"."KEY" AS "KEY", "GB_Model_7_2"."Score_0" AS "Score_0", "GB_Model_7_2"."Score_1" AS "Score_1", "GB_Model_7_2"."Score_2" AS "Score_2", "GB_Model_7_2"."Score_3" AS "Score_3", "GB_Model_7_2"."Score_4" AS "Score_4", "GB_Model_7_2"."Score_5" AS "Score_5", "GB_Model_7_2"."Score_6" AS "Score_6", "GB_Model_7_2"."Score_7" AS "Score_7", "GB_Model_7_2"."Score_8" AS "Score_8", "GB_Model_7_2"."Score_9" AS "Score_9" 
+FROM "GB_Model_7_2" UNION ALL SELECT "GB_Model_7_3"."KEY" AS "KEY", "GB_Model_7_3"."Score_0" AS "Score_0", "GB_Model_7_3"."Score_1" AS "Score_1", "GB_Model_7_3"."Score_2" AS "Score_2", "GB_Model_7_3"."Score_3" AS "Score_3", "GB_Model_7_3"."Score_4" AS "Score_4", "GB_Model_7_3"."Score_5" AS "Score_5", "GB_Model_7_3"."Score_6" AS "Score_6", "GB_Model_7_3"."Score_7" AS "Score_7", "GB_Model_7_3"."Score_8" AS "Score_8", "GB_Model_7_3"."Score_9" AS "Score_9" 
+FROM "GB_Model_7_3" UNION ALL SELECT "GB_Model_7_4"."KEY" AS "KEY", "GB_Model_7_4"."Score_0" AS "Score_0", "GB_Model_7_4"."Score_1" AS "Score_1", "GB_Model_7_4"."Score_2" AS "Score_2", "GB_Model_7_4"."Score_3" AS "Score_3", "GB_Model_7_4"."Score_4" AS "Score_4", "GB_Model_7_4"."Score_5" AS "Score_5", "GB_Model_7_4"."Score_6" AS "Score_6", "GB_Model_7_4"."Score_7" AS "Score_7", "GB_Model_7_4"."Score_8" AS "Score_8", "GB_Model_7_4"."Score_9" AS "Score_9" 
+FROM "GB_Model_7_4") AS "GB_esu_14") AS "GB_B14") AS "U"
+
+-- Code For temporary table TMP_20180602_L7C_GB_B15 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_L7C_GB_B15" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Score_2" DOUBLE PRECISION, 
+	"Score_3" DOUBLE PRECISION, 
+	"Score_4" DOUBLE PRECISION, 
+	"Score_5" DOUBLE PRECISION, 
+	"Score_6" DOUBLE PRECISION, 
+	"Score_7" DOUBLE PRECISION, 
+	"Score_8" DOUBLE PRECISION, 
+	"Score_9" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_L7C_GB_B15 part 2. Populate
+
+INSERT INTO "TMP_20180602_L7C_GB_B15" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+FROM (WITH "DT_node_lookup_75" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_21" <= 0.5) THEN CASE WHEN ("ADS"."Feature_5" <= 3.5) THEN CASE WHEN ("ADS"."Feature_29" <= 11.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_2" <= 1.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_43" <= 0.5) THEN CASE WHEN ("ADS"."Feature_21" <= 3.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_1" <= 5.0) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
 "DT_node_data_75" AS 
@@ -1244,24 +1457,19 @@ FROM "DT_node_lookup_79" LEFT OUTER JOIN "DT_node_data_79" ON "DT_node_lookup_79
 "GB_Model_7_9" AS 
 (SELECT "DT_Output_79"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", 0.0 AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", "DT_Output_79"."E" AS "Score_9" 
 FROM "DT_Output_79")
- SELECT "GB_B7"."KEY", "GB_B7"."Score_0", "GB_B7"."Score_1", "GB_B7"."Score_2", "GB_B7"."Score_3", "GB_B7"."Score_4", "GB_B7"."Score_5", "GB_B7"."Score_6", "GB_B7"."Score_7", "GB_B7"."Score_8", "GB_B7"."Score_9" 
-FROM (SELECT "GB_esu_7"."KEY" AS "KEY", "GB_esu_7"."Score_0" AS "Score_0", "GB_esu_7"."Score_1" AS "Score_1", "GB_esu_7"."Score_2" AS "Score_2", "GB_esu_7"."Score_3" AS "Score_3", "GB_esu_7"."Score_4" AS "Score_4", "GB_esu_7"."Score_5" AS "Score_5", "GB_esu_7"."Score_6" AS "Score_6", "GB_esu_7"."Score_7" AS "Score_7", "GB_esu_7"."Score_8" AS "Score_8", "GB_esu_7"."Score_9" AS "Score_9" 
-FROM (SELECT "GB_Model_7_0"."KEY" AS "KEY", "GB_Model_7_0"."Score_0" AS "Score_0", "GB_Model_7_0"."Score_1" AS "Score_1", "GB_Model_7_0"."Score_2" AS "Score_2", "GB_Model_7_0"."Score_3" AS "Score_3", "GB_Model_7_0"."Score_4" AS "Score_4", "GB_Model_7_0"."Score_5" AS "Score_5", "GB_Model_7_0"."Score_6" AS "Score_6", "GB_Model_7_0"."Score_7" AS "Score_7", "GB_Model_7_0"."Score_8" AS "Score_8", "GB_Model_7_0"."Score_9" AS "Score_9" 
-FROM "GB_Model_7_0" UNION ALL SELECT "GB_Model_7_1"."KEY" AS "KEY", "GB_Model_7_1"."Score_0" AS "Score_0", "GB_Model_7_1"."Score_1" AS "Score_1", "GB_Model_7_1"."Score_2" AS "Score_2", "GB_Model_7_1"."Score_3" AS "Score_3", "GB_Model_7_1"."Score_4" AS "Score_4", "GB_Model_7_1"."Score_5" AS "Score_5", "GB_Model_7_1"."Score_6" AS "Score_6", "GB_Model_7_1"."Score_7" AS "Score_7", "GB_Model_7_1"."Score_8" AS "Score_8", "GB_Model_7_1"."Score_9" AS "Score_9" 
-FROM "GB_Model_7_1" UNION ALL SELECT "GB_Model_7_2"."KEY" AS "KEY", "GB_Model_7_2"."Score_0" AS "Score_0", "GB_Model_7_2"."Score_1" AS "Score_1", "GB_Model_7_2"."Score_2" AS "Score_2", "GB_Model_7_2"."Score_3" AS "Score_3", "GB_Model_7_2"."Score_4" AS "Score_4", "GB_Model_7_2"."Score_5" AS "Score_5", "GB_Model_7_2"."Score_6" AS "Score_6", "GB_Model_7_2"."Score_7" AS "Score_7", "GB_Model_7_2"."Score_8" AS "Score_8", "GB_Model_7_2"."Score_9" AS "Score_9" 
-FROM "GB_Model_7_2" UNION ALL SELECT "GB_Model_7_3"."KEY" AS "KEY", "GB_Model_7_3"."Score_0" AS "Score_0", "GB_Model_7_3"."Score_1" AS "Score_1", "GB_Model_7_3"."Score_2" AS "Score_2", "GB_Model_7_3"."Score_3" AS "Score_3", "GB_Model_7_3"."Score_4" AS "Score_4", "GB_Model_7_3"."Score_5" AS "Score_5", "GB_Model_7_3"."Score_6" AS "Score_6", "GB_Model_7_3"."Score_7" AS "Score_7", "GB_Model_7_3"."Score_8" AS "Score_8", "GB_Model_7_3"."Score_9" AS "Score_9" 
-FROM "GB_Model_7_3" UNION ALL SELECT "GB_Model_7_4"."KEY" AS "KEY", "GB_Model_7_4"."Score_0" AS "Score_0", "GB_Model_7_4"."Score_1" AS "Score_1", "GB_Model_7_4"."Score_2" AS "Score_2", "GB_Model_7_4"."Score_3" AS "Score_3", "GB_Model_7_4"."Score_4" AS "Score_4", "GB_Model_7_4"."Score_5" AS "Score_5", "GB_Model_7_4"."Score_6" AS "Score_6", "GB_Model_7_4"."Score_7" AS "Score_7", "GB_Model_7_4"."Score_8" AS "Score_8", "GB_Model_7_4"."Score_9" AS "Score_9" 
-FROM "GB_Model_7_4" UNION ALL SELECT "GB_Model_7_5"."KEY" AS "KEY", "GB_Model_7_5"."Score_0" AS "Score_0", "GB_Model_7_5"."Score_1" AS "Score_1", "GB_Model_7_5"."Score_2" AS "Score_2", "GB_Model_7_5"."Score_3" AS "Score_3", "GB_Model_7_5"."Score_4" AS "Score_4", "GB_Model_7_5"."Score_5" AS "Score_5", "GB_Model_7_5"."Score_6" AS "Score_6", "GB_Model_7_5"."Score_7" AS "Score_7", "GB_Model_7_5"."Score_8" AS "Score_8", "GB_Model_7_5"."Score_9" AS "Score_9" 
+ SELECT "GB_B15"."KEY", "GB_B15"."Score_0", "GB_B15"."Score_1", "GB_B15"."Score_2", "GB_B15"."Score_3", "GB_B15"."Score_4", "GB_B15"."Score_5", "GB_B15"."Score_6", "GB_B15"."Score_7", "GB_B15"."Score_8", "GB_B15"."Score_9" 
+FROM (SELECT "GB_esu_15"."KEY" AS "KEY", "GB_esu_15"."Score_0" AS "Score_0", "GB_esu_15"."Score_1" AS "Score_1", "GB_esu_15"."Score_2" AS "Score_2", "GB_esu_15"."Score_3" AS "Score_3", "GB_esu_15"."Score_4" AS "Score_4", "GB_esu_15"."Score_5" AS "Score_5", "GB_esu_15"."Score_6" AS "Score_6", "GB_esu_15"."Score_7" AS "Score_7", "GB_esu_15"."Score_8" AS "Score_8", "GB_esu_15"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_7_5"."KEY" AS "KEY", "GB_Model_7_5"."Score_0" AS "Score_0", "GB_Model_7_5"."Score_1" AS "Score_1", "GB_Model_7_5"."Score_2" AS "Score_2", "GB_Model_7_5"."Score_3" AS "Score_3", "GB_Model_7_5"."Score_4" AS "Score_4", "GB_Model_7_5"."Score_5" AS "Score_5", "GB_Model_7_5"."Score_6" AS "Score_6", "GB_Model_7_5"."Score_7" AS "Score_7", "GB_Model_7_5"."Score_8" AS "Score_8", "GB_Model_7_5"."Score_9" AS "Score_9" 
 FROM "GB_Model_7_5" UNION ALL SELECT "GB_Model_7_6"."KEY" AS "KEY", "GB_Model_7_6"."Score_0" AS "Score_0", "GB_Model_7_6"."Score_1" AS "Score_1", "GB_Model_7_6"."Score_2" AS "Score_2", "GB_Model_7_6"."Score_3" AS "Score_3", "GB_Model_7_6"."Score_4" AS "Score_4", "GB_Model_7_6"."Score_5" AS "Score_5", "GB_Model_7_6"."Score_6" AS "Score_6", "GB_Model_7_6"."Score_7" AS "Score_7", "GB_Model_7_6"."Score_8" AS "Score_8", "GB_Model_7_6"."Score_9" AS "Score_9" 
 FROM "GB_Model_7_6" UNION ALL SELECT "GB_Model_7_7"."KEY" AS "KEY", "GB_Model_7_7"."Score_0" AS "Score_0", "GB_Model_7_7"."Score_1" AS "Score_1", "GB_Model_7_7"."Score_2" AS "Score_2", "GB_Model_7_7"."Score_3" AS "Score_3", "GB_Model_7_7"."Score_4" AS "Score_4", "GB_Model_7_7"."Score_5" AS "Score_5", "GB_Model_7_7"."Score_6" AS "Score_6", "GB_Model_7_7"."Score_7" AS "Score_7", "GB_Model_7_7"."Score_8" AS "Score_8", "GB_Model_7_7"."Score_9" AS "Score_9" 
 FROM "GB_Model_7_7" UNION ALL SELECT "GB_Model_7_8"."KEY" AS "KEY", "GB_Model_7_8"."Score_0" AS "Score_0", "GB_Model_7_8"."Score_1" AS "Score_1", "GB_Model_7_8"."Score_2" AS "Score_2", "GB_Model_7_8"."Score_3" AS "Score_3", "GB_Model_7_8"."Score_4" AS "Score_4", "GB_Model_7_8"."Score_5" AS "Score_5", "GB_Model_7_8"."Score_6" AS "Score_6", "GB_Model_7_8"."Score_7" AS "Score_7", "GB_Model_7_8"."Score_8" AS "Score_8", "GB_Model_7_8"."Score_9" AS "Score_9" 
 FROM "GB_Model_7_8" UNION ALL SELECT "GB_Model_7_9"."KEY" AS "KEY", "GB_Model_7_9"."Score_0" AS "Score_0", "GB_Model_7_9"."Score_1" AS "Score_1", "GB_Model_7_9"."Score_2" AS "Score_2", "GB_Model_7_9"."Score_3" AS "Score_3", "GB_Model_7_9"."Score_4" AS "Score_4", "GB_Model_7_9"."Score_5" AS "Score_5", "GB_Model_7_9"."Score_6" AS "Score_6", "GB_Model_7_9"."Score_7" AS "Score_7", "GB_Model_7_9"."Score_8" AS "Score_8", "GB_Model_7_9"."Score_9" AS "Score_9" 
-FROM "GB_Model_7_9") AS "GB_esu_7") AS "GB_B7") AS "U"
+FROM "GB_Model_7_9") AS "GB_esu_15") AS "GB_B15") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_E70BFJ_GB_ part 1. Create 
+-- Code For temporary table TMP_20180602_J5X_GB_B16 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_E70BFJ_GB_" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_J5X_GB_B16" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -1277,9 +1485,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_E70BFJ_GB_" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_E70BFJ_GB_ part 2. Populate
+-- Code For temporary table TMP_20180602_J5X_GB_B16 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_E70BFJ_GB_" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+INSERT INTO "TMP_20180602_J5X_GB_B16" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
 FROM (WITH "DT_node_lookup_80" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_36" <= 0.5) THEN CASE WHEN ("ADS"."Feature_28" <= 2.5) THEN CASE WHEN ("ADS"."Feature_43" <= 9.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_27" <= 2.0) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_28" <= 0.5) THEN CASE WHEN ("ADS"."Feature_21" <= 15.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_18" <= 6.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
@@ -1339,8 +1547,39 @@ FROM (SELECT 3 AS nid, -0.8354299249799595 AS "E" FROM rdb$database UNION ALL SE
 FROM "DT_node_lookup_84" LEFT OUTER JOIN "DT_node_data_84" ON "DT_node_lookup_84".node_id_2 = "DT_node_data_84".nid), 
 "GB_Model_8_4" AS 
 (SELECT "DT_Output_84"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", "DT_Output_84"."E" AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", 0.0 AS "Score_9" 
-FROM "DT_Output_84"), 
-"DT_node_lookup_85" AS 
+FROM "DT_Output_84")
+ SELECT "GB_B16"."KEY", "GB_B16"."Score_0", "GB_B16"."Score_1", "GB_B16"."Score_2", "GB_B16"."Score_3", "GB_B16"."Score_4", "GB_B16"."Score_5", "GB_B16"."Score_6", "GB_B16"."Score_7", "GB_B16"."Score_8", "GB_B16"."Score_9" 
+FROM (SELECT "GB_esu_16"."KEY" AS "KEY", "GB_esu_16"."Score_0" AS "Score_0", "GB_esu_16"."Score_1" AS "Score_1", "GB_esu_16"."Score_2" AS "Score_2", "GB_esu_16"."Score_3" AS "Score_3", "GB_esu_16"."Score_4" AS "Score_4", "GB_esu_16"."Score_5" AS "Score_5", "GB_esu_16"."Score_6" AS "Score_6", "GB_esu_16"."Score_7" AS "Score_7", "GB_esu_16"."Score_8" AS "Score_8", "GB_esu_16"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_8_0"."KEY" AS "KEY", "GB_Model_8_0"."Score_0" AS "Score_0", "GB_Model_8_0"."Score_1" AS "Score_1", "GB_Model_8_0"."Score_2" AS "Score_2", "GB_Model_8_0"."Score_3" AS "Score_3", "GB_Model_8_0"."Score_4" AS "Score_4", "GB_Model_8_0"."Score_5" AS "Score_5", "GB_Model_8_0"."Score_6" AS "Score_6", "GB_Model_8_0"."Score_7" AS "Score_7", "GB_Model_8_0"."Score_8" AS "Score_8", "GB_Model_8_0"."Score_9" AS "Score_9" 
+FROM "GB_Model_8_0" UNION ALL SELECT "GB_Model_8_1"."KEY" AS "KEY", "GB_Model_8_1"."Score_0" AS "Score_0", "GB_Model_8_1"."Score_1" AS "Score_1", "GB_Model_8_1"."Score_2" AS "Score_2", "GB_Model_8_1"."Score_3" AS "Score_3", "GB_Model_8_1"."Score_4" AS "Score_4", "GB_Model_8_1"."Score_5" AS "Score_5", "GB_Model_8_1"."Score_6" AS "Score_6", "GB_Model_8_1"."Score_7" AS "Score_7", "GB_Model_8_1"."Score_8" AS "Score_8", "GB_Model_8_1"."Score_9" AS "Score_9" 
+FROM "GB_Model_8_1" UNION ALL SELECT "GB_Model_8_2"."KEY" AS "KEY", "GB_Model_8_2"."Score_0" AS "Score_0", "GB_Model_8_2"."Score_1" AS "Score_1", "GB_Model_8_2"."Score_2" AS "Score_2", "GB_Model_8_2"."Score_3" AS "Score_3", "GB_Model_8_2"."Score_4" AS "Score_4", "GB_Model_8_2"."Score_5" AS "Score_5", "GB_Model_8_2"."Score_6" AS "Score_6", "GB_Model_8_2"."Score_7" AS "Score_7", "GB_Model_8_2"."Score_8" AS "Score_8", "GB_Model_8_2"."Score_9" AS "Score_9" 
+FROM "GB_Model_8_2" UNION ALL SELECT "GB_Model_8_3"."KEY" AS "KEY", "GB_Model_8_3"."Score_0" AS "Score_0", "GB_Model_8_3"."Score_1" AS "Score_1", "GB_Model_8_3"."Score_2" AS "Score_2", "GB_Model_8_3"."Score_3" AS "Score_3", "GB_Model_8_3"."Score_4" AS "Score_4", "GB_Model_8_3"."Score_5" AS "Score_5", "GB_Model_8_3"."Score_6" AS "Score_6", "GB_Model_8_3"."Score_7" AS "Score_7", "GB_Model_8_3"."Score_8" AS "Score_8", "GB_Model_8_3"."Score_9" AS "Score_9" 
+FROM "GB_Model_8_3" UNION ALL SELECT "GB_Model_8_4"."KEY" AS "KEY", "GB_Model_8_4"."Score_0" AS "Score_0", "GB_Model_8_4"."Score_1" AS "Score_1", "GB_Model_8_4"."Score_2" AS "Score_2", "GB_Model_8_4"."Score_3" AS "Score_3", "GB_Model_8_4"."Score_4" AS "Score_4", "GB_Model_8_4"."Score_5" AS "Score_5", "GB_Model_8_4"."Score_6" AS "Score_6", "GB_Model_8_4"."Score_7" AS "Score_7", "GB_Model_8_4"."Score_8" AS "Score_8", "GB_Model_8_4"."Score_9" AS "Score_9" 
+FROM "GB_Model_8_4") AS "GB_esu_16") AS "GB_B16") AS "U"
+
+-- Code For temporary table TMP_20180602_XHV_GB_B17 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_XHV_GB_B17" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Score_2" DOUBLE PRECISION, 
+	"Score_3" DOUBLE PRECISION, 
+	"Score_4" DOUBLE PRECISION, 
+	"Score_5" DOUBLE PRECISION, 
+	"Score_6" DOUBLE PRECISION, 
+	"Score_7" DOUBLE PRECISION, 
+	"Score_8" DOUBLE PRECISION, 
+	"Score_9" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_XHV_GB_B17 part 2. Populate
+
+INSERT INTO "TMP_20180602_XHV_GB_B17" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+FROM (WITH "DT_node_lookup_85" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_21" <= 0.5) THEN CASE WHEN ("ADS"."Feature_5" <= 3.5) THEN CASE WHEN ("ADS"."Feature_13" <= 9.0) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_42" <= 10.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_36" <= 1.5) THEN CASE WHEN ("ADS"."Feature_21" <= 6.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_1" <= 5.0) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
 "DT_node_data_85" AS 
@@ -1400,24 +1639,19 @@ FROM "DT_node_lookup_89" LEFT OUTER JOIN "DT_node_data_89" ON "DT_node_lookup_89
 "GB_Model_8_9" AS 
 (SELECT "DT_Output_89"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", 0.0 AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", "DT_Output_89"."E" AS "Score_9" 
 FROM "DT_Output_89")
- SELECT "GB_B8"."KEY", "GB_B8"."Score_0", "GB_B8"."Score_1", "GB_B8"."Score_2", "GB_B8"."Score_3", "GB_B8"."Score_4", "GB_B8"."Score_5", "GB_B8"."Score_6", "GB_B8"."Score_7", "GB_B8"."Score_8", "GB_B8"."Score_9" 
-FROM (SELECT "GB_esu_8"."KEY" AS "KEY", "GB_esu_8"."Score_0" AS "Score_0", "GB_esu_8"."Score_1" AS "Score_1", "GB_esu_8"."Score_2" AS "Score_2", "GB_esu_8"."Score_3" AS "Score_3", "GB_esu_8"."Score_4" AS "Score_4", "GB_esu_8"."Score_5" AS "Score_5", "GB_esu_8"."Score_6" AS "Score_6", "GB_esu_8"."Score_7" AS "Score_7", "GB_esu_8"."Score_8" AS "Score_8", "GB_esu_8"."Score_9" AS "Score_9" 
-FROM (SELECT "GB_Model_8_0"."KEY" AS "KEY", "GB_Model_8_0"."Score_0" AS "Score_0", "GB_Model_8_0"."Score_1" AS "Score_1", "GB_Model_8_0"."Score_2" AS "Score_2", "GB_Model_8_0"."Score_3" AS "Score_3", "GB_Model_8_0"."Score_4" AS "Score_4", "GB_Model_8_0"."Score_5" AS "Score_5", "GB_Model_8_0"."Score_6" AS "Score_6", "GB_Model_8_0"."Score_7" AS "Score_7", "GB_Model_8_0"."Score_8" AS "Score_8", "GB_Model_8_0"."Score_9" AS "Score_9" 
-FROM "GB_Model_8_0" UNION ALL SELECT "GB_Model_8_1"."KEY" AS "KEY", "GB_Model_8_1"."Score_0" AS "Score_0", "GB_Model_8_1"."Score_1" AS "Score_1", "GB_Model_8_1"."Score_2" AS "Score_2", "GB_Model_8_1"."Score_3" AS "Score_3", "GB_Model_8_1"."Score_4" AS "Score_4", "GB_Model_8_1"."Score_5" AS "Score_5", "GB_Model_8_1"."Score_6" AS "Score_6", "GB_Model_8_1"."Score_7" AS "Score_7", "GB_Model_8_1"."Score_8" AS "Score_8", "GB_Model_8_1"."Score_9" AS "Score_9" 
-FROM "GB_Model_8_1" UNION ALL SELECT "GB_Model_8_2"."KEY" AS "KEY", "GB_Model_8_2"."Score_0" AS "Score_0", "GB_Model_8_2"."Score_1" AS "Score_1", "GB_Model_8_2"."Score_2" AS "Score_2", "GB_Model_8_2"."Score_3" AS "Score_3", "GB_Model_8_2"."Score_4" AS "Score_4", "GB_Model_8_2"."Score_5" AS "Score_5", "GB_Model_8_2"."Score_6" AS "Score_6", "GB_Model_8_2"."Score_7" AS "Score_7", "GB_Model_8_2"."Score_8" AS "Score_8", "GB_Model_8_2"."Score_9" AS "Score_9" 
-FROM "GB_Model_8_2" UNION ALL SELECT "GB_Model_8_3"."KEY" AS "KEY", "GB_Model_8_3"."Score_0" AS "Score_0", "GB_Model_8_3"."Score_1" AS "Score_1", "GB_Model_8_3"."Score_2" AS "Score_2", "GB_Model_8_3"."Score_3" AS "Score_3", "GB_Model_8_3"."Score_4" AS "Score_4", "GB_Model_8_3"."Score_5" AS "Score_5", "GB_Model_8_3"."Score_6" AS "Score_6", "GB_Model_8_3"."Score_7" AS "Score_7", "GB_Model_8_3"."Score_8" AS "Score_8", "GB_Model_8_3"."Score_9" AS "Score_9" 
-FROM "GB_Model_8_3" UNION ALL SELECT "GB_Model_8_4"."KEY" AS "KEY", "GB_Model_8_4"."Score_0" AS "Score_0", "GB_Model_8_4"."Score_1" AS "Score_1", "GB_Model_8_4"."Score_2" AS "Score_2", "GB_Model_8_4"."Score_3" AS "Score_3", "GB_Model_8_4"."Score_4" AS "Score_4", "GB_Model_8_4"."Score_5" AS "Score_5", "GB_Model_8_4"."Score_6" AS "Score_6", "GB_Model_8_4"."Score_7" AS "Score_7", "GB_Model_8_4"."Score_8" AS "Score_8", "GB_Model_8_4"."Score_9" AS "Score_9" 
-FROM "GB_Model_8_4" UNION ALL SELECT "GB_Model_8_5"."KEY" AS "KEY", "GB_Model_8_5"."Score_0" AS "Score_0", "GB_Model_8_5"."Score_1" AS "Score_1", "GB_Model_8_5"."Score_2" AS "Score_2", "GB_Model_8_5"."Score_3" AS "Score_3", "GB_Model_8_5"."Score_4" AS "Score_4", "GB_Model_8_5"."Score_5" AS "Score_5", "GB_Model_8_5"."Score_6" AS "Score_6", "GB_Model_8_5"."Score_7" AS "Score_7", "GB_Model_8_5"."Score_8" AS "Score_8", "GB_Model_8_5"."Score_9" AS "Score_9" 
+ SELECT "GB_B17"."KEY", "GB_B17"."Score_0", "GB_B17"."Score_1", "GB_B17"."Score_2", "GB_B17"."Score_3", "GB_B17"."Score_4", "GB_B17"."Score_5", "GB_B17"."Score_6", "GB_B17"."Score_7", "GB_B17"."Score_8", "GB_B17"."Score_9" 
+FROM (SELECT "GB_esu_17"."KEY" AS "KEY", "GB_esu_17"."Score_0" AS "Score_0", "GB_esu_17"."Score_1" AS "Score_1", "GB_esu_17"."Score_2" AS "Score_2", "GB_esu_17"."Score_3" AS "Score_3", "GB_esu_17"."Score_4" AS "Score_4", "GB_esu_17"."Score_5" AS "Score_5", "GB_esu_17"."Score_6" AS "Score_6", "GB_esu_17"."Score_7" AS "Score_7", "GB_esu_17"."Score_8" AS "Score_8", "GB_esu_17"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_8_5"."KEY" AS "KEY", "GB_Model_8_5"."Score_0" AS "Score_0", "GB_Model_8_5"."Score_1" AS "Score_1", "GB_Model_8_5"."Score_2" AS "Score_2", "GB_Model_8_5"."Score_3" AS "Score_3", "GB_Model_8_5"."Score_4" AS "Score_4", "GB_Model_8_5"."Score_5" AS "Score_5", "GB_Model_8_5"."Score_6" AS "Score_6", "GB_Model_8_5"."Score_7" AS "Score_7", "GB_Model_8_5"."Score_8" AS "Score_8", "GB_Model_8_5"."Score_9" AS "Score_9" 
 FROM "GB_Model_8_5" UNION ALL SELECT "GB_Model_8_6"."KEY" AS "KEY", "GB_Model_8_6"."Score_0" AS "Score_0", "GB_Model_8_6"."Score_1" AS "Score_1", "GB_Model_8_6"."Score_2" AS "Score_2", "GB_Model_8_6"."Score_3" AS "Score_3", "GB_Model_8_6"."Score_4" AS "Score_4", "GB_Model_8_6"."Score_5" AS "Score_5", "GB_Model_8_6"."Score_6" AS "Score_6", "GB_Model_8_6"."Score_7" AS "Score_7", "GB_Model_8_6"."Score_8" AS "Score_8", "GB_Model_8_6"."Score_9" AS "Score_9" 
 FROM "GB_Model_8_6" UNION ALL SELECT "GB_Model_8_7"."KEY" AS "KEY", "GB_Model_8_7"."Score_0" AS "Score_0", "GB_Model_8_7"."Score_1" AS "Score_1", "GB_Model_8_7"."Score_2" AS "Score_2", "GB_Model_8_7"."Score_3" AS "Score_3", "GB_Model_8_7"."Score_4" AS "Score_4", "GB_Model_8_7"."Score_5" AS "Score_5", "GB_Model_8_7"."Score_6" AS "Score_6", "GB_Model_8_7"."Score_7" AS "Score_7", "GB_Model_8_7"."Score_8" AS "Score_8", "GB_Model_8_7"."Score_9" AS "Score_9" 
 FROM "GB_Model_8_7" UNION ALL SELECT "GB_Model_8_8"."KEY" AS "KEY", "GB_Model_8_8"."Score_0" AS "Score_0", "GB_Model_8_8"."Score_1" AS "Score_1", "GB_Model_8_8"."Score_2" AS "Score_2", "GB_Model_8_8"."Score_3" AS "Score_3", "GB_Model_8_8"."Score_4" AS "Score_4", "GB_Model_8_8"."Score_5" AS "Score_5", "GB_Model_8_8"."Score_6" AS "Score_6", "GB_Model_8_8"."Score_7" AS "Score_7", "GB_Model_8_8"."Score_8" AS "Score_8", "GB_Model_8_8"."Score_9" AS "Score_9" 
 FROM "GB_Model_8_8" UNION ALL SELECT "GB_Model_8_9"."KEY" AS "KEY", "GB_Model_8_9"."Score_0" AS "Score_0", "GB_Model_8_9"."Score_1" AS "Score_1", "GB_Model_8_9"."Score_2" AS "Score_2", "GB_Model_8_9"."Score_3" AS "Score_3", "GB_Model_8_9"."Score_4" AS "Score_4", "GB_Model_8_9"."Score_5" AS "Score_5", "GB_Model_8_9"."Score_6" AS "Score_6", "GB_Model_8_9"."Score_7" AS "Score_7", "GB_Model_8_9"."Score_8" AS "Score_8", "GB_Model_8_9"."Score_9" AS "Score_9" 
-FROM "GB_Model_8_9") AS "GB_esu_8") AS "GB_B8") AS "U"
+FROM "GB_Model_8_9") AS "GB_esu_17") AS "GB_B17") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_KISLHC_GB_ part 1. Create 
+-- Code For temporary table TMP_20180602_1Q1_GB_B18 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_KISLHC_GB_" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_1Q1_GB_B18" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -1433,9 +1667,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_KISLHC_GB_" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_KISLHC_GB_ part 2. Populate
+-- Code For temporary table TMP_20180602_1Q1_GB_B18 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_KISLHC_GB_" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+INSERT INTO "TMP_20180602_1Q1_GB_B18" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
 FROM (WITH "DT_node_lookup_90" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_36" <= 0.5) THEN CASE WHEN ("ADS"."Feature_28" <= 2.5) THEN CASE WHEN ("ADS"."Feature_43" <= 9.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_2" <= 0.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_28" <= 0.5) THEN CASE WHEN ("ADS"."Feature_21" <= 12.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_18" <= 6.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
@@ -1495,8 +1729,39 @@ FROM (SELECT 3 AS nid, 1.2038880276296142 AS "E" FROM rdb$database UNION ALL SEL
 FROM "DT_node_lookup_94" LEFT OUTER JOIN "DT_node_data_94" ON "DT_node_lookup_94".node_id_2 = "DT_node_data_94".nid), 
 "GB_Model_9_4" AS 
 (SELECT "DT_Output_94"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", "DT_Output_94"."E" AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", 0.0 AS "Score_9" 
-FROM "DT_Output_94"), 
-"DT_node_lookup_95" AS 
+FROM "DT_Output_94")
+ SELECT "GB_B18"."KEY", "GB_B18"."Score_0", "GB_B18"."Score_1", "GB_B18"."Score_2", "GB_B18"."Score_3", "GB_B18"."Score_4", "GB_B18"."Score_5", "GB_B18"."Score_6", "GB_B18"."Score_7", "GB_B18"."Score_8", "GB_B18"."Score_9" 
+FROM (SELECT "GB_esu_18"."KEY" AS "KEY", "GB_esu_18"."Score_0" AS "Score_0", "GB_esu_18"."Score_1" AS "Score_1", "GB_esu_18"."Score_2" AS "Score_2", "GB_esu_18"."Score_3" AS "Score_3", "GB_esu_18"."Score_4" AS "Score_4", "GB_esu_18"."Score_5" AS "Score_5", "GB_esu_18"."Score_6" AS "Score_6", "GB_esu_18"."Score_7" AS "Score_7", "GB_esu_18"."Score_8" AS "Score_8", "GB_esu_18"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_9_0"."KEY" AS "KEY", "GB_Model_9_0"."Score_0" AS "Score_0", "GB_Model_9_0"."Score_1" AS "Score_1", "GB_Model_9_0"."Score_2" AS "Score_2", "GB_Model_9_0"."Score_3" AS "Score_3", "GB_Model_9_0"."Score_4" AS "Score_4", "GB_Model_9_0"."Score_5" AS "Score_5", "GB_Model_9_0"."Score_6" AS "Score_6", "GB_Model_9_0"."Score_7" AS "Score_7", "GB_Model_9_0"."Score_8" AS "Score_8", "GB_Model_9_0"."Score_9" AS "Score_9" 
+FROM "GB_Model_9_0" UNION ALL SELECT "GB_Model_9_1"."KEY" AS "KEY", "GB_Model_9_1"."Score_0" AS "Score_0", "GB_Model_9_1"."Score_1" AS "Score_1", "GB_Model_9_1"."Score_2" AS "Score_2", "GB_Model_9_1"."Score_3" AS "Score_3", "GB_Model_9_1"."Score_4" AS "Score_4", "GB_Model_9_1"."Score_5" AS "Score_5", "GB_Model_9_1"."Score_6" AS "Score_6", "GB_Model_9_1"."Score_7" AS "Score_7", "GB_Model_9_1"."Score_8" AS "Score_8", "GB_Model_9_1"."Score_9" AS "Score_9" 
+FROM "GB_Model_9_1" UNION ALL SELECT "GB_Model_9_2"."KEY" AS "KEY", "GB_Model_9_2"."Score_0" AS "Score_0", "GB_Model_9_2"."Score_1" AS "Score_1", "GB_Model_9_2"."Score_2" AS "Score_2", "GB_Model_9_2"."Score_3" AS "Score_3", "GB_Model_9_2"."Score_4" AS "Score_4", "GB_Model_9_2"."Score_5" AS "Score_5", "GB_Model_9_2"."Score_6" AS "Score_6", "GB_Model_9_2"."Score_7" AS "Score_7", "GB_Model_9_2"."Score_8" AS "Score_8", "GB_Model_9_2"."Score_9" AS "Score_9" 
+FROM "GB_Model_9_2" UNION ALL SELECT "GB_Model_9_3"."KEY" AS "KEY", "GB_Model_9_3"."Score_0" AS "Score_0", "GB_Model_9_3"."Score_1" AS "Score_1", "GB_Model_9_3"."Score_2" AS "Score_2", "GB_Model_9_3"."Score_3" AS "Score_3", "GB_Model_9_3"."Score_4" AS "Score_4", "GB_Model_9_3"."Score_5" AS "Score_5", "GB_Model_9_3"."Score_6" AS "Score_6", "GB_Model_9_3"."Score_7" AS "Score_7", "GB_Model_9_3"."Score_8" AS "Score_8", "GB_Model_9_3"."Score_9" AS "Score_9" 
+FROM "GB_Model_9_3" UNION ALL SELECT "GB_Model_9_4"."KEY" AS "KEY", "GB_Model_9_4"."Score_0" AS "Score_0", "GB_Model_9_4"."Score_1" AS "Score_1", "GB_Model_9_4"."Score_2" AS "Score_2", "GB_Model_9_4"."Score_3" AS "Score_3", "GB_Model_9_4"."Score_4" AS "Score_4", "GB_Model_9_4"."Score_5" AS "Score_5", "GB_Model_9_4"."Score_6" AS "Score_6", "GB_Model_9_4"."Score_7" AS "Score_7", "GB_Model_9_4"."Score_8" AS "Score_8", "GB_Model_9_4"."Score_9" AS "Score_9" 
+FROM "GB_Model_9_4") AS "GB_esu_18") AS "GB_B18") AS "U"
+
+-- Code For temporary table TMP_20180602_7AD_GB_B19 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_7AD_GB_B19" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Score_2" DOUBLE PRECISION, 
+	"Score_3" DOUBLE PRECISION, 
+	"Score_4" DOUBLE PRECISION, 
+	"Score_5" DOUBLE PRECISION, 
+	"Score_6" DOUBLE PRECISION, 
+	"Score_7" DOUBLE PRECISION, 
+	"Score_8" DOUBLE PRECISION, 
+	"Score_9" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_7AD_GB_B19 part 2. Populate
+
+INSERT INTO "TMP_20180602_7AD_GB_B19" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+FROM (WITH "DT_node_lookup_95" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_21" <= 0.5) THEN CASE WHEN ("ADS"."Feature_5" <= 3.5) THEN CASE WHEN ("ADS"."Feature_19" <= 1.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_2" <= 1.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_43" <= 0.5) THEN CASE WHEN ("ADS"."Feature_21" <= 3.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_1" <= 5.0) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
 "DT_node_data_95" AS 
@@ -1556,24 +1821,19 @@ FROM "DT_node_lookup_99" LEFT OUTER JOIN "DT_node_data_99" ON "DT_node_lookup_99
 "GB_Model_9_9" AS 
 (SELECT "DT_Output_99"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", 0.0 AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", "DT_Output_99"."E" AS "Score_9" 
 FROM "DT_Output_99")
- SELECT "GB_B9"."KEY", "GB_B9"."Score_0", "GB_B9"."Score_1", "GB_B9"."Score_2", "GB_B9"."Score_3", "GB_B9"."Score_4", "GB_B9"."Score_5", "GB_B9"."Score_6", "GB_B9"."Score_7", "GB_B9"."Score_8", "GB_B9"."Score_9" 
-FROM (SELECT "GB_esu_9"."KEY" AS "KEY", "GB_esu_9"."Score_0" AS "Score_0", "GB_esu_9"."Score_1" AS "Score_1", "GB_esu_9"."Score_2" AS "Score_2", "GB_esu_9"."Score_3" AS "Score_3", "GB_esu_9"."Score_4" AS "Score_4", "GB_esu_9"."Score_5" AS "Score_5", "GB_esu_9"."Score_6" AS "Score_6", "GB_esu_9"."Score_7" AS "Score_7", "GB_esu_9"."Score_8" AS "Score_8", "GB_esu_9"."Score_9" AS "Score_9" 
-FROM (SELECT "GB_Model_9_0"."KEY" AS "KEY", "GB_Model_9_0"."Score_0" AS "Score_0", "GB_Model_9_0"."Score_1" AS "Score_1", "GB_Model_9_0"."Score_2" AS "Score_2", "GB_Model_9_0"."Score_3" AS "Score_3", "GB_Model_9_0"."Score_4" AS "Score_4", "GB_Model_9_0"."Score_5" AS "Score_5", "GB_Model_9_0"."Score_6" AS "Score_6", "GB_Model_9_0"."Score_7" AS "Score_7", "GB_Model_9_0"."Score_8" AS "Score_8", "GB_Model_9_0"."Score_9" AS "Score_9" 
-FROM "GB_Model_9_0" UNION ALL SELECT "GB_Model_9_1"."KEY" AS "KEY", "GB_Model_9_1"."Score_0" AS "Score_0", "GB_Model_9_1"."Score_1" AS "Score_1", "GB_Model_9_1"."Score_2" AS "Score_2", "GB_Model_9_1"."Score_3" AS "Score_3", "GB_Model_9_1"."Score_4" AS "Score_4", "GB_Model_9_1"."Score_5" AS "Score_5", "GB_Model_9_1"."Score_6" AS "Score_6", "GB_Model_9_1"."Score_7" AS "Score_7", "GB_Model_9_1"."Score_8" AS "Score_8", "GB_Model_9_1"."Score_9" AS "Score_9" 
-FROM "GB_Model_9_1" UNION ALL SELECT "GB_Model_9_2"."KEY" AS "KEY", "GB_Model_9_2"."Score_0" AS "Score_0", "GB_Model_9_2"."Score_1" AS "Score_1", "GB_Model_9_2"."Score_2" AS "Score_2", "GB_Model_9_2"."Score_3" AS "Score_3", "GB_Model_9_2"."Score_4" AS "Score_4", "GB_Model_9_2"."Score_5" AS "Score_5", "GB_Model_9_2"."Score_6" AS "Score_6", "GB_Model_9_2"."Score_7" AS "Score_7", "GB_Model_9_2"."Score_8" AS "Score_8", "GB_Model_9_2"."Score_9" AS "Score_9" 
-FROM "GB_Model_9_2" UNION ALL SELECT "GB_Model_9_3"."KEY" AS "KEY", "GB_Model_9_3"."Score_0" AS "Score_0", "GB_Model_9_3"."Score_1" AS "Score_1", "GB_Model_9_3"."Score_2" AS "Score_2", "GB_Model_9_3"."Score_3" AS "Score_3", "GB_Model_9_3"."Score_4" AS "Score_4", "GB_Model_9_3"."Score_5" AS "Score_5", "GB_Model_9_3"."Score_6" AS "Score_6", "GB_Model_9_3"."Score_7" AS "Score_7", "GB_Model_9_3"."Score_8" AS "Score_8", "GB_Model_9_3"."Score_9" AS "Score_9" 
-FROM "GB_Model_9_3" UNION ALL SELECT "GB_Model_9_4"."KEY" AS "KEY", "GB_Model_9_4"."Score_0" AS "Score_0", "GB_Model_9_4"."Score_1" AS "Score_1", "GB_Model_9_4"."Score_2" AS "Score_2", "GB_Model_9_4"."Score_3" AS "Score_3", "GB_Model_9_4"."Score_4" AS "Score_4", "GB_Model_9_4"."Score_5" AS "Score_5", "GB_Model_9_4"."Score_6" AS "Score_6", "GB_Model_9_4"."Score_7" AS "Score_7", "GB_Model_9_4"."Score_8" AS "Score_8", "GB_Model_9_4"."Score_9" AS "Score_9" 
-FROM "GB_Model_9_4" UNION ALL SELECT "GB_Model_9_5"."KEY" AS "KEY", "GB_Model_9_5"."Score_0" AS "Score_0", "GB_Model_9_5"."Score_1" AS "Score_1", "GB_Model_9_5"."Score_2" AS "Score_2", "GB_Model_9_5"."Score_3" AS "Score_3", "GB_Model_9_5"."Score_4" AS "Score_4", "GB_Model_9_5"."Score_5" AS "Score_5", "GB_Model_9_5"."Score_6" AS "Score_6", "GB_Model_9_5"."Score_7" AS "Score_7", "GB_Model_9_5"."Score_8" AS "Score_8", "GB_Model_9_5"."Score_9" AS "Score_9" 
+ SELECT "GB_B19"."KEY", "GB_B19"."Score_0", "GB_B19"."Score_1", "GB_B19"."Score_2", "GB_B19"."Score_3", "GB_B19"."Score_4", "GB_B19"."Score_5", "GB_B19"."Score_6", "GB_B19"."Score_7", "GB_B19"."Score_8", "GB_B19"."Score_9" 
+FROM (SELECT "GB_esu_19"."KEY" AS "KEY", "GB_esu_19"."Score_0" AS "Score_0", "GB_esu_19"."Score_1" AS "Score_1", "GB_esu_19"."Score_2" AS "Score_2", "GB_esu_19"."Score_3" AS "Score_3", "GB_esu_19"."Score_4" AS "Score_4", "GB_esu_19"."Score_5" AS "Score_5", "GB_esu_19"."Score_6" AS "Score_6", "GB_esu_19"."Score_7" AS "Score_7", "GB_esu_19"."Score_8" AS "Score_8", "GB_esu_19"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_9_5"."KEY" AS "KEY", "GB_Model_9_5"."Score_0" AS "Score_0", "GB_Model_9_5"."Score_1" AS "Score_1", "GB_Model_9_5"."Score_2" AS "Score_2", "GB_Model_9_5"."Score_3" AS "Score_3", "GB_Model_9_5"."Score_4" AS "Score_4", "GB_Model_9_5"."Score_5" AS "Score_5", "GB_Model_9_5"."Score_6" AS "Score_6", "GB_Model_9_5"."Score_7" AS "Score_7", "GB_Model_9_5"."Score_8" AS "Score_8", "GB_Model_9_5"."Score_9" AS "Score_9" 
 FROM "GB_Model_9_5" UNION ALL SELECT "GB_Model_9_6"."KEY" AS "KEY", "GB_Model_9_6"."Score_0" AS "Score_0", "GB_Model_9_6"."Score_1" AS "Score_1", "GB_Model_9_6"."Score_2" AS "Score_2", "GB_Model_9_6"."Score_3" AS "Score_3", "GB_Model_9_6"."Score_4" AS "Score_4", "GB_Model_9_6"."Score_5" AS "Score_5", "GB_Model_9_6"."Score_6" AS "Score_6", "GB_Model_9_6"."Score_7" AS "Score_7", "GB_Model_9_6"."Score_8" AS "Score_8", "GB_Model_9_6"."Score_9" AS "Score_9" 
 FROM "GB_Model_9_6" UNION ALL SELECT "GB_Model_9_7"."KEY" AS "KEY", "GB_Model_9_7"."Score_0" AS "Score_0", "GB_Model_9_7"."Score_1" AS "Score_1", "GB_Model_9_7"."Score_2" AS "Score_2", "GB_Model_9_7"."Score_3" AS "Score_3", "GB_Model_9_7"."Score_4" AS "Score_4", "GB_Model_9_7"."Score_5" AS "Score_5", "GB_Model_9_7"."Score_6" AS "Score_6", "GB_Model_9_7"."Score_7" AS "Score_7", "GB_Model_9_7"."Score_8" AS "Score_8", "GB_Model_9_7"."Score_9" AS "Score_9" 
 FROM "GB_Model_9_7" UNION ALL SELECT "GB_Model_9_8"."KEY" AS "KEY", "GB_Model_9_8"."Score_0" AS "Score_0", "GB_Model_9_8"."Score_1" AS "Score_1", "GB_Model_9_8"."Score_2" AS "Score_2", "GB_Model_9_8"."Score_3" AS "Score_3", "GB_Model_9_8"."Score_4" AS "Score_4", "GB_Model_9_8"."Score_5" AS "Score_5", "GB_Model_9_8"."Score_6" AS "Score_6", "GB_Model_9_8"."Score_7" AS "Score_7", "GB_Model_9_8"."Score_8" AS "Score_8", "GB_Model_9_8"."Score_9" AS "Score_9" 
 FROM "GB_Model_9_8" UNION ALL SELECT "GB_Model_9_9"."KEY" AS "KEY", "GB_Model_9_9"."Score_0" AS "Score_0", "GB_Model_9_9"."Score_1" AS "Score_1", "GB_Model_9_9"."Score_2" AS "Score_2", "GB_Model_9_9"."Score_3" AS "Score_3", "GB_Model_9_9"."Score_4" AS "Score_4", "GB_Model_9_9"."Score_5" AS "Score_5", "GB_Model_9_9"."Score_6" AS "Score_6", "GB_Model_9_9"."Score_7" AS "Score_7", "GB_Model_9_9"."Score_8" AS "Score_8", "GB_Model_9_9"."Score_9" AS "Score_9" 
-FROM "GB_Model_9_9") AS "GB_esu_9") AS "GB_B9") AS "U"
+FROM "GB_Model_9_9") AS "GB_esu_19") AS "GB_B19") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_25LC0C_GB_ part 1. Create 
+-- Code For temporary table TMP_20180602_ZXO_GB_B20 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_25LC0C_GB_" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_ZXO_GB_B20" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -1589,9 +1849,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_25LC0C_GB_" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_25LC0C_GB_ part 2. Populate
+-- Code For temporary table TMP_20180602_ZXO_GB_B20 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_25LC0C_GB_" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+INSERT INTO "TMP_20180602_ZXO_GB_B20" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
 FROM (WITH "DT_node_lookup_100" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_36" <= 0.5) THEN CASE WHEN ("ADS"."Feature_33" <= 0.5) THEN CASE WHEN ("ADS"."Feature_63" <= 2.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_13" <= 2.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_28" <= 0.5) THEN CASE WHEN ("ADS"."Feature_21" <= 12.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_18" <= 6.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
@@ -1651,8 +1911,39 @@ FROM (SELECT 3 AS nid, 0.5805624223506544 AS "E" FROM rdb$database UNION ALL SEL
 FROM "DT_node_lookup_104" LEFT OUTER JOIN "DT_node_data_104" ON "DT_node_lookup_104".node_id_2 = "DT_node_data_104".nid), 
 "GB_Model_10_4" AS 
 (SELECT "DT_Output_104"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", "DT_Output_104"."E" AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", 0.0 AS "Score_9" 
-FROM "DT_Output_104"), 
-"DT_node_lookup_105" AS 
+FROM "DT_Output_104")
+ SELECT "GB_B20"."KEY", "GB_B20"."Score_0", "GB_B20"."Score_1", "GB_B20"."Score_2", "GB_B20"."Score_3", "GB_B20"."Score_4", "GB_B20"."Score_5", "GB_B20"."Score_6", "GB_B20"."Score_7", "GB_B20"."Score_8", "GB_B20"."Score_9" 
+FROM (SELECT "GB_esu_20"."KEY" AS "KEY", "GB_esu_20"."Score_0" AS "Score_0", "GB_esu_20"."Score_1" AS "Score_1", "GB_esu_20"."Score_2" AS "Score_2", "GB_esu_20"."Score_3" AS "Score_3", "GB_esu_20"."Score_4" AS "Score_4", "GB_esu_20"."Score_5" AS "Score_5", "GB_esu_20"."Score_6" AS "Score_6", "GB_esu_20"."Score_7" AS "Score_7", "GB_esu_20"."Score_8" AS "Score_8", "GB_esu_20"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_10_0"."KEY" AS "KEY", "GB_Model_10_0"."Score_0" AS "Score_0", "GB_Model_10_0"."Score_1" AS "Score_1", "GB_Model_10_0"."Score_2" AS "Score_2", "GB_Model_10_0"."Score_3" AS "Score_3", "GB_Model_10_0"."Score_4" AS "Score_4", "GB_Model_10_0"."Score_5" AS "Score_5", "GB_Model_10_0"."Score_6" AS "Score_6", "GB_Model_10_0"."Score_7" AS "Score_7", "GB_Model_10_0"."Score_8" AS "Score_8", "GB_Model_10_0"."Score_9" AS "Score_9" 
+FROM "GB_Model_10_0" UNION ALL SELECT "GB_Model_10_1"."KEY" AS "KEY", "GB_Model_10_1"."Score_0" AS "Score_0", "GB_Model_10_1"."Score_1" AS "Score_1", "GB_Model_10_1"."Score_2" AS "Score_2", "GB_Model_10_1"."Score_3" AS "Score_3", "GB_Model_10_1"."Score_4" AS "Score_4", "GB_Model_10_1"."Score_5" AS "Score_5", "GB_Model_10_1"."Score_6" AS "Score_6", "GB_Model_10_1"."Score_7" AS "Score_7", "GB_Model_10_1"."Score_8" AS "Score_8", "GB_Model_10_1"."Score_9" AS "Score_9" 
+FROM "GB_Model_10_1" UNION ALL SELECT "GB_Model_10_2"."KEY" AS "KEY", "GB_Model_10_2"."Score_0" AS "Score_0", "GB_Model_10_2"."Score_1" AS "Score_1", "GB_Model_10_2"."Score_2" AS "Score_2", "GB_Model_10_2"."Score_3" AS "Score_3", "GB_Model_10_2"."Score_4" AS "Score_4", "GB_Model_10_2"."Score_5" AS "Score_5", "GB_Model_10_2"."Score_6" AS "Score_6", "GB_Model_10_2"."Score_7" AS "Score_7", "GB_Model_10_2"."Score_8" AS "Score_8", "GB_Model_10_2"."Score_9" AS "Score_9" 
+FROM "GB_Model_10_2" UNION ALL SELECT "GB_Model_10_3"."KEY" AS "KEY", "GB_Model_10_3"."Score_0" AS "Score_0", "GB_Model_10_3"."Score_1" AS "Score_1", "GB_Model_10_3"."Score_2" AS "Score_2", "GB_Model_10_3"."Score_3" AS "Score_3", "GB_Model_10_3"."Score_4" AS "Score_4", "GB_Model_10_3"."Score_5" AS "Score_5", "GB_Model_10_3"."Score_6" AS "Score_6", "GB_Model_10_3"."Score_7" AS "Score_7", "GB_Model_10_3"."Score_8" AS "Score_8", "GB_Model_10_3"."Score_9" AS "Score_9" 
+FROM "GB_Model_10_3" UNION ALL SELECT "GB_Model_10_4"."KEY" AS "KEY", "GB_Model_10_4"."Score_0" AS "Score_0", "GB_Model_10_4"."Score_1" AS "Score_1", "GB_Model_10_4"."Score_2" AS "Score_2", "GB_Model_10_4"."Score_3" AS "Score_3", "GB_Model_10_4"."Score_4" AS "Score_4", "GB_Model_10_4"."Score_5" AS "Score_5", "GB_Model_10_4"."Score_6" AS "Score_6", "GB_Model_10_4"."Score_7" AS "Score_7", "GB_Model_10_4"."Score_8" AS "Score_8", "GB_Model_10_4"."Score_9" AS "Score_9" 
+FROM "GB_Model_10_4") AS "GB_esu_20") AS "GB_B20") AS "U"
+
+-- Code For temporary table TMP_20180602_JP2_GB_B21 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_JP2_GB_B21" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Score_2" DOUBLE PRECISION, 
+	"Score_3" DOUBLE PRECISION, 
+	"Score_4" DOUBLE PRECISION, 
+	"Score_5" DOUBLE PRECISION, 
+	"Score_6" DOUBLE PRECISION, 
+	"Score_7" DOUBLE PRECISION, 
+	"Score_8" DOUBLE PRECISION, 
+	"Score_9" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_JP2_GB_B21 part 2. Populate
+
+INSERT INTO "TMP_20180602_JP2_GB_B21" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+FROM (WITH "DT_node_lookup_105" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_21" <= 0.5) THEN CASE WHEN ("ADS"."Feature_5" <= 3.5) THEN CASE WHEN ("ADS"."Feature_43" <= 0.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_2" <= 1.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_36" <= 1.5) THEN CASE WHEN ("ADS"."Feature_13" <= 6.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_2" <= 11.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
 "DT_node_data_105" AS 
@@ -1712,24 +2003,19 @@ FROM "DT_node_lookup_109" LEFT OUTER JOIN "DT_node_data_109" ON "DT_node_lookup_
 "GB_Model_10_9" AS 
 (SELECT "DT_Output_109"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", 0.0 AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", "DT_Output_109"."E" AS "Score_9" 
 FROM "DT_Output_109")
- SELECT "GB_B10"."KEY", "GB_B10"."Score_0", "GB_B10"."Score_1", "GB_B10"."Score_2", "GB_B10"."Score_3", "GB_B10"."Score_4", "GB_B10"."Score_5", "GB_B10"."Score_6", "GB_B10"."Score_7", "GB_B10"."Score_8", "GB_B10"."Score_9" 
-FROM (SELECT "GB_esu_10"."KEY" AS "KEY", "GB_esu_10"."Score_0" AS "Score_0", "GB_esu_10"."Score_1" AS "Score_1", "GB_esu_10"."Score_2" AS "Score_2", "GB_esu_10"."Score_3" AS "Score_3", "GB_esu_10"."Score_4" AS "Score_4", "GB_esu_10"."Score_5" AS "Score_5", "GB_esu_10"."Score_6" AS "Score_6", "GB_esu_10"."Score_7" AS "Score_7", "GB_esu_10"."Score_8" AS "Score_8", "GB_esu_10"."Score_9" AS "Score_9" 
-FROM (SELECT "GB_Model_10_0"."KEY" AS "KEY", "GB_Model_10_0"."Score_0" AS "Score_0", "GB_Model_10_0"."Score_1" AS "Score_1", "GB_Model_10_0"."Score_2" AS "Score_2", "GB_Model_10_0"."Score_3" AS "Score_3", "GB_Model_10_0"."Score_4" AS "Score_4", "GB_Model_10_0"."Score_5" AS "Score_5", "GB_Model_10_0"."Score_6" AS "Score_6", "GB_Model_10_0"."Score_7" AS "Score_7", "GB_Model_10_0"."Score_8" AS "Score_8", "GB_Model_10_0"."Score_9" AS "Score_9" 
-FROM "GB_Model_10_0" UNION ALL SELECT "GB_Model_10_1"."KEY" AS "KEY", "GB_Model_10_1"."Score_0" AS "Score_0", "GB_Model_10_1"."Score_1" AS "Score_1", "GB_Model_10_1"."Score_2" AS "Score_2", "GB_Model_10_1"."Score_3" AS "Score_3", "GB_Model_10_1"."Score_4" AS "Score_4", "GB_Model_10_1"."Score_5" AS "Score_5", "GB_Model_10_1"."Score_6" AS "Score_6", "GB_Model_10_1"."Score_7" AS "Score_7", "GB_Model_10_1"."Score_8" AS "Score_8", "GB_Model_10_1"."Score_9" AS "Score_9" 
-FROM "GB_Model_10_1" UNION ALL SELECT "GB_Model_10_2"."KEY" AS "KEY", "GB_Model_10_2"."Score_0" AS "Score_0", "GB_Model_10_2"."Score_1" AS "Score_1", "GB_Model_10_2"."Score_2" AS "Score_2", "GB_Model_10_2"."Score_3" AS "Score_3", "GB_Model_10_2"."Score_4" AS "Score_4", "GB_Model_10_2"."Score_5" AS "Score_5", "GB_Model_10_2"."Score_6" AS "Score_6", "GB_Model_10_2"."Score_7" AS "Score_7", "GB_Model_10_2"."Score_8" AS "Score_8", "GB_Model_10_2"."Score_9" AS "Score_9" 
-FROM "GB_Model_10_2" UNION ALL SELECT "GB_Model_10_3"."KEY" AS "KEY", "GB_Model_10_3"."Score_0" AS "Score_0", "GB_Model_10_3"."Score_1" AS "Score_1", "GB_Model_10_3"."Score_2" AS "Score_2", "GB_Model_10_3"."Score_3" AS "Score_3", "GB_Model_10_3"."Score_4" AS "Score_4", "GB_Model_10_3"."Score_5" AS "Score_5", "GB_Model_10_3"."Score_6" AS "Score_6", "GB_Model_10_3"."Score_7" AS "Score_7", "GB_Model_10_3"."Score_8" AS "Score_8", "GB_Model_10_3"."Score_9" AS "Score_9" 
-FROM "GB_Model_10_3" UNION ALL SELECT "GB_Model_10_4"."KEY" AS "KEY", "GB_Model_10_4"."Score_0" AS "Score_0", "GB_Model_10_4"."Score_1" AS "Score_1", "GB_Model_10_4"."Score_2" AS "Score_2", "GB_Model_10_4"."Score_3" AS "Score_3", "GB_Model_10_4"."Score_4" AS "Score_4", "GB_Model_10_4"."Score_5" AS "Score_5", "GB_Model_10_4"."Score_6" AS "Score_6", "GB_Model_10_4"."Score_7" AS "Score_7", "GB_Model_10_4"."Score_8" AS "Score_8", "GB_Model_10_4"."Score_9" AS "Score_9" 
-FROM "GB_Model_10_4" UNION ALL SELECT "GB_Model_10_5"."KEY" AS "KEY", "GB_Model_10_5"."Score_0" AS "Score_0", "GB_Model_10_5"."Score_1" AS "Score_1", "GB_Model_10_5"."Score_2" AS "Score_2", "GB_Model_10_5"."Score_3" AS "Score_3", "GB_Model_10_5"."Score_4" AS "Score_4", "GB_Model_10_5"."Score_5" AS "Score_5", "GB_Model_10_5"."Score_6" AS "Score_6", "GB_Model_10_5"."Score_7" AS "Score_7", "GB_Model_10_5"."Score_8" AS "Score_8", "GB_Model_10_5"."Score_9" AS "Score_9" 
+ SELECT "GB_B21"."KEY", "GB_B21"."Score_0", "GB_B21"."Score_1", "GB_B21"."Score_2", "GB_B21"."Score_3", "GB_B21"."Score_4", "GB_B21"."Score_5", "GB_B21"."Score_6", "GB_B21"."Score_7", "GB_B21"."Score_8", "GB_B21"."Score_9" 
+FROM (SELECT "GB_esu_21"."KEY" AS "KEY", "GB_esu_21"."Score_0" AS "Score_0", "GB_esu_21"."Score_1" AS "Score_1", "GB_esu_21"."Score_2" AS "Score_2", "GB_esu_21"."Score_3" AS "Score_3", "GB_esu_21"."Score_4" AS "Score_4", "GB_esu_21"."Score_5" AS "Score_5", "GB_esu_21"."Score_6" AS "Score_6", "GB_esu_21"."Score_7" AS "Score_7", "GB_esu_21"."Score_8" AS "Score_8", "GB_esu_21"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_10_5"."KEY" AS "KEY", "GB_Model_10_5"."Score_0" AS "Score_0", "GB_Model_10_5"."Score_1" AS "Score_1", "GB_Model_10_5"."Score_2" AS "Score_2", "GB_Model_10_5"."Score_3" AS "Score_3", "GB_Model_10_5"."Score_4" AS "Score_4", "GB_Model_10_5"."Score_5" AS "Score_5", "GB_Model_10_5"."Score_6" AS "Score_6", "GB_Model_10_5"."Score_7" AS "Score_7", "GB_Model_10_5"."Score_8" AS "Score_8", "GB_Model_10_5"."Score_9" AS "Score_9" 
 FROM "GB_Model_10_5" UNION ALL SELECT "GB_Model_10_6"."KEY" AS "KEY", "GB_Model_10_6"."Score_0" AS "Score_0", "GB_Model_10_6"."Score_1" AS "Score_1", "GB_Model_10_6"."Score_2" AS "Score_2", "GB_Model_10_6"."Score_3" AS "Score_3", "GB_Model_10_6"."Score_4" AS "Score_4", "GB_Model_10_6"."Score_5" AS "Score_5", "GB_Model_10_6"."Score_6" AS "Score_6", "GB_Model_10_6"."Score_7" AS "Score_7", "GB_Model_10_6"."Score_8" AS "Score_8", "GB_Model_10_6"."Score_9" AS "Score_9" 
 FROM "GB_Model_10_6" UNION ALL SELECT "GB_Model_10_7"."KEY" AS "KEY", "GB_Model_10_7"."Score_0" AS "Score_0", "GB_Model_10_7"."Score_1" AS "Score_1", "GB_Model_10_7"."Score_2" AS "Score_2", "GB_Model_10_7"."Score_3" AS "Score_3", "GB_Model_10_7"."Score_4" AS "Score_4", "GB_Model_10_7"."Score_5" AS "Score_5", "GB_Model_10_7"."Score_6" AS "Score_6", "GB_Model_10_7"."Score_7" AS "Score_7", "GB_Model_10_7"."Score_8" AS "Score_8", "GB_Model_10_7"."Score_9" AS "Score_9" 
 FROM "GB_Model_10_7" UNION ALL SELECT "GB_Model_10_8"."KEY" AS "KEY", "GB_Model_10_8"."Score_0" AS "Score_0", "GB_Model_10_8"."Score_1" AS "Score_1", "GB_Model_10_8"."Score_2" AS "Score_2", "GB_Model_10_8"."Score_3" AS "Score_3", "GB_Model_10_8"."Score_4" AS "Score_4", "GB_Model_10_8"."Score_5" AS "Score_5", "GB_Model_10_8"."Score_6" AS "Score_6", "GB_Model_10_8"."Score_7" AS "Score_7", "GB_Model_10_8"."Score_8" AS "Score_8", "GB_Model_10_8"."Score_9" AS "Score_9" 
 FROM "GB_Model_10_8" UNION ALL SELECT "GB_Model_10_9"."KEY" AS "KEY", "GB_Model_10_9"."Score_0" AS "Score_0", "GB_Model_10_9"."Score_1" AS "Score_1", "GB_Model_10_9"."Score_2" AS "Score_2", "GB_Model_10_9"."Score_3" AS "Score_3", "GB_Model_10_9"."Score_4" AS "Score_4", "GB_Model_10_9"."Score_5" AS "Score_5", "GB_Model_10_9"."Score_6" AS "Score_6", "GB_Model_10_9"."Score_7" AS "Score_7", "GB_Model_10_9"."Score_8" AS "Score_8", "GB_Model_10_9"."Score_9" AS "Score_9" 
-FROM "GB_Model_10_9") AS "GB_esu_10") AS "GB_B10") AS "U"
+FROM "GB_Model_10_9") AS "GB_esu_21") AS "GB_B21") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_5IDZBL_GB_ part 1. Create 
+-- Code For temporary table TMP_20180602_2W8_GB_B22 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_5IDZBL_GB_" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_2W8_GB_B22" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -1745,9 +2031,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_5IDZBL_GB_" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_5IDZBL_GB_ part 2. Populate
+-- Code For temporary table TMP_20180602_2W8_GB_B22 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_5IDZBL_GB_" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+INSERT INTO "TMP_20180602_2W8_GB_B22" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
 FROM (WITH "DT_node_lookup_110" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_36" <= 0.5) THEN CASE WHEN ("ADS"."Feature_28" <= 2.5) THEN CASE WHEN ("ADS"."Feature_13" <= 1.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_12" <= 15.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_28" <= 0.5) THEN CASE WHEN ("ADS"."Feature_21" <= 12.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_18" <= 6.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
@@ -1807,8 +2093,39 @@ FROM (SELECT 3 AS nid, -0.7826877278069654 AS "E" FROM rdb$database UNION ALL SE
 FROM "DT_node_lookup_114" LEFT OUTER JOIN "DT_node_data_114" ON "DT_node_lookup_114".node_id_2 = "DT_node_data_114".nid), 
 "GB_Model_11_4" AS 
 (SELECT "DT_Output_114"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", "DT_Output_114"."E" AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", 0.0 AS "Score_9" 
-FROM "DT_Output_114"), 
-"DT_node_lookup_115" AS 
+FROM "DT_Output_114")
+ SELECT "GB_B22"."KEY", "GB_B22"."Score_0", "GB_B22"."Score_1", "GB_B22"."Score_2", "GB_B22"."Score_3", "GB_B22"."Score_4", "GB_B22"."Score_5", "GB_B22"."Score_6", "GB_B22"."Score_7", "GB_B22"."Score_8", "GB_B22"."Score_9" 
+FROM (SELECT "GB_esu_22"."KEY" AS "KEY", "GB_esu_22"."Score_0" AS "Score_0", "GB_esu_22"."Score_1" AS "Score_1", "GB_esu_22"."Score_2" AS "Score_2", "GB_esu_22"."Score_3" AS "Score_3", "GB_esu_22"."Score_4" AS "Score_4", "GB_esu_22"."Score_5" AS "Score_5", "GB_esu_22"."Score_6" AS "Score_6", "GB_esu_22"."Score_7" AS "Score_7", "GB_esu_22"."Score_8" AS "Score_8", "GB_esu_22"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_11_0"."KEY" AS "KEY", "GB_Model_11_0"."Score_0" AS "Score_0", "GB_Model_11_0"."Score_1" AS "Score_1", "GB_Model_11_0"."Score_2" AS "Score_2", "GB_Model_11_0"."Score_3" AS "Score_3", "GB_Model_11_0"."Score_4" AS "Score_4", "GB_Model_11_0"."Score_5" AS "Score_5", "GB_Model_11_0"."Score_6" AS "Score_6", "GB_Model_11_0"."Score_7" AS "Score_7", "GB_Model_11_0"."Score_8" AS "Score_8", "GB_Model_11_0"."Score_9" AS "Score_9" 
+FROM "GB_Model_11_0" UNION ALL SELECT "GB_Model_11_1"."KEY" AS "KEY", "GB_Model_11_1"."Score_0" AS "Score_0", "GB_Model_11_1"."Score_1" AS "Score_1", "GB_Model_11_1"."Score_2" AS "Score_2", "GB_Model_11_1"."Score_3" AS "Score_3", "GB_Model_11_1"."Score_4" AS "Score_4", "GB_Model_11_1"."Score_5" AS "Score_5", "GB_Model_11_1"."Score_6" AS "Score_6", "GB_Model_11_1"."Score_7" AS "Score_7", "GB_Model_11_1"."Score_8" AS "Score_8", "GB_Model_11_1"."Score_9" AS "Score_9" 
+FROM "GB_Model_11_1" UNION ALL SELECT "GB_Model_11_2"."KEY" AS "KEY", "GB_Model_11_2"."Score_0" AS "Score_0", "GB_Model_11_2"."Score_1" AS "Score_1", "GB_Model_11_2"."Score_2" AS "Score_2", "GB_Model_11_2"."Score_3" AS "Score_3", "GB_Model_11_2"."Score_4" AS "Score_4", "GB_Model_11_2"."Score_5" AS "Score_5", "GB_Model_11_2"."Score_6" AS "Score_6", "GB_Model_11_2"."Score_7" AS "Score_7", "GB_Model_11_2"."Score_8" AS "Score_8", "GB_Model_11_2"."Score_9" AS "Score_9" 
+FROM "GB_Model_11_2" UNION ALL SELECT "GB_Model_11_3"."KEY" AS "KEY", "GB_Model_11_3"."Score_0" AS "Score_0", "GB_Model_11_3"."Score_1" AS "Score_1", "GB_Model_11_3"."Score_2" AS "Score_2", "GB_Model_11_3"."Score_3" AS "Score_3", "GB_Model_11_3"."Score_4" AS "Score_4", "GB_Model_11_3"."Score_5" AS "Score_5", "GB_Model_11_3"."Score_6" AS "Score_6", "GB_Model_11_3"."Score_7" AS "Score_7", "GB_Model_11_3"."Score_8" AS "Score_8", "GB_Model_11_3"."Score_9" AS "Score_9" 
+FROM "GB_Model_11_3" UNION ALL SELECT "GB_Model_11_4"."KEY" AS "KEY", "GB_Model_11_4"."Score_0" AS "Score_0", "GB_Model_11_4"."Score_1" AS "Score_1", "GB_Model_11_4"."Score_2" AS "Score_2", "GB_Model_11_4"."Score_3" AS "Score_3", "GB_Model_11_4"."Score_4" AS "Score_4", "GB_Model_11_4"."Score_5" AS "Score_5", "GB_Model_11_4"."Score_6" AS "Score_6", "GB_Model_11_4"."Score_7" AS "Score_7", "GB_Model_11_4"."Score_8" AS "Score_8", "GB_Model_11_4"."Score_9" AS "Score_9" 
+FROM "GB_Model_11_4") AS "GB_esu_22") AS "GB_B22") AS "U"
+
+-- Code For temporary table TMP_20180602_Y4J_GB_B23 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_Y4J_GB_B23" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Score_2" DOUBLE PRECISION, 
+	"Score_3" DOUBLE PRECISION, 
+	"Score_4" DOUBLE PRECISION, 
+	"Score_5" DOUBLE PRECISION, 
+	"Score_6" DOUBLE PRECISION, 
+	"Score_7" DOUBLE PRECISION, 
+	"Score_8" DOUBLE PRECISION, 
+	"Score_9" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_Y4J_GB_B23 part 2. Populate
+
+INSERT INTO "TMP_20180602_Y4J_GB_B23" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+FROM (WITH "DT_node_lookup_115" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_21" <= 0.5) THEN CASE WHEN ("ADS"."Feature_5" <= 2.5) THEN CASE WHEN ("ADS"."Feature_29" <= 11.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_42" <= 9.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_6" <= 1.5) THEN CASE WHEN ("ADS"."Feature_1" <= 5.0) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_13" <= 6.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
 "DT_node_data_115" AS 
@@ -1868,24 +2185,19 @@ FROM "DT_node_lookup_119" LEFT OUTER JOIN "DT_node_data_119" ON "DT_node_lookup_
 "GB_Model_11_9" AS 
 (SELECT "DT_Output_119"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", 0.0 AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", "DT_Output_119"."E" AS "Score_9" 
 FROM "DT_Output_119")
- SELECT "GB_B11"."KEY", "GB_B11"."Score_0", "GB_B11"."Score_1", "GB_B11"."Score_2", "GB_B11"."Score_3", "GB_B11"."Score_4", "GB_B11"."Score_5", "GB_B11"."Score_6", "GB_B11"."Score_7", "GB_B11"."Score_8", "GB_B11"."Score_9" 
-FROM (SELECT "GB_esu_11"."KEY" AS "KEY", "GB_esu_11"."Score_0" AS "Score_0", "GB_esu_11"."Score_1" AS "Score_1", "GB_esu_11"."Score_2" AS "Score_2", "GB_esu_11"."Score_3" AS "Score_3", "GB_esu_11"."Score_4" AS "Score_4", "GB_esu_11"."Score_5" AS "Score_5", "GB_esu_11"."Score_6" AS "Score_6", "GB_esu_11"."Score_7" AS "Score_7", "GB_esu_11"."Score_8" AS "Score_8", "GB_esu_11"."Score_9" AS "Score_9" 
-FROM (SELECT "GB_Model_11_0"."KEY" AS "KEY", "GB_Model_11_0"."Score_0" AS "Score_0", "GB_Model_11_0"."Score_1" AS "Score_1", "GB_Model_11_0"."Score_2" AS "Score_2", "GB_Model_11_0"."Score_3" AS "Score_3", "GB_Model_11_0"."Score_4" AS "Score_4", "GB_Model_11_0"."Score_5" AS "Score_5", "GB_Model_11_0"."Score_6" AS "Score_6", "GB_Model_11_0"."Score_7" AS "Score_7", "GB_Model_11_0"."Score_8" AS "Score_8", "GB_Model_11_0"."Score_9" AS "Score_9" 
-FROM "GB_Model_11_0" UNION ALL SELECT "GB_Model_11_1"."KEY" AS "KEY", "GB_Model_11_1"."Score_0" AS "Score_0", "GB_Model_11_1"."Score_1" AS "Score_1", "GB_Model_11_1"."Score_2" AS "Score_2", "GB_Model_11_1"."Score_3" AS "Score_3", "GB_Model_11_1"."Score_4" AS "Score_4", "GB_Model_11_1"."Score_5" AS "Score_5", "GB_Model_11_1"."Score_6" AS "Score_6", "GB_Model_11_1"."Score_7" AS "Score_7", "GB_Model_11_1"."Score_8" AS "Score_8", "GB_Model_11_1"."Score_9" AS "Score_9" 
-FROM "GB_Model_11_1" UNION ALL SELECT "GB_Model_11_2"."KEY" AS "KEY", "GB_Model_11_2"."Score_0" AS "Score_0", "GB_Model_11_2"."Score_1" AS "Score_1", "GB_Model_11_2"."Score_2" AS "Score_2", "GB_Model_11_2"."Score_3" AS "Score_3", "GB_Model_11_2"."Score_4" AS "Score_4", "GB_Model_11_2"."Score_5" AS "Score_5", "GB_Model_11_2"."Score_6" AS "Score_6", "GB_Model_11_2"."Score_7" AS "Score_7", "GB_Model_11_2"."Score_8" AS "Score_8", "GB_Model_11_2"."Score_9" AS "Score_9" 
-FROM "GB_Model_11_2" UNION ALL SELECT "GB_Model_11_3"."KEY" AS "KEY", "GB_Model_11_3"."Score_0" AS "Score_0", "GB_Model_11_3"."Score_1" AS "Score_1", "GB_Model_11_3"."Score_2" AS "Score_2", "GB_Model_11_3"."Score_3" AS "Score_3", "GB_Model_11_3"."Score_4" AS "Score_4", "GB_Model_11_3"."Score_5" AS "Score_5", "GB_Model_11_3"."Score_6" AS "Score_6", "GB_Model_11_3"."Score_7" AS "Score_7", "GB_Model_11_3"."Score_8" AS "Score_8", "GB_Model_11_3"."Score_9" AS "Score_9" 
-FROM "GB_Model_11_3" UNION ALL SELECT "GB_Model_11_4"."KEY" AS "KEY", "GB_Model_11_4"."Score_0" AS "Score_0", "GB_Model_11_4"."Score_1" AS "Score_1", "GB_Model_11_4"."Score_2" AS "Score_2", "GB_Model_11_4"."Score_3" AS "Score_3", "GB_Model_11_4"."Score_4" AS "Score_4", "GB_Model_11_4"."Score_5" AS "Score_5", "GB_Model_11_4"."Score_6" AS "Score_6", "GB_Model_11_4"."Score_7" AS "Score_7", "GB_Model_11_4"."Score_8" AS "Score_8", "GB_Model_11_4"."Score_9" AS "Score_9" 
-FROM "GB_Model_11_4" UNION ALL SELECT "GB_Model_11_5"."KEY" AS "KEY", "GB_Model_11_5"."Score_0" AS "Score_0", "GB_Model_11_5"."Score_1" AS "Score_1", "GB_Model_11_5"."Score_2" AS "Score_2", "GB_Model_11_5"."Score_3" AS "Score_3", "GB_Model_11_5"."Score_4" AS "Score_4", "GB_Model_11_5"."Score_5" AS "Score_5", "GB_Model_11_5"."Score_6" AS "Score_6", "GB_Model_11_5"."Score_7" AS "Score_7", "GB_Model_11_5"."Score_8" AS "Score_8", "GB_Model_11_5"."Score_9" AS "Score_9" 
+ SELECT "GB_B23"."KEY", "GB_B23"."Score_0", "GB_B23"."Score_1", "GB_B23"."Score_2", "GB_B23"."Score_3", "GB_B23"."Score_4", "GB_B23"."Score_5", "GB_B23"."Score_6", "GB_B23"."Score_7", "GB_B23"."Score_8", "GB_B23"."Score_9" 
+FROM (SELECT "GB_esu_23"."KEY" AS "KEY", "GB_esu_23"."Score_0" AS "Score_0", "GB_esu_23"."Score_1" AS "Score_1", "GB_esu_23"."Score_2" AS "Score_2", "GB_esu_23"."Score_3" AS "Score_3", "GB_esu_23"."Score_4" AS "Score_4", "GB_esu_23"."Score_5" AS "Score_5", "GB_esu_23"."Score_6" AS "Score_6", "GB_esu_23"."Score_7" AS "Score_7", "GB_esu_23"."Score_8" AS "Score_8", "GB_esu_23"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_11_5"."KEY" AS "KEY", "GB_Model_11_5"."Score_0" AS "Score_0", "GB_Model_11_5"."Score_1" AS "Score_1", "GB_Model_11_5"."Score_2" AS "Score_2", "GB_Model_11_5"."Score_3" AS "Score_3", "GB_Model_11_5"."Score_4" AS "Score_4", "GB_Model_11_5"."Score_5" AS "Score_5", "GB_Model_11_5"."Score_6" AS "Score_6", "GB_Model_11_5"."Score_7" AS "Score_7", "GB_Model_11_5"."Score_8" AS "Score_8", "GB_Model_11_5"."Score_9" AS "Score_9" 
 FROM "GB_Model_11_5" UNION ALL SELECT "GB_Model_11_6"."KEY" AS "KEY", "GB_Model_11_6"."Score_0" AS "Score_0", "GB_Model_11_6"."Score_1" AS "Score_1", "GB_Model_11_6"."Score_2" AS "Score_2", "GB_Model_11_6"."Score_3" AS "Score_3", "GB_Model_11_6"."Score_4" AS "Score_4", "GB_Model_11_6"."Score_5" AS "Score_5", "GB_Model_11_6"."Score_6" AS "Score_6", "GB_Model_11_6"."Score_7" AS "Score_7", "GB_Model_11_6"."Score_8" AS "Score_8", "GB_Model_11_6"."Score_9" AS "Score_9" 
 FROM "GB_Model_11_6" UNION ALL SELECT "GB_Model_11_7"."KEY" AS "KEY", "GB_Model_11_7"."Score_0" AS "Score_0", "GB_Model_11_7"."Score_1" AS "Score_1", "GB_Model_11_7"."Score_2" AS "Score_2", "GB_Model_11_7"."Score_3" AS "Score_3", "GB_Model_11_7"."Score_4" AS "Score_4", "GB_Model_11_7"."Score_5" AS "Score_5", "GB_Model_11_7"."Score_6" AS "Score_6", "GB_Model_11_7"."Score_7" AS "Score_7", "GB_Model_11_7"."Score_8" AS "Score_8", "GB_Model_11_7"."Score_9" AS "Score_9" 
 FROM "GB_Model_11_7" UNION ALL SELECT "GB_Model_11_8"."KEY" AS "KEY", "GB_Model_11_8"."Score_0" AS "Score_0", "GB_Model_11_8"."Score_1" AS "Score_1", "GB_Model_11_8"."Score_2" AS "Score_2", "GB_Model_11_8"."Score_3" AS "Score_3", "GB_Model_11_8"."Score_4" AS "Score_4", "GB_Model_11_8"."Score_5" AS "Score_5", "GB_Model_11_8"."Score_6" AS "Score_6", "GB_Model_11_8"."Score_7" AS "Score_7", "GB_Model_11_8"."Score_8" AS "Score_8", "GB_Model_11_8"."Score_9" AS "Score_9" 
 FROM "GB_Model_11_8" UNION ALL SELECT "GB_Model_11_9"."KEY" AS "KEY", "GB_Model_11_9"."Score_0" AS "Score_0", "GB_Model_11_9"."Score_1" AS "Score_1", "GB_Model_11_9"."Score_2" AS "Score_2", "GB_Model_11_9"."Score_3" AS "Score_3", "GB_Model_11_9"."Score_4" AS "Score_4", "GB_Model_11_9"."Score_5" AS "Score_5", "GB_Model_11_9"."Score_6" AS "Score_6", "GB_Model_11_9"."Score_7" AS "Score_7", "GB_Model_11_9"."Score_8" AS "Score_8", "GB_Model_11_9"."Score_9" AS "Score_9" 
-FROM "GB_Model_11_9") AS "GB_esu_11") AS "GB_B11") AS "U"
+FROM "GB_Model_11_9") AS "GB_esu_23") AS "GB_B23") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_YUAPZJ_GB_ part 1. Create 
+-- Code For temporary table TMP_20180602_NE8_GB_B24 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_YUAPZJ_GB_" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_NE8_GB_B24" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -1901,9 +2213,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_YUAPZJ_GB_" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_YUAPZJ_GB_ part 2. Populate
+-- Code For temporary table TMP_20180602_NE8_GB_B24 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_YUAPZJ_GB_" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+INSERT INTO "TMP_20180602_NE8_GB_B24" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
 FROM (WITH "DT_node_lookup_120" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_36" <= 0.5) THEN CASE WHEN ("ADS"."Feature_28" <= 2.5) THEN CASE WHEN ("ADS"."Feature_43" <= 9.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_2" <= 0.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_28" <= 0.5) THEN CASE WHEN ("ADS"."Feature_21" <= 12.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_18" <= 6.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
@@ -1963,8 +2275,39 @@ FROM (SELECT 3 AS nid, -0.7612680816182706 AS "E" FROM rdb$database UNION ALL SE
 FROM "DT_node_lookup_124" LEFT OUTER JOIN "DT_node_data_124" ON "DT_node_lookup_124".node_id_2 = "DT_node_data_124".nid), 
 "GB_Model_12_4" AS 
 (SELECT "DT_Output_124"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", "DT_Output_124"."E" AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", 0.0 AS "Score_9" 
-FROM "DT_Output_124"), 
-"DT_node_lookup_125" AS 
+FROM "DT_Output_124")
+ SELECT "GB_B24"."KEY", "GB_B24"."Score_0", "GB_B24"."Score_1", "GB_B24"."Score_2", "GB_B24"."Score_3", "GB_B24"."Score_4", "GB_B24"."Score_5", "GB_B24"."Score_6", "GB_B24"."Score_7", "GB_B24"."Score_8", "GB_B24"."Score_9" 
+FROM (SELECT "GB_esu_24"."KEY" AS "KEY", "GB_esu_24"."Score_0" AS "Score_0", "GB_esu_24"."Score_1" AS "Score_1", "GB_esu_24"."Score_2" AS "Score_2", "GB_esu_24"."Score_3" AS "Score_3", "GB_esu_24"."Score_4" AS "Score_4", "GB_esu_24"."Score_5" AS "Score_5", "GB_esu_24"."Score_6" AS "Score_6", "GB_esu_24"."Score_7" AS "Score_7", "GB_esu_24"."Score_8" AS "Score_8", "GB_esu_24"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_12_0"."KEY" AS "KEY", "GB_Model_12_0"."Score_0" AS "Score_0", "GB_Model_12_0"."Score_1" AS "Score_1", "GB_Model_12_0"."Score_2" AS "Score_2", "GB_Model_12_0"."Score_3" AS "Score_3", "GB_Model_12_0"."Score_4" AS "Score_4", "GB_Model_12_0"."Score_5" AS "Score_5", "GB_Model_12_0"."Score_6" AS "Score_6", "GB_Model_12_0"."Score_7" AS "Score_7", "GB_Model_12_0"."Score_8" AS "Score_8", "GB_Model_12_0"."Score_9" AS "Score_9" 
+FROM "GB_Model_12_0" UNION ALL SELECT "GB_Model_12_1"."KEY" AS "KEY", "GB_Model_12_1"."Score_0" AS "Score_0", "GB_Model_12_1"."Score_1" AS "Score_1", "GB_Model_12_1"."Score_2" AS "Score_2", "GB_Model_12_1"."Score_3" AS "Score_3", "GB_Model_12_1"."Score_4" AS "Score_4", "GB_Model_12_1"."Score_5" AS "Score_5", "GB_Model_12_1"."Score_6" AS "Score_6", "GB_Model_12_1"."Score_7" AS "Score_7", "GB_Model_12_1"."Score_8" AS "Score_8", "GB_Model_12_1"."Score_9" AS "Score_9" 
+FROM "GB_Model_12_1" UNION ALL SELECT "GB_Model_12_2"."KEY" AS "KEY", "GB_Model_12_2"."Score_0" AS "Score_0", "GB_Model_12_2"."Score_1" AS "Score_1", "GB_Model_12_2"."Score_2" AS "Score_2", "GB_Model_12_2"."Score_3" AS "Score_3", "GB_Model_12_2"."Score_4" AS "Score_4", "GB_Model_12_2"."Score_5" AS "Score_5", "GB_Model_12_2"."Score_6" AS "Score_6", "GB_Model_12_2"."Score_7" AS "Score_7", "GB_Model_12_2"."Score_8" AS "Score_8", "GB_Model_12_2"."Score_9" AS "Score_9" 
+FROM "GB_Model_12_2" UNION ALL SELECT "GB_Model_12_3"."KEY" AS "KEY", "GB_Model_12_3"."Score_0" AS "Score_0", "GB_Model_12_3"."Score_1" AS "Score_1", "GB_Model_12_3"."Score_2" AS "Score_2", "GB_Model_12_3"."Score_3" AS "Score_3", "GB_Model_12_3"."Score_4" AS "Score_4", "GB_Model_12_3"."Score_5" AS "Score_5", "GB_Model_12_3"."Score_6" AS "Score_6", "GB_Model_12_3"."Score_7" AS "Score_7", "GB_Model_12_3"."Score_8" AS "Score_8", "GB_Model_12_3"."Score_9" AS "Score_9" 
+FROM "GB_Model_12_3" UNION ALL SELECT "GB_Model_12_4"."KEY" AS "KEY", "GB_Model_12_4"."Score_0" AS "Score_0", "GB_Model_12_4"."Score_1" AS "Score_1", "GB_Model_12_4"."Score_2" AS "Score_2", "GB_Model_12_4"."Score_3" AS "Score_3", "GB_Model_12_4"."Score_4" AS "Score_4", "GB_Model_12_4"."Score_5" AS "Score_5", "GB_Model_12_4"."Score_6" AS "Score_6", "GB_Model_12_4"."Score_7" AS "Score_7", "GB_Model_12_4"."Score_8" AS "Score_8", "GB_Model_12_4"."Score_9" AS "Score_9" 
+FROM "GB_Model_12_4") AS "GB_esu_24") AS "GB_B24") AS "U"
+
+-- Code For temporary table TMP_20180602_AD3_GB_B25 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_AD3_GB_B25" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Score_2" DOUBLE PRECISION, 
+	"Score_3" DOUBLE PRECISION, 
+	"Score_4" DOUBLE PRECISION, 
+	"Score_5" DOUBLE PRECISION, 
+	"Score_6" DOUBLE PRECISION, 
+	"Score_7" DOUBLE PRECISION, 
+	"Score_8" DOUBLE PRECISION, 
+	"Score_9" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_AD3_GB_B25 part 2. Populate
+
+INSERT INTO "TMP_20180602_AD3_GB_B25" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+FROM (WITH "DT_node_lookup_125" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_21" <= 0.5) THEN CASE WHEN ("ADS"."Feature_5" <= 2.5) THEN CASE WHEN ("ADS"."Feature_9" <= 13.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_2" <= 1.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_36" <= 1.5) THEN CASE WHEN ("ADS"."Feature_13" <= 6.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_2" <= 11.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
 "DT_node_data_125" AS 
@@ -2024,24 +2367,19 @@ FROM "DT_node_lookup_129" LEFT OUTER JOIN "DT_node_data_129" ON "DT_node_lookup_
 "GB_Model_12_9" AS 
 (SELECT "DT_Output_129"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", 0.0 AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", "DT_Output_129"."E" AS "Score_9" 
 FROM "DT_Output_129")
- SELECT "GB_B12"."KEY", "GB_B12"."Score_0", "GB_B12"."Score_1", "GB_B12"."Score_2", "GB_B12"."Score_3", "GB_B12"."Score_4", "GB_B12"."Score_5", "GB_B12"."Score_6", "GB_B12"."Score_7", "GB_B12"."Score_8", "GB_B12"."Score_9" 
-FROM (SELECT "GB_esu_12"."KEY" AS "KEY", "GB_esu_12"."Score_0" AS "Score_0", "GB_esu_12"."Score_1" AS "Score_1", "GB_esu_12"."Score_2" AS "Score_2", "GB_esu_12"."Score_3" AS "Score_3", "GB_esu_12"."Score_4" AS "Score_4", "GB_esu_12"."Score_5" AS "Score_5", "GB_esu_12"."Score_6" AS "Score_6", "GB_esu_12"."Score_7" AS "Score_7", "GB_esu_12"."Score_8" AS "Score_8", "GB_esu_12"."Score_9" AS "Score_9" 
-FROM (SELECT "GB_Model_12_0"."KEY" AS "KEY", "GB_Model_12_0"."Score_0" AS "Score_0", "GB_Model_12_0"."Score_1" AS "Score_1", "GB_Model_12_0"."Score_2" AS "Score_2", "GB_Model_12_0"."Score_3" AS "Score_3", "GB_Model_12_0"."Score_4" AS "Score_4", "GB_Model_12_0"."Score_5" AS "Score_5", "GB_Model_12_0"."Score_6" AS "Score_6", "GB_Model_12_0"."Score_7" AS "Score_7", "GB_Model_12_0"."Score_8" AS "Score_8", "GB_Model_12_0"."Score_9" AS "Score_9" 
-FROM "GB_Model_12_0" UNION ALL SELECT "GB_Model_12_1"."KEY" AS "KEY", "GB_Model_12_1"."Score_0" AS "Score_0", "GB_Model_12_1"."Score_1" AS "Score_1", "GB_Model_12_1"."Score_2" AS "Score_2", "GB_Model_12_1"."Score_3" AS "Score_3", "GB_Model_12_1"."Score_4" AS "Score_4", "GB_Model_12_1"."Score_5" AS "Score_5", "GB_Model_12_1"."Score_6" AS "Score_6", "GB_Model_12_1"."Score_7" AS "Score_7", "GB_Model_12_1"."Score_8" AS "Score_8", "GB_Model_12_1"."Score_9" AS "Score_9" 
-FROM "GB_Model_12_1" UNION ALL SELECT "GB_Model_12_2"."KEY" AS "KEY", "GB_Model_12_2"."Score_0" AS "Score_0", "GB_Model_12_2"."Score_1" AS "Score_1", "GB_Model_12_2"."Score_2" AS "Score_2", "GB_Model_12_2"."Score_3" AS "Score_3", "GB_Model_12_2"."Score_4" AS "Score_4", "GB_Model_12_2"."Score_5" AS "Score_5", "GB_Model_12_2"."Score_6" AS "Score_6", "GB_Model_12_2"."Score_7" AS "Score_7", "GB_Model_12_2"."Score_8" AS "Score_8", "GB_Model_12_2"."Score_9" AS "Score_9" 
-FROM "GB_Model_12_2" UNION ALL SELECT "GB_Model_12_3"."KEY" AS "KEY", "GB_Model_12_3"."Score_0" AS "Score_0", "GB_Model_12_3"."Score_1" AS "Score_1", "GB_Model_12_3"."Score_2" AS "Score_2", "GB_Model_12_3"."Score_3" AS "Score_3", "GB_Model_12_3"."Score_4" AS "Score_4", "GB_Model_12_3"."Score_5" AS "Score_5", "GB_Model_12_3"."Score_6" AS "Score_6", "GB_Model_12_3"."Score_7" AS "Score_7", "GB_Model_12_3"."Score_8" AS "Score_8", "GB_Model_12_3"."Score_9" AS "Score_9" 
-FROM "GB_Model_12_3" UNION ALL SELECT "GB_Model_12_4"."KEY" AS "KEY", "GB_Model_12_4"."Score_0" AS "Score_0", "GB_Model_12_4"."Score_1" AS "Score_1", "GB_Model_12_4"."Score_2" AS "Score_2", "GB_Model_12_4"."Score_3" AS "Score_3", "GB_Model_12_4"."Score_4" AS "Score_4", "GB_Model_12_4"."Score_5" AS "Score_5", "GB_Model_12_4"."Score_6" AS "Score_6", "GB_Model_12_4"."Score_7" AS "Score_7", "GB_Model_12_4"."Score_8" AS "Score_8", "GB_Model_12_4"."Score_9" AS "Score_9" 
-FROM "GB_Model_12_4" UNION ALL SELECT "GB_Model_12_5"."KEY" AS "KEY", "GB_Model_12_5"."Score_0" AS "Score_0", "GB_Model_12_5"."Score_1" AS "Score_1", "GB_Model_12_5"."Score_2" AS "Score_2", "GB_Model_12_5"."Score_3" AS "Score_3", "GB_Model_12_5"."Score_4" AS "Score_4", "GB_Model_12_5"."Score_5" AS "Score_5", "GB_Model_12_5"."Score_6" AS "Score_6", "GB_Model_12_5"."Score_7" AS "Score_7", "GB_Model_12_5"."Score_8" AS "Score_8", "GB_Model_12_5"."Score_9" AS "Score_9" 
+ SELECT "GB_B25"."KEY", "GB_B25"."Score_0", "GB_B25"."Score_1", "GB_B25"."Score_2", "GB_B25"."Score_3", "GB_B25"."Score_4", "GB_B25"."Score_5", "GB_B25"."Score_6", "GB_B25"."Score_7", "GB_B25"."Score_8", "GB_B25"."Score_9" 
+FROM (SELECT "GB_esu_25"."KEY" AS "KEY", "GB_esu_25"."Score_0" AS "Score_0", "GB_esu_25"."Score_1" AS "Score_1", "GB_esu_25"."Score_2" AS "Score_2", "GB_esu_25"."Score_3" AS "Score_3", "GB_esu_25"."Score_4" AS "Score_4", "GB_esu_25"."Score_5" AS "Score_5", "GB_esu_25"."Score_6" AS "Score_6", "GB_esu_25"."Score_7" AS "Score_7", "GB_esu_25"."Score_8" AS "Score_8", "GB_esu_25"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_12_5"."KEY" AS "KEY", "GB_Model_12_5"."Score_0" AS "Score_0", "GB_Model_12_5"."Score_1" AS "Score_1", "GB_Model_12_5"."Score_2" AS "Score_2", "GB_Model_12_5"."Score_3" AS "Score_3", "GB_Model_12_5"."Score_4" AS "Score_4", "GB_Model_12_5"."Score_5" AS "Score_5", "GB_Model_12_5"."Score_6" AS "Score_6", "GB_Model_12_5"."Score_7" AS "Score_7", "GB_Model_12_5"."Score_8" AS "Score_8", "GB_Model_12_5"."Score_9" AS "Score_9" 
 FROM "GB_Model_12_5" UNION ALL SELECT "GB_Model_12_6"."KEY" AS "KEY", "GB_Model_12_6"."Score_0" AS "Score_0", "GB_Model_12_6"."Score_1" AS "Score_1", "GB_Model_12_6"."Score_2" AS "Score_2", "GB_Model_12_6"."Score_3" AS "Score_3", "GB_Model_12_6"."Score_4" AS "Score_4", "GB_Model_12_6"."Score_5" AS "Score_5", "GB_Model_12_6"."Score_6" AS "Score_6", "GB_Model_12_6"."Score_7" AS "Score_7", "GB_Model_12_6"."Score_8" AS "Score_8", "GB_Model_12_6"."Score_9" AS "Score_9" 
 FROM "GB_Model_12_6" UNION ALL SELECT "GB_Model_12_7"."KEY" AS "KEY", "GB_Model_12_7"."Score_0" AS "Score_0", "GB_Model_12_7"."Score_1" AS "Score_1", "GB_Model_12_7"."Score_2" AS "Score_2", "GB_Model_12_7"."Score_3" AS "Score_3", "GB_Model_12_7"."Score_4" AS "Score_4", "GB_Model_12_7"."Score_5" AS "Score_5", "GB_Model_12_7"."Score_6" AS "Score_6", "GB_Model_12_7"."Score_7" AS "Score_7", "GB_Model_12_7"."Score_8" AS "Score_8", "GB_Model_12_7"."Score_9" AS "Score_9" 
 FROM "GB_Model_12_7" UNION ALL SELECT "GB_Model_12_8"."KEY" AS "KEY", "GB_Model_12_8"."Score_0" AS "Score_0", "GB_Model_12_8"."Score_1" AS "Score_1", "GB_Model_12_8"."Score_2" AS "Score_2", "GB_Model_12_8"."Score_3" AS "Score_3", "GB_Model_12_8"."Score_4" AS "Score_4", "GB_Model_12_8"."Score_5" AS "Score_5", "GB_Model_12_8"."Score_6" AS "Score_6", "GB_Model_12_8"."Score_7" AS "Score_7", "GB_Model_12_8"."Score_8" AS "Score_8", "GB_Model_12_8"."Score_9" AS "Score_9" 
 FROM "GB_Model_12_8" UNION ALL SELECT "GB_Model_12_9"."KEY" AS "KEY", "GB_Model_12_9"."Score_0" AS "Score_0", "GB_Model_12_9"."Score_1" AS "Score_1", "GB_Model_12_9"."Score_2" AS "Score_2", "GB_Model_12_9"."Score_3" AS "Score_3", "GB_Model_12_9"."Score_4" AS "Score_4", "GB_Model_12_9"."Score_5" AS "Score_5", "GB_Model_12_9"."Score_6" AS "Score_6", "GB_Model_12_9"."Score_7" AS "Score_7", "GB_Model_12_9"."Score_8" AS "Score_8", "GB_Model_12_9"."Score_9" AS "Score_9" 
-FROM "GB_Model_12_9") AS "GB_esu_12") AS "GB_B12") AS "U"
+FROM "GB_Model_12_9") AS "GB_esu_25") AS "GB_B25") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_OO32OM_GB_ part 1. Create 
+-- Code For temporary table TMP_20180602_DUA_GB_B26 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_OO32OM_GB_" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_DUA_GB_B26" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -2057,9 +2395,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_OO32OM_GB_" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_OO32OM_GB_ part 2. Populate
+-- Code For temporary table TMP_20180602_DUA_GB_B26 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_OO32OM_GB_" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+INSERT INTO "TMP_20180602_DUA_GB_B26" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
 FROM (WITH "DT_node_lookup_130" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_36" <= 0.5) THEN CASE WHEN ("ADS"."Feature_33" <= 0.5) THEN CASE WHEN ("ADS"."Feature_63" <= 2.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_28" <= 4.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_28" <= 0.5) THEN CASE WHEN ("ADS"."Feature_21" <= 12.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_18" <= 6.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
@@ -2119,8 +2457,39 @@ FROM (SELECT 3 AS nid, 0.2356785251035858 AS "E" FROM rdb$database UNION ALL SEL
 FROM "DT_node_lookup_134" LEFT OUTER JOIN "DT_node_data_134" ON "DT_node_lookup_134".node_id_2 = "DT_node_data_134".nid), 
 "GB_Model_13_4" AS 
 (SELECT "DT_Output_134"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", "DT_Output_134"."E" AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", 0.0 AS "Score_9" 
-FROM "DT_Output_134"), 
-"DT_node_lookup_135" AS 
+FROM "DT_Output_134")
+ SELECT "GB_B26"."KEY", "GB_B26"."Score_0", "GB_B26"."Score_1", "GB_B26"."Score_2", "GB_B26"."Score_3", "GB_B26"."Score_4", "GB_B26"."Score_5", "GB_B26"."Score_6", "GB_B26"."Score_7", "GB_B26"."Score_8", "GB_B26"."Score_9" 
+FROM (SELECT "GB_esu_26"."KEY" AS "KEY", "GB_esu_26"."Score_0" AS "Score_0", "GB_esu_26"."Score_1" AS "Score_1", "GB_esu_26"."Score_2" AS "Score_2", "GB_esu_26"."Score_3" AS "Score_3", "GB_esu_26"."Score_4" AS "Score_4", "GB_esu_26"."Score_5" AS "Score_5", "GB_esu_26"."Score_6" AS "Score_6", "GB_esu_26"."Score_7" AS "Score_7", "GB_esu_26"."Score_8" AS "Score_8", "GB_esu_26"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_13_0"."KEY" AS "KEY", "GB_Model_13_0"."Score_0" AS "Score_0", "GB_Model_13_0"."Score_1" AS "Score_1", "GB_Model_13_0"."Score_2" AS "Score_2", "GB_Model_13_0"."Score_3" AS "Score_3", "GB_Model_13_0"."Score_4" AS "Score_4", "GB_Model_13_0"."Score_5" AS "Score_5", "GB_Model_13_0"."Score_6" AS "Score_6", "GB_Model_13_0"."Score_7" AS "Score_7", "GB_Model_13_0"."Score_8" AS "Score_8", "GB_Model_13_0"."Score_9" AS "Score_9" 
+FROM "GB_Model_13_0" UNION ALL SELECT "GB_Model_13_1"."KEY" AS "KEY", "GB_Model_13_1"."Score_0" AS "Score_0", "GB_Model_13_1"."Score_1" AS "Score_1", "GB_Model_13_1"."Score_2" AS "Score_2", "GB_Model_13_1"."Score_3" AS "Score_3", "GB_Model_13_1"."Score_4" AS "Score_4", "GB_Model_13_1"."Score_5" AS "Score_5", "GB_Model_13_1"."Score_6" AS "Score_6", "GB_Model_13_1"."Score_7" AS "Score_7", "GB_Model_13_1"."Score_8" AS "Score_8", "GB_Model_13_1"."Score_9" AS "Score_9" 
+FROM "GB_Model_13_1" UNION ALL SELECT "GB_Model_13_2"."KEY" AS "KEY", "GB_Model_13_2"."Score_0" AS "Score_0", "GB_Model_13_2"."Score_1" AS "Score_1", "GB_Model_13_2"."Score_2" AS "Score_2", "GB_Model_13_2"."Score_3" AS "Score_3", "GB_Model_13_2"."Score_4" AS "Score_4", "GB_Model_13_2"."Score_5" AS "Score_5", "GB_Model_13_2"."Score_6" AS "Score_6", "GB_Model_13_2"."Score_7" AS "Score_7", "GB_Model_13_2"."Score_8" AS "Score_8", "GB_Model_13_2"."Score_9" AS "Score_9" 
+FROM "GB_Model_13_2" UNION ALL SELECT "GB_Model_13_3"."KEY" AS "KEY", "GB_Model_13_3"."Score_0" AS "Score_0", "GB_Model_13_3"."Score_1" AS "Score_1", "GB_Model_13_3"."Score_2" AS "Score_2", "GB_Model_13_3"."Score_3" AS "Score_3", "GB_Model_13_3"."Score_4" AS "Score_4", "GB_Model_13_3"."Score_5" AS "Score_5", "GB_Model_13_3"."Score_6" AS "Score_6", "GB_Model_13_3"."Score_7" AS "Score_7", "GB_Model_13_3"."Score_8" AS "Score_8", "GB_Model_13_3"."Score_9" AS "Score_9" 
+FROM "GB_Model_13_3" UNION ALL SELECT "GB_Model_13_4"."KEY" AS "KEY", "GB_Model_13_4"."Score_0" AS "Score_0", "GB_Model_13_4"."Score_1" AS "Score_1", "GB_Model_13_4"."Score_2" AS "Score_2", "GB_Model_13_4"."Score_3" AS "Score_3", "GB_Model_13_4"."Score_4" AS "Score_4", "GB_Model_13_4"."Score_5" AS "Score_5", "GB_Model_13_4"."Score_6" AS "Score_6", "GB_Model_13_4"."Score_7" AS "Score_7", "GB_Model_13_4"."Score_8" AS "Score_8", "GB_Model_13_4"."Score_9" AS "Score_9" 
+FROM "GB_Model_13_4") AS "GB_esu_26") AS "GB_B26") AS "U"
+
+-- Code For temporary table TMP_20180602_YVU_GB_B27 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_YVU_GB_B27" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Score_2" DOUBLE PRECISION, 
+	"Score_3" DOUBLE PRECISION, 
+	"Score_4" DOUBLE PRECISION, 
+	"Score_5" DOUBLE PRECISION, 
+	"Score_6" DOUBLE PRECISION, 
+	"Score_7" DOUBLE PRECISION, 
+	"Score_8" DOUBLE PRECISION, 
+	"Score_9" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_YVU_GB_B27 part 2. Populate
+
+INSERT INTO "TMP_20180602_YVU_GB_B27" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+FROM (WITH "DT_node_lookup_135" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_21" <= 1.5) THEN CASE WHEN ("ADS"."Feature_6" <= 0.5) THEN CASE WHEN ("ADS"."Feature_42" <= 0.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_38" <= 10.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_2" <= 6.5) THEN CASE WHEN ("ADS"."Feature_42" <= 10.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_26" <= 15.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
 "DT_node_data_135" AS 
@@ -2180,24 +2549,19 @@ FROM "DT_node_lookup_139" LEFT OUTER JOIN "DT_node_data_139" ON "DT_node_lookup_
 "GB_Model_13_9" AS 
 (SELECT "DT_Output_139"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", 0.0 AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", "DT_Output_139"."E" AS "Score_9" 
 FROM "DT_Output_139")
- SELECT "GB_B13"."KEY", "GB_B13"."Score_0", "GB_B13"."Score_1", "GB_B13"."Score_2", "GB_B13"."Score_3", "GB_B13"."Score_4", "GB_B13"."Score_5", "GB_B13"."Score_6", "GB_B13"."Score_7", "GB_B13"."Score_8", "GB_B13"."Score_9" 
-FROM (SELECT "GB_esu_13"."KEY" AS "KEY", "GB_esu_13"."Score_0" AS "Score_0", "GB_esu_13"."Score_1" AS "Score_1", "GB_esu_13"."Score_2" AS "Score_2", "GB_esu_13"."Score_3" AS "Score_3", "GB_esu_13"."Score_4" AS "Score_4", "GB_esu_13"."Score_5" AS "Score_5", "GB_esu_13"."Score_6" AS "Score_6", "GB_esu_13"."Score_7" AS "Score_7", "GB_esu_13"."Score_8" AS "Score_8", "GB_esu_13"."Score_9" AS "Score_9" 
-FROM (SELECT "GB_Model_13_0"."KEY" AS "KEY", "GB_Model_13_0"."Score_0" AS "Score_0", "GB_Model_13_0"."Score_1" AS "Score_1", "GB_Model_13_0"."Score_2" AS "Score_2", "GB_Model_13_0"."Score_3" AS "Score_3", "GB_Model_13_0"."Score_4" AS "Score_4", "GB_Model_13_0"."Score_5" AS "Score_5", "GB_Model_13_0"."Score_6" AS "Score_6", "GB_Model_13_0"."Score_7" AS "Score_7", "GB_Model_13_0"."Score_8" AS "Score_8", "GB_Model_13_0"."Score_9" AS "Score_9" 
-FROM "GB_Model_13_0" UNION ALL SELECT "GB_Model_13_1"."KEY" AS "KEY", "GB_Model_13_1"."Score_0" AS "Score_0", "GB_Model_13_1"."Score_1" AS "Score_1", "GB_Model_13_1"."Score_2" AS "Score_2", "GB_Model_13_1"."Score_3" AS "Score_3", "GB_Model_13_1"."Score_4" AS "Score_4", "GB_Model_13_1"."Score_5" AS "Score_5", "GB_Model_13_1"."Score_6" AS "Score_6", "GB_Model_13_1"."Score_7" AS "Score_7", "GB_Model_13_1"."Score_8" AS "Score_8", "GB_Model_13_1"."Score_9" AS "Score_9" 
-FROM "GB_Model_13_1" UNION ALL SELECT "GB_Model_13_2"."KEY" AS "KEY", "GB_Model_13_2"."Score_0" AS "Score_0", "GB_Model_13_2"."Score_1" AS "Score_1", "GB_Model_13_2"."Score_2" AS "Score_2", "GB_Model_13_2"."Score_3" AS "Score_3", "GB_Model_13_2"."Score_4" AS "Score_4", "GB_Model_13_2"."Score_5" AS "Score_5", "GB_Model_13_2"."Score_6" AS "Score_6", "GB_Model_13_2"."Score_7" AS "Score_7", "GB_Model_13_2"."Score_8" AS "Score_8", "GB_Model_13_2"."Score_9" AS "Score_9" 
-FROM "GB_Model_13_2" UNION ALL SELECT "GB_Model_13_3"."KEY" AS "KEY", "GB_Model_13_3"."Score_0" AS "Score_0", "GB_Model_13_3"."Score_1" AS "Score_1", "GB_Model_13_3"."Score_2" AS "Score_2", "GB_Model_13_3"."Score_3" AS "Score_3", "GB_Model_13_3"."Score_4" AS "Score_4", "GB_Model_13_3"."Score_5" AS "Score_5", "GB_Model_13_3"."Score_6" AS "Score_6", "GB_Model_13_3"."Score_7" AS "Score_7", "GB_Model_13_3"."Score_8" AS "Score_8", "GB_Model_13_3"."Score_9" AS "Score_9" 
-FROM "GB_Model_13_3" UNION ALL SELECT "GB_Model_13_4"."KEY" AS "KEY", "GB_Model_13_4"."Score_0" AS "Score_0", "GB_Model_13_4"."Score_1" AS "Score_1", "GB_Model_13_4"."Score_2" AS "Score_2", "GB_Model_13_4"."Score_3" AS "Score_3", "GB_Model_13_4"."Score_4" AS "Score_4", "GB_Model_13_4"."Score_5" AS "Score_5", "GB_Model_13_4"."Score_6" AS "Score_6", "GB_Model_13_4"."Score_7" AS "Score_7", "GB_Model_13_4"."Score_8" AS "Score_8", "GB_Model_13_4"."Score_9" AS "Score_9" 
-FROM "GB_Model_13_4" UNION ALL SELECT "GB_Model_13_5"."KEY" AS "KEY", "GB_Model_13_5"."Score_0" AS "Score_0", "GB_Model_13_5"."Score_1" AS "Score_1", "GB_Model_13_5"."Score_2" AS "Score_2", "GB_Model_13_5"."Score_3" AS "Score_3", "GB_Model_13_5"."Score_4" AS "Score_4", "GB_Model_13_5"."Score_5" AS "Score_5", "GB_Model_13_5"."Score_6" AS "Score_6", "GB_Model_13_5"."Score_7" AS "Score_7", "GB_Model_13_5"."Score_8" AS "Score_8", "GB_Model_13_5"."Score_9" AS "Score_9" 
+ SELECT "GB_B27"."KEY", "GB_B27"."Score_0", "GB_B27"."Score_1", "GB_B27"."Score_2", "GB_B27"."Score_3", "GB_B27"."Score_4", "GB_B27"."Score_5", "GB_B27"."Score_6", "GB_B27"."Score_7", "GB_B27"."Score_8", "GB_B27"."Score_9" 
+FROM (SELECT "GB_esu_27"."KEY" AS "KEY", "GB_esu_27"."Score_0" AS "Score_0", "GB_esu_27"."Score_1" AS "Score_1", "GB_esu_27"."Score_2" AS "Score_2", "GB_esu_27"."Score_3" AS "Score_3", "GB_esu_27"."Score_4" AS "Score_4", "GB_esu_27"."Score_5" AS "Score_5", "GB_esu_27"."Score_6" AS "Score_6", "GB_esu_27"."Score_7" AS "Score_7", "GB_esu_27"."Score_8" AS "Score_8", "GB_esu_27"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_13_5"."KEY" AS "KEY", "GB_Model_13_5"."Score_0" AS "Score_0", "GB_Model_13_5"."Score_1" AS "Score_1", "GB_Model_13_5"."Score_2" AS "Score_2", "GB_Model_13_5"."Score_3" AS "Score_3", "GB_Model_13_5"."Score_4" AS "Score_4", "GB_Model_13_5"."Score_5" AS "Score_5", "GB_Model_13_5"."Score_6" AS "Score_6", "GB_Model_13_5"."Score_7" AS "Score_7", "GB_Model_13_5"."Score_8" AS "Score_8", "GB_Model_13_5"."Score_9" AS "Score_9" 
 FROM "GB_Model_13_5" UNION ALL SELECT "GB_Model_13_6"."KEY" AS "KEY", "GB_Model_13_6"."Score_0" AS "Score_0", "GB_Model_13_6"."Score_1" AS "Score_1", "GB_Model_13_6"."Score_2" AS "Score_2", "GB_Model_13_6"."Score_3" AS "Score_3", "GB_Model_13_6"."Score_4" AS "Score_4", "GB_Model_13_6"."Score_5" AS "Score_5", "GB_Model_13_6"."Score_6" AS "Score_6", "GB_Model_13_6"."Score_7" AS "Score_7", "GB_Model_13_6"."Score_8" AS "Score_8", "GB_Model_13_6"."Score_9" AS "Score_9" 
 FROM "GB_Model_13_6" UNION ALL SELECT "GB_Model_13_7"."KEY" AS "KEY", "GB_Model_13_7"."Score_0" AS "Score_0", "GB_Model_13_7"."Score_1" AS "Score_1", "GB_Model_13_7"."Score_2" AS "Score_2", "GB_Model_13_7"."Score_3" AS "Score_3", "GB_Model_13_7"."Score_4" AS "Score_4", "GB_Model_13_7"."Score_5" AS "Score_5", "GB_Model_13_7"."Score_6" AS "Score_6", "GB_Model_13_7"."Score_7" AS "Score_7", "GB_Model_13_7"."Score_8" AS "Score_8", "GB_Model_13_7"."Score_9" AS "Score_9" 
 FROM "GB_Model_13_7" UNION ALL SELECT "GB_Model_13_8"."KEY" AS "KEY", "GB_Model_13_8"."Score_0" AS "Score_0", "GB_Model_13_8"."Score_1" AS "Score_1", "GB_Model_13_8"."Score_2" AS "Score_2", "GB_Model_13_8"."Score_3" AS "Score_3", "GB_Model_13_8"."Score_4" AS "Score_4", "GB_Model_13_8"."Score_5" AS "Score_5", "GB_Model_13_8"."Score_6" AS "Score_6", "GB_Model_13_8"."Score_7" AS "Score_7", "GB_Model_13_8"."Score_8" AS "Score_8", "GB_Model_13_8"."Score_9" AS "Score_9" 
 FROM "GB_Model_13_8" UNION ALL SELECT "GB_Model_13_9"."KEY" AS "KEY", "GB_Model_13_9"."Score_0" AS "Score_0", "GB_Model_13_9"."Score_1" AS "Score_1", "GB_Model_13_9"."Score_2" AS "Score_2", "GB_Model_13_9"."Score_3" AS "Score_3", "GB_Model_13_9"."Score_4" AS "Score_4", "GB_Model_13_9"."Score_5" AS "Score_5", "GB_Model_13_9"."Score_6" AS "Score_6", "GB_Model_13_9"."Score_7" AS "Score_7", "GB_Model_13_9"."Score_8" AS "Score_8", "GB_Model_13_9"."Score_9" AS "Score_9" 
-FROM "GB_Model_13_9") AS "GB_esu_13") AS "GB_B13") AS "U"
+FROM "GB_Model_13_9") AS "GB_esu_27") AS "GB_B27") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_V0M8MQ_GB_ part 1. Create 
+-- Code For temporary table TMP_20180602_FFD_GB_B28 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_V0M8MQ_GB_" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_FFD_GB_B28" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -2213,9 +2577,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_V0M8MQ_GB_" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_V0M8MQ_GB_ part 2. Populate
+-- Code For temporary table TMP_20180602_FFD_GB_B28 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_V0M8MQ_GB_" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+INSERT INTO "TMP_20180602_FFD_GB_B28" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
 FROM (WITH "DT_node_lookup_140" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_36" <= 0.5) THEN CASE WHEN ("ADS"."Feature_28" <= 2.5) THEN CASE WHEN ("ADS"."Feature_13" <= 1.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_12" <= 15.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_34" <= 11.5) THEN CASE WHEN ("ADS"."Feature_58" <= 3.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_36" <= 3.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
@@ -2275,8 +2639,39 @@ FROM (SELECT 3 AS nid, 1.6697021845906352 AS "E" FROM rdb$database UNION ALL SEL
 FROM "DT_node_lookup_144" LEFT OUTER JOIN "DT_node_data_144" ON "DT_node_lookup_144".node_id_2 = "DT_node_data_144".nid), 
 "GB_Model_14_4" AS 
 (SELECT "DT_Output_144"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", "DT_Output_144"."E" AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", 0.0 AS "Score_9" 
-FROM "DT_Output_144"), 
-"DT_node_lookup_145" AS 
+FROM "DT_Output_144")
+ SELECT "GB_B28"."KEY", "GB_B28"."Score_0", "GB_B28"."Score_1", "GB_B28"."Score_2", "GB_B28"."Score_3", "GB_B28"."Score_4", "GB_B28"."Score_5", "GB_B28"."Score_6", "GB_B28"."Score_7", "GB_B28"."Score_8", "GB_B28"."Score_9" 
+FROM (SELECT "GB_esu_28"."KEY" AS "KEY", "GB_esu_28"."Score_0" AS "Score_0", "GB_esu_28"."Score_1" AS "Score_1", "GB_esu_28"."Score_2" AS "Score_2", "GB_esu_28"."Score_3" AS "Score_3", "GB_esu_28"."Score_4" AS "Score_4", "GB_esu_28"."Score_5" AS "Score_5", "GB_esu_28"."Score_6" AS "Score_6", "GB_esu_28"."Score_7" AS "Score_7", "GB_esu_28"."Score_8" AS "Score_8", "GB_esu_28"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_14_0"."KEY" AS "KEY", "GB_Model_14_0"."Score_0" AS "Score_0", "GB_Model_14_0"."Score_1" AS "Score_1", "GB_Model_14_0"."Score_2" AS "Score_2", "GB_Model_14_0"."Score_3" AS "Score_3", "GB_Model_14_0"."Score_4" AS "Score_4", "GB_Model_14_0"."Score_5" AS "Score_5", "GB_Model_14_0"."Score_6" AS "Score_6", "GB_Model_14_0"."Score_7" AS "Score_7", "GB_Model_14_0"."Score_8" AS "Score_8", "GB_Model_14_0"."Score_9" AS "Score_9" 
+FROM "GB_Model_14_0" UNION ALL SELECT "GB_Model_14_1"."KEY" AS "KEY", "GB_Model_14_1"."Score_0" AS "Score_0", "GB_Model_14_1"."Score_1" AS "Score_1", "GB_Model_14_1"."Score_2" AS "Score_2", "GB_Model_14_1"."Score_3" AS "Score_3", "GB_Model_14_1"."Score_4" AS "Score_4", "GB_Model_14_1"."Score_5" AS "Score_5", "GB_Model_14_1"."Score_6" AS "Score_6", "GB_Model_14_1"."Score_7" AS "Score_7", "GB_Model_14_1"."Score_8" AS "Score_8", "GB_Model_14_1"."Score_9" AS "Score_9" 
+FROM "GB_Model_14_1" UNION ALL SELECT "GB_Model_14_2"."KEY" AS "KEY", "GB_Model_14_2"."Score_0" AS "Score_0", "GB_Model_14_2"."Score_1" AS "Score_1", "GB_Model_14_2"."Score_2" AS "Score_2", "GB_Model_14_2"."Score_3" AS "Score_3", "GB_Model_14_2"."Score_4" AS "Score_4", "GB_Model_14_2"."Score_5" AS "Score_5", "GB_Model_14_2"."Score_6" AS "Score_6", "GB_Model_14_2"."Score_7" AS "Score_7", "GB_Model_14_2"."Score_8" AS "Score_8", "GB_Model_14_2"."Score_9" AS "Score_9" 
+FROM "GB_Model_14_2" UNION ALL SELECT "GB_Model_14_3"."KEY" AS "KEY", "GB_Model_14_3"."Score_0" AS "Score_0", "GB_Model_14_3"."Score_1" AS "Score_1", "GB_Model_14_3"."Score_2" AS "Score_2", "GB_Model_14_3"."Score_3" AS "Score_3", "GB_Model_14_3"."Score_4" AS "Score_4", "GB_Model_14_3"."Score_5" AS "Score_5", "GB_Model_14_3"."Score_6" AS "Score_6", "GB_Model_14_3"."Score_7" AS "Score_7", "GB_Model_14_3"."Score_8" AS "Score_8", "GB_Model_14_3"."Score_9" AS "Score_9" 
+FROM "GB_Model_14_3" UNION ALL SELECT "GB_Model_14_4"."KEY" AS "KEY", "GB_Model_14_4"."Score_0" AS "Score_0", "GB_Model_14_4"."Score_1" AS "Score_1", "GB_Model_14_4"."Score_2" AS "Score_2", "GB_Model_14_4"."Score_3" AS "Score_3", "GB_Model_14_4"."Score_4" AS "Score_4", "GB_Model_14_4"."Score_5" AS "Score_5", "GB_Model_14_4"."Score_6" AS "Score_6", "GB_Model_14_4"."Score_7" AS "Score_7", "GB_Model_14_4"."Score_8" AS "Score_8", "GB_Model_14_4"."Score_9" AS "Score_9" 
+FROM "GB_Model_14_4") AS "GB_esu_28") AS "GB_B28") AS "U"
+
+-- Code For temporary table TMP_20180602_FJD_GB_B29 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_FJD_GB_B29" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Score_2" DOUBLE PRECISION, 
+	"Score_3" DOUBLE PRECISION, 
+	"Score_4" DOUBLE PRECISION, 
+	"Score_5" DOUBLE PRECISION, 
+	"Score_6" DOUBLE PRECISION, 
+	"Score_7" DOUBLE PRECISION, 
+	"Score_8" DOUBLE PRECISION, 
+	"Score_9" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_FJD_GB_B29 part 2. Populate
+
+INSERT INTO "TMP_20180602_FJD_GB_B29" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+FROM (WITH "DT_node_lookup_145" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_21" <= 0.5) THEN CASE WHEN ("ADS"."Feature_5" <= 2.5) THEN CASE WHEN ("ADS"."Feature_36" <= 1.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_42" <= 9.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_36" <= 1.5) THEN CASE WHEN ("ADS"."Feature_6" <= 1.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_6" <= 7.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
 "DT_node_data_145" AS 
@@ -2336,24 +2731,19 @@ FROM "DT_node_lookup_149" LEFT OUTER JOIN "DT_node_data_149" ON "DT_node_lookup_
 "GB_Model_14_9" AS 
 (SELECT "DT_Output_149"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", 0.0 AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", "DT_Output_149"."E" AS "Score_9" 
 FROM "DT_Output_149")
- SELECT "GB_B14"."KEY", "GB_B14"."Score_0", "GB_B14"."Score_1", "GB_B14"."Score_2", "GB_B14"."Score_3", "GB_B14"."Score_4", "GB_B14"."Score_5", "GB_B14"."Score_6", "GB_B14"."Score_7", "GB_B14"."Score_8", "GB_B14"."Score_9" 
-FROM (SELECT "GB_esu_14"."KEY" AS "KEY", "GB_esu_14"."Score_0" AS "Score_0", "GB_esu_14"."Score_1" AS "Score_1", "GB_esu_14"."Score_2" AS "Score_2", "GB_esu_14"."Score_3" AS "Score_3", "GB_esu_14"."Score_4" AS "Score_4", "GB_esu_14"."Score_5" AS "Score_5", "GB_esu_14"."Score_6" AS "Score_6", "GB_esu_14"."Score_7" AS "Score_7", "GB_esu_14"."Score_8" AS "Score_8", "GB_esu_14"."Score_9" AS "Score_9" 
-FROM (SELECT "GB_Model_14_0"."KEY" AS "KEY", "GB_Model_14_0"."Score_0" AS "Score_0", "GB_Model_14_0"."Score_1" AS "Score_1", "GB_Model_14_0"."Score_2" AS "Score_2", "GB_Model_14_0"."Score_3" AS "Score_3", "GB_Model_14_0"."Score_4" AS "Score_4", "GB_Model_14_0"."Score_5" AS "Score_5", "GB_Model_14_0"."Score_6" AS "Score_6", "GB_Model_14_0"."Score_7" AS "Score_7", "GB_Model_14_0"."Score_8" AS "Score_8", "GB_Model_14_0"."Score_9" AS "Score_9" 
-FROM "GB_Model_14_0" UNION ALL SELECT "GB_Model_14_1"."KEY" AS "KEY", "GB_Model_14_1"."Score_0" AS "Score_0", "GB_Model_14_1"."Score_1" AS "Score_1", "GB_Model_14_1"."Score_2" AS "Score_2", "GB_Model_14_1"."Score_3" AS "Score_3", "GB_Model_14_1"."Score_4" AS "Score_4", "GB_Model_14_1"."Score_5" AS "Score_5", "GB_Model_14_1"."Score_6" AS "Score_6", "GB_Model_14_1"."Score_7" AS "Score_7", "GB_Model_14_1"."Score_8" AS "Score_8", "GB_Model_14_1"."Score_9" AS "Score_9" 
-FROM "GB_Model_14_1" UNION ALL SELECT "GB_Model_14_2"."KEY" AS "KEY", "GB_Model_14_2"."Score_0" AS "Score_0", "GB_Model_14_2"."Score_1" AS "Score_1", "GB_Model_14_2"."Score_2" AS "Score_2", "GB_Model_14_2"."Score_3" AS "Score_3", "GB_Model_14_2"."Score_4" AS "Score_4", "GB_Model_14_2"."Score_5" AS "Score_5", "GB_Model_14_2"."Score_6" AS "Score_6", "GB_Model_14_2"."Score_7" AS "Score_7", "GB_Model_14_2"."Score_8" AS "Score_8", "GB_Model_14_2"."Score_9" AS "Score_9" 
-FROM "GB_Model_14_2" UNION ALL SELECT "GB_Model_14_3"."KEY" AS "KEY", "GB_Model_14_3"."Score_0" AS "Score_0", "GB_Model_14_3"."Score_1" AS "Score_1", "GB_Model_14_3"."Score_2" AS "Score_2", "GB_Model_14_3"."Score_3" AS "Score_3", "GB_Model_14_3"."Score_4" AS "Score_4", "GB_Model_14_3"."Score_5" AS "Score_5", "GB_Model_14_3"."Score_6" AS "Score_6", "GB_Model_14_3"."Score_7" AS "Score_7", "GB_Model_14_3"."Score_8" AS "Score_8", "GB_Model_14_3"."Score_9" AS "Score_9" 
-FROM "GB_Model_14_3" UNION ALL SELECT "GB_Model_14_4"."KEY" AS "KEY", "GB_Model_14_4"."Score_0" AS "Score_0", "GB_Model_14_4"."Score_1" AS "Score_1", "GB_Model_14_4"."Score_2" AS "Score_2", "GB_Model_14_4"."Score_3" AS "Score_3", "GB_Model_14_4"."Score_4" AS "Score_4", "GB_Model_14_4"."Score_5" AS "Score_5", "GB_Model_14_4"."Score_6" AS "Score_6", "GB_Model_14_4"."Score_7" AS "Score_7", "GB_Model_14_4"."Score_8" AS "Score_8", "GB_Model_14_4"."Score_9" AS "Score_9" 
-FROM "GB_Model_14_4" UNION ALL SELECT "GB_Model_14_5"."KEY" AS "KEY", "GB_Model_14_5"."Score_0" AS "Score_0", "GB_Model_14_5"."Score_1" AS "Score_1", "GB_Model_14_5"."Score_2" AS "Score_2", "GB_Model_14_5"."Score_3" AS "Score_3", "GB_Model_14_5"."Score_4" AS "Score_4", "GB_Model_14_5"."Score_5" AS "Score_5", "GB_Model_14_5"."Score_6" AS "Score_6", "GB_Model_14_5"."Score_7" AS "Score_7", "GB_Model_14_5"."Score_8" AS "Score_8", "GB_Model_14_5"."Score_9" AS "Score_9" 
+ SELECT "GB_B29"."KEY", "GB_B29"."Score_0", "GB_B29"."Score_1", "GB_B29"."Score_2", "GB_B29"."Score_3", "GB_B29"."Score_4", "GB_B29"."Score_5", "GB_B29"."Score_6", "GB_B29"."Score_7", "GB_B29"."Score_8", "GB_B29"."Score_9" 
+FROM (SELECT "GB_esu_29"."KEY" AS "KEY", "GB_esu_29"."Score_0" AS "Score_0", "GB_esu_29"."Score_1" AS "Score_1", "GB_esu_29"."Score_2" AS "Score_2", "GB_esu_29"."Score_3" AS "Score_3", "GB_esu_29"."Score_4" AS "Score_4", "GB_esu_29"."Score_5" AS "Score_5", "GB_esu_29"."Score_6" AS "Score_6", "GB_esu_29"."Score_7" AS "Score_7", "GB_esu_29"."Score_8" AS "Score_8", "GB_esu_29"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_14_5"."KEY" AS "KEY", "GB_Model_14_5"."Score_0" AS "Score_0", "GB_Model_14_5"."Score_1" AS "Score_1", "GB_Model_14_5"."Score_2" AS "Score_2", "GB_Model_14_5"."Score_3" AS "Score_3", "GB_Model_14_5"."Score_4" AS "Score_4", "GB_Model_14_5"."Score_5" AS "Score_5", "GB_Model_14_5"."Score_6" AS "Score_6", "GB_Model_14_5"."Score_7" AS "Score_7", "GB_Model_14_5"."Score_8" AS "Score_8", "GB_Model_14_5"."Score_9" AS "Score_9" 
 FROM "GB_Model_14_5" UNION ALL SELECT "GB_Model_14_6"."KEY" AS "KEY", "GB_Model_14_6"."Score_0" AS "Score_0", "GB_Model_14_6"."Score_1" AS "Score_1", "GB_Model_14_6"."Score_2" AS "Score_2", "GB_Model_14_6"."Score_3" AS "Score_3", "GB_Model_14_6"."Score_4" AS "Score_4", "GB_Model_14_6"."Score_5" AS "Score_5", "GB_Model_14_6"."Score_6" AS "Score_6", "GB_Model_14_6"."Score_7" AS "Score_7", "GB_Model_14_6"."Score_8" AS "Score_8", "GB_Model_14_6"."Score_9" AS "Score_9" 
 FROM "GB_Model_14_6" UNION ALL SELECT "GB_Model_14_7"."KEY" AS "KEY", "GB_Model_14_7"."Score_0" AS "Score_0", "GB_Model_14_7"."Score_1" AS "Score_1", "GB_Model_14_7"."Score_2" AS "Score_2", "GB_Model_14_7"."Score_3" AS "Score_3", "GB_Model_14_7"."Score_4" AS "Score_4", "GB_Model_14_7"."Score_5" AS "Score_5", "GB_Model_14_7"."Score_6" AS "Score_6", "GB_Model_14_7"."Score_7" AS "Score_7", "GB_Model_14_7"."Score_8" AS "Score_8", "GB_Model_14_7"."Score_9" AS "Score_9" 
 FROM "GB_Model_14_7" UNION ALL SELECT "GB_Model_14_8"."KEY" AS "KEY", "GB_Model_14_8"."Score_0" AS "Score_0", "GB_Model_14_8"."Score_1" AS "Score_1", "GB_Model_14_8"."Score_2" AS "Score_2", "GB_Model_14_8"."Score_3" AS "Score_3", "GB_Model_14_8"."Score_4" AS "Score_4", "GB_Model_14_8"."Score_5" AS "Score_5", "GB_Model_14_8"."Score_6" AS "Score_6", "GB_Model_14_8"."Score_7" AS "Score_7", "GB_Model_14_8"."Score_8" AS "Score_8", "GB_Model_14_8"."Score_9" AS "Score_9" 
 FROM "GB_Model_14_8" UNION ALL SELECT "GB_Model_14_9"."KEY" AS "KEY", "GB_Model_14_9"."Score_0" AS "Score_0", "GB_Model_14_9"."Score_1" AS "Score_1", "GB_Model_14_9"."Score_2" AS "Score_2", "GB_Model_14_9"."Score_3" AS "Score_3", "GB_Model_14_9"."Score_4" AS "Score_4", "GB_Model_14_9"."Score_5" AS "Score_5", "GB_Model_14_9"."Score_6" AS "Score_6", "GB_Model_14_9"."Score_7" AS "Score_7", "GB_Model_14_9"."Score_8" AS "Score_8", "GB_Model_14_9"."Score_9" AS "Score_9" 
-FROM "GB_Model_14_9") AS "GB_esu_14") AS "GB_B14") AS "U"
+FROM "GB_Model_14_9") AS "GB_esu_29") AS "GB_B29") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_GU5JZH_GB_ part 1. Create 
+-- Code For temporary table TMP_20180602_PZC_GB_B30 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_GU5JZH_GB_" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_PZC_GB_B30" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -2369,9 +2759,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_GU5JZH_GB_" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_GU5JZH_GB_ part 2. Populate
+-- Code For temporary table TMP_20180602_PZC_GB_B30 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_GU5JZH_GB_" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+INSERT INTO "TMP_20180602_PZC_GB_B30" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
 FROM (WITH "DT_node_lookup_150" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_36" <= 0.5) THEN CASE WHEN ("ADS"."Feature_33" <= 0.5) THEN CASE WHEN ("ADS"."Feature_63" <= 2.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_43" <= 13.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_34" <= 11.5) THEN CASE WHEN ("ADS"."Feature_58" <= 3.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_36" <= 3.5) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
@@ -2431,8 +2821,39 @@ FROM (SELECT 3 AS nid, 1.224668438750105 AS "E" FROM rdb$database UNION ALL SELE
 FROM "DT_node_lookup_154" LEFT OUTER JOIN "DT_node_data_154" ON "DT_node_lookup_154".node_id_2 = "DT_node_data_154".nid), 
 "GB_Model_15_4" AS 
 (SELECT "DT_Output_154"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", "DT_Output_154"."E" AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", 0.0 AS "Score_9" 
-FROM "DT_Output_154"), 
-"DT_node_lookup_155" AS 
+FROM "DT_Output_154")
+ SELECT "GB_B30"."KEY", "GB_B30"."Score_0", "GB_B30"."Score_1", "GB_B30"."Score_2", "GB_B30"."Score_3", "GB_B30"."Score_4", "GB_B30"."Score_5", "GB_B30"."Score_6", "GB_B30"."Score_7", "GB_B30"."Score_8", "GB_B30"."Score_9" 
+FROM (SELECT "GB_esu_30"."KEY" AS "KEY", "GB_esu_30"."Score_0" AS "Score_0", "GB_esu_30"."Score_1" AS "Score_1", "GB_esu_30"."Score_2" AS "Score_2", "GB_esu_30"."Score_3" AS "Score_3", "GB_esu_30"."Score_4" AS "Score_4", "GB_esu_30"."Score_5" AS "Score_5", "GB_esu_30"."Score_6" AS "Score_6", "GB_esu_30"."Score_7" AS "Score_7", "GB_esu_30"."Score_8" AS "Score_8", "GB_esu_30"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_15_0"."KEY" AS "KEY", "GB_Model_15_0"."Score_0" AS "Score_0", "GB_Model_15_0"."Score_1" AS "Score_1", "GB_Model_15_0"."Score_2" AS "Score_2", "GB_Model_15_0"."Score_3" AS "Score_3", "GB_Model_15_0"."Score_4" AS "Score_4", "GB_Model_15_0"."Score_5" AS "Score_5", "GB_Model_15_0"."Score_6" AS "Score_6", "GB_Model_15_0"."Score_7" AS "Score_7", "GB_Model_15_0"."Score_8" AS "Score_8", "GB_Model_15_0"."Score_9" AS "Score_9" 
+FROM "GB_Model_15_0" UNION ALL SELECT "GB_Model_15_1"."KEY" AS "KEY", "GB_Model_15_1"."Score_0" AS "Score_0", "GB_Model_15_1"."Score_1" AS "Score_1", "GB_Model_15_1"."Score_2" AS "Score_2", "GB_Model_15_1"."Score_3" AS "Score_3", "GB_Model_15_1"."Score_4" AS "Score_4", "GB_Model_15_1"."Score_5" AS "Score_5", "GB_Model_15_1"."Score_6" AS "Score_6", "GB_Model_15_1"."Score_7" AS "Score_7", "GB_Model_15_1"."Score_8" AS "Score_8", "GB_Model_15_1"."Score_9" AS "Score_9" 
+FROM "GB_Model_15_1" UNION ALL SELECT "GB_Model_15_2"."KEY" AS "KEY", "GB_Model_15_2"."Score_0" AS "Score_0", "GB_Model_15_2"."Score_1" AS "Score_1", "GB_Model_15_2"."Score_2" AS "Score_2", "GB_Model_15_2"."Score_3" AS "Score_3", "GB_Model_15_2"."Score_4" AS "Score_4", "GB_Model_15_2"."Score_5" AS "Score_5", "GB_Model_15_2"."Score_6" AS "Score_6", "GB_Model_15_2"."Score_7" AS "Score_7", "GB_Model_15_2"."Score_8" AS "Score_8", "GB_Model_15_2"."Score_9" AS "Score_9" 
+FROM "GB_Model_15_2" UNION ALL SELECT "GB_Model_15_3"."KEY" AS "KEY", "GB_Model_15_3"."Score_0" AS "Score_0", "GB_Model_15_3"."Score_1" AS "Score_1", "GB_Model_15_3"."Score_2" AS "Score_2", "GB_Model_15_3"."Score_3" AS "Score_3", "GB_Model_15_3"."Score_4" AS "Score_4", "GB_Model_15_3"."Score_5" AS "Score_5", "GB_Model_15_3"."Score_6" AS "Score_6", "GB_Model_15_3"."Score_7" AS "Score_7", "GB_Model_15_3"."Score_8" AS "Score_8", "GB_Model_15_3"."Score_9" AS "Score_9" 
+FROM "GB_Model_15_3" UNION ALL SELECT "GB_Model_15_4"."KEY" AS "KEY", "GB_Model_15_4"."Score_0" AS "Score_0", "GB_Model_15_4"."Score_1" AS "Score_1", "GB_Model_15_4"."Score_2" AS "Score_2", "GB_Model_15_4"."Score_3" AS "Score_3", "GB_Model_15_4"."Score_4" AS "Score_4", "GB_Model_15_4"."Score_5" AS "Score_5", "GB_Model_15_4"."Score_6" AS "Score_6", "GB_Model_15_4"."Score_7" AS "Score_7", "GB_Model_15_4"."Score_8" AS "Score_8", "GB_Model_15_4"."Score_9" AS "Score_9" 
+FROM "GB_Model_15_4") AS "GB_esu_30") AS "GB_B30") AS "U"
+
+-- Code For temporary table TMP_20180602_R7N_GB_B31 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_R7N_GB_B31" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Score_2" DOUBLE PRECISION, 
+	"Score_3" DOUBLE PRECISION, 
+	"Score_4" DOUBLE PRECISION, 
+	"Score_5" DOUBLE PRECISION, 
+	"Score_6" DOUBLE PRECISION, 
+	"Score_7" DOUBLE PRECISION, 
+	"Score_8" DOUBLE PRECISION, 
+	"Score_9" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_R7N_GB_B31 part 2. Populate
+
+INSERT INTO "TMP_20180602_R7N_GB_B31" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+FROM (WITH "DT_node_lookup_155" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_21" <= 2.5) THEN CASE WHEN ("ADS"."Feature_6" <= 0.5) THEN CASE WHEN ("ADS"."Feature_42" <= 0.5) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_38" <= 10.5) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_36" <= 1.5) THEN CASE WHEN ("ADS"."Feature_5" <= 15.5) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_1" <= 5.0) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM digits AS "ADS"), 
 "DT_node_data_155" AS 
@@ -2492,24 +2913,19 @@ FROM "DT_node_lookup_159" LEFT OUTER JOIN "DT_node_data_159" ON "DT_node_lookup_
 "GB_Model_15_9" AS 
 (SELECT "DT_Output_159"."KEY" AS "KEY", 0.0 AS "Score_0", 0.0 AS "Score_1", 0.0 AS "Score_2", 0.0 AS "Score_3", 0.0 AS "Score_4", 0.0 AS "Score_5", 0.0 AS "Score_6", 0.0 AS "Score_7", 0.0 AS "Score_8", "DT_Output_159"."E" AS "Score_9" 
 FROM "DT_Output_159")
- SELECT "GB_B15"."KEY", "GB_B15"."Score_0", "GB_B15"."Score_1", "GB_B15"."Score_2", "GB_B15"."Score_3", "GB_B15"."Score_4", "GB_B15"."Score_5", "GB_B15"."Score_6", "GB_B15"."Score_7", "GB_B15"."Score_8", "GB_B15"."Score_9" 
-FROM (SELECT "GB_esu_15"."KEY" AS "KEY", "GB_esu_15"."Score_0" AS "Score_0", "GB_esu_15"."Score_1" AS "Score_1", "GB_esu_15"."Score_2" AS "Score_2", "GB_esu_15"."Score_3" AS "Score_3", "GB_esu_15"."Score_4" AS "Score_4", "GB_esu_15"."Score_5" AS "Score_5", "GB_esu_15"."Score_6" AS "Score_6", "GB_esu_15"."Score_7" AS "Score_7", "GB_esu_15"."Score_8" AS "Score_8", "GB_esu_15"."Score_9" AS "Score_9" 
-FROM (SELECT "GB_Model_15_0"."KEY" AS "KEY", "GB_Model_15_0"."Score_0" AS "Score_0", "GB_Model_15_0"."Score_1" AS "Score_1", "GB_Model_15_0"."Score_2" AS "Score_2", "GB_Model_15_0"."Score_3" AS "Score_3", "GB_Model_15_0"."Score_4" AS "Score_4", "GB_Model_15_0"."Score_5" AS "Score_5", "GB_Model_15_0"."Score_6" AS "Score_6", "GB_Model_15_0"."Score_7" AS "Score_7", "GB_Model_15_0"."Score_8" AS "Score_8", "GB_Model_15_0"."Score_9" AS "Score_9" 
-FROM "GB_Model_15_0" UNION ALL SELECT "GB_Model_15_1"."KEY" AS "KEY", "GB_Model_15_1"."Score_0" AS "Score_0", "GB_Model_15_1"."Score_1" AS "Score_1", "GB_Model_15_1"."Score_2" AS "Score_2", "GB_Model_15_1"."Score_3" AS "Score_3", "GB_Model_15_1"."Score_4" AS "Score_4", "GB_Model_15_1"."Score_5" AS "Score_5", "GB_Model_15_1"."Score_6" AS "Score_6", "GB_Model_15_1"."Score_7" AS "Score_7", "GB_Model_15_1"."Score_8" AS "Score_8", "GB_Model_15_1"."Score_9" AS "Score_9" 
-FROM "GB_Model_15_1" UNION ALL SELECT "GB_Model_15_2"."KEY" AS "KEY", "GB_Model_15_2"."Score_0" AS "Score_0", "GB_Model_15_2"."Score_1" AS "Score_1", "GB_Model_15_2"."Score_2" AS "Score_2", "GB_Model_15_2"."Score_3" AS "Score_3", "GB_Model_15_2"."Score_4" AS "Score_4", "GB_Model_15_2"."Score_5" AS "Score_5", "GB_Model_15_2"."Score_6" AS "Score_6", "GB_Model_15_2"."Score_7" AS "Score_7", "GB_Model_15_2"."Score_8" AS "Score_8", "GB_Model_15_2"."Score_9" AS "Score_9" 
-FROM "GB_Model_15_2" UNION ALL SELECT "GB_Model_15_3"."KEY" AS "KEY", "GB_Model_15_3"."Score_0" AS "Score_0", "GB_Model_15_3"."Score_1" AS "Score_1", "GB_Model_15_3"."Score_2" AS "Score_2", "GB_Model_15_3"."Score_3" AS "Score_3", "GB_Model_15_3"."Score_4" AS "Score_4", "GB_Model_15_3"."Score_5" AS "Score_5", "GB_Model_15_3"."Score_6" AS "Score_6", "GB_Model_15_3"."Score_7" AS "Score_7", "GB_Model_15_3"."Score_8" AS "Score_8", "GB_Model_15_3"."Score_9" AS "Score_9" 
-FROM "GB_Model_15_3" UNION ALL SELECT "GB_Model_15_4"."KEY" AS "KEY", "GB_Model_15_4"."Score_0" AS "Score_0", "GB_Model_15_4"."Score_1" AS "Score_1", "GB_Model_15_4"."Score_2" AS "Score_2", "GB_Model_15_4"."Score_3" AS "Score_3", "GB_Model_15_4"."Score_4" AS "Score_4", "GB_Model_15_4"."Score_5" AS "Score_5", "GB_Model_15_4"."Score_6" AS "Score_6", "GB_Model_15_4"."Score_7" AS "Score_7", "GB_Model_15_4"."Score_8" AS "Score_8", "GB_Model_15_4"."Score_9" AS "Score_9" 
-FROM "GB_Model_15_4" UNION ALL SELECT "GB_Model_15_5"."KEY" AS "KEY", "GB_Model_15_5"."Score_0" AS "Score_0", "GB_Model_15_5"."Score_1" AS "Score_1", "GB_Model_15_5"."Score_2" AS "Score_2", "GB_Model_15_5"."Score_3" AS "Score_3", "GB_Model_15_5"."Score_4" AS "Score_4", "GB_Model_15_5"."Score_5" AS "Score_5", "GB_Model_15_5"."Score_6" AS "Score_6", "GB_Model_15_5"."Score_7" AS "Score_7", "GB_Model_15_5"."Score_8" AS "Score_8", "GB_Model_15_5"."Score_9" AS "Score_9" 
+ SELECT "GB_B31"."KEY", "GB_B31"."Score_0", "GB_B31"."Score_1", "GB_B31"."Score_2", "GB_B31"."Score_3", "GB_B31"."Score_4", "GB_B31"."Score_5", "GB_B31"."Score_6", "GB_B31"."Score_7", "GB_B31"."Score_8", "GB_B31"."Score_9" 
+FROM (SELECT "GB_esu_31"."KEY" AS "KEY", "GB_esu_31"."Score_0" AS "Score_0", "GB_esu_31"."Score_1" AS "Score_1", "GB_esu_31"."Score_2" AS "Score_2", "GB_esu_31"."Score_3" AS "Score_3", "GB_esu_31"."Score_4" AS "Score_4", "GB_esu_31"."Score_5" AS "Score_5", "GB_esu_31"."Score_6" AS "Score_6", "GB_esu_31"."Score_7" AS "Score_7", "GB_esu_31"."Score_8" AS "Score_8", "GB_esu_31"."Score_9" AS "Score_9" 
+FROM (SELECT "GB_Model_15_5"."KEY" AS "KEY", "GB_Model_15_5"."Score_0" AS "Score_0", "GB_Model_15_5"."Score_1" AS "Score_1", "GB_Model_15_5"."Score_2" AS "Score_2", "GB_Model_15_5"."Score_3" AS "Score_3", "GB_Model_15_5"."Score_4" AS "Score_4", "GB_Model_15_5"."Score_5" AS "Score_5", "GB_Model_15_5"."Score_6" AS "Score_6", "GB_Model_15_5"."Score_7" AS "Score_7", "GB_Model_15_5"."Score_8" AS "Score_8", "GB_Model_15_5"."Score_9" AS "Score_9" 
 FROM "GB_Model_15_5" UNION ALL SELECT "GB_Model_15_6"."KEY" AS "KEY", "GB_Model_15_6"."Score_0" AS "Score_0", "GB_Model_15_6"."Score_1" AS "Score_1", "GB_Model_15_6"."Score_2" AS "Score_2", "GB_Model_15_6"."Score_3" AS "Score_3", "GB_Model_15_6"."Score_4" AS "Score_4", "GB_Model_15_6"."Score_5" AS "Score_5", "GB_Model_15_6"."Score_6" AS "Score_6", "GB_Model_15_6"."Score_7" AS "Score_7", "GB_Model_15_6"."Score_8" AS "Score_8", "GB_Model_15_6"."Score_9" AS "Score_9" 
 FROM "GB_Model_15_6" UNION ALL SELECT "GB_Model_15_7"."KEY" AS "KEY", "GB_Model_15_7"."Score_0" AS "Score_0", "GB_Model_15_7"."Score_1" AS "Score_1", "GB_Model_15_7"."Score_2" AS "Score_2", "GB_Model_15_7"."Score_3" AS "Score_3", "GB_Model_15_7"."Score_4" AS "Score_4", "GB_Model_15_7"."Score_5" AS "Score_5", "GB_Model_15_7"."Score_6" AS "Score_6", "GB_Model_15_7"."Score_7" AS "Score_7", "GB_Model_15_7"."Score_8" AS "Score_8", "GB_Model_15_7"."Score_9" AS "Score_9" 
 FROM "GB_Model_15_7" UNION ALL SELECT "GB_Model_15_8"."KEY" AS "KEY", "GB_Model_15_8"."Score_0" AS "Score_0", "GB_Model_15_8"."Score_1" AS "Score_1", "GB_Model_15_8"."Score_2" AS "Score_2", "GB_Model_15_8"."Score_3" AS "Score_3", "GB_Model_15_8"."Score_4" AS "Score_4", "GB_Model_15_8"."Score_5" AS "Score_5", "GB_Model_15_8"."Score_6" AS "Score_6", "GB_Model_15_8"."Score_7" AS "Score_7", "GB_Model_15_8"."Score_8" AS "Score_8", "GB_Model_15_8"."Score_9" AS "Score_9" 
 FROM "GB_Model_15_8" UNION ALL SELECT "GB_Model_15_9"."KEY" AS "KEY", "GB_Model_15_9"."Score_0" AS "Score_0", "GB_Model_15_9"."Score_1" AS "Score_1", "GB_Model_15_9"."Score_2" AS "Score_2", "GB_Model_15_9"."Score_3" AS "Score_3", "GB_Model_15_9"."Score_4" AS "Score_4", "GB_Model_15_9"."Score_5" AS "Score_5", "GB_Model_15_9"."Score_6" AS "Score_6", "GB_Model_15_9"."Score_7" AS "Score_7", "GB_Model_15_9"."Score_8" AS "Score_8", "GB_Model_15_9"."Score_9" AS "Score_9" 
-FROM "GB_Model_15_9") AS "GB_esu_15") AS "GB_B15") AS "U"
+FROM "GB_Model_15_9") AS "GB_esu_31") AS "GB_B31") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_KH16ZL_GB_ part 1. Create 
+-- Code For temporary table TMP_20180602_T48_GB_SUM part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_KH16ZL_GB_" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_T48_GB_SUM" (
 	"KEY" BIGINT NOT NULL, 
 	"Score_0" DOUBLE PRECISION, 
 	"Score_1" DOUBLE PRECISION, 
@@ -2526,42 +2942,58 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_KH16ZL_GB_" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_KH16ZL_GB_ part 2. Populate
+-- Code For temporary table TMP_20180602_T48_GB_SUM part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_KH16ZL_GB_" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
+INSERT INTO "TMP_20180602_T48_GB_SUM" ("KEY", "Score_0", "Score_1", "Score_2", "Score_3", "Score_4", "Score_5", "Score_6", "Score_7", "Score_8", "Score_9") SELECT "U"."KEY", "U"."Score_0", "U"."Score_1", "U"."Score_2", "U"."Score_3", "U"."Score_4", "U"."Score_5", "U"."Score_6", "U"."Score_7", "U"."Score_8", "U"."Score_9" 
 FROM (WITH "GB_Union" AS 
 (SELECT "GB_EnsembleUnion"."KEY" AS "KEY", "GB_EnsembleUnion"."Score_0" AS "Score_0", "GB_EnsembleUnion"."Score_1" AS "Score_1", "GB_EnsembleUnion"."Score_2" AS "Score_2", "GB_EnsembleUnion"."Score_3" AS "Score_3", "GB_EnsembleUnion"."Score_4" AS "Score_4", "GB_EnsembleUnion"."Score_5" AS "Score_5", "GB_EnsembleUnion"."Score_6" AS "Score_6", "GB_EnsembleUnion"."Score_7" AS "Score_7", "GB_EnsembleUnion"."Score_8" AS "Score_8", "GB_EnsembleUnion"."Score_9" AS "Score_9" 
 FROM (SELECT "GB_B0"."KEY" AS "KEY", "GB_B0"."Score_0" AS "Score_0", "GB_B0"."Score_1" AS "Score_1", "GB_B0"."Score_2" AS "Score_2", "GB_B0"."Score_3" AS "Score_3", "GB_B0"."Score_4" AS "Score_4", "GB_B0"."Score_5" AS "Score_5", "GB_B0"."Score_6" AS "Score_6", "GB_B0"."Score_7" AS "Score_7", "GB_B0"."Score_8" AS "Score_8", "GB_B0"."Score_9" AS "Score_9" 
-FROM "TMP_20180516_CODEGEN_1ZTYPS_GB_" AS "GB_B0" UNION ALL SELECT "GB_B1"."KEY" AS "KEY", "GB_B1"."Score_0" AS "Score_0", "GB_B1"."Score_1" AS "Score_1", "GB_B1"."Score_2" AS "Score_2", "GB_B1"."Score_3" AS "Score_3", "GB_B1"."Score_4" AS "Score_4", "GB_B1"."Score_5" AS "Score_5", "GB_B1"."Score_6" AS "Score_6", "GB_B1"."Score_7" AS "Score_7", "GB_B1"."Score_8" AS "Score_8", "GB_B1"."Score_9" AS "Score_9" 
-FROM "TMP_20180516_CODEGEN_6K45M3_GB_" AS "GB_B1" UNION ALL SELECT "GB_B2"."KEY" AS "KEY", "GB_B2"."Score_0" AS "Score_0", "GB_B2"."Score_1" AS "Score_1", "GB_B2"."Score_2" AS "Score_2", "GB_B2"."Score_3" AS "Score_3", "GB_B2"."Score_4" AS "Score_4", "GB_B2"."Score_5" AS "Score_5", "GB_B2"."Score_6" AS "Score_6", "GB_B2"."Score_7" AS "Score_7", "GB_B2"."Score_8" AS "Score_8", "GB_B2"."Score_9" AS "Score_9" 
-FROM "TMP_20180516_CODEGEN_OJQ3N8_GB_" AS "GB_B2" UNION ALL SELECT "GB_B3"."KEY" AS "KEY", "GB_B3"."Score_0" AS "Score_0", "GB_B3"."Score_1" AS "Score_1", "GB_B3"."Score_2" AS "Score_2", "GB_B3"."Score_3" AS "Score_3", "GB_B3"."Score_4" AS "Score_4", "GB_B3"."Score_5" AS "Score_5", "GB_B3"."Score_6" AS "Score_6", "GB_B3"."Score_7" AS "Score_7", "GB_B3"."Score_8" AS "Score_8", "GB_B3"."Score_9" AS "Score_9" 
-FROM "TMP_20180516_CODEGEN_QJSGW8_GB_" AS "GB_B3" UNION ALL SELECT "GB_B4"."KEY" AS "KEY", "GB_B4"."Score_0" AS "Score_0", "GB_B4"."Score_1" AS "Score_1", "GB_B4"."Score_2" AS "Score_2", "GB_B4"."Score_3" AS "Score_3", "GB_B4"."Score_4" AS "Score_4", "GB_B4"."Score_5" AS "Score_5", "GB_B4"."Score_6" AS "Score_6", "GB_B4"."Score_7" AS "Score_7", "GB_B4"."Score_8" AS "Score_8", "GB_B4"."Score_9" AS "Score_9" 
-FROM "TMP_20180516_CODEGEN_P7IE62_GB_" AS "GB_B4" UNION ALL SELECT "GB_B5"."KEY" AS "KEY", "GB_B5"."Score_0" AS "Score_0", "GB_B5"."Score_1" AS "Score_1", "GB_B5"."Score_2" AS "Score_2", "GB_B5"."Score_3" AS "Score_3", "GB_B5"."Score_4" AS "Score_4", "GB_B5"."Score_5" AS "Score_5", "GB_B5"."Score_6" AS "Score_6", "GB_B5"."Score_7" AS "Score_7", "GB_B5"."Score_8" AS "Score_8", "GB_B5"."Score_9" AS "Score_9" 
-FROM "TMP_20180516_CODEGEN_NO3JPX_GB_" AS "GB_B5" UNION ALL SELECT "GB_B6"."KEY" AS "KEY", "GB_B6"."Score_0" AS "Score_0", "GB_B6"."Score_1" AS "Score_1", "GB_B6"."Score_2" AS "Score_2", "GB_B6"."Score_3" AS "Score_3", "GB_B6"."Score_4" AS "Score_4", "GB_B6"."Score_5" AS "Score_5", "GB_B6"."Score_6" AS "Score_6", "GB_B6"."Score_7" AS "Score_7", "GB_B6"."Score_8" AS "Score_8", "GB_B6"."Score_9" AS "Score_9" 
-FROM "TMP_20180516_CODEGEN_3098MD_GB_" AS "GB_B6" UNION ALL SELECT "GB_B7"."KEY" AS "KEY", "GB_B7"."Score_0" AS "Score_0", "GB_B7"."Score_1" AS "Score_1", "GB_B7"."Score_2" AS "Score_2", "GB_B7"."Score_3" AS "Score_3", "GB_B7"."Score_4" AS "Score_4", "GB_B7"."Score_5" AS "Score_5", "GB_B7"."Score_6" AS "Score_6", "GB_B7"."Score_7" AS "Score_7", "GB_B7"."Score_8" AS "Score_8", "GB_B7"."Score_9" AS "Score_9" 
-FROM "TMP_20180516_CODEGEN_GDYHRR_GB_" AS "GB_B7" UNION ALL SELECT "GB_B8"."KEY" AS "KEY", "GB_B8"."Score_0" AS "Score_0", "GB_B8"."Score_1" AS "Score_1", "GB_B8"."Score_2" AS "Score_2", "GB_B8"."Score_3" AS "Score_3", "GB_B8"."Score_4" AS "Score_4", "GB_B8"."Score_5" AS "Score_5", "GB_B8"."Score_6" AS "Score_6", "GB_B8"."Score_7" AS "Score_7", "GB_B8"."Score_8" AS "Score_8", "GB_B8"."Score_9" AS "Score_9" 
-FROM "TMP_20180516_CODEGEN_E70BFJ_GB_" AS "GB_B8" UNION ALL SELECT "GB_B9"."KEY" AS "KEY", "GB_B9"."Score_0" AS "Score_0", "GB_B9"."Score_1" AS "Score_1", "GB_B9"."Score_2" AS "Score_2", "GB_B9"."Score_3" AS "Score_3", "GB_B9"."Score_4" AS "Score_4", "GB_B9"."Score_5" AS "Score_5", "GB_B9"."Score_6" AS "Score_6", "GB_B9"."Score_7" AS "Score_7", "GB_B9"."Score_8" AS "Score_8", "GB_B9"."Score_9" AS "Score_9" 
-FROM "TMP_20180516_CODEGEN_KISLHC_GB_" AS "GB_B9" UNION ALL SELECT "GB_B10"."KEY" AS "KEY", "GB_B10"."Score_0" AS "Score_0", "GB_B10"."Score_1" AS "Score_1", "GB_B10"."Score_2" AS "Score_2", "GB_B10"."Score_3" AS "Score_3", "GB_B10"."Score_4" AS "Score_4", "GB_B10"."Score_5" AS "Score_5", "GB_B10"."Score_6" AS "Score_6", "GB_B10"."Score_7" AS "Score_7", "GB_B10"."Score_8" AS "Score_8", "GB_B10"."Score_9" AS "Score_9" 
-FROM "TMP_20180516_CODEGEN_25LC0C_GB_" AS "GB_B10" UNION ALL SELECT "GB_B11"."KEY" AS "KEY", "GB_B11"."Score_0" AS "Score_0", "GB_B11"."Score_1" AS "Score_1", "GB_B11"."Score_2" AS "Score_2", "GB_B11"."Score_3" AS "Score_3", "GB_B11"."Score_4" AS "Score_4", "GB_B11"."Score_5" AS "Score_5", "GB_B11"."Score_6" AS "Score_6", "GB_B11"."Score_7" AS "Score_7", "GB_B11"."Score_8" AS "Score_8", "GB_B11"."Score_9" AS "Score_9" 
-FROM "TMP_20180516_CODEGEN_5IDZBL_GB_" AS "GB_B11" UNION ALL SELECT "GB_B12"."KEY" AS "KEY", "GB_B12"."Score_0" AS "Score_0", "GB_B12"."Score_1" AS "Score_1", "GB_B12"."Score_2" AS "Score_2", "GB_B12"."Score_3" AS "Score_3", "GB_B12"."Score_4" AS "Score_4", "GB_B12"."Score_5" AS "Score_5", "GB_B12"."Score_6" AS "Score_6", "GB_B12"."Score_7" AS "Score_7", "GB_B12"."Score_8" AS "Score_8", "GB_B12"."Score_9" AS "Score_9" 
-FROM "TMP_20180516_CODEGEN_YUAPZJ_GB_" AS "GB_B12" UNION ALL SELECT "GB_B13"."KEY" AS "KEY", "GB_B13"."Score_0" AS "Score_0", "GB_B13"."Score_1" AS "Score_1", "GB_B13"."Score_2" AS "Score_2", "GB_B13"."Score_3" AS "Score_3", "GB_B13"."Score_4" AS "Score_4", "GB_B13"."Score_5" AS "Score_5", "GB_B13"."Score_6" AS "Score_6", "GB_B13"."Score_7" AS "Score_7", "GB_B13"."Score_8" AS "Score_8", "GB_B13"."Score_9" AS "Score_9" 
-FROM "TMP_20180516_CODEGEN_OO32OM_GB_" AS "GB_B13" UNION ALL SELECT "GB_B14"."KEY" AS "KEY", "GB_B14"."Score_0" AS "Score_0", "GB_B14"."Score_1" AS "Score_1", "GB_B14"."Score_2" AS "Score_2", "GB_B14"."Score_3" AS "Score_3", "GB_B14"."Score_4" AS "Score_4", "GB_B14"."Score_5" AS "Score_5", "GB_B14"."Score_6" AS "Score_6", "GB_B14"."Score_7" AS "Score_7", "GB_B14"."Score_8" AS "Score_8", "GB_B14"."Score_9" AS "Score_9" 
-FROM "TMP_20180516_CODEGEN_V0M8MQ_GB_" AS "GB_B14" UNION ALL SELECT "GB_B15"."KEY" AS "KEY", "GB_B15"."Score_0" AS "Score_0", "GB_B15"."Score_1" AS "Score_1", "GB_B15"."Score_2" AS "Score_2", "GB_B15"."Score_3" AS "Score_3", "GB_B15"."Score_4" AS "Score_4", "GB_B15"."Score_5" AS "Score_5", "GB_B15"."Score_6" AS "Score_6", "GB_B15"."Score_7" AS "Score_7", "GB_B15"."Score_8" AS "Score_8", "GB_B15"."Score_9" AS "Score_9" 
-FROM "TMP_20180516_CODEGEN_GU5JZH_GB_" AS "GB_B15") AS "GB_EnsembleUnion")
+FROM "TMP_20180602_KO5_GB_B0" AS "GB_B0" UNION ALL SELECT "GB_B1"."KEY" AS "KEY", "GB_B1"."Score_0" AS "Score_0", "GB_B1"."Score_1" AS "Score_1", "GB_B1"."Score_2" AS "Score_2", "GB_B1"."Score_3" AS "Score_3", "GB_B1"."Score_4" AS "Score_4", "GB_B1"."Score_5" AS "Score_5", "GB_B1"."Score_6" AS "Score_6", "GB_B1"."Score_7" AS "Score_7", "GB_B1"."Score_8" AS "Score_8", "GB_B1"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_0BE_GB_B1" AS "GB_B1" UNION ALL SELECT "GB_B2"."KEY" AS "KEY", "GB_B2"."Score_0" AS "Score_0", "GB_B2"."Score_1" AS "Score_1", "GB_B2"."Score_2" AS "Score_2", "GB_B2"."Score_3" AS "Score_3", "GB_B2"."Score_4" AS "Score_4", "GB_B2"."Score_5" AS "Score_5", "GB_B2"."Score_6" AS "Score_6", "GB_B2"."Score_7" AS "Score_7", "GB_B2"."Score_8" AS "Score_8", "GB_B2"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_KOT_GB_B2" AS "GB_B2" UNION ALL SELECT "GB_B3"."KEY" AS "KEY", "GB_B3"."Score_0" AS "Score_0", "GB_B3"."Score_1" AS "Score_1", "GB_B3"."Score_2" AS "Score_2", "GB_B3"."Score_3" AS "Score_3", "GB_B3"."Score_4" AS "Score_4", "GB_B3"."Score_5" AS "Score_5", "GB_B3"."Score_6" AS "Score_6", "GB_B3"."Score_7" AS "Score_7", "GB_B3"."Score_8" AS "Score_8", "GB_B3"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_KI4_GB_B3" AS "GB_B3" UNION ALL SELECT "GB_B4"."KEY" AS "KEY", "GB_B4"."Score_0" AS "Score_0", "GB_B4"."Score_1" AS "Score_1", "GB_B4"."Score_2" AS "Score_2", "GB_B4"."Score_3" AS "Score_3", "GB_B4"."Score_4" AS "Score_4", "GB_B4"."Score_5" AS "Score_5", "GB_B4"."Score_6" AS "Score_6", "GB_B4"."Score_7" AS "Score_7", "GB_B4"."Score_8" AS "Score_8", "GB_B4"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_XFS_GB_B4" AS "GB_B4" UNION ALL SELECT "GB_B5"."KEY" AS "KEY", "GB_B5"."Score_0" AS "Score_0", "GB_B5"."Score_1" AS "Score_1", "GB_B5"."Score_2" AS "Score_2", "GB_B5"."Score_3" AS "Score_3", "GB_B5"."Score_4" AS "Score_4", "GB_B5"."Score_5" AS "Score_5", "GB_B5"."Score_6" AS "Score_6", "GB_B5"."Score_7" AS "Score_7", "GB_B5"."Score_8" AS "Score_8", "GB_B5"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_8BF_GB_B5" AS "GB_B5" UNION ALL SELECT "GB_B6"."KEY" AS "KEY", "GB_B6"."Score_0" AS "Score_0", "GB_B6"."Score_1" AS "Score_1", "GB_B6"."Score_2" AS "Score_2", "GB_B6"."Score_3" AS "Score_3", "GB_B6"."Score_4" AS "Score_4", "GB_B6"."Score_5" AS "Score_5", "GB_B6"."Score_6" AS "Score_6", "GB_B6"."Score_7" AS "Score_7", "GB_B6"."Score_8" AS "Score_8", "GB_B6"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_CD0_GB_B6" AS "GB_B6" UNION ALL SELECT "GB_B7"."KEY" AS "KEY", "GB_B7"."Score_0" AS "Score_0", "GB_B7"."Score_1" AS "Score_1", "GB_B7"."Score_2" AS "Score_2", "GB_B7"."Score_3" AS "Score_3", "GB_B7"."Score_4" AS "Score_4", "GB_B7"."Score_5" AS "Score_5", "GB_B7"."Score_6" AS "Score_6", "GB_B7"."Score_7" AS "Score_7", "GB_B7"."Score_8" AS "Score_8", "GB_B7"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_MYT_GB_B7" AS "GB_B7" UNION ALL SELECT "GB_B8"."KEY" AS "KEY", "GB_B8"."Score_0" AS "Score_0", "GB_B8"."Score_1" AS "Score_1", "GB_B8"."Score_2" AS "Score_2", "GB_B8"."Score_3" AS "Score_3", "GB_B8"."Score_4" AS "Score_4", "GB_B8"."Score_5" AS "Score_5", "GB_B8"."Score_6" AS "Score_6", "GB_B8"."Score_7" AS "Score_7", "GB_B8"."Score_8" AS "Score_8", "GB_B8"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_BDV_GB_B8" AS "GB_B8" UNION ALL SELECT "GB_B9"."KEY" AS "KEY", "GB_B9"."Score_0" AS "Score_0", "GB_B9"."Score_1" AS "Score_1", "GB_B9"."Score_2" AS "Score_2", "GB_B9"."Score_3" AS "Score_3", "GB_B9"."Score_4" AS "Score_4", "GB_B9"."Score_5" AS "Score_5", "GB_B9"."Score_6" AS "Score_6", "GB_B9"."Score_7" AS "Score_7", "GB_B9"."Score_8" AS "Score_8", "GB_B9"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_FYR_GB_B9" AS "GB_B9" UNION ALL SELECT "GB_B10"."KEY" AS "KEY", "GB_B10"."Score_0" AS "Score_0", "GB_B10"."Score_1" AS "Score_1", "GB_B10"."Score_2" AS "Score_2", "GB_B10"."Score_3" AS "Score_3", "GB_B10"."Score_4" AS "Score_4", "GB_B10"."Score_5" AS "Score_5", "GB_B10"."Score_6" AS "Score_6", "GB_B10"."Score_7" AS "Score_7", "GB_B10"."Score_8" AS "Score_8", "GB_B10"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_R4I_GB_B10" AS "GB_B10" UNION ALL SELECT "GB_B11"."KEY" AS "KEY", "GB_B11"."Score_0" AS "Score_0", "GB_B11"."Score_1" AS "Score_1", "GB_B11"."Score_2" AS "Score_2", "GB_B11"."Score_3" AS "Score_3", "GB_B11"."Score_4" AS "Score_4", "GB_B11"."Score_5" AS "Score_5", "GB_B11"."Score_6" AS "Score_6", "GB_B11"."Score_7" AS "Score_7", "GB_B11"."Score_8" AS "Score_8", "GB_B11"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_JR8_GB_B11" AS "GB_B11" UNION ALL SELECT "GB_B12"."KEY" AS "KEY", "GB_B12"."Score_0" AS "Score_0", "GB_B12"."Score_1" AS "Score_1", "GB_B12"."Score_2" AS "Score_2", "GB_B12"."Score_3" AS "Score_3", "GB_B12"."Score_4" AS "Score_4", "GB_B12"."Score_5" AS "Score_5", "GB_B12"."Score_6" AS "Score_6", "GB_B12"."Score_7" AS "Score_7", "GB_B12"."Score_8" AS "Score_8", "GB_B12"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_UVN_GB_B12" AS "GB_B12" UNION ALL SELECT "GB_B13"."KEY" AS "KEY", "GB_B13"."Score_0" AS "Score_0", "GB_B13"."Score_1" AS "Score_1", "GB_B13"."Score_2" AS "Score_2", "GB_B13"."Score_3" AS "Score_3", "GB_B13"."Score_4" AS "Score_4", "GB_B13"."Score_5" AS "Score_5", "GB_B13"."Score_6" AS "Score_6", "GB_B13"."Score_7" AS "Score_7", "GB_B13"."Score_8" AS "Score_8", "GB_B13"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_TFK_GB_B13" AS "GB_B13" UNION ALL SELECT "GB_B14"."KEY" AS "KEY", "GB_B14"."Score_0" AS "Score_0", "GB_B14"."Score_1" AS "Score_1", "GB_B14"."Score_2" AS "Score_2", "GB_B14"."Score_3" AS "Score_3", "GB_B14"."Score_4" AS "Score_4", "GB_B14"."Score_5" AS "Score_5", "GB_B14"."Score_6" AS "Score_6", "GB_B14"."Score_7" AS "Score_7", "GB_B14"."Score_8" AS "Score_8", "GB_B14"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_GHO_GB_B14" AS "GB_B14" UNION ALL SELECT "GB_B15"."KEY" AS "KEY", "GB_B15"."Score_0" AS "Score_0", "GB_B15"."Score_1" AS "Score_1", "GB_B15"."Score_2" AS "Score_2", "GB_B15"."Score_3" AS "Score_3", "GB_B15"."Score_4" AS "Score_4", "GB_B15"."Score_5" AS "Score_5", "GB_B15"."Score_6" AS "Score_6", "GB_B15"."Score_7" AS "Score_7", "GB_B15"."Score_8" AS "Score_8", "GB_B15"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_L7C_GB_B15" AS "GB_B15" UNION ALL SELECT "GB_B16"."KEY" AS "KEY", "GB_B16"."Score_0" AS "Score_0", "GB_B16"."Score_1" AS "Score_1", "GB_B16"."Score_2" AS "Score_2", "GB_B16"."Score_3" AS "Score_3", "GB_B16"."Score_4" AS "Score_4", "GB_B16"."Score_5" AS "Score_5", "GB_B16"."Score_6" AS "Score_6", "GB_B16"."Score_7" AS "Score_7", "GB_B16"."Score_8" AS "Score_8", "GB_B16"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_J5X_GB_B16" AS "GB_B16" UNION ALL SELECT "GB_B17"."KEY" AS "KEY", "GB_B17"."Score_0" AS "Score_0", "GB_B17"."Score_1" AS "Score_1", "GB_B17"."Score_2" AS "Score_2", "GB_B17"."Score_3" AS "Score_3", "GB_B17"."Score_4" AS "Score_4", "GB_B17"."Score_5" AS "Score_5", "GB_B17"."Score_6" AS "Score_6", "GB_B17"."Score_7" AS "Score_7", "GB_B17"."Score_8" AS "Score_8", "GB_B17"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_XHV_GB_B17" AS "GB_B17" UNION ALL SELECT "GB_B18"."KEY" AS "KEY", "GB_B18"."Score_0" AS "Score_0", "GB_B18"."Score_1" AS "Score_1", "GB_B18"."Score_2" AS "Score_2", "GB_B18"."Score_3" AS "Score_3", "GB_B18"."Score_4" AS "Score_4", "GB_B18"."Score_5" AS "Score_5", "GB_B18"."Score_6" AS "Score_6", "GB_B18"."Score_7" AS "Score_7", "GB_B18"."Score_8" AS "Score_8", "GB_B18"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_1Q1_GB_B18" AS "GB_B18" UNION ALL SELECT "GB_B19"."KEY" AS "KEY", "GB_B19"."Score_0" AS "Score_0", "GB_B19"."Score_1" AS "Score_1", "GB_B19"."Score_2" AS "Score_2", "GB_B19"."Score_3" AS "Score_3", "GB_B19"."Score_4" AS "Score_4", "GB_B19"."Score_5" AS "Score_5", "GB_B19"."Score_6" AS "Score_6", "GB_B19"."Score_7" AS "Score_7", "GB_B19"."Score_8" AS "Score_8", "GB_B19"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_7AD_GB_B19" AS "GB_B19" UNION ALL SELECT "GB_B20"."KEY" AS "KEY", "GB_B20"."Score_0" AS "Score_0", "GB_B20"."Score_1" AS "Score_1", "GB_B20"."Score_2" AS "Score_2", "GB_B20"."Score_3" AS "Score_3", "GB_B20"."Score_4" AS "Score_4", "GB_B20"."Score_5" AS "Score_5", "GB_B20"."Score_6" AS "Score_6", "GB_B20"."Score_7" AS "Score_7", "GB_B20"."Score_8" AS "Score_8", "GB_B20"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_ZXO_GB_B20" AS "GB_B20" UNION ALL SELECT "GB_B21"."KEY" AS "KEY", "GB_B21"."Score_0" AS "Score_0", "GB_B21"."Score_1" AS "Score_1", "GB_B21"."Score_2" AS "Score_2", "GB_B21"."Score_3" AS "Score_3", "GB_B21"."Score_4" AS "Score_4", "GB_B21"."Score_5" AS "Score_5", "GB_B21"."Score_6" AS "Score_6", "GB_B21"."Score_7" AS "Score_7", "GB_B21"."Score_8" AS "Score_8", "GB_B21"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_JP2_GB_B21" AS "GB_B21" UNION ALL SELECT "GB_B22"."KEY" AS "KEY", "GB_B22"."Score_0" AS "Score_0", "GB_B22"."Score_1" AS "Score_1", "GB_B22"."Score_2" AS "Score_2", "GB_B22"."Score_3" AS "Score_3", "GB_B22"."Score_4" AS "Score_4", "GB_B22"."Score_5" AS "Score_5", "GB_B22"."Score_6" AS "Score_6", "GB_B22"."Score_7" AS "Score_7", "GB_B22"."Score_8" AS "Score_8", "GB_B22"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_2W8_GB_B22" AS "GB_B22" UNION ALL SELECT "GB_B23"."KEY" AS "KEY", "GB_B23"."Score_0" AS "Score_0", "GB_B23"."Score_1" AS "Score_1", "GB_B23"."Score_2" AS "Score_2", "GB_B23"."Score_3" AS "Score_3", "GB_B23"."Score_4" AS "Score_4", "GB_B23"."Score_5" AS "Score_5", "GB_B23"."Score_6" AS "Score_6", "GB_B23"."Score_7" AS "Score_7", "GB_B23"."Score_8" AS "Score_8", "GB_B23"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_Y4J_GB_B23" AS "GB_B23" UNION ALL SELECT "GB_B24"."KEY" AS "KEY", "GB_B24"."Score_0" AS "Score_0", "GB_B24"."Score_1" AS "Score_1", "GB_B24"."Score_2" AS "Score_2", "GB_B24"."Score_3" AS "Score_3", "GB_B24"."Score_4" AS "Score_4", "GB_B24"."Score_5" AS "Score_5", "GB_B24"."Score_6" AS "Score_6", "GB_B24"."Score_7" AS "Score_7", "GB_B24"."Score_8" AS "Score_8", "GB_B24"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_NE8_GB_B24" AS "GB_B24" UNION ALL SELECT "GB_B25"."KEY" AS "KEY", "GB_B25"."Score_0" AS "Score_0", "GB_B25"."Score_1" AS "Score_1", "GB_B25"."Score_2" AS "Score_2", "GB_B25"."Score_3" AS "Score_3", "GB_B25"."Score_4" AS "Score_4", "GB_B25"."Score_5" AS "Score_5", "GB_B25"."Score_6" AS "Score_6", "GB_B25"."Score_7" AS "Score_7", "GB_B25"."Score_8" AS "Score_8", "GB_B25"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_AD3_GB_B25" AS "GB_B25" UNION ALL SELECT "GB_B26"."KEY" AS "KEY", "GB_B26"."Score_0" AS "Score_0", "GB_B26"."Score_1" AS "Score_1", "GB_B26"."Score_2" AS "Score_2", "GB_B26"."Score_3" AS "Score_3", "GB_B26"."Score_4" AS "Score_4", "GB_B26"."Score_5" AS "Score_5", "GB_B26"."Score_6" AS "Score_6", "GB_B26"."Score_7" AS "Score_7", "GB_B26"."Score_8" AS "Score_8", "GB_B26"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_DUA_GB_B26" AS "GB_B26" UNION ALL SELECT "GB_B27"."KEY" AS "KEY", "GB_B27"."Score_0" AS "Score_0", "GB_B27"."Score_1" AS "Score_1", "GB_B27"."Score_2" AS "Score_2", "GB_B27"."Score_3" AS "Score_3", "GB_B27"."Score_4" AS "Score_4", "GB_B27"."Score_5" AS "Score_5", "GB_B27"."Score_6" AS "Score_6", "GB_B27"."Score_7" AS "Score_7", "GB_B27"."Score_8" AS "Score_8", "GB_B27"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_YVU_GB_B27" AS "GB_B27" UNION ALL SELECT "GB_B28"."KEY" AS "KEY", "GB_B28"."Score_0" AS "Score_0", "GB_B28"."Score_1" AS "Score_1", "GB_B28"."Score_2" AS "Score_2", "GB_B28"."Score_3" AS "Score_3", "GB_B28"."Score_4" AS "Score_4", "GB_B28"."Score_5" AS "Score_5", "GB_B28"."Score_6" AS "Score_6", "GB_B28"."Score_7" AS "Score_7", "GB_B28"."Score_8" AS "Score_8", "GB_B28"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_FFD_GB_B28" AS "GB_B28" UNION ALL SELECT "GB_B29"."KEY" AS "KEY", "GB_B29"."Score_0" AS "Score_0", "GB_B29"."Score_1" AS "Score_1", "GB_B29"."Score_2" AS "Score_2", "GB_B29"."Score_3" AS "Score_3", "GB_B29"."Score_4" AS "Score_4", "GB_B29"."Score_5" AS "Score_5", "GB_B29"."Score_6" AS "Score_6", "GB_B29"."Score_7" AS "Score_7", "GB_B29"."Score_8" AS "Score_8", "GB_B29"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_FJD_GB_B29" AS "GB_B29" UNION ALL SELECT "GB_B30"."KEY" AS "KEY", "GB_B30"."Score_0" AS "Score_0", "GB_B30"."Score_1" AS "Score_1", "GB_B30"."Score_2" AS "Score_2", "GB_B30"."Score_3" AS "Score_3", "GB_B30"."Score_4" AS "Score_4", "GB_B30"."Score_5" AS "Score_5", "GB_B30"."Score_6" AS "Score_6", "GB_B30"."Score_7" AS "Score_7", "GB_B30"."Score_8" AS "Score_8", "GB_B30"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_PZC_GB_B30" AS "GB_B30" UNION ALL SELECT "GB_B31"."KEY" AS "KEY", "GB_B31"."Score_0" AS "Score_0", "GB_B31"."Score_1" AS "Score_1", "GB_B31"."Score_2" AS "Score_2", "GB_B31"."Score_3" AS "Score_3", "GB_B31"."Score_4" AS "Score_4", "GB_B31"."Score_5" AS "Score_5", "GB_B31"."Score_6" AS "Score_6", "GB_B31"."Score_7" AS "Score_7", "GB_B31"."Score_8" AS "Score_8", "GB_B31"."Score_9" AS "Score_9" 
+FROM "TMP_20180602_R7N_GB_B31" AS "GB_B31") AS "GB_EnsembleUnion")
  SELECT "GB_sum"."KEY", "GB_sum"."Score_0", "GB_sum"."Score_1", "GB_sum"."Score_2", "GB_sum"."Score_3", "GB_sum"."Score_4", "GB_sum"."Score_5", "GB_sum"."Score_6", "GB_sum"."Score_7", "GB_sum"."Score_8", "GB_sum"."Score_9" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Score_0" AS DOUBLE PRECISION) AS "Score_0", CAST("T"."Score_1" AS DOUBLE PRECISION) AS "Score_1", CAST("T"."Score_2" AS DOUBLE PRECISION) AS "Score_2", CAST("T"."Score_3" AS DOUBLE PRECISION) AS "Score_3", CAST("T"."Score_4" AS DOUBLE PRECISION) AS "Score_4", CAST("T"."Score_5" AS DOUBLE PRECISION) AS "Score_5", CAST("T"."Score_6" AS DOUBLE PRECISION) AS "Score_6", CAST("T"."Score_7" AS DOUBLE PRECISION) AS "Score_7", CAST("T"."Score_8" AS DOUBLE PRECISION) AS "Score_8", CAST("T"."Score_9" AS DOUBLE PRECISION) AS "Score_9" 
 FROM (SELECT "GB_Union"."KEY" AS "KEY", sum("GB_Union"."Score_0") AS "Score_0", sum("GB_Union"."Score_1") AS "Score_1", sum("GB_Union"."Score_2") AS "Score_2", sum("GB_Union"."Score_3") AS "Score_3", sum("GB_Union"."Score_4") AS "Score_4", sum("GB_Union"."Score_5") AS "Score_5", sum("GB_Union"."Score_6") AS "Score_6", sum("GB_Union"."Score_7") AS "Score_7", sum("GB_Union"."Score_8") AS "Score_8", sum("GB_Union"."Score_9") AS "Score_9" 
 FROM "GB_Union" GROUP BY "GB_Union"."KEY") AS "T") AS "GB_sum") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_KH16ZL_GB_ part 3. Create Index 
+-- Code For temporary table TMP_20180602_T48_GB_SUM part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180516_CODEGEN_4a5d" ON "TMP_20180516_CODEGEN_KH16ZL_GB_" ("KEY")
+CREATE INDEX "ix_TMP_20180602_T48_GB_SUM_KEY" ON "TMP_20180602_T48_GB_SUM" ("KEY")
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT "GB_sum"."KEY" AS "KEY", 0.09603340292275574 + 0.1 * "GB_sum"."Score_0" AS "Score_0", 0.1022964509394572 + 0.1 * "GB_sum"."Score_1" AS "Score_1", 0.10299234516353514 + 0.1 * "GB_sum"."Score_2" AS "Score_2", 0.10090466249130133 + 0.1 * "GB_sum"."Score_3" AS "Score_3", 0.10508002783576896 + 0.1 * "GB_sum"."Score_4" AS "Score_4", 0.10020876826722339 + 0.1 * "GB_sum"."Score_5" AS "Score_5", 0.09881697981906751 + 0.1 * "GB_sum"."Score_6" AS "Score_6", 0.09742519137091162 + 0.1 * "GB_sum"."Score_7" AS "Score_7", 0.09394572025052192 + 0.1 * "GB_sum"."Score_8" AS "Score_8", 0.1022964509394572 + 0.1 * "GB_sum"."Score_9" AS "Score_9", CAST(NULL AS DOUBLE PRECISION) AS "Proba_0", CAST(NULL AS DOUBLE PRECISION) AS "Proba_1", CAST(NULL AS DOUBLE PRECISION) AS "Proba_2", CAST(NULL AS DOUBLE PRECISION) AS "Proba_3", CAST(NULL AS DOUBLE PRECISION) AS "Proba_4", CAST(NULL AS DOUBLE PRECISION) AS "Proba_5", CAST(NULL AS DOUBLE PRECISION) AS "Proba_6", CAST(NULL AS DOUBLE PRECISION) AS "Proba_7", CAST(NULL AS DOUBLE PRECISION) AS "Proba_8", CAST(NULL AS DOUBLE PRECISION) AS "Proba_9", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_0", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_1", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_2", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_3", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_4", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_5", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_6", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_7", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_8", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_9", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba" 
-FROM "TMP_20180516_CODEGEN_KH16ZL_GB_" AS "GB_sum"), 
+FROM "TMP_20180602_T48_GB_SUM" AS "GB_sum"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

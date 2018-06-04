@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180516_CODEGEN_3VCRPS_ADS part 1. Create 
+-- Code For temporary table TMP_20180602_NW1_ADS_IMP_1_OUT part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_3VCRPS_ADS" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_NW1_ADS_IMP_1_OUT" (
 	"KEY" BIGINT NOT NULL, 
 	imputer_output_2 DOUBLE PRECISION, 
 	imputer_output_3 DOUBLE PRECISION, 
@@ -24,21 +24,21 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_3VCRPS_ADS" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_3VCRPS_ADS part 2. Populate
+-- Code For temporary table TMP_20180602_NW1_ADS_IMP_1_OUT part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_3VCRPS_ADS" ("KEY", imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT "U"."KEY", "U".imputer_output_2, "U".imputer_output_3, "U".imputer_output_4, "U".imputer_output_5 
+INSERT INTO "TMP_20180602_NW1_ADS_IMP_1_OUT" ("KEY", imputer_output_2, imputer_output_3, imputer_output_4, imputer_output_5) SELECT "U"."KEY", "U".imputer_output_2, "U".imputer_output_3, "U".imputer_output_4, "U".imputer_output_5 
 FROM (SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".imputer_output_2, "ADS_imp_1_OUT".imputer_output_3, "ADS_imp_1_OUT".imputer_output_4, "ADS_imp_1_OUT".imputer_output_5 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN 5.8474999999999975 ELSE "ADS"."Feature_0" END AS imputer_output_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 3.0366666666666657 ELSE "ADS"."Feature_1" END AS imputer_output_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 3.8450000000000006 ELSE "ADS"."Feature_2" END AS imputer_output_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 1.245 ELSE "ADS"."Feature_3" END AS imputer_output_5 
 FROM iris_str_tgt AS "ADS") AS "ADS_imp_1_OUT") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_3VCRPS_ADS part 3. Create Index 
+-- Code For temporary table TMP_20180602_NW1_ADS_IMP_1_OUT part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180516_CODEGEN_a996" ON "TMP_20180516_CODEGEN_3VCRPS_ADS" ("KEY")
+CREATE INDEX "ix_TMP_20180602_NW1_ADS_f6ea" ON "TMP_20180602_NW1_ADS_IMP_1_OUT" ("KEY")
 
--- Code For temporary table TMP_20180516_CODEGEN_VH4QNJ_ADS part 1. Create 
+-- Code For temporary table TMP_20180602_X4P_ADS_SCA_2_OUT part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_VH4QNJ_ADS" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_X4P_ADS_SCA_2_OUT" (
 	"KEY" BIGINT NOT NULL, 
 	scaler_output_2 DOUBLE PRECISION, 
 	scaler_output_3 DOUBLE PRECISION, 
@@ -49,21 +49,21 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_VH4QNJ_ADS" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_VH4QNJ_ADS part 2. Populate
+-- Code For temporary table TMP_20180602_X4P_ADS_SCA_2_OUT part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_VH4QNJ_ADS" ("KEY", scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT "U"."KEY", "U".scaler_output_2, "U".scaler_output_3, "U".scaler_output_4, "U".scaler_output_5 
+INSERT INTO "TMP_20180602_X4P_ADS_SCA_2_OUT" ("KEY", scaler_output_2, scaler_output_3, scaler_output_4, scaler_output_5) SELECT "U"."KEY", "U".scaler_output_2, "U".scaler_output_3, "U".scaler_output_4, "U".scaler_output_5 
 FROM (SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_output_2, "ADS_sca_2_OUT".scaler_output_3, "ADS_sca_2_OUT".scaler_output_4, "ADS_sca_2_OUT".scaler_output_5 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".imputer_output_2 AS DOUBLE PRECISION) - 5.8474999999999975) / 0.827039146594646 AS scaler_output_2, (CAST("ADS_imp_1_OUT".imputer_output_3 AS DOUBLE PRECISION) - 3.0366666666666657) / 0.43625935201691934 AS scaler_output_3, (CAST("ADS_imp_1_OUT".imputer_output_4 AS DOUBLE PRECISION) - 3.8450000000000006) / 1.709817241695732 AS scaler_output_4, (CAST("ADS_imp_1_OUT".imputer_output_5 AS DOUBLE PRECISION) - 1.245) / 0.7498722113355939 AS scaler_output_5 
-FROM "TMP_20180516_CODEGEN_3VCRPS_ADS" AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
+FROM "TMP_20180602_NW1_ADS_IMP_1_OUT" AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_VH4QNJ_ADS part 3. Create Index 
+-- Code For temporary table TMP_20180602_X4P_ADS_SCA_2_OUT part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180516_CODEGEN_e96e" ON "TMP_20180516_CODEGEN_VH4QNJ_ADS" ("KEY")
+CREATE INDEX "ix_TMP_20180602_X4P_ADS_e654" ON "TMP_20180602_X4P_ADS_SCA_2_OUT" ("KEY")
 
--- Code For temporary table TMP_20180516_CODEGEN_L273UD_BAG part 1. Create 
+-- Code For temporary table TMP_20180602_V88_BAG_B0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_L273UD_BAG" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_V88_BAG_B0" (
 	"KEY" BIGINT, 
 	"Score_CLASS_0" DOUBLE PRECISION, 
 	"Proba_CLASS_0" DOUBLE PRECISION, 
@@ -78,12 +78,12 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_L273UD_BAG" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_L273UD_BAG part 2. Populate
+-- Code For temporary table TMP_20180602_V88_BAG_B0 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_L273UD_BAG" ("KEY", "Score_CLASS_0", "Proba_CLASS_0", "LogProba_CLASS_0", "Score_CLASS_1", "Proba_CLASS_1", "LogProba_CLASS_1", "Score_CLASS_2", "Proba_CLASS_2", "LogProba_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Proba_CLASS_0", "U"."LogProba_CLASS_0", "U"."Score_CLASS_1", "U"."Proba_CLASS_1", "U"."LogProba_CLASS_1", "U"."Score_CLASS_2", "U"."Proba_CLASS_2", "U"."LogProba_CLASS_2" 
+INSERT INTO "TMP_20180602_V88_BAG_B0" ("KEY", "Score_CLASS_0", "Proba_CLASS_0", "LogProba_CLASS_0", "Score_CLASS_1", "Proba_CLASS_1", "LogProba_CLASS_1", "Score_CLASS_2", "Proba_CLASS_2", "LogProba_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Proba_CLASS_0", "U"."LogProba_CLASS_0", "U"."Score_CLASS_1", "U"."Proba_CLASS_1", "U"."LogProba_CLASS_1", "U"."Score_CLASS_2", "U"."Proba_CLASS_2", "U"."LogProba_CLASS_2" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.5400919914245605) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.7281479835510254) THEN 2 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.6462678909301758) THEN 4 ELSE 5 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.6734480857849121) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 <= -0.6571015119552612) THEN 8 ELSE 9 END ELSE 10 END END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_VH4QNJ_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_X4P_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE PRECISION) AS "P_0", CAST("Values"."P_1" AS DOUBLE PRECISION) AS "P_1", CAST("Values"."P_2" AS DOUBLE PRECISION) AS "P_2", CAST("Values"."D" AS DOUBLE PRECISION) AS "D", CAST("Values"."DP" AS DOUBLE PRECISION) AS "DP" 
 FROM (SELECT 2 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 8 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 9 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 10 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database) AS "Values"), 
@@ -95,7 +95,7 @@ FROM "DT_node_lookup" LEFT OUTER JOIN "DT_node_data" ON "DT_node_lookup".node_id
 FROM "DT_Output"), 
 "DT_node_lookup_1" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= -0.5934344530105591) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.5877821445465088) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.6067700386047363) THEN 4 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= 0.12393608689308167) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.6734480857849121) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.7047536373138428) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= 0.3657625913619995) THEN 11 ELSE 12 END ELSE 13 END ELSE 14 END END END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_VH4QNJ_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_X4P_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_1" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE PRECISION) AS "P_0", CAST("Values"."P_1" AS DOUBLE PRECISION) AS "P_1", CAST("Values"."P_2" AS DOUBLE PRECISION) AS "P_2", CAST("Values"."D" AS DOUBLE PRECISION) AS "D", CAST("Values"."DP" AS DOUBLE PRECISION) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 7 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 11 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 12 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 13 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 14 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database) AS "Values"), 
@@ -107,7 +107,7 @@ FROM "DT_node_lookup_1" LEFT OUTER JOIN "DT_node_data_1" ON "DT_node_lookup_1".n
 FROM "DT_Output_1"), 
 "DT_node_lookup_2" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.529296338558197) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.8158766627311707) THEN 2 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.5400919914245605) THEN 4 ELSE 5 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.273379921913147) THEN 7 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.6734480857849121) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.47341400384902954) THEN 10 ELSE 11 END ELSE 12 END END END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_VH4QNJ_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_X4P_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_2" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE PRECISION) AS "P_0", CAST("Values"."P_1" AS DOUBLE PRECISION) AS "P_1", CAST("Values"."P_2" AS DOUBLE PRECISION) AS "P_2", CAST("Values"."D" AS DOUBLE PRECISION) AS "D", CAST("Values"."DP" AS DOUBLE PRECISION) AS "DP" 
 FROM (SELECT 2 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 7 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 10 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 11 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 12 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database) AS "Values"), 
@@ -119,7 +119,7 @@ FROM "DT_node_lookup_2" LEFT OUTER JOIN "DT_node_data_2" ON "DT_node_lookup_2".n
 FROM "DT_Output_2"), 
 "DT_node_lookup_3" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.8158766627311707) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.6734480857849121) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= -1.0851964950561523) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 <= -1.3447659015655518) THEN 5 ELSE 6 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 <= -1.803208827972412) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= -0.4201735854148865) THEN 9 ELSE 10 END ELSE 11 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.5877821445465088) THEN 13 ELSE 14 END END END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_VH4QNJ_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_X4P_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_3" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE PRECISION) AS "P_0", CAST("Values"."P_1" AS DOUBLE PRECISION) AS "P_1", CAST("Values"."P_2" AS DOUBLE PRECISION) AS "P_2", CAST("Values"."D" AS DOUBLE PRECISION) AS "D", CAST("Values"."DP" AS DOUBLE PRECISION) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 9 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 10 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 11 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 13 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 14 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database) AS "Values"), 
@@ -131,7 +131,7 @@ FROM "DT_node_lookup_3" LEFT OUTER JOIN "DT_node_data_3" ON "DT_node_lookup_3".n
 FROM "DT_Output_3"), 
 "DT_node_lookup_4" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= -0.5934344530105591) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.6462678909301758) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.6067700386047363) THEN 4 ELSE 5 END ELSE 6 END END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_VH4QNJ_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_X4P_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_4" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE PRECISION) AS "P_0", CAST("Values"."P_1" AS DOUBLE PRECISION) AS "P_1", CAST("Values"."P_2" AS DOUBLE PRECISION) AS "P_2", CAST("Values"."D" AS DOUBLE PRECISION) AS "D", CAST("Values"."DP" AS DOUBLE PRECISION) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database) AS "Values"), 
@@ -140,67 +140,7 @@ FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 A
 FROM "DT_node_lookup_4" LEFT OUTER JOIN "DT_node_data_4" ON "DT_node_lookup_4".node_id_2 = "DT_node_data_4".nid), 
 "BAG_Model_4" AS 
 (SELECT "DT_Output_4"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_0", "DT_Output_4"."P_0" AS "Proba_CLASS_0", CASE WHEN ("DT_Output_4"."P_0" IS NULL OR "DT_Output_4"."P_0" > 0.0) THEN ln("DT_Output_4"."P_0") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_1", "DT_Output_4"."P_1" AS "Proba_CLASS_1", CASE WHEN ("DT_Output_4"."P_1" IS NULL OR "DT_Output_4"."P_1" > 0.0) THEN ln("DT_Output_4"."P_1") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_1", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_2", "DT_Output_4"."P_2" AS "Proba_CLASS_2", CASE WHEN ("DT_Output_4"."P_2" IS NULL OR "DT_Output_4"."P_2" > 0.0) THEN ln("DT_Output_4"."P_2") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_2" 
-FROM "DT_Output_4"), 
-"DT_node_lookup_5" AS 
-(SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.529296338558197) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= -0.5934344530105591) THEN 2 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.5400919914245605) THEN 4 ELSE 5 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.6462678909301758) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.5400920510292053) THEN 8 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 <= 0.1451735943555832) THEN 10 ELSE 11 END END ELSE 12 END END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_VH4QNJ_ADS" AS "ADS_sca_2_OUT"), 
-"DT_node_data_5" AS 
-(SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE PRECISION) AS "P_0", CAST("Values"."P_1" AS DOUBLE PRECISION) AS "P_1", CAST("Values"."P_2" AS DOUBLE PRECISION) AS "P_2", CAST("Values"."D" AS DOUBLE PRECISION) AS "D", CAST("Values"."DP" AS DOUBLE PRECISION) AS "DP" 
-FROM (SELECT 2 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 8 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 10 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 11 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 12 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database) AS "Values"), 
-"DT_Output_5" AS 
-(SELECT "DT_node_lookup_5"."KEY" AS "KEY", "DT_node_lookup_5".node_id_2 AS node_id_2, "DT_node_data_5".nid AS nid, "DT_node_data_5"."P_0" AS "P_0", "DT_node_data_5"."P_1" AS "P_1", "DT_node_data_5"."P_2" AS "P_2", "DT_node_data_5"."D" AS "D", "DT_node_data_5"."DP" AS "DP" 
-FROM "DT_node_lookup_5" LEFT OUTER JOIN "DT_node_data_5" ON "DT_node_lookup_5".node_id_2 = "DT_node_data_5".nid), 
-"BAG_Model_5" AS 
-(SELECT "DT_Output_5"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_0", "DT_Output_5"."P_0" AS "Proba_CLASS_0", CASE WHEN ("DT_Output_5"."P_0" IS NULL OR "DT_Output_5"."P_0" > 0.0) THEN ln("DT_Output_5"."P_0") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_1", "DT_Output_5"."P_1" AS "Proba_CLASS_1", CASE WHEN ("DT_Output_5"."P_1" IS NULL OR "DT_Output_5"."P_1" > 0.0) THEN ln("DT_Output_5"."P_1") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_1", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_2", "DT_Output_5"."P_2" AS "Proba_CLASS_2", CASE WHEN ("DT_Output_5"."P_2" IS NULL OR "DT_Output_5"."P_2" > 0.0) THEN ln("DT_Output_5"."P_2") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_2" 
-FROM "DT_Output_5"), 
-"DT_node_lookup_6" AS 
-(SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.8158766627311707) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.40673595666885376) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.6755107641220093) THEN 4 ELSE 5 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.5877821445465088) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 <= 0.1451735943555832) THEN 8 ELSE 9 END ELSE 10 END END END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_VH4QNJ_ADS" AS "ADS_sca_2_OUT"), 
-"DT_node_data_6" AS 
-(SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE PRECISION) AS "P_0", CAST("Values"."P_1" AS DOUBLE PRECISION) AS "P_1", CAST("Values"."P_2" AS DOUBLE PRECISION) AS "P_2", CAST("Values"."D" AS DOUBLE PRECISION) AS "D", CAST("Values"."DP" AS DOUBLE PRECISION) AS "DP" 
-FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 8 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 9 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 10 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database) AS "Values"), 
-"DT_Output_6" AS 
-(SELECT "DT_node_lookup_6"."KEY" AS "KEY", "DT_node_lookup_6".node_id_2 AS node_id_2, "DT_node_data_6".nid AS nid, "DT_node_data_6"."P_0" AS "P_0", "DT_node_data_6"."P_1" AS "P_1", "DT_node_data_6"."P_2" AS "P_2", "DT_node_data_6"."D" AS "D", "DT_node_data_6"."DP" AS "DP" 
-FROM "DT_node_lookup_6" LEFT OUTER JOIN "DT_node_data_6" ON "DT_node_lookup_6".node_id_2 = "DT_node_data_6".nid), 
-"BAG_Model_6" AS 
-(SELECT "DT_Output_6"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_0", "DT_Output_6"."P_0" AS "Proba_CLASS_0", CASE WHEN ("DT_Output_6"."P_0" IS NULL OR "DT_Output_6"."P_0" > 0.0) THEN ln("DT_Output_6"."P_0") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_1", "DT_Output_6"."P_1" AS "Proba_CLASS_1", CASE WHEN ("DT_Output_6"."P_1" IS NULL OR "DT_Output_6"."P_1" > 0.0) THEN ln("DT_Output_6"."P_1") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_1", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_2", "DT_Output_6"."P_2" AS "Proba_CLASS_2", CASE WHEN ("DT_Output_6"."P_2" IS NULL OR "DT_Output_6"."P_2" > 0.0) THEN ln("DT_Output_6"."P_2") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_2" 
-FROM "DT_Output_6"), 
-"DT_node_lookup_7" AS 
-(SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= -0.5934344530105591) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.5877821445465088) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.5400919914245605) THEN 4 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 <= 0.1451735943555832) THEN 6 ELSE 7 END END ELSE 8 END END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_VH4QNJ_ADS" AS "ADS_sca_2_OUT"), 
-"DT_node_data_7" AS 
-(SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE PRECISION) AS "P_0", CAST("Values"."P_1" AS DOUBLE PRECISION) AS "P_1", CAST("Values"."P_2" AS DOUBLE PRECISION) AS "P_2", CAST("Values"."D" AS DOUBLE PRECISION) AS "D", CAST("Values"."DP" AS DOUBLE PRECISION) AS "DP" 
-FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 7 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 8 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database) AS "Values"), 
-"DT_Output_7" AS 
-(SELECT "DT_node_lookup_7"."KEY" AS "KEY", "DT_node_lookup_7".node_id_2 AS node_id_2, "DT_node_data_7".nid AS nid, "DT_node_data_7"."P_0" AS "P_0", "DT_node_data_7"."P_1" AS "P_1", "DT_node_data_7"."P_2" AS "P_2", "DT_node_data_7"."D" AS "D", "DT_node_data_7"."DP" AS "DP" 
-FROM "DT_node_lookup_7" LEFT OUTER JOIN "DT_node_data_7" ON "DT_node_lookup_7".node_id_2 = "DT_node_data_7".nid), 
-"BAG_Model_7" AS 
-(SELECT "DT_Output_7"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_0", "DT_Output_7"."P_0" AS "Proba_CLASS_0", CASE WHEN ("DT_Output_7"."P_0" IS NULL OR "DT_Output_7"."P_0" > 0.0) THEN ln("DT_Output_7"."P_0") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_1", "DT_Output_7"."P_1" AS "Proba_CLASS_1", CASE WHEN ("DT_Output_7"."P_1" IS NULL OR "DT_Output_7"."P_1" > 0.0) THEN ln("DT_Output_7"."P_1") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_1", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_2", "DT_Output_7"."P_2" AS "Proba_CLASS_2", CASE WHEN ("DT_Output_7"."P_2" IS NULL OR "DT_Output_7"."P_2" > 0.0) THEN ln("DT_Output_7"."P_2") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_2" 
-FROM "DT_Output_7"), 
-"DT_node_lookup_8" AS 
-(SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.5877821445465088) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= -0.7267905473709106) THEN 2 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= -1.0851964950561523) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.03216718137264252) THEN 5 ELSE 6 END ELSE 7 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.40673595666885376) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= 0.90987229347229) THEN 10 ELSE 11 END ELSE 12 END END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_VH4QNJ_ADS" AS "ADS_sca_2_OUT"), 
-"DT_node_data_8" AS 
-(SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE PRECISION) AS "P_0", CAST("Values"."P_1" AS DOUBLE PRECISION) AS "P_1", CAST("Values"."P_2" AS DOUBLE PRECISION) AS "P_2", CAST("Values"."D" AS DOUBLE PRECISION) AS "D", CAST("Values"."DP" AS DOUBLE PRECISION) AS "DP" 
-FROM (SELECT 2 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 7 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 10 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 11 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 12 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database) AS "Values"), 
-"DT_Output_8" AS 
-(SELECT "DT_node_lookup_8"."KEY" AS "KEY", "DT_node_lookup_8".node_id_2 AS node_id_2, "DT_node_data_8".nid AS nid, "DT_node_data_8"."P_0" AS "P_0", "DT_node_data_8"."P_1" AS "P_1", "DT_node_data_8"."P_2" AS "P_2", "DT_node_data_8"."D" AS "D", "DT_node_data_8"."DP" AS "DP" 
-FROM "DT_node_lookup_8" LEFT OUTER JOIN "DT_node_data_8" ON "DT_node_lookup_8".node_id_2 = "DT_node_data_8".nid), 
-"BAG_Model_8" AS 
-(SELECT "DT_Output_8"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_0", "DT_Output_8"."P_0" AS "Proba_CLASS_0", CASE WHEN ("DT_Output_8"."P_0" IS NULL OR "DT_Output_8"."P_0" > 0.0) THEN ln("DT_Output_8"."P_0") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_1", "DT_Output_8"."P_1" AS "Proba_CLASS_1", CASE WHEN ("DT_Output_8"."P_1" IS NULL OR "DT_Output_8"."P_1" > 0.0) THEN ln("DT_Output_8"."P_1") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_1", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_2", "DT_Output_8"."P_2" AS "Proba_CLASS_2", CASE WHEN ("DT_Output_8"."P_2" IS NULL OR "DT_Output_8"."P_2" > 0.0) THEN ln("DT_Output_8"."P_2") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_2" 
-FROM "DT_Output_8"), 
-"DT_node_lookup_9" AS 
-(SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.7281479835510254) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.40673595666885376) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.6462678909301758) THEN 4 ELSE 5 END ELSE 6 END END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_VH4QNJ_ADS" AS "ADS_sca_2_OUT"), 
-"DT_node_data_9" AS 
-(SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE PRECISION) AS "P_0", CAST("Values"."P_1" AS DOUBLE PRECISION) AS "P_1", CAST("Values"."P_2" AS DOUBLE PRECISION) AS "P_2", CAST("Values"."D" AS DOUBLE PRECISION) AS "D", CAST("Values"."DP" AS DOUBLE PRECISION) AS "DP" 
-FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database) AS "Values"), 
-"DT_Output_9" AS 
-(SELECT "DT_node_lookup_9"."KEY" AS "KEY", "DT_node_lookup_9".node_id_2 AS node_id_2, "DT_node_data_9".nid AS nid, "DT_node_data_9"."P_0" AS "P_0", "DT_node_data_9"."P_1" AS "P_1", "DT_node_data_9"."P_2" AS "P_2", "DT_node_data_9"."D" AS "D", "DT_node_data_9"."DP" AS "DP" 
-FROM "DT_node_lookup_9" LEFT OUTER JOIN "DT_node_data_9" ON "DT_node_lookup_9".node_id_2 = "DT_node_data_9".nid), 
-"BAG_Model_9" AS 
-(SELECT "DT_Output_9"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_0", "DT_Output_9"."P_0" AS "Proba_CLASS_0", CASE WHEN ("DT_Output_9"."P_0" IS NULL OR "DT_Output_9"."P_0" > 0.0) THEN ln("DT_Output_9"."P_0") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_1", "DT_Output_9"."P_1" AS "Proba_CLASS_1", CASE WHEN ("DT_Output_9"."P_1" IS NULL OR "DT_Output_9"."P_1" > 0.0) THEN ln("DT_Output_9"."P_1") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_1", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_2", "DT_Output_9"."P_2" AS "Proba_CLASS_2", CASE WHEN ("DT_Output_9"."P_2" IS NULL OR "DT_Output_9"."P_2" > 0.0) THEN ln("DT_Output_9"."P_2") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_2" 
-FROM "DT_Output_9")
+FROM "DT_Output_4")
  SELECT "BAG_B0"."KEY", "BAG_B0"."Score_CLASS_0", "BAG_B0"."Proba_CLASS_0", "BAG_B0"."LogProba_CLASS_0", "BAG_B0"."Score_CLASS_1", "BAG_B0"."Proba_CLASS_1", "BAG_B0"."LogProba_CLASS_1", "BAG_B0"."Score_CLASS_2", "BAG_B0"."Proba_CLASS_2", "BAG_B0"."LogProba_CLASS_2" 
 FROM (SELECT "BAG_esu_0"."KEY" AS "KEY", "BAG_esu_0"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_esu_0"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_esu_0"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_esu_0"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_esu_0"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_esu_0"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_esu_0"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_esu_0"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_esu_0"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
 FROM (SELECT "BAG_Model_0"."KEY" AS "KEY", "BAG_Model_0"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_0"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_0"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_0"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_0"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_0"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_0"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_0"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_0"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
@@ -208,17 +148,12 @@ FROM "BAG_Model_0" UNION ALL SELECT "BAG_Model_1"."KEY" AS "KEY", "BAG_Model_1".
 FROM "BAG_Model_1" UNION ALL SELECT "BAG_Model_2"."KEY" AS "KEY", "BAG_Model_2"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_2"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_2"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_2"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_2"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_2"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_2"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_2"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_2"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
 FROM "BAG_Model_2" UNION ALL SELECT "BAG_Model_3"."KEY" AS "KEY", "BAG_Model_3"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_3"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_3"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_3"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_3"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_3"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_3"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_3"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_3"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
 FROM "BAG_Model_3" UNION ALL SELECT "BAG_Model_4"."KEY" AS "KEY", "BAG_Model_4"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_4"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_4"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_4"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_4"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_4"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_4"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_4"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_4"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
-FROM "BAG_Model_4" UNION ALL SELECT "BAG_Model_5"."KEY" AS "KEY", "BAG_Model_5"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_5"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_5"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_5"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_5"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_5"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_5"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_5"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_5"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
-FROM "BAG_Model_5" UNION ALL SELECT "BAG_Model_6"."KEY" AS "KEY", "BAG_Model_6"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_6"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_6"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_6"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_6"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_6"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_6"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_6"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_6"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
-FROM "BAG_Model_6" UNION ALL SELECT "BAG_Model_7"."KEY" AS "KEY", "BAG_Model_7"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_7"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_7"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_7"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_7"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_7"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_7"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_7"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_7"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
-FROM "BAG_Model_7" UNION ALL SELECT "BAG_Model_8"."KEY" AS "KEY", "BAG_Model_8"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_8"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_8"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_8"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_8"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_8"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_8"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_8"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_8"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
-FROM "BAG_Model_8" UNION ALL SELECT "BAG_Model_9"."KEY" AS "KEY", "BAG_Model_9"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_9"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_9"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_9"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_9"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_9"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_9"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_9"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_9"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
-FROM "BAG_Model_9") AS "BAG_esu_0") AS "BAG_B0") AS "U"
+FROM "BAG_Model_4") AS "BAG_esu_0") AS "BAG_B0") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_5K2L9J_BAG part 1. Create 
+-- Code For temporary table TMP_20180602_6ZP_BAG_B1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_5K2L9J_BAG" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_6ZP_BAG_B1" (
 	"KEY" BIGINT, 
 	"Score_CLASS_0" DOUBLE PRECISION, 
 	"Proba_CLASS_0" DOUBLE PRECISION, 
@@ -233,12 +168,102 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_5K2L9J_BAG" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_5K2L9J_BAG part 2. Populate
+-- Code For temporary table TMP_20180602_6ZP_BAG_B1 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_5K2L9J_BAG" ("KEY", "Score_CLASS_0", "Proba_CLASS_0", "LogProba_CLASS_0", "Score_CLASS_1", "Proba_CLASS_1", "LogProba_CLASS_1", "Score_CLASS_2", "Proba_CLASS_2", "LogProba_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Proba_CLASS_0", "U"."LogProba_CLASS_0", "U"."Score_CLASS_1", "U"."Proba_CLASS_1", "U"."LogProba_CLASS_1", "U"."Score_CLASS_2", "U"."Proba_CLASS_2", "U"."LogProba_CLASS_2" 
+INSERT INTO "TMP_20180602_6ZP_BAG_B1" ("KEY", "Score_CLASS_0", "Proba_CLASS_0", "LogProba_CLASS_0", "Score_CLASS_1", "Proba_CLASS_1", "LogProba_CLASS_1", "Score_CLASS_2", "Proba_CLASS_2", "LogProba_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Proba_CLASS_0", "U"."LogProba_CLASS_0", "U"."Score_CLASS_1", "U"."Proba_CLASS_1", "U"."LogProba_CLASS_1", "U"."Score_CLASS_2", "U"."Proba_CLASS_2", "U"."LogProba_CLASS_2" 
+FROM (WITH "DT_node_lookup_5" AS 
+(SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.529296338558197) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= -0.5934344530105591) THEN 2 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.5400919914245605) THEN 4 ELSE 5 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.6462678909301758) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.5400920510292053) THEN 8 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 <= 0.1451735943555832) THEN 10 ELSE 11 END END ELSE 12 END END AS node_id_2 
+FROM "TMP_20180602_X4P_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
+"DT_node_data_5" AS 
+(SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE PRECISION) AS "P_0", CAST("Values"."P_1" AS DOUBLE PRECISION) AS "P_1", CAST("Values"."P_2" AS DOUBLE PRECISION) AS "P_2", CAST("Values"."D" AS DOUBLE PRECISION) AS "D", CAST("Values"."DP" AS DOUBLE PRECISION) AS "DP" 
+FROM (SELECT 2 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 8 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 10 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 11 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 12 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database) AS "Values"), 
+"DT_Output_5" AS 
+(SELECT "DT_node_lookup_5"."KEY" AS "KEY", "DT_node_lookup_5".node_id_2 AS node_id_2, "DT_node_data_5".nid AS nid, "DT_node_data_5"."P_0" AS "P_0", "DT_node_data_5"."P_1" AS "P_1", "DT_node_data_5"."P_2" AS "P_2", "DT_node_data_5"."D" AS "D", "DT_node_data_5"."DP" AS "DP" 
+FROM "DT_node_lookup_5" LEFT OUTER JOIN "DT_node_data_5" ON "DT_node_lookup_5".node_id_2 = "DT_node_data_5".nid), 
+"BAG_Model_5" AS 
+(SELECT "DT_Output_5"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_0", "DT_Output_5"."P_0" AS "Proba_CLASS_0", CASE WHEN ("DT_Output_5"."P_0" IS NULL OR "DT_Output_5"."P_0" > 0.0) THEN ln("DT_Output_5"."P_0") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_1", "DT_Output_5"."P_1" AS "Proba_CLASS_1", CASE WHEN ("DT_Output_5"."P_1" IS NULL OR "DT_Output_5"."P_1" > 0.0) THEN ln("DT_Output_5"."P_1") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_1", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_2", "DT_Output_5"."P_2" AS "Proba_CLASS_2", CASE WHEN ("DT_Output_5"."P_2" IS NULL OR "DT_Output_5"."P_2" > 0.0) THEN ln("DT_Output_5"."P_2") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_2" 
+FROM "DT_Output_5"), 
+"DT_node_lookup_6" AS 
+(SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.8158766627311707) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.40673595666885376) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.6755107641220093) THEN 4 ELSE 5 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.5877821445465088) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 <= 0.1451735943555832) THEN 8 ELSE 9 END ELSE 10 END END END AS node_id_2 
+FROM "TMP_20180602_X4P_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
+"DT_node_data_6" AS 
+(SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE PRECISION) AS "P_0", CAST("Values"."P_1" AS DOUBLE PRECISION) AS "P_1", CAST("Values"."P_2" AS DOUBLE PRECISION) AS "P_2", CAST("Values"."D" AS DOUBLE PRECISION) AS "D", CAST("Values"."DP" AS DOUBLE PRECISION) AS "DP" 
+FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 8 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 9 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 10 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database) AS "Values"), 
+"DT_Output_6" AS 
+(SELECT "DT_node_lookup_6"."KEY" AS "KEY", "DT_node_lookup_6".node_id_2 AS node_id_2, "DT_node_data_6".nid AS nid, "DT_node_data_6"."P_0" AS "P_0", "DT_node_data_6"."P_1" AS "P_1", "DT_node_data_6"."P_2" AS "P_2", "DT_node_data_6"."D" AS "D", "DT_node_data_6"."DP" AS "DP" 
+FROM "DT_node_lookup_6" LEFT OUTER JOIN "DT_node_data_6" ON "DT_node_lookup_6".node_id_2 = "DT_node_data_6".nid), 
+"BAG_Model_6" AS 
+(SELECT "DT_Output_6"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_0", "DT_Output_6"."P_0" AS "Proba_CLASS_0", CASE WHEN ("DT_Output_6"."P_0" IS NULL OR "DT_Output_6"."P_0" > 0.0) THEN ln("DT_Output_6"."P_0") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_1", "DT_Output_6"."P_1" AS "Proba_CLASS_1", CASE WHEN ("DT_Output_6"."P_1" IS NULL OR "DT_Output_6"."P_1" > 0.0) THEN ln("DT_Output_6"."P_1") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_1", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_2", "DT_Output_6"."P_2" AS "Proba_CLASS_2", CASE WHEN ("DT_Output_6"."P_2" IS NULL OR "DT_Output_6"."P_2" > 0.0) THEN ln("DT_Output_6"."P_2") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_2" 
+FROM "DT_Output_6"), 
+"DT_node_lookup_7" AS 
+(SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= -0.5934344530105591) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.5877821445465088) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.5400919914245605) THEN 4 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 <= 0.1451735943555832) THEN 6 ELSE 7 END END ELSE 8 END END AS node_id_2 
+FROM "TMP_20180602_X4P_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
+"DT_node_data_7" AS 
+(SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE PRECISION) AS "P_0", CAST("Values"."P_1" AS DOUBLE PRECISION) AS "P_1", CAST("Values"."P_2" AS DOUBLE PRECISION) AS "P_2", CAST("Values"."D" AS DOUBLE PRECISION) AS "D", CAST("Values"."DP" AS DOUBLE PRECISION) AS "DP" 
+FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 7 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 8 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database) AS "Values"), 
+"DT_Output_7" AS 
+(SELECT "DT_node_lookup_7"."KEY" AS "KEY", "DT_node_lookup_7".node_id_2 AS node_id_2, "DT_node_data_7".nid AS nid, "DT_node_data_7"."P_0" AS "P_0", "DT_node_data_7"."P_1" AS "P_1", "DT_node_data_7"."P_2" AS "P_2", "DT_node_data_7"."D" AS "D", "DT_node_data_7"."DP" AS "DP" 
+FROM "DT_node_lookup_7" LEFT OUTER JOIN "DT_node_data_7" ON "DT_node_lookup_7".node_id_2 = "DT_node_data_7".nid), 
+"BAG_Model_7" AS 
+(SELECT "DT_Output_7"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_0", "DT_Output_7"."P_0" AS "Proba_CLASS_0", CASE WHEN ("DT_Output_7"."P_0" IS NULL OR "DT_Output_7"."P_0" > 0.0) THEN ln("DT_Output_7"."P_0") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_1", "DT_Output_7"."P_1" AS "Proba_CLASS_1", CASE WHEN ("DT_Output_7"."P_1" IS NULL OR "DT_Output_7"."P_1" > 0.0) THEN ln("DT_Output_7"."P_1") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_1", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_2", "DT_Output_7"."P_2" AS "Proba_CLASS_2", CASE WHEN ("DT_Output_7"."P_2" IS NULL OR "DT_Output_7"."P_2" > 0.0) THEN ln("DT_Output_7"."P_2") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_2" 
+FROM "DT_Output_7"), 
+"DT_node_lookup_8" AS 
+(SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.5877821445465088) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= -0.7267905473709106) THEN 2 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= -1.0851964950561523) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.03216718137264252) THEN 5 ELSE 6 END ELSE 7 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.40673595666885376) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= 0.90987229347229) THEN 10 ELSE 11 END ELSE 12 END END AS node_id_2 
+FROM "TMP_20180602_X4P_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
+"DT_node_data_8" AS 
+(SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE PRECISION) AS "P_0", CAST("Values"."P_1" AS DOUBLE PRECISION) AS "P_1", CAST("Values"."P_2" AS DOUBLE PRECISION) AS "P_2", CAST("Values"."D" AS DOUBLE PRECISION) AS "D", CAST("Values"."DP" AS DOUBLE PRECISION) AS "DP" 
+FROM (SELECT 2 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 7 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 10 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 11 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 12 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database) AS "Values"), 
+"DT_Output_8" AS 
+(SELECT "DT_node_lookup_8"."KEY" AS "KEY", "DT_node_lookup_8".node_id_2 AS node_id_2, "DT_node_data_8".nid AS nid, "DT_node_data_8"."P_0" AS "P_0", "DT_node_data_8"."P_1" AS "P_1", "DT_node_data_8"."P_2" AS "P_2", "DT_node_data_8"."D" AS "D", "DT_node_data_8"."DP" AS "DP" 
+FROM "DT_node_lookup_8" LEFT OUTER JOIN "DT_node_data_8" ON "DT_node_lookup_8".node_id_2 = "DT_node_data_8".nid), 
+"BAG_Model_8" AS 
+(SELECT "DT_Output_8"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_0", "DT_Output_8"."P_0" AS "Proba_CLASS_0", CASE WHEN ("DT_Output_8"."P_0" IS NULL OR "DT_Output_8"."P_0" > 0.0) THEN ln("DT_Output_8"."P_0") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_1", "DT_Output_8"."P_1" AS "Proba_CLASS_1", CASE WHEN ("DT_Output_8"."P_1" IS NULL OR "DT_Output_8"."P_1" > 0.0) THEN ln("DT_Output_8"."P_1") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_1", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_2", "DT_Output_8"."P_2" AS "Proba_CLASS_2", CASE WHEN ("DT_Output_8"."P_2" IS NULL OR "DT_Output_8"."P_2" > 0.0) THEN ln("DT_Output_8"."P_2") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_2" 
+FROM "DT_Output_8"), 
+"DT_node_lookup_9" AS 
+(SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.7281479835510254) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.40673595666885376) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.6462678909301758) THEN 4 ELSE 5 END ELSE 6 END END AS node_id_2 
+FROM "TMP_20180602_X4P_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
+"DT_node_data_9" AS 
+(SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE PRECISION) AS "P_0", CAST("Values"."P_1" AS DOUBLE PRECISION) AS "P_1", CAST("Values"."P_2" AS DOUBLE PRECISION) AS "P_2", CAST("Values"."D" AS DOUBLE PRECISION) AS "D", CAST("Values"."DP" AS DOUBLE PRECISION) AS "DP" 
+FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database) AS "Values"), 
+"DT_Output_9" AS 
+(SELECT "DT_node_lookup_9"."KEY" AS "KEY", "DT_node_lookup_9".node_id_2 AS node_id_2, "DT_node_data_9".nid AS nid, "DT_node_data_9"."P_0" AS "P_0", "DT_node_data_9"."P_1" AS "P_1", "DT_node_data_9"."P_2" AS "P_2", "DT_node_data_9"."D" AS "D", "DT_node_data_9"."DP" AS "DP" 
+FROM "DT_node_lookup_9" LEFT OUTER JOIN "DT_node_data_9" ON "DT_node_lookup_9".node_id_2 = "DT_node_data_9".nid), 
+"BAG_Model_9" AS 
+(SELECT "DT_Output_9"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_0", "DT_Output_9"."P_0" AS "Proba_CLASS_0", CASE WHEN ("DT_Output_9"."P_0" IS NULL OR "DT_Output_9"."P_0" > 0.0) THEN ln("DT_Output_9"."P_0") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_1", "DT_Output_9"."P_1" AS "Proba_CLASS_1", CASE WHEN ("DT_Output_9"."P_1" IS NULL OR "DT_Output_9"."P_1" > 0.0) THEN ln("DT_Output_9"."P_1") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_1", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_2", "DT_Output_9"."P_2" AS "Proba_CLASS_2", CASE WHEN ("DT_Output_9"."P_2" IS NULL OR "DT_Output_9"."P_2" > 0.0) THEN ln("DT_Output_9"."P_2") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_2" 
+FROM "DT_Output_9")
+ SELECT "BAG_B1"."KEY", "BAG_B1"."Score_CLASS_0", "BAG_B1"."Proba_CLASS_0", "BAG_B1"."LogProba_CLASS_0", "BAG_B1"."Score_CLASS_1", "BAG_B1"."Proba_CLASS_1", "BAG_B1"."LogProba_CLASS_1", "BAG_B1"."Score_CLASS_2", "BAG_B1"."Proba_CLASS_2", "BAG_B1"."LogProba_CLASS_2" 
+FROM (SELECT "BAG_esu_1"."KEY" AS "KEY", "BAG_esu_1"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_esu_1"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_esu_1"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_esu_1"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_esu_1"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_esu_1"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_esu_1"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_esu_1"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_esu_1"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
+FROM (SELECT "BAG_Model_5"."KEY" AS "KEY", "BAG_Model_5"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_5"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_5"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_5"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_5"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_5"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_5"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_5"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_5"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
+FROM "BAG_Model_5" UNION ALL SELECT "BAG_Model_6"."KEY" AS "KEY", "BAG_Model_6"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_6"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_6"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_6"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_6"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_6"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_6"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_6"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_6"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
+FROM "BAG_Model_6" UNION ALL SELECT "BAG_Model_7"."KEY" AS "KEY", "BAG_Model_7"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_7"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_7"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_7"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_7"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_7"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_7"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_7"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_7"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
+FROM "BAG_Model_7" UNION ALL SELECT "BAG_Model_8"."KEY" AS "KEY", "BAG_Model_8"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_8"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_8"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_8"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_8"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_8"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_8"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_8"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_8"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
+FROM "BAG_Model_8" UNION ALL SELECT "BAG_Model_9"."KEY" AS "KEY", "BAG_Model_9"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_9"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_9"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_9"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_9"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_9"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_9"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_9"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_9"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
+FROM "BAG_Model_9") AS "BAG_esu_1") AS "BAG_B1") AS "U"
+
+-- Code For temporary table TMP_20180602_LDQ_BAG_B2 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_LDQ_BAG_B2" (
+	"KEY" BIGINT, 
+	"Score_CLASS_0" DOUBLE PRECISION, 
+	"Proba_CLASS_0" DOUBLE PRECISION, 
+	"LogProba_CLASS_0" DOUBLE PRECISION, 
+	"Score_CLASS_1" DOUBLE PRECISION, 
+	"Proba_CLASS_1" DOUBLE PRECISION, 
+	"LogProba_CLASS_1" DOUBLE PRECISION, 
+	"Score_CLASS_2" DOUBLE PRECISION, 
+	"Proba_CLASS_2" DOUBLE PRECISION, 
+	"LogProba_CLASS_2" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_LDQ_BAG_B2 part 2. Populate
+
+INSERT INTO "TMP_20180602_LDQ_BAG_B2" ("KEY", "Score_CLASS_0", "Proba_CLASS_0", "LogProba_CLASS_0", "Score_CLASS_1", "Proba_CLASS_1", "LogProba_CLASS_1", "Score_CLASS_2", "Proba_CLASS_2", "LogProba_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Proba_CLASS_0", "U"."LogProba_CLASS_0", "U"."Score_CLASS_1", "U"."Proba_CLASS_1", "U"."LogProba_CLASS_1", "U"."Score_CLASS_2", "U"."Proba_CLASS_2", "U"."LogProba_CLASS_2" 
 FROM (WITH "DT_node_lookup_10" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.7281479835510254) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.40673595666885376) THEN 3 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.5877821445465088) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 <= 0.1451735943555832) THEN 6 ELSE 7 END ELSE 8 END END END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_VH4QNJ_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_X4P_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_10" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE PRECISION) AS "P_0", CAST("Values"."P_1" AS DOUBLE PRECISION) AS "P_1", CAST("Values"."P_2" AS DOUBLE PRECISION) AS "P_2", CAST("Values"."D" AS DOUBLE PRECISION) AS "D", CAST("Values"."DP" AS DOUBLE PRECISION) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 3 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 7 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 8 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database) AS "Values"), 
@@ -250,7 +275,7 @@ FROM "DT_node_lookup_10" LEFT OUTER JOIN "DT_node_data_10" ON "DT_node_lookup_10
 FROM "DT_Output_10"), 
 "DT_node_lookup_11" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.6462678909301758) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.8158766627311707) THEN 2 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.8734821677207947) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= -1.0851964950561523) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.03216718137264252) THEN 6 ELSE 7 END ELSE 8 END ELSE 9 END END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.7047536373138428) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= 0.7889590263366699) THEN 12 ELSE 13 END ELSE 14 END END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_VH4QNJ_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_X4P_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_11" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE PRECISION) AS "P_0", CAST("Values"."P_1" AS DOUBLE PRECISION) AS "P_1", CAST("Values"."P_2" AS DOUBLE PRECISION) AS "P_2", CAST("Values"."D" AS DOUBLE PRECISION) AS "D", CAST("Values"."DP" AS DOUBLE PRECISION) AS "DP" 
 FROM (SELECT 2 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 7 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 8 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 9 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 12 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 13 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 14 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database) AS "Values"), 
@@ -262,7 +287,7 @@ FROM "DT_node_lookup_11" LEFT OUTER JOIN "DT_node_data_11" ON "DT_node_lookup_11
 FROM "DT_Output_11"), 
 "DT_node_lookup_12" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.8158766627311707) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.5400919914245605) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.6462678909301758) THEN 4 ELSE 5 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.6734480857849121) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_3 <= -0.6571015119552612) THEN 8 ELSE 9 END ELSE 10 END END END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_VH4QNJ_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_X4P_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_12" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE PRECISION) AS "P_0", CAST("Values"."P_1" AS DOUBLE PRECISION) AS "P_1", CAST("Values"."P_2" AS DOUBLE PRECISION) AS "P_2", CAST("Values"."D" AS DOUBLE PRECISION) AS "D", CAST("Values"."DP" AS DOUBLE PRECISION) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 8 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 9 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 10 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database) AS "Values"), 
@@ -274,7 +299,7 @@ FROM "DT_node_lookup_12" LEFT OUTER JOIN "DT_node_data_12" ON "DT_node_lookup_12
 FROM "DT_Output_12"), 
 "DT_node_lookup_13" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.5877821445465088) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= -0.5934344530105591) THEN 2 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= -1.0851964950561523) THEN 4 ELSE 5 END END ELSE 6 END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_VH4QNJ_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_X4P_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_13" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE PRECISION) AS "P_0", CAST("Values"."P_1" AS DOUBLE PRECISION) AS "P_1", CAST("Values"."P_2" AS DOUBLE PRECISION) AS "P_2", CAST("Values"."D" AS DOUBLE PRECISION) AS "D", CAST("Values"."DP" AS DOUBLE PRECISION) AS "DP" 
 FROM (SELECT 2 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database) AS "Values"), 
@@ -286,7 +311,7 @@ FROM "DT_node_lookup_13" LEFT OUTER JOIN "DT_node_data_13" ON "DT_node_lookup_13
 FROM "DT_Output_13"), 
 "DT_node_lookup_14" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.8158766627311707) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.6462678909301758) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.6067700386047363) THEN 4 ELSE 5 END ELSE 6 END END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_VH4QNJ_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_X4P_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_14" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE PRECISION) AS "P_0", CAST("Values"."P_1" AS DOUBLE PRECISION) AS "P_1", CAST("Values"."P_2" AS DOUBLE PRECISION) AS "P_2", CAST("Values"."D" AS DOUBLE PRECISION) AS "D", CAST("Values"."DP" AS DOUBLE PRECISION) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 4 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 5 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database) AS "Values"), 
@@ -295,10 +320,40 @@ FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 A
 FROM "DT_node_lookup_14" LEFT OUTER JOIN "DT_node_data_14" ON "DT_node_lookup_14".node_id_2 = "DT_node_data_14".nid), 
 "BAG_Model_14" AS 
 (SELECT "DT_Output_14"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_0", "DT_Output_14"."P_0" AS "Proba_CLASS_0", CASE WHEN ("DT_Output_14"."P_0" IS NULL OR "DT_Output_14"."P_0" > 0.0) THEN ln("DT_Output_14"."P_0") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_1", "DT_Output_14"."P_1" AS "Proba_CLASS_1", CASE WHEN ("DT_Output_14"."P_1" IS NULL OR "DT_Output_14"."P_1" > 0.0) THEN ln("DT_Output_14"."P_1") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_1", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_2", "DT_Output_14"."P_2" AS "Proba_CLASS_2", CASE WHEN ("DT_Output_14"."P_2" IS NULL OR "DT_Output_14"."P_2" > 0.0) THEN ln("DT_Output_14"."P_2") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_2" 
-FROM "DT_Output_14"), 
-"DT_node_lookup_15" AS 
+FROM "DT_Output_14")
+ SELECT "BAG_B2"."KEY", "BAG_B2"."Score_CLASS_0", "BAG_B2"."Proba_CLASS_0", "BAG_B2"."LogProba_CLASS_0", "BAG_B2"."Score_CLASS_1", "BAG_B2"."Proba_CLASS_1", "BAG_B2"."LogProba_CLASS_1", "BAG_B2"."Score_CLASS_2", "BAG_B2"."Proba_CLASS_2", "BAG_B2"."LogProba_CLASS_2" 
+FROM (SELECT "BAG_esu_2"."KEY" AS "KEY", "BAG_esu_2"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_esu_2"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_esu_2"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_esu_2"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_esu_2"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_esu_2"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_esu_2"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_esu_2"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_esu_2"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
+FROM (SELECT "BAG_Model_10"."KEY" AS "KEY", "BAG_Model_10"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_10"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_10"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_10"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_10"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_10"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_10"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_10"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_10"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
+FROM "BAG_Model_10" UNION ALL SELECT "BAG_Model_11"."KEY" AS "KEY", "BAG_Model_11"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_11"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_11"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_11"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_11"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_11"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_11"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_11"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_11"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
+FROM "BAG_Model_11" UNION ALL SELECT "BAG_Model_12"."KEY" AS "KEY", "BAG_Model_12"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_12"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_12"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_12"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_12"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_12"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_12"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_12"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_12"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
+FROM "BAG_Model_12" UNION ALL SELECT "BAG_Model_13"."KEY" AS "KEY", "BAG_Model_13"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_13"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_13"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_13"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_13"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_13"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_13"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_13"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_13"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
+FROM "BAG_Model_13" UNION ALL SELECT "BAG_Model_14"."KEY" AS "KEY", "BAG_Model_14"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_14"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_14"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_14"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_14"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_14"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_14"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_14"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_14"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
+FROM "BAG_Model_14") AS "BAG_esu_2") AS "BAG_B2") AS "U"
+
+-- Code For temporary table TMP_20180602_MSN_BAG_B3 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_MSN_BAG_B3" (
+	"KEY" BIGINT, 
+	"Score_CLASS_0" DOUBLE PRECISION, 
+	"Proba_CLASS_0" DOUBLE PRECISION, 
+	"LogProba_CLASS_0" DOUBLE PRECISION, 
+	"Score_CLASS_1" DOUBLE PRECISION, 
+	"Proba_CLASS_1" DOUBLE PRECISION, 
+	"LogProba_CLASS_1" DOUBLE PRECISION, 
+	"Score_CLASS_2" DOUBLE PRECISION, 
+	"Proba_CLASS_2" DOUBLE PRECISION, 
+	"LogProba_CLASS_2" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_MSN_BAG_B3 part 2. Populate
+
+INSERT INTO "TMP_20180602_MSN_BAG_B3" ("KEY", "Score_CLASS_0", "Proba_CLASS_0", "LogProba_CLASS_0", "Score_CLASS_1", "Proba_CLASS_1", "LogProba_CLASS_1", "Score_CLASS_2", "Proba_CLASS_2", "LogProba_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Proba_CLASS_0", "U"."LogProba_CLASS_0", "U"."Score_CLASS_1", "U"."Proba_CLASS_1", "U"."LogProba_CLASS_1", "U"."Score_CLASS_2", "U"."Proba_CLASS_2", "U"."LogProba_CLASS_2" 
+FROM (WITH "DT_node_lookup_15" AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= -0.8158766627311707) THEN 1 ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.6734480857849121) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.8509681224822998) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= -1.0851964950561523) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_5 <= 0.1400238573551178) THEN 6 ELSE 7 END ELSE 8 END ELSE 9 END ELSE CASE WHEN ("ADS_sca_2_OUT".scaler_output_4 <= 0.5877821445465088) THEN CASE WHEN ("ADS_sca_2_OUT".scaler_output_2 <= 0.12393608689308167) THEN 12 ELSE 13 END ELSE 14 END END END AS node_id_2 
-FROM "TMP_20180516_CODEGEN_VH4QNJ_ADS" AS "ADS_sca_2_OUT"), 
+FROM "TMP_20180602_X4P_ADS_SCA_2_OUT" AS "ADS_sca_2_OUT"), 
 "DT_node_data_15" AS 
 (SELECT "Values".nid AS nid, CAST("Values"."P_0" AS DOUBLE PRECISION) AS "P_0", CAST("Values"."P_1" AS DOUBLE PRECISION) AS "P_1", CAST("Values"."P_2" AS DOUBLE PRECISION) AS "P_2", CAST("Values"."D" AS DOUBLE PRECISION) AS "D", CAST("Values"."DP" AS DOUBLE PRECISION) AS "DP" 
 FROM (SELECT 1 AS nid, 1.0 AS "P_0", 0.0 AS "P_1", 0.0 AS "P_2", 0 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 6 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 7 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 8 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 9 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 12 AS nid, 0.0 AS "P_0", 1.0 AS "P_1", 0.0 AS "P_2", 1 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 13 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database UNION ALL SELECT 14 AS nid, 0.0 AS "P_0", 0.0 AS "P_1", 1.0 AS "P_2", 2 AS "D", 1.0 AS "DP" FROM rdb$database) AS "Values"), 
@@ -308,20 +363,15 @@ FROM "DT_node_lookup_15" LEFT OUTER JOIN "DT_node_data_15" ON "DT_node_lookup_15
 "BAG_Model_15" AS 
 (SELECT "DT_Output_15"."KEY" AS "KEY", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_0", "DT_Output_15"."P_0" AS "Proba_CLASS_0", CASE WHEN ("DT_Output_15"."P_0" IS NULL OR "DT_Output_15"."P_0" > 0.0) THEN ln("DT_Output_15"."P_0") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_0", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_1", "DT_Output_15"."P_1" AS "Proba_CLASS_1", CASE WHEN ("DT_Output_15"."P_1" IS NULL OR "DT_Output_15"."P_1" > 0.0) THEN ln("DT_Output_15"."P_1") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_1", CAST(NULL AS DOUBLE PRECISION) AS "Score_CLASS_2", "DT_Output_15"."P_2" AS "Proba_CLASS_2", CASE WHEN ("DT_Output_15"."P_2" IS NULL OR "DT_Output_15"."P_2" > 0.0) THEN ln("DT_Output_15"."P_2") ELSE -1.79769313486231e+308 END AS "LogProba_CLASS_2" 
 FROM "DT_Output_15")
- SELECT "BAG_B1"."KEY", "BAG_B1"."Score_CLASS_0", "BAG_B1"."Proba_CLASS_0", "BAG_B1"."LogProba_CLASS_0", "BAG_B1"."Score_CLASS_1", "BAG_B1"."Proba_CLASS_1", "BAG_B1"."LogProba_CLASS_1", "BAG_B1"."Score_CLASS_2", "BAG_B1"."Proba_CLASS_2", "BAG_B1"."LogProba_CLASS_2" 
-FROM (SELECT "BAG_esu_1"."KEY" AS "KEY", "BAG_esu_1"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_esu_1"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_esu_1"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_esu_1"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_esu_1"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_esu_1"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_esu_1"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_esu_1"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_esu_1"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
-FROM (SELECT "BAG_Model_10"."KEY" AS "KEY", "BAG_Model_10"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_10"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_10"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_10"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_10"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_10"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_10"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_10"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_10"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
-FROM "BAG_Model_10" UNION ALL SELECT "BAG_Model_11"."KEY" AS "KEY", "BAG_Model_11"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_11"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_11"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_11"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_11"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_11"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_11"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_11"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_11"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
-FROM "BAG_Model_11" UNION ALL SELECT "BAG_Model_12"."KEY" AS "KEY", "BAG_Model_12"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_12"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_12"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_12"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_12"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_12"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_12"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_12"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_12"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
-FROM "BAG_Model_12" UNION ALL SELECT "BAG_Model_13"."KEY" AS "KEY", "BAG_Model_13"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_13"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_13"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_13"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_13"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_13"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_13"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_13"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_13"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
-FROM "BAG_Model_13" UNION ALL SELECT "BAG_Model_14"."KEY" AS "KEY", "BAG_Model_14"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_14"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_14"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_14"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_14"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_14"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_14"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_14"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_14"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
-FROM "BAG_Model_14" UNION ALL SELECT "BAG_Model_15"."KEY" AS "KEY", "BAG_Model_15"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_15"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_15"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_15"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_15"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_15"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_15"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_15"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_15"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
-FROM "BAG_Model_15") AS "BAG_esu_1") AS "BAG_B1") AS "U"
+ SELECT "BAG_B3"."KEY", "BAG_B3"."Score_CLASS_0", "BAG_B3"."Proba_CLASS_0", "BAG_B3"."LogProba_CLASS_0", "BAG_B3"."Score_CLASS_1", "BAG_B3"."Proba_CLASS_1", "BAG_B3"."LogProba_CLASS_1", "BAG_B3"."Score_CLASS_2", "BAG_B3"."Proba_CLASS_2", "BAG_B3"."LogProba_CLASS_2" 
+FROM (SELECT "BAG_esu_3"."KEY" AS "KEY", "BAG_esu_3"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_esu_3"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_esu_3"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_esu_3"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_esu_3"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_esu_3"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_esu_3"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_esu_3"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_esu_3"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
+FROM (SELECT "BAG_Model_15"."KEY" AS "KEY", "BAG_Model_15"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_Model_15"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_Model_15"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_Model_15"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_Model_15"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_Model_15"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_Model_15"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_Model_15"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_Model_15"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
+FROM "BAG_Model_15") AS "BAG_esu_3") AS "BAG_B3") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_ON75S7_BAG part 1. Create 
+-- Code For temporary table TMP_20180602_159_BAG_AVG part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_ON75S7_BAG" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_159_BAG_AVG" (
 	"KEY" BIGINT NOT NULL, 
 	"Score_CLASS_0" DOUBLE PRECISION, 
 	"Proba_CLASS_0" DOUBLE PRECISION, 
@@ -337,28 +387,30 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_ON75S7_BAG" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_ON75S7_BAG part 2. Populate
+-- Code For temporary table TMP_20180602_159_BAG_AVG part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_ON75S7_BAG" ("KEY", "Score_CLASS_0", "Proba_CLASS_0", "LogProba_CLASS_0", "Score_CLASS_1", "Proba_CLASS_1", "LogProba_CLASS_1", "Score_CLASS_2", "Proba_CLASS_2", "LogProba_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Proba_CLASS_0", "U"."LogProba_CLASS_0", "U"."Score_CLASS_1", "U"."Proba_CLASS_1", "U"."LogProba_CLASS_1", "U"."Score_CLASS_2", "U"."Proba_CLASS_2", "U"."LogProba_CLASS_2" 
+INSERT INTO "TMP_20180602_159_BAG_AVG" ("KEY", "Score_CLASS_0", "Proba_CLASS_0", "LogProba_CLASS_0", "Score_CLASS_1", "Proba_CLASS_1", "LogProba_CLASS_1", "Score_CLASS_2", "Proba_CLASS_2", "LogProba_CLASS_2") SELECT "U"."KEY", "U"."Score_CLASS_0", "U"."Proba_CLASS_0", "U"."LogProba_CLASS_0", "U"."Score_CLASS_1", "U"."Proba_CLASS_1", "U"."LogProba_CLASS_1", "U"."Score_CLASS_2", "U"."Proba_CLASS_2", "U"."LogProba_CLASS_2" 
 FROM (WITH "BAG_Union" AS 
 (SELECT "BAG_EnsembleUnion"."KEY" AS "KEY", "BAG_EnsembleUnion"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_EnsembleUnion"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_EnsembleUnion"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_EnsembleUnion"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_EnsembleUnion"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_EnsembleUnion"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_EnsembleUnion"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_EnsembleUnion"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_EnsembleUnion"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
 FROM (SELECT "BAG_B0"."KEY" AS "KEY", "BAG_B0"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_B0"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_B0"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_B0"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_B0"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_B0"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_B0"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_B0"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_B0"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
-FROM "TMP_20180516_CODEGEN_L273UD_BAG" AS "BAG_B0" UNION ALL SELECT "BAG_B1"."KEY" AS "KEY", "BAG_B1"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_B1"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_B1"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_B1"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_B1"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_B1"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_B1"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_B1"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_B1"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
-FROM "TMP_20180516_CODEGEN_5K2L9J_BAG" AS "BAG_B1") AS "BAG_EnsembleUnion")
+FROM "TMP_20180602_V88_BAG_B0" AS "BAG_B0" UNION ALL SELECT "BAG_B1"."KEY" AS "KEY", "BAG_B1"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_B1"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_B1"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_B1"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_B1"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_B1"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_B1"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_B1"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_B1"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
+FROM "TMP_20180602_6ZP_BAG_B1" AS "BAG_B1" UNION ALL SELECT "BAG_B2"."KEY" AS "KEY", "BAG_B2"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_B2"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_B2"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_B2"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_B2"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_B2"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_B2"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_B2"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_B2"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
+FROM "TMP_20180602_LDQ_BAG_B2" AS "BAG_B2" UNION ALL SELECT "BAG_B3"."KEY" AS "KEY", "BAG_B3"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_B3"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_B3"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_B3"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_B3"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_B3"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_B3"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_B3"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_B3"."LogProba_CLASS_2" AS "LogProba_CLASS_2" 
+FROM "TMP_20180602_MSN_BAG_B3" AS "BAG_B3") AS "BAG_EnsembleUnion")
  SELECT "BAG_avg"."KEY", "BAG_avg"."Score_CLASS_0", "BAG_avg"."Proba_CLASS_0", "BAG_avg"."LogProba_CLASS_0", "BAG_avg"."Score_CLASS_1", "BAG_avg"."Proba_CLASS_1", "BAG_avg"."LogProba_CLASS_1", "BAG_avg"."Score_CLASS_2", "BAG_avg"."Proba_CLASS_2", "BAG_avg"."LogProba_CLASS_2" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Score_CLASS_0" AS DOUBLE PRECISION) AS "Score_CLASS_0", CAST("T"."Proba_CLASS_0" AS DOUBLE PRECISION) AS "Proba_CLASS_0", CAST("T"."LogProba_CLASS_0" AS DOUBLE PRECISION) AS "LogProba_CLASS_0", CAST("T"."Score_CLASS_1" AS DOUBLE PRECISION) AS "Score_CLASS_1", CAST("T"."Proba_CLASS_1" AS DOUBLE PRECISION) AS "Proba_CLASS_1", CAST("T"."LogProba_CLASS_1" AS DOUBLE PRECISION) AS "LogProba_CLASS_1", CAST("T"."Score_CLASS_2" AS DOUBLE PRECISION) AS "Score_CLASS_2", CAST("T"."Proba_CLASS_2" AS DOUBLE PRECISION) AS "Proba_CLASS_2", CAST("T"."LogProba_CLASS_2" AS DOUBLE PRECISION) AS "LogProba_CLASS_2" 
 FROM (SELECT "BAG_Union"."KEY" AS "KEY", avg(CAST("BAG_Union"."Score_CLASS_0" AS DOUBLE PRECISION)) AS "Score_CLASS_0", avg(CAST("BAG_Union"."Proba_CLASS_0" AS DOUBLE PRECISION)) AS "Proba_CLASS_0", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_CLASS_0", avg(CAST("BAG_Union"."Score_CLASS_1" AS DOUBLE PRECISION)) AS "Score_CLASS_1", avg(CAST("BAG_Union"."Proba_CLASS_1" AS DOUBLE PRECISION)) AS "Proba_CLASS_1", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_CLASS_1", avg(CAST("BAG_Union"."Score_CLASS_2" AS DOUBLE PRECISION)) AS "Score_CLASS_2", avg(CAST("BAG_Union"."Proba_CLASS_2" AS DOUBLE PRECISION)) AS "Proba_CLASS_2", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_CLASS_2" 
 FROM "BAG_Union" GROUP BY "BAG_Union"."KEY") AS "T") AS "BAG_avg") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_ON75S7_BAG part 3. Create Index 
+-- Code For temporary table TMP_20180602_159_BAG_AVG part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180516_CODEGEN_b089" ON "TMP_20180516_CODEGEN_ON75S7_BAG" ("KEY")
+CREATE INDEX "ix_TMP_20180602_159_BAG_AVG_KEY" ON "TMP_20180602_159_BAG_AVG" ("KEY")
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT "BAG_avg"."KEY" AS "KEY", "BAG_avg"."Score_CLASS_0" AS "Score_CLASS_0", "BAG_avg"."Score_CLASS_1" AS "Score_CLASS_1", "BAG_avg"."Score_CLASS_2" AS "Score_CLASS_2", "BAG_avg"."Proba_CLASS_0" AS "Proba_CLASS_0", "BAG_avg"."Proba_CLASS_1" AS "Proba_CLASS_1", "BAG_avg"."Proba_CLASS_2" AS "Proba_CLASS_2", "BAG_avg"."LogProba_CLASS_0" AS "LogProba_CLASS_0", "BAG_avg"."LogProba_CLASS_1" AS "LogProba_CLASS_1", "BAG_avg"."LogProba_CLASS_2" AS "LogProba_CLASS_2", CAST(NULL AS BIGINT) AS "Decision", CAST(NULL AS DOUBLE PRECISION) AS "DecisionProba" 
-FROM "TMP_20180516_CODEGEN_ON75S7_BAG" AS "BAG_avg"), 
+FROM "TMP_20180602_159_BAG_AVG" AS "BAG_avg"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 'CLASS_0' AS class, orig_cte."LogProba_CLASS_0" AS "LogProba", orig_cte."Proba_CLASS_0" AS "Proba", orig_cte."Score_CLASS_0" AS "Score" 

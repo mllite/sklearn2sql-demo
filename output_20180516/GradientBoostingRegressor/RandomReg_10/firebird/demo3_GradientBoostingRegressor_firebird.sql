@@ -10,19 +10,19 @@
 
 
 
--- Code For temporary table TMP_20180516_CODEGEN_4HIIIZ_GB_ part 1. Create 
+-- Code For temporary table TMP_20180602_19Q_GB_B0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_4HIIIZ_GB_" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_19Q_GB_B0" (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE PRECISION
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_4HIIIZ_GB_ part 2. Populate
+-- Code For temporary table TMP_20180602_19Q_GB_B0 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_4HIIIZ_GB_" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO "TMP_20180602_19Q_GB_B0" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 0.48648887872695923) THEN CASE WHEN ("ADS"."Feature_5" <= -0.6670668125152588) THEN CASE WHEN ("ADS"."Feature_5" <= -0.8804326057434082) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_8" <= -0.10979260504245758) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_4" <= -1.1975512504577637) THEN CASE WHEN ("ADS"."Feature_5" <= 0.10777395963668823) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_0" <= -0.3104289174079895) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM "RandomReg_10" AS "ADS"), 
@@ -82,8 +82,30 @@ FROM (SELECT 3 AS nid, -252.20320059466073 AS "E" FROM rdb$database UNION ALL SE
 FROM "DT_node_lookup_4" LEFT OUTER JOIN "DT_node_data_4" ON "DT_node_lookup_4".node_id_2 = "DT_node_data_4".nid), 
 "GB_Model_4_0" AS 
 (SELECT "DT_Output_4"."KEY" AS "KEY", "DT_Output_4"."E" AS "Estimator" 
-FROM "DT_Output_4"), 
-"DT_node_lookup_5" AS 
+FROM "DT_Output_4")
+ SELECT "GB_B0"."KEY", "GB_B0"."Estimator" 
+FROM (SELECT "GB_esu_0"."KEY" AS "KEY", "GB_esu_0"."Estimator" AS "Estimator" 
+FROM (SELECT "GB_Model_0_0"."KEY" AS "KEY", "GB_Model_0_0"."Estimator" AS "Estimator" 
+FROM "GB_Model_0_0" UNION ALL SELECT "GB_Model_1_0"."KEY" AS "KEY", "GB_Model_1_0"."Estimator" AS "Estimator" 
+FROM "GB_Model_1_0" UNION ALL SELECT "GB_Model_2_0"."KEY" AS "KEY", "GB_Model_2_0"."Estimator" AS "Estimator" 
+FROM "GB_Model_2_0" UNION ALL SELECT "GB_Model_3_0"."KEY" AS "KEY", "GB_Model_3_0"."Estimator" AS "Estimator" 
+FROM "GB_Model_3_0" UNION ALL SELECT "GB_Model_4_0"."KEY" AS "KEY", "GB_Model_4_0"."Estimator" AS "Estimator" 
+FROM "GB_Model_4_0") AS "GB_esu_0") AS "GB_B0") AS "U"
+
+-- Code For temporary table TMP_20180602_N3N_GB_B1 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_N3N_GB_B1" (
+	"KEY" BIGINT, 
+	"Estimator" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_N3N_GB_B1 part 2. Populate
+
+INSERT INTO "TMP_20180602_N3N_GB_B1" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+FROM (WITH "DT_node_lookup_5" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_8" <= 1.377770185470581) THEN CASE WHEN ("ADS"."Feature_1" <= -0.2953660190105438) THEN CASE WHEN ("ADS"."Feature_5" <= -0.5290045142173767) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_2" <= 0.4809132218360901) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_2" <= -0.3942183554172516) THEN CASE WHEN ("ADS"."Feature_2" <= -1.2252161502838135) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_9" <= -1.5512021780014038) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM "RandomReg_10" AS "ADS"), 
 "DT_node_data_5" AS 
@@ -143,33 +165,28 @@ FROM "DT_node_lookup_9" LEFT OUTER JOIN "DT_node_data_9" ON "DT_node_lookup_9".n
 "GB_Model_9_0" AS 
 (SELECT "DT_Output_9"."KEY" AS "KEY", "DT_Output_9"."E" AS "Estimator" 
 FROM "DT_Output_9")
- SELECT "GB_B0"."KEY", "GB_B0"."Estimator" 
-FROM (SELECT "GB_esu_0"."KEY" AS "KEY", "GB_esu_0"."Estimator" AS "Estimator" 
-FROM (SELECT "GB_Model_0_0"."KEY" AS "KEY", "GB_Model_0_0"."Estimator" AS "Estimator" 
-FROM "GB_Model_0_0" UNION ALL SELECT "GB_Model_1_0"."KEY" AS "KEY", "GB_Model_1_0"."Estimator" AS "Estimator" 
-FROM "GB_Model_1_0" UNION ALL SELECT "GB_Model_2_0"."KEY" AS "KEY", "GB_Model_2_0"."Estimator" AS "Estimator" 
-FROM "GB_Model_2_0" UNION ALL SELECT "GB_Model_3_0"."KEY" AS "KEY", "GB_Model_3_0"."Estimator" AS "Estimator" 
-FROM "GB_Model_3_0" UNION ALL SELECT "GB_Model_4_0"."KEY" AS "KEY", "GB_Model_4_0"."Estimator" AS "Estimator" 
-FROM "GB_Model_4_0" UNION ALL SELECT "GB_Model_5_0"."KEY" AS "KEY", "GB_Model_5_0"."Estimator" AS "Estimator" 
+ SELECT "GB_B1"."KEY", "GB_B1"."Estimator" 
+FROM (SELECT "GB_esu_1"."KEY" AS "KEY", "GB_esu_1"."Estimator" AS "Estimator" 
+FROM (SELECT "GB_Model_5_0"."KEY" AS "KEY", "GB_Model_5_0"."Estimator" AS "Estimator" 
 FROM "GB_Model_5_0" UNION ALL SELECT "GB_Model_6_0"."KEY" AS "KEY", "GB_Model_6_0"."Estimator" AS "Estimator" 
 FROM "GB_Model_6_0" UNION ALL SELECT "GB_Model_7_0"."KEY" AS "KEY", "GB_Model_7_0"."Estimator" AS "Estimator" 
 FROM "GB_Model_7_0" UNION ALL SELECT "GB_Model_8_0"."KEY" AS "KEY", "GB_Model_8_0"."Estimator" AS "Estimator" 
 FROM "GB_Model_8_0" UNION ALL SELECT "GB_Model_9_0"."KEY" AS "KEY", "GB_Model_9_0"."Estimator" AS "Estimator" 
-FROM "GB_Model_9_0") AS "GB_esu_0") AS "GB_B0") AS "U"
+FROM "GB_Model_9_0") AS "GB_esu_1") AS "GB_B1") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_6UUHXD_GB_ part 1. Create 
+-- Code For temporary table TMP_20180602_Z7F_GB_B2 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_6UUHXD_GB_" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_Z7F_GB_B2" (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE PRECISION
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_6UUHXD_GB_ part 2. Populate
+-- Code For temporary table TMP_20180602_Z7F_GB_B2 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_6UUHXD_GB_" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO "TMP_20180602_Z7F_GB_B2" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "DT_node_lookup_10" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 0.48648887872695923) THEN CASE WHEN ("ADS"."Feature_7" <= 0.12788641452789307) THEN CASE WHEN ("ADS"."Feature_1" <= 0.21956637501716614) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_5" <= 0.609578013420105) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_1" <= -0.5779649615287781) THEN CASE WHEN ("ADS"."Feature_4" <= -0.059223100543022156) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_0" <= 2.4845056533813477) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM "RandomReg_10" AS "ADS"), 
@@ -229,8 +246,30 @@ FROM (SELECT 3 AS nid, -108.59838640298976 AS "E" FROM rdb$database UNION ALL SE
 FROM "DT_node_lookup_14" LEFT OUTER JOIN "DT_node_data_14" ON "DT_node_lookup_14".node_id_2 = "DT_node_data_14".nid), 
 "GB_Model_14_0" AS 
 (SELECT "DT_Output_14"."KEY" AS "KEY", "DT_Output_14"."E" AS "Estimator" 
-FROM "DT_Output_14"), 
-"DT_node_lookup_15" AS 
+FROM "DT_Output_14")
+ SELECT "GB_B2"."KEY", "GB_B2"."Estimator" 
+FROM (SELECT "GB_esu_2"."KEY" AS "KEY", "GB_esu_2"."Estimator" AS "Estimator" 
+FROM (SELECT "GB_Model_10_0"."KEY" AS "KEY", "GB_Model_10_0"."Estimator" AS "Estimator" 
+FROM "GB_Model_10_0" UNION ALL SELECT "GB_Model_11_0"."KEY" AS "KEY", "GB_Model_11_0"."Estimator" AS "Estimator" 
+FROM "GB_Model_11_0" UNION ALL SELECT "GB_Model_12_0"."KEY" AS "KEY", "GB_Model_12_0"."Estimator" AS "Estimator" 
+FROM "GB_Model_12_0" UNION ALL SELECT "GB_Model_13_0"."KEY" AS "KEY", "GB_Model_13_0"."Estimator" AS "Estimator" 
+FROM "GB_Model_13_0" UNION ALL SELECT "GB_Model_14_0"."KEY" AS "KEY", "GB_Model_14_0"."Estimator" AS "Estimator" 
+FROM "GB_Model_14_0") AS "GB_esu_2") AS "GB_B2") AS "U"
+
+-- Code For temporary table TMP_20180602_DG4_GB_B3 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_DG4_GB_B3" (
+	"KEY" BIGINT, 
+	"Estimator" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_DG4_GB_B3 part 2. Populate
+
+INSERT INTO "TMP_20180602_DG4_GB_B3" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+FROM (WITH "DT_node_lookup_15" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 0.8179076910018921) THEN CASE WHEN ("ADS"."Feature_5" <= 0.2265688180923462) THEN CASE WHEN ("ADS"."Feature_3" <= 0.6109856367111206) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_7" <= 1.010027289390564) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_8" <= -0.1578926146030426) THEN CASE WHEN ("ADS"."Feature_1" <= 1.7392034530639648) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_6" <= -1.3490328788757324) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM "RandomReg_10" AS "ADS"), 
 "DT_node_data_15" AS 
@@ -242,20 +281,15 @@ FROM "DT_node_lookup_15" LEFT OUTER JOIN "DT_node_data_15" ON "DT_node_lookup_15
 "GB_Model_15_0" AS 
 (SELECT "DT_Output_15"."KEY" AS "KEY", "DT_Output_15"."E" AS "Estimator" 
 FROM "DT_Output_15")
- SELECT "GB_B1"."KEY", "GB_B1"."Estimator" 
-FROM (SELECT "GB_esu_1"."KEY" AS "KEY", "GB_esu_1"."Estimator" AS "Estimator" 
-FROM (SELECT "GB_Model_10_0"."KEY" AS "KEY", "GB_Model_10_0"."Estimator" AS "Estimator" 
-FROM "GB_Model_10_0" UNION ALL SELECT "GB_Model_11_0"."KEY" AS "KEY", "GB_Model_11_0"."Estimator" AS "Estimator" 
-FROM "GB_Model_11_0" UNION ALL SELECT "GB_Model_12_0"."KEY" AS "KEY", "GB_Model_12_0"."Estimator" AS "Estimator" 
-FROM "GB_Model_12_0" UNION ALL SELECT "GB_Model_13_0"."KEY" AS "KEY", "GB_Model_13_0"."Estimator" AS "Estimator" 
-FROM "GB_Model_13_0" UNION ALL SELECT "GB_Model_14_0"."KEY" AS "KEY", "GB_Model_14_0"."Estimator" AS "Estimator" 
-FROM "GB_Model_14_0" UNION ALL SELECT "GB_Model_15_0"."KEY" AS "KEY", "GB_Model_15_0"."Estimator" AS "Estimator" 
-FROM "GB_Model_15_0") AS "GB_esu_1") AS "GB_B1") AS "U"
+ SELECT "GB_B3"."KEY", "GB_B3"."Estimator" 
+FROM (SELECT "GB_esu_3"."KEY" AS "KEY", "GB_esu_3"."Estimator" AS "Estimator" 
+FROM (SELECT "GB_Model_15_0"."KEY" AS "KEY", "GB_Model_15_0"."Estimator" AS "Estimator" 
+FROM "GB_Model_15_0") AS "GB_esu_3") AS "GB_B3") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_11OU6Z_GB_ part 1. Create 
+-- Code For temporary table TMP_20180602_70J_GB_SUM part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_11OU6Z_GB_" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_70J_GB_SUM" (
 	"KEY" BIGINT NOT NULL, 
 	"Estimator" DOUBLE PRECISION, 
 	PRIMARY KEY ("KEY")
@@ -263,24 +297,26 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_11OU6Z_GB_" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_11OU6Z_GB_ part 2. Populate
+-- Code For temporary table TMP_20180602_70J_GB_SUM part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_11OU6Z_GB_" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO "TMP_20180602_70J_GB_SUM" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "GB_Union" AS 
 (SELECT "GB_EnsembleUnion"."KEY" AS "KEY", "GB_EnsembleUnion"."Estimator" AS "Estimator" 
 FROM (SELECT "GB_B0"."KEY" AS "KEY", "GB_B0"."Estimator" AS "Estimator" 
-FROM "TMP_20180516_CODEGEN_4HIIIZ_GB_" AS "GB_B0" UNION ALL SELECT "GB_B1"."KEY" AS "KEY", "GB_B1"."Estimator" AS "Estimator" 
-FROM "TMP_20180516_CODEGEN_6UUHXD_GB_" AS "GB_B1") AS "GB_EnsembleUnion")
+FROM "TMP_20180602_19Q_GB_B0" AS "GB_B0" UNION ALL SELECT "GB_B1"."KEY" AS "KEY", "GB_B1"."Estimator" AS "Estimator" 
+FROM "TMP_20180602_N3N_GB_B1" AS "GB_B1" UNION ALL SELECT "GB_B2"."KEY" AS "KEY", "GB_B2"."Estimator" AS "Estimator" 
+FROM "TMP_20180602_Z7F_GB_B2" AS "GB_B2" UNION ALL SELECT "GB_B3"."KEY" AS "KEY", "GB_B3"."Estimator" AS "Estimator" 
+FROM "TMP_20180602_DG4_GB_B3" AS "GB_B3") AS "GB_EnsembleUnion")
  SELECT "GB_sum"."KEY", "GB_sum"."Estimator" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Estimator" AS DOUBLE PRECISION) AS "Estimator" 
 FROM (SELECT "GB_Union"."KEY" AS "KEY", sum("GB_Union"."Estimator") AS "Estimator" 
 FROM "GB_Union" GROUP BY "GB_Union"."KEY") AS "T") AS "GB_sum") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_11OU6Z_GB_ part 3. Create Index 
+-- Code For temporary table TMP_20180602_70J_GB_SUM part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180516_CODEGEN_f2db" ON "TMP_20180516_CODEGEN_11OU6Z_GB_" ("KEY")
+CREATE INDEX "ix_TMP_20180602_70J_GB_SUM_KEY" ON "TMP_20180602_70J_GB_SUM" ("KEY")
 
 -- Model deployment code
 
 SELECT "GB_sum"."KEY" AS "KEY", 26.405852730652413 + 0.1 * "GB_sum"."Estimator" AS "Estimator" 
-FROM "TMP_20180516_CODEGEN_11OU6Z_GB_" AS "GB_sum"
+FROM "TMP_20180602_70J_GB_SUM" AS "GB_sum"

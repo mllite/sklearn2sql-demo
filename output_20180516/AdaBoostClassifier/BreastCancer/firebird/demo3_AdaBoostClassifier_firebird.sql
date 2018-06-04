@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180516_CODEGEN_65OWD5_ADB part 1. Create 
+-- Code For temporary table TMP_20180602_TDL_ADB_B0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_65OWD5_ADB" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_TDL_ADB_B0" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Proba_0" DOUBLE PRECISION, 
@@ -23,9 +23,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_65OWD5_ADB" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_65OWD5_ADB part 2. Populate
+-- Code For temporary table TMP_20180602_TDL_ADB_B0 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_65OWD5_ADB" ("KEY", "Score_0", "Proba_0", "Score_1", "Proba_1") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."Score_1", "U"."Proba_1" 
+INSERT INTO "TMP_20180602_TDL_ADB_B0" ("KEY", "Score_0", "Proba_0", "Score_1", "Proba_1") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."Score_1", "U"."Proba_1" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_27" <= 0.14544999599456787) THEN 1 ELSE 2 END AS node_id_2 
 FROM "BreastCancer" AS "ADS"), 
@@ -85,8 +85,33 @@ FROM (SELECT 1 AS nid, 0.2624896697802413 AS "P_0", 0.7375103302197588 AS "P_1",
 FROM "DT_node_lookup_4" LEFT OUTER JOIN "DT_node_data_4" ON "DT_node_lookup_4".node_id_2 = "DT_node_data_4".nid), 
 "ADB_Model_4" AS 
 (SELECT "DT_Output_4"."KEY" AS "KEY", (1.0 * (CASE WHEN ("DT_Output_4"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_4"."P_0" IS NULL OR "DT_Output_4"."P_0" > 0.0) THEN ln("DT_Output_4"."P_0") ELSE -1.79769313486231e+308 END END - (CASE WHEN ("DT_Output_4"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_4"."P_0" IS NULL OR "DT_Output_4"."P_0" > 0.0) THEN ln("DT_Output_4"."P_0") ELSE -1.79769313486231e+308 END END + CASE WHEN ("DT_Output_4"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_4"."P_1" IS NULL OR "DT_Output_4"."P_1" > 0.0) THEN ln("DT_Output_4"."P_1") ELSE -1.79769313486231e+308 END END) / 2)) / 16.0 AS "Score_0", 1.0 * (CASE WHEN ("DT_Output_4"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_4"."P_0" IS NULL OR "DT_Output_4"."P_0" > 0.0) THEN ln("DT_Output_4"."P_0") ELSE -1.79769313486231e+308 END END - (CASE WHEN ("DT_Output_4"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_4"."P_0" IS NULL OR "DT_Output_4"."P_0" > 0.0) THEN ln("DT_Output_4"."P_0") ELSE -1.79769313486231e+308 END END + CASE WHEN ("DT_Output_4"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_4"."P_1" IS NULL OR "DT_Output_4"."P_1" > 0.0) THEN ln("DT_Output_4"."P_1") ELSE -1.79769313486231e+308 END END) / 2) AS "Proba_0", (1.0 * (CASE WHEN ("DT_Output_4"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_4"."P_1" IS NULL OR "DT_Output_4"."P_1" > 0.0) THEN ln("DT_Output_4"."P_1") ELSE -1.79769313486231e+308 END END - (CASE WHEN ("DT_Output_4"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_4"."P_0" IS NULL OR "DT_Output_4"."P_0" > 0.0) THEN ln("DT_Output_4"."P_0") ELSE -1.79769313486231e+308 END END + CASE WHEN ("DT_Output_4"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_4"."P_1" IS NULL OR "DT_Output_4"."P_1" > 0.0) THEN ln("DT_Output_4"."P_1") ELSE -1.79769313486231e+308 END END) / 2)) / 16.0 AS "Score_1", 1.0 * (CASE WHEN ("DT_Output_4"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_4"."P_1" IS NULL OR "DT_Output_4"."P_1" > 0.0) THEN ln("DT_Output_4"."P_1") ELSE -1.79769313486231e+308 END END - (CASE WHEN ("DT_Output_4"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_4"."P_0" IS NULL OR "DT_Output_4"."P_0" > 0.0) THEN ln("DT_Output_4"."P_0") ELSE -1.79769313486231e+308 END END + CASE WHEN ("DT_Output_4"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_4"."P_1" IS NULL OR "DT_Output_4"."P_1" > 0.0) THEN ln("DT_Output_4"."P_1") ELSE -1.79769313486231e+308 END END) / 2) AS "Proba_1" 
-FROM "DT_Output_4"), 
-"DT_node_lookup_5" AS 
+FROM "DT_Output_4")
+ SELECT "ADB_B0"."KEY", "ADB_B0"."Score_0", "ADB_B0"."Proba_0", "ADB_B0"."Score_1", "ADB_B0"."Proba_1" 
+FROM (SELECT "ADB_esu_0"."KEY" AS "KEY", "ADB_esu_0"."Score_0" AS "Score_0", "ADB_esu_0"."Proba_0" AS "Proba_0", "ADB_esu_0"."Score_1" AS "Score_1", "ADB_esu_0"."Proba_1" AS "Proba_1" 
+FROM (SELECT "ADB_Model_0"."KEY" AS "KEY", "ADB_Model_0"."Score_0" AS "Score_0", "ADB_Model_0"."Proba_0" AS "Proba_0", "ADB_Model_0"."Score_1" AS "Score_1", "ADB_Model_0"."Proba_1" AS "Proba_1" 
+FROM "ADB_Model_0" UNION ALL SELECT "ADB_Model_1"."KEY" AS "KEY", "ADB_Model_1"."Score_0" AS "Score_0", "ADB_Model_1"."Proba_0" AS "Proba_0", "ADB_Model_1"."Score_1" AS "Score_1", "ADB_Model_1"."Proba_1" AS "Proba_1" 
+FROM "ADB_Model_1" UNION ALL SELECT "ADB_Model_2"."KEY" AS "KEY", "ADB_Model_2"."Score_0" AS "Score_0", "ADB_Model_2"."Proba_0" AS "Proba_0", "ADB_Model_2"."Score_1" AS "Score_1", "ADB_Model_2"."Proba_1" AS "Proba_1" 
+FROM "ADB_Model_2" UNION ALL SELECT "ADB_Model_3"."KEY" AS "KEY", "ADB_Model_3"."Score_0" AS "Score_0", "ADB_Model_3"."Proba_0" AS "Proba_0", "ADB_Model_3"."Score_1" AS "Score_1", "ADB_Model_3"."Proba_1" AS "Proba_1" 
+FROM "ADB_Model_3" UNION ALL SELECT "ADB_Model_4"."KEY" AS "KEY", "ADB_Model_4"."Score_0" AS "Score_0", "ADB_Model_4"."Proba_0" AS "Proba_0", "ADB_Model_4"."Score_1" AS "Score_1", "ADB_Model_4"."Proba_1" AS "Proba_1" 
+FROM "ADB_Model_4") AS "ADB_esu_0") AS "ADB_B0") AS "U"
+
+-- Code For temporary table TMP_20180602_LC4_ADB_B1 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_LC4_ADB_B1" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Proba_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Proba_1" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_LC4_ADB_B1 part 2. Populate
+
+INSERT INTO "TMP_20180602_LC4_ADB_B1" ("KEY", "Score_0", "Proba_0", "Score_1", "Proba_1") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."Score_1", "U"."Proba_1" 
+FROM (WITH "DT_node_lookup_5" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_15" <= 0.011754999868571758) THEN 1 ELSE 2 END AS node_id_2 
 FROM "BreastCancer" AS "ADS"), 
 "DT_node_data_5" AS 
@@ -146,24 +171,19 @@ FROM "DT_node_lookup_9" LEFT OUTER JOIN "DT_node_data_9" ON "DT_node_lookup_9".n
 "ADB_Model_9" AS 
 (SELECT "DT_Output_9"."KEY" AS "KEY", (1.0 * (CASE WHEN ("DT_Output_9"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_9"."P_0" IS NULL OR "DT_Output_9"."P_0" > 0.0) THEN ln("DT_Output_9"."P_0") ELSE -1.79769313486231e+308 END END - (CASE WHEN ("DT_Output_9"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_9"."P_0" IS NULL OR "DT_Output_9"."P_0" > 0.0) THEN ln("DT_Output_9"."P_0") ELSE -1.79769313486231e+308 END END + CASE WHEN ("DT_Output_9"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_9"."P_1" IS NULL OR "DT_Output_9"."P_1" > 0.0) THEN ln("DT_Output_9"."P_1") ELSE -1.79769313486231e+308 END END) / 2)) / 16.0 AS "Score_0", 1.0 * (CASE WHEN ("DT_Output_9"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_9"."P_0" IS NULL OR "DT_Output_9"."P_0" > 0.0) THEN ln("DT_Output_9"."P_0") ELSE -1.79769313486231e+308 END END - (CASE WHEN ("DT_Output_9"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_9"."P_0" IS NULL OR "DT_Output_9"."P_0" > 0.0) THEN ln("DT_Output_9"."P_0") ELSE -1.79769313486231e+308 END END + CASE WHEN ("DT_Output_9"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_9"."P_1" IS NULL OR "DT_Output_9"."P_1" > 0.0) THEN ln("DT_Output_9"."P_1") ELSE -1.79769313486231e+308 END END) / 2) AS "Proba_0", (1.0 * (CASE WHEN ("DT_Output_9"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_9"."P_1" IS NULL OR "DT_Output_9"."P_1" > 0.0) THEN ln("DT_Output_9"."P_1") ELSE -1.79769313486231e+308 END END - (CASE WHEN ("DT_Output_9"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_9"."P_0" IS NULL OR "DT_Output_9"."P_0" > 0.0) THEN ln("DT_Output_9"."P_0") ELSE -1.79769313486231e+308 END END + CASE WHEN ("DT_Output_9"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_9"."P_1" IS NULL OR "DT_Output_9"."P_1" > 0.0) THEN ln("DT_Output_9"."P_1") ELSE -1.79769313486231e+308 END END) / 2)) / 16.0 AS "Score_1", 1.0 * (CASE WHEN ("DT_Output_9"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_9"."P_1" IS NULL OR "DT_Output_9"."P_1" > 0.0) THEN ln("DT_Output_9"."P_1") ELSE -1.79769313486231e+308 END END - (CASE WHEN ("DT_Output_9"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_9"."P_0" IS NULL OR "DT_Output_9"."P_0" > 0.0) THEN ln("DT_Output_9"."P_0") ELSE -1.79769313486231e+308 END END + CASE WHEN ("DT_Output_9"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_9"."P_1" IS NULL OR "DT_Output_9"."P_1" > 0.0) THEN ln("DT_Output_9"."P_1") ELSE -1.79769313486231e+308 END END) / 2) AS "Proba_1" 
 FROM "DT_Output_9")
- SELECT "ADB_B0"."KEY", "ADB_B0"."Score_0", "ADB_B0"."Proba_0", "ADB_B0"."Score_1", "ADB_B0"."Proba_1" 
-FROM (SELECT "ADB_esu_0"."KEY" AS "KEY", "ADB_esu_0"."Score_0" AS "Score_0", "ADB_esu_0"."Proba_0" AS "Proba_0", "ADB_esu_0"."Score_1" AS "Score_1", "ADB_esu_0"."Proba_1" AS "Proba_1" 
-FROM (SELECT "ADB_Model_0"."KEY" AS "KEY", "ADB_Model_0"."Score_0" AS "Score_0", "ADB_Model_0"."Proba_0" AS "Proba_0", "ADB_Model_0"."Score_1" AS "Score_1", "ADB_Model_0"."Proba_1" AS "Proba_1" 
-FROM "ADB_Model_0" UNION ALL SELECT "ADB_Model_1"."KEY" AS "KEY", "ADB_Model_1"."Score_0" AS "Score_0", "ADB_Model_1"."Proba_0" AS "Proba_0", "ADB_Model_1"."Score_1" AS "Score_1", "ADB_Model_1"."Proba_1" AS "Proba_1" 
-FROM "ADB_Model_1" UNION ALL SELECT "ADB_Model_2"."KEY" AS "KEY", "ADB_Model_2"."Score_0" AS "Score_0", "ADB_Model_2"."Proba_0" AS "Proba_0", "ADB_Model_2"."Score_1" AS "Score_1", "ADB_Model_2"."Proba_1" AS "Proba_1" 
-FROM "ADB_Model_2" UNION ALL SELECT "ADB_Model_3"."KEY" AS "KEY", "ADB_Model_3"."Score_0" AS "Score_0", "ADB_Model_3"."Proba_0" AS "Proba_0", "ADB_Model_3"."Score_1" AS "Score_1", "ADB_Model_3"."Proba_1" AS "Proba_1" 
-FROM "ADB_Model_3" UNION ALL SELECT "ADB_Model_4"."KEY" AS "KEY", "ADB_Model_4"."Score_0" AS "Score_0", "ADB_Model_4"."Proba_0" AS "Proba_0", "ADB_Model_4"."Score_1" AS "Score_1", "ADB_Model_4"."Proba_1" AS "Proba_1" 
-FROM "ADB_Model_4" UNION ALL SELECT "ADB_Model_5"."KEY" AS "KEY", "ADB_Model_5"."Score_0" AS "Score_0", "ADB_Model_5"."Proba_0" AS "Proba_0", "ADB_Model_5"."Score_1" AS "Score_1", "ADB_Model_5"."Proba_1" AS "Proba_1" 
+ SELECT "ADB_B1"."KEY", "ADB_B1"."Score_0", "ADB_B1"."Proba_0", "ADB_B1"."Score_1", "ADB_B1"."Proba_1" 
+FROM (SELECT "ADB_esu_1"."KEY" AS "KEY", "ADB_esu_1"."Score_0" AS "Score_0", "ADB_esu_1"."Proba_0" AS "Proba_0", "ADB_esu_1"."Score_1" AS "Score_1", "ADB_esu_1"."Proba_1" AS "Proba_1" 
+FROM (SELECT "ADB_Model_5"."KEY" AS "KEY", "ADB_Model_5"."Score_0" AS "Score_0", "ADB_Model_5"."Proba_0" AS "Proba_0", "ADB_Model_5"."Score_1" AS "Score_1", "ADB_Model_5"."Proba_1" AS "Proba_1" 
 FROM "ADB_Model_5" UNION ALL SELECT "ADB_Model_6"."KEY" AS "KEY", "ADB_Model_6"."Score_0" AS "Score_0", "ADB_Model_6"."Proba_0" AS "Proba_0", "ADB_Model_6"."Score_1" AS "Score_1", "ADB_Model_6"."Proba_1" AS "Proba_1" 
 FROM "ADB_Model_6" UNION ALL SELECT "ADB_Model_7"."KEY" AS "KEY", "ADB_Model_7"."Score_0" AS "Score_0", "ADB_Model_7"."Proba_0" AS "Proba_0", "ADB_Model_7"."Score_1" AS "Score_1", "ADB_Model_7"."Proba_1" AS "Proba_1" 
 FROM "ADB_Model_7" UNION ALL SELECT "ADB_Model_8"."KEY" AS "KEY", "ADB_Model_8"."Score_0" AS "Score_0", "ADB_Model_8"."Proba_0" AS "Proba_0", "ADB_Model_8"."Score_1" AS "Score_1", "ADB_Model_8"."Proba_1" AS "Proba_1" 
 FROM "ADB_Model_8" UNION ALL SELECT "ADB_Model_9"."KEY" AS "KEY", "ADB_Model_9"."Score_0" AS "Score_0", "ADB_Model_9"."Proba_0" AS "Proba_0", "ADB_Model_9"."Score_1" AS "Score_1", "ADB_Model_9"."Proba_1" AS "Proba_1" 
-FROM "ADB_Model_9") AS "ADB_esu_0") AS "ADB_B0") AS "U"
+FROM "ADB_Model_9") AS "ADB_esu_1") AS "ADB_B1") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_LZA91Y_ADB part 1. Create 
+-- Code For temporary table TMP_20180602_477_ADB_B2 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_LZA91Y_ADB" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_477_ADB_B2" (
 	"KEY" BIGINT, 
 	"Score_0" DOUBLE PRECISION, 
 	"Proba_0" DOUBLE PRECISION, 
@@ -173,9 +193,9 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_LZA91Y_ADB" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_LZA91Y_ADB part 2. Populate
+-- Code For temporary table TMP_20180602_477_ADB_B2 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_LZA91Y_ADB" ("KEY", "Score_0", "Proba_0", "Score_1", "Proba_1") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."Score_1", "U"."Proba_1" 
+INSERT INTO "TMP_20180602_477_ADB_B2" ("KEY", "Score_0", "Proba_0", "Score_1", "Proba_1") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."Score_1", "U"."Proba_1" 
 FROM (WITH "DT_node_lookup_10" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_13" <= 22.125) THEN 1 ELSE 2 END AS node_id_2 
 FROM "BreastCancer" AS "ADS"), 
@@ -235,8 +255,33 @@ FROM (SELECT 1 AS nid, 0.12813697627517043 AS "P_0", 0.8718630237248295 AS "P_1"
 FROM "DT_node_lookup_14" LEFT OUTER JOIN "DT_node_data_14" ON "DT_node_lookup_14".node_id_2 = "DT_node_data_14".nid), 
 "ADB_Model_14" AS 
 (SELECT "DT_Output_14"."KEY" AS "KEY", (1.0 * (CASE WHEN ("DT_Output_14"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_14"."P_0" IS NULL OR "DT_Output_14"."P_0" > 0.0) THEN ln("DT_Output_14"."P_0") ELSE -1.79769313486231e+308 END END - (CASE WHEN ("DT_Output_14"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_14"."P_0" IS NULL OR "DT_Output_14"."P_0" > 0.0) THEN ln("DT_Output_14"."P_0") ELSE -1.79769313486231e+308 END END + CASE WHEN ("DT_Output_14"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_14"."P_1" IS NULL OR "DT_Output_14"."P_1" > 0.0) THEN ln("DT_Output_14"."P_1") ELSE -1.79769313486231e+308 END END) / 2)) / 16.0 AS "Score_0", 1.0 * (CASE WHEN ("DT_Output_14"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_14"."P_0" IS NULL OR "DT_Output_14"."P_0" > 0.0) THEN ln("DT_Output_14"."P_0") ELSE -1.79769313486231e+308 END END - (CASE WHEN ("DT_Output_14"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_14"."P_0" IS NULL OR "DT_Output_14"."P_0" > 0.0) THEN ln("DT_Output_14"."P_0") ELSE -1.79769313486231e+308 END END + CASE WHEN ("DT_Output_14"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_14"."P_1" IS NULL OR "DT_Output_14"."P_1" > 0.0) THEN ln("DT_Output_14"."P_1") ELSE -1.79769313486231e+308 END END) / 2) AS "Proba_0", (1.0 * (CASE WHEN ("DT_Output_14"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_14"."P_1" IS NULL OR "DT_Output_14"."P_1" > 0.0) THEN ln("DT_Output_14"."P_1") ELSE -1.79769313486231e+308 END END - (CASE WHEN ("DT_Output_14"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_14"."P_0" IS NULL OR "DT_Output_14"."P_0" > 0.0) THEN ln("DT_Output_14"."P_0") ELSE -1.79769313486231e+308 END END + CASE WHEN ("DT_Output_14"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_14"."P_1" IS NULL OR "DT_Output_14"."P_1" > 0.0) THEN ln("DT_Output_14"."P_1") ELSE -1.79769313486231e+308 END END) / 2)) / 16.0 AS "Score_1", 1.0 * (CASE WHEN ("DT_Output_14"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_14"."P_1" IS NULL OR "DT_Output_14"."P_1" > 0.0) THEN ln("DT_Output_14"."P_1") ELSE -1.79769313486231e+308 END END - (CASE WHEN ("DT_Output_14"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_14"."P_0" IS NULL OR "DT_Output_14"."P_0" > 0.0) THEN ln("DT_Output_14"."P_0") ELSE -1.79769313486231e+308 END END + CASE WHEN ("DT_Output_14"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_14"."P_1" IS NULL OR "DT_Output_14"."P_1" > 0.0) THEN ln("DT_Output_14"."P_1") ELSE -1.79769313486231e+308 END END) / 2) AS "Proba_1" 
-FROM "DT_Output_14"), 
-"DT_node_lookup_15" AS 
+FROM "DT_Output_14")
+ SELECT "ADB_B2"."KEY", "ADB_B2"."Score_0", "ADB_B2"."Proba_0", "ADB_B2"."Score_1", "ADB_B2"."Proba_1" 
+FROM (SELECT "ADB_esu_2"."KEY" AS "KEY", "ADB_esu_2"."Score_0" AS "Score_0", "ADB_esu_2"."Proba_0" AS "Proba_0", "ADB_esu_2"."Score_1" AS "Score_1", "ADB_esu_2"."Proba_1" AS "Proba_1" 
+FROM (SELECT "ADB_Model_10"."KEY" AS "KEY", "ADB_Model_10"."Score_0" AS "Score_0", "ADB_Model_10"."Proba_0" AS "Proba_0", "ADB_Model_10"."Score_1" AS "Score_1", "ADB_Model_10"."Proba_1" AS "Proba_1" 
+FROM "ADB_Model_10" UNION ALL SELECT "ADB_Model_11"."KEY" AS "KEY", "ADB_Model_11"."Score_0" AS "Score_0", "ADB_Model_11"."Proba_0" AS "Proba_0", "ADB_Model_11"."Score_1" AS "Score_1", "ADB_Model_11"."Proba_1" AS "Proba_1" 
+FROM "ADB_Model_11" UNION ALL SELECT "ADB_Model_12"."KEY" AS "KEY", "ADB_Model_12"."Score_0" AS "Score_0", "ADB_Model_12"."Proba_0" AS "Proba_0", "ADB_Model_12"."Score_1" AS "Score_1", "ADB_Model_12"."Proba_1" AS "Proba_1" 
+FROM "ADB_Model_12" UNION ALL SELECT "ADB_Model_13"."KEY" AS "KEY", "ADB_Model_13"."Score_0" AS "Score_0", "ADB_Model_13"."Proba_0" AS "Proba_0", "ADB_Model_13"."Score_1" AS "Score_1", "ADB_Model_13"."Proba_1" AS "Proba_1" 
+FROM "ADB_Model_13" UNION ALL SELECT "ADB_Model_14"."KEY" AS "KEY", "ADB_Model_14"."Score_0" AS "Score_0", "ADB_Model_14"."Proba_0" AS "Proba_0", "ADB_Model_14"."Score_1" AS "Score_1", "ADB_Model_14"."Proba_1" AS "Proba_1" 
+FROM "ADB_Model_14") AS "ADB_esu_2") AS "ADB_B2") AS "U"
+
+-- Code For temporary table TMP_20180602_YV7_ADB_B3 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_YV7_ADB_B3" (
+	"KEY" BIGINT, 
+	"Score_0" DOUBLE PRECISION, 
+	"Proba_0" DOUBLE PRECISION, 
+	"Score_1" DOUBLE PRECISION, 
+	"Proba_1" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_YV7_ADB_B3 part 2. Populate
+
+INSERT INTO "TMP_20180602_YV7_ADB_B3" ("KEY", "Score_0", "Proba_0", "Score_1", "Proba_1") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."Score_1", "U"."Proba_1" 
+FROM (WITH "DT_node_lookup_15" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_22" <= 120.75) THEN 1 ELSE 2 END AS node_id_2 
 FROM "BreastCancer" AS "ADS"), 
 "DT_node_data_15" AS 
@@ -248,20 +293,15 @@ FROM "DT_node_lookup_15" LEFT OUTER JOIN "DT_node_data_15" ON "DT_node_lookup_15
 "ADB_Model_15" AS 
 (SELECT "DT_Output_15"."KEY" AS "KEY", (1.0 * (CASE WHEN ("DT_Output_15"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_15"."P_0" IS NULL OR "DT_Output_15"."P_0" > 0.0) THEN ln("DT_Output_15"."P_0") ELSE -1.79769313486231e+308 END END - (CASE WHEN ("DT_Output_15"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_15"."P_0" IS NULL OR "DT_Output_15"."P_0" > 0.0) THEN ln("DT_Output_15"."P_0") ELSE -1.79769313486231e+308 END END + CASE WHEN ("DT_Output_15"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_15"."P_1" IS NULL OR "DT_Output_15"."P_1" > 0.0) THEN ln("DT_Output_15"."P_1") ELSE -1.79769313486231e+308 END END) / 2)) / 16.0 AS "Score_0", 1.0 * (CASE WHEN ("DT_Output_15"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_15"."P_0" IS NULL OR "DT_Output_15"."P_0" > 0.0) THEN ln("DT_Output_15"."P_0") ELSE -1.79769313486231e+308 END END - (CASE WHEN ("DT_Output_15"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_15"."P_0" IS NULL OR "DT_Output_15"."P_0" > 0.0) THEN ln("DT_Output_15"."P_0") ELSE -1.79769313486231e+308 END END + CASE WHEN ("DT_Output_15"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_15"."P_1" IS NULL OR "DT_Output_15"."P_1" > 0.0) THEN ln("DT_Output_15"."P_1") ELSE -1.79769313486231e+308 END END) / 2) AS "Proba_0", (1.0 * (CASE WHEN ("DT_Output_15"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_15"."P_1" IS NULL OR "DT_Output_15"."P_1" > 0.0) THEN ln("DT_Output_15"."P_1") ELSE -1.79769313486231e+308 END END - (CASE WHEN ("DT_Output_15"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_15"."P_0" IS NULL OR "DT_Output_15"."P_0" > 0.0) THEN ln("DT_Output_15"."P_0") ELSE -1.79769313486231e+308 END END + CASE WHEN ("DT_Output_15"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_15"."P_1" IS NULL OR "DT_Output_15"."P_1" > 0.0) THEN ln("DT_Output_15"."P_1") ELSE -1.79769313486231e+308 END END) / 2)) / 16.0 AS "Score_1", 1.0 * (CASE WHEN ("DT_Output_15"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_15"."P_1" IS NULL OR "DT_Output_15"."P_1" > 0.0) THEN ln("DT_Output_15"."P_1") ELSE -1.79769313486231e+308 END END - (CASE WHEN ("DT_Output_15"."P_0" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_15"."P_0" IS NULL OR "DT_Output_15"."P_0" > 0.0) THEN ln("DT_Output_15"."P_0") ELSE -1.79769313486231e+308 END END + CASE WHEN ("DT_Output_15"."P_1" <= 2.22044604925e-16) THEN -36.043653389117296 ELSE CASE WHEN ("DT_Output_15"."P_1" IS NULL OR "DT_Output_15"."P_1" > 0.0) THEN ln("DT_Output_15"."P_1") ELSE -1.79769313486231e+308 END END) / 2) AS "Proba_1" 
 FROM "DT_Output_15")
- SELECT "ADB_B1"."KEY", "ADB_B1"."Score_0", "ADB_B1"."Proba_0", "ADB_B1"."Score_1", "ADB_B1"."Proba_1" 
-FROM (SELECT "ADB_esu_1"."KEY" AS "KEY", "ADB_esu_1"."Score_0" AS "Score_0", "ADB_esu_1"."Proba_0" AS "Proba_0", "ADB_esu_1"."Score_1" AS "Score_1", "ADB_esu_1"."Proba_1" AS "Proba_1" 
-FROM (SELECT "ADB_Model_10"."KEY" AS "KEY", "ADB_Model_10"."Score_0" AS "Score_0", "ADB_Model_10"."Proba_0" AS "Proba_0", "ADB_Model_10"."Score_1" AS "Score_1", "ADB_Model_10"."Proba_1" AS "Proba_1" 
-FROM "ADB_Model_10" UNION ALL SELECT "ADB_Model_11"."KEY" AS "KEY", "ADB_Model_11"."Score_0" AS "Score_0", "ADB_Model_11"."Proba_0" AS "Proba_0", "ADB_Model_11"."Score_1" AS "Score_1", "ADB_Model_11"."Proba_1" AS "Proba_1" 
-FROM "ADB_Model_11" UNION ALL SELECT "ADB_Model_12"."KEY" AS "KEY", "ADB_Model_12"."Score_0" AS "Score_0", "ADB_Model_12"."Proba_0" AS "Proba_0", "ADB_Model_12"."Score_1" AS "Score_1", "ADB_Model_12"."Proba_1" AS "Proba_1" 
-FROM "ADB_Model_12" UNION ALL SELECT "ADB_Model_13"."KEY" AS "KEY", "ADB_Model_13"."Score_0" AS "Score_0", "ADB_Model_13"."Proba_0" AS "Proba_0", "ADB_Model_13"."Score_1" AS "Score_1", "ADB_Model_13"."Proba_1" AS "Proba_1" 
-FROM "ADB_Model_13" UNION ALL SELECT "ADB_Model_14"."KEY" AS "KEY", "ADB_Model_14"."Score_0" AS "Score_0", "ADB_Model_14"."Proba_0" AS "Proba_0", "ADB_Model_14"."Score_1" AS "Score_1", "ADB_Model_14"."Proba_1" AS "Proba_1" 
-FROM "ADB_Model_14" UNION ALL SELECT "ADB_Model_15"."KEY" AS "KEY", "ADB_Model_15"."Score_0" AS "Score_0", "ADB_Model_15"."Proba_0" AS "Proba_0", "ADB_Model_15"."Score_1" AS "Score_1", "ADB_Model_15"."Proba_1" AS "Proba_1" 
-FROM "ADB_Model_15") AS "ADB_esu_1") AS "ADB_B1") AS "U"
+ SELECT "ADB_B3"."KEY", "ADB_B3"."Score_0", "ADB_B3"."Proba_0", "ADB_B3"."Score_1", "ADB_B3"."Proba_1" 
+FROM (SELECT "ADB_esu_3"."KEY" AS "KEY", "ADB_esu_3"."Score_0" AS "Score_0", "ADB_esu_3"."Proba_0" AS "Proba_0", "ADB_esu_3"."Score_1" AS "Score_1", "ADB_esu_3"."Proba_1" AS "Proba_1" 
+FROM (SELECT "ADB_Model_15"."KEY" AS "KEY", "ADB_Model_15"."Score_0" AS "Score_0", "ADB_Model_15"."Proba_0" AS "Proba_0", "ADB_Model_15"."Score_1" AS "Score_1", "ADB_Model_15"."Proba_1" AS "Proba_1" 
+FROM "ADB_Model_15") AS "ADB_esu_3") AS "ADB_B3") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_1QANG6_ADB part 1. Create 
+-- Code For temporary table TMP_20180602_KSX_ADB_SUM part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_1QANG6_ADB" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_KSX_ADB_SUM" (
 	"KEY" BIGINT NOT NULL, 
 	"Score_0" DOUBLE PRECISION, 
 	"Proba_0" DOUBLE PRECISION, 
@@ -272,28 +312,30 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_1QANG6_ADB" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_1QANG6_ADB part 2. Populate
+-- Code For temporary table TMP_20180602_KSX_ADB_SUM part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_1QANG6_ADB" ("KEY", "Score_0", "Proba_0", "Score_1", "Proba_1") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."Score_1", "U"."Proba_1" 
+INSERT INTO "TMP_20180602_KSX_ADB_SUM" ("KEY", "Score_0", "Proba_0", "Score_1", "Proba_1") SELECT "U"."KEY", "U"."Score_0", "U"."Proba_0", "U"."Score_1", "U"."Proba_1" 
 FROM (WITH "ADB_Union" AS 
 (SELECT "ADB_EnsembleUnion"."KEY" AS "KEY", "ADB_EnsembleUnion"."Score_0" AS "Score_0", "ADB_EnsembleUnion"."Proba_0" AS "Proba_0", "ADB_EnsembleUnion"."Score_1" AS "Score_1", "ADB_EnsembleUnion"."Proba_1" AS "Proba_1" 
 FROM (SELECT "ADB_B0"."KEY" AS "KEY", "ADB_B0"."Score_0" AS "Score_0", "ADB_B0"."Proba_0" AS "Proba_0", "ADB_B0"."Score_1" AS "Score_1", "ADB_B0"."Proba_1" AS "Proba_1" 
-FROM "TMP_20180516_CODEGEN_65OWD5_ADB" AS "ADB_B0" UNION ALL SELECT "ADB_B1"."KEY" AS "KEY", "ADB_B1"."Score_0" AS "Score_0", "ADB_B1"."Proba_0" AS "Proba_0", "ADB_B1"."Score_1" AS "Score_1", "ADB_B1"."Proba_1" AS "Proba_1" 
-FROM "TMP_20180516_CODEGEN_LZA91Y_ADB" AS "ADB_B1") AS "ADB_EnsembleUnion")
+FROM "TMP_20180602_TDL_ADB_B0" AS "ADB_B0" UNION ALL SELECT "ADB_B1"."KEY" AS "KEY", "ADB_B1"."Score_0" AS "Score_0", "ADB_B1"."Proba_0" AS "Proba_0", "ADB_B1"."Score_1" AS "Score_1", "ADB_B1"."Proba_1" AS "Proba_1" 
+FROM "TMP_20180602_LC4_ADB_B1" AS "ADB_B1" UNION ALL SELECT "ADB_B2"."KEY" AS "KEY", "ADB_B2"."Score_0" AS "Score_0", "ADB_B2"."Proba_0" AS "Proba_0", "ADB_B2"."Score_1" AS "Score_1", "ADB_B2"."Proba_1" AS "Proba_1" 
+FROM "TMP_20180602_477_ADB_B2" AS "ADB_B2" UNION ALL SELECT "ADB_B3"."KEY" AS "KEY", "ADB_B3"."Score_0" AS "Score_0", "ADB_B3"."Proba_0" AS "Proba_0", "ADB_B3"."Score_1" AS "Score_1", "ADB_B3"."Proba_1" AS "Proba_1" 
+FROM "TMP_20180602_YV7_ADB_B3" AS "ADB_B3") AS "ADB_EnsembleUnion")
  SELECT "ADB_sum"."KEY", "ADB_sum"."Score_0", "ADB_sum"."Proba_0", "ADB_sum"."Score_1", "ADB_sum"."Proba_1" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Score_0" AS DOUBLE PRECISION) AS "Score_0", CAST("T"."Proba_0" AS DOUBLE PRECISION) AS "Proba_0", CAST("T"."Score_1" AS DOUBLE PRECISION) AS "Score_1", CAST("T"."Proba_1" AS DOUBLE PRECISION) AS "Proba_1" 
 FROM (SELECT "ADB_Union"."KEY" AS "KEY", sum("ADB_Union"."Score_0") AS "Score_0", sum("ADB_Union"."Proba_0") AS "Proba_0", sum("ADB_Union"."Score_1") AS "Score_1", sum("ADB_Union"."Proba_1") AS "Proba_1" 
 FROM "ADB_Union" GROUP BY "ADB_Union"."KEY") AS "T") AS "ADB_sum") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_1QANG6_ADB part 3. Create Index 
+-- Code For temporary table TMP_20180602_KSX_ADB_SUM part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180516_CODEGEN_df78" ON "TMP_20180516_CODEGEN_1QANG6_ADB" ("KEY")
+CREATE INDEX "ix_TMP_20180602_KSX_ADB_SUM_KEY" ON "TMP_20180602_KSX_ADB_SUM" ("KEY")
 
 -- Model deployment code
 
 WITH "AdaBoost_AVG_Scores_BN" AS 
 (SELECT "ADB_sum"."KEY" AS "KEY", "ADB_sum"."Score_0" AS "Score_0", "ADB_sum"."Proba_0" AS "Proba_0", "ADB_sum"."Score_1" AS "Score_1", "ADB_sum"."Proba_1" AS "Proba_1" 
-FROM "TMP_20180516_CODEGEN_1QANG6_ADB" AS "ADB_sum"), 
+FROM "TMP_20180602_KSX_ADB_SUM" AS "ADB_sum"), 
 "AdaBoost_AVG_Scores" AS 
 (SELECT "AdaBoost_AVG_Scores_BN"."KEY" AS "KEY", -("AdaBoost_AVG_Scores_BN"."Score_1" - "AdaBoost_AVG_Scores_BN"."Score_0") AS "Score_0", exp(CASE WHEN (("AdaBoost_AVG_Scores_BN"."Proba_0" / 16.0) / 1 >= -709.782712893384) THEN ("AdaBoost_AVG_Scores_BN"."Proba_0" / 16.0) / 1 ELSE -709.782712893384 END) / (exp(CASE WHEN (("AdaBoost_AVG_Scores_BN"."Proba_0" / 16.0) / 1 >= -709.782712893384) THEN ("AdaBoost_AVG_Scores_BN"."Proba_0" / 16.0) / 1 ELSE -709.782712893384 END) + exp(CASE WHEN (("AdaBoost_AVG_Scores_BN"."Proba_1" / 16.0) / 1 >= -709.782712893384) THEN ("AdaBoost_AVG_Scores_BN"."Proba_1" / 16.0) / 1 ELSE -709.782712893384 END)) AS "Proba_0", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_0", "AdaBoost_AVG_Scores_BN"."Score_1" - "AdaBoost_AVG_Scores_BN"."Score_0" AS "Score_1", exp(CASE WHEN (("AdaBoost_AVG_Scores_BN"."Proba_1" / 16.0) / 1 >= -709.782712893384) THEN ("AdaBoost_AVG_Scores_BN"."Proba_1" / 16.0) / 1 ELSE -709.782712893384 END) / (exp(CASE WHEN (("AdaBoost_AVG_Scores_BN"."Proba_0" / 16.0) / 1 >= -709.782712893384) THEN ("AdaBoost_AVG_Scores_BN"."Proba_0" / 16.0) / 1 ELSE -709.782712893384 END) + exp(CASE WHEN (("AdaBoost_AVG_Scores_BN"."Proba_1" / 16.0) / 1 >= -709.782712893384) THEN ("AdaBoost_AVG_Scores_BN"."Proba_1" / 16.0) / 1 ELSE -709.782712893384 END)) AS "Proba_1", CAST(NULL AS DOUBLE PRECISION) AS "LogProba_1" 
 FROM "AdaBoost_AVG_Scores_BN"), 

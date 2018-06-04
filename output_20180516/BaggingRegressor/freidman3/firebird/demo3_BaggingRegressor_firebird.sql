@@ -10,19 +10,19 @@
 
 
 
--- Code For temporary table TMP_20180516_CODEGEN_GIGV59_BAG part 1. Create 
+-- Code For temporary table TMP_20180602_C3Q_BAG_B0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_GIGV59_BAG" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_C3Q_BAG_B0" (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE PRECISION
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_GIGV59_BAG part 2. Populate
+-- Code For temporary table TMP_20180602_C3Q_BAG_B0 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_GIGV59_BAG" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO "TMP_20180602_C3Q_BAG_B0" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 0.041584230959415436) THEN CASE WHEN ("ADS"."Feature_1" <= 1445.20751953125) THEN CASE WHEN ("ADS"."Feature_1" <= 856.9492797851562) THEN 3 ELSE 4 END ELSE 5 END ELSE CASE WHEN ("ADS"."Feature_2" <= 0.42248982191085815) THEN CASE WHEN ("ADS"."Feature_0" <= 48.903419494628906) THEN CASE WHEN ("ADS"."Feature_0" <= 8.738058090209961) THEN 9 ELSE CASE WHEN ("ADS"."Feature_2" <= 0.04905073344707489) THEN 11 ELSE 12 END END ELSE CASE WHEN ("ADS"."Feature_2" <= 0.1361902803182602) THEN 14 ELSE CASE WHEN ("ADS"."Feature_1" <= 1098.1846923828125) THEN 16 ELSE 17 END END END ELSE CASE WHEN ("ADS"."Feature_1" <= 255.7740478515625) THEN CASE WHEN ("ADS"."Feature_1" <= 233.356201171875) THEN CASE WHEN ("ADS"."Feature_3" <= 4.445401191711426) THEN 21 ELSE 22 END ELSE 23 END ELSE CASE WHEN ("ADS"."Feature_1" <= 519.7247924804688) THEN CASE WHEN ("ADS"."Feature_0" <= 48.346168518066406) THEN 26 ELSE 27 END ELSE CASE WHEN ("ADS"."Feature_0" <= 48.62996292114258) THEN 29 ELSE 30 END END END END END AS node_id_2 
 FROM freidman3 AS "ADS"), 
@@ -82,8 +82,30 @@ FROM (SELECT 2 AS nid, 1.4092998433520778 AS "E" FROM rdb$database UNION ALL SEL
 FROM "DT_node_lookup_4" LEFT OUTER JOIN "DT_node_data_4" ON "DT_node_lookup_4".node_id_2 = "DT_node_data_4".nid), 
 "BAG_Model_4" AS 
 (SELECT "DT_Output_4"."KEY" AS "KEY", "DT_Output_4"."E" AS "Estimator" 
-FROM "DT_Output_4"), 
-"DT_node_lookup_5" AS 
+FROM "DT_Output_4")
+ SELECT "BAG_B0"."KEY", "BAG_B0"."Estimator" 
+FROM (SELECT "BAG_esu_0"."KEY" AS "KEY", "BAG_esu_0"."Estimator" AS "Estimator" 
+FROM (SELECT "BAG_Model_0"."KEY" AS "KEY", "BAG_Model_0"."Estimator" AS "Estimator" 
+FROM "BAG_Model_0" UNION ALL SELECT "BAG_Model_1"."KEY" AS "KEY", "BAG_Model_1"."Estimator" AS "Estimator" 
+FROM "BAG_Model_1" UNION ALL SELECT "BAG_Model_2"."KEY" AS "KEY", "BAG_Model_2"."Estimator" AS "Estimator" 
+FROM "BAG_Model_2" UNION ALL SELECT "BAG_Model_3"."KEY" AS "KEY", "BAG_Model_3"."Estimator" AS "Estimator" 
+FROM "BAG_Model_3" UNION ALL SELECT "BAG_Model_4"."KEY" AS "KEY", "BAG_Model_4"."Estimator" AS "Estimator" 
+FROM "BAG_Model_4") AS "BAG_esu_0") AS "BAG_B0") AS "U"
+
+-- Code For temporary table TMP_20180602_749_BAG_B1 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_749_BAG_B1" (
+	"KEY" BIGINT, 
+	"Estimator" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_749_BAG_B1 part 2. Populate
+
+INSERT INTO "TMP_20180602_749_BAG_B1" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+FROM (WITH "DT_node_lookup_5" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 0.1361902803182602) THEN CASE WHEN ("ADS"."Feature_0" <= 28.497106552124023) THEN CASE WHEN ("ADS"."Feature_1" <= 730.0179443359375) THEN 3 ELSE CASE WHEN ("ADS"."Feature_1" <= 1252.6717529296875) THEN 5 ELSE 6 END END ELSE CASE WHEN ("ADS"."Feature_3" <= 3.7317280769348145) THEN CASE WHEN ("ADS"."Feature_3" <= 2.683657169342041) THEN 9 ELSE 10 END ELSE CASE WHEN ("ADS"."Feature_3" <= 5.679426193237305) THEN 12 ELSE CASE WHEN ("ADS"."Feature_1" <= 809.5308227539062) THEN 14 ELSE 15 END END END END ELSE CASE WHEN ("ADS"."Feature_0" <= 65.76683044433594) THEN CASE WHEN ("ADS"."Feature_1" <= 360.9476013183594) THEN CASE WHEN ("ADS"."Feature_0" <= 34.57929229736328) THEN CASE WHEN ("ADS"."Feature_1" <= 199.43272399902344) THEN 20 ELSE 21 END ELSE CASE WHEN ("ADS"."Feature_2" <= 0.6276147961616516) THEN 23 ELSE 24 END END ELSE CASE WHEN ("ADS"."Feature_2" <= 0.1915559023618698) THEN 26 ELSE CASE WHEN ("ADS"."Feature_0" <= 23.030441284179688) THEN 28 ELSE 29 END END END ELSE CASE WHEN ("ADS"."Feature_2" <= 0.8226335048675537) THEN CASE WHEN ("ADS"."Feature_0" <= 74.51426696777344) THEN CASE WHEN ("ADS"."Feature_2" <= 0.4110032320022583) THEN 33 ELSE 34 END ELSE CASE WHEN ("ADS"."Feature_0" <= 91.95732116699219) THEN 36 ELSE 37 END END ELSE CASE WHEN ("ADS"."Feature_1" <= 565.5738525390625) THEN 39 ELSE CASE WHEN ("ADS"."Feature_1" <= 958.3919067382812) THEN 41 ELSE 42 END END END END END AS node_id_2 
 FROM freidman3 AS "ADS"), 
 "DT_node_data_5" AS 
@@ -143,33 +165,28 @@ FROM "DT_node_lookup_9" LEFT OUTER JOIN "DT_node_data_9" ON "DT_node_lookup_9".n
 "BAG_Model_9" AS 
 (SELECT "DT_Output_9"."KEY" AS "KEY", "DT_Output_9"."E" AS "Estimator" 
 FROM "DT_Output_9")
- SELECT "BAG_B0"."KEY", "BAG_B0"."Estimator" 
-FROM (SELECT "BAG_esu_0"."KEY" AS "KEY", "BAG_esu_0"."Estimator" AS "Estimator" 
-FROM (SELECT "BAG_Model_0"."KEY" AS "KEY", "BAG_Model_0"."Estimator" AS "Estimator" 
-FROM "BAG_Model_0" UNION ALL SELECT "BAG_Model_1"."KEY" AS "KEY", "BAG_Model_1"."Estimator" AS "Estimator" 
-FROM "BAG_Model_1" UNION ALL SELECT "BAG_Model_2"."KEY" AS "KEY", "BAG_Model_2"."Estimator" AS "Estimator" 
-FROM "BAG_Model_2" UNION ALL SELECT "BAG_Model_3"."KEY" AS "KEY", "BAG_Model_3"."Estimator" AS "Estimator" 
-FROM "BAG_Model_3" UNION ALL SELECT "BAG_Model_4"."KEY" AS "KEY", "BAG_Model_4"."Estimator" AS "Estimator" 
-FROM "BAG_Model_4" UNION ALL SELECT "BAG_Model_5"."KEY" AS "KEY", "BAG_Model_5"."Estimator" AS "Estimator" 
+ SELECT "BAG_B1"."KEY", "BAG_B1"."Estimator" 
+FROM (SELECT "BAG_esu_1"."KEY" AS "KEY", "BAG_esu_1"."Estimator" AS "Estimator" 
+FROM (SELECT "BAG_Model_5"."KEY" AS "KEY", "BAG_Model_5"."Estimator" AS "Estimator" 
 FROM "BAG_Model_5" UNION ALL SELECT "BAG_Model_6"."KEY" AS "KEY", "BAG_Model_6"."Estimator" AS "Estimator" 
 FROM "BAG_Model_6" UNION ALL SELECT "BAG_Model_7"."KEY" AS "KEY", "BAG_Model_7"."Estimator" AS "Estimator" 
 FROM "BAG_Model_7" UNION ALL SELECT "BAG_Model_8"."KEY" AS "KEY", "BAG_Model_8"."Estimator" AS "Estimator" 
 FROM "BAG_Model_8" UNION ALL SELECT "BAG_Model_9"."KEY" AS "KEY", "BAG_Model_9"."Estimator" AS "Estimator" 
-FROM "BAG_Model_9") AS "BAG_esu_0") AS "BAG_B0") AS "U"
+FROM "BAG_Model_9") AS "BAG_esu_1") AS "BAG_B1") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_SU8Q3V_BAG part 1. Create 
+-- Code For temporary table TMP_20180602_V6A_BAG_B2 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_SU8Q3V_BAG" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_V6A_BAG_B2" (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE PRECISION
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_SU8Q3V_BAG part 2. Populate
+-- Code For temporary table TMP_20180602_V6A_BAG_B2 part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_SU8Q3V_BAG" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO "TMP_20180602_V6A_BAG_B2" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "DT_node_lookup_10" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 0.056316666305065155) THEN CASE WHEN ("ADS"."Feature_2" <= 0.03391193598508835) THEN 2 ELSE 3 END ELSE CASE WHEN ("ADS"."Feature_1" <= 784.8369140625) THEN CASE WHEN ("ADS"."Feature_0" <= 15.669092178344727) THEN CASE WHEN ("ADS"."Feature_0" <= 12.17395305633545) THEN CASE WHEN ("ADS"."Feature_2" <= 0.46043506264686584) THEN 8 ELSE 9 END ELSE 10 END ELSE CASE WHEN ("ADS"."Feature_1" <= 245.38916015625) THEN CASE WHEN ("ADS"."Feature_1" <= 231.90219116210938) THEN 13 ELSE 14 END ELSE CASE WHEN ("ADS"."Feature_2" <= 0.3052070736885071) THEN 16 ELSE 17 END END END ELSE CASE WHEN ("ADS"."Feature_0" <= 87.57884216308594) THEN CASE WHEN ("ADS"."Feature_0" <= 47.0081787109375) THEN CASE WHEN ("ADS"."Feature_0" <= 15.311119079589844) THEN 21 ELSE 22 END ELSE CASE WHEN ("ADS"."Feature_2" <= 0.28124406933784485) THEN 24 ELSE 25 END END ELSE 26 END END END AS node_id_2 
 FROM freidman3 AS "ADS"), 
@@ -229,8 +246,30 @@ FROM (SELECT 3 AS nid, 1.1409162524546155 AS "E" FROM rdb$database UNION ALL SEL
 FROM "DT_node_lookup_14" LEFT OUTER JOIN "DT_node_data_14" ON "DT_node_lookup_14".node_id_2 = "DT_node_data_14".nid), 
 "BAG_Model_14" AS 
 (SELECT "DT_Output_14"."KEY" AS "KEY", "DT_Output_14"."E" AS "Estimator" 
-FROM "DT_Output_14"), 
-"DT_node_lookup_15" AS 
+FROM "DT_Output_14")
+ SELECT "BAG_B2"."KEY", "BAG_B2"."Estimator" 
+FROM (SELECT "BAG_esu_2"."KEY" AS "KEY", "BAG_esu_2"."Estimator" AS "Estimator" 
+FROM (SELECT "BAG_Model_10"."KEY" AS "KEY", "BAG_Model_10"."Estimator" AS "Estimator" 
+FROM "BAG_Model_10" UNION ALL SELECT "BAG_Model_11"."KEY" AS "KEY", "BAG_Model_11"."Estimator" AS "Estimator" 
+FROM "BAG_Model_11" UNION ALL SELECT "BAG_Model_12"."KEY" AS "KEY", "BAG_Model_12"."Estimator" AS "Estimator" 
+FROM "BAG_Model_12" UNION ALL SELECT "BAG_Model_13"."KEY" AS "KEY", "BAG_Model_13"."Estimator" AS "Estimator" 
+FROM "BAG_Model_13" UNION ALL SELECT "BAG_Model_14"."KEY" AS "KEY", "BAG_Model_14"."Estimator" AS "Estimator" 
+FROM "BAG_Model_14") AS "BAG_esu_2") AS "BAG_B2") AS "U"
+
+-- Code For temporary table TMP_20180602_NZ2_BAG_B3 part 1. Create 
+
+
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_NZ2_BAG_B3" (
+	"KEY" BIGINT, 
+	"Estimator" DOUBLE PRECISION
+)
+
+ ON COMMIT PRESERVE ROWS
+
+-- Code For temporary table TMP_20180602_NZ2_BAG_B3 part 2. Populate
+
+INSERT INTO "TMP_20180602_NZ2_BAG_B3" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+FROM (WITH "DT_node_lookup_15" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_2" <= 0.041584230959415436) THEN CASE WHEN ("ADS"."Feature_3" <= 4.048245906829834) THEN 2 ELSE 3 END ELSE CASE WHEN ("ADS"."Feature_2" <= 0.3052070736885071) THEN CASE WHEN ("ADS"."Feature_1" <= 1078.7010498046875) THEN CASE WHEN ("ADS"."Feature_1" <= 494.287353515625) THEN 7 ELSE CASE WHEN ("ADS"."Feature_0" <= 91.95732116699219) THEN 9 ELSE 10 END END ELSE CASE WHEN ("ADS"."Feature_0" <= 10.242729187011719) THEN 12 ELSE CASE WHEN ("ADS"."Feature_2" <= 0.14777274429798126) THEN 14 ELSE 15 END END END ELSE CASE WHEN ("ADS"."Feature_0" <= 72.4854736328125) THEN CASE WHEN ("ADS"."Feature_0" <= 39.75138854980469) THEN CASE WHEN ("ADS"."Feature_0" <= 12.58546257019043) THEN 19 ELSE 20 END ELSE CASE WHEN ("ADS"."Feature_1" <= 360.9476013183594) THEN 22 ELSE 23 END END ELSE CASE WHEN ("ADS"."Feature_1" <= 644.921875) THEN CASE WHEN ("ADS"."Feature_0" <= 74.51426696777344) THEN 26 ELSE 27 END ELSE CASE WHEN ("ADS"."Feature_2" <= 0.5962905287742615) THEN 29 ELSE 30 END END END END END AS node_id_2 
 FROM freidman3 AS "ADS"), 
 "DT_node_data_15" AS 
@@ -242,20 +281,15 @@ FROM "DT_node_lookup_15" LEFT OUTER JOIN "DT_node_data_15" ON "DT_node_lookup_15
 "BAG_Model_15" AS 
 (SELECT "DT_Output_15"."KEY" AS "KEY", "DT_Output_15"."E" AS "Estimator" 
 FROM "DT_Output_15")
- SELECT "BAG_B1"."KEY", "BAG_B1"."Estimator" 
-FROM (SELECT "BAG_esu_1"."KEY" AS "KEY", "BAG_esu_1"."Estimator" AS "Estimator" 
-FROM (SELECT "BAG_Model_10"."KEY" AS "KEY", "BAG_Model_10"."Estimator" AS "Estimator" 
-FROM "BAG_Model_10" UNION ALL SELECT "BAG_Model_11"."KEY" AS "KEY", "BAG_Model_11"."Estimator" AS "Estimator" 
-FROM "BAG_Model_11" UNION ALL SELECT "BAG_Model_12"."KEY" AS "KEY", "BAG_Model_12"."Estimator" AS "Estimator" 
-FROM "BAG_Model_12" UNION ALL SELECT "BAG_Model_13"."KEY" AS "KEY", "BAG_Model_13"."Estimator" AS "Estimator" 
-FROM "BAG_Model_13" UNION ALL SELECT "BAG_Model_14"."KEY" AS "KEY", "BAG_Model_14"."Estimator" AS "Estimator" 
-FROM "BAG_Model_14" UNION ALL SELECT "BAG_Model_15"."KEY" AS "KEY", "BAG_Model_15"."Estimator" AS "Estimator" 
-FROM "BAG_Model_15") AS "BAG_esu_1") AS "BAG_B1") AS "U"
+ SELECT "BAG_B3"."KEY", "BAG_B3"."Estimator" 
+FROM (SELECT "BAG_esu_3"."KEY" AS "KEY", "BAG_esu_3"."Estimator" AS "Estimator" 
+FROM (SELECT "BAG_Model_15"."KEY" AS "KEY", "BAG_Model_15"."Estimator" AS "Estimator" 
+FROM "BAG_Model_15") AS "BAG_esu_3") AS "BAG_B3") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_4QLCO4_BAG part 1. Create 
+-- Code For temporary table TMP_20180602_7WK_BAG_AVG part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_4QLCO4_BAG" (
+CREATE GLOBAL TEMPORARY TABLE "TMP_20180602_7WK_BAG_AVG" (
 	"KEY" BIGINT NOT NULL, 
 	"Estimator" DOUBLE PRECISION, 
 	PRIMARY KEY ("KEY")
@@ -263,24 +297,26 @@ CREATE GLOBAL TEMPORARY TABLE "TMP_20180516_CODEGEN_4QLCO4_BAG" (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table TMP_20180516_CODEGEN_4QLCO4_BAG part 2. Populate
+-- Code For temporary table TMP_20180602_7WK_BAG_AVG part 2. Populate
 
-INSERT INTO "TMP_20180516_CODEGEN_4QLCO4_BAG" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
+INSERT INTO "TMP_20180602_7WK_BAG_AVG" ("KEY", "Estimator") SELECT "U"."KEY", "U"."Estimator" 
 FROM (WITH "BAG_Union" AS 
 (SELECT "BAG_EnsembleUnion"."KEY" AS "KEY", "BAG_EnsembleUnion"."Estimator" AS "Estimator" 
 FROM (SELECT "BAG_B0"."KEY" AS "KEY", "BAG_B0"."Estimator" AS "Estimator" 
-FROM "TMP_20180516_CODEGEN_GIGV59_BAG" AS "BAG_B0" UNION ALL SELECT "BAG_B1"."KEY" AS "KEY", "BAG_B1"."Estimator" AS "Estimator" 
-FROM "TMP_20180516_CODEGEN_SU8Q3V_BAG" AS "BAG_B1") AS "BAG_EnsembleUnion")
+FROM "TMP_20180602_C3Q_BAG_B0" AS "BAG_B0" UNION ALL SELECT "BAG_B1"."KEY" AS "KEY", "BAG_B1"."Estimator" AS "Estimator" 
+FROM "TMP_20180602_749_BAG_B1" AS "BAG_B1" UNION ALL SELECT "BAG_B2"."KEY" AS "KEY", "BAG_B2"."Estimator" AS "Estimator" 
+FROM "TMP_20180602_V6A_BAG_B2" AS "BAG_B2" UNION ALL SELECT "BAG_B3"."KEY" AS "KEY", "BAG_B3"."Estimator" AS "Estimator" 
+FROM "TMP_20180602_NZ2_BAG_B3" AS "BAG_B3") AS "BAG_EnsembleUnion")
  SELECT "BAG_avg"."KEY", "BAG_avg"."Estimator" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Estimator" AS DOUBLE PRECISION) AS "Estimator" 
 FROM (SELECT "BAG_Union"."KEY" AS "KEY", avg(CAST("BAG_Union"."Estimator" AS DOUBLE PRECISION)) AS "Estimator" 
 FROM "BAG_Union" GROUP BY "BAG_Union"."KEY") AS "T") AS "BAG_avg") AS "U"
 
--- Code For temporary table TMP_20180516_CODEGEN_4QLCO4_BAG part 3. Create Index 
+-- Code For temporary table TMP_20180602_7WK_BAG_AVG part 3. Create Index 
 
-CREATE INDEX "ix_TMP_20180516_CODEGEN_5fc2" ON "TMP_20180516_CODEGEN_4QLCO4_BAG" ("KEY")
+CREATE INDEX "ix_TMP_20180602_7WK_BAG_AVG_KEY" ON "TMP_20180602_7WK_BAG_AVG" ("KEY")
 
 -- Model deployment code
 
 SELECT "BAG_avg"."KEY" AS "KEY", "BAG_avg"."Estimator" AS "Estimator" 
-FROM "TMP_20180516_CODEGEN_4QLCO4_BAG" AS "BAG_avg"
+FROM "TMP_20180602_7WK_BAG_AVG" AS "BAG_avg"
