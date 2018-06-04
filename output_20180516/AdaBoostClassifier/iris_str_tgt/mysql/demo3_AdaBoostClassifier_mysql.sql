@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180516130336_CODEGEN_DLOC6Q_ADB_B0 part 1. Create 
+-- Code For temporary table TMP_20180602160055_19U_ADB_B0 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516130336_CODEGEN_DLOC6Q_ADB_B0` (
+CREATE TEMPORARY TABLE `TMP_20180602160055_19U_ADB_B0` (
 	`KEY` BIGINT, 
 	`Score_CLASS_0` DOUBLE, 
 	`Proba_CLASS_0` DOUBLE, 
@@ -25,9 +25,9 @@ CREATE TEMPORARY TABLE `TMP_20180516130336_CODEGEN_DLOC6Q_ADB_B0` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516130336_CODEGEN_DLOC6Q_ADB_B0 part 2. Populate
+-- Code For temporary table TMP_20180602160055_19U_ADB_B0 part 2. Populate
 
-INSERT INTO `TMP_20180516130336_CODEGEN_DLOC6Q_ADB_B0` (`KEY`, `Score_CLASS_0`, `Proba_CLASS_0`, `Score_CLASS_1`, `Proba_CLASS_1`, `Score_CLASS_2`, `Proba_CLASS_2`) SELECT `U`.`KEY`, `U`.`Score_CLASS_0`, `U`.`Proba_CLASS_0`, `U`.`Score_CLASS_1`, `U`.`Proba_CLASS_1`, `U`.`Score_CLASS_2`, `U`.`Proba_CLASS_2` 
+INSERT INTO `TMP_20180602160055_19U_ADB_B0` (`KEY`, `Score_CLASS_0`, `Proba_CLASS_0`, `Score_CLASS_1`, `Proba_CLASS_1`, `Score_CLASS_2`, `Proba_CLASS_2`) SELECT `U`.`KEY`, `U`.`Score_CLASS_0`, `U`.`Proba_CLASS_0`, `U`.`Score_CLASS_1`, `U`.`Proba_CLASS_1`, `U`.`Score_CLASS_2`, `U`.`Proba_CLASS_2` 
 FROM (WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` <= 2.450000047683716) THEN 1 ELSE 2 END AS node_id_2 
 FROM iris_str_tgt AS `ADS`), 
@@ -162,10 +162,10 @@ FROM `ADB_Model_7` UNION ALL SELECT `ADB_Model_8`.`KEY` AS `KEY`, `ADB_Model_8`.
 FROM `ADB_Model_8` UNION ALL SELECT `ADB_Model_9`.`KEY` AS `KEY`, `ADB_Model_9`.`Score_CLASS_0` AS `Score_CLASS_0`, `ADB_Model_9`.`Proba_CLASS_0` AS `Proba_CLASS_0`, `ADB_Model_9`.`Score_CLASS_1` AS `Score_CLASS_1`, `ADB_Model_9`.`Proba_CLASS_1` AS `Proba_CLASS_1`, `ADB_Model_9`.`Score_CLASS_2` AS `Score_CLASS_2`, `ADB_Model_9`.`Proba_CLASS_2` AS `Proba_CLASS_2` 
 FROM `ADB_Model_9`) AS `ADB_esu_0`) AS `ADB_B0`) AS `U`
 
--- Code For temporary table TMP_20180516130336_CODEGEN_ZFA9WW_ADB_B1 part 1. Create 
+-- Code For temporary table TMP_20180602160055_TKJ_ADB_B1 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516130336_CODEGEN_ZFA9WW_ADB_B1` (
+CREATE TEMPORARY TABLE `TMP_20180602160055_TKJ_ADB_B1` (
 	`KEY` BIGINT, 
 	`Score_CLASS_0` DOUBLE, 
 	`Proba_CLASS_0` DOUBLE, 
@@ -177,9 +177,9 @@ CREATE TEMPORARY TABLE `TMP_20180516130336_CODEGEN_ZFA9WW_ADB_B1` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516130336_CODEGEN_ZFA9WW_ADB_B1 part 2. Populate
+-- Code For temporary table TMP_20180602160055_TKJ_ADB_B1 part 2. Populate
 
-INSERT INTO `TMP_20180516130336_CODEGEN_ZFA9WW_ADB_B1` (`KEY`, `Score_CLASS_0`, `Proba_CLASS_0`, `Score_CLASS_1`, `Proba_CLASS_1`, `Score_CLASS_2`, `Proba_CLASS_2`) SELECT `U`.`KEY`, `U`.`Score_CLASS_0`, `U`.`Proba_CLASS_0`, `U`.`Score_CLASS_1`, `U`.`Proba_CLASS_1`, `U`.`Score_CLASS_2`, `U`.`Proba_CLASS_2` 
+INSERT INTO `TMP_20180602160055_TKJ_ADB_B1` (`KEY`, `Score_CLASS_0`, `Proba_CLASS_0`, `Score_CLASS_1`, `Proba_CLASS_1`, `Score_CLASS_2`, `Proba_CLASS_2`) SELECT `U`.`KEY`, `U`.`Score_CLASS_0`, `U`.`Proba_CLASS_0`, `U`.`Score_CLASS_1`, `U`.`Proba_CLASS_1`, `U`.`Score_CLASS_2`, `U`.`Proba_CLASS_2` 
 FROM (WITH `DT_node_lookup_10` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` <= 2.450000047683716) THEN 1 ELSE 2 END AS node_id_2 
 FROM iris_str_tgt AS `ADS`), 
@@ -262,10 +262,10 @@ FROM `ADB_Model_13` UNION ALL SELECT `ADB_Model_14`.`KEY` AS `KEY`, `ADB_Model_1
 FROM `ADB_Model_14` UNION ALL SELECT `ADB_Model_15`.`KEY` AS `KEY`, `ADB_Model_15`.`Score_CLASS_0` AS `Score_CLASS_0`, `ADB_Model_15`.`Proba_CLASS_0` AS `Proba_CLASS_0`, `ADB_Model_15`.`Score_CLASS_1` AS `Score_CLASS_1`, `ADB_Model_15`.`Proba_CLASS_1` AS `Proba_CLASS_1`, `ADB_Model_15`.`Score_CLASS_2` AS `Score_CLASS_2`, `ADB_Model_15`.`Proba_CLASS_2` AS `Proba_CLASS_2` 
 FROM `ADB_Model_15`) AS `ADB_esu_1`) AS `ADB_B1`) AS `U`
 
--- Code For temporary table TMP_20180516130336_CODEGEN_MIHXLV_ADB_sum part 1. Create 
+-- Code For temporary table TMP_20180602160055_M28_ADB_sum part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516130336_CODEGEN_MIHXLV_ADB_sum` (
+CREATE TEMPORARY TABLE `TMP_20180602160055_M28_ADB_sum` (
 	`KEY` BIGINT NOT NULL, 
 	`Score_CLASS_0` DOUBLE, 
 	`Proba_CLASS_0` DOUBLE, 
@@ -278,28 +278,28 @@ CREATE TEMPORARY TABLE `TMP_20180516130336_CODEGEN_MIHXLV_ADB_sum` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516130336_CODEGEN_MIHXLV_ADB_sum part 2. Populate
+-- Code For temporary table TMP_20180602160055_M28_ADB_sum part 2. Populate
 
-INSERT INTO `TMP_20180516130336_CODEGEN_MIHXLV_ADB_sum` (`KEY`, `Score_CLASS_0`, `Proba_CLASS_0`, `Score_CLASS_1`, `Proba_CLASS_1`, `Score_CLASS_2`, `Proba_CLASS_2`) SELECT `U`.`KEY`, `U`.`Score_CLASS_0`, `U`.`Proba_CLASS_0`, `U`.`Score_CLASS_1`, `U`.`Proba_CLASS_1`, `U`.`Score_CLASS_2`, `U`.`Proba_CLASS_2` 
+INSERT INTO `TMP_20180602160055_M28_ADB_sum` (`KEY`, `Score_CLASS_0`, `Proba_CLASS_0`, `Score_CLASS_1`, `Proba_CLASS_1`, `Score_CLASS_2`, `Proba_CLASS_2`) SELECT `U`.`KEY`, `U`.`Score_CLASS_0`, `U`.`Proba_CLASS_0`, `U`.`Score_CLASS_1`, `U`.`Proba_CLASS_1`, `U`.`Score_CLASS_2`, `U`.`Proba_CLASS_2` 
 FROM (WITH `ADB_Union` AS 
 (SELECT `ADB_EnsembleUnion`.`KEY` AS `KEY`, `ADB_EnsembleUnion`.`Score_CLASS_0` AS `Score_CLASS_0`, `ADB_EnsembleUnion`.`Proba_CLASS_0` AS `Proba_CLASS_0`, `ADB_EnsembleUnion`.`Score_CLASS_1` AS `Score_CLASS_1`, `ADB_EnsembleUnion`.`Proba_CLASS_1` AS `Proba_CLASS_1`, `ADB_EnsembleUnion`.`Score_CLASS_2` AS `Score_CLASS_2`, `ADB_EnsembleUnion`.`Proba_CLASS_2` AS `Proba_CLASS_2` 
 FROM (SELECT `ADB_B0`.`KEY` AS `KEY`, `ADB_B0`.`Score_CLASS_0` AS `Score_CLASS_0`, `ADB_B0`.`Proba_CLASS_0` AS `Proba_CLASS_0`, `ADB_B0`.`Score_CLASS_1` AS `Score_CLASS_1`, `ADB_B0`.`Proba_CLASS_1` AS `Proba_CLASS_1`, `ADB_B0`.`Score_CLASS_2` AS `Score_CLASS_2`, `ADB_B0`.`Proba_CLASS_2` AS `Proba_CLASS_2` 
-FROM `TMP_20180516130336_CODEGEN_DLOC6Q_ADB_B0` AS `ADB_B0` UNION ALL SELECT `ADB_B1`.`KEY` AS `KEY`, `ADB_B1`.`Score_CLASS_0` AS `Score_CLASS_0`, `ADB_B1`.`Proba_CLASS_0` AS `Proba_CLASS_0`, `ADB_B1`.`Score_CLASS_1` AS `Score_CLASS_1`, `ADB_B1`.`Proba_CLASS_1` AS `Proba_CLASS_1`, `ADB_B1`.`Score_CLASS_2` AS `Score_CLASS_2`, `ADB_B1`.`Proba_CLASS_2` AS `Proba_CLASS_2` 
-FROM `TMP_20180516130336_CODEGEN_ZFA9WW_ADB_B1` AS `ADB_B1`) AS `ADB_EnsembleUnion`)
+FROM `TMP_20180602160055_19U_ADB_B0` AS `ADB_B0` UNION ALL SELECT `ADB_B1`.`KEY` AS `KEY`, `ADB_B1`.`Score_CLASS_0` AS `Score_CLASS_0`, `ADB_B1`.`Proba_CLASS_0` AS `Proba_CLASS_0`, `ADB_B1`.`Score_CLASS_1` AS `Score_CLASS_1`, `ADB_B1`.`Proba_CLASS_1` AS `Proba_CLASS_1`, `ADB_B1`.`Score_CLASS_2` AS `Score_CLASS_2`, `ADB_B1`.`Proba_CLASS_2` AS `Proba_CLASS_2` 
+FROM `TMP_20180602160055_TKJ_ADB_B1` AS `ADB_B1`) AS `ADB_EnsembleUnion`)
  SELECT `ADB_sum`.`KEY`, `ADB_sum`.`Score_CLASS_0`, `ADB_sum`.`Proba_CLASS_0`, `ADB_sum`.`Score_CLASS_1`, `ADB_sum`.`Proba_CLASS_1`, `ADB_sum`.`Score_CLASS_2`, `ADB_sum`.`Proba_CLASS_2` 
 FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Score_CLASS_0` AS DOUBLE) AS `Score_CLASS_0`, CAST(`T`.`Proba_CLASS_0` AS DOUBLE) AS `Proba_CLASS_0`, CAST(`T`.`Score_CLASS_1` AS DOUBLE) AS `Score_CLASS_1`, CAST(`T`.`Proba_CLASS_1` AS DOUBLE) AS `Proba_CLASS_1`, CAST(`T`.`Score_CLASS_2` AS DOUBLE) AS `Score_CLASS_2`, CAST(`T`.`Proba_CLASS_2` AS DOUBLE) AS `Proba_CLASS_2` 
 FROM (SELECT `ADB_Union`.`KEY` AS `KEY`, sum(`ADB_Union`.`Score_CLASS_0`) AS `Score_CLASS_0`, sum(`ADB_Union`.`Proba_CLASS_0`) AS `Proba_CLASS_0`, sum(`ADB_Union`.`Score_CLASS_1`) AS `Score_CLASS_1`, sum(`ADB_Union`.`Proba_CLASS_1`) AS `Proba_CLASS_1`, sum(`ADB_Union`.`Score_CLASS_2`) AS `Score_CLASS_2`, sum(`ADB_Union`.`Proba_CLASS_2`) AS `Proba_CLASS_2` 
 FROM `ADB_Union` GROUP BY `ADB_Union`.`KEY`) AS `T`) AS `ADB_sum`) AS `U`
 
--- Code For temporary table TMP_20180516130336_CODEGEN_MIHXLV_ADB_sum part 3. Create Index 
+-- Code For temporary table TMP_20180602160055_M28_ADB_sum part 3. Create Index 
 
-CREATE INDEX `ix_TMP_20180516130336_CODEGEN_MIHXLV_ADB_sum_KEY` ON `TMP_20180516130336_CODEGEN_MIHXLV_ADB_sum` (`KEY`)
+CREATE INDEX `ix_TMP_20180602160055_M28_ADB_sum_KEY` ON `TMP_20180602160055_M28_ADB_sum` (`KEY`)
 
 -- Model deployment code
 
 WITH `AdaBoost_AVG_Scores_BN` AS 
 (SELECT `ADB_sum`.`KEY` AS `KEY`, `ADB_sum`.`Score_CLASS_0` AS `Score_CLASS_0`, `ADB_sum`.`Proba_CLASS_0` AS `Proba_CLASS_0`, `ADB_sum`.`Score_CLASS_1` AS `Score_CLASS_1`, `ADB_sum`.`Proba_CLASS_1` AS `Proba_CLASS_1`, `ADB_sum`.`Score_CLASS_2` AS `Score_CLASS_2`, `ADB_sum`.`Proba_CLASS_2` AS `Proba_CLASS_2` 
-FROM `TMP_20180516130336_CODEGEN_MIHXLV_ADB_sum` AS `ADB_sum`), 
+FROM `TMP_20180602160055_M28_ADB_sum` AS `ADB_sum`), 
 `AdaBoost_AVG_Scores` AS 
 (SELECT `AdaBoost_AVG_Scores_BN`.`KEY` AS `KEY`, `AdaBoost_AVG_Scores_BN`.`Score_CLASS_0` AS `Score_CLASS_0`, exp((`AdaBoost_AVG_Scores_BN`.`Proba_CLASS_0` / 16.0) / 2) / (exp((`AdaBoost_AVG_Scores_BN`.`Proba_CLASS_0` / 16.0) / 2) + exp((`AdaBoost_AVG_Scores_BN`.`Proba_CLASS_1` / 16.0) / 2) + exp((`AdaBoost_AVG_Scores_BN`.`Proba_CLASS_2` / 16.0) / 2)) AS `Proba_CLASS_0`, NULL AS `LogProba_CLASS_0`, `AdaBoost_AVG_Scores_BN`.`Score_CLASS_1` AS `Score_CLASS_1`, exp((`AdaBoost_AVG_Scores_BN`.`Proba_CLASS_1` / 16.0) / 2) / (exp((`AdaBoost_AVG_Scores_BN`.`Proba_CLASS_0` / 16.0) / 2) + exp((`AdaBoost_AVG_Scores_BN`.`Proba_CLASS_1` / 16.0) / 2) + exp((`AdaBoost_AVG_Scores_BN`.`Proba_CLASS_2` / 16.0) / 2)) AS `Proba_CLASS_1`, NULL AS `LogProba_CLASS_1`, `AdaBoost_AVG_Scores_BN`.`Score_CLASS_2` AS `Score_CLASS_2`, exp((`AdaBoost_AVG_Scores_BN`.`Proba_CLASS_2` / 16.0) / 2) / (exp((`AdaBoost_AVG_Scores_BN`.`Proba_CLASS_0` / 16.0) / 2) + exp((`AdaBoost_AVG_Scores_BN`.`Proba_CLASS_1` / 16.0) / 2) + exp((`AdaBoost_AVG_Scores_BN`.`Proba_CLASS_2` / 16.0) / 2)) AS `Proba_CLASS_2`, NULL AS `LogProba_CLASS_2` 
 FROM `AdaBoost_AVG_Scores_BN`), 

@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180516113448_CODEGEN_RHIWHF_XGB_B0 part 1. Create 
+-- Code For temporary table TMP_20180602144218_0HV_XGB_B0 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516113448_CODEGEN_RHIWHF_XGB_B0` (
+CREATE TEMPORARY TABLE `TMP_20180602144218_0HV_XGB_B0` (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -23,9 +23,9 @@ CREATE TEMPORARY TABLE `TMP_20180516113448_CODEGEN_RHIWHF_XGB_B0` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516113448_CODEGEN_RHIWHF_XGB_B0 part 2. Populate
+-- Code For temporary table TMP_20180602144218_0HV_XGB_B0 part 2. Populate
 
-INSERT INTO `TMP_20180516113448_CODEGEN_RHIWHF_XGB_B0` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
+INSERT INTO `TMP_20180602144218_0HV_XGB_B0` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
 FROM (WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_78` < -0.5902902483940125) THEN 1 ELSE 2 END AS node_id_2 
 FROM `FourClass_100` AS `ADS`), 
@@ -160,10 +160,10 @@ FROM `XGB_Model_3_1` UNION ALL SELECT `XGB_Model_0_2`.`KEY` AS `KEY`, `XGB_Model
 FROM `XGB_Model_0_2` UNION ALL SELECT `XGB_Model_1_2`.`KEY` AS `KEY`, `XGB_Model_1_2`.`Score_0` AS `Score_0`, `XGB_Model_1_2`.`Score_1` AS `Score_1`, `XGB_Model_1_2`.`Score_2` AS `Score_2`, `XGB_Model_1_2`.`Score_3` AS `Score_3` 
 FROM `XGB_Model_1_2`) AS `XGB_esu_0`) AS `XGB_B0`) AS `U`
 
--- Code For temporary table TMP_20180516113448_CODEGEN_2PLX6V_XGB_B1 part 1. Create 
+-- Code For temporary table TMP_20180602144218_Q74_XGB_B1 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516113448_CODEGEN_2PLX6V_XGB_B1` (
+CREATE TEMPORARY TABLE `TMP_20180602144218_Q74_XGB_B1` (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -173,9 +173,9 @@ CREATE TEMPORARY TABLE `TMP_20180516113448_CODEGEN_2PLX6V_XGB_B1` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516113448_CODEGEN_2PLX6V_XGB_B1 part 2. Populate
+-- Code For temporary table TMP_20180602144218_Q74_XGB_B1 part 2. Populate
 
-INSERT INTO `TMP_20180516113448_CODEGEN_2PLX6V_XGB_B1` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
+INSERT INTO `TMP_20180602144218_Q74_XGB_B1` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
 FROM (WITH `DT_node_lookup_10` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_44` < -1.3097765445709229) THEN 1 ELSE CASE WHEN (`ADS`.`Feature_57` < 0.01671294867992401) THEN 3 ELSE 4 END END AS node_id_2 
 FROM `FourClass_100` AS `ADS`), 
@@ -310,10 +310,10 @@ FROM `XGB_Model_1_4` UNION ALL SELECT `XGB_Model_2_4`.`KEY` AS `KEY`, `XGB_Model
 FROM `XGB_Model_2_4` UNION ALL SELECT `XGB_Model_3_4`.`KEY` AS `KEY`, `XGB_Model_3_4`.`Score_0` AS `Score_0`, `XGB_Model_3_4`.`Score_1` AS `Score_1`, `XGB_Model_3_4`.`Score_2` AS `Score_2`, `XGB_Model_3_4`.`Score_3` AS `Score_3` 
 FROM `XGB_Model_3_4`) AS `XGB_esu_1`) AS `XGB_B1`) AS `U`
 
--- Code For temporary table TMP_20180516113448_CODEGEN_O34SN9_XGB_B2 part 1. Create 
+-- Code For temporary table TMP_20180602144218_MS6_XGB_B2 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516113448_CODEGEN_O34SN9_XGB_B2` (
+CREATE TEMPORARY TABLE `TMP_20180602144218_MS6_XGB_B2` (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -323,9 +323,9 @@ CREATE TEMPORARY TABLE `TMP_20180516113448_CODEGEN_O34SN9_XGB_B2` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516113448_CODEGEN_O34SN9_XGB_B2 part 2. Populate
+-- Code For temporary table TMP_20180602144218_MS6_XGB_B2 part 2. Populate
 
-INSERT INTO `TMP_20180516113448_CODEGEN_O34SN9_XGB_B2` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
+INSERT INTO `TMP_20180602144218_MS6_XGB_B2` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
 FROM (WITH `DT_node_lookup_20` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_92` < 0.07349112629890442) THEN 1 ELSE 2 END AS node_id_2 
 FROM `FourClass_100` AS `ADS`), 
@@ -460,10 +460,10 @@ FROM `XGB_Model_3_6` UNION ALL SELECT `XGB_Model_0_7`.`KEY` AS `KEY`, `XGB_Model
 FROM `XGB_Model_0_7` UNION ALL SELECT `XGB_Model_1_7`.`KEY` AS `KEY`, `XGB_Model_1_7`.`Score_0` AS `Score_0`, `XGB_Model_1_7`.`Score_1` AS `Score_1`, `XGB_Model_1_7`.`Score_2` AS `Score_2`, `XGB_Model_1_7`.`Score_3` AS `Score_3` 
 FROM `XGB_Model_1_7`) AS `XGB_esu_2`) AS `XGB_B2`) AS `U`
 
--- Code For temporary table TMP_20180516113448_CODEGEN_BNFNJF_XGB_B3 part 1. Create 
+-- Code For temporary table TMP_20180602144218_NO3_XGB_B3 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516113448_CODEGEN_BNFNJF_XGB_B3` (
+CREATE TEMPORARY TABLE `TMP_20180602144218_NO3_XGB_B3` (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -473,9 +473,9 @@ CREATE TEMPORARY TABLE `TMP_20180516113448_CODEGEN_BNFNJF_XGB_B3` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516113448_CODEGEN_BNFNJF_XGB_B3 part 2. Populate
+-- Code For temporary table TMP_20180602144218_NO3_XGB_B3 part 2. Populate
 
-INSERT INTO `TMP_20180516113448_CODEGEN_BNFNJF_XGB_B3` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
+INSERT INTO `TMP_20180602144218_NO3_XGB_B3` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
 FROM (WITH `DT_node_lookup_30` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_56` < -0.03355539217591286) THEN 1 ELSE 2 END AS node_id_2 
 FROM `FourClass_100` AS `ADS`), 
@@ -610,10 +610,10 @@ FROM `XGB_Model_1_9` UNION ALL SELECT `XGB_Model_2_9`.`KEY` AS `KEY`, `XGB_Model
 FROM `XGB_Model_2_9` UNION ALL SELECT `XGB_Model_3_9`.`KEY` AS `KEY`, `XGB_Model_3_9`.`Score_0` AS `Score_0`, `XGB_Model_3_9`.`Score_1` AS `Score_1`, `XGB_Model_3_9`.`Score_2` AS `Score_2`, `XGB_Model_3_9`.`Score_3` AS `Score_3` 
 FROM `XGB_Model_3_9`) AS `XGB_esu_3`) AS `XGB_B3`) AS `U`
 
--- Code For temporary table TMP_20180516113448_CODEGEN_E9YHDT_XGB_B4 part 1. Create 
+-- Code For temporary table TMP_20180602144218_4MR_XGB_B4 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516113448_CODEGEN_E9YHDT_XGB_B4` (
+CREATE TEMPORARY TABLE `TMP_20180602144218_4MR_XGB_B4` (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -623,9 +623,9 @@ CREATE TEMPORARY TABLE `TMP_20180516113448_CODEGEN_E9YHDT_XGB_B4` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516113448_CODEGEN_E9YHDT_XGB_B4 part 2. Populate
+-- Code For temporary table TMP_20180602144218_4MR_XGB_B4 part 2. Populate
 
-INSERT INTO `TMP_20180516113448_CODEGEN_E9YHDT_XGB_B4` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
+INSERT INTO `TMP_20180602144218_4MR_XGB_B4` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
 FROM (WITH `DT_node_lookup_40` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_78` < -0.5902902483940125) THEN 1 ELSE CASE WHEN (`ADS`.`Feature_33` < -0.19221419095993042) THEN 3 ELSE 4 END END AS node_id_2 
 FROM `FourClass_100` AS `ADS`), 
@@ -760,10 +760,10 @@ FROM `XGB_Model_3_11` UNION ALL SELECT `XGB_Model_0_12`.`KEY` AS `KEY`, `XGB_Mod
 FROM `XGB_Model_0_12` UNION ALL SELECT `XGB_Model_1_12`.`KEY` AS `KEY`, `XGB_Model_1_12`.`Score_0` AS `Score_0`, `XGB_Model_1_12`.`Score_1` AS `Score_1`, `XGB_Model_1_12`.`Score_2` AS `Score_2`, `XGB_Model_1_12`.`Score_3` AS `Score_3` 
 FROM `XGB_Model_1_12`) AS `XGB_esu_4`) AS `XGB_B4`) AS `U`
 
--- Code For temporary table TMP_20180516113448_CODEGEN_B0ZLIZ_XGB_B5 part 1. Create 
+-- Code For temporary table TMP_20180602144218_G97_XGB_B5 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516113448_CODEGEN_B0ZLIZ_XGB_B5` (
+CREATE TEMPORARY TABLE `TMP_20180602144218_G97_XGB_B5` (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -773,9 +773,9 @@ CREATE TEMPORARY TABLE `TMP_20180516113448_CODEGEN_B0ZLIZ_XGB_B5` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516113448_CODEGEN_B0ZLIZ_XGB_B5 part 2. Populate
+-- Code For temporary table TMP_20180602144218_G97_XGB_B5 part 2. Populate
 
-INSERT INTO `TMP_20180516113448_CODEGEN_B0ZLIZ_XGB_B5` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
+INSERT INTO `TMP_20180602144218_G97_XGB_B5` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
 FROM (WITH `DT_node_lookup_50` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_99` < -0.6512409448623657) THEN 1 ELSE CASE WHEN (`ADS`.`Feature_44` < -0.558501660823822) THEN 3 ELSE 4 END END AS node_id_2 
 FROM `FourClass_100` AS `ADS`), 
@@ -910,10 +910,10 @@ FROM `XGB_Model_1_14` UNION ALL SELECT `XGB_Model_2_14`.`KEY` AS `KEY`, `XGB_Mod
 FROM `XGB_Model_2_14` UNION ALL SELECT `XGB_Model_3_14`.`KEY` AS `KEY`, `XGB_Model_3_14`.`Score_0` AS `Score_0`, `XGB_Model_3_14`.`Score_1` AS `Score_1`, `XGB_Model_3_14`.`Score_2` AS `Score_2`, `XGB_Model_3_14`.`Score_3` AS `Score_3` 
 FROM `XGB_Model_3_14`) AS `XGB_esu_5`) AS `XGB_B5`) AS `U`
 
--- Code For temporary table TMP_20180516113448_CODEGEN_JQDNNI_XGB_B6 part 1. Create 
+-- Code For temporary table TMP_20180602144218_M90_XGB_B6 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516113448_CODEGEN_JQDNNI_XGB_B6` (
+CREATE TEMPORARY TABLE `TMP_20180602144218_M90_XGB_B6` (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -923,9 +923,9 @@ CREATE TEMPORARY TABLE `TMP_20180516113448_CODEGEN_JQDNNI_XGB_B6` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516113448_CODEGEN_JQDNNI_XGB_B6 part 2. Populate
+-- Code For temporary table TMP_20180602144218_M90_XGB_B6 part 2. Populate
 
-INSERT INTO `TMP_20180516113448_CODEGEN_JQDNNI_XGB_B6` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
+INSERT INTO `TMP_20180602144218_M90_XGB_B6` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
 FROM (WITH `DT_node_lookup_60` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_92` < 0.07349112629890442) THEN 1 ELSE 2 END AS node_id_2 
 FROM `FourClass_100` AS `ADS`), 
@@ -982,10 +982,10 @@ FROM `XGB_Model_1_15` UNION ALL SELECT `XGB_Model_2_15`.`KEY` AS `KEY`, `XGB_Mod
 FROM `XGB_Model_2_15` UNION ALL SELECT `XGB_Model_3_15`.`KEY` AS `KEY`, `XGB_Model_3_15`.`Score_0` AS `Score_0`, `XGB_Model_3_15`.`Score_1` AS `Score_1`, `XGB_Model_3_15`.`Score_2` AS `Score_2`, `XGB_Model_3_15`.`Score_3` AS `Score_3` 
 FROM `XGB_Model_3_15`) AS `XGB_esu_6`) AS `XGB_B6`) AS `U`
 
--- Code For temporary table TMP_20180516113448_CODEGEN_MWR8G3_XGB_sum part 1. Create 
+-- Code For temporary table TMP_20180602144218_9V8_XGB_sum part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516113448_CODEGEN_MWR8G3_XGB_sum` (
+CREATE TEMPORARY TABLE `TMP_20180602144218_9V8_XGB_sum` (
 	`KEY` BIGINT NOT NULL, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -996,33 +996,33 @@ CREATE TEMPORARY TABLE `TMP_20180516113448_CODEGEN_MWR8G3_XGB_sum` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516113448_CODEGEN_MWR8G3_XGB_sum part 2. Populate
+-- Code For temporary table TMP_20180602144218_9V8_XGB_sum part 2. Populate
 
-INSERT INTO `TMP_20180516113448_CODEGEN_MWR8G3_XGB_sum` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
+INSERT INTO `TMP_20180602144218_9V8_XGB_sum` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
 FROM (WITH `XGB_Union` AS 
 (SELECT `XGB_EnsembleUnion`.`KEY` AS `KEY`, `XGB_EnsembleUnion`.`Score_0` AS `Score_0`, `XGB_EnsembleUnion`.`Score_1` AS `Score_1`, `XGB_EnsembleUnion`.`Score_2` AS `Score_2`, `XGB_EnsembleUnion`.`Score_3` AS `Score_3` 
 FROM (SELECT `XGB_B0`.`KEY` AS `KEY`, `XGB_B0`.`Score_0` AS `Score_0`, `XGB_B0`.`Score_1` AS `Score_1`, `XGB_B0`.`Score_2` AS `Score_2`, `XGB_B0`.`Score_3` AS `Score_3` 
-FROM `TMP_20180516113448_CODEGEN_RHIWHF_XGB_B0` AS `XGB_B0` UNION ALL SELECT `XGB_B1`.`KEY` AS `KEY`, `XGB_B1`.`Score_0` AS `Score_0`, `XGB_B1`.`Score_1` AS `Score_1`, `XGB_B1`.`Score_2` AS `Score_2`, `XGB_B1`.`Score_3` AS `Score_3` 
-FROM `TMP_20180516113448_CODEGEN_2PLX6V_XGB_B1` AS `XGB_B1` UNION ALL SELECT `XGB_B2`.`KEY` AS `KEY`, `XGB_B2`.`Score_0` AS `Score_0`, `XGB_B2`.`Score_1` AS `Score_1`, `XGB_B2`.`Score_2` AS `Score_2`, `XGB_B2`.`Score_3` AS `Score_3` 
-FROM `TMP_20180516113448_CODEGEN_O34SN9_XGB_B2` AS `XGB_B2` UNION ALL SELECT `XGB_B3`.`KEY` AS `KEY`, `XGB_B3`.`Score_0` AS `Score_0`, `XGB_B3`.`Score_1` AS `Score_1`, `XGB_B3`.`Score_2` AS `Score_2`, `XGB_B3`.`Score_3` AS `Score_3` 
-FROM `TMP_20180516113448_CODEGEN_BNFNJF_XGB_B3` AS `XGB_B3` UNION ALL SELECT `XGB_B4`.`KEY` AS `KEY`, `XGB_B4`.`Score_0` AS `Score_0`, `XGB_B4`.`Score_1` AS `Score_1`, `XGB_B4`.`Score_2` AS `Score_2`, `XGB_B4`.`Score_3` AS `Score_3` 
-FROM `TMP_20180516113448_CODEGEN_E9YHDT_XGB_B4` AS `XGB_B4` UNION ALL SELECT `XGB_B5`.`KEY` AS `KEY`, `XGB_B5`.`Score_0` AS `Score_0`, `XGB_B5`.`Score_1` AS `Score_1`, `XGB_B5`.`Score_2` AS `Score_2`, `XGB_B5`.`Score_3` AS `Score_3` 
-FROM `TMP_20180516113448_CODEGEN_B0ZLIZ_XGB_B5` AS `XGB_B5` UNION ALL SELECT `XGB_B6`.`KEY` AS `KEY`, `XGB_B6`.`Score_0` AS `Score_0`, `XGB_B6`.`Score_1` AS `Score_1`, `XGB_B6`.`Score_2` AS `Score_2`, `XGB_B6`.`Score_3` AS `Score_3` 
-FROM `TMP_20180516113448_CODEGEN_JQDNNI_XGB_B6` AS `XGB_B6`) AS `XGB_EnsembleUnion`)
+FROM `TMP_20180602144218_0HV_XGB_B0` AS `XGB_B0` UNION ALL SELECT `XGB_B1`.`KEY` AS `KEY`, `XGB_B1`.`Score_0` AS `Score_0`, `XGB_B1`.`Score_1` AS `Score_1`, `XGB_B1`.`Score_2` AS `Score_2`, `XGB_B1`.`Score_3` AS `Score_3` 
+FROM `TMP_20180602144218_Q74_XGB_B1` AS `XGB_B1` UNION ALL SELECT `XGB_B2`.`KEY` AS `KEY`, `XGB_B2`.`Score_0` AS `Score_0`, `XGB_B2`.`Score_1` AS `Score_1`, `XGB_B2`.`Score_2` AS `Score_2`, `XGB_B2`.`Score_3` AS `Score_3` 
+FROM `TMP_20180602144218_MS6_XGB_B2` AS `XGB_B2` UNION ALL SELECT `XGB_B3`.`KEY` AS `KEY`, `XGB_B3`.`Score_0` AS `Score_0`, `XGB_B3`.`Score_1` AS `Score_1`, `XGB_B3`.`Score_2` AS `Score_2`, `XGB_B3`.`Score_3` AS `Score_3` 
+FROM `TMP_20180602144218_NO3_XGB_B3` AS `XGB_B3` UNION ALL SELECT `XGB_B4`.`KEY` AS `KEY`, `XGB_B4`.`Score_0` AS `Score_0`, `XGB_B4`.`Score_1` AS `Score_1`, `XGB_B4`.`Score_2` AS `Score_2`, `XGB_B4`.`Score_3` AS `Score_3` 
+FROM `TMP_20180602144218_4MR_XGB_B4` AS `XGB_B4` UNION ALL SELECT `XGB_B5`.`KEY` AS `KEY`, `XGB_B5`.`Score_0` AS `Score_0`, `XGB_B5`.`Score_1` AS `Score_1`, `XGB_B5`.`Score_2` AS `Score_2`, `XGB_B5`.`Score_3` AS `Score_3` 
+FROM `TMP_20180602144218_G97_XGB_B5` AS `XGB_B5` UNION ALL SELECT `XGB_B6`.`KEY` AS `KEY`, `XGB_B6`.`Score_0` AS `Score_0`, `XGB_B6`.`Score_1` AS `Score_1`, `XGB_B6`.`Score_2` AS `Score_2`, `XGB_B6`.`Score_3` AS `Score_3` 
+FROM `TMP_20180602144218_M90_XGB_B6` AS `XGB_B6`) AS `XGB_EnsembleUnion`)
  SELECT `XGB_sum`.`KEY`, `XGB_sum`.`Score_0`, `XGB_sum`.`Score_1`, `XGB_sum`.`Score_2`, `XGB_sum`.`Score_3` 
 FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Score_0` AS DOUBLE) AS `Score_0`, CAST(`T`.`Score_1` AS DOUBLE) AS `Score_1`, CAST(`T`.`Score_2` AS DOUBLE) AS `Score_2`, CAST(`T`.`Score_3` AS DOUBLE) AS `Score_3` 
 FROM (SELECT `XGB_Union`.`KEY` AS `KEY`, sum(`XGB_Union`.`Score_0`) AS `Score_0`, sum(`XGB_Union`.`Score_1`) AS `Score_1`, sum(`XGB_Union`.`Score_2`) AS `Score_2`, sum(`XGB_Union`.`Score_3`) AS `Score_3` 
 FROM `XGB_Union` GROUP BY `XGB_Union`.`KEY`) AS `T`) AS `XGB_sum`) AS `U`
 
--- Code For temporary table TMP_20180516113448_CODEGEN_MWR8G3_XGB_sum part 3. Create Index 
+-- Code For temporary table TMP_20180602144218_9V8_XGB_sum part 3. Create Index 
 
-CREATE INDEX `ix_TMP_20180516113448_CODEGEN_MWR8G3_XGB_sum_KEY` ON `TMP_20180516113448_CODEGEN_MWR8G3_XGB_sum` (`KEY`)
+CREATE INDEX `ix_TMP_20180602144218_9V8_XGB_sum_KEY` ON `TMP_20180602144218_9V8_XGB_sum` (`KEY`)
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT `XGB_sum`.`KEY` AS `KEY`, `XGB_sum`.`Score_0` AS `Score_0`, `XGB_sum`.`Score_1` AS `Score_1`, `XGB_sum`.`Score_2` AS `Score_2`, `XGB_sum`.`Score_3` AS `Score_3`, NULL AS `Proba_0`, NULL AS `Proba_1`, NULL AS `Proba_2`, NULL AS `Proba_3`, NULL AS `LogProba_0`, NULL AS `LogProba_1`, NULL AS `LogProba_2`, NULL AS `LogProba_3`, CAST(NULL AS SIGNED INTEGER) AS `Decision`, NULL AS `DecisionProba` 
-FROM `TMP_20180516113448_CODEGEN_MWR8G3_XGB_sum` AS `XGB_sum`), 
+FROM `TMP_20180602144218_9V8_XGB_sum` AS `XGB_sum`), 
 score_class_union AS 
 (SELECT scu.`KEY_u` AS `KEY_u`, scu.class AS class, scu.`LogProba` AS `LogProba`, scu.`Proba` AS `Proba`, scu.`Score` AS `Score` 
 FROM (SELECT orig_cte.`KEY` AS `KEY_u`, 0 AS class, orig_cte.`LogProba_0` AS `LogProba`, orig_cte.`Proba_0` AS `Proba`, orig_cte.`Score_0` AS `Score` 

@@ -10,19 +10,19 @@
 
 
 
--- Code For temporary table TMP_20180516111019_CODEGEN_JRXJ8R_LGBM_B0 part 1. Create 
+-- Code For temporary table TMP_20180602141902_RSB_LGBM_B0 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516111019_CODEGEN_JRXJ8R_LGBM_B0` (
+CREATE TEMPORARY TABLE `TMP_20180602141902_RSB_LGBM_B0` (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE
 )
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516111019_CODEGEN_JRXJ8R_LGBM_B0 part 2. Populate
+-- Code For temporary table TMP_20180602141902_RSB_LGBM_B0 part 2. Populate
 
-INSERT INTO `TMP_20180516111019_CODEGEN_JRXJ8R_LGBM_B0` (`KEY`, `Score_0`) SELECT `U`.`KEY`, `U`.`Score_0` 
+INSERT INTO `TMP_20180602141902_RSB_LGBM_B0` (`KEY`, `Score_0`) SELECT `U`.`KEY`, `U`.`Score_0` 
 FROM (WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_57` <= 1.0000000180025095e-35) THEN CASE WHEN (`ADS`.`Feature_77` <= 0.3415780695659441) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `BinaryClass_100` AS `ADS`), 
@@ -157,19 +157,19 @@ FROM `LGBM_Model_0_7` UNION ALL SELECT `LGBM_Model_0_8`.`KEY` AS `KEY`, `LGBM_Mo
 FROM `LGBM_Model_0_8` UNION ALL SELECT `LGBM_Model_0_9`.`KEY` AS `KEY`, `LGBM_Model_0_9`.`Score_0` AS `Score_0` 
 FROM `LGBM_Model_0_9`) AS `LGBM_esu_0`) AS `LGBM_B0`) AS `U`
 
--- Code For temporary table TMP_20180516111019_CODEGEN_CH5QFY_LGBM_B1 part 1. Create 
+-- Code For temporary table TMP_20180602141902_8Q5_LGBM_B1 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516111019_CODEGEN_CH5QFY_LGBM_B1` (
+CREATE TEMPORARY TABLE `TMP_20180602141902_8Q5_LGBM_B1` (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE
 )
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516111019_CODEGEN_CH5QFY_LGBM_B1 part 2. Populate
+-- Code For temporary table TMP_20180602141902_8Q5_LGBM_B1 part 2. Populate
 
-INSERT INTO `TMP_20180516111019_CODEGEN_CH5QFY_LGBM_B1` (`KEY`, `Score_0`) SELECT `U`.`KEY`, `U`.`Score_0` 
+INSERT INTO `TMP_20180602141902_8Q5_LGBM_B1` (`KEY`, `Score_0`) SELECT `U`.`KEY`, `U`.`Score_0` 
 FROM (WITH `DT_node_lookup_10` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_57` <= -0.2067798577984605) THEN CASE WHEN (`ADS`.`Feature_33` <= 0.20325693874805037) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
 FROM `BinaryClass_100` AS `ADS`), 
@@ -252,10 +252,10 @@ FROM `LGBM_Model_0_13` UNION ALL SELECT `LGBM_Model_0_14`.`KEY` AS `KEY`, `LGBM_
 FROM `LGBM_Model_0_14` UNION ALL SELECT `LGBM_Model_0_15`.`KEY` AS `KEY`, `LGBM_Model_0_15`.`Score_0` AS `Score_0` 
 FROM `LGBM_Model_0_15`) AS `LGBM_esu_1`) AS `LGBM_B1`) AS `U`
 
--- Code For temporary table TMP_20180516111019_CODEGEN_XIVI2U_LGBM_sum part 1. Create 
+-- Code For temporary table TMP_20180602141902_QBA_LGBM_sum part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516111019_CODEGEN_XIVI2U_LGBM_sum` (
+CREATE TEMPORARY TABLE `TMP_20180602141902_QBA_LGBM_sum` (
 	`KEY` BIGINT NOT NULL, 
 	`Score_0` DOUBLE, 
 	PRIMARY KEY (`KEY`)
@@ -263,28 +263,28 @@ CREATE TEMPORARY TABLE `TMP_20180516111019_CODEGEN_XIVI2U_LGBM_sum` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516111019_CODEGEN_XIVI2U_LGBM_sum part 2. Populate
+-- Code For temporary table TMP_20180602141902_QBA_LGBM_sum part 2. Populate
 
-INSERT INTO `TMP_20180516111019_CODEGEN_XIVI2U_LGBM_sum` (`KEY`, `Score_0`) SELECT `U`.`KEY`, `U`.`Score_0` 
+INSERT INTO `TMP_20180602141902_QBA_LGBM_sum` (`KEY`, `Score_0`) SELECT `U`.`KEY`, `U`.`Score_0` 
 FROM (WITH `LGBM_Union` AS 
 (SELECT `LGBM_EnsembleUnion`.`KEY` AS `KEY`, `LGBM_EnsembleUnion`.`Score_0` AS `Score_0` 
 FROM (SELECT `LGBM_B0`.`KEY` AS `KEY`, `LGBM_B0`.`Score_0` AS `Score_0` 
-FROM `TMP_20180516111019_CODEGEN_JRXJ8R_LGBM_B0` AS `LGBM_B0` UNION ALL SELECT `LGBM_B1`.`KEY` AS `KEY`, `LGBM_B1`.`Score_0` AS `Score_0` 
-FROM `TMP_20180516111019_CODEGEN_CH5QFY_LGBM_B1` AS `LGBM_B1`) AS `LGBM_EnsembleUnion`)
+FROM `TMP_20180602141902_RSB_LGBM_B0` AS `LGBM_B0` UNION ALL SELECT `LGBM_B1`.`KEY` AS `KEY`, `LGBM_B1`.`Score_0` AS `Score_0` 
+FROM `TMP_20180602141902_8Q5_LGBM_B1` AS `LGBM_B1`) AS `LGBM_EnsembleUnion`)
  SELECT `LGBM_sum`.`KEY`, `LGBM_sum`.`Score_0` 
 FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Score_0` AS DOUBLE) AS `Score_0` 
 FROM (SELECT `LGBM_Union`.`KEY` AS `KEY`, sum(`LGBM_Union`.`Score_0`) AS `Score_0` 
 FROM `LGBM_Union` GROUP BY `LGBM_Union`.`KEY`) AS `T`) AS `LGBM_sum`) AS `U`
 
--- Code For temporary table TMP_20180516111019_CODEGEN_XIVI2U_LGBM_sum part 3. Create Index 
+-- Code For temporary table TMP_20180602141902_QBA_LGBM_sum part 3. Create Index 
 
-CREATE INDEX `ix_TMP_20180516111019_CODEGEN_XIVI2U_LGBM_sum_KEY` ON `TMP_20180516111019_CODEGEN_XIVI2U_LGBM_sum` (`KEY`)
+CREATE INDEX `ix_TMP_20180602141902_QBA_LGBM_sum_KEY` ON `TMP_20180602141902_QBA_LGBM_sum` (`KEY`)
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT `LGBM_sum`.`KEY` AS `KEY`, `LGBM_sum`.`Score_0` AS `Score_0`, NULL AS `Score_1`, 1.0 - 1.0 / (1.0 + exp(least(greatest(-100.0, -`LGBM_sum`.`Score_0`), 100.0))) AS `Proba_0`, 1.0 / (1.0 + exp(least(greatest(-100.0, -`LGBM_sum`.`Score_0`), 100.0))) AS `Proba_1`, NULL AS `LogProba_0`, NULL AS `LogProba_1`, CAST(NULL AS SIGNED INTEGER) AS `Decision`, NULL AS `DecisionProba` 
-FROM `TMP_20180516111019_CODEGEN_XIVI2U_LGBM_sum` AS `LGBM_sum`), 
+FROM `TMP_20180602141902_QBA_LGBM_sum` AS `LGBM_sum`), 
 score_class_union AS 
 (SELECT scu.`KEY_u` AS `KEY_u`, scu.class AS class, scu.`LogProba` AS `LogProba`, scu.`Proba` AS `Proba`, scu.`Score` AS `Score` 
 FROM (SELECT orig_cte.`KEY` AS `KEY_u`, 0 AS class, orig_cte.`LogProba_0` AS `LogProba`, orig_cte.`Proba_0` AS `Proba`, orig_cte.`Score_0` AS `Score` 

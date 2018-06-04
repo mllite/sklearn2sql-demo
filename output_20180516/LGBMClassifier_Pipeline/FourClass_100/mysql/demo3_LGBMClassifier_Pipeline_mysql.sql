@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180516113053_CODEGEN_VXMD17_ADS_imp_1_OUT part 1. Create 
+-- Code For temporary table TMP_20180602143835_EHN_ADS_imp_1_OUT part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516113053_CODEGEN_VXMD17_ADS_imp_1_OUT` (
+CREATE TEMPORARY TABLE `TMP_20180602143835_EHN_ADS_imp_1_OUT` (
 	`KEY` BIGINT NOT NULL, 
 	impter_2 DOUBLE, 
 	impter_3 DOUBLE, 
@@ -120,21 +120,21 @@ CREATE TEMPORARY TABLE `TMP_20180516113053_CODEGEN_VXMD17_ADS_imp_1_OUT` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516113053_CODEGEN_VXMD17_ADS_imp_1_OUT part 2. Populate
+-- Code For temporary table TMP_20180602143835_EHN_ADS_imp_1_OUT part 2. Populate
 
-INSERT INTO `TMP_20180516113053_CODEGEN_VXMD17_ADS_imp_1_OUT` (`KEY`, impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11, impter_12, impter_13, impter_14, impter_15, impter_16, impter_17, impter_18, impter_19, impter_20, impter_21, impter_22, impter_23, impter_24, impter_25, impter_26, impter_27, impter_28, impter_29, impter_30, impter_31, impter_32, impter_33, impter_34, impter_35, impter_36, impter_37, impter_38, impter_39, impter_40, impter_41, impter_42, impter_43, impter_44, impter_45, impter_46, impter_47, impter_48, impter_49, impter_50, impter_51, impter_52, impter_53, impter_54, impter_55, impter_56, impter_57, impter_58, impter_59, impter_60, impter_61, impter_62, impter_63, impter_64, impter_65, impter_66, impter_67, impter_68, impter_69, impter_70, impter_71, impter_72, impter_73, impter_74, impter_75, impter_76, impter_77, impter_78, impter_79, impter_80, impter_81, impter_82, impter_83, impter_84, impter_85, impter_86, impter_87, impter_88, impter_89, impter_90, impter_91, impter_92, impter_93, impter_94, impter_95, impter_96, impter_97, impter_98, impter_99, impter_100, impter_101) SELECT `U`.`KEY`, `U`.impter_2, `U`.impter_3, `U`.impter_4, `U`.impter_5, `U`.impter_6, `U`.impter_7, `U`.impter_8, `U`.impter_9, `U`.impter_10, `U`.impter_11, `U`.impter_12, `U`.impter_13, `U`.impter_14, `U`.impter_15, `U`.impter_16, `U`.impter_17, `U`.impter_18, `U`.impter_19, `U`.impter_20, `U`.impter_21, `U`.impter_22, `U`.impter_23, `U`.impter_24, `U`.impter_25, `U`.impter_26, `U`.impter_27, `U`.impter_28, `U`.impter_29, `U`.impter_30, `U`.impter_31, `U`.impter_32, `U`.impter_33, `U`.impter_34, `U`.impter_35, `U`.impter_36, `U`.impter_37, `U`.impter_38, `U`.impter_39, `U`.impter_40, `U`.impter_41, `U`.impter_42, `U`.impter_43, `U`.impter_44, `U`.impter_45, `U`.impter_46, `U`.impter_47, `U`.impter_48, `U`.impter_49, `U`.impter_50, `U`.impter_51, `U`.impter_52, `U`.impter_53, `U`.impter_54, `U`.impter_55, `U`.impter_56, `U`.impter_57, `U`.impter_58, `U`.impter_59, `U`.impter_60, `U`.impter_61, `U`.impter_62, `U`.impter_63, `U`.impter_64, `U`.impter_65, `U`.impter_66, `U`.impter_67, `U`.impter_68, `U`.impter_69, `U`.impter_70, `U`.impter_71, `U`.impter_72, `U`.impter_73, `U`.impter_74, `U`.impter_75, `U`.impter_76, `U`.impter_77, `U`.impter_78, `U`.impter_79, `U`.impter_80, `U`.impter_81, `U`.impter_82, `U`.impter_83, `U`.impter_84, `U`.impter_85, `U`.impter_86, `U`.impter_87, `U`.impter_88, `U`.impter_89, `U`.impter_90, `U`.impter_91, `U`.impter_92, `U`.impter_93, `U`.impter_94, `U`.impter_95, `U`.impter_96, `U`.impter_97, `U`.impter_98, `U`.impter_99, `U`.impter_100, `U`.impter_101 
+INSERT INTO `TMP_20180602143835_EHN_ADS_imp_1_OUT` (`KEY`, impter_2, impter_3, impter_4, impter_5, impter_6, impter_7, impter_8, impter_9, impter_10, impter_11, impter_12, impter_13, impter_14, impter_15, impter_16, impter_17, impter_18, impter_19, impter_20, impter_21, impter_22, impter_23, impter_24, impter_25, impter_26, impter_27, impter_28, impter_29, impter_30, impter_31, impter_32, impter_33, impter_34, impter_35, impter_36, impter_37, impter_38, impter_39, impter_40, impter_41, impter_42, impter_43, impter_44, impter_45, impter_46, impter_47, impter_48, impter_49, impter_50, impter_51, impter_52, impter_53, impter_54, impter_55, impter_56, impter_57, impter_58, impter_59, impter_60, impter_61, impter_62, impter_63, impter_64, impter_65, impter_66, impter_67, impter_68, impter_69, impter_70, impter_71, impter_72, impter_73, impter_74, impter_75, impter_76, impter_77, impter_78, impter_79, impter_80, impter_81, impter_82, impter_83, impter_84, impter_85, impter_86, impter_87, impter_88, impter_89, impter_90, impter_91, impter_92, impter_93, impter_94, impter_95, impter_96, impter_97, impter_98, impter_99, impter_100, impter_101) SELECT `U`.`KEY`, `U`.impter_2, `U`.impter_3, `U`.impter_4, `U`.impter_5, `U`.impter_6, `U`.impter_7, `U`.impter_8, `U`.impter_9, `U`.impter_10, `U`.impter_11, `U`.impter_12, `U`.impter_13, `U`.impter_14, `U`.impter_15, `U`.impter_16, `U`.impter_17, `U`.impter_18, `U`.impter_19, `U`.impter_20, `U`.impter_21, `U`.impter_22, `U`.impter_23, `U`.impter_24, `U`.impter_25, `U`.impter_26, `U`.impter_27, `U`.impter_28, `U`.impter_29, `U`.impter_30, `U`.impter_31, `U`.impter_32, `U`.impter_33, `U`.impter_34, `U`.impter_35, `U`.impter_36, `U`.impter_37, `U`.impter_38, `U`.impter_39, `U`.impter_40, `U`.impter_41, `U`.impter_42, `U`.impter_43, `U`.impter_44, `U`.impter_45, `U`.impter_46, `U`.impter_47, `U`.impter_48, `U`.impter_49, `U`.impter_50, `U`.impter_51, `U`.impter_52, `U`.impter_53, `U`.impter_54, `U`.impter_55, `U`.impter_56, `U`.impter_57, `U`.impter_58, `U`.impter_59, `U`.impter_60, `U`.impter_61, `U`.impter_62, `U`.impter_63, `U`.impter_64, `U`.impter_65, `U`.impter_66, `U`.impter_67, `U`.impter_68, `U`.impter_69, `U`.impter_70, `U`.impter_71, `U`.impter_72, `U`.impter_73, `U`.impter_74, `U`.impter_75, `U`.impter_76, `U`.impter_77, `U`.impter_78, `U`.impter_79, `U`.impter_80, `U`.impter_81, `U`.impter_82, `U`.impter_83, `U`.impter_84, `U`.impter_85, `U`.impter_86, `U`.impter_87, `U`.impter_88, `U`.impter_89, `U`.impter_90, `U`.impter_91, `U`.impter_92, `U`.impter_93, `U`.impter_94, `U`.impter_95, `U`.impter_96, `U`.impter_97, `U`.impter_98, `U`.impter_99, `U`.impter_100, `U`.impter_101 
 FROM (SELECT `ADS_imp_1_OUT`.`KEY`, `ADS_imp_1_OUT`.impter_2, `ADS_imp_1_OUT`.impter_3, `ADS_imp_1_OUT`.impter_4, `ADS_imp_1_OUT`.impter_5, `ADS_imp_1_OUT`.impter_6, `ADS_imp_1_OUT`.impter_7, `ADS_imp_1_OUT`.impter_8, `ADS_imp_1_OUT`.impter_9, `ADS_imp_1_OUT`.impter_10, `ADS_imp_1_OUT`.impter_11, `ADS_imp_1_OUT`.impter_12, `ADS_imp_1_OUT`.impter_13, `ADS_imp_1_OUT`.impter_14, `ADS_imp_1_OUT`.impter_15, `ADS_imp_1_OUT`.impter_16, `ADS_imp_1_OUT`.impter_17, `ADS_imp_1_OUT`.impter_18, `ADS_imp_1_OUT`.impter_19, `ADS_imp_1_OUT`.impter_20, `ADS_imp_1_OUT`.impter_21, `ADS_imp_1_OUT`.impter_22, `ADS_imp_1_OUT`.impter_23, `ADS_imp_1_OUT`.impter_24, `ADS_imp_1_OUT`.impter_25, `ADS_imp_1_OUT`.impter_26, `ADS_imp_1_OUT`.impter_27, `ADS_imp_1_OUT`.impter_28, `ADS_imp_1_OUT`.impter_29, `ADS_imp_1_OUT`.impter_30, `ADS_imp_1_OUT`.impter_31, `ADS_imp_1_OUT`.impter_32, `ADS_imp_1_OUT`.impter_33, `ADS_imp_1_OUT`.impter_34, `ADS_imp_1_OUT`.impter_35, `ADS_imp_1_OUT`.impter_36, `ADS_imp_1_OUT`.impter_37, `ADS_imp_1_OUT`.impter_38, `ADS_imp_1_OUT`.impter_39, `ADS_imp_1_OUT`.impter_40, `ADS_imp_1_OUT`.impter_41, `ADS_imp_1_OUT`.impter_42, `ADS_imp_1_OUT`.impter_43, `ADS_imp_1_OUT`.impter_44, `ADS_imp_1_OUT`.impter_45, `ADS_imp_1_OUT`.impter_46, `ADS_imp_1_OUT`.impter_47, `ADS_imp_1_OUT`.impter_48, `ADS_imp_1_OUT`.impter_49, `ADS_imp_1_OUT`.impter_50, `ADS_imp_1_OUT`.impter_51, `ADS_imp_1_OUT`.impter_52, `ADS_imp_1_OUT`.impter_53, `ADS_imp_1_OUT`.impter_54, `ADS_imp_1_OUT`.impter_55, `ADS_imp_1_OUT`.impter_56, `ADS_imp_1_OUT`.impter_57, `ADS_imp_1_OUT`.impter_58, `ADS_imp_1_OUT`.impter_59, `ADS_imp_1_OUT`.impter_60, `ADS_imp_1_OUT`.impter_61, `ADS_imp_1_OUT`.impter_62, `ADS_imp_1_OUT`.impter_63, `ADS_imp_1_OUT`.impter_64, `ADS_imp_1_OUT`.impter_65, `ADS_imp_1_OUT`.impter_66, `ADS_imp_1_OUT`.impter_67, `ADS_imp_1_OUT`.impter_68, `ADS_imp_1_OUT`.impter_69, `ADS_imp_1_OUT`.impter_70, `ADS_imp_1_OUT`.impter_71, `ADS_imp_1_OUT`.impter_72, `ADS_imp_1_OUT`.impter_73, `ADS_imp_1_OUT`.impter_74, `ADS_imp_1_OUT`.impter_75, `ADS_imp_1_OUT`.impter_76, `ADS_imp_1_OUT`.impter_77, `ADS_imp_1_OUT`.impter_78, `ADS_imp_1_OUT`.impter_79, `ADS_imp_1_OUT`.impter_80, `ADS_imp_1_OUT`.impter_81, `ADS_imp_1_OUT`.impter_82, `ADS_imp_1_OUT`.impter_83, `ADS_imp_1_OUT`.impter_84, `ADS_imp_1_OUT`.impter_85, `ADS_imp_1_OUT`.impter_86, `ADS_imp_1_OUT`.impter_87, `ADS_imp_1_OUT`.impter_88, `ADS_imp_1_OUT`.impter_89, `ADS_imp_1_OUT`.impter_90, `ADS_imp_1_OUT`.impter_91, `ADS_imp_1_OUT`.impter_92, `ADS_imp_1_OUT`.impter_93, `ADS_imp_1_OUT`.impter_94, `ADS_imp_1_OUT`.impter_95, `ADS_imp_1_OUT`.impter_96, `ADS_imp_1_OUT`.impter_97, `ADS_imp_1_OUT`.impter_98, `ADS_imp_1_OUT`.impter_99, `ADS_imp_1_OUT`.impter_100, `ADS_imp_1_OUT`.impter_101 
 FROM (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_0` IS NULL) THEN -0.0014807007689716506 ELSE `ADS`.`Feature_0` END AS impter_2, CASE WHEN (`ADS`.`Feature_1` IS NULL) THEN 0.08599214990681354 ELSE `ADS`.`Feature_1` END AS impter_3, CASE WHEN (`ADS`.`Feature_2` IS NULL) THEN -0.006358164676411468 ELSE `ADS`.`Feature_2` END AS impter_4, CASE WHEN (`ADS`.`Feature_3` IS NULL) THEN -0.024301807422776375 ELSE `ADS`.`Feature_3` END AS impter_5, CASE WHEN (`ADS`.`Feature_4` IS NULL) THEN 0.015786548044298444 ELSE `ADS`.`Feature_4` END AS impter_6, CASE WHEN (`ADS`.`Feature_5` IS NULL) THEN -0.13959329445651672 ELSE `ADS`.`Feature_5` END AS impter_7, CASE WHEN (`ADS`.`Feature_6` IS NULL) THEN -0.06476745048019888 ELSE `ADS`.`Feature_6` END AS impter_8, CASE WHEN (`ADS`.`Feature_7` IS NULL) THEN 0.025579810774090658 ELSE `ADS`.`Feature_7` END AS impter_9, CASE WHEN (`ADS`.`Feature_8` IS NULL) THEN -0.03173937260977112 ELSE `ADS`.`Feature_8` END AS impter_10, CASE WHEN (`ADS`.`Feature_9` IS NULL) THEN -0.1518141420862488 ELSE `ADS`.`Feature_9` END AS impter_11, CASE WHEN (`ADS`.`Feature_10` IS NULL) THEN -0.13244576558492482 ELSE `ADS`.`Feature_10` END AS impter_12, CASE WHEN (`ADS`.`Feature_11` IS NULL) THEN 0.044172679762224144 ELSE `ADS`.`Feature_11` END AS impter_13, CASE WHEN (`ADS`.`Feature_12` IS NULL) THEN 0.010165946719810038 ELSE `ADS`.`Feature_12` END AS impter_14, CASE WHEN (`ADS`.`Feature_13` IS NULL) THEN -0.03645872019103299 ELSE `ADS`.`Feature_13` END AS impter_15, CASE WHEN (`ADS`.`Feature_14` IS NULL) THEN 0.06491512811593925 ELSE `ADS`.`Feature_14` END AS impter_16, CASE WHEN (`ADS`.`Feature_15` IS NULL) THEN -0.11930146867074032 ELSE `ADS`.`Feature_15` END AS impter_17, CASE WHEN (`ADS`.`Feature_16` IS NULL) THEN 0.007738863934852773 ELSE `ADS`.`Feature_16` END AS impter_18, CASE WHEN (`ADS`.`Feature_17` IS NULL) THEN -0.1226774060147726 ELSE `ADS`.`Feature_17` END AS impter_19, CASE WHEN (`ADS`.`Feature_18` IS NULL) THEN 0.019160881669086405 ELSE `ADS`.`Feature_18` END AS impter_20, CASE WHEN (`ADS`.`Feature_19` IS NULL) THEN -0.26340351121131067 ELSE `ADS`.`Feature_19` END AS impter_21, CASE WHEN (`ADS`.`Feature_20` IS NULL) THEN 0.035692361937735194 ELSE `ADS`.`Feature_20` END AS impter_22, CASE WHEN (`ADS`.`Feature_21` IS NULL) THEN -0.010021324964069293 ELSE `ADS`.`Feature_21` END AS impter_23, CASE WHEN (`ADS`.`Feature_22` IS NULL) THEN -0.1258614387723542 ELSE `ADS`.`Feature_22` END AS impter_24, CASE WHEN (`ADS`.`Feature_23` IS NULL) THEN 0.09372773898231128 ELSE `ADS`.`Feature_23` END AS impter_25, CASE WHEN (`ADS`.`Feature_24` IS NULL) THEN -0.1687929597880227 ELSE `ADS`.`Feature_24` END AS impter_26, CASE WHEN (`ADS`.`Feature_25` IS NULL) THEN 0.10006283199629364 ELSE `ADS`.`Feature_25` END AS impter_27, CASE WHEN (`ADS`.`Feature_26` IS NULL) THEN -0.10297858086822659 ELSE `ADS`.`Feature_26` END AS impter_28, CASE WHEN (`ADS`.`Feature_27` IS NULL) THEN 0.19240514535870415 ELSE `ADS`.`Feature_27` END AS impter_29, CASE WHEN (`ADS`.`Feature_28` IS NULL) THEN -0.052866434246092435 ELSE `ADS`.`Feature_28` END AS impter_30, CASE WHEN (`ADS`.`Feature_29` IS NULL) THEN 0.2624612146366151 ELSE `ADS`.`Feature_29` END AS impter_31, CASE WHEN (`ADS`.`Feature_30` IS NULL) THEN 0.002677575140361194 ELSE `ADS`.`Feature_30` END AS impter_32, CASE WHEN (`ADS`.`Feature_31` IS NULL) THEN 0.09707041941284063 ELSE `ADS`.`Feature_31` END AS impter_33, CASE WHEN (`ADS`.`Feature_32` IS NULL) THEN -0.032793219857333473 ELSE `ADS`.`Feature_32` END AS impter_34, CASE WHEN (`ADS`.`Feature_33` IS NULL) THEN -0.003130273745908922 ELSE `ADS`.`Feature_33` END AS impter_35, CASE WHEN (`ADS`.`Feature_34` IS NULL) THEN 0.053446276216279974 ELSE `ADS`.`Feature_34` END AS impter_36, CASE WHEN (`ADS`.`Feature_35` IS NULL) THEN -0.18668146437412367 ELSE `ADS`.`Feature_35` END AS impter_37, CASE WHEN (`ADS`.`Feature_36` IS NULL) THEN -0.029335964960866243 ELSE `ADS`.`Feature_36` END AS impter_38, CASE WHEN (`ADS`.`Feature_37` IS NULL) THEN 0.07219772199502426 ELSE `ADS`.`Feature_37` END AS impter_39, CASE WHEN (`ADS`.`Feature_38` IS NULL) THEN -0.0007762839781489412 ELSE `ADS`.`Feature_38` END AS impter_40, CASE WHEN (`ADS`.`Feature_39` IS NULL) THEN 0.08270823712098274 ELSE `ADS`.`Feature_39` END AS impter_41, CASE WHEN (`ADS`.`Feature_40` IS NULL) THEN 0.10432022852347983 ELSE `ADS`.`Feature_40` END AS impter_42, CASE WHEN (`ADS`.`Feature_41` IS NULL) THEN 0.07058566385022276 ELSE `ADS`.`Feature_41` END AS impter_43, CASE WHEN (`ADS`.`Feature_42` IS NULL) THEN 0.05096693098357383 ELSE `ADS`.`Feature_42` END AS impter_44, CASE WHEN (`ADS`.`Feature_43` IS NULL) THEN 0.0660758203367818 ELSE `ADS`.`Feature_43` END AS impter_45, CASE WHEN (`ADS`.`Feature_44` IS NULL) THEN -0.07075895636353369 ELSE `ADS`.`Feature_44` END AS impter_46, CASE WHEN (`ADS`.`Feature_45` IS NULL) THEN 0.08422536561649958 ELSE `ADS`.`Feature_45` END AS impter_47, CASE WHEN (`ADS`.`Feature_46` IS NULL) THEN 0.21367580667795616 ELSE `ADS`.`Feature_46` END AS impter_48, CASE WHEN (`ADS`.`Feature_47` IS NULL) THEN -0.055897457335624984 ELSE `ADS`.`Feature_47` END AS impter_49, CASE WHEN (`ADS`.`Feature_48` IS NULL) THEN -0.17453036726139817 ELSE `ADS`.`Feature_48` END AS impter_50, CASE WHEN (`ADS`.`Feature_49` IS NULL) THEN -0.054944001818473996 ELSE `ADS`.`Feature_49` END AS impter_51, CASE WHEN (`ADS`.`Feature_50` IS NULL) THEN -0.5961651261710368 ELSE `ADS`.`Feature_50` END AS impter_52, CASE WHEN (`ADS`.`Feature_51` IS NULL) THEN 0.5020404526565605 ELSE `ADS`.`Feature_51` END AS impter_53, CASE WHEN (`ADS`.`Feature_52` IS NULL) THEN -0.052340545201383926 ELSE `ADS`.`Feature_52` END AS impter_54, CASE WHEN (`ADS`.`Feature_53` IS NULL) THEN 0.05294307611674654 ELSE `ADS`.`Feature_53` END AS impter_55, CASE WHEN (`ADS`.`Feature_54` IS NULL) THEN 0.03835884479069335 ELSE `ADS`.`Feature_54` END AS impter_56, CASE WHEN (`ADS`.`Feature_55` IS NULL) THEN -0.13571979014964694 ELSE `ADS`.`Feature_55` END AS impter_57, CASE WHEN (`ADS`.`Feature_56` IS NULL) THEN -0.21903068431411843 ELSE `ADS`.`Feature_56` END AS impter_58, CASE WHEN (`ADS`.`Feature_57` IS NULL) THEN -0.1191752362029383 ELSE `ADS`.`Feature_57` END AS impter_59, CASE WHEN (`ADS`.`Feature_58` IS NULL) THEN 0.38058346912807667 ELSE `ADS`.`Feature_58` END AS impter_60, CASE WHEN (`ADS`.`Feature_59` IS NULL) THEN -0.12720928974168508 ELSE `ADS`.`Feature_59` END AS impter_61, CASE WHEN (`ADS`.`Feature_60` IS NULL) THEN -0.09072936496613782 ELSE `ADS`.`Feature_60` END AS impter_62, CASE WHEN (`ADS`.`Feature_61` IS NULL) THEN -0.03915125937954538 ELSE `ADS`.`Feature_61` END AS impter_63, CASE WHEN (`ADS`.`Feature_62` IS NULL) THEN 0.07075412393313481 ELSE `ADS`.`Feature_62` END AS impter_64, CASE WHEN (`ADS`.`Feature_63` IS NULL) THEN 0.10124894587016948 ELSE `ADS`.`Feature_63` END AS impter_65, CASE WHEN (`ADS`.`Feature_64` IS NULL) THEN -0.1945661449475579 ELSE `ADS`.`Feature_64` END AS impter_66, CASE WHEN (`ADS`.`Feature_65` IS NULL) THEN -0.1759482981261233 ELSE `ADS`.`Feature_65` END AS impter_67, CASE WHEN (`ADS`.`Feature_66` IS NULL) THEN 0.07473228971855511 ELSE `ADS`.`Feature_66` END AS impter_68, CASE WHEN (`ADS`.`Feature_67` IS NULL) THEN 0.0377705562115906 ELSE `ADS`.`Feature_67` END AS impter_69, CASE WHEN (`ADS`.`Feature_68` IS NULL) THEN 0.0139470898598917 ELSE `ADS`.`Feature_68` END AS impter_70, CASE WHEN (`ADS`.`Feature_69` IS NULL) THEN 0.2582685725145942 ELSE `ADS`.`Feature_69` END AS impter_71, CASE WHEN (`ADS`.`Feature_70` IS NULL) THEN 0.022975786233048922 ELSE `ADS`.`Feature_70` END AS impter_72, CASE WHEN (`ADS`.`Feature_71` IS NULL) THEN 0.17445434061949525 ELSE `ADS`.`Feature_71` END AS impter_73, CASE WHEN (`ADS`.`Feature_72` IS NULL) THEN -0.011413879692078346 ELSE `ADS`.`Feature_72` END AS impter_74, CASE WHEN (`ADS`.`Feature_73` IS NULL) THEN 0.07898984156871978 ELSE `ADS`.`Feature_73` END AS impter_75, CASE WHEN (`ADS`.`Feature_74` IS NULL) THEN 0.0952547273770713 ELSE `ADS`.`Feature_74` END AS impter_76, CASE WHEN (`ADS`.`Feature_75` IS NULL) THEN -0.03997776839639901 ELSE `ADS`.`Feature_75` END AS impter_77, CASE WHEN (`ADS`.`Feature_76` IS NULL) THEN -0.020839895874293496 ELSE `ADS`.`Feature_76` END AS impter_78, CASE WHEN (`ADS`.`Feature_77` IS NULL) THEN -0.07284631986613152 ELSE `ADS`.`Feature_77` END AS impter_79, CASE WHEN (`ADS`.`Feature_78` IS NULL) THEN -0.27389951764434384 ELSE `ADS`.`Feature_78` END AS impter_80, CASE WHEN (`ADS`.`Feature_79` IS NULL) THEN 0.08057287885287609 ELSE `ADS`.`Feature_79` END AS impter_81, CASE WHEN (`ADS`.`Feature_80` IS NULL) THEN -0.06244274245437891 ELSE `ADS`.`Feature_80` END AS impter_82, CASE WHEN (`ADS`.`Feature_81` IS NULL) THEN -0.12290855334066887 ELSE `ADS`.`Feature_81` END AS impter_83, CASE WHEN (`ADS`.`Feature_82` IS NULL) THEN 0.11639531793890918 ELSE `ADS`.`Feature_82` END AS impter_84, CASE WHEN (`ADS`.`Feature_83` IS NULL) THEN -0.03350462786128603 ELSE `ADS`.`Feature_83` END AS impter_85, CASE WHEN (`ADS`.`Feature_84` IS NULL) THEN -0.03914049968144583 ELSE `ADS`.`Feature_84` END AS impter_86, CASE WHEN (`ADS`.`Feature_85` IS NULL) THEN 0.24193903072305167 ELSE `ADS`.`Feature_85` END AS impter_87, CASE WHEN (`ADS`.`Feature_86` IS NULL) THEN -0.07389719862221904 ELSE `ADS`.`Feature_86` END AS impter_88, CASE WHEN (`ADS`.`Feature_87` IS NULL) THEN 0.1400756228320113 ELSE `ADS`.`Feature_87` END AS impter_89, CASE WHEN (`ADS`.`Feature_88` IS NULL) THEN 0.2765301935136145 ELSE `ADS`.`Feature_88` END AS impter_90, CASE WHEN (`ADS`.`Feature_89` IS NULL) THEN -0.07957147169250885 ELSE `ADS`.`Feature_89` END AS impter_91, CASE WHEN (`ADS`.`Feature_90` IS NULL) THEN 0.16295767680642717 ELSE `ADS`.`Feature_90` END AS impter_92, CASE WHEN (`ADS`.`Feature_91` IS NULL) THEN 0.07062813888509549 ELSE `ADS`.`Feature_91` END AS impter_93, CASE WHEN (`ADS`.`Feature_92` IS NULL) THEN 0.012995630151896219 ELSE `ADS`.`Feature_92` END AS impter_94, CASE WHEN (`ADS`.`Feature_93` IS NULL) THEN 0.1055212408190415 ELSE `ADS`.`Feature_93` END AS impter_95, CASE WHEN (`ADS`.`Feature_94` IS NULL) THEN -0.1408434425354362 ELSE `ADS`.`Feature_94` END AS impter_96, CASE WHEN (`ADS`.`Feature_95` IS NULL) THEN -0.1574012366732725 ELSE `ADS`.`Feature_95` END AS impter_97, CASE WHEN (`ADS`.`Feature_96` IS NULL) THEN 0.05477536676313335 ELSE `ADS`.`Feature_96` END AS impter_98, CASE WHEN (`ADS`.`Feature_97` IS NULL) THEN 0.05673272205919614 ELSE `ADS`.`Feature_97` END AS impter_99, CASE WHEN (`ADS`.`Feature_98` IS NULL) THEN -0.14226649213619527 ELSE `ADS`.`Feature_98` END AS impter_100, CASE WHEN (`ADS`.`Feature_99` IS NULL) THEN -0.04042675289131955 ELSE `ADS`.`Feature_99` END AS impter_101 
 FROM `FourClass_100` AS `ADS`) AS `ADS_imp_1_OUT`) AS `U`
 
--- Code For temporary table TMP_20180516113053_CODEGEN_VXMD17_ADS_imp_1_OUT part 3. Create Index 
+-- Code For temporary table TMP_20180602143835_EHN_ADS_imp_1_OUT part 3. Create Index 
 
-CREATE INDEX `ix_TMP_20180516113053_CODEGEN_VXMD17_ADS_imp_1_OUT_KEY` ON `TMP_20180516113053_CODEGEN_VXMD17_ADS_imp_1_OUT` (`KEY`)
+CREATE INDEX `ix_TMP_20180602143835_EHN_ADS_imp_1_OUT_KEY` ON `TMP_20180602143835_EHN_ADS_imp_1_OUT` (`KEY`)
 
--- Code For temporary table TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT part 1. Create 
+-- Code For temporary table TMP_20180602143835_ROL_ADS_sca_2_OUT part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` (
+CREATE TEMPORARY TABLE `TMP_20180602143835_ROL_ADS_sca_2_OUT` (
 	`KEY` BIGINT NOT NULL, 
 	scaler_2 DOUBLE, 
 	scaler_3 DOUBLE, 
@@ -241,21 +241,21 @@ CREATE TEMPORARY TABLE `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT part 2. Populate
+-- Code For temporary table TMP_20180602143835_ROL_ADS_sca_2_OUT part 2. Populate
 
-INSERT INTO `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` (`KEY`, scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11, scaler_12, scaler_13, scaler_14, scaler_15, scaler_16, scaler_17, scaler_18, scaler_19, scaler_20, scaler_21, scaler_22, scaler_23, scaler_24, scaler_25, scaler_26, scaler_27, scaler_28, scaler_29, scaler_30, scaler_31, scaler_32, scaler_33, scaler_34, scaler_35, scaler_36, scaler_37, scaler_38, scaler_39, scaler_40, scaler_41, scaler_42, scaler_43, scaler_44, scaler_45, scaler_46, scaler_47, scaler_48, scaler_49, scaler_50, scaler_51, scaler_52, scaler_53, scaler_54, scaler_55, scaler_56, scaler_57, scaler_58, scaler_59, scaler_60, scaler_61, scaler_62, scaler_63, scaler_64, scaler_65, scaler_66, scaler_67, scaler_68, scaler_69, scaler_70, scaler_71, scaler_72, scaler_73, scaler_74, scaler_75, scaler_76, scaler_77, scaler_78, scaler_79, scaler_80, scaler_81, scaler_82, scaler_83, scaler_84, scaler_85, scaler_86, scaler_87, scaler_88, scaler_89, scaler_90, scaler_91, scaler_92, scaler_93, scaler_94, scaler_95, scaler_96, scaler_97, scaler_98, scaler_99, scaler_100, scaler_101) SELECT `U`.`KEY`, `U`.scaler_2, `U`.scaler_3, `U`.scaler_4, `U`.scaler_5, `U`.scaler_6, `U`.scaler_7, `U`.scaler_8, `U`.scaler_9, `U`.scaler_10, `U`.scaler_11, `U`.scaler_12, `U`.scaler_13, `U`.scaler_14, `U`.scaler_15, `U`.scaler_16, `U`.scaler_17, `U`.scaler_18, `U`.scaler_19, `U`.scaler_20, `U`.scaler_21, `U`.scaler_22, `U`.scaler_23, `U`.scaler_24, `U`.scaler_25, `U`.scaler_26, `U`.scaler_27, `U`.scaler_28, `U`.scaler_29, `U`.scaler_30, `U`.scaler_31, `U`.scaler_32, `U`.scaler_33, `U`.scaler_34, `U`.scaler_35, `U`.scaler_36, `U`.scaler_37, `U`.scaler_38, `U`.scaler_39, `U`.scaler_40, `U`.scaler_41, `U`.scaler_42, `U`.scaler_43, `U`.scaler_44, `U`.scaler_45, `U`.scaler_46, `U`.scaler_47, `U`.scaler_48, `U`.scaler_49, `U`.scaler_50, `U`.scaler_51, `U`.scaler_52, `U`.scaler_53, `U`.scaler_54, `U`.scaler_55, `U`.scaler_56, `U`.scaler_57, `U`.scaler_58, `U`.scaler_59, `U`.scaler_60, `U`.scaler_61, `U`.scaler_62, `U`.scaler_63, `U`.scaler_64, `U`.scaler_65, `U`.scaler_66, `U`.scaler_67, `U`.scaler_68, `U`.scaler_69, `U`.scaler_70, `U`.scaler_71, `U`.scaler_72, `U`.scaler_73, `U`.scaler_74, `U`.scaler_75, `U`.scaler_76, `U`.scaler_77, `U`.scaler_78, `U`.scaler_79, `U`.scaler_80, `U`.scaler_81, `U`.scaler_82, `U`.scaler_83, `U`.scaler_84, `U`.scaler_85, `U`.scaler_86, `U`.scaler_87, `U`.scaler_88, `U`.scaler_89, `U`.scaler_90, `U`.scaler_91, `U`.scaler_92, `U`.scaler_93, `U`.scaler_94, `U`.scaler_95, `U`.scaler_96, `U`.scaler_97, `U`.scaler_98, `U`.scaler_99, `U`.scaler_100, `U`.scaler_101 
+INSERT INTO `TMP_20180602143835_ROL_ADS_sca_2_OUT` (`KEY`, scaler_2, scaler_3, scaler_4, scaler_5, scaler_6, scaler_7, scaler_8, scaler_9, scaler_10, scaler_11, scaler_12, scaler_13, scaler_14, scaler_15, scaler_16, scaler_17, scaler_18, scaler_19, scaler_20, scaler_21, scaler_22, scaler_23, scaler_24, scaler_25, scaler_26, scaler_27, scaler_28, scaler_29, scaler_30, scaler_31, scaler_32, scaler_33, scaler_34, scaler_35, scaler_36, scaler_37, scaler_38, scaler_39, scaler_40, scaler_41, scaler_42, scaler_43, scaler_44, scaler_45, scaler_46, scaler_47, scaler_48, scaler_49, scaler_50, scaler_51, scaler_52, scaler_53, scaler_54, scaler_55, scaler_56, scaler_57, scaler_58, scaler_59, scaler_60, scaler_61, scaler_62, scaler_63, scaler_64, scaler_65, scaler_66, scaler_67, scaler_68, scaler_69, scaler_70, scaler_71, scaler_72, scaler_73, scaler_74, scaler_75, scaler_76, scaler_77, scaler_78, scaler_79, scaler_80, scaler_81, scaler_82, scaler_83, scaler_84, scaler_85, scaler_86, scaler_87, scaler_88, scaler_89, scaler_90, scaler_91, scaler_92, scaler_93, scaler_94, scaler_95, scaler_96, scaler_97, scaler_98, scaler_99, scaler_100, scaler_101) SELECT `U`.`KEY`, `U`.scaler_2, `U`.scaler_3, `U`.scaler_4, `U`.scaler_5, `U`.scaler_6, `U`.scaler_7, `U`.scaler_8, `U`.scaler_9, `U`.scaler_10, `U`.scaler_11, `U`.scaler_12, `U`.scaler_13, `U`.scaler_14, `U`.scaler_15, `U`.scaler_16, `U`.scaler_17, `U`.scaler_18, `U`.scaler_19, `U`.scaler_20, `U`.scaler_21, `U`.scaler_22, `U`.scaler_23, `U`.scaler_24, `U`.scaler_25, `U`.scaler_26, `U`.scaler_27, `U`.scaler_28, `U`.scaler_29, `U`.scaler_30, `U`.scaler_31, `U`.scaler_32, `U`.scaler_33, `U`.scaler_34, `U`.scaler_35, `U`.scaler_36, `U`.scaler_37, `U`.scaler_38, `U`.scaler_39, `U`.scaler_40, `U`.scaler_41, `U`.scaler_42, `U`.scaler_43, `U`.scaler_44, `U`.scaler_45, `U`.scaler_46, `U`.scaler_47, `U`.scaler_48, `U`.scaler_49, `U`.scaler_50, `U`.scaler_51, `U`.scaler_52, `U`.scaler_53, `U`.scaler_54, `U`.scaler_55, `U`.scaler_56, `U`.scaler_57, `U`.scaler_58, `U`.scaler_59, `U`.scaler_60, `U`.scaler_61, `U`.scaler_62, `U`.scaler_63, `U`.scaler_64, `U`.scaler_65, `U`.scaler_66, `U`.scaler_67, `U`.scaler_68, `U`.scaler_69, `U`.scaler_70, `U`.scaler_71, `U`.scaler_72, `U`.scaler_73, `U`.scaler_74, `U`.scaler_75, `U`.scaler_76, `U`.scaler_77, `U`.scaler_78, `U`.scaler_79, `U`.scaler_80, `U`.scaler_81, `U`.scaler_82, `U`.scaler_83, `U`.scaler_84, `U`.scaler_85, `U`.scaler_86, `U`.scaler_87, `U`.scaler_88, `U`.scaler_89, `U`.scaler_90, `U`.scaler_91, `U`.scaler_92, `U`.scaler_93, `U`.scaler_94, `U`.scaler_95, `U`.scaler_96, `U`.scaler_97, `U`.scaler_98, `U`.scaler_99, `U`.scaler_100, `U`.scaler_101 
 FROM (SELECT `ADS_sca_2_OUT`.`KEY`, `ADS_sca_2_OUT`.scaler_2, `ADS_sca_2_OUT`.scaler_3, `ADS_sca_2_OUT`.scaler_4, `ADS_sca_2_OUT`.scaler_5, `ADS_sca_2_OUT`.scaler_6, `ADS_sca_2_OUT`.scaler_7, `ADS_sca_2_OUT`.scaler_8, `ADS_sca_2_OUT`.scaler_9, `ADS_sca_2_OUT`.scaler_10, `ADS_sca_2_OUT`.scaler_11, `ADS_sca_2_OUT`.scaler_12, `ADS_sca_2_OUT`.scaler_13, `ADS_sca_2_OUT`.scaler_14, `ADS_sca_2_OUT`.scaler_15, `ADS_sca_2_OUT`.scaler_16, `ADS_sca_2_OUT`.scaler_17, `ADS_sca_2_OUT`.scaler_18, `ADS_sca_2_OUT`.scaler_19, `ADS_sca_2_OUT`.scaler_20, `ADS_sca_2_OUT`.scaler_21, `ADS_sca_2_OUT`.scaler_22, `ADS_sca_2_OUT`.scaler_23, `ADS_sca_2_OUT`.scaler_24, `ADS_sca_2_OUT`.scaler_25, `ADS_sca_2_OUT`.scaler_26, `ADS_sca_2_OUT`.scaler_27, `ADS_sca_2_OUT`.scaler_28, `ADS_sca_2_OUT`.scaler_29, `ADS_sca_2_OUT`.scaler_30, `ADS_sca_2_OUT`.scaler_31, `ADS_sca_2_OUT`.scaler_32, `ADS_sca_2_OUT`.scaler_33, `ADS_sca_2_OUT`.scaler_34, `ADS_sca_2_OUT`.scaler_35, `ADS_sca_2_OUT`.scaler_36, `ADS_sca_2_OUT`.scaler_37, `ADS_sca_2_OUT`.scaler_38, `ADS_sca_2_OUT`.scaler_39, `ADS_sca_2_OUT`.scaler_40, `ADS_sca_2_OUT`.scaler_41, `ADS_sca_2_OUT`.scaler_42, `ADS_sca_2_OUT`.scaler_43, `ADS_sca_2_OUT`.scaler_44, `ADS_sca_2_OUT`.scaler_45, `ADS_sca_2_OUT`.scaler_46, `ADS_sca_2_OUT`.scaler_47, `ADS_sca_2_OUT`.scaler_48, `ADS_sca_2_OUT`.scaler_49, `ADS_sca_2_OUT`.scaler_50, `ADS_sca_2_OUT`.scaler_51, `ADS_sca_2_OUT`.scaler_52, `ADS_sca_2_OUT`.scaler_53, `ADS_sca_2_OUT`.scaler_54, `ADS_sca_2_OUT`.scaler_55, `ADS_sca_2_OUT`.scaler_56, `ADS_sca_2_OUT`.scaler_57, `ADS_sca_2_OUT`.scaler_58, `ADS_sca_2_OUT`.scaler_59, `ADS_sca_2_OUT`.scaler_60, `ADS_sca_2_OUT`.scaler_61, `ADS_sca_2_OUT`.scaler_62, `ADS_sca_2_OUT`.scaler_63, `ADS_sca_2_OUT`.scaler_64, `ADS_sca_2_OUT`.scaler_65, `ADS_sca_2_OUT`.scaler_66, `ADS_sca_2_OUT`.scaler_67, `ADS_sca_2_OUT`.scaler_68, `ADS_sca_2_OUT`.scaler_69, `ADS_sca_2_OUT`.scaler_70, `ADS_sca_2_OUT`.scaler_71, `ADS_sca_2_OUT`.scaler_72, `ADS_sca_2_OUT`.scaler_73, `ADS_sca_2_OUT`.scaler_74, `ADS_sca_2_OUT`.scaler_75, `ADS_sca_2_OUT`.scaler_76, `ADS_sca_2_OUT`.scaler_77, `ADS_sca_2_OUT`.scaler_78, `ADS_sca_2_OUT`.scaler_79, `ADS_sca_2_OUT`.scaler_80, `ADS_sca_2_OUT`.scaler_81, `ADS_sca_2_OUT`.scaler_82, `ADS_sca_2_OUT`.scaler_83, `ADS_sca_2_OUT`.scaler_84, `ADS_sca_2_OUT`.scaler_85, `ADS_sca_2_OUT`.scaler_86, `ADS_sca_2_OUT`.scaler_87, `ADS_sca_2_OUT`.scaler_88, `ADS_sca_2_OUT`.scaler_89, `ADS_sca_2_OUT`.scaler_90, `ADS_sca_2_OUT`.scaler_91, `ADS_sca_2_OUT`.scaler_92, `ADS_sca_2_OUT`.scaler_93, `ADS_sca_2_OUT`.scaler_94, `ADS_sca_2_OUT`.scaler_95, `ADS_sca_2_OUT`.scaler_96, `ADS_sca_2_OUT`.scaler_97, `ADS_sca_2_OUT`.scaler_98, `ADS_sca_2_OUT`.scaler_99, `ADS_sca_2_OUT`.scaler_100, `ADS_sca_2_OUT`.scaler_101 
 FROM (SELECT `ADS_imp_1_OUT`.`KEY` AS `KEY`, (CAST(`ADS_imp_1_OUT`.impter_2 AS DOUBLE) - -0.0014807007689716506) / 0.9211229790312512 AS scaler_2, (CAST(`ADS_imp_1_OUT`.impter_3 AS DOUBLE) - 0.08599214990681354) / 0.9627516809237073 AS scaler_3, (CAST(`ADS_imp_1_OUT`.impter_4 AS DOUBLE) - -0.006358164676411468) / 0.7890687835102894 AS scaler_4, (CAST(`ADS_imp_1_OUT`.impter_5 AS DOUBLE) - -0.024301807422776375) / 1.0265272189083172 AS scaler_5, (CAST(`ADS_imp_1_OUT`.impter_6 AS DOUBLE) - 0.015786548044298444) / 1.0198090908026474 AS scaler_6, (CAST(`ADS_imp_1_OUT`.impter_7 AS DOUBLE) - -0.13959329445651672) / 0.9185551763293686 AS scaler_7, (CAST(`ADS_imp_1_OUT`.impter_8 AS DOUBLE) - -0.06476745048019888) / 1.0393547249617474 AS scaler_8, (CAST(`ADS_imp_1_OUT`.impter_9 AS DOUBLE) - 0.025579810774090658) / 0.8722131294644917 AS scaler_9, (CAST(`ADS_imp_1_OUT`.impter_10 AS DOUBLE) - -0.03173937260977112) / 1.0164588299091024 AS scaler_10, (CAST(`ADS_imp_1_OUT`.impter_11 AS DOUBLE) - -0.1518141420862488) / 1.0075402114297496 AS scaler_11, (CAST(`ADS_imp_1_OUT`.impter_12 AS DOUBLE) - -0.13244576558492482) / 0.9215325459816371 AS scaler_12, (CAST(`ADS_imp_1_OUT`.impter_13 AS DOUBLE) - 0.044172679762224144) / 0.9053279964066308 AS scaler_13, (CAST(`ADS_imp_1_OUT`.impter_14 AS DOUBLE) - 0.010165946719810038) / 1.2190371046063362 AS scaler_14, (CAST(`ADS_imp_1_OUT`.impter_15 AS DOUBLE) - -0.03645872019103299) / 1.0879005786584215 AS scaler_15, (CAST(`ADS_imp_1_OUT`.impter_16 AS DOUBLE) - 0.06491512811593925) / 1.0274670201407186 AS scaler_16, (CAST(`ADS_imp_1_OUT`.impter_17 AS DOUBLE) - -0.11930146867074032) / 0.9506312349761404 AS scaler_17, (CAST(`ADS_imp_1_OUT`.impter_18 AS DOUBLE) - 0.007738863934852773) / 1.0928477585203984 AS scaler_18, (CAST(`ADS_imp_1_OUT`.impter_19 AS DOUBLE) - -0.1226774060147726) / 0.9830561715965196 AS scaler_19, (CAST(`ADS_imp_1_OUT`.impter_20 AS DOUBLE) - 0.019160881669086405) / 1.2117417920836373 AS scaler_20, (CAST(`ADS_imp_1_OUT`.impter_21 AS DOUBLE) - -0.26340351121131067) / 0.9807419262255984 AS scaler_21, (CAST(`ADS_imp_1_OUT`.impter_22 AS DOUBLE) - 0.035692361937735194) / 1.115824498468156 AS scaler_22, (CAST(`ADS_imp_1_OUT`.impter_23 AS DOUBLE) - -0.010021324964069293) / 1.0790959803413318 AS scaler_23, (CAST(`ADS_imp_1_OUT`.impter_24 AS DOUBLE) - -0.1258614387723542) / 1.0279672611547366 AS scaler_24, (CAST(`ADS_imp_1_OUT`.impter_25 AS DOUBLE) - 0.09372773898231128) / 0.9690760299303989 AS scaler_25, (CAST(`ADS_imp_1_OUT`.impter_26 AS DOUBLE) - -0.1687929597880227) / 0.8845858581996813 AS scaler_26, (CAST(`ADS_imp_1_OUT`.impter_27 AS DOUBLE) - 0.10006283199629364) / 0.9149346104000894 AS scaler_27, (CAST(`ADS_imp_1_OUT`.impter_28 AS DOUBLE) - -0.10297858086822659) / 1.0761397500557328 AS scaler_28, (CAST(`ADS_imp_1_OUT`.impter_29 AS DOUBLE) - 0.19240514535870415) / 2.089882492597775 AS scaler_29, (CAST(`ADS_imp_1_OUT`.impter_30 AS DOUBLE) - -0.052866434246092435) / 1.0030777529896888 AS scaler_30, (CAST(`ADS_imp_1_OUT`.impter_31 AS DOUBLE) - 0.2624612146366151) / 1.9778491038473625 AS scaler_31, (CAST(`ADS_imp_1_OUT`.impter_32 AS DOUBLE) - 0.002677575140361194) / 0.8833924915211555 AS scaler_32, (CAST(`ADS_imp_1_OUT`.impter_33 AS DOUBLE) - 0.09707041941284063) / 0.8720005351713555 AS scaler_33, (CAST(`ADS_imp_1_OUT`.impter_34 AS DOUBLE) - -0.032793219857333473) / 0.8745989090443193 AS scaler_34, (CAST(`ADS_imp_1_OUT`.impter_35 AS DOUBLE) - -0.003130273745908922) / 0.9967699097535561 AS scaler_35, (CAST(`ADS_imp_1_OUT`.impter_36 AS DOUBLE) - 0.053446276216279974) / 0.9997289112199433 AS scaler_36, (CAST(`ADS_imp_1_OUT`.impter_37 AS DOUBLE) - -0.18668146437412367) / 1.0272287171310865 AS scaler_37, (CAST(`ADS_imp_1_OUT`.impter_38 AS DOUBLE) - -0.029335964960866243) / 1.0427555960451658 AS scaler_38, (CAST(`ADS_imp_1_OUT`.impter_39 AS DOUBLE) - 0.07219772199502426) / 0.8328229890456742 AS scaler_39, (CAST(`ADS_imp_1_OUT`.impter_40 AS DOUBLE) - -0.0007762839781489412) / 0.9666524356457794 AS scaler_40, (CAST(`ADS_imp_1_OUT`.impter_41 AS DOUBLE) - 0.08270823712098274) / 1.083670494683493 AS scaler_41, (CAST(`ADS_imp_1_OUT`.impter_42 AS DOUBLE) - 0.10432022852347983) / 1.075472547982714 AS scaler_42, (CAST(`ADS_imp_1_OUT`.impter_43 AS DOUBLE) - 0.07058566385022276) / 0.9993462791463713 AS scaler_43, (CAST(`ADS_imp_1_OUT`.impter_44 AS DOUBLE) - 0.05096693098357383) / 0.8876971252794036 AS scaler_44, (CAST(`ADS_imp_1_OUT`.impter_45 AS DOUBLE) - 0.0660758203367818) / 1.041246125313479 AS scaler_45, (CAST(`ADS_imp_1_OUT`.impter_46 AS DOUBLE) - -0.07075895636353369) / 2.238310207242139 AS scaler_46, (CAST(`ADS_imp_1_OUT`.impter_47 AS DOUBLE) - 0.08422536561649958) / 0.9520959686676432 AS scaler_47, (CAST(`ADS_imp_1_OUT`.impter_48 AS DOUBLE) - 0.21367580667795616) / 0.9907230316111766 AS scaler_48, (CAST(`ADS_imp_1_OUT`.impter_49 AS DOUBLE) - -0.055897457335624984) / 1.0392400714320487 AS scaler_49, (CAST(`ADS_imp_1_OUT`.impter_50 AS DOUBLE) - -0.17453036726139817) / 2.001507098381001 AS scaler_50, (CAST(`ADS_imp_1_OUT`.impter_51 AS DOUBLE) - -0.054944001818473996) / 1.0041645540091246 AS scaler_51, (CAST(`ADS_imp_1_OUT`.impter_52 AS DOUBLE) - -0.5961651261710368) / 2.467511153399545 AS scaler_52, (CAST(`ADS_imp_1_OUT`.impter_53 AS DOUBLE) - 0.5020404526565605) / 2.1929325118287792 AS scaler_53, (CAST(`ADS_imp_1_OUT`.impter_54 AS DOUBLE) - -0.052340545201383926) / 0.98465558791252 AS scaler_54, (CAST(`ADS_imp_1_OUT`.impter_55 AS DOUBLE) - 0.05294307611674654) / 1.8137042567337183 AS scaler_55, (CAST(`ADS_imp_1_OUT`.impter_56 AS DOUBLE) - 0.03835884479069335) / 0.9241326354411343 AS scaler_56, (CAST(`ADS_imp_1_OUT`.impter_57 AS DOUBLE) - -0.13571979014964694) / 0.8679095755948701 AS scaler_57, (CAST(`ADS_imp_1_OUT`.impter_58 AS DOUBLE) - -0.21903068431411843) / 4.150428869748413 AS scaler_58, (CAST(`ADS_imp_1_OUT`.impter_59 AS DOUBLE) - -0.1191752362029383) / 0.9123333408128436 AS scaler_59, (CAST(`ADS_imp_1_OUT`.impter_60 AS DOUBLE) - 0.38058346912807667) / 3.5635011086986927 AS scaler_60, (CAST(`ADS_imp_1_OUT`.impter_61 AS DOUBLE) - -0.12720928974168508) / 0.9301024475991629 AS scaler_61, (CAST(`ADS_imp_1_OUT`.impter_62 AS DOUBLE) - -0.09072936496613782) / 0.9490501277306023 AS scaler_62, (CAST(`ADS_imp_1_OUT`.impter_63 AS DOUBLE) - -0.03915125937954538) / 0.9029504608473613 AS scaler_63, (CAST(`ADS_imp_1_OUT`.impter_64 AS DOUBLE) - 0.07075412393313481) / 0.9726561682528103 AS scaler_64, (CAST(`ADS_imp_1_OUT`.impter_65 AS DOUBLE) - 0.10124894587016948) / 0.9403075920249493 AS scaler_65, (CAST(`ADS_imp_1_OUT`.impter_66 AS DOUBLE) - -0.1945661449475579) / 0.9400903625732654 AS scaler_66, (CAST(`ADS_imp_1_OUT`.impter_67 AS DOUBLE) - -0.1759482981261233) / 0.9435422049943787 AS scaler_67, (CAST(`ADS_imp_1_OUT`.impter_68 AS DOUBLE) - 0.07473228971855511) / 0.8871003964319768 AS scaler_68, (CAST(`ADS_imp_1_OUT`.impter_69 AS DOUBLE) - 0.0377705562115906) / 1.0228978549196588 AS scaler_69, (CAST(`ADS_imp_1_OUT`.impter_70 AS DOUBLE) - 0.0139470898598917) / 0.9465728329079491 AS scaler_70, (CAST(`ADS_imp_1_OUT`.impter_71 AS DOUBLE) - 0.2582685725145942) / 1.1027232016521478 AS scaler_71, (CAST(`ADS_imp_1_OUT`.impter_72 AS DOUBLE) - 0.022975786233048922) / 0.9200436904809381 AS scaler_72, (CAST(`ADS_imp_1_OUT`.impter_73 AS DOUBLE) - 0.17445434061949525) / 0.9009964742482128 AS scaler_73, (CAST(`ADS_imp_1_OUT`.impter_74 AS DOUBLE) - -0.011413879692078346) / 0.9483377025565977 AS scaler_74, (CAST(`ADS_imp_1_OUT`.impter_75 AS DOUBLE) - 0.07898984156871978) / 0.9726668138861088 AS scaler_75, (CAST(`ADS_imp_1_OUT`.impter_76 AS DOUBLE) - 0.0952547273770713) / 0.9607867245873394 AS scaler_76, (CAST(`ADS_imp_1_OUT`.impter_77 AS DOUBLE) - -0.03997776839639901) / 1.0318828686080972 AS scaler_77, (CAST(`ADS_imp_1_OUT`.impter_78 AS DOUBLE) - -0.020839895874293496) / 0.945141993694461 AS scaler_78, (CAST(`ADS_imp_1_OUT`.impter_79 AS DOUBLE) - -0.07284631986613152) / 0.9103416784348913 AS scaler_79, (CAST(`ADS_imp_1_OUT`.impter_80 AS DOUBLE) - -0.27389951764434384) / 2.0362603862996735 AS scaler_80, (CAST(`ADS_imp_1_OUT`.impter_81 AS DOUBLE) - 0.08057287885287609) / 0.9919292944224015 AS scaler_81, (CAST(`ADS_imp_1_OUT`.impter_82 AS DOUBLE) - -0.06244274245437891) / 0.8113039293824552 AS scaler_82, (CAST(`ADS_imp_1_OUT`.impter_83 AS DOUBLE) - -0.12290855334066887) / 1.0307302654711112 AS scaler_83, (CAST(`ADS_imp_1_OUT`.impter_84 AS DOUBLE) - 0.11639531793890918) / 0.9993591951135242 AS scaler_84, (CAST(`ADS_imp_1_OUT`.impter_85 AS DOUBLE) - -0.03350462786128603) / 1.0197598648594488 AS scaler_85, (CAST(`ADS_imp_1_OUT`.impter_86 AS DOUBLE) - -0.03914049968144583) / 0.9022051622058084 AS scaler_86, (CAST(`ADS_imp_1_OUT`.impter_87 AS DOUBLE) - 0.24193903072305167) / 0.9625742678392476 AS scaler_87, (CAST(`ADS_imp_1_OUT`.impter_88 AS DOUBLE) - -0.07389719862221904) / 1.0080070985430696 AS scaler_88, (CAST(`ADS_imp_1_OUT`.impter_89 AS DOUBLE) - 0.1400756228320113) / 0.9315791274848828 AS scaler_89, (CAST(`ADS_imp_1_OUT`.impter_90 AS DOUBLE) - 0.2765301935136145) / 1.9455982323178656 AS scaler_90, (CAST(`ADS_imp_1_OUT`.impter_91 AS DOUBLE) - -0.07957147169250885) / 0.9688848077884671 AS scaler_91, (CAST(`ADS_imp_1_OUT`.impter_92 AS DOUBLE) - 0.16295767680642717) / 0.8952741904110189 AS scaler_92, (CAST(`ADS_imp_1_OUT`.impter_93 AS DOUBLE) - 0.07062813888509549) / 0.8331748322730601 AS scaler_93, (CAST(`ADS_imp_1_OUT`.impter_94 AS DOUBLE) - 0.012995630151896219) / 1.059167248118017 AS scaler_94, (CAST(`ADS_imp_1_OUT`.impter_95 AS DOUBLE) - 0.1055212408190415) / 1.0525988978000902 AS scaler_95, (CAST(`ADS_imp_1_OUT`.impter_96 AS DOUBLE) - -0.1408434425354362) / 0.9172372033996682 AS scaler_96, (CAST(`ADS_imp_1_OUT`.impter_97 AS DOUBLE) - -0.1574012366732725) / 0.9930125433643069 AS scaler_97, (CAST(`ADS_imp_1_OUT`.impter_98 AS DOUBLE) - 0.05477536676313335) / 0.9803136353653645 AS scaler_98, (CAST(`ADS_imp_1_OUT`.impter_99 AS DOUBLE) - 0.05673272205919614) / 0.9296338032188498 AS scaler_99, (CAST(`ADS_imp_1_OUT`.impter_100 AS DOUBLE) - -0.14226649213619527) / 1.174442941822933 AS scaler_100, (CAST(`ADS_imp_1_OUT`.impter_101 AS DOUBLE) - -0.04042675289131955) / 1.983747550989713 AS scaler_101 
-FROM `TMP_20180516113053_CODEGEN_VXMD17_ADS_imp_1_OUT` AS `ADS_imp_1_OUT`) AS `ADS_sca_2_OUT`) AS `U`
+FROM `TMP_20180602143835_EHN_ADS_imp_1_OUT` AS `ADS_imp_1_OUT`) AS `ADS_sca_2_OUT`) AS `U`
 
--- Code For temporary table TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT part 3. Create Index 
+-- Code For temporary table TMP_20180602143835_ROL_ADS_sca_2_OUT part 3. Create Index 
 
-CREATE INDEX `ix_TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT_KEY` ON `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` (`KEY`)
+CREATE INDEX `ix_TMP_20180602143835_ROL_ADS_sca_2_OUT_KEY` ON `TMP_20180602143835_ROL_ADS_sca_2_OUT` (`KEY`)
 
--- Code For temporary table TMP_20180516113054_CODEGEN_AQQZH3_LGBM_B0 part 1. Create 
+-- Code For temporary table TMP_20180602143835_NMK_LGBM_B0 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516113054_CODEGEN_AQQZH3_LGBM_B0` (
+CREATE TEMPORARY TABLE `TMP_20180602143835_NMK_LGBM_B0` (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -265,12 +265,12 @@ CREATE TEMPORARY TABLE `TMP_20180516113054_CODEGEN_AQQZH3_LGBM_B0` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516113054_CODEGEN_AQQZH3_LGBM_B0 part 2. Populate
+-- Code For temporary table TMP_20180602143835_NMK_LGBM_B0 part 2. Populate
 
-INSERT INTO `TMP_20180516113054_CODEGEN_AQQZH3_LGBM_B0` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
+INSERT INTO `TMP_20180602143835_NMK_LGBM_B0` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
 FROM (WITH `DT_node_lookup` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_80 <= -0.20659892002321142) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_5 <= -0.14268115411255844) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_50 <= 1.0000000180025095e-35) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.01999999999999999 AS `Score` UNION ALL SELECT 5 AS nid, -0.03333333333333333 AS `Score` UNION ALL SELECT 6 AS nid, 0.05757575757575755 AS `Score` UNION ALL SELECT 7 AS nid, -0.0011494252873563218 AS `Score`) AS `Values`), 
@@ -282,7 +282,7 @@ FROM `DT_node_lookup` LEFT OUTER JOIN `DT_node_data` ON `DT_node_lookup`.node_id
 FROM `DT_Output`), 
 `DT_node_lookup_1` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_94 <= 0.7422130423340411) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_11 <= -0.16760702855928997) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_96 <= 0.0909658923333073) THEN 10 ELSE 11 END END ELSE 3 END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_1` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.04000000000000001 AS `Score` UNION ALL SELECT 4 AS nid, -0.029629629629629624 AS `Score` UNION ALL SELECT 10 AS nid, -0.013333333333333336 AS `Score` UNION ALL SELECT 11 AS nid, 0.03333333333333333 AS `Score`) AS `Values`), 
@@ -294,7 +294,7 @@ FROM `DT_node_lookup_1` LEFT OUTER JOIN `DT_node_data_1` ON `DT_node_lookup_1`.n
 FROM `DT_Output_1`), 
 `DT_node_lookup_2` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= -0.7837116766399931) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_21 <= -0.25420272015856016) THEN 6 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_4 <= 1.0000000180025095e-35) THEN 14 ELSE 15 END END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_2` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, 0.049206349206349205 AS `Score` UNION ALL SELECT 6 AS nid, 0.0030303030303030294 AS `Score` UNION ALL SELECT 14 AS nid, -0.02666666666666667 AS `Score` UNION ALL SELECT 15 AS nid, -0.03333333333333333 AS `Score`) AS `Values`), 
@@ -306,7 +306,7 @@ FROM `DT_node_lookup_2` LEFT OUTER JOIN `DT_node_data_2` ON `DT_node_lookup_2`.n
 FROM `DT_Output_2`), 
 `DT_node_lookup_3` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_31 <= 0.36901699791788345) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= 0.06978065000800054) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_3` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.027619047619047623 AS `Score` UNION ALL SELECT 4 AS nid, -0.033333333333333326 AS `Score` UNION ALL SELECT 5 AS nid, 0.006172839506172839 AS `Score`) AS `Values`), 
@@ -318,7 +318,7 @@ FROM `DT_node_lookup_3` LEFT OUTER JOIN `DT_node_data_3` ON `DT_node_lookup_3`.n
 FROM `DT_Output_3`), 
 `DT_node_lookup_4` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_80 <= -0.20659892002321142) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_81 <= -0.19852706625085706) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_94 <= 0.07659678856147197) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_4` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.01950137705240332 AS `Score` UNION ALL SELECT 5 AS nid, -0.033116866801664334 AS `Score` UNION ALL SELECT 6 AS nid, 0.04781539670855374 AS `Score` UNION ALL SELECT 7 AS nid, -0.009422123523754237 AS `Score`) AS `Values`), 
@@ -330,7 +330,7 @@ FROM `DT_node_lookup_4` LEFT OUTER JOIN `DT_node_data_4` ON `DT_node_lookup_4`.n
 FROM `DT_Output_4`), 
 `DT_node_lookup_5` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_94 <= 0.7422130423340411) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_11 <= -0.16760702855928997) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_96 <= 0.0909658923333073) THEN 10 ELSE 11 END END ELSE 3 END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_5` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.03801363088997682 AS `Score` UNION ALL SELECT 4 AS nid, -0.02932448464318399 AS `Score` UNION ALL SELECT 10 AS nid, -0.013031594356816707 AS `Score` UNION ALL SELECT 11 AS nid, 0.03196767946224493 AS `Score`) AS `Values`), 
@@ -342,7 +342,7 @@ FROM `DT_node_lookup_5` LEFT OUTER JOIN `DT_node_data_5` ON `DT_node_lookup_5`.n
 FROM `DT_Output_5`), 
 `DT_node_lookup_6` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= -0.7837116766399931) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_58 <= 1.0000000180025095e-35) THEN 6 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_85 <= -0.06705978689096498) THEN 14 ELSE 15 END END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_6` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, 0.04638783591701232 AS `Score` UNION ALL SELECT 6 AS nid, 0.0034657951744659385 AS `Score` UNION ALL SELECT 14 AS nid, -0.02634969149111432 AS `Score` UNION ALL SELECT 15 AS nid, -0.033209690833556266 AS `Score`) AS `Values`), 
@@ -354,7 +354,7 @@ FROM `DT_node_lookup_6` LEFT OUTER JOIN `DT_node_data_6` ON `DT_node_lookup_6`.n
 FROM `DT_Output_6`), 
 `DT_node_lookup_7` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= 0.3111670739918176) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_56 <= 0.43876687599494696) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_7 <= 0.20916239470271483) THEN 8 ELSE 9 END ELSE 5 END ELSE 3 END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_7` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.02675748219394763 AS `Score` UNION ALL SELECT 5 AS nid, 0.011240839547350058 AS `Score` UNION ALL SELECT 8 AS nid, -0.02634310269199366 AS `Score` UNION ALL SELECT 9 AS nid, -0.033280777876280025 AS `Score`) AS `Values`), 
@@ -366,7 +366,7 @@ FROM `DT_node_lookup_7` LEFT OUTER JOIN `DT_node_data_7` ON `DT_node_lookup_7`.n
 FROM `DT_Output_7`), 
 `DT_node_lookup_8` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_80 <= -0.20659892002321142) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_6 <= 0.14608860188308426) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_94 <= 0.07659678856147197) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_8` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.03288932934129021 AS `Score` UNION ALL SELECT 5 AS nid, -0.018979159650187077 AS `Score` UNION ALL SELECT 6 AS nid, 0.04528919771027677 AS `Score` UNION ALL SELECT 7 AS nid, -0.00923136933403049 AS `Score`) AS `Values`), 
@@ -378,7 +378,7 @@ FROM `DT_node_lookup_8` LEFT OUTER JOIN `DT_node_data_8` ON `DT_node_lookup_8`.n
 FROM `DT_Output_8`), 
 `DT_node_lookup_9` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_94 <= 0.7422130423340411) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_11 <= -0.16760702855928997) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_96 <= 0.0909658923333073) THEN 10 ELSE 11 END END ELSE 3 END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_9` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.03601188358369819 AS `Score` UNION ALL SELECT 4 AS nid, -0.02901065244136429 AS `Score` UNION ALL SELECT 10 AS nid, -0.012779393567827178 AS `Score` UNION ALL SELECT 11 AS nid, 0.03082650742811993 AS `Score`) AS `Values`), 
@@ -402,10 +402,10 @@ FROM `LGBM_Model_3_1` UNION ALL SELECT `LGBM_Model_0_2`.`KEY` AS `KEY`, `LGBM_Mo
 FROM `LGBM_Model_0_2` UNION ALL SELECT `LGBM_Model_1_2`.`KEY` AS `KEY`, `LGBM_Model_1_2`.`Score_0` AS `Score_0`, `LGBM_Model_1_2`.`Score_1` AS `Score_1`, `LGBM_Model_1_2`.`Score_2` AS `Score_2`, `LGBM_Model_1_2`.`Score_3` AS `Score_3` 
 FROM `LGBM_Model_1_2`) AS `LGBM_esu_0`) AS `LGBM_B0`) AS `U`
 
--- Code For temporary table TMP_20180516113054_CODEGEN_6DGC19_LGBM_B1 part 1. Create 
+-- Code For temporary table TMP_20180602143835_GDB_LGBM_B1 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516113054_CODEGEN_6DGC19_LGBM_B1` (
+CREATE TEMPORARY TABLE `TMP_20180602143835_GDB_LGBM_B1` (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -415,12 +415,12 @@ CREATE TEMPORARY TABLE `TMP_20180516113054_CODEGEN_6DGC19_LGBM_B1` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516113054_CODEGEN_6DGC19_LGBM_B1 part 2. Populate
+-- Code For temporary table TMP_20180602143835_GDB_LGBM_B1 part 2. Populate
 
-INSERT INTO `TMP_20180516113054_CODEGEN_6DGC19_LGBM_B1` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
+INSERT INTO `TMP_20180602143835_GDB_LGBM_B1` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
 FROM (WITH `DT_node_lookup_10` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= -0.7837116766399931) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_21 <= -0.25420272015856016) THEN 6 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_56 <= 0.1835813454500901) THEN 14 ELSE 15 END END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_10` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, 0.04392797619813257 AS `Score` UNION ALL SELECT 6 AS nid, 0.0034995312760598384 AS `Score` UNION ALL SELECT 14 AS nid, -0.025947628685301028 AS `Score` UNION ALL SELECT 15 AS nid, -0.03298520699909284 AS `Score`) AS `Values`), 
@@ -432,7 +432,7 @@ FROM `DT_node_lookup_10` LEFT OUTER JOIN `DT_node_data_10` ON `DT_node_lookup_10
 FROM `DT_Output_10`), 
 `DT_node_lookup_11` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_31 <= 0.36901699791788345) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= 0.06978065000800054) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_11` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.02602074371562861 AS `Score` UNION ALL SELECT 4 AS nid, -0.03282433362550692 AS `Score` UNION ALL SELECT 5 AS nid, 0.0055247378514521606 AS `Score`) AS `Values`), 
@@ -444,7 +444,7 @@ FROM `DT_node_lookup_11` LEFT OUTER JOIN `DT_node_data_11` ON `DT_node_lookup_11
 FROM `DT_Output_11`), 
 `DT_node_lookup_12` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_80 <= -0.20659892002321142) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_30 <= 0.4060519987109669) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_50 <= 1.0000000180025095e-35) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_12` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.03264995365787314 AS `Score` UNION ALL SELECT 5 AS nid, -0.018595830886695815 AS `Score` UNION ALL SELECT 6 AS nid, 0.050425691987455085 AS `Score` UNION ALL SELECT 7 AS nid, -0.001749296984293454 AS `Score`) AS `Values`), 
@@ -456,7 +456,7 @@ FROM `DT_node_lookup_12` LEFT OUTER JOIN `DT_node_data_12` ON `DT_node_lookup_12
 FROM `DT_Output_12`), 
 `DT_node_lookup_13` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= -0.227315336240404) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_90 <= -0.3502806381050438) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_13` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, -0.021949004218140684 AS `Score` UNION ALL SELECT 6 AS nid, -0.0157961023443223 AS `Score` UNION ALL SELECT 7 AS nid, 0.03348313811293968 AS `Score`) AS `Values`), 
@@ -468,7 +468,7 @@ FROM `DT_node_lookup_13` LEFT OUTER JOIN `DT_node_data_13` ON `DT_node_lookup_13
 FROM `DT_Output_13`), 
 `DT_node_lookup_14` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_58 <= -0.22148632814087912) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_56 <= 0.20615032458101307) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_97 <= 0.2681499738371736) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_14` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, 0.05918926165394689 AS `Score` UNION ALL SELECT 5 AS nid, -0.013161794876484953 AS `Score` UNION ALL SELECT 6 AS nid, -0.032972000921317655 AS `Score` UNION ALL SELECT 7 AS nid, -0.00737896830596874 AS `Score`) AS `Values`), 
@@ -480,7 +480,7 @@ FROM `DT_node_lookup_14` LEFT OUTER JOIN `DT_node_data_14` ON `DT_node_lookup_14
 FROM `DT_Output_14`), 
 `DT_node_lookup_15` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= 0.3111670739918176) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_56 <= 0.43876687599494696) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_7 <= 0.20916239470271483) THEN 8 ELSE 9 END ELSE 5 END ELSE 3 END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_15` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.024883342651118974 AS `Score` UNION ALL SELECT 5 AS nid, 0.011209397650172129 AS `Score` UNION ALL SELECT 8 AS nid, -0.02574125662263579 AS `Score` UNION ALL SELECT 9 AS nid, -0.03297883402734973 AS `Score`) AS `Values`), 
@@ -492,7 +492,7 @@ FROM `DT_node_lookup_15` LEFT OUTER JOIN `DT_node_data_15` ON `DT_node_lookup_15
 FROM `DT_Output_15`), 
 `DT_node_lookup_16` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_80 <= -0.20659892002321142) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_6 <= 0.14608860188308426) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_94 <= 0.07659678856147197) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_16` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.032430851677658405 AS `Score` UNION ALL SELECT 5 AS nid, -0.018123846889430296 AS `Score` UNION ALL SELECT 6 AS nid, 0.04170977978319426 AS `Score` UNION ALL SELECT 7 AS nid, -0.009273140804504107 AS `Score`) AS `Values`), 
@@ -504,7 +504,7 @@ FROM `DT_node_lookup_16` LEFT OUTER JOIN `DT_node_data_16` ON `DT_node_lookup_16
 FROM `DT_Output_16`), 
 `DT_node_lookup_17` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= -0.227315336240404) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_90 <= -0.3502806381050438) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_17` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, -0.021626484496901358 AS `Score` UNION ALL SELECT 6 AS nid, -0.015503980862153691 AS `Score` UNION ALL SELECT 7 AS nid, 0.032075414127692256 AS `Score`) AS `Values`), 
@@ -516,7 +516,7 @@ FROM `DT_node_lookup_17` LEFT OUTER JOIN `DT_node_data_17` ON `DT_node_lookup_17
 FROM `DT_Output_17`), 
 `DT_node_lookup_18` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= -0.49464367730743913) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_21 <= -0.5141132779893817) THEN 6 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_65 <= 1.0000000180025095e-35) THEN 14 ELSE 15 END END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_18` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, 0.03421543959311732 AS `Score` UNION ALL SELECT 6 AS nid, 0.00487014039315363 AS `Score` UNION ALL SELECT 14 AS nid, -0.03268338788831202 AS `Score` UNION ALL SELECT 15 AS nid, -0.025388920964320674 AS `Score`) AS `Values`), 
@@ -528,7 +528,7 @@ FROM `DT_node_lookup_18` LEFT OUTER JOIN `DT_node_data_18` ON `DT_node_lookup_18
 FROM `DT_Output_18`), 
 `DT_node_lookup_19` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_31 <= 0.36901699791788345) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= 0.06978065000800054) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_19` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.024617499910754504 AS `Score` UNION ALL SELECT 4 AS nid, -0.032396812397344085 AS `Score` UNION ALL SELECT 5 AS nid, 0.005050332513611498 AS `Score`) AS `Values`), 
@@ -552,10 +552,10 @@ FROM `LGBM_Model_1_4` UNION ALL SELECT `LGBM_Model_2_4`.`KEY` AS `KEY`, `LGBM_Mo
 FROM `LGBM_Model_2_4` UNION ALL SELECT `LGBM_Model_3_4`.`KEY` AS `KEY`, `LGBM_Model_3_4`.`Score_0` AS `Score_0`, `LGBM_Model_3_4`.`Score_1` AS `Score_1`, `LGBM_Model_3_4`.`Score_2` AS `Score_2`, `LGBM_Model_3_4`.`Score_3` AS `Score_3` 
 FROM `LGBM_Model_3_4`) AS `LGBM_esu_1`) AS `LGBM_B1`) AS `U`
 
--- Code For temporary table TMP_20180516113054_CODEGEN_1GFXIX_LGBM_B2 part 1. Create 
+-- Code For temporary table TMP_20180602143835_151_LGBM_B2 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516113054_CODEGEN_1GFXIX_LGBM_B2` (
+CREATE TEMPORARY TABLE `TMP_20180602143835_151_LGBM_B2` (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -565,12 +565,12 @@ CREATE TEMPORARY TABLE `TMP_20180516113054_CODEGEN_1GFXIX_LGBM_B2` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516113054_CODEGEN_1GFXIX_LGBM_B2 part 2. Populate
+-- Code For temporary table TMP_20180602143835_151_LGBM_B2 part 2. Populate
 
-INSERT INTO `TMP_20180516113054_CODEGEN_1GFXIX_LGBM_B2` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
+INSERT INTO `TMP_20180602143835_151_LGBM_B2` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
 FROM (WITH `DT_node_lookup_20` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_80 <= -0.20659892002321142) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_81 <= -0.19852706625085706) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_35 <= -0.19856138664745998) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_20` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.01775222720740029 AS `Score` UNION ALL SELECT 5 AS nid, -0.03221277551225128 AS `Score` UNION ALL SELECT 6 AS nid, 0.04694754208658461 AS `Score` UNION ALL SELECT 7 AS nid, -0.0026131372933433754 AS `Score`) AS `Values`), 
@@ -582,7 +582,7 @@ FROM `DT_node_lookup_20` LEFT OUTER JOIN `DT_node_data_20` ON `DT_node_lookup_20
 FROM `DT_Output_20`), 
 `DT_node_lookup_21` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_50 <= -0.20437877954345876) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_90 <= -0.3502806381050438) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_21` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, -0.019702425673491817 AS `Score` UNION ALL SELECT 6 AS nid, -0.016999640407648977 AS `Score` UNION ALL SELECT 7 AS nid, 0.04084800650737508 AS `Score`) AS `Values`), 
@@ -594,7 +594,7 @@ FROM `DT_node_lookup_21` LEFT OUTER JOIN `DT_node_data_21` ON `DT_node_lookup_21
 FROM `DT_Output_21`), 
 `DT_node_lookup_22` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_58 <= -0.22148632814087912) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_56 <= 0.20615032458101307) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_97 <= 0.2681499738371736) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_22` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, 0.054354714566359146 AS `Score` UNION ALL SELECT 5 AS nid, -0.012728726983595277 AS `Score` UNION ALL SELECT 6 AS nid, -0.032577907328825005 AS `Score` UNION ALL SELECT 7 AS nid, -0.00712695224663154 AS `Score`) AS `Values`), 
@@ -606,7 +606,7 @@ FROM `DT_node_lookup_22` LEFT OUTER JOIN `DT_node_data_22` ON `DT_node_lookup_22
 FROM `DT_Output_22`), 
 `DT_node_lookup_23` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_101 <= 1.0000000180025095e-35) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_21 <= -0.3420785268148518) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_2 <= 0.21817166411542668) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_23` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.01541499384979074 AS `Score` UNION ALL SELECT 5 AS nid, 0.04875831694517585 AS `Score` UNION ALL SELECT 6 AS nid, -0.03329191878814407 AS `Score` UNION ALL SELECT 7 AS nid, 0.0008424509870639216 AS `Score`) AS `Values`), 
@@ -618,7 +618,7 @@ FROM `DT_node_lookup_23` LEFT OUTER JOIN `DT_node_data_23` ON `DT_node_lookup_23
 FROM `DT_Output_23`), 
 `DT_node_lookup_24` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_80 <= -0.20659892002321142) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_6 <= 0.14608860188308426) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_50 <= -0.12128768947636989) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_24` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.032003459482789993 AS `Score` UNION ALL SELECT 5 AS nid, -0.017356620302595844 AS `Score` UNION ALL SELECT 6 AS nid, 0.04770528095183903 AS `Score` UNION ALL SELECT 7 AS nid, -0.0006797085272083525 AS `Score`) AS `Values`), 
@@ -630,7 +630,7 @@ FROM `DT_node_lookup_24` LEFT OUTER JOIN `DT_node_data_24` ON `DT_node_lookup_24
 FROM `DT_Output_24`), 
 `DT_node_lookup_25` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_50 <= -0.20437877954345876) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_90 <= -0.3502806381050438) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_25` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, -0.019371272894301267 AS `Score` UNION ALL SELECT 6 AS nid, -0.016721247478611947 AS `Score` UNION ALL SELECT 7 AS nid, 0.03899686638528799 AS `Score`) AS `Values`), 
@@ -642,7 +642,7 @@ FROM `DT_node_lookup_25` LEFT OUTER JOIN `DT_node_data_25` ON `DT_node_lookup_25
 FROM `DT_Output_25`), 
 `DT_node_lookup_26` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_58 <= -0.22148632814087912) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_56 <= 0.20615032458101307) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_72 <= 0.23247911005260363) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_26` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, 0.05149522314283292 AS `Score` UNION ALL SELECT 5 AS nid, -0.012504544603488288 AS `Score` UNION ALL SELECT 6 AS nid, -0.032328547542213336 AS `Score` UNION ALL SELECT 7 AS nid, -0.006774197240865256 AS `Score`) AS `Values`), 
@@ -654,7 +654,7 @@ FROM `DT_node_lookup_26` LEFT OUTER JOIN `DT_node_data_26` ON `DT_node_lookup_26
 FROM `DT_Output_26`), 
 `DT_node_lookup_27` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_31 <= 0.36901699791788345) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= 0.06978065000800054) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_27` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.023376036454596696 AS `Score` UNION ALL SELECT 4 AS nid, -0.03207537004744958 AS `Score` UNION ALL SELECT 5 AS nid, 0.004883438224411979 AS `Score`) AS `Values`), 
@@ -666,7 +666,7 @@ FROM `DT_node_lookup_27` LEFT OUTER JOIN `DT_node_data_27` ON `DT_node_lookup_27
 FROM `DT_Output_27`), 
 `DT_node_lookup_28` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_80 <= -0.20659892002321142) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_8 <= 0.15851073706032173) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_94 <= 0.07659678856147197) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_28` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.03181411183123618 AS `Score` UNION ALL SELECT 5 AS nid, -0.016933666524256135 AS `Score` UNION ALL SELECT 6 AS nid, 0.03772860917958193 AS `Score` UNION ALL SELECT 7 AS nid, -0.009573319152340823 AS `Score`) AS `Values`), 
@@ -678,7 +678,7 @@ FROM `DT_node_lookup_28` LEFT OUTER JOIN `DT_node_data_28` ON `DT_node_lookup_28
 FROM `DT_Output_28`), 
 `DT_node_lookup_29` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= -0.227315336240404) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_66 <= -0.16160014838154277) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_29` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, -0.02120590996883151 AS `Score` UNION ALL SELECT 6 AS nid, -0.010137523496834167 AS `Score` UNION ALL SELECT 7 AS nid, 0.03392735655650109 AS `Score`) AS `Values`), 
@@ -702,10 +702,10 @@ FROM `LGBM_Model_3_6` UNION ALL SELECT `LGBM_Model_0_7`.`KEY` AS `KEY`, `LGBM_Mo
 FROM `LGBM_Model_0_7` UNION ALL SELECT `LGBM_Model_1_7`.`KEY` AS `KEY`, `LGBM_Model_1_7`.`Score_0` AS `Score_0`, `LGBM_Model_1_7`.`Score_1` AS `Score_1`, `LGBM_Model_1_7`.`Score_2` AS `Score_2`, `LGBM_Model_1_7`.`Score_3` AS `Score_3` 
 FROM `LGBM_Model_1_7`) AS `LGBM_esu_2`) AS `LGBM_B2`) AS `U`
 
--- Code For temporary table TMP_20180516113054_CODEGEN_7J7NFK_LGBM_B3 part 1. Create 
+-- Code For temporary table TMP_20180602143835_F59_LGBM_B3 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516113054_CODEGEN_7J7NFK_LGBM_B3` (
+CREATE TEMPORARY TABLE `TMP_20180602143835_F59_LGBM_B3` (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -715,12 +715,12 @@ CREATE TEMPORARY TABLE `TMP_20180516113054_CODEGEN_7J7NFK_LGBM_B3` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516113054_CODEGEN_7J7NFK_LGBM_B3 part 2. Populate
+-- Code For temporary table TMP_20180602143835_F59_LGBM_B3 part 2. Populate
 
-INSERT INTO `TMP_20180516113054_CODEGEN_7J7NFK_LGBM_B3` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
+INSERT INTO `TMP_20180602143835_F59_LGBM_B3` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
 FROM (WITH `DT_node_lookup_30` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_58 <= -0.22148632814087912) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_56 <= 0.20615032458101307) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_97 <= 0.2681499738371736) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_30` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, 0.049041201469898654 AS `Score` UNION ALL SELECT 5 AS nid, -0.012216631427201374 AS `Score` UNION ALL SELECT 6 AS nid, -0.03208452504859873 AS `Score` UNION ALL SELECT 7 AS nid, -0.006682050585242594 AS `Score`) AS `Values`), 
@@ -732,7 +732,7 @@ FROM `DT_node_lookup_30` LEFT OUTER JOIN `DT_node_data_30` ON `DT_node_lookup_30
 FROM `DT_Output_30`), 
 `DT_node_lookup_31` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_101 <= 1.0000000180025095e-35) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_21 <= -0.3420785268148518) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_2 <= 0.21817166411542668) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_31` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.015126519234631425 AS `Score` UNION ALL SELECT 5 AS nid, 0.04550586119432775 AS `Score` UNION ALL SELECT 6 AS nid, -0.03294298315599817 AS `Score` UNION ALL SELECT 7 AS nid, 0.0009464242182587762 AS `Score`) AS `Values`), 
@@ -744,7 +744,7 @@ FROM `DT_node_lookup_31` LEFT OUTER JOIN `DT_node_data_31` ON `DT_node_lookup_31
 FROM `DT_Output_31`), 
 `DT_node_lookup_32` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_80 <= -0.20659892002321142) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_2 <= 0.18396981255684525) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_35 <= -0.19856138664745998) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_32` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.03159959372480136 AS `Score` UNION ALL SELECT 5 AS nid, -0.01654230089557483 AS `Score` UNION ALL SELECT 6 AS nid, 0.04238156603142348 AS `Score` UNION ALL SELECT 7 AS nid, -0.0032544268823302826 AS `Score`) AS `Values`), 
@@ -756,7 +756,7 @@ FROM `DT_node_lookup_32` LEFT OUTER JOIN `DT_node_data_32` ON `DT_node_lookup_32
 FROM `DT_Output_32`), 
 `DT_node_lookup_33` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= -0.227315336240404) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_66 <= -0.16160014838154277) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_33` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, -0.020853887712922344 AS `Score` UNION ALL SELECT 6 AS nid, -0.009952491556638608 AS `Score` UNION ALL SELECT 7 AS nid, 0.03242662126086929 AS `Score`) AS `Values`), 
@@ -768,7 +768,7 @@ FROM `DT_node_lookup_33` LEFT OUTER JOIN `DT_node_data_33` ON `DT_node_lookup_33
 FROM `DT_Output_33`), 
 `DT_node_lookup_34` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= -0.49464367730743913) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_21 <= -0.5141132779893817) THEN 6 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_26 <= -0.15329324850824405) THEN 14 ELSE 15 END END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_34` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, 0.030120644069081312 AS `Score` UNION ALL SELECT 6 AS nid, 0.0055838147715844035 AS `Score` UNION ALL SELECT 14 AS nid, -0.02433246104415448 AS `Score` UNION ALL SELECT 15 AS nid, -0.032351120287786805 AS `Score`) AS `Values`), 
@@ -780,7 +780,7 @@ FROM `DT_node_lookup_34` LEFT OUTER JOIN `DT_node_data_34` ON `DT_node_lookup_34
 FROM `DT_Output_34`), 
 `DT_node_lookup_35` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_31 <= 0.36901699791788345) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= 0.06978065000800054) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_35` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.02230557425093129 AS `Score` UNION ALL SELECT 4 AS nid, -0.03178711507999351 AS `Score` UNION ALL SELECT 5 AS nid, 0.00471309946423601 AS `Score`) AS `Values`), 
@@ -792,7 +792,7 @@ FROM `DT_node_lookup_35` LEFT OUTER JOIN `DT_node_data_35` ON `DT_node_lookup_35
 FROM `DT_Output_35`), 
 `DT_node_lookup_36` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_80 <= -0.20659892002321142) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_8 <= 0.15851073706032173) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_66 <= -0.16160014838154277) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_36` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.031419953156448625 AS `Score` UNION ALL SELECT 5 AS nid, -0.016160339201189446 AS `Score` UNION ALL SELECT 6 AS nid, 0.0407848697202845 AS `Score` UNION ALL SELECT 7 AS nid, -0.0033154890000054605 AS `Score`) AS `Values`), 
@@ -804,7 +804,7 @@ FROM `DT_node_lookup_36` LEFT OUTER JOIN `DT_node_data_36` ON `DT_node_lookup_36
 FROM `DT_Output_36`), 
 `DT_node_lookup_37` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_50 <= -0.20437877954345876) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_90 <= -0.3502806381050438) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_37` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, -0.01886606867743569 AS `Score` UNION ALL SELECT 6 AS nid, -0.016543330666217416 AS `Score` UNION ALL SELECT 7 AS nid, 0.03670950125929424 AS `Score`) AS `Values`), 
@@ -816,7 +816,7 @@ FROM `DT_node_lookup_37` LEFT OUTER JOIN `DT_node_data_37` ON `DT_node_lookup_37
 FROM `DT_Output_37`), 
 `DT_node_lookup_38` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_58 <= -0.22148632814087912) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_56 <= 0.20615032458101307) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_72 <= 0.23247911005260363) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_38` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, 0.04558233201544677 AS `Score` UNION ALL SELECT 5 AS nid, -0.011852613171158027 AS `Score` UNION ALL SELECT 6 AS nid, -0.03177444071856066 AS `Score` UNION ALL SELECT 7 AS nid, -0.006245418426760709 AS `Score`) AS `Values`), 
@@ -828,7 +828,7 @@ FROM `DT_node_lookup_38` LEFT OUTER JOIN `DT_node_data_38` ON `DT_node_lookup_38
 FROM `DT_Output_38`), 
 `DT_node_lookup_39` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_101 <= 1.0000000180025095e-35) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= 0.17601081361933138) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_2 <= 0.21817166411542668) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_39` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.011621861430621161 AS `Score` UNION ALL SELECT 5 AS nid, 0.046614583679068414 AS `Score` UNION ALL SELECT 6 AS nid, -0.032699323902063655 AS `Score` UNION ALL SELECT 7 AS nid, 0.0011222275259279407 AS `Score`) AS `Values`), 
@@ -852,10 +852,10 @@ FROM `LGBM_Model_1_9` UNION ALL SELECT `LGBM_Model_2_9`.`KEY` AS `KEY`, `LGBM_Mo
 FROM `LGBM_Model_2_9` UNION ALL SELECT `LGBM_Model_3_9`.`KEY` AS `KEY`, `LGBM_Model_3_9`.`Score_0` AS `Score_0`, `LGBM_Model_3_9`.`Score_1` AS `Score_1`, `LGBM_Model_3_9`.`Score_2` AS `Score_2`, `LGBM_Model_3_9`.`Score_3` AS `Score_3` 
 FROM `LGBM_Model_3_9`) AS `LGBM_esu_3`) AS `LGBM_B3`) AS `U`
 
--- Code For temporary table TMP_20180516113054_CODEGEN_RGG10L_LGBM_B4 part 1. Create 
+-- Code For temporary table TMP_20180602143835_VX3_LGBM_B4 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516113054_CODEGEN_RGG10L_LGBM_B4` (
+CREATE TEMPORARY TABLE `TMP_20180602143835_VX3_LGBM_B4` (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -865,12 +865,12 @@ CREATE TEMPORARY TABLE `TMP_20180516113054_CODEGEN_RGG10L_LGBM_B4` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516113054_CODEGEN_RGG10L_LGBM_B4 part 2. Populate
+-- Code For temporary table TMP_20180602143835_VX3_LGBM_B4 part 2. Populate
 
-INSERT INTO `TMP_20180516113054_CODEGEN_RGG10L_LGBM_B4` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
+INSERT INTO `TMP_20180602143835_VX3_LGBM_B4` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
 FROM (WITH `DT_node_lookup_40` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_80 <= -0.20659892002321142) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_81 <= -0.19852706625085706) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_50 <= -1.0000000180025095e-35) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_40` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.015743868724441747 AS `Score` UNION ALL SELECT 5 AS nid, -0.031249718673060718 AS `Score` UNION ALL SELECT 6 AS nid, 0.03998234890426754 AS `Score` UNION ALL SELECT 7 AS nid, -0.0032482950525118803 AS `Score`) AS `Values`), 
@@ -882,7 +882,7 @@ FROM `DT_node_lookup_40` LEFT OUTER JOIN `DT_node_data_40` ON `DT_node_lookup_40
 FROM `DT_Output_40`), 
 `DT_node_lookup_41` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_94 <= 0.7422130423340411) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_11 <= -0.16760702855928997) THEN 4 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_96 <= 0.0909658923333073) THEN 10 ELSE 11 END END ELSE 3 END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_41` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.02986321925216749 AS `Score` UNION ALL SELECT 4 AS nid, -0.02821410798213432 AS `Score` UNION ALL SELECT 10 AS nid, -0.012626279568975203 AS `Score` UNION ALL SELECT 11 AS nid, 0.02979847522652436 AS `Score`) AS `Values`), 
@@ -894,7 +894,7 @@ FROM `DT_node_lookup_41` LEFT OUTER JOIN `DT_node_data_41` ON `DT_node_lookup_41
 FROM `DT_Output_41`), 
 `DT_node_lookup_42` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_58 <= -0.22148632814087912) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_56 <= 0.20615032458101307) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_97 <= 0.2681499738371736) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_42` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, 0.04353130429727434 AS `Score` UNION ALL SELECT 5 AS nid, -0.011636476982560352 AS `Score` UNION ALL SELECT 6 AS nid, -0.031578771619088064 AS `Score` UNION ALL SELECT 7 AS nid, -0.005960066850569324 AS `Score`) AS `Values`), 
@@ -906,7 +906,7 @@ FROM `DT_node_lookup_42` LEFT OUTER JOIN `DT_node_data_42` ON `DT_node_lookup_42
 FROM `DT_Output_42`), 
 `DT_node_lookup_43` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_31 <= 0.36901699791788345) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_44 <= 0.04822483077311236) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_43` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.02127179462958491 AS `Score` UNION ALL SELECT 4 AS nid, -0.03199590808682975 AS `Score` UNION ALL SELECT 5 AS nid, 0.003968421351352446 AS `Score`) AS `Values`), 
@@ -918,7 +918,7 @@ FROM `DT_node_lookup_43` LEFT OUTER JOIN `DT_node_data_43` ON `DT_node_lookup_43
 FROM `DT_Output_43`), 
 `DT_node_lookup_44` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_80 <= -0.20659892002321142) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_6 <= 0.14608860188308426) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_35 <= -0.19856138664745998) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_44` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.0310908654140684 AS `Score` UNION ALL SELECT 5 AS nid, -0.015279135329961432 AS `Score` UNION ALL SELECT 6 AS nid, 0.03880354145307677 AS `Score` UNION ALL SELECT 7 AS nid, -0.00391134735279519 AS `Score`) AS `Values`), 
@@ -930,7 +930,7 @@ FROM `DT_node_lookup_44` LEFT OUTER JOIN `DT_node_data_44` ON `DT_node_lookup_44
 FROM `DT_Output_44`), 
 `DT_node_lookup_45` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= -0.227315336240404) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_90 <= -0.3502806381050438) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_45` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, -0.020420313781114086 AS `Score` UNION ALL SELECT 6 AS nid, -0.014726013237717382 AS `Score` UNION ALL SELECT 7 AS nid, 0.027470639315244978 AS `Score`) AS `Values`), 
@@ -942,7 +942,7 @@ FROM `DT_node_lookup_45` LEFT OUTER JOIN `DT_node_data_45` ON `DT_node_lookup_45
 FROM `DT_Output_45`), 
 `DT_node_lookup_46` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_58 <= 0.06628692254685489) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_56 <= 0.0440720522097763) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_33 <= 0.07507482016009438) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_46` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, 0.042739183805542674 AS `Score` UNION ALL SELECT 5 AS nid, -0.00894612657642856 AS `Score` UNION ALL SELECT 6 AS nid, -0.03171787287192134 AS `Score` UNION ALL SELECT 7 AS nid, -0.016152772496959986 AS `Score`) AS `Values`), 
@@ -954,7 +954,7 @@ FROM `DT_node_lookup_46` LEFT OUTER JOIN `DT_node_data_46` ON `DT_node_lookup_46
 FROM `DT_Output_46`), 
 `DT_node_lookup_47` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_101 <= 1.0000000180025095e-35) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_21 <= -0.3420785268148518) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_2 <= 0.21817166411542668) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_47` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.014910353817675186 AS `Score` UNION ALL SELECT 5 AS nid, 0.041084924059791056 AS `Score` UNION ALL SELECT 6 AS nid, -0.03233600981842487 AS `Score` UNION ALL SELECT 7 AS nid, 0.0012034387694043048 AS `Score`) AS `Values`), 
@@ -966,7 +966,7 @@ FROM `DT_node_lookup_47` LEFT OUTER JOIN `DT_node_data_47` ON `DT_node_lookup_47
 FROM `DT_Output_47`), 
 `DT_node_lookup_48` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_80 <= -0.20659892002321142) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_8 <= 0.15851073706032173) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_78 <= 0.055758777690439555) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_48` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.03090305305251158 AS `Score` UNION ALL SELECT 5 AS nid, -0.014939394868731635 AS `Score` UNION ALL SELECT 6 AS nid, 0.03382129840405984 AS `Score` UNION ALL SELECT 7 AS nid, -0.008206307592326621 AS `Score`) AS `Values`), 
@@ -978,7 +978,7 @@ FROM `DT_node_lookup_48` LEFT OUTER JOIN `DT_node_data_48` ON `DT_node_lookup_48
 FROM `DT_Output_48`), 
 `DT_node_lookup_49` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_50 <= -0.20437877954345876) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_90 <= -0.3502806381050438) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_49` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, -0.018526138619979884 AS `Score` UNION ALL SELECT 6 AS nid, -0.01588077468488255 AS `Score` UNION ALL SELECT 7 AS nid, 0.03428883703950263 AS `Score`) AS `Values`), 
@@ -1002,10 +1002,10 @@ FROM `LGBM_Model_3_11` UNION ALL SELECT `LGBM_Model_0_12`.`KEY` AS `KEY`, `LGBM_
 FROM `LGBM_Model_0_12` UNION ALL SELECT `LGBM_Model_1_12`.`KEY` AS `KEY`, `LGBM_Model_1_12`.`Score_0` AS `Score_0`, `LGBM_Model_1_12`.`Score_1` AS `Score_1`, `LGBM_Model_1_12`.`Score_2` AS `Score_2`, `LGBM_Model_1_12`.`Score_3` AS `Score_3` 
 FROM `LGBM_Model_1_12`) AS `LGBM_esu_4`) AS `LGBM_B4`) AS `U`
 
--- Code For temporary table TMP_20180516113054_CODEGEN_MV035C_LGBM_B5 part 1. Create 
+-- Code For temporary table TMP_20180602143835_QAB_LGBM_B5 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516113054_CODEGEN_MV035C_LGBM_B5` (
+CREATE TEMPORARY TABLE `TMP_20180602143835_QAB_LGBM_B5` (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -1015,12 +1015,12 @@ CREATE TEMPORARY TABLE `TMP_20180516113054_CODEGEN_MV035C_LGBM_B5` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516113054_CODEGEN_MV035C_LGBM_B5 part 2. Populate
+-- Code For temporary table TMP_20180602143835_QAB_LGBM_B5 part 2. Populate
 
-INSERT INTO `TMP_20180516113054_CODEGEN_MV035C_LGBM_B5` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
+INSERT INTO `TMP_20180602143835_QAB_LGBM_B5` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
 FROM (WITH `DT_node_lookup_50` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_58 <= 0.06628692254685489) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_56 <= 0.0440720522097763) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_54 <= -0.10941893924022757) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_50` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, 0.040817250224576766 AS `Score` UNION ALL SELECT 5 AS nid, -0.008790049401806242 AS `Score` UNION ALL SELECT 6 AS nid, -0.015871302752483933 AS `Score` UNION ALL SELECT 7 AS nid, -0.031483714350811424 AS `Score`) AS `Values`), 
@@ -1032,7 +1032,7 @@ FROM `DT_node_lookup_50` LEFT OUTER JOIN `DT_node_data_50` ON `DT_node_lookup_50
 FROM `DT_Output_50`), 
 `DT_node_lookup_51` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= 0.3111670739918176) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_56 <= 0.43876687599494696) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_52 <= 1.0000000180025095e-35) THEN 8 ELSE 9 END ELSE 5 END ELSE 3 END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_51` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.0205064249734117 AS `Score` UNION ALL SELECT 5 AS nid, 0.01043540245880489 AS `Score` UNION ALL SELECT 8 AS nid, -0.02386062596300417 AS `Score` UNION ALL SELECT 9 AS nid, -0.03236334009426657 AS `Score`) AS `Values`), 
@@ -1044,7 +1044,7 @@ FROM `DT_node_lookup_51` LEFT OUTER JOIN `DT_node_data_51` ON `DT_node_lookup_51
 FROM `DT_Output_51`), 
 `DT_node_lookup_52` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_80 <= -0.20659892002321142) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_2 <= 0.18396981255684525) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_94 <= 0.07659678856147197) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_52` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.030747030661008867 AS `Score` UNION ALL SELECT 5 AS nid, -0.014555792926882772 AS `Score` UNION ALL SELECT 6 AS nid, 0.031573895596735624 AS `Score` UNION ALL SELECT 7 AS nid, -0.010175005233875134 AS `Score`) AS `Values`), 
@@ -1056,7 +1056,7 @@ FROM `DT_node_lookup_52` LEFT OUTER JOIN `DT_node_data_52` ON `DT_node_lookup_52
 FROM `DT_Output_52`), 
 `DT_node_lookup_53` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_50 <= -0.20437877954345876) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_90 <= -0.3502806381050438) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_53` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, -0.0182582081209416 AS `Score` UNION ALL SELECT 6 AS nid, -0.015596687636521743 AS `Score` UNION ALL SELECT 7 AS nid, 0.033090334673929765 AS `Score`) AS `Values`), 
@@ -1068,7 +1068,7 @@ FROM `DT_node_lookup_53` LEFT OUTER JOIN `DT_node_data_53` ON `DT_node_lookup_53
 FROM `DT_Output_53`), 
 `DT_node_lookup_54` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_40 <= -0.5337063693982357) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_101 <= -0.3079092197802202) THEN 6 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= -0.18872736207147425) THEN 14 ELSE 15 END END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_54` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, -0.03203660225084873 AS `Score` UNION ALL SELECT 6 AS nid, -0.026071125113543425 AS `Score` UNION ALL SELECT 14 AS nid, 0.05100082011196845 AS `Score` UNION ALL SELECT 15 AS nid, 0.0030984754684367025 AS `Score`) AS `Values`), 
@@ -1080,7 +1080,7 @@ FROM `DT_node_lookup_54` LEFT OUTER JOIN `DT_node_data_54` ON `DT_node_lookup_54
 FROM `DT_Output_54`), 
 `DT_node_lookup_55` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_31 <= 0.36901699791788345) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_69 <= 0.12950619410491884) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_55` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.020099509826441427 AS `Score` UNION ALL SELECT 4 AS nid, -0.03189536515463107 AS `Score` UNION ALL SELECT 5 AS nid, 0.0036767730116769887 AS `Score`) AS `Values`), 
@@ -1092,7 +1092,7 @@ FROM `DT_node_lookup_55` LEFT OUTER JOIN `DT_node_data_55` ON `DT_node_lookup_55
 FROM `DT_Output_55`), 
 `DT_node_lookup_56` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_80 <= -0.20659892002321142) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_8 <= 0.15851073706032173) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_66 <= -0.16160014838154277) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_56` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.03060751890436594 AS `Score` UNION ALL SELECT 5 AS nid, -0.014150078595797873 AS `Score` UNION ALL SELECT 6 AS nid, 0.03573203558143081 AS `Score` UNION ALL SELECT 7 AS nid, -0.0044581153413860665 AS `Score`) AS `Values`), 
@@ -1104,7 +1104,7 @@ FROM `DT_node_lookup_56` LEFT OUTER JOIN `DT_node_data_56` ON `DT_node_lookup_56
 FROM `DT_Output_56`), 
 `DT_node_lookup_57` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= -0.227315336240404) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_66 <= -0.16160014838154277) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_57` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, -0.01998261413617107 AS `Score` UNION ALL SELECT 6 AS nid, -0.009748624080525037 AS `Score` UNION ALL SELECT 7 AS nid, 0.0292959498894432 AS `Score`) AS `Values`), 
@@ -1116,7 +1116,7 @@ FROM `DT_node_lookup_57` LEFT OUTER JOIN `DT_node_data_57` ON `DT_node_lookup_57
 FROM `DT_Output_57`), 
 `DT_node_lookup_58` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_40 <= -0.5337063693982357) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_101 <= -0.3079092197802202) THEN 6 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_33 <= 1.0000000180025095e-35) THEN 14 ELSE 15 END END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_58` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, -0.0318125040411655 AS `Score` UNION ALL SELECT 6 AS nid, -0.02578061038935473 AS `Score` UNION ALL SELECT 14 AS nid, 0.002089881713252583 AS `Score` UNION ALL SELECT 15 AS nid, 0.04878045633913547 AS `Score`) AS `Values`), 
@@ -1128,7 +1128,7 @@ FROM `DT_node_lookup_58` LEFT OUTER JOIN `DT_node_data_58` ON `DT_node_lookup_58
 FROM `DT_Output_58`), 
 `DT_node_lookup_59` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_101 <= 1.0000000180025095e-35) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_21 <= -0.3420785268148518) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_2 <= 0.21817166411542668) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_59` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.014753650054128554 AS `Score` UNION ALL SELECT 5 AS nid, 0.03817297064500252 AS `Score` UNION ALL SELECT 6 AS nid, -0.03202510022630165 AS `Score` UNION ALL SELECT 7 AS nid, 0.0018751524215349189 AS `Score`) AS `Values`), 
@@ -1152,10 +1152,10 @@ FROM `LGBM_Model_1_14` UNION ALL SELECT `LGBM_Model_2_14`.`KEY` AS `KEY`, `LGBM_
 FROM `LGBM_Model_2_14` UNION ALL SELECT `LGBM_Model_3_14`.`KEY` AS `KEY`, `LGBM_Model_3_14`.`Score_0` AS `Score_0`, `LGBM_Model_3_14`.`Score_1` AS `Score_1`, `LGBM_Model_3_14`.`Score_2` AS `Score_2`, `LGBM_Model_3_14`.`Score_3` AS `Score_3` 
 FROM `LGBM_Model_3_14`) AS `LGBM_esu_5`) AS `LGBM_B5`) AS `U`
 
--- Code For temporary table TMP_20180516113054_CODEGEN_0XU49N_LGBM_B6 part 1. Create 
+-- Code For temporary table TMP_20180602143835_EPG_LGBM_B6 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516113054_CODEGEN_0XU49N_LGBM_B6` (
+CREATE TEMPORARY TABLE `TMP_20180602143835_EPG_LGBM_B6` (
 	`KEY` BIGINT, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -1165,12 +1165,12 @@ CREATE TEMPORARY TABLE `TMP_20180516113054_CODEGEN_0XU49N_LGBM_B6` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516113054_CODEGEN_0XU49N_LGBM_B6 part 2. Populate
+-- Code For temporary table TMP_20180602143835_EPG_LGBM_B6 part 2. Populate
 
-INSERT INTO `TMP_20180516113054_CODEGEN_0XU49N_LGBM_B6` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
+INSERT INTO `TMP_20180602143835_EPG_LGBM_B6` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
 FROM (WITH `DT_node_lookup_60` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_80 <= -0.20659892002321142) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_43 <= -0.2582857805819058) THEN 4 ELSE 5 END ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_35 <= -0.19856138664745998) THEN 6 ELSE 7 END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_60` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 4 AS nid, -0.013689615874156992 AS `Score` UNION ALL SELECT 5 AS nid, -0.030449564866642423 AS `Score` UNION ALL SELECT 6 AS nid, 0.03490078493210116 AS `Score` UNION ALL SELECT 7 AS nid, -0.004664885985751203 AS `Score`) AS `Values`), 
@@ -1182,7 +1182,7 @@ FROM `DT_node_lookup_60` LEFT OUTER JOIN `DT_node_data_60` ON `DT_node_lookup_60
 FROM `DT_Output_60`), 
 `DT_node_lookup_61` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_70 <= -0.7274469808060616) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_50 <= -0.20437877954345876) THEN 6 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_52 <= 1.0000000180025095e-35) THEN 14 ELSE 15 END END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_61` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, -0.02628140917315637 AS `Score` UNION ALL SELECT 6 AS nid, -0.01777674979451851 AS `Score` UNION ALL SELECT 14 AS nid, 0.052027314115713534 AS `Score` UNION ALL SELECT 15 AS nid, -0.004217682524032953 AS `Score`) AS `Values`), 
@@ -1194,7 +1194,7 @@ FROM `DT_node_lookup_61` LEFT OUTER JOIN `DT_node_data_61` ON `DT_node_lookup_61
 FROM `DT_Output_61`), 
 `DT_node_lookup_62` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_40 <= -0.5337063693982357) THEN 2 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_101 <= -0.3079092197802202) THEN 6 ELSE CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= -0.18872736207147425) THEN 14 ELSE 15 END END END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_62` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 2 AS nid, -0.03162941178263455 AS `Score` UNION ALL SELECT 6 AS nid, -0.02543211348171276 AS `Score` UNION ALL SELECT 14 AS nid, 0.04728314963131467 AS `Score` UNION ALL SELECT 15 AS nid, 0.0025346518318884884 AS `Score`) AS `Values`), 
@@ -1206,7 +1206,7 @@ FROM `DT_node_lookup_62` LEFT OUTER JOIN `DT_node_data_62` ON `DT_node_lookup_62
 FROM `DT_Output_62`), 
 `DT_node_lookup_63` AS 
 (SELECT `ADS_sca_2_OUT`.`KEY` AS `KEY`, CASE WHEN (`ADS_sca_2_OUT`.scaler_31 <= 0.36901699791788345) THEN CASE WHEN (`ADS_sca_2_OUT`.scaler_46 <= 0.06978065000800054) THEN 4 ELSE 5 END ELSE 3 END AS node_id_2 
-FROM `TMP_20180516113053_CODEGEN_80QLO2_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
+FROM `TMP_20180602143835_ROL_ADS_sca_2_OUT` AS `ADS_sca_2_OUT`), 
 `DT_node_data_63` AS 
 (SELECT `Values`.nid AS nid, CAST(`Values`.`Score` AS DOUBLE) AS `Score` 
 FROM (SELECT 3 AS nid, 0.019286844860131692 AS `Score` UNION ALL SELECT 4 AS nid, -0.03102628577513182 AS `Score` UNION ALL SELECT 5 AS nid, 0.00427368528143657 AS `Score`) AS `Values`), 
@@ -1224,10 +1224,10 @@ FROM `LGBM_Model_1_15` UNION ALL SELECT `LGBM_Model_2_15`.`KEY` AS `KEY`, `LGBM_
 FROM `LGBM_Model_2_15` UNION ALL SELECT `LGBM_Model_3_15`.`KEY` AS `KEY`, `LGBM_Model_3_15`.`Score_0` AS `Score_0`, `LGBM_Model_3_15`.`Score_1` AS `Score_1`, `LGBM_Model_3_15`.`Score_2` AS `Score_2`, `LGBM_Model_3_15`.`Score_3` AS `Score_3` 
 FROM `LGBM_Model_3_15`) AS `LGBM_esu_6`) AS `LGBM_B6`) AS `U`
 
--- Code For temporary table TMP_20180516113054_CODEGEN_OK2DVU_LGBM_sum part 1. Create 
+-- Code For temporary table TMP_20180602143835_7P3_LGBM_sum part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516113054_CODEGEN_OK2DVU_LGBM_sum` (
+CREATE TEMPORARY TABLE `TMP_20180602143835_7P3_LGBM_sum` (
 	`KEY` BIGINT NOT NULL, 
 	`Score_0` DOUBLE, 
 	`Score_1` DOUBLE, 
@@ -1238,33 +1238,33 @@ CREATE TEMPORARY TABLE `TMP_20180516113054_CODEGEN_OK2DVU_LGBM_sum` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516113054_CODEGEN_OK2DVU_LGBM_sum part 2. Populate
+-- Code For temporary table TMP_20180602143835_7P3_LGBM_sum part 2. Populate
 
-INSERT INTO `TMP_20180516113054_CODEGEN_OK2DVU_LGBM_sum` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
+INSERT INTO `TMP_20180602143835_7P3_LGBM_sum` (`KEY`, `Score_0`, `Score_1`, `Score_2`, `Score_3`) SELECT `U`.`KEY`, `U`.`Score_0`, `U`.`Score_1`, `U`.`Score_2`, `U`.`Score_3` 
 FROM (WITH `LGBM_Union` AS 
 (SELECT `LGBM_EnsembleUnion`.`KEY` AS `KEY`, `LGBM_EnsembleUnion`.`Score_0` AS `Score_0`, `LGBM_EnsembleUnion`.`Score_1` AS `Score_1`, `LGBM_EnsembleUnion`.`Score_2` AS `Score_2`, `LGBM_EnsembleUnion`.`Score_3` AS `Score_3` 
 FROM (SELECT `LGBM_B0`.`KEY` AS `KEY`, `LGBM_B0`.`Score_0` AS `Score_0`, `LGBM_B0`.`Score_1` AS `Score_1`, `LGBM_B0`.`Score_2` AS `Score_2`, `LGBM_B0`.`Score_3` AS `Score_3` 
-FROM `TMP_20180516113054_CODEGEN_AQQZH3_LGBM_B0` AS `LGBM_B0` UNION ALL SELECT `LGBM_B1`.`KEY` AS `KEY`, `LGBM_B1`.`Score_0` AS `Score_0`, `LGBM_B1`.`Score_1` AS `Score_1`, `LGBM_B1`.`Score_2` AS `Score_2`, `LGBM_B1`.`Score_3` AS `Score_3` 
-FROM `TMP_20180516113054_CODEGEN_6DGC19_LGBM_B1` AS `LGBM_B1` UNION ALL SELECT `LGBM_B2`.`KEY` AS `KEY`, `LGBM_B2`.`Score_0` AS `Score_0`, `LGBM_B2`.`Score_1` AS `Score_1`, `LGBM_B2`.`Score_2` AS `Score_2`, `LGBM_B2`.`Score_3` AS `Score_3` 
-FROM `TMP_20180516113054_CODEGEN_1GFXIX_LGBM_B2` AS `LGBM_B2` UNION ALL SELECT `LGBM_B3`.`KEY` AS `KEY`, `LGBM_B3`.`Score_0` AS `Score_0`, `LGBM_B3`.`Score_1` AS `Score_1`, `LGBM_B3`.`Score_2` AS `Score_2`, `LGBM_B3`.`Score_3` AS `Score_3` 
-FROM `TMP_20180516113054_CODEGEN_7J7NFK_LGBM_B3` AS `LGBM_B3` UNION ALL SELECT `LGBM_B4`.`KEY` AS `KEY`, `LGBM_B4`.`Score_0` AS `Score_0`, `LGBM_B4`.`Score_1` AS `Score_1`, `LGBM_B4`.`Score_2` AS `Score_2`, `LGBM_B4`.`Score_3` AS `Score_3` 
-FROM `TMP_20180516113054_CODEGEN_RGG10L_LGBM_B4` AS `LGBM_B4` UNION ALL SELECT `LGBM_B5`.`KEY` AS `KEY`, `LGBM_B5`.`Score_0` AS `Score_0`, `LGBM_B5`.`Score_1` AS `Score_1`, `LGBM_B5`.`Score_2` AS `Score_2`, `LGBM_B5`.`Score_3` AS `Score_3` 
-FROM `TMP_20180516113054_CODEGEN_MV035C_LGBM_B5` AS `LGBM_B5` UNION ALL SELECT `LGBM_B6`.`KEY` AS `KEY`, `LGBM_B6`.`Score_0` AS `Score_0`, `LGBM_B6`.`Score_1` AS `Score_1`, `LGBM_B6`.`Score_2` AS `Score_2`, `LGBM_B6`.`Score_3` AS `Score_3` 
-FROM `TMP_20180516113054_CODEGEN_0XU49N_LGBM_B6` AS `LGBM_B6`) AS `LGBM_EnsembleUnion`)
+FROM `TMP_20180602143835_NMK_LGBM_B0` AS `LGBM_B0` UNION ALL SELECT `LGBM_B1`.`KEY` AS `KEY`, `LGBM_B1`.`Score_0` AS `Score_0`, `LGBM_B1`.`Score_1` AS `Score_1`, `LGBM_B1`.`Score_2` AS `Score_2`, `LGBM_B1`.`Score_3` AS `Score_3` 
+FROM `TMP_20180602143835_GDB_LGBM_B1` AS `LGBM_B1` UNION ALL SELECT `LGBM_B2`.`KEY` AS `KEY`, `LGBM_B2`.`Score_0` AS `Score_0`, `LGBM_B2`.`Score_1` AS `Score_1`, `LGBM_B2`.`Score_2` AS `Score_2`, `LGBM_B2`.`Score_3` AS `Score_3` 
+FROM `TMP_20180602143835_151_LGBM_B2` AS `LGBM_B2` UNION ALL SELECT `LGBM_B3`.`KEY` AS `KEY`, `LGBM_B3`.`Score_0` AS `Score_0`, `LGBM_B3`.`Score_1` AS `Score_1`, `LGBM_B3`.`Score_2` AS `Score_2`, `LGBM_B3`.`Score_3` AS `Score_3` 
+FROM `TMP_20180602143835_F59_LGBM_B3` AS `LGBM_B3` UNION ALL SELECT `LGBM_B4`.`KEY` AS `KEY`, `LGBM_B4`.`Score_0` AS `Score_0`, `LGBM_B4`.`Score_1` AS `Score_1`, `LGBM_B4`.`Score_2` AS `Score_2`, `LGBM_B4`.`Score_3` AS `Score_3` 
+FROM `TMP_20180602143835_VX3_LGBM_B4` AS `LGBM_B4` UNION ALL SELECT `LGBM_B5`.`KEY` AS `KEY`, `LGBM_B5`.`Score_0` AS `Score_0`, `LGBM_B5`.`Score_1` AS `Score_1`, `LGBM_B5`.`Score_2` AS `Score_2`, `LGBM_B5`.`Score_3` AS `Score_3` 
+FROM `TMP_20180602143835_QAB_LGBM_B5` AS `LGBM_B5` UNION ALL SELECT `LGBM_B6`.`KEY` AS `KEY`, `LGBM_B6`.`Score_0` AS `Score_0`, `LGBM_B6`.`Score_1` AS `Score_1`, `LGBM_B6`.`Score_2` AS `Score_2`, `LGBM_B6`.`Score_3` AS `Score_3` 
+FROM `TMP_20180602143835_EPG_LGBM_B6` AS `LGBM_B6`) AS `LGBM_EnsembleUnion`)
  SELECT `LGBM_sum`.`KEY`, `LGBM_sum`.`Score_0`, `LGBM_sum`.`Score_1`, `LGBM_sum`.`Score_2`, `LGBM_sum`.`Score_3` 
 FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Score_0` AS DOUBLE) AS `Score_0`, CAST(`T`.`Score_1` AS DOUBLE) AS `Score_1`, CAST(`T`.`Score_2` AS DOUBLE) AS `Score_2`, CAST(`T`.`Score_3` AS DOUBLE) AS `Score_3` 
 FROM (SELECT `LGBM_Union`.`KEY` AS `KEY`, sum(`LGBM_Union`.`Score_0`) AS `Score_0`, sum(`LGBM_Union`.`Score_1`) AS `Score_1`, sum(`LGBM_Union`.`Score_2`) AS `Score_2`, sum(`LGBM_Union`.`Score_3`) AS `Score_3` 
 FROM `LGBM_Union` GROUP BY `LGBM_Union`.`KEY`) AS `T`) AS `LGBM_sum`) AS `U`
 
--- Code For temporary table TMP_20180516113054_CODEGEN_OK2DVU_LGBM_sum part 3. Create Index 
+-- Code For temporary table TMP_20180602143835_7P3_LGBM_sum part 3. Create Index 
 
-CREATE INDEX `ix_TMP_20180516113054_CODEGEN_OK2DVU_LGBM_sum_KEY` ON `TMP_20180516113054_CODEGEN_OK2DVU_LGBM_sum` (`KEY`)
+CREATE INDEX `ix_TMP_20180602143835_7P3_LGBM_sum_KEY` ON `TMP_20180602143835_7P3_LGBM_sum` (`KEY`)
 
 -- Model deployment code
 
 WITH orig_cte AS 
 (SELECT `LGBM_sum`.`KEY` AS `KEY`, `LGBM_sum`.`Score_0` AS `Score_0`, `LGBM_sum`.`Score_1` AS `Score_1`, `LGBM_sum`.`Score_2` AS `Score_2`, `LGBM_sum`.`Score_3` AS `Score_3`, NULL AS `Proba_0`, NULL AS `Proba_1`, NULL AS `Proba_2`, NULL AS `Proba_3`, NULL AS `LogProba_0`, NULL AS `LogProba_1`, NULL AS `LogProba_2`, NULL AS `LogProba_3`, CAST(NULL AS SIGNED INTEGER) AS `Decision`, NULL AS `DecisionProba` 
-FROM `TMP_20180516113054_CODEGEN_OK2DVU_LGBM_sum` AS `LGBM_sum`), 
+FROM `TMP_20180602143835_7P3_LGBM_sum` AS `LGBM_sum`), 
 score_class_union AS 
 (SELECT scu.`KEY_u` AS `KEY_u`, scu.class AS class, scu.`LogProba` AS `LogProba`, scu.`Proba` AS `Proba`, scu.`Score` AS `Score` 
 FROM (SELECT orig_cte.`KEY` AS `KEY_u`, 0 AS class, orig_cte.`LogProba_0` AS `LogProba`, orig_cte.`Proba_0` AS `Proba`, orig_cte.`Score_0` AS `Score` 

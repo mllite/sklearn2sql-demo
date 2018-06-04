@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table TMP_20180516114036_CODEGEN_EQXEYL_WE_B0 part 1. Create 
+-- Code For temporary table TMP_20180602144725_ABX_WE_B0 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516114036_CODEGEN_EQXEYL_WE_B0` (
+CREATE TEMPORARY TABLE `TMP_20180602144725_ABX_WE_B0` (
 	`KEY` BIGINT, 
 	`Estimator` DOUBLE, 
 	`Weight` DOUBLE, 
@@ -22,9 +22,9 @@ CREATE TEMPORARY TABLE `TMP_20180516114036_CODEGEN_EQXEYL_WE_B0` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516114036_CODEGEN_EQXEYL_WE_B0 part 2. Populate
+-- Code For temporary table TMP_20180602144725_ABX_WE_B0 part 2. Populate
 
-INSERT INTO `TMP_20180516114036_CODEGEN_EQXEYL_WE_B0` (`KEY`, `Estimator`, `Weight`, est_index) SELECT `U`.`KEY`, `U`.`Estimator`, `U`.`Weight`, `U`.est_index 
+INSERT INTO `TMP_20180602144725_ABX_WE_B0` (`KEY`, `Estimator`, `Weight`, est_index) SELECT `U`.`KEY`, `U`.`Estimator`, `U`.`Weight`, `U`.est_index 
 FROM (WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_80` <= -0.34553784132003784) THEN CASE WHEN (`ADS`.`Feature_41` <= -0.15062880516052246) THEN CASE WHEN (`ADS`.`Feature_49` <= 0.33193662762641907) THEN 3 ELSE 4 END ELSE CASE WHEN (`ADS`.`Feature_81` <= 0.4526126980781555) THEN 6 ELSE 7 END END ELSE CASE WHEN (`ADS`.`Feature_53` <= -0.5890092849731445) THEN CASE WHEN (`ADS`.`Feature_37` <= -0.04914991930127144) THEN 10 ELSE 11 END ELSE CASE WHEN (`ADS`.`Feature_12` <= -1.1293261051177979) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM `RandomReg_100` AS `ADS`), 
@@ -159,10 +159,10 @@ FROM `ADB_Model_7` UNION ALL SELECT `ADB_Model_8`.`KEY` AS `KEY`, `ADB_Model_8`.
 FROM `ADB_Model_8` UNION ALL SELECT `ADB_Model_9`.`KEY` AS `KEY`, `ADB_Model_9`.`Estimator` AS `Estimator`, `ADB_Model_9`.`Weight` AS `Weight`, `ADB_Model_9`.est_index AS est_index 
 FROM `ADB_Model_9`) AS `WE_esu_0`) AS `WE_B0`) AS `U`
 
--- Code For temporary table TMP_20180516114036_CODEGEN_MTV5U1_WE_B1 part 1. Create 
+-- Code For temporary table TMP_20180602144725_QP3_WE_B1 part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516114036_CODEGEN_MTV5U1_WE_B1` (
+CREATE TEMPORARY TABLE `TMP_20180602144725_QP3_WE_B1` (
 	`KEY` BIGINT, 
 	`Estimator` DOUBLE, 
 	`Weight` DOUBLE, 
@@ -171,9 +171,9 @@ CREATE TEMPORARY TABLE `TMP_20180516114036_CODEGEN_MTV5U1_WE_B1` (
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516114036_CODEGEN_MTV5U1_WE_B1 part 2. Populate
+-- Code For temporary table TMP_20180602144725_QP3_WE_B1 part 2. Populate
 
-INSERT INTO `TMP_20180516114036_CODEGEN_MTV5U1_WE_B1` (`KEY`, `Estimator`, `Weight`, est_index) SELECT `U`.`KEY`, `U`.`Estimator`, `U`.`Weight`, `U`.est_index 
+INSERT INTO `TMP_20180602144725_QP3_WE_B1` (`KEY`, `Estimator`, `Weight`, est_index) SELECT `U`.`KEY`, `U`.`Estimator`, `U`.`Weight`, `U`.est_index 
 FROM (WITH `DT_node_lookup_10` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_63` <= -0.8221249580383301) THEN CASE WHEN (`ADS`.`Feature_56` <= -0.36408668756484985) THEN CASE WHEN (`ADS`.`Feature_78` <= 0.6419654488563538) THEN 3 ELSE 4 END ELSE CASE WHEN (`ADS`.`Feature_78` <= 0.9275895357131958) THEN 6 ELSE 7 END END ELSE CASE WHEN (`ADS`.`Feature_80` <= 0.9317564964294434) THEN CASE WHEN (`ADS`.`Feature_65` <= 0.9399657249450684) THEN 10 ELSE 11 END ELSE CASE WHEN (`ADS`.`Feature_93` <= 0.2717847526073456) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM `RandomReg_100` AS `ADS`), 
@@ -256,24 +256,24 @@ FROM `ADB_Model_13` UNION ALL SELECT `ADB_Model_14`.`KEY` AS `KEY`, `ADB_Model_1
 FROM `ADB_Model_14` UNION ALL SELECT `ADB_Model_15`.`KEY` AS `KEY`, `ADB_Model_15`.`Estimator` AS `Estimator`, `ADB_Model_15`.`Weight` AS `Weight`, `ADB_Model_15`.est_index AS est_index 
 FROM `ADB_Model_15`) AS `WE_esu_1`) AS `WE_B1`) AS `U`
 
--- Code For temporary table TMP_20180516114036_CODEGEN_KB0L7L_Quantiles part 1. Create 
+-- Code For temporary table TMP_20180602144725_CDV_Quantiles part 1. Create 
 
 
-CREATE TEMPORARY TABLE `TMP_20180516114036_CODEGEN_KB0L7L_Quantiles` (
+CREATE TEMPORARY TABLE `TMP_20180602144725_CDV_Quantiles` (
 	`KEY` BIGINT, 
 	`Quantile` DOUBLE
 )
 
  ENGINE=MEMORY
 
--- Code For temporary table TMP_20180516114036_CODEGEN_KB0L7L_Quantiles part 2. Populate
+-- Code For temporary table TMP_20180602144725_CDV_Quantiles part 2. Populate
 
-INSERT INTO `TMP_20180516114036_CODEGEN_KB0L7L_Quantiles` (`KEY`, `Quantile`) SELECT `U`.`KEY`, `U`.`Quantile` 
+INSERT INTO `TMP_20180602144725_CDV_Quantiles` (`KEY`, `Quantile`) SELECT `U`.`KEY`, `U`.`Quantile` 
 FROM (WITH `WE_Union` AS 
 (SELECT `WE_EnsembleUnion`.`KEY` AS `KEY`, `WE_EnsembleUnion`.`Estimator` AS `Estimator`, `WE_EnsembleUnion`.`Weight` AS `Weight`, `WE_EnsembleUnion`.est_index AS est_index 
 FROM (SELECT `WE_B0`.`KEY` AS `KEY`, `WE_B0`.`Estimator` AS `Estimator`, `WE_B0`.`Weight` AS `Weight`, `WE_B0`.est_index AS est_index 
-FROM `TMP_20180516114036_CODEGEN_EQXEYL_WE_B0` AS `WE_B0` UNION ALL SELECT `WE_B1`.`KEY` AS `KEY`, `WE_B1`.`Estimator` AS `Estimator`, `WE_B1`.`Weight` AS `Weight`, `WE_B1`.est_index AS est_index 
-FROM `TMP_20180516114036_CODEGEN_MTV5U1_WE_B1` AS `WE_B1`) AS `WE_EnsembleUnion`), 
+FROM `TMP_20180602144725_ABX_WE_B0` AS `WE_B0` UNION ALL SELECT `WE_B1`.`KEY` AS `KEY`, `WE_B1`.`Estimator` AS `Estimator`, `WE_B1`.`Weight` AS `Weight`, `WE_B1`.est_index AS est_index 
+FROM `TMP_20180602144725_QP3_WE_B1` AS `WE_B1`) AS `WE_EnsembleUnion`), 
 `Cumulative_Frequencies` AS 
 (SELECT `CW`.`KEY` AS `KEY`, `CW`.`Estimator` AS `Estimator`, `CW`.`Weight` AS `Weight`, `CW`.est_index AS est_index, `CW`.cum_weight AS cum_weight 
 FROM (SELECT u1.`KEY` AS `KEY`, u1.`Estimator` AS `Estimator`, u1.`Weight` AS `Weight`, u1.est_index AS est_index, sum(u2.`Weight`) AS cum_weight 
@@ -288,4 +288,4 @@ WHERE `Cumulative_Frequencies`.cum_weight >= 0.5 GROUP BY `Cumulative_Frequencie
 -- Model deployment code
 
 SELECT `Quantiles`.`KEY` AS `KEY`, `Quantiles`.`Quantile` AS `Estimator` 
-FROM `TMP_20180516114036_CODEGEN_KB0L7L_Quantiles` AS `Quantiles`
+FROM `TMP_20180602144725_CDV_Quantiles` AS `Quantiles`
