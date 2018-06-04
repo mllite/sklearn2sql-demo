@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180516121856_codegen_ags2gs_hl_1_relu_1 part 1. Create 
+-- Code For temporary table tmp_20180602152303_44p_hl_1_relu_1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516121856_codegen_ags2gs_hl_1_relu_1 (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602152303_44p_hl_1_relu_1 (
 	"KEY" BIGINT, 
 	"NEUR_1_1" DOUBLE, 
 	"NEUR_1_2" DOUBLE, 
@@ -22,9 +22,9 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516121856_codegen_ags2gs_hl_1_relu_1 (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516121856_codegen_ags2gs_hl_1_relu_1 part 2. Populate
+-- Code For temporary table tmp_20180602152303_44p_hl_1_relu_1 part 2. Populate
 
-INSERT INTO tmp_20180516121856_codegen_ags2gs_hl_1_relu_1 WITH "IL" AS 
+INSERT INTO tmp_20180602152303_44p_hl_1_relu_1 WITH "IL" AS 
 (SELECT "ADS"."KEY" AS "KEY", CAST("ADS"."Feature_0" AS DOUBLE) AS "Feature_0", CAST("ADS"."Feature_1" AS DOUBLE) AS "Feature_1", CAST("ADS"."Feature_2" AS DOUBLE) AS "Feature_2", CAST("ADS"."Feature_3" AS DOUBLE) AS "Feature_3" 
 FROM "FREIDMAN3" AS "ADS"), 
 "HL_BA_1" AS 
@@ -37,21 +37,21 @@ FROM "HL_BA_1")
 FROM (SELECT "HL_1_relu"."KEY" AS "KEY", "HL_1_relu"."NEUR_1_1" AS "NEUR_1_1", "HL_1_relu"."NEUR_1_2" AS "NEUR_1_2", "HL_1_relu"."NEUR_1_3" AS "NEUR_1_3" 
 FROM "HL_1_relu") AS "HL_1_relu_1"
 
--- Code For temporary table tmp_20180516121856_codegen_ic1iab_ol_identity_1 part 1. Create 
+-- Code For temporary table tmp_20180602152303_r74_ol_identity_1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516121856_codegen_ic1iab_ol_identity_1 (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602152303_r74_ol_identity_1 (
 	"KEY" BIGINT, 
 	"NEUR_3_1" DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516121856_codegen_ic1iab_ol_identity_1 part 2. Populate
+-- Code For temporary table tmp_20180602152303_r74_ol_identity_1 part 2. Populate
 
-INSERT INTO tmp_20180516121856_codegen_ic1iab_ol_identity_1 WITH "HL_BA_2" AS 
+INSERT INTO tmp_20180602152303_r74_ol_identity_1 WITH "HL_BA_2" AS 
 (SELECT "HL_1_relu_1"."KEY" AS "KEY", 0.671303528237788 * "HL_1_relu_1"."NEUR_1_1" + 2.262980034710498 * "HL_1_relu_1"."NEUR_1_2" + 0.7284039680127695 * "HL_1_relu_1"."NEUR_1_3" + 2.5309192263479128 AS "NEUR_2_1", 0.6473995197292937 * "HL_1_relu_1"."NEUR_1_1" + -0.06924135644829287 * "HL_1_relu_1"."NEUR_1_2" + -0.6445020459926758 * "HL_1_relu_1"."NEUR_1_3" + -0.5292904296119374 AS "NEUR_2_2", -0.3000543349034449 * "HL_1_relu_1"."NEUR_1_1" + -0.8255144420855783 * "HL_1_relu_1"."NEUR_1_2" + -0.300380081936023 * "HL_1_relu_1"."NEUR_1_3" + -0.010394282503777497 AS "NEUR_2_3", -0.3405761026603614 * "HL_1_relu_1"."NEUR_1_1" + -0.5177515086052785 * "HL_1_relu_1"."NEUR_1_2" + -0.12205903825019872 * "HL_1_relu_1"."NEUR_1_3" + -0.7406283496068888 AS "NEUR_2_4", -0.3859124377252719 * "HL_1_relu_1"."NEUR_1_1" + -0.027531184091944085 * "HL_1_relu_1"."NEUR_1_2" + 0.7236721234612513 * "HL_1_relu_1"."NEUR_1_3" + -0.14939322656497145 AS "NEUR_2_5" 
-FROM tmp_20180516121856_codegen_ags2gs_hl_1_relu_1 AS "HL_1_relu_1"), 
+FROM tmp_20180602152303_44p_hl_1_relu_1 AS "HL_1_relu_1"), 
 "HL_2_relu" AS 
 (SELECT "HL_BA_2"."KEY" AS "KEY", greatest("HL_BA_2"."NEUR_2_1", 0) AS "NEUR_2_1", greatest("HL_BA_2"."NEUR_2_2", 0) AS "NEUR_2_2", greatest("HL_BA_2"."NEUR_2_3", 0) AS "NEUR_2_3", greatest("HL_BA_2"."NEUR_2_4", 0) AS "NEUR_2_4", greatest("HL_BA_2"."NEUR_2_5", 0) AS "NEUR_2_5" 
 FROM "HL_BA_2"), 
@@ -68,4 +68,4 @@ FROM "OL_identity") AS "OL_identity_1"
 -- Model deployment code
 
 SELECT "OL_identity_1"."KEY" AS "KEY", "OL_identity_1"."NEUR_3_1" AS "Estimator" 
-FROM tmp_20180516121856_codegen_ic1iab_ol_identity_1 AS "OL_identity_1"
+FROM tmp_20180602152303_r74_ol_identity_1 AS "OL_identity_1"

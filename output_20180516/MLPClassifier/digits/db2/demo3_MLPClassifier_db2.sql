@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180516120116_codegen_hlssdy_hl_1_relu_1 part 1. Create 
+-- Code For temporary table tmp_20180602150651_wvz_hl_1_relu_1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516120116_codegen_hlssdy_hl_1_relu_1 (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602150651_wvz_hl_1_relu_1 (
 	"KEY" BIGINT, 
 	"NEUR_1_1" DOUBLE, 
 	"NEUR_1_2" DOUBLE, 
@@ -22,9 +22,9 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516120116_codegen_hlssdy_hl_1_relu_1 (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516120116_codegen_hlssdy_hl_1_relu_1 part 2. Populate
+-- Code For temporary table tmp_20180602150651_wvz_hl_1_relu_1 part 2. Populate
 
-INSERT INTO tmp_20180516120116_codegen_hlssdy_hl_1_relu_1 WITH "IL" AS 
+INSERT INTO tmp_20180602150651_wvz_hl_1_relu_1 WITH "IL" AS 
 (SELECT "ADS"."KEY" AS "KEY", CAST("ADS"."Feature_0" AS DOUBLE) AS "Feature_0", CAST("ADS"."Feature_1" AS DOUBLE) AS "Feature_1", CAST("ADS"."Feature_2" AS DOUBLE) AS "Feature_2", CAST("ADS"."Feature_3" AS DOUBLE) AS "Feature_3", CAST("ADS"."Feature_4" AS DOUBLE) AS "Feature_4", CAST("ADS"."Feature_5" AS DOUBLE) AS "Feature_5", CAST("ADS"."Feature_6" AS DOUBLE) AS "Feature_6", CAST("ADS"."Feature_7" AS DOUBLE) AS "Feature_7", CAST("ADS"."Feature_8" AS DOUBLE) AS "Feature_8", CAST("ADS"."Feature_9" AS DOUBLE) AS "Feature_9", CAST("ADS"."Feature_10" AS DOUBLE) AS "Feature_10", CAST("ADS"."Feature_11" AS DOUBLE) AS "Feature_11", CAST("ADS"."Feature_12" AS DOUBLE) AS "Feature_12", CAST("ADS"."Feature_13" AS DOUBLE) AS "Feature_13", CAST("ADS"."Feature_14" AS DOUBLE) AS "Feature_14", CAST("ADS"."Feature_15" AS DOUBLE) AS "Feature_15", CAST("ADS"."Feature_16" AS DOUBLE) AS "Feature_16", CAST("ADS"."Feature_17" AS DOUBLE) AS "Feature_17", CAST("ADS"."Feature_18" AS DOUBLE) AS "Feature_18", CAST("ADS"."Feature_19" AS DOUBLE) AS "Feature_19", CAST("ADS"."Feature_20" AS DOUBLE) AS "Feature_20", CAST("ADS"."Feature_21" AS DOUBLE) AS "Feature_21", CAST("ADS"."Feature_22" AS DOUBLE) AS "Feature_22", CAST("ADS"."Feature_23" AS DOUBLE) AS "Feature_23", CAST("ADS"."Feature_24" AS DOUBLE) AS "Feature_24", CAST("ADS"."Feature_25" AS DOUBLE) AS "Feature_25", CAST("ADS"."Feature_26" AS DOUBLE) AS "Feature_26", CAST("ADS"."Feature_27" AS DOUBLE) AS "Feature_27", CAST("ADS"."Feature_28" AS DOUBLE) AS "Feature_28", CAST("ADS"."Feature_29" AS DOUBLE) AS "Feature_29", CAST("ADS"."Feature_30" AS DOUBLE) AS "Feature_30", CAST("ADS"."Feature_31" AS DOUBLE) AS "Feature_31", CAST("ADS"."Feature_32" AS DOUBLE) AS "Feature_32", CAST("ADS"."Feature_33" AS DOUBLE) AS "Feature_33", CAST("ADS"."Feature_34" AS DOUBLE) AS "Feature_34", CAST("ADS"."Feature_35" AS DOUBLE) AS "Feature_35", CAST("ADS"."Feature_36" AS DOUBLE) AS "Feature_36", CAST("ADS"."Feature_37" AS DOUBLE) AS "Feature_37", CAST("ADS"."Feature_38" AS DOUBLE) AS "Feature_38", CAST("ADS"."Feature_39" AS DOUBLE) AS "Feature_39", CAST("ADS"."Feature_40" AS DOUBLE) AS "Feature_40", CAST("ADS"."Feature_41" AS DOUBLE) AS "Feature_41", CAST("ADS"."Feature_42" AS DOUBLE) AS "Feature_42", CAST("ADS"."Feature_43" AS DOUBLE) AS "Feature_43", CAST("ADS"."Feature_44" AS DOUBLE) AS "Feature_44", CAST("ADS"."Feature_45" AS DOUBLE) AS "Feature_45", CAST("ADS"."Feature_46" AS DOUBLE) AS "Feature_46", CAST("ADS"."Feature_47" AS DOUBLE) AS "Feature_47", CAST("ADS"."Feature_48" AS DOUBLE) AS "Feature_48", CAST("ADS"."Feature_49" AS DOUBLE) AS "Feature_49", CAST("ADS"."Feature_50" AS DOUBLE) AS "Feature_50", CAST("ADS"."Feature_51" AS DOUBLE) AS "Feature_51", CAST("ADS"."Feature_52" AS DOUBLE) AS "Feature_52", CAST("ADS"."Feature_53" AS DOUBLE) AS "Feature_53", CAST("ADS"."Feature_54" AS DOUBLE) AS "Feature_54", CAST("ADS"."Feature_55" AS DOUBLE) AS "Feature_55", CAST("ADS"."Feature_56" AS DOUBLE) AS "Feature_56", CAST("ADS"."Feature_57" AS DOUBLE) AS "Feature_57", CAST("ADS"."Feature_58" AS DOUBLE) AS "Feature_58", CAST("ADS"."Feature_59" AS DOUBLE) AS "Feature_59", CAST("ADS"."Feature_60" AS DOUBLE) AS "Feature_60", CAST("ADS"."Feature_61" AS DOUBLE) AS "Feature_61", CAST("ADS"."Feature_62" AS DOUBLE) AS "Feature_62", CAST("ADS"."Feature_63" AS DOUBLE) AS "Feature_63" 
 FROM "DIGITS" AS "ADS"), 
 "HL_BA_1" AS 
@@ -37,10 +37,10 @@ FROM "HL_BA_1")
 FROM (SELECT "HL_1_relu"."KEY" AS "KEY", "HL_1_relu"."NEUR_1_1" AS "NEUR_1_1", "HL_1_relu"."NEUR_1_2" AS "NEUR_1_2", "HL_1_relu"."NEUR_1_3" AS "NEUR_1_3" 
 FROM "HL_1_relu") AS "HL_1_relu_1"
 
--- Code For temporary table tmp_20180516120116_codegen_e6qbzp_ol_softmax_1 part 1. Create 
+-- Code For temporary table tmp_20180602150651_hbm_ol_softmax_1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516120116_codegen_e6qbzp_ol_softmax_1 (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602150651_hbm_ol_softmax_1 (
 	"KEY" BIGINT, 
 	"NEUR_3_1" DOUBLE, 
 	"NEUR_3_2" DOUBLE, 
@@ -56,11 +56,11 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516120116_codegen_e6qbzp_ol_softmax_1 (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516120116_codegen_e6qbzp_ol_softmax_1 part 2. Populate
+-- Code For temporary table tmp_20180602150651_hbm_ol_softmax_1 part 2. Populate
 
-INSERT INTO tmp_20180516120116_codegen_e6qbzp_ol_softmax_1 WITH "HL_BA_2" AS 
+INSERT INTO tmp_20180602150651_hbm_ol_softmax_1 WITH "HL_BA_2" AS 
 (SELECT "HL_1_relu_1"."KEY" AS "KEY", -0.5573364901029748 * "HL_1_relu_1"."NEUR_1_1" + -0.8641534243965675 * "HL_1_relu_1"."NEUR_1_2" + -0.2766604780895476 * "HL_1_relu_1"."NEUR_1_3" + 2.295386642805444 AS "NEUR_2_1", 0.011735522860248504 * "HL_1_relu_1"."NEUR_1_1" + -0.40341198658333843 * "HL_1_relu_1"."NEUR_1_2" + 0.18612367383081677 * "HL_1_relu_1"."NEUR_1_3" + -0.508232954910367 AS "NEUR_2_2", -0.05092130493601808 * "HL_1_relu_1"."NEUR_1_1" + 0.8491721010509943 * "HL_1_relu_1"."NEUR_1_2" + 0.8245555740350957 * "HL_1_relu_1"."NEUR_1_3" + -0.28455923399573535 AS "NEUR_2_3", -0.0038478434623372155 * "HL_1_relu_1"."NEUR_1_1" + 0.4002369724982778 * "HL_1_relu_1"."NEUR_1_2" + -0.2831833471670811 * "HL_1_relu_1"."NEUR_1_3" + -0.6915591457579999 AS "NEUR_2_4", 0.06290543230562325 * "HL_1_relu_1"."NEUR_1_1" + -0.26240803178662425 * "HL_1_relu_1"."NEUR_1_2" + 0.10991972529064754 * "HL_1_relu_1"."NEUR_1_3" + -3.8002843904832266 AS "NEUR_2_5" 
-FROM tmp_20180516120116_codegen_hlssdy_hl_1_relu_1 AS "HL_1_relu_1"), 
+FROM tmp_20180602150651_wvz_hl_1_relu_1 AS "HL_1_relu_1"), 
 "HL_2_relu" AS 
 (SELECT "HL_BA_2"."KEY" AS "KEY", greatest("HL_BA_2"."NEUR_2_1", 0) AS "NEUR_2_1", greatest("HL_BA_2"."NEUR_2_2", 0) AS "NEUR_2_2", greatest("HL_BA_2"."NEUR_2_3", 0) AS "NEUR_2_3", greatest("HL_BA_2"."NEUR_2_4", 0) AS "NEUR_2_4", greatest("HL_BA_2"."NEUR_2_5", 0) AS "NEUR_2_5" 
 FROM "HL_BA_2"), 
@@ -78,7 +78,7 @@ FROM "OL_softmax") AS "OL_softmax_1"
 
 WITH orig_cte AS 
 (SELECT "OL_softmax_1"."KEY" AS "KEY", "OL_softmax_1"."NEUR_3_1" AS "Score_0", "OL_softmax_1"."NEUR_3_2" AS "Score_1", "OL_softmax_1"."NEUR_3_3" AS "Score_2", "OL_softmax_1"."NEUR_3_4" AS "Score_3", "OL_softmax_1"."NEUR_3_5" AS "Score_4", "OL_softmax_1"."NEUR_3_6" AS "Score_5", "OL_softmax_1"."NEUR_3_7" AS "Score_6", "OL_softmax_1"."NEUR_3_8" AS "Score_7", "OL_softmax_1"."NEUR_3_9" AS "Score_8", "OL_softmax_1"."NEUR_3_10" AS "Score_9", CAST(NULL AS DOUBLE) AS "Proba_0", CAST(NULL AS DOUBLE) AS "Proba_1", CAST(NULL AS DOUBLE) AS "Proba_2", CAST(NULL AS DOUBLE) AS "Proba_3", CAST(NULL AS DOUBLE) AS "Proba_4", CAST(NULL AS DOUBLE) AS "Proba_5", CAST(NULL AS DOUBLE) AS "Proba_6", CAST(NULL AS DOUBLE) AS "Proba_7", CAST(NULL AS DOUBLE) AS "Proba_8", CAST(NULL AS DOUBLE) AS "Proba_9", CAST(NULL AS DOUBLE) AS "LogProba_0", CAST(NULL AS DOUBLE) AS "LogProba_1", CAST(NULL AS DOUBLE) AS "LogProba_2", CAST(NULL AS DOUBLE) AS "LogProba_3", CAST(NULL AS DOUBLE) AS "LogProba_4", CAST(NULL AS DOUBLE) AS "LogProba_5", CAST(NULL AS DOUBLE) AS "LogProba_6", CAST(NULL AS DOUBLE) AS "LogProba_7", CAST(NULL AS DOUBLE) AS "LogProba_8", CAST(NULL AS DOUBLE) AS "LogProba_9", NULL AS "Decision", CAST(NULL AS DOUBLE) AS "DecisionProba" 
-FROM tmp_20180516120116_codegen_e6qbzp_ol_softmax_1 AS "OL_softmax_1"), 
+FROM tmp_20180602150651_hbm_ol_softmax_1 AS "OL_softmax_1"), 
 score_class_union AS 
 (SELECT scu."KEY_u" AS "KEY_u", scu.class AS class, scu."LogProba" AS "LogProba", scu."Proba" AS "Proba", scu."Score" AS "Score" 
 FROM (SELECT orig_cte."KEY" AS "KEY_u", 0 AS class, orig_cte."LogProba_0" AS "LogProba", orig_cte."Proba_0" AS "Proba", orig_cte."Score_0" AS "Score" 

@@ -10,19 +10,19 @@
 
 
 
--- Code For temporary table tmp_20180516115133_codegen_lwvobl_quantiles part 1. Create 
+-- Code For temporary table tmp_20180602145741_tgc_quantiles part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516115133_codegen_lwvobl_quantiles (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602145741_tgc_quantiles (
 	"KEY" BIGINT, 
 	"Quantile" DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516115133_codegen_lwvobl_quantiles part 2. Populate
+-- Code For temporary table tmp_20180602145741_tgc_quantiles part 2. Populate
 
-INSERT INTO tmp_20180516115133_codegen_lwvobl_quantiles WITH "DT_node_lookup" AS 
+INSERT INTO tmp_20180602145741_tgc_quantiles WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_8" <= -0.005612778477370739) THEN CASE WHEN ("ADS"."Feature_2" <= 0.0061888848431408405) THEN CASE WHEN ("ADS"."Feature_8" <= -0.04327875375747681) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_6" <= -0.061809033155441284) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_2" <= 0.06654636561870575) THEN CASE WHEN ("ADS"."Feature_2" <= -0.00782267190515995) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_5" <= 0.02671290934085846) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM "DIABETES" AS "ADS"), 
 "DT_node_data" AS 
@@ -247,4 +247,4 @@ WHERE "Cumulative_Frequencies".cum_weight >= 0.5 GROUP BY "Cumulative_Frequencie
 -- Model deployment code
 
 SELECT "Quantiles"."KEY" AS "KEY", "Quantiles"."Quantile" AS "Estimator" 
-FROM tmp_20180516115133_codegen_lwvobl_quantiles AS "Quantiles"
+FROM tmp_20180602145741_tgc_quantiles AS "Quantiles"

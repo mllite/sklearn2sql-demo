@@ -10,19 +10,19 @@
 
 
 
--- Code For temporary table tmp_20180516115333_codegen_ssha9m_lgbm_b0 part 1. Create 
+-- Code For temporary table tmp_20180602145932_jf2_lgbm_b0 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516115333_codegen_ssha9m_lgbm_b0 (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602145932_jf2_lgbm_b0 (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516115333_codegen_ssha9m_lgbm_b0 part 2. Populate
+-- Code For temporary table tmp_20180602145932_jf2_lgbm_b0 part 2. Populate
 
-INSERT INTO tmp_20180516115333_codegen_ssha9m_lgbm_b0 WITH "DT_node_lookup" AS 
+INSERT INTO tmp_20180602145932_jf2_lgbm_b0 WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_8" <= 1.0000000180025095e-35) THEN CASE WHEN ("ADS"."Feature_2" <= 0.006188884713822105) THEN CASE WHEN ("ADS"."Feature_6" <= 0.021027815919496855) THEN CASE WHEN ("ADS"."Feature_9" <= -0.032143499361726696) THEN 16 ELSE CASE WHEN ("ADS"."Feature_0" <= 0.010831868050777417) THEN 34 ELSE 35 END END ELSE CASE WHEN ("ADS"."Feature_8" <= -0.03262011609449084) THEN 18 ELSE 19 END END ELSE 5 END ELSE CASE WHEN ("ADS"."Feature_2" <= 0.05738495822316491) THEN CASE WHEN ("ADS"."Feature_3" <= 0.036791461391860805) THEN CASE WHEN ("ADS"."Feature_2" <= -0.022912041280962248) THEN 24 ELSE CASE WHEN ("ADS"."Feature_0" <= 0.007199329599757851) THEN 50 ELSE 51 END END ELSE CASE WHEN ("ADS"."Feature_2" <= 0.013194663194048) THEN 26 ELSE 27 END END ELSE 7 END END AS node_id_2 
 FROM "DIABETES" AS "ADS"), 
 "DT_node_data" AS 
@@ -156,19 +156,19 @@ FROM "LGBM_Model_7" UNION ALL SELECT "LGBM_Model_8"."KEY" AS "KEY", "LGBM_Model_
 FROM "LGBM_Model_8" UNION ALL SELECT "LGBM_Model_9"."KEY" AS "KEY", "LGBM_Model_9"."Estimator" AS "Estimator" 
 FROM "LGBM_Model_9") AS "LGBM_esu_0") AS "LGBM_B0"
 
--- Code For temporary table tmp_20180516115333_codegen_y3ka6r_lgbm_b1 part 1. Create 
+-- Code For temporary table tmp_20180602145932_l37_lgbm_b1 part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516115333_codegen_y3ka6r_lgbm_b1 (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602145932_l37_lgbm_b1 (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516115333_codegen_y3ka6r_lgbm_b1 part 2. Populate
+-- Code For temporary table tmp_20180602145932_l37_lgbm_b1 part 2. Populate
 
-INSERT INTO tmp_20180516115333_codegen_y3ka6r_lgbm_b1 WITH "DT_node_lookup_10" AS 
+INSERT INTO tmp_20180602145932_l37_lgbm_b1 WITH "DT_node_lookup_10" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_8" <= 1.0000000180025095e-35) THEN CASE WHEN ("ADS"."Feature_2" <= 0.026667314117559255) THEN CASE WHEN ("ADS"."Feature_8" <= -0.04327875374419265) THEN CASE WHEN ("ADS"."Feature_0" <= -0.036391131812476794) THEN 16 ELSE 17 END ELSE CASE WHEN ("ADS"."Feature_1" <= 1.0000000180025095e-35) THEN CASE WHEN ("ADS"."Feature_2" <= -0.038001410315294845) THEN 36 ELSE 37 END ELSE CASE WHEN ("ADS"."Feature_0" <= 0.021729483403836052) THEN 38 ELSE 39 END END END ELSE 5 END ELSE CASE WHEN ("ADS"."Feature_2" <= 0.04606793144741546) THEN CASE WHEN ("ADS"."Feature_8" <= 0.04533348837519321) THEN CASE WHEN ("ADS"."Feature_4" <= 0.04865331950412991) THEN CASE WHEN ("ADS"."Feature_0" <= -0.010963362655339919) THEN 48 ELSE CASE WHEN ("ADS"."Feature_2" <= -0.007822672246629598) THEN 98 ELSE 99 END END ELSE 25 END ELSE 13 END ELSE CASE WHEN ("ADS"."Feature_5" <= 0.022328831438891104) THEN 14 ELSE 15 END END END AS node_id_2 
 FROM "DIABETES" AS "ADS"), 
 "DT_node_data_10" AS 
@@ -250,23 +250,23 @@ FROM "LGBM_Model_13" UNION ALL SELECT "LGBM_Model_14"."KEY" AS "KEY", "LGBM_Mode
 FROM "LGBM_Model_14" UNION ALL SELECT "LGBM_Model_15"."KEY" AS "KEY", "LGBM_Model_15"."Estimator" AS "Estimator" 
 FROM "LGBM_Model_15") AS "LGBM_esu_1") AS "LGBM_B1"
 
--- Code For temporary table tmp_20180516115333_codegen_ff6y4a_lgbm_sum part 1. Create 
+-- Code For temporary table tmp_20180602145932_ndr_lgbm_sum part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516115333_codegen_ff6y4a_lgbm_sum (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602145932_ndr_lgbm_sum (
 	"KEY" BIGINT, 
 	"Estimator" DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516115333_codegen_ff6y4a_lgbm_sum part 2. Populate
+-- Code For temporary table tmp_20180602145932_ndr_lgbm_sum part 2. Populate
 
-INSERT INTO tmp_20180516115333_codegen_ff6y4a_lgbm_sum WITH "LGBM_Union" AS 
+INSERT INTO tmp_20180602145932_ndr_lgbm_sum WITH "LGBM_Union" AS 
 (SELECT "LGBM_EnsembleUnion"."KEY" AS "KEY", "LGBM_EnsembleUnion"."Estimator" AS "Estimator" 
 FROM (SELECT "LGBM_B0"."KEY" AS "KEY", "LGBM_B0"."Estimator" AS "Estimator" 
-FROM tmp_20180516115333_codegen_ssha9m_lgbm_b0 AS "LGBM_B0" UNION ALL SELECT "LGBM_B1"."KEY" AS "KEY", "LGBM_B1"."Estimator" AS "Estimator" 
-FROM tmp_20180516115333_codegen_y3ka6r_lgbm_b1 AS "LGBM_B1") AS "LGBM_EnsembleUnion")
+FROM tmp_20180602145932_jf2_lgbm_b0 AS "LGBM_B0" UNION ALL SELECT "LGBM_B1"."KEY" AS "KEY", "LGBM_B1"."Estimator" AS "Estimator" 
+FROM tmp_20180602145932_l37_lgbm_b1 AS "LGBM_B1") AS "LGBM_EnsembleUnion")
  SELECT "LGBM_sum"."KEY", "LGBM_sum"."Estimator" 
 FROM (SELECT "T"."KEY" AS "KEY", CAST("T"."Estimator" AS DOUBLE) AS "Estimator" 
 FROM (SELECT "LGBM_Union"."KEY" AS "KEY", sum("LGBM_Union"."Estimator") AS "Estimator" 
@@ -275,4 +275,4 @@ FROM "LGBM_Union" GROUP BY "LGBM_Union"."KEY") AS "T") AS "LGBM_sum"
 -- Model deployment code
 
 SELECT "LGBM_sum"."KEY" AS "KEY", "LGBM_sum"."Estimator" AS "Estimator" 
-FROM tmp_20180516115333_codegen_ff6y4a_lgbm_sum AS "LGBM_sum"
+FROM tmp_20180602145932_ndr_lgbm_sum AS "LGBM_sum"

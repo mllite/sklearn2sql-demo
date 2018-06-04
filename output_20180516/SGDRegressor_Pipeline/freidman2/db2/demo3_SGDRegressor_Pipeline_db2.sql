@@ -10,10 +10,10 @@
 
 
 
--- Code For temporary table tmp_20180516121446_codegen_b503ng_ads_imp_1_out part 1. Create 
+-- Code For temporary table tmp_20180602151913_rjk_ads_imp_1_out part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516121446_codegen_b503ng_ads_imp_1_out (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602151913_rjk_ads_imp_1_out (
 	"KEY" BIGINT, 
 	imputer_output_2 DOUBLE, 
 	imputer_output_3 DOUBLE, 
@@ -23,16 +23,16 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516121446_codegen_b503ng_ads_imp_1_out (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516121446_codegen_b503ng_ads_imp_1_out part 2. Populate
+-- Code For temporary table tmp_20180602151913_rjk_ads_imp_1_out part 2. Populate
 
-INSERT INTO tmp_20180516121446_codegen_b503ng_ads_imp_1_out SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".imputer_output_2, "ADS_imp_1_OUT".imputer_output_3, "ADS_imp_1_OUT".imputer_output_4, "ADS_imp_1_OUT".imputer_output_5 
+INSERT INTO tmp_20180602151913_rjk_ads_imp_1_out SELECT "ADS_imp_1_OUT"."KEY", "ADS_imp_1_OUT".imputer_output_2, "ADS_imp_1_OUT".imputer_output_3, "ADS_imp_1_OUT".imputer_output_4, "ADS_imp_1_OUT".imputer_output_5 
 FROM (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_0" IS NULL) THEN 43.79128122207401 ELSE "ADS"."Feature_0" END AS imputer_output_2, CASE WHEN ("ADS"."Feature_1" IS NULL) THEN 945.9672833084396 ELSE "ADS"."Feature_1" END AS imputer_output_3, CASE WHEN ("ADS"."Feature_2" IS NULL) THEN 0.5310009099975209 ELSE "ADS"."Feature_2" END AS imputer_output_4, CASE WHEN ("ADS"."Feature_3" IS NULL) THEN 6.139967152050499 ELSE "ADS"."Feature_3" END AS imputer_output_5 
 FROM "FREIDMAN2" AS "ADS") AS "ADS_imp_1_OUT"
 
--- Code For temporary table tmp_20180516121446_codegen_otjbiw_ads_sca_2_out part 1. Create 
+-- Code For temporary table tmp_20180602151913_lfg_ads_sca_2_out part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516121446_codegen_otjbiw_ads_sca_2_out (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602151913_lfg_ads_sca_2_out (
 	"KEY" BIGINT, 
 	scaler_output_2 DOUBLE, 
 	scaler_output_3 DOUBLE, 
@@ -42,17 +42,17 @@ CREATE GLOBAL TEMPORARY TABLE tmp_20180516121446_codegen_otjbiw_ads_sca_2_out (
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516121446_codegen_otjbiw_ads_sca_2_out part 2. Populate
+-- Code For temporary table tmp_20180602151913_lfg_ads_sca_2_out part 2. Populate
 
-INSERT INTO tmp_20180516121446_codegen_otjbiw_ads_sca_2_out SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_output_2, "ADS_sca_2_OUT".scaler_output_3, "ADS_sca_2_OUT".scaler_output_4, "ADS_sca_2_OUT".scaler_output_5 
+INSERT INTO tmp_20180602151913_lfg_ads_sca_2_out SELECT "ADS_sca_2_OUT"."KEY", "ADS_sca_2_OUT".scaler_output_2, "ADS_sca_2_OUT".scaler_output_3, "ADS_sca_2_OUT".scaler_output_4, "ADS_sca_2_OUT".scaler_output_5 
 FROM (SELECT "ADS_imp_1_OUT"."KEY" AS "KEY", (CAST("ADS_imp_1_OUT".imputer_output_2 AS DOUBLE) - 43.79128122207401) / 26.03562357622511 AS scaler_output_2, (CAST("ADS_imp_1_OUT".imputer_output_3 AS DOUBLE) - 945.9672833084396) / 461.4552766146446 AS scaler_output_3, (CAST("ADS_imp_1_OUT".imputer_output_4 AS DOUBLE) - 0.5310009099975209) / 0.2901863282144786 AS scaler_output_4, (CAST("ADS_imp_1_OUT".imputer_output_5 AS DOUBLE) - 6.139967152050499) / 3.072917242564058 AS scaler_output_5 
-FROM tmp_20180516121446_codegen_b503ng_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT"
+FROM tmp_20180602151913_rjk_ads_imp_1_out AS "ADS_imp_1_OUT") AS "ADS_sca_2_OUT"
 
 -- Model deployment code
 
 WITH linear_input AS 
 (SELECT "ADS_sca_2_OUT"."KEY" AS "KEY", CAST("ADS_sca_2_OUT".scaler_output_2 AS DOUBLE) AS scaler_output_2, CAST("ADS_sca_2_OUT".scaler_output_3 AS DOUBLE) AS scaler_output_3, CAST("ADS_sca_2_OUT".scaler_output_4 AS DOUBLE) AS scaler_output_4, CAST("ADS_sca_2_OUT".scaler_output_5 AS DOUBLE) AS scaler_output_5 
-FROM tmp_20180516121446_codegen_otjbiw_ads_sca_2_out AS "ADS_sca_2_OUT"), 
+FROM tmp_20180602151913_lfg_ads_sca_2_out AS "ADS_sca_2_OUT"), 
 linear_model_cte AS 
 (SELECT linear_input."KEY" AS "KEY", 14.640331669092621 * linear_input.scaler_output_2 + 154.57833391505486 * linear_input.scaler_output_3 + 184.09019210930492 * linear_input.scaler_output_4 + 16.29358789846709 * linear_input.scaler_output_5 + 346.4145642524113 AS "Estimator" 
 FROM linear_input)

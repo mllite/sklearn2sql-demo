@@ -10,19 +10,19 @@
 
 
 
--- Code For temporary table tmp_20180516114614_codegen_tqg74a_quantiles part 1. Create 
+-- Code For temporary table tmp_20180602145237_guq_quantiles part 1. Create 
 
 
-CREATE GLOBAL TEMPORARY TABLE tmp_20180516114614_codegen_tqg74a_quantiles (
+CREATE GLOBAL TEMPORARY TABLE tmp_20180602145237_guq_quantiles (
 	"KEY" BIGINT, 
 	"Quantile" DOUBLE
 )
 
  ON COMMIT PRESERVE ROWS
 
--- Code For temporary table tmp_20180516114614_codegen_tqg74a_quantiles part 2. Populate
+-- Code For temporary table tmp_20180602145237_guq_quantiles part 2. Populate
 
-INSERT INTO tmp_20180516114614_codegen_tqg74a_quantiles WITH "DT_node_lookup" AS 
+INSERT INTO tmp_20180602145237_guq_quantiles WITH "DT_node_lookup" AS 
 (SELECT "ADS"."KEY" AS "KEY", CASE WHEN ("ADS"."Feature_5" <= 6.824999809265137) THEN CASE WHEN ("ADS"."Feature_12" <= 14.805000305175781) THEN CASE WHEN ("ADS"."Feature_5" <= 6.5269999504089355) THEN 3 ELSE 4 END ELSE CASE WHEN ("ADS"."Feature_0" <= 0.6147900223731995) THEN 6 ELSE 7 END END ELSE CASE WHEN ("ADS"."Feature_5" <= 7.444999694824219) THEN CASE WHEN ("ADS"."Feature_12" <= 10.655000686645508) THEN 10 ELSE 11 END ELSE CASE WHEN ("ADS"."Feature_0" <= 2.7422351837158203) THEN 13 ELSE 14 END END END AS node_id_2 
 FROM "BOSTON" AS "ADS"), 
 "DT_node_data" AS 
@@ -247,4 +247,4 @@ WHERE "Cumulative_Frequencies".cum_weight >= 0.5 GROUP BY "Cumulative_Frequencie
 -- Model deployment code
 
 SELECT "Quantiles"."KEY" AS "KEY", "Quantiles"."Quantile" AS "Estimator" 
-FROM tmp_20180516114614_codegen_tqg74a_quantiles AS "Quantiles"
+FROM tmp_20180602145237_guq_quantiles AS "Quantiles"
