@@ -10,9 +10,9 @@
 
 
 
--- Code For temporary table tmp_20180516112757_codegen_byiv9b_bag_b0 part 1. Create 
+-- Code For temporary table tmp_20180602143548_jdc_bag_b0 part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180516112757_codegen_byiv9b_bag_b0` STORED AS ORC AS WITH `DT_node_lookup` AS 
+CREATE TEMPORARY TABLE `tmp_20180602143548_jdc_bag_b0` STORED AS ORC AS WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_44` <= -2.1092634201049805) THEN CASE WHEN (`ADS`.`Feature_62` <= 1.5035890340805054) THEN 2 ELSE 3 END ELSE CASE WHEN (`ADS`.`Feature_19` <= -0.5789695978164673) THEN CASE WHEN (`ADS`.`Feature_78` <= -0.6031690239906311) THEN CASE WHEN (`ADS`.`Feature_56` <= -8.09799861907959) THEN 7 ELSE 8 END ELSE CASE WHEN (`ADS`.`Feature_42` <= -0.2146744430065155) THEN CASE WHEN (`ADS`.`Feature_90` <= 1.5686895847320557) THEN 11 ELSE 12 END ELSE 13 END END ELSE CASE WHEN (`ADS`.`Feature_99` <= 0.00624384731054306) THEN CASE WHEN (`ADS`.`Feature_44` <= -0.7715538740158081) THEN CASE WHEN (`ADS`.`Feature_53` <= -1.3674404621124268) THEN 17 ELSE 18 END ELSE CASE WHEN (`ADS`.`Feature_89` <= -1.1485321521759033) THEN 20 ELSE 21 END END ELSE CASE WHEN (`ADS`.`Feature_11` <= 0.45316773653030396) THEN 23 ELSE CASE WHEN (`ADS`.`Feature_50` <= -0.7742524743080139) THEN 25 ELSE 26 END END END END END AS `node_id_2` 
 FROM `FourClass_100` AS `ADS`), 
 `DT_node_data` AS 
@@ -146,13 +146,13 @@ FROM `BAG_Model_7` UNION ALL SELECT `BAG_Model_8`.`KEY` AS `KEY`, `BAG_Model_8`.
 FROM `BAG_Model_8` UNION ALL SELECT `BAG_Model_9`.`KEY` AS `KEY`, `BAG_Model_9`.`Score_0` AS `Score_0`, `BAG_Model_9`.`Proba_0` AS `Proba_0`, `BAG_Model_9`.`LogProba_0` AS `LogProba_0`, `BAG_Model_9`.`Score_1` AS `Score_1`, `BAG_Model_9`.`Proba_1` AS `Proba_1`, `BAG_Model_9`.`LogProba_1` AS `LogProba_1`, `BAG_Model_9`.`Score_2` AS `Score_2`, `BAG_Model_9`.`Proba_2` AS `Proba_2`, `BAG_Model_9`.`LogProba_2` AS `LogProba_2`, `BAG_Model_9`.`Score_3` AS `Score_3`, `BAG_Model_9`.`Proba_3` AS `Proba_3`, `BAG_Model_9`.`LogProba_3` AS `LogProba_3` 
 FROM `BAG_Model_9`) AS `BAG_esu_0`) AS `BAG_B0`
 
--- Code For temporary table tmp_20180516112757_codegen_byiv9b_bag_b0 part 2. Populate
+-- Code For temporary table tmp_20180602143548_jdc_bag_b0 part 2. Populate
 
-SELECT * FROM `tmp_20180516112757_codegen_byiv9b_bag_b0`
+SELECT * FROM `tmp_20180602143548_jdc_bag_b0`
 
--- Code For temporary table tmp_20180516112757_codegen_97se8h_bag_b1 part 1. Create 
+-- Code For temporary table tmp_20180602143548_j1u_bag_b1 part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180516112757_codegen_97se8h_bag_b1` STORED AS ORC AS WITH `DT_node_lookup_10` AS 
+CREATE TEMPORARY TABLE `tmp_20180602143548_j1u_bag_b1` STORED AS ORC AS WITH `DT_node_lookup_10` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_44` <= 2.012571334838867) THEN CASE WHEN (`ADS`.`Feature_11` <= -0.28234586119651794) THEN CASE WHEN (`ADS`.`Feature_98` <= -1.204319953918457) THEN CASE WHEN (`ADS`.`Feature_18` <= 0.01825621724128723) THEN CASE WHEN (`ADS`.`Feature_61` <= 0.13271871209144592) THEN 5 ELSE 6 END ELSE 7 END ELSE CASE WHEN (`ADS`.`Feature_98` <= 1.8926827907562256) THEN 9 ELSE 10 END END ELSE CASE WHEN (`ADS`.`Feature_47` <= -0.9839439392089844) THEN CASE WHEN (`ADS`.`Feature_71` <= 1.0438568592071533) THEN 13 ELSE 14 END ELSE CASE WHEN (`ADS`.`Feature_99` <= -0.6637465953826904) THEN CASE WHEN (`ADS`.`Feature_51` <= 2.5524697303771973) THEN 17 ELSE 18 END ELSE CASE WHEN (`ADS`.`Feature_78` <= 0.9120599627494812) THEN 20 ELSE 21 END END END END ELSE CASE WHEN (`ADS`.`Feature_34` <= -0.3926776051521301) THEN 23 ELSE 24 END END AS `node_id_2` 
 FROM `FourClass_100` AS `ADS`), 
 `DT_node_data_10` AS 
@@ -234,31 +234,31 @@ FROM `BAG_Model_13` UNION ALL SELECT `BAG_Model_14`.`KEY` AS `KEY`, `BAG_Model_1
 FROM `BAG_Model_14` UNION ALL SELECT `BAG_Model_15`.`KEY` AS `KEY`, `BAG_Model_15`.`Score_0` AS `Score_0`, `BAG_Model_15`.`Proba_0` AS `Proba_0`, `BAG_Model_15`.`LogProba_0` AS `LogProba_0`, `BAG_Model_15`.`Score_1` AS `Score_1`, `BAG_Model_15`.`Proba_1` AS `Proba_1`, `BAG_Model_15`.`LogProba_1` AS `LogProba_1`, `BAG_Model_15`.`Score_2` AS `Score_2`, `BAG_Model_15`.`Proba_2` AS `Proba_2`, `BAG_Model_15`.`LogProba_2` AS `LogProba_2`, `BAG_Model_15`.`Score_3` AS `Score_3`, `BAG_Model_15`.`Proba_3` AS `Proba_3`, `BAG_Model_15`.`LogProba_3` AS `LogProba_3` 
 FROM `BAG_Model_15`) AS `BAG_esu_1`) AS `BAG_B1`
 
--- Code For temporary table tmp_20180516112757_codegen_97se8h_bag_b1 part 2. Populate
+-- Code For temporary table tmp_20180602143548_j1u_bag_b1 part 2. Populate
 
-SELECT * FROM `tmp_20180516112757_codegen_97se8h_bag_b1`
+SELECT * FROM `tmp_20180602143548_j1u_bag_b1`
 
--- Code For temporary table tmp_20180516112757_codegen_t9kzp2_bag_avg part 1. Create 
+-- Code For temporary table tmp_20180602143548_qmp_bag_avg part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180516112757_codegen_t9kzp2_bag_avg` STORED AS ORC AS WITH `BAG_Union` AS 
+CREATE TEMPORARY TABLE `tmp_20180602143548_qmp_bag_avg` STORED AS ORC AS WITH `BAG_Union` AS 
 (SELECT `BAG_EnsembleUnion`.`KEY` AS `KEY`, `BAG_EnsembleUnion`.`Score_0` AS `Score_0`, `BAG_EnsembleUnion`.`Proba_0` AS `Proba_0`, `BAG_EnsembleUnion`.`LogProba_0` AS `LogProba_0`, `BAG_EnsembleUnion`.`Score_1` AS `Score_1`, `BAG_EnsembleUnion`.`Proba_1` AS `Proba_1`, `BAG_EnsembleUnion`.`LogProba_1` AS `LogProba_1`, `BAG_EnsembleUnion`.`Score_2` AS `Score_2`, `BAG_EnsembleUnion`.`Proba_2` AS `Proba_2`, `BAG_EnsembleUnion`.`LogProba_2` AS `LogProba_2`, `BAG_EnsembleUnion`.`Score_3` AS `Score_3`, `BAG_EnsembleUnion`.`Proba_3` AS `Proba_3`, `BAG_EnsembleUnion`.`LogProba_3` AS `LogProba_3` 
 FROM (SELECT `BAG_B0`.`KEY` AS `KEY`, `BAG_B0`.`Score_0` AS `Score_0`, `BAG_B0`.`Proba_0` AS `Proba_0`, `BAG_B0`.`LogProba_0` AS `LogProba_0`, `BAG_B0`.`Score_1` AS `Score_1`, `BAG_B0`.`Proba_1` AS `Proba_1`, `BAG_B0`.`LogProba_1` AS `LogProba_1`, `BAG_B0`.`Score_2` AS `Score_2`, `BAG_B0`.`Proba_2` AS `Proba_2`, `BAG_B0`.`LogProba_2` AS `LogProba_2`, `BAG_B0`.`Score_3` AS `Score_3`, `BAG_B0`.`Proba_3` AS `Proba_3`, `BAG_B0`.`LogProba_3` AS `LogProba_3` 
-FROM `tmp_20180516112757_codegen_byiv9b_bag_b0` AS `BAG_B0` UNION ALL SELECT `BAG_B1`.`KEY` AS `KEY`, `BAG_B1`.`Score_0` AS `Score_0`, `BAG_B1`.`Proba_0` AS `Proba_0`, `BAG_B1`.`LogProba_0` AS `LogProba_0`, `BAG_B1`.`Score_1` AS `Score_1`, `BAG_B1`.`Proba_1` AS `Proba_1`, `BAG_B1`.`LogProba_1` AS `LogProba_1`, `BAG_B1`.`Score_2` AS `Score_2`, `BAG_B1`.`Proba_2` AS `Proba_2`, `BAG_B1`.`LogProba_2` AS `LogProba_2`, `BAG_B1`.`Score_3` AS `Score_3`, `BAG_B1`.`Proba_3` AS `Proba_3`, `BAG_B1`.`LogProba_3` AS `LogProba_3` 
-FROM `tmp_20180516112757_codegen_97se8h_bag_b1` AS `BAG_B1`) AS `BAG_EnsembleUnion`)
+FROM `tmp_20180602143548_jdc_bag_b0` AS `BAG_B0` UNION ALL SELECT `BAG_B1`.`KEY` AS `KEY`, `BAG_B1`.`Score_0` AS `Score_0`, `BAG_B1`.`Proba_0` AS `Proba_0`, `BAG_B1`.`LogProba_0` AS `LogProba_0`, `BAG_B1`.`Score_1` AS `Score_1`, `BAG_B1`.`Proba_1` AS `Proba_1`, `BAG_B1`.`LogProba_1` AS `LogProba_1`, `BAG_B1`.`Score_2` AS `Score_2`, `BAG_B1`.`Proba_2` AS `Proba_2`, `BAG_B1`.`LogProba_2` AS `LogProba_2`, `BAG_B1`.`Score_3` AS `Score_3`, `BAG_B1`.`Proba_3` AS `Proba_3`, `BAG_B1`.`LogProba_3` AS `LogProba_3` 
+FROM `tmp_20180602143548_j1u_bag_b1` AS `BAG_B1`) AS `BAG_EnsembleUnion`)
  SELECT `BAG_avg`.`KEY`, `BAG_avg`.`Score_0`, `BAG_avg`.`Proba_0`, `BAG_avg`.`LogProba_0`, `BAG_avg`.`Score_1`, `BAG_avg`.`Proba_1`, `BAG_avg`.`LogProba_1`, `BAG_avg`.`Score_2`, `BAG_avg`.`Proba_2`, `BAG_avg`.`LogProba_2`, `BAG_avg`.`Score_3`, `BAG_avg`.`Proba_3`, `BAG_avg`.`LogProba_3` 
 FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Score_0` AS DOUBLE) AS `Score_0`, CAST(`T`.`Proba_0` AS DOUBLE) AS `Proba_0`, CAST(`T`.`LogProba_0` AS DOUBLE) AS `LogProba_0`, CAST(`T`.`Score_1` AS DOUBLE) AS `Score_1`, CAST(`T`.`Proba_1` AS DOUBLE) AS `Proba_1`, CAST(`T`.`LogProba_1` AS DOUBLE) AS `LogProba_1`, CAST(`T`.`Score_2` AS DOUBLE) AS `Score_2`, CAST(`T`.`Proba_2` AS DOUBLE) AS `Proba_2`, CAST(`T`.`LogProba_2` AS DOUBLE) AS `LogProba_2`, CAST(`T`.`Score_3` AS DOUBLE) AS `Score_3`, CAST(`T`.`Proba_3` AS DOUBLE) AS `Proba_3`, CAST(`T`.`LogProba_3` AS DOUBLE) AS `LogProba_3` 
 FROM (SELECT `BAG_Union`.`KEY` AS `KEY`, avg(CAST(`BAG_Union`.`Score_0` AS DOUBLE)) AS `Score_0`, avg(CAST(`BAG_Union`.`Proba_0` AS DOUBLE)) AS `Proba_0`, CAST(NULL AS DOUBLE) AS `LogProba_0`, avg(CAST(`BAG_Union`.`Score_1` AS DOUBLE)) AS `Score_1`, avg(CAST(`BAG_Union`.`Proba_1` AS DOUBLE)) AS `Proba_1`, CAST(NULL AS DOUBLE) AS `LogProba_1`, avg(CAST(`BAG_Union`.`Score_2` AS DOUBLE)) AS `Score_2`, avg(CAST(`BAG_Union`.`Proba_2` AS DOUBLE)) AS `Proba_2`, CAST(NULL AS DOUBLE) AS `LogProba_2`, avg(CAST(`BAG_Union`.`Score_3` AS DOUBLE)) AS `Score_3`, avg(CAST(`BAG_Union`.`Proba_3` AS DOUBLE)) AS `Proba_3`, CAST(NULL AS DOUBLE) AS `LogProba_3` 
 FROM `BAG_Union` GROUP BY `BAG_Union`.`KEY`) AS `T`) AS `BAG_avg`
 
--- Code For temporary table tmp_20180516112757_codegen_t9kzp2_bag_avg part 2. Populate
+-- Code For temporary table tmp_20180602143548_qmp_bag_avg part 2. Populate
 
-SELECT * FROM `tmp_20180516112757_codegen_t9kzp2_bag_avg`
+SELECT * FROM `tmp_20180602143548_qmp_bag_avg`
 
 -- Model deployment code
 
 WITH `orig_cte` AS 
 (SELECT `BAG_avg`.`KEY` AS `KEY`, `BAG_avg`.`Score_0` AS `Score_0`, `BAG_avg`.`Score_1` AS `Score_1`, `BAG_avg`.`Score_2` AS `Score_2`, `BAG_avg`.`Score_3` AS `Score_3`, `BAG_avg`.`Proba_0` AS `Proba_0`, `BAG_avg`.`Proba_1` AS `Proba_1`, `BAG_avg`.`Proba_2` AS `Proba_2`, `BAG_avg`.`Proba_3` AS `Proba_3`, `BAG_avg`.`LogProba_0` AS `LogProba_0`, `BAG_avg`.`LogProba_1` AS `LogProba_1`, `BAG_avg`.`LogProba_2` AS `LogProba_2`, `BAG_avg`.`LogProba_3` AS `LogProba_3`, CAST(NULL AS BIGINT) AS `Decision`, CAST(NULL AS DOUBLE) AS `DecisionProba` 
-FROM `tmp_20180516112757_codegen_t9kzp2_bag_avg` AS `BAG_avg`), 
+FROM `tmp_20180602143548_qmp_bag_avg` AS `BAG_avg`), 
 `score_class_union` AS 
 (SELECT `scu`.`KEY_u` AS `KEY_u`, `scu`.`class` AS `class`, `scu`.`LogProba` AS `LogProba`, `scu`.`Proba` AS `Proba`, `scu`.`Score` AS `Score` 
 FROM (SELECT `orig_cte`.`KEY` AS `KEY_u`, 0 AS `class`, `orig_cte`.`LogProba_0` AS `LogProba`, `orig_cte`.`Proba_0` AS `Proba`, `orig_cte`.`Score_0` AS `Score` 

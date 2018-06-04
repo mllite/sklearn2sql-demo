@@ -10,9 +10,9 @@
 
 
 
--- Code For temporary table tmp_20180516114807_codegen_onqfqt_lgbm_b0 part 1. Create 
+-- Code For temporary table tmp_20180602145424_m75_lgbm_b0 part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180516114807_codegen_onqfqt_lgbm_b0` STORED AS ORC AS WITH `DT_node_lookup` AS 
+CREATE TEMPORARY TABLE `tmp_20180602145424_m75_lgbm_b0` STORED AS ORC AS WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_5` <= 6.825) THEN CASE WHEN (`ADS`.`Feature_12` <= 14.805000000000001) THEN CASE WHEN (`ADS`.`Feature_5` <= 6.531500000000001) THEN CASE WHEN (`ADS`.`Feature_12` <= 9.700000000000001) THEN CASE WHEN (`ADS`.`Feature_0` <= 0.13995000000000005) THEN CASE WHEN (`ADS`.`Feature_5` <= 6.208500000000001) THEN 64 ELSE 65 END ELSE 33 END ELSE CASE WHEN (`ADS`.`Feature_9` <= 282.50000000000006) THEN 34 ELSE CASE WHEN (`ADS`.`Feature_8` <= 4.500000000000001) THEN 70 ELSE CASE WHEN (`ADS`.`Feature_6` <= 70.45) THEN 142 ELSE 143 END END END END ELSE 9 END ELSE CASE WHEN (`ADS`.`Feature_0` <= 5.8480300000000005) THEN CASE WHEN (`ADS`.`Feature_7` <= 2.0001000000000007) THEN 20 ELSE CASE WHEN (`ADS`.`Feature_0` <= 0.38474500000000006) THEN 42 ELSE 43 END END ELSE CASE WHEN (`ADS`.`Feature_12` <= 21.385) THEN 22 ELSE 23 END END END ELSE CASE WHEN (`ADS`.`Feature_5` <= 7.416000000000001) THEN CASE WHEN (`ADS`.`Feature_12` <= 5.410000000000001) THEN 12 ELSE 13 END ELSE 7 END END AS `node_id_2` 
 FROM `boston` AS `ADS`), 
 `DT_node_data` AS 
@@ -146,13 +146,13 @@ FROM `LGBM_Model_7` UNION ALL SELECT `LGBM_Model_8`.`KEY` AS `KEY`, `LGBM_Model_
 FROM `LGBM_Model_8` UNION ALL SELECT `LGBM_Model_9`.`KEY` AS `KEY`, `LGBM_Model_9`.`Estimator` AS `Estimator` 
 FROM `LGBM_Model_9`) AS `LGBM_esu_0`) AS `LGBM_B0`
 
--- Code For temporary table tmp_20180516114807_codegen_onqfqt_lgbm_b0 part 2. Populate
+-- Code For temporary table tmp_20180602145424_m75_lgbm_b0 part 2. Populate
 
-SELECT * FROM `tmp_20180516114807_codegen_onqfqt_lgbm_b0`
+SELECT * FROM `tmp_20180602145424_m75_lgbm_b0`
 
--- Code For temporary table tmp_20180516114807_codegen_dk7pq4_lgbm_b1 part 1. Create 
+-- Code For temporary table tmp_20180602145424_s6d_lgbm_b1 part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180516114807_codegen_dk7pq4_lgbm_b1` STORED AS ORC AS WITH `DT_node_lookup_10` AS 
+CREATE TEMPORARY TABLE `tmp_20180602145424_s6d_lgbm_b1` STORED AS ORC AS WITH `DT_node_lookup_10` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_12` <= 9.700000000000001) THEN CASE WHEN (`ADS`.`Feature_5` <= 7.147500000000001) THEN CASE WHEN (`ADS`.`Feature_5` <= 6.665500000000001) THEN CASE WHEN (`ADS`.`Feature_7` <= 3.5949000000000004) THEN 16 ELSE CASE WHEN (`ADS`.`Feature_5` <= 6.157500000000001) THEN 34 ELSE CASE WHEN (`ADS`.`Feature_6` <= 37.95000000000001) THEN 70 ELSE 71 END END END ELSE 9 END ELSE 5 END ELSE CASE WHEN (`ADS`.`Feature_12` <= 15.06) THEN CASE WHEN (`ADS`.`Feature_9` <= 282.50000000000006) THEN 12 ELSE CASE WHEN (`ADS`.`Feature_12` <= 12.370000000000003) THEN CASE WHEN (`ADS`.`Feature_8` <= 5.500000000000001) THEN 52 ELSE 53 END ELSE CASE WHEN (`ADS`.`Feature_12` <= 13.395000000000001) THEN 54 ELSE 55 END END END ELSE CASE WHEN (`ADS`.`Feature_4` <= 0.6695000000000001) THEN CASE WHEN (`ADS`.`Feature_10` <= 19.900000000000002) THEN 28 ELSE 29 END ELSE CASE WHEN (`ADS`.`Feature_0` <= 9.870020000000002) THEN 30 ELSE 31 END END END END AS `node_id_2` 
 FROM `boston` AS `ADS`), 
 `DT_node_data_10` AS 
@@ -234,27 +234,27 @@ FROM `LGBM_Model_13` UNION ALL SELECT `LGBM_Model_14`.`KEY` AS `KEY`, `LGBM_Mode
 FROM `LGBM_Model_14` UNION ALL SELECT `LGBM_Model_15`.`KEY` AS `KEY`, `LGBM_Model_15`.`Estimator` AS `Estimator` 
 FROM `LGBM_Model_15`) AS `LGBM_esu_1`) AS `LGBM_B1`
 
--- Code For temporary table tmp_20180516114807_codegen_dk7pq4_lgbm_b1 part 2. Populate
+-- Code For temporary table tmp_20180602145424_s6d_lgbm_b1 part 2. Populate
 
-SELECT * FROM `tmp_20180516114807_codegen_dk7pq4_lgbm_b1`
+SELECT * FROM `tmp_20180602145424_s6d_lgbm_b1`
 
--- Code For temporary table tmp_20180516114807_codegen_276ait_lgbm_sum part 1. Create 
+-- Code For temporary table tmp_20180602145424_llw_lgbm_sum part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180516114807_codegen_276ait_lgbm_sum` STORED AS ORC AS WITH `LGBM_Union` AS 
+CREATE TEMPORARY TABLE `tmp_20180602145424_llw_lgbm_sum` STORED AS ORC AS WITH `LGBM_Union` AS 
 (SELECT `LGBM_EnsembleUnion`.`KEY` AS `KEY`, `LGBM_EnsembleUnion`.`Estimator` AS `Estimator` 
 FROM (SELECT `LGBM_B0`.`KEY` AS `KEY`, `LGBM_B0`.`Estimator` AS `Estimator` 
-FROM `tmp_20180516114807_codegen_onqfqt_lgbm_b0` AS `LGBM_B0` UNION ALL SELECT `LGBM_B1`.`KEY` AS `KEY`, `LGBM_B1`.`Estimator` AS `Estimator` 
-FROM `tmp_20180516114807_codegen_dk7pq4_lgbm_b1` AS `LGBM_B1`) AS `LGBM_EnsembleUnion`)
+FROM `tmp_20180602145424_m75_lgbm_b0` AS `LGBM_B0` UNION ALL SELECT `LGBM_B1`.`KEY` AS `KEY`, `LGBM_B1`.`Estimator` AS `Estimator` 
+FROM `tmp_20180602145424_s6d_lgbm_b1` AS `LGBM_B1`) AS `LGBM_EnsembleUnion`)
  SELECT `LGBM_sum`.`KEY`, `LGBM_sum`.`Estimator` 
 FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Estimator` AS DOUBLE) AS `Estimator` 
 FROM (SELECT `LGBM_Union`.`KEY` AS `KEY`, sum(`LGBM_Union`.`Estimator`) AS `Estimator` 
 FROM `LGBM_Union` GROUP BY `LGBM_Union`.`KEY`) AS `T`) AS `LGBM_sum`
 
--- Code For temporary table tmp_20180516114807_codegen_276ait_lgbm_sum part 2. Populate
+-- Code For temporary table tmp_20180602145424_llw_lgbm_sum part 2. Populate
 
-SELECT * FROM `tmp_20180516114807_codegen_276ait_lgbm_sum`
+SELECT * FROM `tmp_20180602145424_llw_lgbm_sum`
 
 -- Model deployment code
 
 SELECT `LGBM_sum`.`KEY` AS `KEY`, `LGBM_sum`.`Estimator` AS `Estimator` 
-FROM `tmp_20180516114807_codegen_276ait_lgbm_sum` AS `LGBM_sum`
+FROM `tmp_20180602145424_llw_lgbm_sum` AS `LGBM_sum`

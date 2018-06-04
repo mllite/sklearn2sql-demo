@@ -10,9 +10,9 @@
 
 
 
--- Code For temporary table tmp_20180516121629_codegen_h5tug9_quantiles part 1. Create 
+-- Code For temporary table tmp_20180602152051_13c_quantiles part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180516121629_codegen_h5tug9_quantiles` STORED AS ORC AS WITH `DT_node_lookup` AS 
+CREATE TEMPORARY TABLE `tmp_20180602152051_13c_quantiles` STORED AS ORC AS WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_2` <= 0.20348544418811798) THEN CASE WHEN (`ADS`.`Feature_1` <= 574.9090576171875) THEN CASE WHEN (`ADS`.`Feature_3` <= 3.7317280769348145) THEN 3 ELSE 4 END ELSE CASE WHEN (`ADS`.`Feature_2` <= 0.025156566873192787) THEN 6 ELSE 7 END END ELSE CASE WHEN (`ADS`.`Feature_1` <= 450.96368408203125) THEN CASE WHEN (`ADS`.`Feature_2` <= 0.5044680237770081) THEN 10 ELSE 11 END ELSE CASE WHEN (`ADS`.`Feature_0` <= 42.91398620605469) THEN 13 ELSE 14 END END END AS `node_id_2` 
 FROM `freidman3` AS `ADS`), 
 `DT_node_data` AS 
@@ -234,11 +234,11 @@ FROM (SELECT `Cumulative_Frequencies`.`KEY` AS `KEY`, min(`Cumulative_Frequencie
 FROM `Cumulative_Frequencies` 
 WHERE `Cumulative_Frequencies`.`cum_weight` >= 0.5 GROUP BY `Cumulative_Frequencies`.`KEY`) AS `CW2`) AS `Quantiles`
 
--- Code For temporary table tmp_20180516121629_codegen_h5tug9_quantiles part 2. Populate
+-- Code For temporary table tmp_20180602152051_13c_quantiles part 2. Populate
 
-SELECT * FROM `tmp_20180516121629_codegen_h5tug9_quantiles`
+SELECT * FROM `tmp_20180602152051_13c_quantiles`
 
 -- Model deployment code
 
 SELECT `Quantiles`.`KEY` AS `KEY`, `Quantiles`.`Quantile` AS `Estimator` 
-FROM `tmp_20180516121629_codegen_h5tug9_quantiles` AS `Quantiles`
+FROM `tmp_20180602152051_13c_quantiles` AS `Quantiles`

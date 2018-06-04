@@ -10,9 +10,9 @@
 
 
 
--- Code For temporary table tmp_20180516111020_codegen_0456pi_lgbm_b0 part 1. Create 
+-- Code For temporary table tmp_20180602141902_184_lgbm_b0 part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180516111020_codegen_0456pi_lgbm_b0` STORED AS ORC AS WITH `DT_node_lookup` AS 
+CREATE TEMPORARY TABLE `tmp_20180602141902_184_lgbm_b0` STORED AS ORC AS WITH `DT_node_lookup` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_57` <= 1.0000000180025095e-35) THEN CASE WHEN (`ADS`.`Feature_77` <= 0.3415780695659441) THEN 4 ELSE 5 END ELSE 3 END AS `node_id_2` 
 FROM `BinaryClass_100` AS `ADS`), 
 `DT_node_data` AS 
@@ -146,13 +146,13 @@ FROM `LGBM_Model_0_7` UNION ALL SELECT `LGBM_Model_0_8`.`KEY` AS `KEY`, `LGBM_Mo
 FROM `LGBM_Model_0_8` UNION ALL SELECT `LGBM_Model_0_9`.`KEY` AS `KEY`, `LGBM_Model_0_9`.`Score_0` AS `Score_0` 
 FROM `LGBM_Model_0_9`) AS `LGBM_esu_0`) AS `LGBM_B0`
 
--- Code For temporary table tmp_20180516111020_codegen_0456pi_lgbm_b0 part 2. Populate
+-- Code For temporary table tmp_20180602141902_184_lgbm_b0 part 2. Populate
 
-SELECT * FROM `tmp_20180516111020_codegen_0456pi_lgbm_b0`
+SELECT * FROM `tmp_20180602141902_184_lgbm_b0`
 
--- Code For temporary table tmp_20180516111020_codegen_hiaf7w_lgbm_b1 part 1. Create 
+-- Code For temporary table tmp_20180602141902_mps_lgbm_b1 part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180516111020_codegen_hiaf7w_lgbm_b1` STORED AS ORC AS WITH `DT_node_lookup_10` AS 
+CREATE TEMPORARY TABLE `tmp_20180602141902_mps_lgbm_b1` STORED AS ORC AS WITH `DT_node_lookup_10` AS 
 (SELECT `ADS`.`KEY` AS `KEY`, CASE WHEN (`ADS`.`Feature_57` <= -0.2067798577984605) THEN CASE WHEN (`ADS`.`Feature_33` <= 0.20325693874805037) THEN 4 ELSE 5 END ELSE 3 END AS `node_id_2` 
 FROM `BinaryClass_100` AS `ADS`), 
 `DT_node_data_10` AS 
@@ -234,31 +234,31 @@ FROM `LGBM_Model_0_13` UNION ALL SELECT `LGBM_Model_0_14`.`KEY` AS `KEY`, `LGBM_
 FROM `LGBM_Model_0_14` UNION ALL SELECT `LGBM_Model_0_15`.`KEY` AS `KEY`, `LGBM_Model_0_15`.`Score_0` AS `Score_0` 
 FROM `LGBM_Model_0_15`) AS `LGBM_esu_1`) AS `LGBM_B1`
 
--- Code For temporary table tmp_20180516111020_codegen_hiaf7w_lgbm_b1 part 2. Populate
+-- Code For temporary table tmp_20180602141902_mps_lgbm_b1 part 2. Populate
 
-SELECT * FROM `tmp_20180516111020_codegen_hiaf7w_lgbm_b1`
+SELECT * FROM `tmp_20180602141902_mps_lgbm_b1`
 
--- Code For temporary table tmp_20180516111020_codegen_nvotjj_lgbm_sum part 1. Create 
+-- Code For temporary table tmp_20180602141902_tff_lgbm_sum part 1. Create 
 
-CREATE TEMPORARY TABLE `tmp_20180516111020_codegen_nvotjj_lgbm_sum` STORED AS ORC AS WITH `LGBM_Union` AS 
+CREATE TEMPORARY TABLE `tmp_20180602141902_tff_lgbm_sum` STORED AS ORC AS WITH `LGBM_Union` AS 
 (SELECT `LGBM_EnsembleUnion`.`KEY` AS `KEY`, `LGBM_EnsembleUnion`.`Score_0` AS `Score_0` 
 FROM (SELECT `LGBM_B0`.`KEY` AS `KEY`, `LGBM_B0`.`Score_0` AS `Score_0` 
-FROM `tmp_20180516111020_codegen_0456pi_lgbm_b0` AS `LGBM_B0` UNION ALL SELECT `LGBM_B1`.`KEY` AS `KEY`, `LGBM_B1`.`Score_0` AS `Score_0` 
-FROM `tmp_20180516111020_codegen_hiaf7w_lgbm_b1` AS `LGBM_B1`) AS `LGBM_EnsembleUnion`)
+FROM `tmp_20180602141902_184_lgbm_b0` AS `LGBM_B0` UNION ALL SELECT `LGBM_B1`.`KEY` AS `KEY`, `LGBM_B1`.`Score_0` AS `Score_0` 
+FROM `tmp_20180602141902_mps_lgbm_b1` AS `LGBM_B1`) AS `LGBM_EnsembleUnion`)
  SELECT `LGBM_sum`.`KEY`, `LGBM_sum`.`Score_0` 
 FROM (SELECT `T`.`KEY` AS `KEY`, CAST(`T`.`Score_0` AS DOUBLE) AS `Score_0` 
 FROM (SELECT `LGBM_Union`.`KEY` AS `KEY`, sum(`LGBM_Union`.`Score_0`) AS `Score_0` 
 FROM `LGBM_Union` GROUP BY `LGBM_Union`.`KEY`) AS `T`) AS `LGBM_sum`
 
--- Code For temporary table tmp_20180516111020_codegen_nvotjj_lgbm_sum part 2. Populate
+-- Code For temporary table tmp_20180602141902_tff_lgbm_sum part 2. Populate
 
-SELECT * FROM `tmp_20180516111020_codegen_nvotjj_lgbm_sum`
+SELECT * FROM `tmp_20180602141902_tff_lgbm_sum`
 
 -- Model deployment code
 
 WITH `orig_cte` AS 
 (SELECT `LGBM_sum`.`KEY` AS `KEY`, `LGBM_sum`.`Score_0` AS `Score_0`, CAST(NULL AS DOUBLE) AS `Score_1`, 1.0 - 1.0 / (1.0 + exp(-`LGBM_sum`.`Score_0`)) AS `Proba_0`, 1.0 / (1.0 + exp(-`LGBM_sum`.`Score_0`)) AS `Proba_1`, CAST(NULL AS DOUBLE) AS `LogProba_0`, CAST(NULL AS DOUBLE) AS `LogProba_1`, CAST(NULL AS BIGINT) AS `Decision`, CAST(NULL AS DOUBLE) AS `DecisionProba` 
-FROM `tmp_20180516111020_codegen_nvotjj_lgbm_sum` AS `LGBM_sum`), 
+FROM `tmp_20180602141902_tff_lgbm_sum` AS `LGBM_sum`), 
 `score_class_union` AS 
 (SELECT `scu`.`KEY_u` AS `KEY_u`, `scu`.`class` AS `class`, `scu`.`LogProba` AS `LogProba`, `scu`.`Proba` AS `Proba`, `scu`.`Score` AS `Score` 
 FROM (SELECT `orig_cte`.`KEY` AS `KEY_u`, 0 AS `class`, `orig_cte`.`LogProba_0` AS `LogProba`, `orig_cte`.`Proba_0` AS `Proba`, `orig_cte`.`Score_0` AS `Score` 
