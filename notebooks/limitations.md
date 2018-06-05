@@ -19,6 +19,8 @@ PMML2SQL Converter http://www.dymatrix.de/en/products/advanced-analytics/knime/p
 
 ## Apple Core ML
 
+https://github.com/apple/coremltools
+
 From https://developer.apple.com/documentation/coreml/converting_trained_models_to_core_ml
 
 If your model is created and trained using a supported third-party machine learning framework, you can use the Core ML Tools or a third-party conversion tool—such as the MXNet converter or the TensorFlow converter—to convert your model to the Core ML model format. Otherwise, you need to create your own conversion tools. 
