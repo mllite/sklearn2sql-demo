@@ -25,3 +25,8 @@ From https://developer.apple.com/documentation/coreml/converting_trained_models_
 
 If your model is created and trained using a supported third-party machine learning framework, you can use the Core ML Tools or a third-party conversion tool—such as the MXNet converter or the TensorFlow converter—to convert your model to the Core ML model format. Otherwise, you need to create your own conversion tools. 
 
+## KNIME
+
+https://nodepit.com/node/org.knime.base.pmml.translation.sql.SQLGeneratorNodeFactory
+
+![image](https://user-images.githubusercontent.com/16481992/44307837-0779f100-a3aa-11e8-92ac-139aaea5e71c.png)
