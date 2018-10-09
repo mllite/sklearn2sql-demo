@@ -20,7 +20,7 @@ Roughly speaking, sklearn2sql allows one to translate a scikit learn model as a 
 
 Since the beginning of this project, some extensions have been added to support machine learning models built using tools similar to scikit-learn. The goal is to be able to generate the deployment SQL code for any kind of classification and regression model on any kind of SQL-capable database. These extensions share the same SQL generation layer used for scikit-learn.
 
-1. A project has been added to support [R caret models](https://github.com/antoinecarme/caret2sql). Some [R jupyter notebook demos](https://github.com/antoinecarme/caret2sql/tree/master/doc) are available. It supports most used R machine learning models.
+1. A [caret2sql](https://github.com/antoinecarme/caret2sql) project has been added to support R caret models.  Some [R jupyter notebook demos](https://github.com/antoinecarme/caret2sql/tree/master/doc) are available. It supports most used R machine learning models.
 
 2. For deep learning models (neural network models), the [keras2sql](https://github.com/antoinecarme/caret2sql) project has been added to support models built using the Keras framework with TensorFlow, Theano, and CNTK. Some demo [python jupyter notebooks](https://github.com/antoinecarme/keras2sql/tree/master/doc) are available.
 
