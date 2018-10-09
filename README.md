@@ -31,7 +31,7 @@ Since the beginning of this project, some extensions have been added to support 
 
 ## Supported Databases
 
-1. Open source databases : PostgreSQL (Just perfect !!!), MariaDB (contribued some [CTE-related bugs](https://jira.mariadb.org/browse/MDEV-12440) for this project. Very reactive team ;)
+1. Open source databases : PostgreSQL (Just perfect !!!), MariaDB (contribued some [CTE-related bugs](https://jira.mariadb.org/browse/MDEV-12440) for this project. Very reactive team. All bugs were fixed !!!!
 2. Commercial databases : Oracle, MS SQL Server, IBM DB2, Teradata (to cover 95% of the market and get real-world tests)
 3. Embedded databases : SQLite (even in-memory ;). Nice for prototyping, documentation and development. Zero config. Available everywhere (on Android and iOS devices and inside jupyter notebooks ;).
 4. Hadoop databases : Hive and Impala
