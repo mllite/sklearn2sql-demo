@@ -16,7 +16,7 @@ Roughly speaking, sklearn2sql allows one to translate a scikit learn model as a 
 
 
 
-# Extensions
+## Extensions
 
 Since the beginning of this project, some extensions have been added to support machine learning models built using tools similar to scikit-learn. The goal is to be able to generate the deployment SQL code for any kind of classification and regression model on any kind of SQL-capable database. These extensions share the same SQL generation layer used for scikit-learn.
 
@@ -27,3 +27,13 @@ Since the beginning of this project, some extensions have been added to support 
 3. A Heroku-based [web service](https://github.com/antoinecarme/sklearn2sql_heroku) can be used to generate SQL code for a given model. scikit-learn, keras and caret models are supported.
 
 4. ... (wip) ...
+
+
+## Supported Databases
+
+1. Open source databases : postgresql (perfect ;), mariadb (contribued some [CTE-related bugs](https://jira.mariadb.org/browse/MDEV-12440) for this project. Very reactive team ;)
+2. Commercial databases : Oralce, MS SQL Server, IBM DB2, Teradata (to cover 95% of the market and get real-world tests)
+3. Embedded databases : SQLite (even in-memory ;). Nice for prototyping, documentation and development. Zero config. Available everywhere (on Android and iOS devices and inside jupyter notebooks ;).
+4. Hadoop databases : Hive and Impala
+5. Other : Firebird (low memory footprint. A stress test ;) , Monetdb (columnar, a SQL quality reminder ;)
+
