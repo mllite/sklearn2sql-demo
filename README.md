@@ -15,3 +15,15 @@ It is designed to support all [classification and regression methods in scikit-l
 Roughly speaking, sklearn2sql allows one to translate a scikit learn model as a large, machine-friendly ;) SQL code that can later be executed on your favorite database.  For example, this is a [multilayer perceptron on oracle](https://github.com/antoinecarme/sklearn2sql-demo/blob/master/sample_outputs_round_4/MLPClassifier/BreastCancer/oracle/demo1_MLPClassifier_oracle.sql) , and this is a [random forest on postgresql](https://github.com/antoinecarme/sklearn2sql-demo/blob/master/sample_outputs_round_4/RandomForestClassifier/FourClass/postgresql/demo1_RandomForestClassifier_postgresql.sql) .... 
 
 
+
+# Extensions
+
+Since the beginning of this project, some extensions have been added to support machine learning models built using tools similar to scikit-learn. The goal is to be able to generate the deployment SQL code for any kind of classification and regression model on any kind of SQL-capable database. These extensions share the same SQL generation layer used for scikit-learn.
+
+1. A project has been added to support [R caret models](https://github.com/antoinecarme/caret2sql). Some [R jupyter notebook demos](https://github.com/antoinecarme/caret2sql/tree/master/doc) are available. It supports most used R machine learning models.
+
+2. For deep learning models (neural network models), the [keras2sql](https://github.com/antoinecarme/caret2sql) project has been added to support models built using the Keras framework with TensorFlow, Theano, and CNTK. Some demo [python jupyter notebooks](https://github.com/antoinecarme/keras2sql/tree/master/doc) are available.
+
+3. A Heroku-based [web service](https://github.com/antoinecarme/sklearn2sql_heroku) can be used to generate SQL code for a given model. scikit-learn, keras and caret models are supported.
+
+4. ... (wip) ...
