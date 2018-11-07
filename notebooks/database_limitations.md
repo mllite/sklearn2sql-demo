@@ -45,6 +45,8 @@ Their behavior is not always consistant between databases (global or not, sessio
 
 Not always supported. Used in recurrent neural networks | LSTM, GRU, RNN
 
+https://github.com/antoinecarme/keras2sql/issues/2
+
 ## Table/column Names Limits
 
 sklearn2sql internally generates partially random temporary tables names and tries to avoid 
