@@ -63,6 +63,6 @@ When sklearn2sql development started, Oracle did not support table names with mo
 
 Upper case of lower case forced by the database can be a source of lookup errors.
 
-Database vendors : Naming objects is a user freedom. Please get rid of this too 1900's feature !!!!
+Database vendors : Naming objects is a user freedom and is a recommneded way of reflecting object semantics. Please get rid of this too 1900's feature !!!!
 
 
