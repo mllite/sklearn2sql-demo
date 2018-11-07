@@ -65,4 +65,8 @@ Upper case of lower case forced by the database can be a source of lookup errors
 
 Database vendors : Naming objects is a user freedom and is a recommneded way of reflecting object semantics. Please get rid of this too 1900's feature !!!!
 
+# Use of Virtual Machines
+
+Hadoop based databases (hive, impala) launch a very large number of VMs for executing a single SQL statement. the SQL execution is too slow and unacceptable. This makes these databases simply not suitable for this kind of task (SQL-based in-database analytics).
+
 
