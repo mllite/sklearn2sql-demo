@@ -31,7 +31,9 @@ Database vendors : SQL Complexity errors are not always justified as not all dat
 ## math functions
 
 Not all databases have tanh etc, density functions etc
+
 https://en.wikibooks.org/wiki/SQL_Dialects_Reference/Functions_and_expressions/Math_functions/Trigonometric_functions
+
 https://stackoverflow.com/questions/38939718/how-to-calculate-tanh-in-sql-server-2012
 
 ## Temporary Tables
