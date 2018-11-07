@@ -16,17 +16,21 @@ Oracle does a very strange job here !!!! Other databases, not always better. We 
 
 ## Wide Tables
 
-Not all databases have the same behavior when it comes to the maximum number of columns in a table or a CTE. Around 1000 is a common value. | one hot encoding can generate a separate column for each different value in the training dataset columns. Not very useful limitations nowadays. Database vendors : Please get rid of this or add it as an option (user-controllable).
+Not all databases have the same behavior when it comes to the maximum number of columns in a table or a CTE. Around 1000 is a common value. | one hot encoding can generate a separate column for each different value in the training dataset columns. Not very useful limitations nowadays. 
+
+Database vendors : Please get rid of this or add it as an option (user-controllable).
 
 ## SQL Statement Complexity
 
 A lot of databases do not allow using more than N (64 for sqlite ??) tables/froms/selectables/CTEs in the same select statement.
+
 Database vendors : SQL Complexity errors are not always justified. If you really want to set a limitation, add it as an option.
 
 ## SQL Expression Complexity
 
 Very complex epressions (using more than a number of columns in the same expression) are not always allowed. MS SQL server does not allow very complex case when expressions (depth limited to 10). expression depth in sqlite.
-Database vendors : SQL Complexity errors are not always justified as not all databases have this issue. Some R&D may be helpful. Also erro messages can be raised only when the system resources are missing (CPU/disk/memory), a depth limit of 10 is exaggerated when one has gigagbytes of memory. If you really want to set the max depth to 10, add it as an option.
+
+Database vendors : SQL Complexity errors are not always justified as not all databases have this issue. Some R&D may be helpful. Also erro messages can be raised only when the system resources are missing (CPU/disk/memory), a depth limit of 10 is exaggerated when one has gigagbytes of memory and a lot of CPU power. If you really want to set the max depth to 10, add it as an option.
 
 ## Math Functions
 
@@ -43,18 +47,20 @@ Their behavior is not always consistant between databases (global or not, sessio
 
 ## Recurisve CTEs
 
-Not always supported. Used in recurrent neural networks | LSTM, GRU, RNN
+Not always supported. Used in recurrent neural networks. Used in LSTM, GRU, RNN
 
 https://github.com/antoinecarme/keras2sql/issues/2
 
 ## Table/column Names Limits
 
 sklearn2sql internally generates partially random temporary tables names and tries to avoid 
-When sklearn2sql development started, Oracle did not support table names with more than 30 chars. Seems to be correcetd in oracle 18. GOOD.
+
+When sklearn2sql development started, Oracle did not support table names with more than 30 chars. Seems to be correcetd in oracle 18. GOOD news.
 
 ## Identifier Name Case Sensitivity
 
 Upper case of lower case forced by the database can be a source of lookup errors.
+
 Database vendors : Naming objects is a user freedom. Please get rid of this too 1900's feature !!!!
 
 
