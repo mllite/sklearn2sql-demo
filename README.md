@@ -22,7 +22,7 @@ Since the beginning of this project, some extensions have been added to support 
 
 1. A [caret2sql](https://github.com/antoinecarme/caret2sql) project has been added to support R caret models.  Some [R jupyter notebook demos](https://github.com/antoinecarme/caret2sql/tree/master/doc) are available. It supports most used R machine learning models.
 
-2. For deep learning models (neural network models), the [keras2sql](https://github.com/antoinecarme/caret2sql) project has been added to support models built using the Keras framework with TensorFlow, Theano, and CNTK. Some demo [python jupyter notebooks](https://github.com/antoinecarme/keras2sql/tree/master/doc) are available.
+2. For deep learning models (neural network models), the [keras2sql](https://github.com/antoinecarme/keras2sql) project has been added to support models built using the Keras framework with TensorFlow, Theano, and CNTK. Some demo [python jupyter notebooks](https://github.com/antoinecarme/keras2sql/tree/master/doc) are available.
 
 3. A Heroku-based [web service](https://github.com/antoinecarme/sklearn2sql_heroku) can be used to generate SQL code for a given model. scikit-learn, keras and caret models are supported.
 
