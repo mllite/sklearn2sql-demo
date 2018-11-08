@@ -47,9 +47,9 @@ https://stackoverflow.com/questions/38939718/how-to-calculate-tanh-in-sql-server
 sklearn2sql sometimes generates temporary tables to precompute very complex expressions (as a workaround for complexity issues).
 Their behavior is not always consistant between databases (global or not, session-based, storage : memory-based  etc)
 
-## Recurisve CTEs
+## Recursive CTEs
 
-Not always supported. Used in recurrent neural networks. Used in LSTM, GRU, RNN
+Not always supported. Used in recurrent neural networks (LSTM, GRU, RNN)
 
 https://github.com/antoinecarme/keras2sql/issues/2
 
@@ -67,6 +67,6 @@ Database vendors : Naming objects is a user freedom and is a recommneded way of 
 
 ## Use of Virtual Machines
 
-Hadoop based databases (hive, impala) launch a large number of VMs for executing a single SQL statement. The SQL execution is too slow and unacceptable. This makes these databases simply not suitable for this kind of task (SQL-based in-database analytics). The benchmarking process did not always end properly without timeout (thousands of models trained on different table layouts [columns x lines]) 
+Hadoop based databases (hive, impala) use a large number of VMs for executing a single SQL statement. The SQL execution is too slow and unacceptable. This makes these databases simply not suitable for this kind of task (SQL-based in-database analytics). The benchmarking process did not always end properly without timeout (thousands of models trained on different table layouts [columns x lines]) 
 
 
