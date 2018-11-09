@@ -4,6 +4,7 @@
 * SQL Deployment occurs in the database , the closest possible to where data physically is.
 * SQL is mature and evolving (A lot has changed since SQL-92 : https://modern-sql.com/)
 * Training Developpers for SQL is not really needed. A lot of HR resources and trained developers are already available.
+* SQL removes the gap between operational services (database admins, who use the model) and machine larning specialists (who build the model).
 * SQL Deployment is easy. No need to explain or document the deployment process : simply execute some SQL code (select statement) and read the class probabiltiies in some pre-defined columns (named accordingly).
 * SQL deployment is practical : you can send it by email and execute the SQL in any production environment.
 * SQL is re-usable : as a developer, you can execute it from any SQL-aware programming language (java, perl, C++, python, SQL, ..., almost all ;)
