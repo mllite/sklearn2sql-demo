@@ -5,7 +5,7 @@
 * SQL is mature and evolving (A lot has changed since SQL-92 : https://modern-sql.com/)
 * Training Developpers for SQL is not really needed. A lot of HR resources and trained developers are already available.
 * Automatic SQL generation removes the gap between operational services (database admins, who use the model) and machine learning specialists (who build the model).
-* While the model is built in a development environment to be finlaly used in a production environment, SQL generation can be performed in a neutral intermediate environment and tested/benchmarked before use in production.  
+* While the model is built in a development environment to be finally used in a production environment, SQL generation can be performed in a neutral intermediate environment and tested/benchmarked before use in production.  
 * SQL Deployment is easy. No need to explain or document the deployment process : simply execute some SQL code (select statement) and read the class probabiltiies in some pre-defined columns (named accordingly).
 * SQL deployment is practical : you can send it by email and execute the SQL in any production environment.
 * SQL is re-usable : as a developer, you can execute it from any SQL-aware programming language (java, perl, C++, python, SQL, ..., almost all ;)
