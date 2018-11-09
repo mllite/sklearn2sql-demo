@@ -10,6 +10,6 @@
 * SQL is almost natural language : one can read it and check that it does what is expected.
 * SQL is debuggable : one can read it and correct minor errors without difficulty.
 * SQL is transparent : one can check that such or such logic is implemented, such or such sensitive column is not used for scoring etc (privacy)
-* The SQL output maps perfectly with the machine learning model. For a scikit-learn model , any column that is produced with 'predict' or 'predict_proba' is present in the SQL output with a name reflecting its semantics : Decsiion, Proba_class0, Proba_class1, Proba_class2, etc. The same applies for regressions or outlier detection models.
-* The SQL output can also be used a s a table or a view to build new models (chaining) or add further output analysis (model performance etc)
+* The SQL output maps perfectly with the machine learning model. For a scikit-learn model , any column that is produced with 'predict' or 'predict_proba' is present in the SQL output with a name reflecting its semantics : Decision, Proba_class0, Proba_class1, Proba_class2, etc. The same applies for regressions or outlier detection models.
+* The SQL output can also be used as a table or a view to build new models (chaining) or add further output analysis (model performance etc)
 * 
