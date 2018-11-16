@@ -14,4 +14,6 @@
 * SQL is transparent : one can check that such or such logic is implemented, such or such sensitive column is not used for scoring etc (privacy)
 * The SQL output maps perfectly with the machine learning model. For a scikit-learn model , any column that is produced with 'predict' or 'predict_proba' is present in the SQL output with a name reflecting its semantics : Decision, Proba_class0, Proba_class1, Proba_class2, etc. The same applies for regressions or outlier detection models.
 * The SQL output can also be used as a table or a view to build new models (chaining) or add further output analysis (model performance etc)
-* 
+* SQL makes communication and model sharing between heterogeneous platforms easier.
+* SQL makes embedding Machine Learning models in an application a trivial task. Updating these models is just replacing the SQL code with a newer one within the application.
+* SQL makes communication between developers of different cultures easy : an android developer can share machine learning code with a python scikit-learn developer and an R data scientist in a transparent way while using an in-memory embedded database (SQLITE for example) to evaluate the model predictions inside the application code.
