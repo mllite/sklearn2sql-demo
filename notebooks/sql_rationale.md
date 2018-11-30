@@ -5,7 +5,8 @@
 * SQL is mature and evolving (A lot has changed since SQL-92 : https://modern-sql.com/)
 * Training Developpers for SQL is not really needed. A lot of HR resources and trained developers are already available.
 * Automatic SQL generation removes the gap between operational services (database admins, who use the model) and machine learning specialists (who build the model).
-* While the model is built in a development environment to be finally used in a production environment, SQL generation can be performed in a neutral intermediate environment and tested/benchmarked before use in production.  
+* While the model is built in a development environment to be finally used in a production environment, SQL generation can be performed in a neutral intermediate environment and tested/benchmarked before use in production. 
+* SQL-based deploymennt is easy to test and validate against a non-SQL predict (python for example). This [jupyter notebook](https://github.com/antoinecarme/sklearn2sql_heroku/blob/master/docs/WebService-RandomForest_512_Deploy.ipynb) details the process for a very large random forest (512 trees) on a PostgreSQL database.
 * SQL Deployment is easy. No need to explain or document the deployment process : simply execute some SQL code (select statement) and read the class probabiltiies in some pre-defined columns (named accordingly).
 * SQL deployment is not harmful for the database. It can be applied "read-only" (simply execute a select statement). No othe r DDL statement (create , drop, alter) is used. 
 * SQL deployment is practical : you can send it by email and execute the SQL in any production environment.
@@ -19,3 +20,4 @@
 * SQL makes embedding Machine Learning models in an application a trivial task. Updating these models is just replacing the SQL code with a newer one within the application.
 * SQL makes communication between developers of different cultures easy : an android developer can share machine learning code with a python scikit-learn developer and an R data scientist in a transparent way while using an in-memory embedded database (SQLITE for example) to evaluate the model predictions inside the application code.
 * SQL is natual as a pivot environemnt when translating machine learning models for integration purposes. Any model (think of an old SAS or SPSS model ;) can be easily translated into SQL and its SQL "expression" can then be integrated as a component in any other programming language. This is the most straightforward mode of reviving "legacy" models.
+* Our [benchamrks](https://github.com/antoinecarme/sklearn2sql_heroku/blob/master/Quality/extensive_tests-debrief.ipynb) show that the generated SQL code, even when very large, executes properly on the major market databases
