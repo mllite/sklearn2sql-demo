@@ -6,7 +6,7 @@
 * Training Developpers for SQL is not really needed. A lot of HR resources and trained developers are already available.
 * Automatic SQL generation removes the gap between operational services (database admins, who use the model) and machine learning specialists (who build the model).
 * While the model is built in a development environment to be finally used in a production environment, SQL generation can be performed in a neutral intermediate environment and tested/benchmarked before use in production. 
-* SQL-based deploymennt is easy to test and validate against a non-SQL predict (python for example). This [jupyter notebook](https://github.com/antoinecarme/sklearn2sql_heroku/blob/master/docs/WebService-RandomForest_512_Deploy.ipynb) details the process for a very large random forest (512 trees) on a standard PostgreSQL database.
+* SQL-based deploymennt is easy to test and validate against a non-SQL predict (python for example). This [jupyter notebook](https://github.com/antoinecarme/sklearn2sql_heroku/blob/master/docs/WebService-RandomForest_512_Deploy.ipynb) details the process for a very large 10-class random forest (512 trees) on a standard PostgreSQL database.
 * SQL Deployment is easy. No need to explain or document the deployment process : simply execute some SQL code (select statement) and read the class probabiltiies in some pre-defined columns (named accordingly).
 * SQL deployment is not harmful for the database. It can be applied "read-only" (simply execute a select statement). No othe r DDL statement (create , drop, alter) is used. 
 * SQL deployment is practical : you can send it by email and execute the SQL in any production environment.
