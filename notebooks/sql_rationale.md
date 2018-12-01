@@ -1,7 +1,7 @@
 ## Why SQL Deployment ?
 
 * SQL is a universal data language (relational algebra) with a scientific background.
-* SQL Deployment occurs in the database , the closest possible to where data physically is.
+* SQL Deployment occurs in the database , the closest possible to where data physically is. The model moves to the data not the reverse. No need for long sessions of data transfer through the network.
 * SQL is mature and evolving (A lot has changed since SQL-92 : https://modern-sql.com/)
 * Training Developpers for SQL is not really needed. A lot of HR resources and trained developers are already available.
 * Automatic SQL generation removes the gap between operational services (database admins, who use the model) and machine learning specialists (who build the model).
