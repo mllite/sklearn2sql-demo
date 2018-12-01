@@ -21,3 +21,6 @@
 * SQL makes communication between developers of different cultures easy : an android developer can share machine learning code with a python scikit-learn developer and an R data scientist in a transparent way while using an in-memory embedded database (SQLITE for example) to evaluate the model predictions inside the application code.
 * SQL is natual as a pivot environemnt when translating machine learning models for integration purposes. Any model (think of an old SAS or SPSS model ;) can be easily translated into SQL and its SQL "expression" can then be integrated as a component in any other programming language. This is the most straightforward mode of reviving "legacy" models.
 * Our [benchmarks](https://github.com/antoinecarme/sklearn2sql_heroku/blob/master/Quality/extensive_tests-debrief.ipynb) show that the generated SQL code, even when very large, executes properly on the major market databases (without extra configuration/tuning).
+* Model quality leads to simpler SQL deployment. A more robust model (uses less variables, through regularization or feature selection for example) generates smaller and faster SQL code. Only used variables appear in the SQL code. SQL code length can be also seen as a "measure" of model complexity.
+
+
