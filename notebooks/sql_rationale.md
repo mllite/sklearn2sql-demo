@@ -11,7 +11,7 @@
 * SQL deployment is not harmful for the database. It can be applied "read-only" (simply execute a select statement). No othe r DDL statement (create , drop, alter) is used. 
 * SQL deployment is practical : you can send it by email and execute the SQL in any production environment.
 * SQL is re-usable : as a developer, you can execute it from any SQL-aware programming language (java, perl, C++, python, SQL, ..., almost all ;)
-* SQL is almost natural language : one can read it and check that it does what is expected (the model becomes a white box, where its original form is usually a python or R black box).
+* SQL is almost natural language : one can read it and check that it does what is expected. The model becomes a white box, where its original form is usually a serialized binary black box (python pickle or R RDS, etc).
 * SQL is debuggable : one can read it and correct minor errors without difficulty.
 * SQL is transparent : one can check that such or such logic is implemented, such or such sensitive column is not used for scoring etc (privacy)
 * The SQL output maps perfectly with the machine learning model. For a scikit-learn model , any column that is produced with 'predict' or 'predict_proba' is present in the SQL output with a name reflecting its semantics : Decision, Proba_class0, Proba_class1, Proba_class2, etc. The same applies for regressions or outlier detection models.
@@ -22,5 +22,5 @@
 * SQL is natual as a pivot environemnt when translating machine learning models for integration purposes. Any model (think of an old SAS or SPSS model ;) can be easily translated into SQL and its SQL "expression" can then be integrated as a component in any other programming language. This is the most straightforward mode of reviving "legacy" models.
 * Our [benchmarks](https://github.com/antoinecarme/sklearn2sql_heroku/blob/master/Quality/extensive_tests-debrief.ipynb) show that the generated SQL code, even when very large, executes properly on the major market databases (without extra configuration/tuning).
 * Model quality leads to simpler SQL deployment. A more robust model (uses less variables, through regularization or feature selection for example) generates smaller and faster SQL code. Only used variables appear in the SQL code. SQL code length can be also seen as a "measure" of model complexity.
-
+* SQL is a public standard with commercial and open source implementations. The fact that many dialects co-exist is an additional verification of the model. Many databases , with different binary and source implementations and commercial providers, give the same output for a given model. We tested 10 different SQL dialects in our benchmarks. Every model was deployed on each of the 10 databases and we checked that all these databases give the same resultset (up to 1e-10 precision ;).    
 
