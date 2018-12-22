@@ -3,7 +3,7 @@ One can consider this small report as the sklearn2sql feeedback on the database 
 
 Please note that here , we use a database to predict machine learning models outputs, like a specialized CPU. the same way a deep learning model can be trained or predicted with a GPU or a FPGA.
 
-These notes are based on sklearn2sql tests/benchamrks realized on the following databases : db2, firebird, hive, impala, monetdb, MS SQL Server, mysql, oracle, pgsql, sqlite and teradata
+These notes are based on sklearn2sql tests/benchamrks realized on the following databases : db2, firebird, hive, impala, monetdb, MS SQL Server, mysql/mariadb, oracle, pgsql, sqlite and teradata
 
 ## Common Table Expressions (CTEs)
 
