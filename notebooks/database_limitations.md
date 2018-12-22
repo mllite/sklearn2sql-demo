@@ -65,6 +65,16 @@ Upper case of lower case forced by the database can be a source of lookup errors
 
 Database vendors : Naming objects is a user freedom and is a recommneded way of reflecting object semantics. Please get rid of this too 1900's feature !!!!
 
+## Unicode Support
+
+In our tests, 5 out of 10 database dialects did not support unicode in the table/column/index/key names out of the box.
+
+Using UTF8 by default for a database does not cost too much. Unicode is quite old and stable now (more than 25 years old). 
+
+A database should support all types fo data. Tesxtual data are the most used. Their support is not optional. A lot of C++, Java, ..., and Python  code has been written, to override such or such database bug/behavior when it deals with unicode. Text is TEXT.
+
+Database vendors : Please , please, make utf8 the default encoding for your database. Even in the United States of America ;-).
+
 ## Use of Virtual Machines
 
 Hadoop based databases (hive, impala) use a large number of VMs for executing a single SQL statement. The SQL execution is too slow and unacceptable. This makes these databases simply not suitable for this kind of task (SQL-based in-database analytics). The benchmarking process did not always end properly without timeout (thousands of models trained on different table layouts [columns x lines]) 
