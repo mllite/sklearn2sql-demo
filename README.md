@@ -31,6 +31,8 @@ Since the beginning of this project, some extensions have been added to support 
 
 ## Supported Databases
 
+Supoport for most popular relational databases has been added progressively. Now, sklearn2sql supports almost all the leading relational databases referenced on [DB-Engines](https://db-engines.com/en/ranking).
+
 1. Open source databases : PostgreSQL (Just perfect !!!), MariaDB (contribued some [CTE-related bugs](https://jira.mariadb.org/browse/MDEV-12440) for this project. Very reactive team. All bugs were fixed !!!!
 2. Commercial databases : Oracle, MS SQL Server, IBM DB2, Teradata (to cover 95% of the market and get real-world tests)
 3. Embedded databases : SQLite (even in-memory ;). Nice for prototyping, documentation and development. Zero config. Available everywhere (on Android and iOS devices and inside jupyter notebooks ;).
