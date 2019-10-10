@@ -44,3 +44,10 @@ If your model is created and trained using a supported third-party machine learn
 https://nodepit.com/node/org.knime.base.pmml.translation.sql.SQLGeneratorNodeFactory
 
 ![image](https://user-images.githubusercontent.com/16481992/44307837-0779f100-a3aa-11e8-92ac-139aaea5e71c.png)
+
+## Pytorch to C++
+
+https://pytorch.org/tutorials/advanced/cpp_export.html
+
+
+
