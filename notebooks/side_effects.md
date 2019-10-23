@@ -15,7 +15,7 @@ https://issues.apache.org/jira/browse/IMPALA-7904
 
 ### MariaDB 
 
-MariaDB was very responsive by correcteing all bugs reported by sklearn2sql. CTE support was rudimentary and at the end everything was perfect after the necessary corrections were made
+MariaDB was very responsive by correcteing all bugs reported by sklearn2sql. CTE support was rudimentary and at the end everything was perfect after the necessary corrections were made . Latest fixes were made as of MariaDB 10.2.11.
 
 https://jira.mariadb.org/browse/MDEV-12440
 
