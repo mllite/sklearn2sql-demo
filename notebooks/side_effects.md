@@ -40,6 +40,10 @@ Some issues with complex decision trees rendering in SQL. SQL Server does not su
 
 https://social.technet.microsoft.com/Forums/en-US/c938b78d-8089-4a23-87fe-6ff8b8f5e42e/case-expressions-may-only-be-nested-to-level-10-really-needed-in-2017-?forum=transactsql
 
+https://feedback.azure.com/forums/307516-sql-data-warehouse/suggestions/17442667-raise-limit-for-nested-case-expressions-from-10
+
+![image](https://user-images.githubusercontent.com/16481992/67395455-4efb9e80-f5a6-11e9-9096-7bf319fd3e6e.png)
+
 ### Teradata
 
 One bug related to SQL reserved words was fixed. 
