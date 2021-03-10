@@ -24,9 +24,18 @@ Since the beginning of this project, some extensions have been added to support 
 
 2. For deep learning models (neural network models), the [keras2sql](https://github.com/antoinecarme/keras2sql) project has been added to support models built using the Keras framework with TensorFlow, Theano, and CNTK. Some demo [python jupyter notebooks](https://github.com/antoinecarme/keras2sql/tree/master/doc) are available.
 
-3. A Heroku-based [web service](https://github.com/antoinecarme/sklearn2sql_heroku) can be used to generate SQL code for a given model. scikit-learn, keras and caret models are supported.
+3. PyTorch Deep Learning models are also supported through [pytorch2sql](https://github.com/antoinecarme/pytorch2sql). Some demo [python jupyter notebooks](https://github.com/antoinecarme/pytorch2sql/tree/master/doc) are available.
+4. A similar generation process has been added for C++ backends through [ml2cpp](https://github.com/antoinecarme/ml2cpp). 
+     1. It generates a simple, readable C++ code that maps easily with the model structure. Facilitates debugging and integration. 
+     2. The project uses the same low-level layers as sklearn2sql. 
+     3. It supports all the models supported by the SQL backend. 
+     4. It generates C++ code that can be executed on almost any hardware platform that has a serious C++ compiler (GCC welcome). 
+     5. Some demo [python jupyter notebooks](https://github.com/antoinecarme/ml2cpp/tree/master/doc) are available. 
+     6. The C++ code is even runnable on [very small platforms](https://github.com/antoinecarme/ml2cpp/issues/25) (STM32, ESP32, Kendryte etc).
+ 
+5. A Heroku-based [web service](https://github.com/antoinecarme/sklearn2sql_heroku) can be used to generate SQL code for a given model. scikit-learn, keras and caret models are supported. SQL and C++ backends supported.
 
-4. ... (wip) ...
+6. ... (wip) ...
 
 
 ## Supported Databases
