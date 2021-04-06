@@ -51,3 +51,25 @@ https://pytorch.org/tutorials/advanced/cpp_export.html
 
 ![image](https://user-images.githubusercontent.com/16481992/66601088-59319c00-eba7-11e9-9c49-7b9bfdc8341f.png)
 
+## Oracle 
+
+SQL in Silicon
+
+https://community.oracle.com/tech/developers/discussion/4462251/software-in-silicon-what-it-does-and-why
+
+https://www-conf.slac.stanford.edu/xldb2016/talks/published/Weds_LT6_Gong_SQL-in-Silicon.pdf
+![image](https://user-images.githubusercontent.com/16481992/113765413-815a7680-971c-11eb-9408-bd360e3aa8b2.png)
+
+
+## SQL on DNA
+
+https://www.zdnet.com/article/forget-silicon-sql-on-dna-is-the-next-frontier-for-databases/
+
+Forget silicon - SQL on DNA is the next frontier for databases
+
+A couple of years back, even researchers would wave off using DNA to store data as something too futuristic to have any practical value. Today, you can extend PostgreSQL with the right software and bio-chemical modules, and run SQL on DNA.
+
+
+
+
+
