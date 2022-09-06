@@ -1,5 +1,7 @@
 # sklearn2sql-demo
 
+Note : A final presentation is available here (pdf slides) : https://github.com/antoinecarme/presentations_slides/blob/main/sklearn2sql_presentation_2022-08.pdf
+
 This repository contains some demos of the usage of sklearn2sql.
 
 sklearn2sql is an ongoing development tool for generating deployment SQL code from [scikit-learn](http://scikit-learn.org/) objects.
